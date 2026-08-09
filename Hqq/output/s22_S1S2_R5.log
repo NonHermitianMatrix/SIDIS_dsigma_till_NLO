@@ -1,0 +1,25 @@
+gates:
+  (1) G_pdf(1) - (s+t1+u1+Q2) (must be 0): 0
+  (2) G_ff(1)  - (s+t1+u1+Q2) (must be 0): 0
+  (3) 1 - xit*   - s23/(s23-t1) (must be 0): 0
+  (4) 1 - zetat* - s23/s       (must be 0): 0
+  (5) shifted mass-shell - G_pdf (must be 0): 0
+  (6) shifted mass-shell - G_ff  (must be 0): 0
+  ('PP', 'pdf', 'qq'): plus1B(0) == cached plus : True   regular(0) == cached reg0 : True
+      s23-dependent: plus1B True, regular True
+  ('PP', 'pdf', 'gq'): plus1B(0) == cached plus : True   regular(0) == cached reg0 : True
+      s23-dependent: plus1B False, regular True
+  ('PP', 'ff', 'qq'): plus1B(0) == cached plus : True   regular(0) == cached reg0 : True
+      s23-dependent: plus1B True, regular True
+  ('PP', 'ff', 'qg'): plus1B(0) == cached plus : True   regular(0) == cached reg0 : True
+      s23-dependent: plus1B False, regular True
+  ('g', 'pdf', 'qq'): plus1B(0) == cached plus : True   regular(0) == cached reg0 : True
+      s23-dependent: plus1B True, regular True
+  ('g', 'pdf', 'gq'): plus1B(0) == cached plus : True   regular(0) == cached reg0 : True
+      s23-dependent: plus1B False, regular True
+  ('g', 'ff', 'qq'): plus1B(0) == cached plus : True   regular(0) == cached reg0 : True
+      s23-dependent: plus1B True, regular True
+  ('g', 'ff', 'qg'): plus1B(0) == cached plus : True   regular(0) == cached reg0 : True
+      s23-dependent: plus1B False, regular True
+  wrote cache/Hqq_S1S2_sectors.pkl (8 entries)
+HQQ_S1S2_SECTORS_DONE

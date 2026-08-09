@@ -1,0 +1,30 @@
+C1 for Hqq: eps^-2 (soft) cancellation, per projection
+counterterms cannot enter -- they are pure single poles (paper Eqs. 49-50)
+
+  [PP] real  Hqq;gg + Hqq;qqbar   eps^-2 / LO = (Nc**2 - 1/2)/(pi*Nc)
+  [PP]   (pair-direct eps^-2 = 0, no soft gluon)
+  [PP] expanding the virtual ...
+    rPP: 200/494 terms
+    rPP: 400/494 terms
+  [PP] virtual Hqq;g            eps^-2 / LO = -I*Nc/8 + I/(16*Nc)
+  [PP]   real / (C_A + 2 C_F) = 1/(2*pi)   kinematics-free: True
+  [PP]   virtual / (C_A + 2 C_F) = -I/16   kinematics-free: True
+  [PP] real / virtual = 8*I/pi
+
+  [g] real  Hqq;gg + Hqq;qqbar   eps^-2 / LO = (Nc**2 - 1/2)/(pi*Nc)
+  [g]   (pair-direct eps^-2 = 0, no soft gluon)
+  [g] expanding the virtual ...
+    rG: 200/1049 terms
+    rG: 400/1049 terms
+    rG: 600/1049 terms
+    rG: 800/1049 terms
+    rG: 1000/1049 terms
+  [g] virtual Hqq;g            eps^-2 / LO = -I*Nc/8 + I/(16*Nc)
+  [g]   real / (C_A + 2 C_F) = 1/(2*pi)   kinematics-free: True
+  [g]   virtual / (C_A + 2 C_F) = -I/16   kinematics-free: True
+  [g] real / virtual = 8*I/pi
+
+PROJECTION-INDEPENDENT (must be True): True
+PURE CONSTANT, free of Nc/nf/kinematics (must be True): True
+the single relative normalization: 8*I/pi
+HQQ_C1_PASS

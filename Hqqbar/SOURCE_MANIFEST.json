@@ -1,0 +1,107 @@
+[
+  {
+    "copy": "s01_Hqq_R4_kinmap.py",
+    "role": "producer_or_required_gate",
+    "sha256": "250c12b1a30359cde9af015b51e921076b5981f30db8d0d09986429af4e011f1",
+    "source": "python/Hqq_R4_kinmap.py",
+    "step": 1
+  },
+  {
+    "copy": "s02_Hqq_LO_traces.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "00c17207013f01fd0193d7c3300db17152ee6622a0486cbda9c98225785bad2e",
+    "source": "mathematica/Hqq_LO_traces.wls",
+    "step": 2
+  },
+  {
+    "copy": "s03_Hqq_S12_LO_traces.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "07cd1a2adfc24b90ba9b2e7f8363bc43fcfa9c99acdc9fba589734b9113c2bed",
+    "source": "mathematica/Hqq_S12_LO_traces.wls",
+    "step": 3
+  },
+  {
+    "copy": "s04_Hqqbar_NLO_R1_traces.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "6cfb6744d4d3857593c14801c6a425513cecc3f77b1b60e58fce7b192e067f08",
+    "source": "mathematica/Hqqbar_NLO_R1_traces.wls",
+    "step": 4
+  },
+  {
+    "copy": "s05_Hqqbar_R5_map.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "4ed6941840b9220298ed1df535dfb53c2db4929313fccae2fbb8bdffd143fe48",
+    "source": "verified/Hqqbar/Hqqbar_R5_map.wls",
+    "step": 5
+  },
+  {
+    "copy": "s06_Hqqbar_R5_subtract.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "f57f4fb4c451c53713c7c636bb9146da44664995c1ebcbe5412063b73227b292",
+    "source": "verified/Hqqbar/Hqqbar_R5_subtract.wls",
+    "step": 6
+  },
+  {
+    "copy": "s07_Hqqbar_pole_check.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "c407cc90a89bf6fc1fe83e0e5e672569588b662d272fbde0c7943fb485fc9740",
+    "source": "verified/Hqqbar/Hqqbar_pole_check.wls",
+    "step": 7
+  },
+  {
+    "copy": "s08_Hqqbar_F1_assemble.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "8eaf8fa8c4103ebd3ade115b41c86d94ae4ebdf46a42ffc6a4def0e4d7ebc09d",
+    "source": "verified/Hqqbar/Hqqbar_F1_assemble.wls",
+    "step": 8
+  },
+  {
+    "copy": "s09_Hqqbar_F1_finish.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "3994a935c949832d4bc8b012ca3cc62d589a24049f445916e6638259db0338fe",
+    "source": "verified/Hqqbar/Hqqbar_F1_finish.wls",
+    "step": 9
+  },
+  {
+    "check": 1,
+    "copy": "check_macros/c01_Hqqbar_R5_ct_ratio_probe.wls",
+    "role": "auxiliary_check",
+    "sha256": "463440743bb0e6c4a2242286be099653b4c895eddd06e10e7d3d0e6073901e30",
+    "source": "verified/Hqqbar/Hqqbar_R5_ct_ratio_probe.wls"
+  },
+  {
+    "check": 2,
+    "copy": "check_macros/c02_Hqqbar_promote_check.wls",
+    "role": "auxiliary_check",
+    "sha256": "37444318e1479edaa52bdde50fd3ab2d3347d0f24e48b5d62b2391b7465ef256",
+    "source": "mathematica/Hqqbar_promote_check.wls"
+  },
+  {
+    "copy": "output/s09_F1hat_Hqqbar.m",
+    "role": "accepted_output",
+    "sha256": "cf4763f283fbb50eef92fa39a61a5c3c3709ee7291b08863890a2cd246e3b4c9",
+    "source": "verified/Hqqbar/F1hat_Hqqbar.m",
+    "step": 9
+  },
+  {
+    "copy": "output/s09_F2hat_Hqqbar.m",
+    "role": "accepted_output",
+    "sha256": "3fdbf23acbd7f2cc40641828b1224ce6a75bb9c1e8f77bed677e4973dd1ab086",
+    "source": "verified/Hqqbar/F2hat_Hqqbar.m",
+    "step": 9
+  },
+  {
+    "copy": "output/s09_Fconv_Hqqbar.tex",
+    "role": "accepted_output",
+    "sha256": "28f152efe4a9c50fdb9eae7fcaed0ccee82550cf684dfd62fe4082f0cdc862ef",
+    "source": "verified/Hqqbar/Fconv_Hqqbar.tex",
+    "step": 9
+  },
+  {
+    "copy": "output/s04_Hqqbar_R1.py",
+    "role": "generated_algebra",
+    "sha256": "13b8dbaeb098e86baa59a16f744bdcdc54826cbdd2c63b50d16e5a859954301b",
+    "source": "python/generated/Hqqbar_R1.py",
+    "step": 4
+  }
+]

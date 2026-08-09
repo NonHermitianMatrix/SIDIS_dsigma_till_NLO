@@ -1,0 +1,380 @@
+[
+  {
+    "copy": "s01_Hqq_R4_kinmap.py",
+    "role": "producer_or_required_gate",
+    "sha256": "250c12b1a30359cde9af015b51e921076b5981f30db8d0d09986429af4e011f1",
+    "source": "python/Hqq_R4_kinmap.py",
+    "step": 1
+  },
+  {
+    "copy": "s02_Hqq_LO_traces.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "00c17207013f01fd0193d7c3300db17152ee6622a0486cbda9c98225785bad2e",
+    "source": "mathematica/Hqq_LO_traces.wls",
+    "step": 2
+  },
+  {
+    "copy": "s03_Hqq_S12_LO_traces.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "07cd1a2adfc24b90ba9b2e7f8363bc43fcfa9c99acdc9fba589734b9113c2bed",
+    "source": "mathematica/Hqq_S12_LO_traces.wls",
+    "step": 3
+  },
+  {
+    "copy": "s04_Hqq2_R1_qgg.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "afea3f9225167765942c8a009e2ce1bbc1172b950ac15397d784791808d993f9",
+    "source": "mathematica/Hqq2_R1_qgg.wls",
+    "step": 4
+  },
+  {
+    "copy": "s05_Hqq2_R1_pairs.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "816e17c71b788365f00357444adb6db7ca39966a8bae166cc65b5f571f569b6a",
+    "source": "mathematica/Hqq2_R1_pairs.wls",
+    "step": 5
+  },
+  {
+    "copy": "s06_Hqq2_R1_sameflavor.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "516dd03bb25297e37eebc2c8e42454f7da241a1c1278ec616f143a20a3b3702a",
+    "source": "mathematica/Hqq2_R1_sameflavor.wls",
+    "step": 6
+  },
+  {
+    "copy": "s07_Hqq2_R2.py",
+    "role": "producer_or_required_gate",
+    "sha256": "0dcd09c6a708c4485b9f09754bd1091fd3a951014ea42f78e98088db53283630",
+    "source": "python/Hqq2_R2.py",
+    "step": 7
+  },
+  {
+    "copy": "s08_Hqq2_R2_parallel.py",
+    "role": "producer_or_required_gate",
+    "sha256": "90ba3dad1b15a213f3d8f8e04a5feb791bd5f80dcfdb3b846f31f190f4cff31c",
+    "source": "python/Hqq2_R2_parallel.py",
+    "step": 8
+  },
+  {
+    "copy": "s09_Hqq2_R3_parallel.py",
+    "role": "producer_or_required_gate",
+    "sha256": "f7f2de7ae4e09e80c882fc6b26f20f825a5aa5d477a1d393226a8c98ec7b77c1",
+    "source": "python/Hqq2_R3_parallel.py",
+    "step": 9
+  },
+  {
+    "copy": "s10_Hqq_r4in_from_classes.py",
+    "role": "producer_or_required_gate",
+    "sha256": "dc06ff5d3cf260e48fb2979f5c707204cc2d423b23c4a62ea837002e194085ae",
+    "source": "python/Hqq_r4in_from_classes.py",
+    "step": 10
+  },
+  {
+    "copy": "s11_Hqq_r4in_SF.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "992a1316482d1af2867e4d61df5488273cdbf5ef85a3b6cab3b182f4acc46ab8",
+    "source": "mathematica/Hqq_r4in_SF.wls",
+    "step": 11
+  },
+  {
+    "copy": "s12_Hqq_R4_mma_part2.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "a9a2467b0a7727acc5e9245d6744497aaec6edfde3a0255000e3973996045cee",
+    "source": "verified/_shared/Hqq_R4_mma_part2.wls",
+    "step": 12
+  },
+  {
+    "copy": "s13_Hqq_R4_merge2.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "03525c803228fd0ac225b40e11e797a74c383f1c6ca83886421536b26c46cfbf",
+    "source": "mathematica/Hqq_R4_merge2.wls",
+    "step": 13
+  },
+  {
+    "copy": "s14_Hqq_r4out_SF.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "db6dfe791eb1ac655130795dce47dd24e1cdd5b0e1b1f2f273a70aec1551a1d2",
+    "source": "mathematica/Hqq_r4out_SF.wls",
+    "step": 14
+  },
+  {
+    "copy": "s15_Hqq_C2in_from_r4out.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "862cb5ff6afddf1a9c5dbdb65fdd00bc0ba60ae8c95c5b9054b6a941226ceeb8",
+    "source": "mathematica/Hqq_C2in_from_r4out.wls",
+    "step": 15
+  },
+  {
+    "copy": "s16_Hqq2_V1_loop.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "67fb97eb0404840597f7f2a6c2fd57da91cf18b80aa080e0fb364ab2a740e19c",
+    "source": "mathematica/Hqq2_V1_loop.wls",
+    "step": 16
+  },
+  {
+    "copy": "s17_Hqq2_V2_renorm.py",
+    "role": "producer_or_required_gate",
+    "sha256": "05a4432468ae82a2b9eedd4cdd6fb0ced59c8d660848881f8859c642fcc31d9e",
+    "source": "python/Hqq2_V2_renorm.py",
+    "step": 17
+  },
+  {
+    "copy": "s18_Hqq2_bookkeeping.py",
+    "role": "producer_or_required_gate",
+    "sha256": "916e60971582236062ed9771647635fa01afd9db54c9102e5db2d705cc466752",
+    "source": "python/Hqq2_bookkeeping.py",
+    "step": 18
+  },
+  {
+    "copy": "s19_Hqq_S1S2_sectors.py",
+    "role": "producer_or_required_gate",
+    "sha256": "9e11d59847c86e29e6717fba33a0f0c48415ca0a75254e939a50a66b2bd18eb5",
+    "source": "python/Hqq_S1S2_sectors.py",
+    "step": 19
+  },
+  {
+    "copy": "s20_Hqq_C1.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "65f121edd52e612fb8f0f3aee46911b49af7b56aee58f68ee2e59819951b81d4",
+    "source": "mathematica/Hqq_C1.wls",
+    "step": 20
+  },
+  {
+    "copy": "s21_Hqq_C2_final2.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "8148e42363bd76b7633d24c80dead61890ded389b9be28845defc19a89737932",
+    "source": "mathematica/Hqq_C2_final2.wls",
+    "step": 21
+  },
+  {
+    "copy": "s22_Hqq_R5_regular.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "d503efea93e0221671ece2014c9e57a3d4095c64d6b127f9ccf38a9ddea61f7e",
+    "source": "verified/_shared/Hqq_R5_regular.wls",
+    "step": 22
+  },
+  {
+    "copy": "s23_Hqq2_F1_finite.py",
+    "role": "producer_or_required_gate",
+    "sha256": "b604826aaf0e76925ca18f35274617f54017cc2256ae93bf7364b5693d35a720",
+    "source": "python/Hqq2_F1_finite.py",
+    "step": 23
+  },
+  {
+    "copy": "s24_Hqq2_F1_validate.py",
+    "role": "producer_or_required_gate",
+    "sha256": "b2b404a1e8c2466e23f9fac3ac483e65b13fa8d2d8b77e5826f4b7224ff59541",
+    "source": "python/Hqq2_F1_validate.py",
+    "step": 24
+  },
+  {
+    "check": 1,
+    "copy": "check_macros/c01_Hqq2_R3_betamono_check.py",
+    "role": "auxiliary_check",
+    "sha256": "0d9b16aeb58cd451bbb906af2d9254db0e013b3642e362bd2281d83b7cfd12d4",
+    "source": "python/Hqq2_R3_betamono_check.py"
+  },
+  {
+    "check": 2,
+    "copy": "check_macros/c02_Hqq2_R3_direct_check.py",
+    "role": "auxiliary_check",
+    "sha256": "148f5aeb4913e3568e7829747a465e0b5474ce43f7c67309d6542f5a2d51c58c",
+    "source": "python/Hqq2_R3_direct_check.py"
+  },
+  {
+    "check": 3,
+    "copy": "check_macros/c03_Hqq2_R4_reconstruct_check.py",
+    "role": "auxiliary_check",
+    "sha256": "838d8601065101c3d9a55c13c8ad27834760b0d957e621229e553ecf1ecd9887",
+    "source": "python/Hqq2_R4_reconstruct_check.py"
+  },
+  {
+    "check": 4,
+    "copy": "check_macros/c04_Hqq2_V2_validate.py",
+    "role": "auxiliary_check",
+    "sha256": "af65495849136a7cd0e49a8a51fa592d48d1f750ce982d3061881440837b7a72",
+    "source": "python/Hqq2_V2_validate.py"
+  },
+  {
+    "copy": "output/s20_C1.log",
+    "role": "accepted_output",
+    "sha256": "8041ccdd23e1ea6734bd838b2e2b7123289c4ff8d8b6ec4534051b3fe4ee9d0d",
+    "source": "verified/Hqq/C1.log",
+    "step": 20
+  },
+  {
+    "copy": "output/s21_C2_final2.log",
+    "role": "accepted_output",
+    "sha256": "78de9b41f56771b16e74b1cc77ff15ff7de94e06e6a29155e21b71058ff94c21",
+    "source": "verified/Hqq/C2_final2.log",
+    "step": 21
+  },
+  {
+    "copy": "output/s23_F12hat_Hqq.pkl",
+    "role": "accepted_output",
+    "sha256": "73643664876190cd97d521bb8ca05b1856f83e5fb93e30642cca29a9a35938c7",
+    "source": "verified/Hqq/F12hat_Hqq.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_PROVENANCE.json",
+    "role": "accepted_output",
+    "sha256": "73e2c85af3a1ca92629df1ad39c6712d1b7e77fe6b8d95060674c08106d2e448",
+    "source": "verified/Hqq/PROVENANCE.json",
+    "step": 23
+  },
+  {
+    "copy": "output/s22_S1S2_R5.log",
+    "role": "accepted_output",
+    "sha256": "b705c0689ed51e4d1ca2517172b1445ec1c8b4776c21627ec76dfd82d3aec127",
+    "source": "verified/Hqq/S1S2_R5.log",
+    "step": 22
+  },
+  {
+    "copy": "output/s22_SF_R5.log",
+    "role": "accepted_output",
+    "sha256": "ed49123ddc13812940b1d0a314e4c9b77672d8fa524e0cf538ac13b7ea769074",
+    "source": "verified/Hqq/SF_R5.log",
+    "step": 22
+  },
+  {
+    "copy": "output/s22_gg_R5.log",
+    "role": "accepted_output",
+    "sha256": "f5f5da77570c05794a2bd0382923195dc7c06669ed5302e2e79b1b7e89b7386c",
+    "source": "verified/Hqq/gg_R5.log",
+    "step": 22
+  },
+  {
+    "copy": "output/s22_pair_R5.log",
+    "role": "accepted_output",
+    "sha256": "c89431e324fabe2abb2c9bc3afbdae6bd54d9fa9aa3725b75a6dc1cbc5b317e0",
+    "source": "verified/Hqq/pair_R5.log",
+    "step": 22
+  },
+  {
+    "copy": "output/s04_Hqq2_R1_qgg.py",
+    "role": "generated_algebra",
+    "sha256": "c6ab6cbbe39db96536256a5daffe28396a1ab95d7e468970b33398c0082b5b87",
+    "source": "python/generated/Hqq2_R1_qgg.py",
+    "step": 4
+  },
+  {
+    "copy": "output/s05_Hqq2_R1_pairs.py",
+    "role": "generated_algebra",
+    "sha256": "e0040f4b6c50454a1d6694a86b08bdfa93f41162db5fc4c522eb9406488e3fcc",
+    "source": "python/generated/Hqq2_R1_pairs.py",
+    "step": 5
+  },
+  {
+    "copy": "output/s05_Hqq2_R1_sameflavor.py",
+    "role": "generated_algebra",
+    "sha256": "d98a5713c704445700e0bc4894033989d5ece0622ba80a885fce6f0345cfabd8",
+    "source": "python/generated/Hqq2_R1_sameflavor.py",
+    "step": 5
+  },
+  {
+    "copy": "output/s16_Hqq2_V1_raw.py",
+    "role": "generated_algebra",
+    "sha256": "77c2685ebc19cd20fdd44a485dd805cfd2e9b7a6a523198776a9da7dc61ce073",
+    "source": "python/generated/Hqq2_V1_raw.py",
+    "step": 16
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_PP_DFA.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "1b3c29aed79017542b64b07a89d572382b91759d9fb1f0047dee341accb5bd57",
+    "source": "python/cache/Hqq2_F1_real_PP_DFA.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_PP_DFB.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "cb72d335e412e99365790b9e7b51f0883a98dc9e990eda99adb84534772a1e77",
+    "source": "python/cache/Hqq2_F1_real_PP_DFB.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_PP_DFC.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "1d288b223cf6a503b5304d099924932cdaecec1f45e526a0640146f1a5a7b776",
+    "source": "python/cache/Hqq2_F1_real_PP_DFC.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_PP_QGG.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "9a52d99d33781b0af8b351904913d63954b09a773f69e65005986f9ec2af0395",
+    "source": "python/cache/Hqq2_F1_real_PP_QGG.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_PP_SF.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "4462ee6cfaf767a35fdd5664db85126c2f99d0b7e8c98e91054a4bfac2cf5fa7",
+    "source": "python/cache/Hqq2_F1_real_PP_SF.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_g_DFA.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "11cddbe2cdbbcbb6542847aea8e459ed43f4af943888a9f6a8a4d704aa1f7f38",
+    "source": "python/cache/Hqq2_F1_real_g_DFA.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_g_DFB.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "e2c68f7bdf342fc345b68b9c8ac06bea1b8ed2c419b1dede661df079716d6347",
+    "source": "python/cache/Hqq2_F1_real_g_DFB.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_g_DFC.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "e397234f90c88ce9a984e755c9584abd1134781b244f8adcebc57312d4feb97c",
+    "source": "python/cache/Hqq2_F1_real_g_DFC.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_g_QGG.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "34e8eaf4da692bb6223f4760fbd128caf9cdefcbbea9d8c0ac47e00250b6ddad",
+    "source": "python/cache/Hqq2_F1_real_g_QGG.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_real_g_SF.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "295e6a7f653ac170125a569498648064143478556dcf19c9fd15296f54aa4bd1",
+    "source": "python/cache/Hqq2_F1_real_g_SF.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_virtual_PP.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "36299a116a2de3677ff755a8fe015dc6600ee606f063b53958f674e10bebd44c",
+    "source": "python/cache/Hqq2_F1_virtual_PP.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq2_F1_virtual_g.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "033d2e44170880eeedd10fe17332912a7dbef11ee3a30eadf0758b846693d034",
+    "source": "python/cache/Hqq2_F1_virtual_g.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq_R5_PP.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "7ac9de53a68cb0ef59f5c5e19baef62569f9001a9cffb88bde8243562e8df491",
+    "source": "python/cache/Hqq_R5_PP.pkl",
+    "step": 23
+  },
+  {
+    "copy": "output/s23_Hqq_R5_g.pkl",
+    "role": "accepted_fhat_source",
+    "sha256": "3c998e0670a0be25542318a7b83516ec4f7f24e75b447d619ac43ea9fe2f75dd",
+    "source": "python/cache/Hqq_R5_g.pkl",
+    "step": 23
+  }
+]

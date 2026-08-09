@@ -1,0 +1,212 @@
+[
+  {
+    "copy": "s01_Hqq_R4_kinmap.py",
+    "role": "producer_or_required_gate",
+    "sha256": "250c12b1a30359cde9af015b51e921076b5981f30db8d0d09986429af4e011f1",
+    "source": "python/Hqq_R4_kinmap.py",
+    "step": 1
+  },
+  {
+    "copy": "s02_Hqq_LO_traces.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "00c17207013f01fd0193d7c3300db17152ee6622a0486cbda9c98225785bad2e",
+    "source": "mathematica/Hqq_LO_traces.wls",
+    "step": 2
+  },
+  {
+    "copy": "s03_Hqq_S12_LO_traces.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "07cd1a2adfc24b90ba9b2e7f8363bc43fcfa9c99acdc9fba589734b9113c2bed",
+    "source": "mathematica/Hqq_S12_LO_traces.wls",
+    "step": 3
+  },
+  {
+    "copy": "s04_Hgq_NLO_R1_traces.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "e54c4ca29c26b16188ead56d1c24abaa057a1d7eadec175671eeed80c55d4300",
+    "source": "mathematica/Hgq_NLO_R1_traces.wls",
+    "step": 4
+  },
+  {
+    "copy": "s05_Hqq_R4_expand.py",
+    "role": "producer_or_required_gate",
+    "sha256": "5abb3b28fd9d06aa82810b71c5508bd15952aabf82808857bbcb16c943cdb494",
+    "source": "python/Hqq_R4_expand.py",
+    "step": 5
+  },
+  {
+    "copy": "s06_Hqq_R4_mmaframe.py",
+    "role": "producer_or_required_gate",
+    "sha256": "33fb4ff8c18cd25857aabc83eb9d5616539cbc3965583c7ea1d985cc8ad6c8ee",
+    "source": "python/Hqq_R4_mmaframe.py",
+    "step": 6
+  },
+  {
+    "copy": "s07_Hqq_R4_fastlaurent.py",
+    "role": "producer_or_required_gate",
+    "sha256": "cb3576be2294873bc1ef1ab019e481c65c51eede167bf469a0458525396c73be",
+    "source": "python/Hqq_R4_fastlaurent.py",
+    "step": 7
+  },
+  {
+    "copy": "s08_Hqq_virtual_V1.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "1aacf97784f7198ee503f7bccbeeb1dc6a0f3112c7d02980d6767bd165e84030",
+    "source": "mathematica/Hqq_virtual_V1.wls",
+    "step": 8
+  },
+  {
+    "copy": "s09_Hqq_V2_renorm.py",
+    "role": "producer_or_required_gate",
+    "sha256": "d74d155a594f39c55a48beb4ce2b62a2f1b140ca2ad644cf39ca296db9ec5c12",
+    "source": "python/Hqq_V2_renorm.py",
+    "step": 9
+  },
+  {
+    "copy": "s10_Hgq_V2_cross.py",
+    "role": "producer_or_required_gate",
+    "sha256": "b18ae7cef9a76bb5ac01eb180930b62f926439cb9b150c37e229e4ac4a0c6262",
+    "source": "python/Hgq_V2_cross.py",
+    "step": 10
+  },
+  {
+    "copy": "s11_Hglu_CTbt.py",
+    "role": "producer_or_required_gate",
+    "sha256": "ac55fd1a020c9fdcc17af4431aff680ba5b07452ce6c36a07fec81809661e456",
+    "source": "python/Hglu_CTbt.py",
+    "step": 11
+  },
+  {
+    "copy": "s12_finite_hard_parts.py",
+    "role": "producer_or_required_gate",
+    "sha256": "7986934853dd5dffb910eafba77224881eb6f5146b64dc239f173ae92f5e138c",
+    "source": "python/finite_hard_parts.py",
+    "step": 12
+  },
+  {
+    "copy": "s13_Hgq_C1_catani.py",
+    "role": "producer_or_required_gate",
+    "sha256": "fe774609a3e80a4ff1ab84393e1017665546c068c334e31660d251c46d61c89b",
+    "source": "python/Hgq_C1_catani.py",
+    "step": 13
+  },
+  {
+    "copy": "s14_Hgq_C2_gate.py",
+    "role": "producer_or_required_gate",
+    "sha256": "eb759f17a865f27b1c41576379e091b95782c5f7779eb66b113199a982b23ed2",
+    "source": "python/Hgq_C2_gate.py",
+    "step": 14
+  },
+  {
+    "copy": "s15_Hqq_R5_exact.py",
+    "role": "producer_or_required_gate",
+    "sha256": "f839282e41175c86740338bcac99b06ee1dff504a706e5380ce41364c93c4fdd",
+    "source": "python/Hqq_R5_exact.py",
+    "step": 15
+  },
+  {
+    "copy": "s16_R5_to_invariant.py",
+    "role": "producer_or_required_gate",
+    "sha256": "d03df19bf4a6b693d5e4b30c58739e99a779f11050aae836d463f9ea3c7bb792",
+    "source": "python/R5_to_invariant.py",
+    "step": 16
+  },
+  {
+    "copy": "s17_F12_assemble_invariant.py",
+    "role": "producer_or_required_gate",
+    "sha256": "5b2a91aaf37ae78d0a82f3c0e2bd05646d995962aa087daa31836ec884dfd706",
+    "source": "python/F12_assemble_invariant.py",
+    "step": 17
+  },
+  {
+    "copy": "s18_F12_sector_assemble.wls",
+    "role": "producer_or_required_gate",
+    "sha256": "6fb3be9a16552ce05dd9d3a3bed4cc0cb655a10155c73d5d726415d49c6d99de",
+    "source": "mathematica/F12_sector_assemble.wls",
+    "step": 18
+  },
+  {
+    "check": 1,
+    "copy": "check_macros/c01_Hgq_LO_crossing_check.py",
+    "role": "auxiliary_check",
+    "sha256": "907ce5637788120e53d55ebae8f8ab0392e0791b738dc6a806b5d82b4ce72692",
+    "source": "python/Hgq_LO_crossing_check.py"
+  },
+  {
+    "check": 2,
+    "copy": "check_macros/c02_Hgq_R34_regression.py",
+    "role": "auxiliary_check",
+    "sha256": "3a3eca7460e7a587cb8b0a8ec25358a36dc59417f70e74062825ec8f65e34844",
+    "source": "python/Hgq_R34_regression.py"
+  },
+  {
+    "check": 3,
+    "copy": "check_macros/c03_Hgq_R4_local_split_regression.py",
+    "role": "auxiliary_check",
+    "sha256": "7be74a9edf8066bf743c37fbacacce51393cd09724f72014b9c529015f45b1c1",
+    "source": "python/Hgq_R4_local_split_regression.py"
+  },
+  {
+    "check": 4,
+    "copy": "check_macros/c04_Hgq_V2_beta0_check.py",
+    "role": "auxiliary_check",
+    "sha256": "0834de179f50404c231d9a9a797df2bae7abc47101c1bd9baa5421ec33bd7610",
+    "source": "python/Hgq_V2_beta0_check.py"
+  },
+  {
+    "check": 5,
+    "copy": "check_macros/c05_Hgq_C1_regression.py",
+    "role": "auxiliary_check",
+    "sha256": "cd7df164909b3cf76d907125c7307b10534928d2408b12671fa44caf40a4190a",
+    "source": "python/Hgq_C1_regression.py"
+  },
+  {
+    "check": 6,
+    "copy": "check_macros/c06_Hgq_C2_assemble.py",
+    "role": "auxiliary_check",
+    "sha256": "2acb05b6b3f8ee30b9d83aea8cf34d5431c61c043d9a5a99e8d921ec0c4c2b21",
+    "source": "python/Hgq_C2_assemble.py"
+  },
+  {
+    "copy": "output/s17_F12hat_regular_Hgq.pkl",
+    "role": "accepted_output",
+    "sha256": "b414f9627cfeb37473ac785729d5f0feb3313efd1eb816d1c324363069230bf0",
+    "source": "verified/Hgq/F12hat_regular_Hgq.pkl",
+    "step": 17
+  },
+  {
+    "copy": "output/s18_F1hat_dist_Hgq.m",
+    "role": "accepted_output",
+    "sha256": "81e87b153dc2e3aac2abb6e7bbd3b2f97fbd61588b3d0a1f9ac52c10a10bf1b6",
+    "source": "verified/Hgq/F1hat_dist_Hgq.m",
+    "step": 18
+  },
+  {
+    "copy": "output/s18_F2hat_dist_Hgq.m",
+    "role": "accepted_output",
+    "sha256": "3fdec9ade58b755b5c89949cb6f2c21abcc30cc2b94b92d595459a2ff2826114",
+    "source": "verified/Hgq/F2hat_dist_Hgq.m",
+    "step": 18
+  },
+  {
+    "copy": "output/s16_Hgq_R5inv_PP.pkl",
+    "role": "accepted_output",
+    "sha256": "489421ad4b51910217668205b2c9ae23e48bd59b539d67b1ba6a230d1363ee50",
+    "source": "verified/Hgq/Hgq_R5inv_PP.pkl",
+    "step": 16
+  },
+  {
+    "copy": "output/s16_Hgq_R5inv_g.pkl",
+    "role": "accepted_output",
+    "sha256": "d98fb16a150425730406bbc80df1c48cad6e71fdee48cd8704fed3932e3c6803",
+    "source": "verified/Hgq/Hgq_R5inv_g.pkl",
+    "step": 16
+  },
+  {
+    "copy": "output/s04_Hgq_R1.py",
+    "role": "generated_algebra",
+    "sha256": "c55856833e1af40d05c5bd143fe17f3a3dccbb4f848854e2e6f57a3a0ef9fd93",
+    "source": "python/generated/Hgq_R1.py",
+    "step": 4
+  }
+]

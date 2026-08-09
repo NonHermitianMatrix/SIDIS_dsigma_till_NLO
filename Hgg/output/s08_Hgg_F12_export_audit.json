@@ -1,0 +1,58 @@
+{
+  "files": {
+    "F1hat_Hgg.m": {
+      "balanced_bracket_pairs": 19977508,
+      "bytes": 248997002,
+      "eps_float_nonfinite_free": true,
+      "sha256": "a3e8e7e2afba7086348972b82136b342194cba28e0c85b7af5c26b97dd864124"
+    },
+    "F2hat_Hgg.m": {
+      "balanced_bracket_pairs": 19977511,
+      "bytes": 248997025,
+      "eps_float_nonfinite_free": true,
+      "sha256": "c5d270ad3a017cc2eebedb745bf5ee52622adcc7f7c4e7bb2d4bce018a6833b7"
+    }
+  },
+  "roundtrip": {
+    "F1hat": {
+      "heads_exercised": [
+        "Abs",
+        "Add",
+        "EulerGamma",
+        "Half",
+        "Integer",
+        "Mul",
+        "NegativeOne",
+        "One",
+        "Pi",
+        "Pow",
+        "Rational",
+        "Symbol",
+        "beta",
+        "log"
+      ],
+      "nodes_checked": 626
+    },
+    "F2hat": {
+      "heads_exercised": [
+        "Abs",
+        "Add",
+        "EulerGamma",
+        "Half",
+        "Integer",
+        "Mul",
+        "NegativeOne",
+        "One",
+        "Pi",
+        "Pow",
+        "Rational",
+        "Symbol",
+        "beta",
+        "log"
+      ],
+      "nodes_checked": 626
+    }
+  },
+  "source_sha256": "4da67e9057054a820b94773fc559f60c19ac5015ad4baab3e5dcda31cf6b83b5",
+  "state": "accepted"
+}

@@ -1,0 +1,35 @@
+{
+  "assembly_version": "hqq2-f1-assembly-v3-strict-provenance",
+  "channel": "Hqq",
+  "checks": {
+    "C1": "HQQ_C1_PASS",
+    "C2_exact_zero_cases": 4,
+    "C2_log_basis_zero_cases": 4,
+    "Fhat_sectors": "4/4",
+    "Fhat_sources": "14/14",
+    "Float_free": true,
+    "R5_S1S2": "DONE",
+    "R5_SF": "DONE",
+    "R5_gg": "DONE",
+    "R5_pair": "DONE",
+    "eps_free": true,
+    "nonfinite_free": true
+  },
+  "evidence_sha256": {
+    "C1.log": "8041ccdd23e1ea6734bd838b2e2b7123289c4ff8d8b6ec4534051b3fe4ee9d0d",
+    "C2_final2.log": "78de9b41f56771b16e74b1cc77ff15ff7de94e06e6a29155e21b71058ff94c21",
+    "S1S2_R5.log": "b705c0689ed51e4d1ca2517172b1445ec1c8b4776c21627ec76dfd82d3aec127",
+    "SF_R5.log": "ed49123ddc13812940b1d0a314e4c9b77672d8fa524e0cf538ac13b7ea769074",
+    "gg_R5.log": "f5f5da77570c05794a2bd0382923195dc7c06669ed5302e2e79b1b7e89b7386c",
+    "pair_R5.log": "c89431e324fabe2abb2c9bc3afbdae6bd54d9fa9aa3725b75a6dc1cbc5b317e0"
+  },
+  "graph_source_count": 14,
+  "sectors": [
+    "delta",
+    "plus1B",
+    "plus2B",
+    "regular"
+  ],
+  "source_artifact_sha256": "32932d9ad3d8c172fa3b742f824b407940490089a3f702562b398c6427beacb8",
+  "state": "verified"
+}
