@@ -1,7 +1,5 @@
 # SIDIS NLO reproduction macros
 
-This is a copy-only release of the accepted symbolic calculation. Nothing was
-moved from `python/`, `mathematica/`, `python/cache/`, or `verified/`.
 
 ## Layout
 
