@@ -1,0 +1,20 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S06_STAGE: loading validated Hgg s05_result"
+"S06_STAGE: processing the Hgg real bilinear"
+"S06_STAGE: setting massless three-body kinematics"
+"S06_STAGE: summing incoming p and fragmenting k1 gluon polarizations"
+"S06_STAGE: summing final q and qbar spins"
+"S06_STAGE: evaluating all Dirac traces"
+"S06_CHECKPOINT: post-Dirac tensor leaf count "1109385
+"S06_STAGE: summing colors and applying incoming-gluon average"
+"S06_CHECKPOINT: final tensor leaf count "890208
+"S06_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s06_result"
+"S06_SUCCESS"
+"S06_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s06_result"
+"S06_RESULT_BYTES="5467115
+"S06_FINAL_LEAF_COUNT="890208
+"S06_CHECKS="InputForm[<|"S05SourceBindingsCurrent" -> True, "S05NoVirtualContractEnforced" -> True, "SoleHggRealBilinearProcessed" -> True, "IncomingGluonPolarizationSummed" -> True, "FragmentingGluonPolarizationSummed" -> True, "FinalQuarkAndAntiquarkSpinsSummed" -> True, "AllDiracTracesEvaluated" -> True, "AllColorsSummed" -> True, "InitialGluonSpinAveragedByDMinus2" -> True, "InitialGluonColorAveragedByNcSquaredMinus1" -> True, "PhotonPolarizationNotSummed" -> True, "PhotonIndexMuPreserved" -> True, "PhotonIndexNuPreserved" -> True, "CalculationFullySymbolic" -> True, "VirtualContributionAbsent" -> True|>]

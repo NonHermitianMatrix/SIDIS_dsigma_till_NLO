@@ -1,0 +1,79 @@
+{
+	"Status":"CompleteLocalFHatBenchmark",
+	"GeneratedAt":"2026-08-15T23:43:02",
+	"Source":{
+		"Path":"\/home\/physics\/projects\/AI_Assisted_SIDIS\/scripts\/Hgg\/s13_result",
+		"ByteCount":13459629,
+		"SHA256":"fcac990134fd73c582f3c9084ff39c44037d14bba39101346c081affc4e8e798",
+		"Status":"CompleteFinitePartonicStructureFunctionsHgg",
+		"StageVersion":"HggS13-v1",
+		"Channel":"Hgg only"
+	},
+	"Construction":{
+		"Method":"imported directly from S13 saved F-hat actions",
+		"Epsilon":0,
+		"ActionCoefficients":[
+			"Endpoint",
+			"IntegrandPhiS",
+			"IntegrandPhi0"
+		],
+		"ReferenceDistributionContent":"regular only"
+	},
+	"ComparisonLevel":"finite Hgg coefficient action before PDFs, FFs, and xi convolution",
+	"Conventions":{
+		"Couplings":"EL=1 and g_s=1",
+		"Color":"SU(3): CA=3, CF=4\/3, TF=1\/2",
+		"FlavorCount":4,
+		"FlavorChargeSum":1.1111111111111111,
+		"ActiveFlavorCharges":[
+			0.66666666666666667,
+			-0.33333333333333333,
+			-0.33333333333333333,
+			0.66666666666666667
+		],
+		"BigTMDChannel":4,
+		"BigTMDChargeCases":[
+			"A"
+		],
+		"BigTMDDistributionContent":"regular only",
+		"Scale":"ScaleMu=Q",
+		"EndpointRegulator":1.0000000000000000e-7,
+		"DifferenceDirectionExpectedByS02":"BigTMD minus local"
+	},
+	"Benchmark":{
+		"ID":"generic_interior_1",
+		"xB":0.23000000000000000,
+		"xi":0.61000000000000000,
+		"xHat":0.37704918032786885,
+		"zH":0.37000000000000000,
+		"Q2":17.000000000000000,
+		"Q":4.1231056256176605,
+		"qT2":3.1000000000000000,
+		"PHT2":0.42439000000000000,
+		"ScaleMu":4.1231056256176605,
+		"Nf":4,
+		"FlavorChargeSum":1.1111111111111111,
+		"S23UpperB":16.547782608695652,
+		"S23Fraction":0.40000000000000000,
+		"S23Sample":6.6191130434782609
+	},
+	"FieldS23":{
+		"Endpoint":1.0000000000000000e-7,
+		"IntegrandPhiS":6.6191130434782609,
+		"IntegrandPhi0":6.6191130434782609
+	},
+	"LocalFHatByField":{
+		"Endpoint":{
+			"F1Hat":0,
+			"F2Hat":0
+		},
+		"IntegrandPhiS":{
+			"F1Hat":0.000015765738289924656,
+			"F2Hat":0.000015600532833953454
+		},
+		"IntegrandPhi0":{
+			"F1Hat":0,
+			"F2Hat":0
+		}
+	}
+}

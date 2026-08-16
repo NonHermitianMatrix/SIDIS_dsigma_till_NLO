@@ -1,0 +1,31 @@
+<|"Status" -> "Complete", "StageDisposition" -> "NotApplicableAtThisOrder", 
+ "Channel" -> "Hgg only", "GeneratedAt" -> "2026-08-15T18:34:29", 
+ "SourceResult" -> 
+  "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s01_result", 
+ "SourceResultSHA256" -> 1130152829585975796337869248763744763478734999545637\
+13685095852654512371115198, "ReferencePDF" -> "/home/physics/projects/AI_Assi\
+sted_SIDIS/scripts/Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelast\
+ic_Scattering_Beyond_Lowest_Order.pdf", "PerturbativeOrder" -> 
+  "O(alpha_s^2)", "ExternalRealProcess" -> 
+  <|"Incoming" -> {"gamma*(q)", "g(p)"}, "Outgoing" -> 
+    {"g(k1)", "q(k2)", "qbar(k3)"}, "FragmentingParton" -> "g(k1)", 
+   "DiagramCount" -> 8|>, "VirtualRenormalization" -> 
+  <|"Applicable" -> False, "TwoBodyBornContribution" -> 0, 
+   "OneLoopVirtualContributionAtThisOrder" -> 0, 
+   "UVCountertermContributionAtThisOrder" -> 0, "Reason" -> "Paper Table I \
+gives Hgg at O(alpha_s^2) only through the tree real Hgg;q qbar process; \
+there is no same-order Hgg two-body Born or virtual partner."|>, 
+ "ReuseFromHqqS04" -> <|"Reused" -> {"fatal/assert control flow", 
+     "complete source-association gate", 
+     "self-describing result and provenance pattern", 
+     "exact reconstruction checks"}, "NotReused" -> 
+    {"bare one-loop amplitudes", "UV/IR pole collections", 
+     "QCD renormalization constants", 
+     "UV counterterm projection and virtual sums"}|>, 
+ "Checks" -> <|"CompleteHggSource" -> True, "EightRealDiagramsPresent" -> 
+    True, "RealAmplitudeSumReconstructs" -> True, 
+   "NoTwoBodyBornPayload" -> True, "NoVirtualPayload" -> True, 
+   "NoLoopPolePayload" -> True, "NoUVCountertermPayload" -> True, 
+   "AllS01ValidationChecksTrue" -> True|>, "DownstreamInstruction" -> "Hgg \
+S05 must construct only the real Hgg;q qbar bilinear from s01_result; it must \
+not seek a virtual amplitude in s04_result."|>

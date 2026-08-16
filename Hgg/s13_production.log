@@ -1,0 +1,19 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S13_STAGE: loading and validating completed Hgg S12 v2"
+"S13_STAGE: applying paper Eq. (9) and epsilon -> 0"
+"S13_FIELD: combining Endpoint"
+"S13_FIELD: combining IntegrandPhiS"
+"S13_FIELD: combining IntegrandPhi0"
+"S13_STAGE: rebuilding the two finite Hgg structure-function actions"
+"S13_ACTION: constructing F1Hat"
+"S13_ACTION: constructing F2Hat"
+"S13_STAGE: validating exact epsilon-free Hgg F hats"
+"S13_STAGE: writing finite hatted Hgg structure functions"
+"S13_SUCCESS_FINITE_FHAT_HGG"
+"S13_RESULT_PATH=""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s13_result"
+"S13_RESULT_BYTES="13459629
+"S13_CHECKS="InputForm[<|"HggS12V2CompleteValidatedAndSourceBound" -> True, "BothProjectorHardFunctionsConsumed" -> True, "PaperEq9PartonicInversionUsed" -> True, "EpsilonSetToZero" -> True, "ExactlyF1HatAndF2HatProduced" -> True, "ProjectorTestFunctionsAligned" -> True, "OrdinaryS23IntegralsRetained" -> True, "ArbitrarySymbolicTestsRetained" -> True, "PhysicalFlavorChargeWeightRetained" -> True, "NoAccidentalGlobalFeynCalcSymbols" -> True, "CalculationFullySymbolicAndExact" -> True, "SerialExecutionAvoidsLargeSubkernelCopies" -> True|>]

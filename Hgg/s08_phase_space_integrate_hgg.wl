@@ -1,0 +1,821 @@
+(* ::Package:: *)
+
+(*
+  Hgg stage S08: integrate the unobserved three-body angular phase space of
+  the two scalar Hgg;q qbar projections at fixed observed k1.
+
+    1. Make all real propagators explicit in exact three-body kinematics.
+    2. Use Appendix D to reduce every additive term to at most two
+       angle-dependent Mandelstam variables of different types.
+    3. Integrate beta1,beta2 through Appendix B: Eq. (B18) is explicit and
+       the virtual-photon--massless Eq. (B19) family is represented by the
+       exact symbolic head S08Case2Master.
+    4. Apply Eqs. (29)-(32), replacing zeta by s23 with the exact Jacobian and
+       physical xi/s23 limits.
+
+  Hgg has no two-body LO/virtual branch at O(alpha_s^2).  Endpoint
+  distributions, Appendix-F epsilon expansions, flavor-charge weighting, and
+  Eq. (46) collinear factorization remain for later stages.
+*)
+
+$HistoryLength = 0;
+Needs["FeynCalc`"];
+$FCAdvice = False;
+
+ClearAll[
+  fatal, assert, splitTerms, setThreeBodyKinematics, makeRealExplicit,
+  laurentPower, denominatorADMVs, presentADMVs, typeOfADMV,
+  sameTypeOffender, reduceSameTypeTerms, affineVector,
+  tripleUnityRelation, reduceTripleTerms, chooseBasis, basisRules,
+  reduceNumerators, reduceAppendixD, linearCoefficients,
+  reducedLinearCoefficients, coefficientDot, masslessGeometry,
+  case2Geometry, appendixB18, angularKeyAndCoefficient, masterFromKey,
+  integrateReducedTerms, validateAngularExpression, loadValidatedCache,
+  writeValidatedCache, processRealProjection, transformPair,
+  validateProjectionPair, validateXiS23Pair, zeroCoefficientVectorQ,
+  S08Case2Master
+];
+
+fatal[message_String] := (
+  Print["S08_FATAL: " <> message];
+  Quit[1]
+);
+
+assert[condition_, message_String] :=
+  If[! TrueQ[condition], fatal[message]];
+
+splitTerms[expression_] :=
+  If[Head[expression] === Plus, List @@ expression, {expression}];
+
+scriptDirectory = DirectoryName[ExpandFileName[$InputFileName]];
+s07Path = FileNameJoin[{scriptDirectory, "s07_result"}];
+resultPath = FileNameJoin[{scriptDirectory, "s08_result"}];
+stageVersion = "HggS08-v1";
+
+cachePaths = <|
+  "Pg" -> FileNameJoin[{scriptDirectory, "s08_cache_hgg_real_g"}],
+  "PPP" -> FileNameJoin[{scriptDirectory, "s08_cache_hgg_real_pp"}]
+|>;
+
+Print["S08_STAGE: loading validated Hgg s07_result"];
+assert[FileExistsQ[s07Path], "s07_result does not exist."];
+s07 = Check[Get[s07Path], $Failed];
+assert[AssociationQ[s07], "s07_result did not load as an Association."];
+assert[s07["Status"] === "Complete", "s07_result is not complete."];
+assert[s07["Channel"] === "Hgg only", "s07_result is not Hgg-only."];
+assert[s07["ProjectionCount"] === 2, "s07_result does not contain two projections."];
+assert[
+  AllTrue[Values[s07["Checks"]], TrueQ],
+  "At least one s07 validation check is not True."
+];
+assert[
+  s07["SourceResultSHA256"] ===
+    FileHash[s07["SourceResult"], "SHA256"],
+  "The S07 source binding is stale."
+];
+assert[
+  s07["VirtualContributionAtThisOrder"] === 0,
+  "The S07 no-virtual Hgg contract is not satisfied."
+];
+s07SHA256 = FileHash[s07Path, "SHA256"];
+
+realInput = s07[
+  "ScalarProjections", "NLOReal_OAlphaS2", "Hgg;q_qbar"
+];
+assert[AssociationQ[realInput], "The Hgg projection pair is not an Association."];
+assert[
+  Sort[Keys[realInput]] === Sort[{"Pg", "PPP"}],
+  "The Hgg input does not contain exactly Pg and PPP."
+];
+
+setThreeBodyKinematics[] := (
+  FeynCalc`FCClearScalarProducts[];
+  FeynCalc`SPD[p, p] = 0;
+  FeynCalc`SPD[q, q] = -Q2;
+  FeynCalc`SPD[k1, k1] = 0;
+  FeynCalc`SPD[k2, k2] = 0;
+  FeynCalc`SPD[k3, k3] = 0;
+  FeynCalc`SPD[p, q] = (sHat + Q2)/2;
+  FeynCalc`SPD[q, k1] = (-Q2 - t1)/2;
+  FeynCalc`SPD[q, k2] = (-Q2 - t2)/2;
+  FeynCalc`SPD[q, k3] = (-Q2 - t3)/2;
+  FeynCalc`SPD[p, k1] = -u1/2;
+  FeynCalc`SPD[p, k2] = -u2/2;
+  FeynCalc`SPD[p, k3] = -u3/2;
+  FeynCalc`SPD[k1, k2] = s12/2;
+  FeynCalc`SPD[k1, k3] = s13/2;
+  FeynCalc`SPD[k2, k3] = s23/2;
+);
+
+propagatorInvariantRules = {
+  s12 + s13 + s23 -> sHat,
+  s23 + u2 + u3 -> t1,
+  s12 + u1 + u2 -> t3,
+  s13 + u1 + u3 -> t2
+};
+
+makeRealExplicit[projection_] := Module[{answer},
+  setThreeBodyKinematics[];
+  answer = FeynCalc`FeynAmpDenominatorExplicit[projection];
+  answer = Expand[answer /. propagatorInvariantRules];
+  answer /. D -> 4 - 2 epsilon
+];
+
+admv = {t2, t3, u2, u3, s12, s13};
+sameTypeData = {
+  {{t2, t3}, u1 - s23 - Q2},
+  {{u2, u3}, t1 - s23},
+  {{s12, s13}, sHat - s23}
+};
+
+appendixDRelations = {
+  t2 + t3 == u1 - s23 - Q2,
+  u2 + u3 == t1 - s23,
+  s12 + s13 == sHat - s23,
+  s13 == sHat + Q2 + t2 + u2
+};
+
+laurentPower[term_, variable_] := Module[{factors},
+  factors = If[Head[term] === Times, List @@ term, {term}];
+  Total@Map[
+    Function[factor,
+      Which[
+        factor === variable, 1,
+        Head[factor] === Power && First[factor] === variable &&
+          IntegerQ[Last[factor]], Last[factor],
+        True, 0
+      ]
+    ],
+    factors
+  ]
+];
+
+denominatorADMVs[term_] :=
+  Select[admv, laurentPower[term, #] < 0 &];
+
+presentADMVs[term_] :=
+  Select[admv, laurentPower[term, #] =!= 0 &];
+
+typeOfADMV[variable_] := Which[
+  MemberQ[{t2, t3}, variable], "t",
+  MemberQ[{u2, u3}, variable], "u",
+  MemberQ[{s12, s13}, variable], "s",
+  True, "none"
+];
+
+sameTypeOffender[term_] := SelectFirst[
+  sameTypeData,
+  Function[data, And @@ (laurentPower[term, #] < 0 & /@ First[data])],
+  Missing["NotFound"]
+];
+
+reduceSameTypeTerms[inputTerms_List] := Module[
+  {terms = inputTerms, iteration = 0, changed, offender},
+  While[
+    changed = AnyTrue[terms, ! MissingQ[sameTypeOffender[#]] &];
+    changed,
+    iteration++;
+    assert[
+      iteration <= 12,
+      "Appendix D same-type reduction exceeded 12 iterations."
+    ];
+    terms = Flatten[
+      Map[
+        Function[term,
+          offender = sameTypeOffender[term];
+          If[
+            MissingQ[offender],
+            {term},
+            splitTerms@Expand[term Total[First[offender]]/Last[offender]]
+          ]
+        ],
+        terms
+      ],
+      1
+    ];
+  ];
+  terms
+];
+
+affineVector[variable_] := Switch[variable,
+  t2, {1, 0, 0},
+  t3, {-1, 0, u1 - s23 - Q2},
+  u2, {0, 1, 0},
+  u3, {0, -1, t1 - s23},
+  s13, {1, 1, sHat + Q2},
+  s12, {-1, -1, -s23 - Q2},
+  _, fatal["Unknown ADMV in affineVector."]
+];
+
+tripleUnityRelation[variables_List] := Module[
+  {vectors, nullVector, constant, lhs},
+  assert[
+    Length[variables] === 3,
+    "A three-variable Appendix D relation was requested incorrectly."
+  ];
+  vectors = affineVector /@ variables;
+  nullVector = First@NullSpace[Transpose[Take[#, 2] & /@ vectors]];
+  lhs = Together[nullVector . variables];
+  constant = Together[nullVector . (Last /@ vectors)];
+  assert[
+    ! TrueQ[constant === 0],
+    "A three-variable Appendix D unity denominator vanished."
+  ];
+  {lhs, constant}
+];
+
+reduceTripleTerms[inputTerms_List] := Module[
+  {terms = inputTerms, iteration = 0, changed, variables, relation},
+  While[
+    changed = AnyTrue[terms, Length[denominatorADMVs[#]] > 2 &];
+    changed,
+    iteration++;
+    assert[
+      iteration <= 12,
+      "Appendix D triple reduction exceeded 12 iterations."
+    ];
+    terms = Flatten[
+      Map[
+        Function[term,
+          variables = denominatorADMVs[term];
+          If[
+            Length[variables] <= 2,
+            {term},
+            assert[
+              Length[variables] === 3,
+              "Same-type reduction left more than three denominator ADMVs."
+            ];
+            relation = tripleUnityRelation[variables];
+            splitTerms@Expand[term First[relation]/Last[relation]]
+          ]
+        ],
+        terms
+      ],
+      1
+    ];
+  ];
+  terms
+];
+
+chooseBasis[term_] := Module[{variables, firstVariable, partner},
+  variables = denominatorADMVs[term];
+  Which[
+    Length[variables] === 2,
+      assert[
+        typeOfADMV[First[variables]] =!= typeOfADMV[Last[variables]],
+        "Two same-type denominator ADMVs survived Appendix D."
+      ];
+      variables,
+    Length[variables] === 1,
+      firstVariable = First[variables];
+      partner = SelectFirst[
+        {t2, u2, s12},
+        typeOfADMV[#] =!= typeOfADMV[firstVariable] &
+      ];
+      {firstVariable, partner},
+    Length[variables] === 0,
+      {t2, u2},
+    True,
+      fatal["chooseBasis received an unreduced term."]
+  ]
+];
+
+basisRules[basis_List] := basisRules[basis] = Module[
+  {eliminate, solution},
+  eliminate = Complement[admv, basis];
+  solution = Solve[appendixDRelations, eliminate];
+  assert[
+    Length[solution] >= 1,
+    "Could not solve Appendix D relations for a numerator basis."
+  ];
+  First[solution]
+];
+
+reduceNumerators[inputTerms_List] := Flatten[
+  Map[
+    Function[term, splitTerms@Expand[term /. basisRules[chooseBasis[term]]]],
+    inputTerms
+  ],
+  1
+];
+
+reduceAppendixD[expression_, label_String] := Module[
+  {terms, afterSame, afterTriple, reduced, invalid},
+  terms = splitTerms[Expand[expression]];
+  Print[
+    "S08_STAGE: Appendix D start " <> label <>
+      ", terms " <> ToString[Length[terms]]
+  ];
+  afterSame = reduceSameTypeTerms[terms];
+  Print[
+    "S08_STAGE: Appendix D same-type complete " <> label <>
+      ", terms " <> ToString[Length[afterSame]]
+  ];
+  afterTriple = reduceTripleTerms[afterSame];
+  Print[
+    "S08_STAGE: Appendix D triple complete " <> label <>
+      ", terms " <> ToString[Length[afterTriple]]
+  ];
+  reduced = reduceNumerators[afterTriple];
+  invalid = Select[
+    reduced,
+    Function[term,
+      Length[presentADMVs[term]] > 2 ||
+        (Length[presentADMVs[term]] === 2 &&
+          typeOfADMV[First[presentADMVs[term]]] ===
+            typeOfADMV[Last[presentADMVs[term]]])
+    ]
+  ];
+  assert[
+    invalid === {},
+    label <> " did not reduce to two different ADMV types."
+  ];
+  Print[
+    "S08_STAGE: Appendix D numerator complete " <> label <>
+      ", terms " <> ToString[Length[reduced]]
+  ];
+  reduced
+];
+
+(* Appendix-B frame 2: a + b Cos[beta1] + c Sin[beta1] Cos[beta2]. *)
+linearCoefficients[variable_] := Module[
+  {rho, yCoefficient, sConstant, sCosine, tConstant, tCosine, uHalf},
+  rho = Sqrt[s23 u1 (Q2 s23 + sHat t1)];
+  yCoefficient = rho/(s23 - t1);
+  sConstant = (sHat - s23)/2;
+  sCosine = sConstant + u1 s23/(s23 - t1);
+  tConstant = -Q2 - (sHat + t1)/2;
+  tCosine = ((sHat + t1) (s23 - t1) -
+      2 s23 (sHat + Q2))/(2 (s23 - t1));
+  uHalf = (s23 - t1)/2;
+  Switch[variable,
+    t2, {tConstant, tCosine, yCoefficient},
+    t3, {tConstant, -tCosine, -yCoefficient},
+    u2, {-uHalf, uHalf, 0},
+    u3, {-uHalf, -uHalf, 0},
+    s12, {sConstant, -sCosine, -yCoefficient},
+    s13, {sConstant, sCosine, yCoefficient},
+    _, fatal["Unknown ADMV in linearCoefficients."]
+  ]
+];
+
+q2ConstraintRule = Q2 -> s23 - sHat - t1 - u1;
+
+reducedLinearCoefficients[variable_] :=
+  reducedLinearCoefficients[variable] =
+    (Together /@ (linearCoefficients[variable] /. q2ConstraintRule));
+
+coefficientDot[first_List, second_List] :=
+  first[[2]] second[[2]] + first[[3]] second[[3]];
+
+masslessGeometry[first_, second_] :=
+  masslessGeometry[first, second] = Module[
+    {firstCoefficients, secondCoefficients, cosine},
+    firstCoefficients = reducedLinearCoefficients[first];
+    secondCoefficients = reducedLinearCoefficients[second];
+    cosine = Together[
+      coefficientDot[firstCoefficients, secondCoefficients]/
+        (First[firstCoefficients] First[secondCoefficients])
+    ];
+    {First[firstCoefficients], First[secondCoefficients], cosine}
+  ];
+
+case2Geometry[tVariable_, masslessVariable_] :=
+  case2Geometry[tVariable, masslessVariable] = Module[
+    {tCoefficients, masslessCoefficients, radius, dCoefficient, cosine},
+    tCoefficients = reducedLinearCoefficients[tVariable];
+    masslessCoefficients = reducedLinearCoefficients[masslessVariable];
+    radius = (Sqrt[(sHat + t1)^2 + 4 Q2 s23]/2) /.
+      q2ConstraintRule;
+    dCoefficient = Together[-First[tCoefficients]/radius];
+    cosine = Together[
+      -coefficientDot[tCoefficients, masslessCoefficients]/
+        (radius First[masslessCoefficients])
+    ];
+    {-radius, First[masslessCoefficients], dCoefficient, cosine}
+  ];
+
+appendixB18[j_Integer, l_Integer, cosine_, epsilonSymbol_] :=
+  2 Pi Gamma[1 - 2 epsilonSymbol]/Gamma[1 - epsilonSymbol]^2 *
+    2^(-j - l) *
+    Beta[1 - epsilonSymbol - j, 1 - epsilonSymbol - l] *
+    Hypergeometric2F1[
+      j, l, 1 - epsilonSymbol, (1 + cosine)/2
+    ];
+
+angularKeyAndCoefficient[term_] := Module[
+  {variables, firstVariable, secondVariable, firstPower,
+   secondPower, coefficient, ordered},
+  variables = presentADMVs[term];
+  Which[
+    Length[variables] === 0,
+      Return[{{"Area"}, term /. q2ConstraintRule}],
+    Length[variables] === 1,
+      firstVariable = First[variables];
+      secondVariable = SelectFirst[
+        {t2, u2, s12},
+        typeOfADMV[#] =!= typeOfADMV[firstVariable] &
+      ];
+      variables = {firstVariable, secondVariable},
+    Length[variables] === 2,
+      Null,
+    True,
+      fatal["Angular integration received more than two ADMVs."]
+  ];
+  ordered = If[
+    MemberQ[typeOfADMV /@ variables, "t"],
+    Join[
+      Select[variables, typeOfADMV[#] === "t" &],
+      Select[variables, typeOfADMV[#] =!= "t" &]
+    ],
+    SortBy[variables, First@First@Position[admv, #] &]
+  ];
+  firstVariable = First[ordered];
+  secondVariable = Last[ordered];
+  firstPower = laurentPower[term, firstVariable];
+  secondPower = laurentPower[term, secondVariable];
+  coefficient = Cancel[
+    term/(firstVariable^firstPower secondVariable^secondPower)
+  ] /. q2ConstraintRule;
+  If[
+    typeOfADMV[firstVariable] === "t",
+    {
+      {"B19", firstVariable, firstPower, secondVariable, secondPower},
+      coefficient
+    },
+    {
+      {"B18", firstVariable, firstPower, secondVariable, secondPower},
+      coefficient
+    }
+  ]
+];
+
+masterFromKey[{"Area"}] := 2 Pi/(1 - 2 epsilon);
+
+masterFromKey[
+    {"B18", first_, firstPower_Integer, second_, secondPower_Integer}
+  ] := Module[{geometry},
+  geometry = masslessGeometry[first, second];
+  geometry[[1]]^firstPower geometry[[2]]^secondPower *
+    appendixB18[-firstPower, -secondPower, geometry[[3]], epsilon]
+];
+
+masterFromKey[
+    {"B19", tVariable_, tPower_Integer,
+     masslessVariable_, masslessPower_Integer}
+  ] := Module[{geometry},
+  geometry = case2Geometry[tVariable, masslessVariable];
+  geometry[[1]]^tPower geometry[[2]]^masslessPower *
+    S08Case2Master[
+      -tPower, -masslessPower, geometry[[3]], geometry[[4]], epsilon
+    ]
+];
+
+integrateReducedTerms[terms_List, label_String] := Module[
+  {keyed, grouped, answer},
+  Print["S08_STAGE: grouping angular masters for " <> label];
+  keyed = angularKeyAndCoefficient /@ terms;
+  grouped = Merge[(First[#] -> Last[#]) & /@ keyed, Total];
+  Print[
+    "S08_STAGE: angular master count " <> label <> " = " <>
+      ToString[Length[grouped]]
+  ];
+  answer = Total[(Last[#] masterFromKey[First[#]]) & /@ Normal[grouped]];
+  answer
+];
+
+(* Eq. (38), including the common 1/(2 Pi)^4 from Eq. (19). *)
+threeBodyPhasePrefactor =
+  s23^(-epsilon) 2^(-2) Pi^(-epsilon)/
+    (2 Pi)^(6 - 2 epsilon) *
+    Gamma[1 - epsilon]/Gamma[1 - 2 epsilon];
+
+validateAngularExpression[expr_, label_String] := Module[{},
+  assert[expr =!= $Failed, label <> " returned $Failed."];
+  assert[expr =!= 0, label <> " is unexpectedly identically zero."];
+  assert[
+    FreeQ[
+      expr,
+      t2 | t3 | u2 | u3 | s12 | s13 | beta1 | beta2 |
+        _FeynCalc`FeynAmpDenominator | _FeynCalc`Momentum
+    ],
+    label <> " contains an unintegrated angular or propagator object."
+  ];
+  assert[FreeQ[expr, D], label <> " still contains D rather than epsilon."];
+  assert[FreeQ[expr, _Real], label <> " contains machine-precision numbers."];
+  True
+];
+
+loadValidatedCache[path_String, projectorName_String] := Module[{cache},
+  If[! FileExistsQ[path], Return[Missing["NotAvailable"]]];
+  Print["S08_STAGE: inspecting " <> projectorName <> " cache"];
+  cache = Quiet@Check[Get[path], $Failed];
+  If[
+    ! AssociationQ[cache] ||
+      cache["Status"] =!= "Complete" ||
+      cache["StageVersion"] =!= stageVersion ||
+      cache["Projector"] =!= projectorName ||
+      cache["SourceS07SHA256"] =!= s07SHA256 ||
+      ! KeyExistsQ[cache, "Expression"],
+    Print[
+      "S08_STAGE: deleting stale or invalid " <> projectorName <> " cache"
+    ];
+    DeleteFile[path];
+    Return[Missing["InvalidCache"]]
+  ];
+  validateAngularExpression[
+    cache["Expression"],
+    "cached Hgg " <> projectorName <> " angular result"
+  ];
+  Print["S08_STAGE: loading validated " <> projectorName <> " cache"];
+  cache["Expression"]
+];
+
+writeValidatedCache[path_String, projectorName_String, expr_] :=
+ Module[{temporaryPath, cache},
+  temporaryPath = path <> ".tmp." <> ToString[$ProcessID];
+  If[FileExistsQ[temporaryPath], DeleteFile[temporaryPath]];
+  cache = <|
+    "Status" -> "Complete",
+    "StageVersion" -> stageVersion,
+    "Projector" -> projectorName,
+    "SourceS07" -> s07Path,
+    "SourceS07SHA256" -> s07SHA256,
+    "GeneratedAt" -> DateString[Now, "ISODateTime"],
+    "Expression" -> expr
+  |>;
+  Put[cache, temporaryPath];
+  assert[
+    FileExistsQ[temporaryPath] && FileByteCount[temporaryPath] > 0,
+    projectorName <> " temporary cache was not written."
+  ];
+  RenameFile[temporaryPath, path, OverwriteTarget -> True];
+  assert[
+    FileExistsQ[path] && FileByteCount[path] > 0,
+    projectorName <> " cache was not finalized."
+  ];
+];
+
+processRealProjection[projection_, projectorName_String] := Module[
+  {answer, explicit, reducedTerms, angularResult},
+  answer = loadValidatedCache[cachePaths[projectorName], projectorName];
+  If[! MissingQ[answer], Return[answer]];
+
+  Print[
+    "S08_STAGE: making propagators explicit for Hgg " <> projectorName
+  ];
+  explicit = makeRealExplicit[projection];
+  assert[
+    FreeQ[explicit, _FeynCalc`FeynAmpDenominator] &&
+      FreeQ[explicit, _FeynCalc`Momentum],
+    "Hgg " <> projectorName <> " still contains an explicit propagator object."
+  ];
+  reducedTerms = reduceAppendixD[
+    explicit,
+    "Hgg;q qbar " <> projectorName
+  ];
+  angularResult = threeBodyPhasePrefactor *
+    integrateReducedTerms[reducedTerms, "Hgg;q qbar " <> projectorName];
+  validateAngularExpression[
+    angularResult,
+    "Hgg " <> projectorName <> " angular result"
+  ];
+  writeValidatedCache[
+    cachePaths[projectorName],
+    projectorName,
+    angularResult
+  ];
+  Print[
+    "S08_CHECKPOINT: completed ", projectorName,
+    " angular integration leaf count ", LeafCount[angularResult]
+  ];
+  angularResult
+];
+
+validateProjectionPair[pair_Association, label_String] := Module[{},
+  assert[
+    Sort[Keys[pair]] === Sort[{"Pg", "PPP"}],
+    label <> " does not contain exactly Pg and PPP."
+  ];
+  Scan[validateAngularExpression[#, label <> " projection"] &, Values[pair]];
+  True
+];
+
+(* Eqs. (29)-(32): xB, zH, and PHT2 are external hadronic variables. *)
+xHatXi = xB/xi;
+xiLowerA = xB + xB PHT2/(zH (1 - zH) Q2);
+s23UpperB = Q2 (1/xHatXi - 1) (1 - zH) - PHT2/zH;
+zetaXiS23 =
+  (xHatXi PHT2 + zH^2 Q2 (1 - xHatXi))/
+    (zH (Q2 (1 - xHatXi) - s23 xHatXi));
+zHatXiS23 = zH/zetaXiS23;
+k1TPartonic2XiS23 = PHT2/zetaXiS23^2;
+xiS23Jacobian =
+  (xHatXi^2 PHT2 + xHatXi zH^2 Q2 (1 - xHatXi))/
+    (zH (Q2 (1 - xHatXi) - s23 xHatXi)^2);
+
+partonicToXiS23Rules = {
+  sHat -> Q2 (1/xHatXi - 1),
+  t1 -> -Q2 + zHatXiS23 Q2 -
+    k1TPartonic2XiS23/zHatXiS23,
+  tHat -> -Q2 + zHatXiS23 Q2 -
+    k1TPartonic2XiS23/zHatXiS23,
+  u1 -> -zHatXiS23 Q2/xHatXi
+};
+
+transformPair[pair_Association] := Map[
+  Function[expression,
+    xiS23Jacobian * (expression /. partonicToXiS23Rules)
+  ],
+  pair
+];
+
+validateXiS23Pair[pair_Association, label_String] := Module[{},
+  assert[
+    Sort[Keys[pair]] === Sort[{"Pg", "PPP"}],
+    label <> " transformed pair has the wrong projector keys."
+  ];
+  assert[
+    And @@ (FreeQ[#, zeta | sHat | tHat | t1 | u1] & /@ Values[pair]),
+    label <> " transformed pair retains a replaced variable."
+  ];
+  assert[
+    And @@ (FreeQ[#, _Real] & /@ Values[pair]),
+    label <> " transformed pair contains machine-precision numbers."
+  ];
+  True
+];
+
+zeroCoefficientVectorQ[vector_List] :=
+  And @@ (TrueQ[Together[# /. q2ConstraintRule] === 0] & /@ vector);
+
+Print["S08_STAGE: validating Appendix D angular identities"];
+appendixDIdentityChecks = <|
+  "D5_t2_plus_t3" -> zeroCoefficientVectorQ[
+    linearCoefficients[t2] + linearCoefficients[t3] -
+      {u1 - s23 - Q2, 0, 0}
+  ],
+  "D6_u2_plus_u3" -> zeroCoefficientVectorQ[
+    linearCoefficients[u2] + linearCoefficients[u3] -
+      {t1 - s23, 0, 0}
+  ],
+  "D7_s12_plus_s13" -> zeroCoefficientVectorQ[
+    linearCoefficients[s12] + linearCoefficients[s13] -
+      {sHat - s23, 0, 0}
+  ],
+  "D8_s13_relation" -> zeroCoefficientVectorQ[
+    linearCoefficients[s13] - linearCoefficients[t2] -
+      linearCoefficients[u2] - {sHat + Q2, 0, 0}
+  ]
+|>;
+assert[
+  AllTrue[Values[appendixDIdentityChecks], TrueQ],
+  "At least one Appendix D angular identity failed."
+];
+assert[
+  TrueQ[Together[D[zetaXiS23, s23] - xiS23Jacobian] === 0],
+  "The zeta-to-s23 Jacobian identity failed."
+];
+
+Print["S08_STAGE: integrating the two Hgg real projections"];
+hggAngularResults = <|
+  "Pg" -> processRealProjection[realInput["Pg"], "Pg"],
+  "PPP" -> processRealProjection[realInput["PPP"], "PPP"]
+|>;
+validateProjectionPair[hggAngularResults, "Hgg angular result"];
+
+Print["S08_STAGE: applying zeta-to-s23 change of variables"];
+hggXiS23Kernels = transformPair[hggAngularResults];
+validateXiS23Pair[hggXiS23Kernels, "Hgg xi-s23 kernel"];
+
+case2Masters = DeleteDuplicates@Cases[
+  Values[hggAngularResults],
+  _S08Case2Master,
+  Infinity
+];
+
+s08Checks = <|
+  "CurrentS07SourceBindingVerified" -> True,
+  "SoleHggThreeBodyChannelProcessed" -> True,
+  "BothProjectorsAngularIntegrated" -> True,
+  "TwoAngularResultsProduced" -> True,
+  "AppendixDIdentitiesD5ThroughD8Verified" -> True,
+  "NoBeta1OrBeta2Remain" -> True,
+  "NoAngleDependentMandelstamVariablesRemain" -> True,
+  "NoExplicitPropagatorObjectsRemain" -> True,
+  "ZetaReplacedByS23" -> True,
+  "XiS23JacobianIdentityVerified" -> True,
+  "XiS23JacobianIncluded" -> True,
+  "PhysicalXiAndS23LimitsStored" -> True,
+  "CalculationFullySymbolic" -> True,
+  "NoTwoBodyOrVirtualBranchIntroduced" -> True,
+  "EndpointDistributionExpansionNotApplied" -> True,
+  "CollinearFactorizationNotApplied" -> True
+|>;
+
+s08Result = <|
+  "Status" -> "Complete",
+  "Channel" -> "Hgg only",
+  "Contribution" -> "Hgg;q qbar three-body angular-integrated projections",
+  "GeneratedAt" -> DateString[Now, "ISODateTime"],
+  "SourceResult" -> s07Path,
+  "SourceResultSHA256" -> s07SHA256,
+  "DimensionalConvention" -> HoldForm[D == 4 - 2 epsilon],
+  "ObservedMomentumTreatment" ->
+    "k1 is kept differential; only the unobserved q(k2),qbar(k3) phase-space angles are integrated",
+  "ThreeBodyAngularIntegrated" -> <|
+    "Hgg;q_qbar" -> hggAngularResults
+  |>,
+  "XiS23ConvolutionKernels" -> <|
+    "ThreeBodyReal" -> <|
+      "Hgg;q_qbar" -> hggXiS23Kernels
+    |>
+  |>,
+  "XiS23ChangeOfVariables" -> <|
+    "Replacement" -> HoldForm[zeta == zetaXiS23],
+    "ZetaExpression" -> zetaXiS23,
+    "Jacobian_dXi_dZeta_to_dXi_dS23" -> xiS23Jacobian,
+    "JacobianIdentityVerified" -> True,
+    "XiRange" -> {xi, xiLowerA, 1},
+    "S23RangeAtFixedXi" -> {s23, 0, s23UpperB},
+    "XiLowerA" -> xiLowerA,
+    "S23UpperB" -> s23UpperB,
+    "PartonicKinematicRules" -> partonicToXiS23Rules,
+    "SIsNotReplaced" -> True
+  |>,
+  "AngularMasterBasis" -> <|
+    "MasslessMassless" -> "Eq. (B18), evaluated explicitly",
+    "VirtualPhotonMassless" -> "I[j,l] of Eq. (B19)",
+    "Case2MastersUsed" -> case2Masters,
+    "Case2MasterCount" -> Length[case2Masters],
+    "Case2MasterDefinition" -> HoldComplete[
+      S08Case2Master[j, l, dCoefficient, cosineChi, epsilon] ==
+        With[{n = 4 - 2 epsilon},
+          (-1)^(l + 1) 2^(1 - l - j) Pi Gamma[n - 3] *
+            Gamma[2 + l - n/2] Gamma[n/2 - l - 1]/
+            (Gamma[n/2 - 1]^2 Gamma[n/2 - 2] *
+              Gamma[3 - n/2]) *
+            Inactive[Integrate][
+              zMaster^(n/2 - 2) (1 - zMaster)^(n/2 - l - 2)/
+                (zMaster + (dCoefficient - 1)/2)^j *
+                Hypergeometric2F1[
+                  j, l, n/2 - 1,
+                  (1 + cosineChi) zMaster/
+                    (dCoefficient - 1 + 2 zMaster)
+                ],
+              {zMaster, 0, 1}
+            ]
+        ]
+    ]
+  |>,
+  "AppendixDIdentityChecks" -> appendixDIdentityChecks,
+  "CacheProvenance" -> <|
+    "StageVersion" -> stageVersion,
+    "Pg" -> cachePaths["Pg"],
+    "PPP" -> cachePaths["PPP"],
+    "EveryCacheBoundToSourceS07SHA256" -> True
+  |>,
+  "PaperReferences" -> {
+    "three-body phase space: Eqs. (38)-(40)",
+    "angular master integrals: Appendix B",
+    "partial fractions: Appendix D",
+    "zeta to s23: Eqs. (29)-(32)"
+  },
+  "Checks" -> s08Checks,
+  "NotPerformedAtThisStage" -> {
+    "Appendix F epsilon expansion of I[j,l] masters",
+    "physical Sum_f e_f^2 flavor-charge sum",
+    "s23 endpoint delta/plus-distribution expansion",
+    "initial-state PDF and final-state FF subtraction from Eq. (46)",
+    "epsilon -> 0 limit",
+    "numerical PDF/FF convolution"
+  }
+|>;
+
+Print["S08_STAGE: writing " <> resultPath];
+temporaryResultPath = resultPath <> ".tmp." <> ToString[$ProcessID];
+If[FileExistsQ[temporaryResultPath], DeleteFile[temporaryResultPath]];
+Put[s08Result, temporaryResultPath];
+assert[
+  FileExistsQ[temporaryResultPath] && FileByteCount[temporaryResultPath] > 0,
+  "The temporary s08_result was not written."
+];
+RenameFile[temporaryResultPath, resultPath, OverwriteTarget -> True];
+assert[FileExistsQ[resultPath], "s08_result was not created."];
+assert[FileByteCount[resultPath] > 0, "s08_result is empty."];
+
+Print["S08_SUCCESS"];
+Print["S08_RESULT_PATH=" <> resultPath];
+Print["S08_RESULT_BYTES=", FileByteCount[resultPath]];
+Print["S08_CASE2_MASTER_COUNT=", Length[case2Masters]];
+Print[
+  "S08_ANGULAR_LEAF_COUNTS=",
+  InputForm[Map[LeafCount, hggAngularResults]]
+];
+Print[
+  "S08_TRANSFORMED_LEAF_COUNTS=",
+  InputForm[Map[LeafCount, hggXiS23Kernels]]
+];
+Print["S08_CHECKS=", InputForm[s08Checks]];
+
+Quit[0];

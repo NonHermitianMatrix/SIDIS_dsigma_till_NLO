@@ -1,0 +1,18 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"BIGTMD_CHECK_S01_STAGE: importing validated S13 F hats"
+"BIGTMD_CHECK_S01_FHAT: importing F1Hat"
+"BIGTMD_CHECK_S01_FIELD: F1Hat Endpoint"
+"BIGTMD_CHECK_S01_FIELD: F1Hat IntegrandPhiS"
+"BIGTMD_CHECK_S01_FIELD: F1Hat IntegrandPhi0"
+"BIGTMD_CHECK_S01_FHAT: importing F2Hat"
+"BIGTMD_CHECK_S01_FIELD: F2Hat Endpoint"
+"BIGTMD_CHECK_S01_FIELD: F2Hat IntegrandPhiS"
+"BIGTMD_CHECK_S01_FIELD: F2Hat IntegrandPhi0"
+"BIGTMD_CHECK_S01_STAGE: writing compact local benchmark"
+"BIGTMD_CHECK_S01_SUCCESS"
+"BIGTMD_CHECK_S01_OUTPUT=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/bigTMD_check/local_fhat_benchmark.json"
+"BIGTMD_CHECK_S01_OUTPUT_BYTES="2032

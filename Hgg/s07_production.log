@@ -1,0 +1,18 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S07_STAGE: loading validated Hgg s06_result"
+"S07_STAGE: contracting the Hgg tensor with both projectors"
+"S07_STAGE: inspecting Pg cache"
+"S07_STAGE: loading validated Pg cache"
+"S07_STAGE: inspecting PPP cache"
+"S07_STAGE: loading validated PPP cache"
+"S07_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s07_result"
+"S07_SUCCESS"
+"S07_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s07_result"
+"S07_PROJECTION_COUNT="2
+"S07_LEAF_COUNTS="InputForm[<|"Pg" -> 186097, "PPP" -> 69405|>]
+"S07_RESULT_BYTES="1475518
+"S07_CHECKS="InputForm[<|"CurrentS06SourceBindingVerified" -> True, "SoleHggTensorLoaded" -> True, "BothProjectorsApplied" -> True, "TwoScalarProjectionsProduced" -> True, "PhotonIndexMuContracted" -> True, "PhotonIndexNuContracted" -> True, "NoLorentzIndicesRemain" -> True, "D DimensionalContractionsRetained" -> True, "CalculationFullySymbolic" -> True, "NoPhaseSpaceOrFlavorFactorsApplied" -> True, "VirtualContributionAbsent" -> True|>]

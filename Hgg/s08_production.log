@@ -1,0 +1,33 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S08_STAGE: loading validated Hgg s07_result"
+"S08_STAGE: validating Appendix D angular identities"
+"S08_STAGE: integrating the two Hgg real projections"
+"S08_STAGE: making propagators explicit for Hgg Pg"
+"S08_STAGE: Appendix D start Hgg;q qbar Pg, terms 4710"
+"S08_STAGE: Appendix D same-type complete Hgg;q qbar Pg, terms 7256"
+"S08_STAGE: Appendix D triple complete Hgg;q qbar Pg, terms 10104"
+"S08_STAGE: Appendix D numerator complete Hgg;q qbar Pg, terms 72058"
+"S08_STAGE: grouping angular masters for Hgg;q qbar Pg"
+"S08_STAGE: angular master count Hgg;q qbar Pg = 84"
+"S08_CHECKPOINT: completed ""Pg"" angular integration leaf count "751752
+"S08_STAGE: making propagators explicit for Hgg PPP"
+"S08_STAGE: Appendix D start Hgg;q qbar PPP, terms 1390"
+"S08_STAGE: Appendix D same-type complete Hgg;q qbar PPP, terms 2180"
+"S08_STAGE: Appendix D triple complete Hgg;q qbar PPP, terms 2900"
+"S08_STAGE: Appendix D numerator complete Hgg;q qbar PPP, terms 35856"
+"S08_STAGE: grouping angular masters for Hgg;q qbar PPP"
+"S08_STAGE: angular master count Hgg;q qbar PPP = 102"
+"S08_CHECKPOINT: completed ""PPP"" angular integration leaf count "519376
+"S08_STAGE: applying zeta-to-s23 change of variables"
+"S08_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s08_result"
+"S08_SUCCESS"
+"S08_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s08_result"
+"S08_RESULT_BYTES="24585593
+"S08_CASE2_MASTER_COUNT="64
+"S08_ANGULAR_LEAF_COUNTS="InputForm[<|"Pg" -> 751752, "PPP" -> 519376|>]
+"S08_TRANSFORMED_LEAF_COUNTS="InputForm[<|"Pg" -> 4609372, "PPP" -> 3478905|>]
+"S08_CHECKS="InputForm[<|"CurrentS07SourceBindingVerified" -> True, "SoleHggThreeBodyChannelProcessed" -> True, "BothProjectorsAngularIntegrated" -> True, "TwoAngularResultsProduced" -> True, "AppendixDIdentitiesD5ThroughD8Verified" -> True, "NoBeta1OrBeta2Remain" -> True, "NoAngleDependentMandelstamVariablesRemain" -> True, "NoExplicitPropagatorObjectsRemain" -> True, "ZetaReplacedByS23" -> True, "XiS23JacobianIdentityVerified" -> True, "XiS23JacobianIncluded" -> True, "PhysicalXiAndS23LimitsStored" -> True, "CalculationFullySymbolic" -> True, "NoTwoBodyOrVirtualBranchIntroduced" -> True, "EndpointDistributionExpansionNotApplied" -> True, "CollinearFactorizationNotApplied" -> True|>]

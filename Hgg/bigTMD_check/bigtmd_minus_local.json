@@ -1,0 +1,161 @@
+{
+  "Benchmark": {
+    "FlavorChargeSum": 1.1111111111111112,
+    "ID": "generic_interior_1",
+    "Nf": 4,
+    "PHT2": 0.42439,
+    "Q": 4.123105625617661,
+    "Q2": 17.0,
+    "S23Fraction": 0.4,
+    "S23Sample": 6.619113043478261,
+    "S23UpperB": 16.547782608695652,
+    "ScaleMu": 4.123105625617661,
+    "qT2": 3.1,
+    "xB": 0.23,
+    "xHat": 0.3770491803278688,
+    "xi": 0.61,
+    "zH": 0.37
+  },
+  "BigTMDSource": {
+    "Channel": 4,
+    "ChargeCases": [
+      "A"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "DistributionContent": "regular only",
+    "Process": "A g -> (g->h) q qbar",
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD"
+  },
+  "ComparisonLevel": "finite Hgg coefficient action before PDFs, FFs, and xi convolution",
+  "DifferenceDirection": "BigTMD minus local",
+  "DifferencesByField": {
+    "Endpoint": {
+      "F1Hat": {
+        "AbsoluteDifference": 0.0,
+        "BigTMD": 0.0,
+        "BigTMDMinusLocal": 0.0,
+        "Local": 0.0,
+        "NumericallyClose": true,
+        "RelativeDifference": 0.0
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 0.0,
+        "BigTMD": 0.0,
+        "BigTMDMinusLocal": 0.0,
+        "Local": 0.0,
+        "NumericallyClose": true,
+        "RelativeDifference": 0.0
+      }
+    },
+    "IntegrandPhi0": {
+      "F1Hat": {
+        "AbsoluteDifference": 0.0,
+        "BigTMD": 0.0,
+        "BigTMDMinusLocal": 0.0,
+        "Local": 0.0,
+        "NumericallyClose": true,
+        "RelativeDifference": 0.0
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 0.0,
+        "BigTMD": 0.0,
+        "BigTMDMinusLocal": 0.0,
+        "Local": 0.0,
+        "NumericallyClose": true,
+        "RelativeDifference": 0.0
+      }
+    },
+    "IntegrandPhiS": {
+      "F1Hat": {
+        "AbsoluteDifference": 1.9659987968804643e-05,
+        "BigTMD": -3.894249678879983e-06,
+        "BigTMDMinusLocal": -1.9659987968804643e-05,
+        "Local": 1.5765738289924658e-05,
+        "NumericallyClose": false,
+        "RelativeDifference": 1.247007124390024
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 1.8094526096539274e-05,
+        "BigTMD": -2.493993262585821e-06,
+        "BigTMDMinusLocal": -1.8094526096539274e-05,
+        "Local": 1.5600532833953452e-05,
+        "NumericallyClose": false,
+        "RelativeDifference": 1.1598659026028793
+      }
+    }
+  },
+  "Rows": [
+    {
+      "AbsoluteDifference": 0.0,
+      "BigTMD": 0.0,
+      "BigTMDMinusLocal": 0.0,
+      "Field": "Endpoint",
+      "Function": "F1Hat",
+      "Local": 0.0,
+      "NumericallyClose": true,
+      "RelativeDifference": 0.0
+    },
+    {
+      "AbsoluteDifference": 0.0,
+      "BigTMD": 0.0,
+      "BigTMDMinusLocal": 0.0,
+      "Field": "Endpoint",
+      "Function": "F2Hat",
+      "Local": 0.0,
+      "NumericallyClose": true,
+      "RelativeDifference": 0.0
+    },
+    {
+      "AbsoluteDifference": 1.9659987968804643e-05,
+      "BigTMD": -3.894249678879983e-06,
+      "BigTMDMinusLocal": -1.9659987968804643e-05,
+      "Field": "IntegrandPhiS",
+      "Function": "F1Hat",
+      "Local": 1.5765738289924658e-05,
+      "NumericallyClose": false,
+      "RelativeDifference": 1.247007124390024
+    },
+    {
+      "AbsoluteDifference": 1.8094526096539274e-05,
+      "BigTMD": -2.493993262585821e-06,
+      "BigTMDMinusLocal": -1.8094526096539274e-05,
+      "Field": "IntegrandPhiS",
+      "Function": "F2Hat",
+      "Local": 1.5600532833953452e-05,
+      "NumericallyClose": false,
+      "RelativeDifference": 1.1598659026028793
+    },
+    {
+      "AbsoluteDifference": 0.0,
+      "BigTMD": 0.0,
+      "BigTMDMinusLocal": 0.0,
+      "Field": "IntegrandPhi0",
+      "Function": "F1Hat",
+      "Local": 0.0,
+      "NumericallyClose": true,
+      "RelativeDifference": 0.0
+    },
+    {
+      "AbsoluteDifference": 0.0,
+      "BigTMD": 0.0,
+      "BigTMDMinusLocal": 0.0,
+      "Field": "IntegrandPhi0",
+      "Function": "F2Hat",
+      "Local": 0.0,
+      "NumericallyClose": true,
+      "RelativeDifference": 0.0
+    }
+  ],
+  "Status": "CompleteBigTMDMinusLocalBenchmark",
+  "Summary": {
+    "AllWithinTolerance": false,
+    "ComparisonCount": 6,
+    "MaximumAbsoluteDifference": 1.9659987968804643e-05,
+    "MaximumRelativeDifference": 1.247007124390024,
+    "Tolerance": "abs(diff) <= 1e-8 + 1e-6*max(abs(BigTMD),abs(local))"
+  }
+}

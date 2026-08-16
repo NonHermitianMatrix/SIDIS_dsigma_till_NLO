@@ -1,0 +1,94 @@
+{
+  "Benchmark": {
+    "FlavorChargeSum": 1.1111111111111112,
+    "ID": "generic_interior_1",
+    "Nf": 4,
+    "PHT2": 0.42439,
+    "Q": 4.123105625617661,
+    "Q2": 17.0,
+    "S23Fraction": 0.4,
+    "S23Sample": 6.619113043478261,
+    "S23UpperB": 16.547782608695652,
+    "ScaleMu": 4.123105625617661,
+    "qT2": 3.1,
+    "xB": 0.23,
+    "xHat": 0.3770491803278688,
+    "xi": 0.61,
+    "zH": 0.37
+  },
+  "ChargeWeightedCasesByField": {
+    "Endpoint": {
+      "A": {
+        "F1Hat": 0.0,
+        "F2Hat": 0.0,
+        "Pg": 0.0,
+        "Ppp": 0.0
+      }
+    },
+    "IntegrandPhi0": {
+      "A": {
+        "F1Hat": 0.0,
+        "F2Hat": 0.0,
+        "Pg": 0.0,
+        "Ppp": 0.0
+      }
+    },
+    "IntegrandPhiS": {
+      "A": {
+        "F1Hat": -3.894249678879983e-06,
+        "F2Hat": -2.493993262585821e-06,
+        "Pg": 8.375497101471796e-06,
+        "Ppp": 1.754807007276898e-05
+      }
+    }
+  },
+  "Conventions": {
+    "ChargeInterpretation": "sum_f Q_f^2 for active u,d,s,c; BigTMD channel-4 quark-plus-antiquark luminosity divides by two",
+    "EndpointRegulator": 1e-07,
+    "Excluded": "PDFs, FFs, alpha_s running, and leptonic prefactors",
+    "FlavorChargeSum": 1.1111111111111112
+  },
+  "FHatByField": {
+    "Endpoint": {
+      "F1Hat": 0.0,
+      "F2Hat": 0.0
+    },
+    "IntegrandPhi0": {
+      "F1Hat": 0.0,
+      "F2Hat": 0.0
+    },
+    "IntegrandPhiS": {
+      "F1Hat": -3.894249678879983e-06,
+      "F2Hat": -2.493993262585821e-06
+    }
+  },
+  "ProjectorsByField": {
+    "Endpoint": {
+      "Pg": 0.0,
+      "Ppp": 0.0
+    },
+    "IntegrandPhi0": {
+      "Pg": 0.0,
+      "Ppp": 0.0
+    },
+    "IntegrandPhiS": {
+      "Pg": 8.375497101471796e-06,
+      "Ppp": 1.754807007276898e-05
+    }
+  },
+  "Reference": {
+    "Channel": 4,
+    "ChargeCases": [
+      "A"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "DistributionContent": "regular only",
+    "Process": "A g -> (g->h) q qbar",
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD"
+  },
+  "Status": "CompleteBigTMDFHatBenchmark"
+}
