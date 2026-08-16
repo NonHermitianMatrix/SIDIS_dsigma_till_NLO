@@ -1,0 +1,17 @@
+<|"CacheVersion" -> 1, "IntegralType" -> "scalar master", 
+ "AnalyticContinuation" -> True, "ImplicitPrefactor" -> 1, 
+ "Integrals" -> {C0[0, 0, sHat, 0, 0, 0], B0[sHat, 0, 0], B0[tHat, 0, 0], 
+   C0[0, 0, tHat, 0, 0, 0]}, "Values" -> 
+  {1/(EpsilonIR^2*sHat) + (6*EulerGamma^2 - Pi^2 + 24*Log[2]^2 + 6*Log[4]^2 - 
+      Log[4]*Log[16777216] + 12*EulerGamma*Log[Pi] + 6*Log[Pi]^2 - 
+      12*EulerGamma*Log[-(ScaleMu^2/sHat)] - 
+      12*Log[Pi]*Log[-(ScaleMu^2/sHat)] + 6*Log[-(ScaleMu^2/sHat)]^2)/
+     (12*sHat) - (EulerGamma - Log[-(ScaleMu^2/(Pi*sHat))])/(EpsilonIR*sHat), 
+   2 + EpsilonUV^(-1) - EulerGamma + Log[-(ScaleMu^2/(Pi*sHat))], 
+   2 + EpsilonUV^(-1) - EulerGamma + Log[-(ScaleMu^2/(Pi*tHat))], 
+   1/(EpsilonIR^2*tHat) + (6*EulerGamma^2 - Pi^2 + 24*Log[2]^2 + 6*Log[4]^2 - 
+      Log[4]*Log[16777216] + 12*EulerGamma*Log[Pi] + 6*Log[Pi]^2 - 
+      12*EulerGamma*Log[-(ScaleMu^2/tHat)] - 
+      12*Log[Pi]*Log[-(ScaleMu^2/tHat)] + 6*Log[-(ScaleMu^2/tHat)]^2)/
+     (12*tHat) - (EulerGamma - Log[-(ScaleMu^2/(Pi*tHat))])/
+     (EpsilonIR*tHat)}|>

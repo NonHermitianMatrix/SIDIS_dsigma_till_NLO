@@ -1,0 +1,38 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["FeynHelpers ", "Text", Bold]Style["2.0.0 (). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceFeynHelpersDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceFeynHelpersDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynHelpersDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feynhelpers-manual/releases/download/dev-manual/FeynHelpersManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feynhelpers-manual/releases/download/dev-manual/FeynHelpersManual.pdf"]], "Text"]
+Style[" If you use FeynHelpers in your research, please evaluate FeynHelpersHowToCite[] to learn how to cite this work.", "Text"]
+"S10_PARALLEL_KERNELS="0
+"S10_MEMORY_STAGE: serial bounded reconstruction; no large expression is copied to subkernels"
+"S10_STAGE: loading and validating s09, s08, and s07 inputs"
+"S10_STAGE: completing all analytic scalar one-loop integrals"
+"S10_STAGE: loading resumable Package-X cache"
+"S10_STAGE: loading resumable Package-X cache"
+"S10_STAGE: resolving ordinary tree propagator denominators"
+"S10_STAGE: validating the explicit UV counterterm cancellation"
+"S10_STAGE: applying the exact s08 two-body normalization and map"
+"S10_MEMORY_STAGE: releasing superseded virtual inputs before Laurent expansion"
+"S10_STAGE: completing the renormalized virtual Laurent expansion"
+"S10_STAGE: loading virtual Laurent cache"
+"S10_MEMORY_STAGE: releasing completed virtual data before real endpoints"
+"S10_STAGE: reloading s09 real endpoint inputs"
+"S10_STAGE: releasing completed virtual intermediates before endpoints"
+"S10_STAGE: resolving all six channel/projector endpoint values"
+"S10_STAGE: loading endpoint cache for Hqq;gg Pg"
+"S10_STAGE: loading endpoint cache for Hqq;gg PPP"
+"S10_STAGE: loading endpoint cache for Hqq;q_qbar_sameFlavor Pg"
+"S10_STAGE: loading endpoint cache for Hqq;q_qbar_sameFlavor PPP"
+"S10_STAGE: loading endpoint cache for Hqq;qPrime_qbarPrime Pg"
+"S10_STAGE: loading endpoint cache for Hqq;qPrime_qbarPrime PPP"
+"S10_STAGE: validating weighted endpoint poles through finite order"
+"S10_STAGE: reloading completed virtual Laurent cache after endpoints"
+"S10_STAGE: loading virtual Laurent cache"
+"S10_STAGE: acting all endpoint distributions on symbolic test functions"
+"S10_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/s10_result"
+"S10_SUCCESS_SYMBOLIC"
+"S10_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/s10_result"
+"S10_RESULT_BYTES="625272154
+"S10_CHECKS="InputForm[<|"S09S08S07InputsValidated" -> True, "All96UniquePaVeFunctionsEvaluated" -> True, "All4UniqueScalarMastersEvaluated" -> True, "PackageXAnalyticContinuationApplied" -> True, "OrdinaryTreeDenominatorsResolved" -> True, "SavedSymbolicCountertermsRemovedBeforeExplicitInsertion" -> True, "ExternalLegNormalizationInsertedExactlyOnce" -> True, "BareUVResidueMatchesLOForBothProjectors" -> True, "ExplicitQCDCountertermsCancelUVPole" -> True, "VirtualDoublePoleMatchesUniversalIRFactor" -> True, "TwoBodyNormalizationMatchesS09LOReference" -> True, "VirtualLaurentExpandedThroughFiniteTerm" -> True, "ExactlyTwoS09EndpointPlaceholdersFound" -> True, "AllSixChannelEndpointLaurentDataResolved" -> True, "TwoGGNestedEndpointPowersRefactoredAsAlpha2" -> True, "WeightedEndpointDoublePoleAbsentThroughFiniteOrder" -> True, "EvanescentHigherOrderEndpointPoleRecorded" -> True, "WeightedEndpointValuesAreS23Independent" -> True, "WeightedAlpha2EndpointValuesAreS23Independent" -> True, "DiracDeltaActedOnSymbolicTestFunction" -> True, "AllPlusDistributionsActedOnSymbolicTestFunction" -> True, "FinalConvolutionActionsContainNoDistributionPlaceholders" -> True, "CalculationRemainsFullySymbolic" -> True, "CollinearFactorizationNotClaimed" -> True|>]

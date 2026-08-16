@@ -1,0 +1,24 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S03_TRACE_STAGE: loading validated S12 result read-only"
+
+TF::shdw: Symbol TF appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+Global`CA::shdw: Symbol CA appears in multiple contexts {Global`, FeynCalc`}; definitions in context Global` may shadow or be shadowed by other definitions.
+
+Global`CF::shdw: Symbol CF appears in multiple contexts {Global`, FeynCalc`}; definitions in context Global` may shadow or be shadowed by other definitions.
+
+Global`SMP::shdw: Symbol SMP appears in multiple contexts {Global`, FeynCalc`}; definitions in context Global` may shadow or be shadowed by other definitions.
+
+Global`FCGV::shdw: Symbol FCGV appears in multiple contexts {Global`, FeynCalc`}; definitions in context Global` may shadow or be shadowed by other definitions.
+"S03_TRACE_ZERO_ARGUMENT_COUNT="2
+"S03_TRACE_STAGE: tagging projector endpoint logarithms"
+"S03_TRACE_STAGE: exact reduction of S13 F1Hat endpoint combination"
+"S03_TRACE_RECORD="InputForm[<|"Index" -> 1, "ArgumentInputForm" -> "1 - (Q2^2*(-1 + xi/xB)^2 + Q2*(-1 + xi/xB)*(-Q2 - (PHT2*Q2*(1 - xB/xi))/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2) + (Q2^2*(1 - xB/xi)*zH^2)/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2)))/(Q2*(-1 + xi/xB)*Sqrt[(-Q2 + Q2*(-1 + xi/xB) - (PHT2*Q2*(1 - xB/xi))/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2) + (Q2^2*(1 - xB/xi)*zH^2)/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2))^2])", "ArgumentLeafCount" -> 204, "PgOccurrences" -> 1, "PPPOccurrences" -> 1, "SurvivesExactF1Combination" -> True, "SurvivingDegree" -> 2, "CoefficientLeafCount" -> 7, "CoefficientShort" -> "Short[-3424235707/(119949972512*Pi^5), 12]"|>]
+"S03_TRACE_RECORD="InputForm[<|"Index" -> 2, "ArgumentInputForm" -> "1 + (Q2*(-1 + xi/xB)*(-Q2 - (PHT2*Q2*(1 - xB/xi))/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2) + (Q2^2*(1 - xB/xi)*zH^2)/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2)) + (-Q2 - (PHT2*Q2*(1 - xB/xi))/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2) + (Q2^2*(1 - xB/xi)*zH^2)/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2))^2)/((Q2 + (PHT2*Q2*(1 - xB/xi))/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2) - (Q2^2*(1 - xB/xi)*zH^2)/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2))*Sqrt[(-Q2 + Q2*(-1 + xi/xB) - (PHT2*Q2*(1 - xB/xi))/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2) + (Q2^2*(1 - xB/xi)*zH^2)/((PHT2*xB)/xi + Q2*(1 - xB/xi)*zH^2))^2])", "ArgumentLeafCount" -> 330, "PgOccurrences" -> 1, "PPPOccurrences" -> 1, "SurvivesExactF1Combination" -> True, "SurvivingDegree" -> 1, "CoefficientLeafCount" -> 10, "CoefficientShort" -> "Short[(-1521111551*Inactive[Log][1])/(1121415948000*Pi^5), 12]"|>]
+
+Export::jsonstrictencoding: Expression Power cannot be exported as JSON.
+"S03_TRACE_FATAL: trace export failed"

@@ -1,0 +1,62 @@
+{
+	"Status":"CompleteLocalFHatBenchmark",
+	"GeneratedAt":"2026-08-15T17:07:46",
+	"Source":{
+		"Path":"\/home\/physics\/projects\/AI_Assisted_SIDIS\/scripts\/Hqq\/s13_result",
+		"ByteCount":464823025,
+		"Status":"CompleteFinitePartonicStructureFunctionsHqq"
+	},
+	"Construction":{
+		"Method":"imported directly from S13 saved F-hat actions",
+		"Epsilon":0,
+		"ActionCoefficients":[
+			"Endpoint",
+			"IntegrandPhiS",
+			"IntegrandPhi0"
+		]
+	},
+	"ComparisonLevel":"finite Hqq coefficient action before PDFs, FFs, and xi convolution",
+	"Conventions":{
+		"Couplings":"EL=1 and g_s=1; generated down-type charge is retained",
+		"Color":"SU(3): CA=3, CF=4\/3, TF=1\/2",
+		"FlavorCount":4,
+		"Scale":"ScaleMu=Q",
+		"EndpointRegulator":1.0000000000000000e-7,
+		"DifferenceDirectionExpectedByS02":"BigTMD minus local"
+	},
+	"Benchmark":{
+		"ID":"generic_interior_1",
+		"xB":0.23000000000000000,
+		"xi":0.61000000000000000,
+		"xHat":0.37704918032786885,
+		"zH":0.37000000000000000,
+		"Q2":17.000000000000000,
+		"Q":4.1231056256176605,
+		"qT2":3.1000000000000000,
+		"PHT2":0.42439000000000000,
+		"ScaleMu":4.1231056256176605,
+		"Nf":4,
+		"S23UpperB":16.547782608695652,
+		"S23Fraction":0.40000000000000000,
+		"S23Sample":6.6191130434782609
+	},
+	"FieldS23":{
+		"Endpoint":1.0000000000000000e-7,
+		"IntegrandPhiS":6.6191130434782609,
+		"IntegrandPhi0":6.6191130434782609
+	},
+	"LocalFHatByField":{
+		"Endpoint":{
+			"F1Hat":-0.00013698547648932231,
+			"F2Hat":-0.00010978903557803845
+		},
+		"IntegrandPhiS":{
+			"F1Hat":0.000019134075141836897,
+			"F2Hat":0.000016726017212946678
+		},
+		"IntegrandPhi0":{
+			"F1Hat":-0.000013371511696033101,
+			"F2Hat":-0.000010841236347504985
+		}
+	}
+}

@@ -1,0 +1,25 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["Loading FeynArts from /home/physics/.WolframEngine/Applications/FeynCalc/FeynArts", "Text"]
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+Style["FeynArts ", "Text", Bold]Style["3.11 (25 Mar 2022) patched for use with FeynCalc, for documentation see the ", "Text"]Style[DisplayForm[ButtonBox["manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[First[FileNames[{"*.pdf", "*.PDF"}, FileNameJoin[{$FeynArtsDirectory, "manual"}]]]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" or visit ", "Text"]Style[DisplayForm[ButtonBox["www.feynarts.de.", ButtonData :> {URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "www.feynarts.de/"]], "Text"]
+Style["If you use FeynArts in your research, please cite", "Text"]
+Style[" • T. Hahn, Comput. Phys. Commun., 140, 418-431, 2001, arXiv:hep-ph/0012260", "Text"]
+"S11_STAGE: loading and validating the Hqq s07 LO projections"
+
+FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+"S11_STAGE: generating direct Born channel Hqq gamma* q -> q g"
+"S11_STAGE: generating direct Born channel Hqg gamma* q -> g q"
+"S11_STAGE: generating direct Born channel Hgq gamma* g -> q qbar"
+"S11_STAGE: explicitizing and validating all Born projections"
+"S11_STAGE: acting the splitting distributions for both projectors"
+"S11_STAGE: writing four symbolic counterterms"
+"S11_SUCCESS_SYMBOLIC_COUNTERTERMS"
+"S11_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/s11_result"
+"S11_RESULT_BYTES="31398
+"S11_COUNTERTERM_KEYS="InputForm[{"PgPDF", "PgFF", "PPPPDF", "PPPFF"}]
+"S11_CHECKS="InputForm[<|"S07InputValidated" -> True, "ThreeBornChannelsAvailable" -> True, "HqqRegenerationMatchesS07Pg" -> True, "HqqRegenerationMatchesS07PPP" -> True, "AllConvolutionMappingsValidated" -> True, "ExactlyFourCounterterms" -> True, "BothProjectorsHavePDFAndFF" -> True, "PDFContainsDiagonalAndMixingBornChannels" -> True, "FFContainsDiagonalAndMixingBornChannels" -> True, "SplittingDistributionsActed" -> True, "OrdinaryInactiveIntegralsRetained" -> True, "ArbitrarySymbolicTestsRetained" -> True, "PaperSEpsilonKeptSymbolic" -> True, "NoS10CombinationPerformed" -> True, "CalculationFullySymbolic" -> True|>]
