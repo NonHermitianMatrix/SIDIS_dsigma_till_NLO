@@ -1,0 +1,26 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S07_STAGE: loading validated Hqg s06_result"
+"S07_STAGE: contracting all three Hqg tensors"
+"S07_STAGE: contracting Hqg LO square with Pg"
+"S07_CHECKPOINT: completed LO Pg leaf count 392"
+"S07_STAGE: contracting Hqg LO square with PPP"
+"S07_CHECKPOINT: completed LO PPP leaf count 35"
+"S07_STAGE: contracting Hqg;qg real square with Pg"
+"S07_CHECKPOINT: completed RealQG Pg leaf count 311304"
+"S07_STAGE: contracting Hqg;qg real square with PPP"
+"S07_CHECKPOINT: completed RealQG PPP leaf count 27648"
+"S07_STAGE: contracting Hqg LO-virtual interference with Pg"
+"S07_CHECKPOINT: completed VirtualInterference Pg leaf count 520940"
+"S07_STAGE: contracting Hqg LO-virtual interference with PPP"
+"S07_CHECKPOINT: completed VirtualInterference PPP leaf count 409953"
+"S07_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s07_result"
+"S07_SUCCESS"
+"S07_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s07_result"
+"S07_PROJECTION_COUNT="6
+"S07_LEAF_COUNTS="InputForm[<|"LO" -> <|"Pg" -> 392, "PPP" -> 35|>, "RealQG" -> <|"Pg" -> 311304, "PPP" -> 27648|>, "VirtualInterference" -> <|"Pg" -> 520940, "PPP" -> 409953|>|>]
+"S07_RESULT_BYTES="6697214
+"S07_CHECKS="InputForm[<|"CurrentS06SourceAndProgramBindingsVerified" -> True, "PaperReferenceHashPreserved" -> True, "BigTMDChannel3CaseAEnforced" -> True, "ChargeStrippedHardKernelConventionPreserved" -> True, "FragmentingGluonIsK1" -> True, "ThreeHqgInputTensorsLoaded" -> True, "BothProjectorsAppliedToEveryTensor" -> True, "SixScalarProjectionsProduced" -> True, "PhotonIndexMuContracted" -> True, "PhotonIndexNuContracted" -> True, "NoLorentzIndicesRemain" -> True, "D DimensionalContractionsRetained" -> True, "CalculationFullySymbolic" -> True, "VirtualQCDCountertermsPreserved" -> True, "Eq9F1F2CombinationsDeferred" -> True, "NoPhaseSpaceOrFlavorFactorsApplied" -> True, "BigTMDFiniteKernelNormalizationDeferred" -> True, "EveryCacheBoundToS06AndProgramSHA256" -> True|>]

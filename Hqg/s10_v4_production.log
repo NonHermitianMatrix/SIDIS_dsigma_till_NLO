@@ -1,0 +1,53 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["FeynHelpers ", "Text", Bold]Style["2.0.0 (). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceFeynHelpersDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceFeynHelpersDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynHelpersDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feynhelpers-manual/releases/download/dev-manual/FeynHelpersManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feynhelpers-manual/releases/download/dev-manual/FeynHelpersManual.pdf"]], "Text"]
+Style[" If you use FeynHelpers in your research, please evaluate FeynHelpersHowToCite[] to learn how to cite this work.", "Text"]
+"S10_ENDPOINT_MEMORY_PLAN: availableGiB="13.079631805419921875`4." reserveGiB="6.`3." perWorkerLimitGiB="1.25`3." requestedKernels="5
+"S10_MEMORY_STAGE: virtual reconstruction remains serial; bounded workers are launched only after completed virtual data is released"
+"S10_STAGE: loading and validating s09, s08, and s07 inputs"
+"S10_STAGE: completing all analytic scalar one-loop integrals"
+"S10_STAGE: loading resumable Package-X cache"
+"S10_STAGE: loading resumable Package-X cache"
+"S10_STAGE: resolving ordinary tree propagator denominators"
+"S10_STAGE: validating the explicit UV counterterm cancellation"
+"S10_STAGE: applying the exact s08 two-body normalization and map"
+"S10_MEMORY_STAGE: releasing superseded virtual inputs before Laurent expansion"
+"S10_STAGE: completing the renormalized virtual Laurent expansion"
+"S10_STAGE: loading virtual Laurent cache"
+"S10_MEMORY_STAGE: releasing completed virtual data before real endpoints"
+"S10_STAGE: resolving Pg endpoint Laurent data and action"
+"S10_STAGE: loading S09 Appendix-F cache for Pg"
+"S10_STAGE: structural endpoint scan for Pg, terms=70"
+"S10_CHECKPOINT: Pg structural alpha=2 source terms {20}"
+"S10_CHECKPOINT: Hqg;qg Pg term 20 structurally refactored as alpha=2"
+"S10_STAGE: validating and migrating v1 raw endpoint coefficients for Pg"
+"S10_COUPLED_ENDPOINT_STAGE: label=""Hqg;qg Pg"" sourceTerms="{65, 66}
+"S10_COUPLED_ENDPOINT_CHECK: label=""Hqg;qg Pg"" rootSign="1" logPower=none status=log-free-after-branch-grouping"
+"S10_COUPLED_ENDPOINT_CHECK: label=""Hqg;qg Pg"" rootSign="-1" logPower=none status=log-free-after-branch-grouping"
+"S10_COUPLED_ENDPOINT_SUCCESS: projector=""Pg"" repairVersion="1" groups="{{65, 66}}
+"S10_STAGE: reducing stronger endpoint pole for Pg"
+"S10_CHECKPOINT: Pg stronger endpoint pole vanishes through epsilon^1"
+"S10_CHECKPOINT: completed symbolic distribution action for Pg"
+"S10_MEMORY_STAGE: Pg complete; processing PPP in bounded batches"
+"S10_STAGE: loading S09 Appendix-F cache for PPP"
+"S10_STAGE: structural endpoint scan for PPP, terms=48"
+"S10_CHECKPOINT: PPP structural alpha=2 source terms {16}"
+"S10_CHECKPOINT: Hqg;qg PPP term 16 structurally refactored as alpha=2"
+"S10_STAGE: validating and migrating v1 raw endpoint coefficients for PPP"
+"S10_COUPLED_ENDPOINT_STAGE: label=""Hqg;qg PPP"" sourceTerms="{38, 47}
+"S10_COUPLED_ENDPOINT_CHECK: label=""Hqg;qg PPP"" rootSign="1" logPower=none status=log-free-after-branch-grouping"
+"S10_COUPLED_ENDPOINT_CHECK: label=""Hqg;qg PPP"" rootSign="-1" logPower=none status=log-free-after-branch-grouping"
+"S10_COUPLED_ENDPOINT_SUCCESS: projector=""PPP"" repairVersion="1" groups="{{38, 47}}
+"S10_STAGE: reducing stronger endpoint pole for PPP"
+"S10_CHECKPOINT: PPP stronger endpoint pole vanishes through epsilon^1"
+"S10_CHECKPOINT: completed symbolic distribution action for PPP"
+"S10_STAGE: reloading validated virtual Laurent cache"
+"S10_STAGE: loading virtual Laurent cache"
+"S10_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s10_result"
+"S10_SUCCESS_SYMBOLIC"
+"S10_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s10_result"
+"S10_RESULT_BYTES="535169423
+"S10_CHECKS="InputForm[<|"CurrentS09S08S07ProgramAndSourceBindingsVerified" -> True, "PaperReferenceHashPreserved" -> True, "BigTMDChannel3CaseAProjectorsPreserved" -> True, "ChargeStrippedHardKernelConventionPreserved" -> True, "FragmentingGluonIsK1" -> True, "All97UniquePaVeFunctionsEvaluated" -> True, "AllFourDirectScalarMastersEvaluated" -> True, "PackageXAnalyticContinuationApplied" -> True, "SavedSymbolicCountertermsRemovedBeforeExplicitInsertion" -> True, "AggregateExternalLegCountertermInsertedExactlyOnce" -> True, "BareUVResidueMatchesLO" -> True, "ExplicitQCDCountertermsCancelUVPole" -> True, "VirtualDoublePoleMatchesUniversalIRFactor" -> True, "S09LONormalizationMatched" -> True, "VirtualLaurentExpandedThroughFiniteTerm" -> True, "EvaluatorToPaperConventionDeferredExactlyOnce" -> True, "HermitianProjectionDeferredUntilFiniteFactorizedEndpoint" -> True, "S09ExpansionCachesValidated" -> True, "ExactlyTwoS09EndpointPlaceholdersReceived" -> True, "BothProjectorsProcessed" -> True, "AllCurrentS09RemainderTermsResolved" -> True, "OneHqgAlpha2TermPerProjectorDetectedStructurally" -> True, "AllDetectedAlpha2TermsHavePhysicalNestedRatio" -> True, "DirectEndpointLogScanHasNoAdditionalGroups" -> True, "PhysicalBranchCoupledEndpointRepairApplied" -> True, "StrongerEndpointPoleAbsentThroughFiniteRequirement" -> True, "UnitHqgHardKernelWeightRetained" -> True, "EndpointValuesAreS23Independent" -> True, "DiracDeltaActedOnSymbolicTestFunction" -> True, "AllPlusDistributionsActedOnSymbolicTestFunction" -> True, "FinalActionsContainNoDistributionPlaceholders" -> True, "VirtualActionsContainNoUnresolvedLoopObjects" -> True, "RealVirtualSymbolicActionsFormed" -> True, "EndpointWorkersUsedOnlyWhenRawTermsRequired" -> True, "AllEndpointWorkersClosedBeforeFinalVirtualAssembly" -> True, "ParentOnlyAtomicEndpointCheckpointWrites" -> True, "AllCachesBoundToCurrentSourcesAndProgram" -> True, "PhysicalBigTMDLuminosityDeferred" -> True, "CalculationRemainsFullySymbolic" -> True, "CollinearFactorizationNotApplied" -> True|>]

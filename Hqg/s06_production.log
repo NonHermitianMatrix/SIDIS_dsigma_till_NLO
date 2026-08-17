@@ -1,0 +1,45 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S06_STAGE: loading validated Hqg s05_result"
+"S06_STAGE: processing all Hqg bilinears"
+"S06_STAGE: setting kinematics for Hqg LO square"
+"S06_STAGE: summing final-gluon polarizations for Hqg LO square"
+"S06_STAGE: summing quark spins for Hqg LO square"
+"S06_STAGE: evaluating Dirac traces for Hqg LO square"
+"S06_CHECKPOINT: LO post-Dirac leaf count 3538"
+"S06_STAGE: summing colors and applying incoming-quark average for Hqg LO square"
+"S06_CHECKPOINT: LO final leaf count 2037"
+"S06_STAGE: physical real row 1/8"
+"S06_CHECKPOINT: physical real row 1/8 leaf count 316398"
+"S06_STAGE: physical real row 2/8"
+"S06_CHECKPOINT: physical real row 2/8 leaf count 275796"
+"S06_STAGE: physical real row 3/8"
+"S06_CHECKPOINT: physical real row 3/8 leaf count 316398"
+"S06_STAGE: physical real row 4/8"
+"S06_CHECKPOINT: physical real row 4/8 leaf count 206275"
+"S06_STAGE: physical real row 5/8"
+"S06_CHECKPOINT: physical real row 5/8 leaf count 158091"
+"S06_STAGE: physical real row 6/8"
+"S06_CHECKPOINT: physical real row 6/8 leaf count 206275"
+"S06_STAGE: physical real row 7/8"
+"S06_CHECKPOINT: physical real row 7/8 leaf count 266751"
+"S06_STAGE: physical real row 8/8"
+"S06_CHECKPOINT: physical real row 8/8 leaf count 158091"
+"S06_STAGE: summing colors and applying incoming-quark average for Hqg;qg real square"
+"S06_CHECKPOINT: RealQG physical final leaf count 1362816"
+"S06_STAGE: setting kinematics for Hqg LO-virtual interference"
+"S06_STAGE: summing final-gluon polarizations for Hqg LO-virtual interference"
+"S06_STAGE: summing quark spins for Hqg LO-virtual interference"
+"S06_STAGE: evaluating Dirac traces for Hqg LO-virtual interference"
+"S06_CHECKPOINT: VirtualInterference post-Dirac leaf count 3283625"
+"S06_STAGE: summing colors and applying incoming-quark average for Hqg LO-virtual interference"
+"S06_CHECKPOINT: VirtualInterference final leaf count 2374393"
+"S06_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s06_result"
+"S06_SUCCESS"
+"S06_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s06_result"
+"S06_RESULT_BYTES="21892739
+"S06_FINAL_LEAF_COUNTS="InputForm[<|"LO" -> 2037, "RealQG" -> 1362816, "VirtualInterference" -> 2374393|>]
+"S06_CHECKS="InputForm[<|"S05SourceBindingsCurrent" -> True, "PaperReferenceHashPreserved" -> True, "BigTMDChannel3CaseAEnforced" -> True, "ChargeStrippedHardKernelConventionPreserved" -> True, "FragmentingGluonIsK1" -> True, "ExactlyThreeHqgBilinearsProcessed" -> True, "LOFragmentingGluonPolarizationSummed" -> True, "RealFragmentingAndUnobservedGluonPolarizationsSummed" -> True, "RealFinalGluonsUseDMinus2PhysicalAxialSums" -> True, "RealPhysicalSumUsesEightResumableCoherentRows" -> True, "VirtualFragmentingGluonPolarizationSummed" -> True, "SingleGluonCovariantSumsWardProtected" -> True, "IncomingAndFinalQuarkSpinsSummed" -> True, "AllDiracTracesEvaluated" -> True, "AllColorsSummed" -> True, "InitialQuarkSpinAveragedBy2" -> True, "InitialQuarkColorAveragedByNc" -> True, "PhotonPolarizationNotSummed" -> True, "PhotonIndexMuPreserved" -> True, "PhotonIndexNuPreserved" -> True, "MasslessVectorQCDFieldRenormalizationApplied" -> True, "VirtualSquareStillExcluded" -> True, "CalculationFullySymbolic" -> True, "AllCachesBoundToS05AndProgramSHA256" -> True|>]

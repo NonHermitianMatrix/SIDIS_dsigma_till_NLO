@@ -1,0 +1,486 @@
+<|"Status" -> "CompleteSymbolicCounterterms", "Stage" -> "HqgS11-v2", 
+ "Channel" -> "Hqg only", "GeneratedAt" -> "2026-08-16T23:29:55", 
+ "Program" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s11_calcu\
+late_collinear_counterterms_hqg.wl", "ProgramSHA256" -> 
+  952451788046421022818135800301465393646698917099629563707597722524516343750\
+68, "SourceResults" -> <|"HqgProjectedLO" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s07_result", 
+   "HqgProjectedLOSHA256" -> 501054484148008432986881347550329210999571183105\
+55261000401548610974600655212, "S10Dependency" -> 
+    "none; S10 and S11 are independently source-bound inputs to S12", 
+   "AuthoritativePaper" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/\
+Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyon\
+d_Lowest_Order.pdf", "AuthoritativePaperSHA256" -> 
+    8648809941311796907290437653257666908734436502726637233827730827210355877\
+2571|>, "PaperReference" -> <|"Factorization" -> "Eq. (46)", 
+   "PartonicPDFAndFF" -> "Eqs. (47)-(50)", "PrintedSplittingFunctions" -> 
+    "Eqs. (51)-(53)", "PggStatus" -> "standard one-loop Pgg added in the same \
+alpha_s/(4 Pi) normalization; its explicit formula is not printed in the \
+paper", "TwoBodyPhaseSpace" -> "Eqs. (34)-(35)"|>, 
+ "BigTMDConvention" -> <|"ChannelNumber" -> 3, "ChargeCase" -> "A only", 
+   "FragmentingParton" -> "gluon g(k1)", "ProjectorMapping" -> 
+    <|"Pg" -> "NLO.Pg.fchn3A", "PPP" -> "NLO.Ppp.fchn3A"|>, 
+   "ReferenceFiles" -> <|"Pg" -> "/home/physics/projects/AI_Assisted_SIDIS/sc\
+ripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Pg/fchn3A.py", 
+     "PPP" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_ch\
+eck/BigTMD_reference/NLO/Ppp/fchn3A.py"|>, "ReferenceSHA256" -> 
+    <|"Pg" -> 782665323592679141762192717291936065482254078565633938130031014\
+90531424564009, "PPP" -> 
+      92309102729465329218719191569321585674280697012902755484549461421564390\
+007257|>, "UseAtThisStage" -> "finite-kernel convention reference only; no \
+BigTMD counterterm decomposition exists"|>, "ElectricChargeNormalization" -> 
+  <|"FeynArtsReferenceField" -> "F[3,{1}] down type", 
+   "ReferenceCharge" -> -1/3, "AmplitudeStripFactor" -> -3, 
+   "SavedHardAmplitudeConvention" -> "one-photon amplitudes divided by Q_ref; \
+no numerical quark electric charge remains in the hard-kernel normalization", 
+   "BigTMDLuminosityAppliedDownstream" -> "Sum_q e_q^2 f_q D_g"|>, 
+ "UpstreamAmplitudeStripSquaredFactor" -> 9, 
+ "AppliedDirectBornNormalizationFactor" -> 9, 
+ "DirectBornNormalizationReason" -> "the direct full-state generator retains \
+the reference down-quark charge, so its Born squares receive the upstream \
+amplitude strip factor squared before matching charge-stripped S07", 
+ "PhysicalLuminosityAppliedDownstream" -> "Sum_q e_q^2 f_q D_g", 
+ "FactorizationConvention" -> 
+  <|"Prefactor" -> HoldForm[SMP["g_s"]^2*(S11SEpsilon/(16*Pi^2*epsilon))], 
+   "SEpsilonTreatment" -> 
+    "retained as the symbolic S_epsilon factor in Eq. (46)", 
+   "Sign" -> "positive because the order-alpha_s partonic PDF/FF counterterms \
+in Eqs. (49)-(50) are negative"|>, "SplittingKernels" -> 
+  <|"PqqPDF" -> HoldForm[Pqq[y] == 
+      2*CF*(2*S11PlusDistribution[1/(1 - y), {y, 0, 1}] - 1 - y + 
+        3*(DiracDelta[1 - y]/2))], 
+   "PggFF" -> HoldForm[Pgg[y] == 
+      4*CA*(S11PlusDistribution[1/(1 - y), {y, 0, 1}] + 1/y - 2 + 
+         y*(1 - y)) + (11*CA - 4*TF*Nf)*(DiracDelta[1 - y]/3)], 
+   "PgqFF" -> HoldForm[Pgq[y] == 2*CF*((1 + (1 - y)^2)/y)], "Pqg" -> 0|>, 
+ "BornProjectedSquaredAmplitudes" -> 
+  <|"Hqg" -> <|"Pg" -> (-4*CF*(-2 + D)*(-2*Q2^2 + D*Q2^2 + 4*Q2*sHat + 
+         4*sHat^2 - 8*Q2*tHat + 2*D*Q2*tHat + 4*sHat*tHat - 2*tHat^2 + 
+         D*tHat^2)*FeynCalc`FCGV["EL"]^2*SMP["g_s"]^2)/
+       (sHat*(Q2 + sHat + tHat)), "PPP" -> -4*CF*(-2 + D)*tHat*
+       FeynCalc`FCGV["EL"]^2*SMP["g_s"]^2|>, 
+   "Hqq" -> <|"Pg" -> (4*CF*(-2 + D)*(4*Q2^2 + 4*Q2*sHat - 2*sHat^2 + 
+         D*sHat^2 + 4*Q2*tHat - 8*sHat*tHat + 2*D*sHat*tHat - 2*tHat^2 + 
+         D*tHat^2)*FeynCalc`FCGV["EL"]^2*SMP["g_s"]^2)/(sHat*tHat), 
+     "PPP" -> 4*CF*(-2 + D)*(Q2 + sHat + tHat)*FeynCalc`FCGV["EL"]^2*
+       SMP["g_s"]^2|>|>, "HqgDirectRegenerationResiduals" -> 
+  <|"Pg" -> 0, "PPP" -> 0|>, "ConvolutionMappings" -> 
+  <|"EndpointVariable" -> s11S23, "Interval" -> 
+    {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}, 
+   "EndpointUpper" -> Q2*(-1 + xHat^(-1))*(1 - zHat), 
+   "PDFSplittingVariable" -> 1 - (s11S23*xHat)/(Q2*(1 - zHat)), 
+   "FFSplittingVariable" -> 1 - s11S23/(Q2*(-1 + xHat^(-1))), 
+   "PDFInternalKinematics" -> 
+    <|"x" -> xHat/(1 - (s11S23*xHat)/(Q2*(1 - zHat))), "z" -> zHat, 
+     "k1T2" -> (-s11S23 + Q2*(-1 + xHat^(-1))*(1 - zHat))*zHat|>, 
+   "FFInternalKinematics" -> <|"x" -> xHat, 
+     "z" -> zHat/(1 - s11S23/(Q2*(-1 + xHat^(-1)))), 
+     "k1T2" -> ((-s11S23 + Q2*(-1 + xHat^(-1))*(1 - zHat))*zHat)/
+       (1 - s11S23/(Q2*(-1 + xHat^(-1))))^2|>, 
+   "ExternalTransverseMomentumSquared" -> 
+    (-s11S23 + Q2*(-1 + xHat^(-1))*(1 - zHat))*zHat, 
+   "Checks" -> <|"PDFBornOnShell" -> True, "FFBornOnShell" -> True, 
+     "PDFVariableAtZeroIsOne" -> True, "FFVariableAtZeroIsOne" -> True, 
+     "PDFVariableAtUpperIsX" -> True, "FFVariableAtUpperIsZ" -> True|>|>, 
+ "SpeciesRouting" -> <|"PDF" -> {"Hqg x Pqq"}, 
+   "FF" -> {"Hqg x Pgg", "Hqq x Pgq"}, "VanishingLOSpecies" -> {"Hgg"}, 
+   "NoQuarkAntiquarkDoubling" -> 
+    "external Sum_q e_q^2 luminosity is applied downstream"|>, 
+ "CountertermComponents" -> 
+  <|"Pg" -> <|"PDF_Hqg_Pqq" -> (CF*S11SEpsilon*SMP["g_s"]^2*
+        ((3*CF*(-1 + epsilon)*(-1 + epsilon - 2*epsilon*xHat - xHat^2 + 
+            epsilon*xHat^2 - 2*epsilon*zHat + 2*xHat*zHat + 
+            2*epsilon*xHat*zHat - zHat^2 + epsilon*zHat^2)*
+           FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", 0]*SMP["g_s"]^2)/
+          (Pi^3*(-1 + xHat)*zHat) + Inactive[Integrate][
+          (2*CF*(-1 + epsilon)*xHat*(-2*Q2 + s11S23*xHat + 2*Q2*zHat)*
+            (-Q2^2 + epsilon*Q2^2 - 2*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 
+             2*epsilon*Q2*s11S23*xHat - Q2^2*xHat^2 + epsilon*Q2^2*xHat^2 + 
+             2*epsilon*Q2*s11S23*xHat^2 - s11S23^2*xHat^2 + epsilon*s11S23^2*
+              xHat^2 + 2*Q2^2*zHat - 4*epsilon*Q2^2*zHat + 2*Q2^2*xHat*zHat + 
+             6*epsilon*Q2^2*xHat*zHat - 2*Q2*s11S23*xHat*zHat + 
+             6*epsilon*Q2*s11S23*xHat*zHat + 2*Q2^2*xHat^2*zHat - 
+             2*epsilon*Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 
+             4*epsilon*Q2*s11S23*xHat^2*zHat - 2*epsilon*s11S23^2*xHat^2*
+              zHat - 2*Q2^2*zHat^2 + 6*epsilon*Q2^2*zHat^2 - 
+             4*Q2^2*xHat*zHat^2 - 6*epsilon*Q2^2*xHat*zHat^2 + 
+             2*Q2*s11S23*xHat*zHat^2 - 6*epsilon*Q2*s11S23*xHat*zHat^2 - 
+             Q2^2*xHat^2*zHat^2 + epsilon*Q2^2*xHat^2*zHat^2 + 
+             2*Q2*s11S23*xHat^2*zHat^2 + 2*epsilon*Q2*s11S23*xHat^2*zHat^2 - 
+             s11S23^2*xHat^2*zHat^2 + epsilon*s11S23^2*xHat^2*zHat^2 + 
+             2*Q2^2*zHat^3 - 4*epsilon*Q2^2*zHat^3 + 2*Q2^2*xHat*zHat^3 + 
+             2*epsilon*Q2^2*xHat*zHat^3 - 2*Q2*s11S23*xHat*zHat^3 + 
+             2*epsilon*Q2*s11S23*xHat*zHat^3 - Q2^2*zHat^4 + 
+             epsilon*Q2^2*zHat^4)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest[
+             "Pg", s11S23]*SMP["g_s"]^2)/(Pi^3*Q2*(-1 + zHat)*zHat*
+            (-Q2 + s11S23*xHat + Q2*zHat)^2*(Q2 - Q2*xHat - s11S23*xHat - 
+             Q2*zHat + Q2*xHat*zHat)), {s11S23, 0, Q2*(-1 + xHat^(-1))*
+            (1 - zHat)}] + 2*((2*CF*(-1 + epsilon)*(-1 + epsilon - 
+              2*epsilon*xHat - xHat^2 + epsilon*xHat^2 - 2*epsilon*zHat + 
+              2*xHat*zHat + 2*epsilon*xHat*zHat - zHat^2 + epsilon*zHat^2)*
+             FeynCalc`FCGV["EL"]^2*Log[1 - xHat]*S11ConvolutionTest["Pg", 0]*
+             SMP["g_s"]^2)/(Pi^3*(-1 + xHat)*zHat) + Inactive[Integrate][
+            ((-2*CF*(-1 + epsilon)*(-1 + epsilon - 2*epsilon*xHat - xHat^2 + 
+                 epsilon*xHat^2 - 2*epsilon*zHat + 2*xHat*zHat + 2*epsilon*
+                  xHat*zHat - zHat^2 + epsilon*zHat^2)*FeynCalc`FCGV["EL"]^2*
+                S11ConvolutionTest["Pg", 0]*SMP["g_s"]^2)/(Pi^3*(-1 + xHat)*
+                zHat) + (2*CF*(-1 + epsilon)*Q2*(-1 + zHat)*(-Q2^2 + 
+                 epsilon*Q2^2 - 2*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 
+                 2*epsilon*Q2*s11S23*xHat - Q2^2*xHat^2 + epsilon*Q2^2*
+                  xHat^2 + 2*epsilon*Q2*s11S23*xHat^2 - s11S23^2*xHat^2 + 
+                 epsilon*s11S23^2*xHat^2 + 2*Q2^2*zHat - 4*epsilon*Q2^2*
+                  zHat + 2*Q2^2*xHat*zHat + 6*epsilon*Q2^2*xHat*zHat - 
+                 2*Q2*s11S23*xHat*zHat + 6*epsilon*Q2*s11S23*xHat*zHat + 
+                 2*Q2^2*xHat^2*zHat - 2*epsilon*Q2^2*xHat^2*zHat - 
+                 2*Q2*s11S23*xHat^2*zHat - 4*epsilon*Q2*s11S23*xHat^2*zHat - 
+                 2*epsilon*s11S23^2*xHat^2*zHat - 2*Q2^2*zHat^2 + 
+                 6*epsilon*Q2^2*zHat^2 - 4*Q2^2*xHat*zHat^2 - 6*epsilon*Q2^2*
+                  xHat*zHat^2 + 2*Q2*s11S23*xHat*zHat^2 - 6*epsilon*Q2*s11S23*
+                  xHat*zHat^2 - Q2^2*xHat^2*zHat^2 + epsilon*Q2^2*xHat^2*
+                  zHat^2 + 2*Q2*s11S23*xHat^2*zHat^2 + 2*epsilon*Q2*s11S23*
+                  xHat^2*zHat^2 - s11S23^2*xHat^2*zHat^2 + epsilon*s11S23^2*
+                  xHat^2*zHat^2 + 2*Q2^2*zHat^3 - 4*epsilon*Q2^2*zHat^3 + 
+                 2*Q2^2*xHat*zHat^3 + 2*epsilon*Q2^2*xHat*zHat^3 - 
+                 2*Q2*s11S23*xHat*zHat^3 + 2*epsilon*Q2*s11S23*xHat*zHat^3 - 
+                 Q2^2*zHat^4 + epsilon*Q2^2*zHat^4)*FeynCalc`FCGV["EL"]^2*
+                S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/(Pi^3*zHat*
+                (-Q2 + s11S23*xHat + Q2*zHat)^2*(Q2 - Q2*xHat - s11S23*xHat - 
+                 Q2*zHat + Q2*xHat*zHat)))/s11S23, {s11S23, 0, 
+             Q2*(-1 + xHat^(-1))*(1 - zHat)}])))/(8*epsilon*Pi^2), 
+     "FF_Hqg_Pgg" -> (S11SEpsilon*SMP["g_s"]^2*
+        ((2*CF*(-1 + epsilon)*(11*CA - 4*Nf*TF)*(-1 + epsilon - 
+            2*epsilon*xHat - xHat^2 + epsilon*xHat^2 - 2*epsilon*zHat + 
+            2*xHat*zHat + 2*epsilon*xHat*zHat - zHat^2 + epsilon*zHat^2)*
+           FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", 0]*SMP["g_s"]^2)/
+          (3*Pi^3*(-1 + xHat)*zHat) + 
+         4*CA*((2*CF*(-1 + epsilon)*(-1 + epsilon - 2*epsilon*xHat - xHat^2 + 
+              epsilon*xHat^2 - 2*epsilon*zHat + 2*xHat*zHat + 
+              2*epsilon*xHat*zHat - zHat^2 + epsilon*zHat^2)*
+             FeynCalc`FCGV["EL"]^2*Log[1 - zHat]*S11ConvolutionTest["Pg", 0]*
+             SMP["g_s"]^2)/(Pi^3*(-1 + xHat)*zHat) + Inactive[Integrate][
+            (2*CF*(-1 + epsilon)*xHat*(-Q2^3 + 3*Q2^3*xHat + 3*Q2^2*s11S23*
+                xHat - 3*Q2^3*xHat^2 - 6*Q2^2*s11S23*xHat^2 - 2*Q2*s11S23^2*
+                xHat^2 + Q2^3*xHat^3 + 3*Q2^2*s11S23*xHat^3 + 2*Q2*s11S23^2*
+                xHat^3 + s11S23^3*xHat^3)*(-Q2^2 + epsilon*Q2^2 + 2*Q2^2*
+                xHat - 4*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 2*epsilon*Q2*
+                s11S23*xHat - 2*Q2^2*xHat^2 + 6*epsilon*Q2^2*xHat^2 - 2*Q2*
+                s11S23*xHat^2 + 6*epsilon*Q2*s11S23*xHat^2 - s11S23^2*
+                xHat^2 + epsilon*s11S23^2*xHat^2 + 2*Q2^2*xHat^3 - 4*epsilon*
+                Q2^2*xHat^3 + 2*Q2*s11S23*xHat^3 - 6*epsilon*Q2*s11S23*
+                xHat^3 - 2*epsilon*s11S23^2*xHat^3 - Q2^2*xHat^4 + epsilon*
+                Q2^2*xHat^4 - 2*Q2*s11S23*xHat^4 + 2*epsilon*Q2*s11S23*
+                xHat^4 - s11S23^2*xHat^4 + epsilon*s11S23^2*xHat^4 - 2*
+                epsilon*Q2^2*zHat + 2*Q2^2*xHat*zHat + 6*epsilon*Q2^2*xHat*
+                zHat + 2*epsilon*Q2*s11S23*xHat*zHat - 4*Q2^2*xHat^2*zHat - 6*
+                epsilon*Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 4*
+                epsilon*Q2*s11S23*xHat^2*zHat + 2*Q2^2*xHat^3*zHat + 2*
+                epsilon*Q2^2*xHat^3*zHat + 2*Q2*s11S23*xHat^3*zHat + 2*
+                epsilon*Q2*s11S23*xHat^3*zHat - Q2^2*zHat^2 + epsilon*Q2^2*
+                zHat^2 + 2*Q2^2*xHat*zHat^2 - 2*epsilon*Q2^2*xHat*zHat^2 - 
+               Q2^2*xHat^2*zHat^2 + epsilon*Q2^2*xHat^2*zHat^2)*
+              FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", s11S23]*
+              SMP["g_s"]^2)/(Pi^3*Q2^3*(-1 + xHat)^4*(-Q2 + Q2*xHat + 
+                s11S23*xHat)^3*zHat), {s11S23, 0, Q2*(-1 + xHat^(-1))*
+              (1 - zHat)}] + Inactive[Integrate][
+            ((-2*CF*(-1 + epsilon)*(-1 + epsilon - 2*epsilon*xHat - xHat^2 + 
+                 epsilon*xHat^2 - 2*epsilon*zHat + 2*xHat*zHat + 2*epsilon*
+                  xHat*zHat - zHat^2 + epsilon*zHat^2)*FeynCalc`FCGV["EL"]^2*
+                S11ConvolutionTest["Pg", 0]*SMP["g_s"]^2)/(Pi^3*(-1 + xHat)*
+                zHat) + (2*CF*(-1 + epsilon)*(-Q2^2 + epsilon*Q2^2 + 
+                 2*Q2^2*xHat - 4*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 
+                 2*epsilon*Q2*s11S23*xHat - 2*Q2^2*xHat^2 + 6*epsilon*Q2^2*
+                  xHat^2 - 2*Q2*s11S23*xHat^2 + 6*epsilon*Q2*s11S23*xHat^2 - 
+                 s11S23^2*xHat^2 + epsilon*s11S23^2*xHat^2 + 2*Q2^2*xHat^3 - 
+                 4*epsilon*Q2^2*xHat^3 + 2*Q2*s11S23*xHat^3 - 6*epsilon*Q2*
+                  s11S23*xHat^3 - 2*epsilon*s11S23^2*xHat^3 - Q2^2*xHat^4 + 
+                 epsilon*Q2^2*xHat^4 - 2*Q2*s11S23*xHat^4 + 2*epsilon*Q2*
+                  s11S23*xHat^4 - s11S23^2*xHat^4 + epsilon*s11S23^2*xHat^4 - 
+                 2*epsilon*Q2^2*zHat + 2*Q2^2*xHat*zHat + 6*epsilon*Q2^2*xHat*
+                  zHat + 2*epsilon*Q2*s11S23*xHat*zHat - 4*Q2^2*xHat^2*zHat - 
+                 6*epsilon*Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 
+                 4*epsilon*Q2*s11S23*xHat^2*zHat + 2*Q2^2*xHat^3*zHat + 
+                 2*epsilon*Q2^2*xHat^3*zHat + 2*Q2*s11S23*xHat^3*zHat + 
+                 2*epsilon*Q2*s11S23*xHat^3*zHat - Q2^2*zHat^2 + epsilon*Q2^2*
+                  zHat^2 + 2*Q2^2*xHat*zHat^2 - 2*epsilon*Q2^2*xHat*zHat^2 - 
+                 Q2^2*xHat^2*zHat^2 + epsilon*Q2^2*xHat^2*zHat^2)*
+                FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", s11S23]*
+                SMP["g_s"]^2)/(Pi^3*(-1 + xHat)*(-Q2 + Q2*xHat + s11S23*xHat)^
+                 2*zHat))/s11S23, {s11S23, 0, Q2*(-1 + xHat^(-1))*
+              (1 - zHat)}])))/(16*epsilon*Pi^2), 
+     "FF_Hqq_Pgq" -> (S11SEpsilon*SMP["g_s"]^2*Inactive[Integrate][
+         (4*CF^2*(-1 + epsilon)*xHat*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
+            s11S23^2*xHat^2)*(-2*Q2^2 + 6*Q2^2*xHat + 4*Q2*s11S23*xHat - 
+            7*Q2^2*xHat^2 + epsilon*Q2^2*xHat^2 - 8*Q2*s11S23*xHat^2 - 
+            2*s11S23^2*xHat^2 + 4*Q2^2*xHat^3 - 2*epsilon*Q2^2*xHat^3 + 
+            6*Q2*s11S23*xHat^3 - 2*epsilon*Q2*s11S23*xHat^3 + 
+            2*s11S23^2*xHat^3 - Q2^2*xHat^4 + epsilon*Q2^2*xHat^4 - 
+            2*Q2*s11S23*xHat^4 + 2*epsilon*Q2*s11S23*xHat^4 - 
+            s11S23^2*xHat^4 + epsilon*s11S23^2*xHat^4 + 2*Q2^2*zHat - 
+            6*Q2^2*xHat*zHat - 2*epsilon*Q2^2*xHat*zHat - 2*Q2*s11S23*xHat*
+             zHat + 6*Q2^2*xHat^2*zHat + 4*epsilon*Q2^2*xHat^2*zHat + 
+            4*Q2*s11S23*xHat^2*zHat + 2*epsilon*Q2*s11S23*xHat^2*zHat - 
+            2*Q2^2*xHat^3*zHat - 2*epsilon*Q2^2*xHat^3*zHat - 
+            2*Q2*s11S23*xHat^3*zHat - 2*epsilon*Q2*s11S23*xHat^3*zHat - 
+            Q2^2*zHat^2 + epsilon*Q2^2*zHat^2 + 2*Q2^2*xHat*zHat^2 - 
+            2*epsilon*Q2^2*xHat*zHat^2 - Q2^2*xHat^2*zHat^2 + 
+            epsilon*Q2^2*xHat^2*zHat^2)*FeynCalc`FCGV["EL"]^2*
+           S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/
+          (Pi^3*Q2*(-1 + xHat)^2*(-Q2 + Q2*xHat + s11S23*xHat)^3*
+           (Q2 - Q2*xHat - s11S23*xHat - Q2*zHat + Q2*xHat*zHat)), 
+         {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2)|>, 
+   "PPP" -> <|"PDF_Hqg_Pqq" -> (CF*S11SEpsilon*SMP["g_s"]^2*
+        ((3*CF*(-1 + epsilon)*Q2*(-1 + zHat)*FeynCalc`FCGV["EL"]^2*
+           S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/(2*Pi^3*xHat) + 
+         Inactive[Integrate][(CF*(-1 + epsilon)*Q2*(-1 + zHat)*
+            (-2*Q2 + s11S23*xHat + 2*Q2*zHat)*FeynCalc`FCGV["EL"]^2*
+            S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/
+           (Pi^3*(-Q2 + s11S23*xHat + Q2*zHat)^2), {s11S23, 0, 
+           Q2*(-1 + xHat^(-1))*(1 - zHat)}] + 
+         2*((CF*(-1 + epsilon)*Q2*(-1 + zHat)*FeynCalc`FCGV["EL"]^2*
+             Log[1 - xHat]*S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/
+            (Pi^3*xHat) + Inactive[Integrate][
+            (-((CF*(-1 + epsilon)*Q2*(-1 + zHat)*FeynCalc`FCGV["EL"]^2*
+                 S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/(Pi^3*xHat)) + 
+              (CF*(-1 + epsilon)*Q2^3*(-1 + zHat)^3*FeynCalc`FCGV["EL"]^2*
+                S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/(Pi^3*xHat*
+                (-Q2 + s11S23*xHat + Q2*zHat)^2))/s11S23, 
+            {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])))/(8*epsilon*Pi^2), 
+     "FF_Hqg_Pgg" -> (S11SEpsilon*SMP["g_s"]^2*
+        ((CF*(-1 + epsilon)*(11*CA - 4*Nf*TF)*(-Q2 + Q2*zHat)*
+           FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/
+          (3*Pi^3*xHat) + 4*CA*((CF*(-1 + epsilon)*(-Q2 + Q2*zHat)*
+             FeynCalc`FCGV["EL"]^2*Log[1 - zHat]*S11ConvolutionTest["PPP", 0]*
+             SMP["g_s"]^2)/(Pi^3*xHat) + Inactive[Integrate][
+            (CF*(-1 + epsilon)*(-Q2^3 + 3*Q2^3*xHat + 3*Q2^2*s11S23*xHat - 3*
+                Q2^3*xHat^2 - 6*Q2^2*s11S23*xHat^2 - 2*Q2*s11S23^2*xHat^2 + 
+               Q2^3*xHat^3 + 3*Q2^2*s11S23*xHat^3 + 2*Q2*s11S23^2*xHat^3 + 
+               s11S23^3*xHat^3)*(Q2 - Q2*xHat - s11S23*xHat - Q2*zHat + Q2*
+                xHat*zHat)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 
+               s11S23]*SMP["g_s"]^2)/(Pi^3*Q2*(-1 + xHat)^2*(-Q2 + Q2*xHat + 
+                s11S23*xHat)^3), {s11S23, 0, Q2*(-1 + xHat^(-1))*
+              (1 - zHat)}] + Inactive[Integrate][
+            (-((CF*(-1 + epsilon)*(-Q2 + Q2*zHat)*FeynCalc`FCGV["EL"]^2*
+                 S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/(Pi^3*xHat)) + 
+              (CF*(-1 + epsilon)*Q2^2*(-1 + xHat)*(Q2 - Q2*xHat - 
+                 s11S23*xHat - Q2*zHat + Q2*xHat*zHat)*FeynCalc`FCGV["EL"]^2*
+                S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/(Pi^3*xHat*
+                (-Q2 + Q2*xHat + s11S23*xHat)^2))/s11S23, 
+            {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])))/
+       (16*epsilon*Pi^2), "FF_Hqq_Pgq" -> (S11SEpsilon*SMP["g_s"]^2*
+        Inactive[Integrate][(2*CF^2*(-1 + epsilon)*Q2*(Q2^2 - 2*Q2^2*xHat + 
+            Q2^2*xHat^2 + s11S23^2*xHat^2)*zHat*FeynCalc`FCGV["EL"]^2*
+           S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/
+          (Pi^3*(-Q2 + Q2*xHat + s11S23*xHat)^3), {s11S23, 0, 
+          Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2)|>|>, 
+ "Counterterms" -> <|"PgPDF" -> (CF*S11SEpsilon*SMP["g_s"]^2*
+      ((3*CF*(-1 + epsilon)*(-1 + epsilon - 2*epsilon*xHat - xHat^2 + 
+          epsilon*xHat^2 - 2*epsilon*zHat + 2*xHat*zHat + 
+          2*epsilon*xHat*zHat - zHat^2 + epsilon*zHat^2)*
+         FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", 0]*SMP["g_s"]^2)/
+        (Pi^3*(-1 + xHat)*zHat) + Inactive[Integrate][
+        (2*CF*(-1 + epsilon)*xHat*(-2*Q2 + s11S23*xHat + 2*Q2*zHat)*
+          (-Q2^2 + epsilon*Q2^2 - 2*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 
+           2*epsilon*Q2*s11S23*xHat - Q2^2*xHat^2 + epsilon*Q2^2*xHat^2 + 
+           2*epsilon*Q2*s11S23*xHat^2 - s11S23^2*xHat^2 + epsilon*s11S23^2*
+            xHat^2 + 2*Q2^2*zHat - 4*epsilon*Q2^2*zHat + 2*Q2^2*xHat*zHat + 
+           6*epsilon*Q2^2*xHat*zHat - 2*Q2*s11S23*xHat*zHat + 
+           6*epsilon*Q2*s11S23*xHat*zHat + 2*Q2^2*xHat^2*zHat - 
+           2*epsilon*Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 
+           4*epsilon*Q2*s11S23*xHat^2*zHat - 2*epsilon*s11S23^2*xHat^2*zHat - 
+           2*Q2^2*zHat^2 + 6*epsilon*Q2^2*zHat^2 - 4*Q2^2*xHat*zHat^2 - 
+           6*epsilon*Q2^2*xHat*zHat^2 + 2*Q2*s11S23*xHat*zHat^2 - 
+           6*epsilon*Q2*s11S23*xHat*zHat^2 - Q2^2*xHat^2*zHat^2 + 
+           epsilon*Q2^2*xHat^2*zHat^2 + 2*Q2*s11S23*xHat^2*zHat^2 + 
+           2*epsilon*Q2*s11S23*xHat^2*zHat^2 - s11S23^2*xHat^2*zHat^2 + 
+           epsilon*s11S23^2*xHat^2*zHat^2 + 2*Q2^2*zHat^3 - 
+           4*epsilon*Q2^2*zHat^3 + 2*Q2^2*xHat*zHat^3 + 2*epsilon*Q2^2*xHat*
+            zHat^3 - 2*Q2*s11S23*xHat*zHat^3 + 2*epsilon*Q2*s11S23*xHat*
+            zHat^3 - Q2^2*zHat^4 + epsilon*Q2^2*zHat^4)*FeynCalc`FCGV["EL"]^2*
+          S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/
+         (Pi^3*Q2*(-1 + zHat)*zHat*(-Q2 + s11S23*xHat + Q2*zHat)^2*
+          (Q2 - Q2*xHat - s11S23*xHat - Q2*zHat + Q2*xHat*zHat)), 
+        {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}] + 
+       2*((2*CF*(-1 + epsilon)*(-1 + epsilon - 2*epsilon*xHat - xHat^2 + 
+            epsilon*xHat^2 - 2*epsilon*zHat + 2*xHat*zHat + 
+            2*epsilon*xHat*zHat - zHat^2 + epsilon*zHat^2)*
+           FeynCalc`FCGV["EL"]^2*Log[1 - xHat]*S11ConvolutionTest["Pg", 0]*
+           SMP["g_s"]^2)/(Pi^3*(-1 + xHat)*zHat) + Inactive[Integrate][
+          ((-2*CF*(-1 + epsilon)*(-1 + epsilon - 2*epsilon*xHat - xHat^2 + 
+               epsilon*xHat^2 - 2*epsilon*zHat + 2*xHat*zHat + 2*epsilon*xHat*
+                zHat - zHat^2 + epsilon*zHat^2)*FeynCalc`FCGV["EL"]^2*
+              S11ConvolutionTest["Pg", 0]*SMP["g_s"]^2)/(Pi^3*(-1 + xHat)*
+              zHat) + (2*CF*(-1 + epsilon)*Q2*(-1 + zHat)*(-Q2^2 + epsilon*
+                Q2^2 - 2*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 2*epsilon*Q2*
+                s11S23*xHat - Q2^2*xHat^2 + epsilon*Q2^2*xHat^2 + 2*epsilon*
+                Q2*s11S23*xHat^2 - s11S23^2*xHat^2 + epsilon*s11S23^2*
+                xHat^2 + 2*Q2^2*zHat - 4*epsilon*Q2^2*zHat + 2*Q2^2*xHat*
+                zHat + 6*epsilon*Q2^2*xHat*zHat - 2*Q2*s11S23*xHat*zHat + 6*
+                epsilon*Q2*s11S23*xHat*zHat + 2*Q2^2*xHat^2*zHat - 2*epsilon*
+                Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 4*epsilon*Q2*
+                s11S23*xHat^2*zHat - 2*epsilon*s11S23^2*xHat^2*zHat - 2*Q2^2*
+                zHat^2 + 6*epsilon*Q2^2*zHat^2 - 4*Q2^2*xHat*zHat^2 - 6*
+                epsilon*Q2^2*xHat*zHat^2 + 2*Q2*s11S23*xHat*zHat^2 - 6*
+                epsilon*Q2*s11S23*xHat*zHat^2 - Q2^2*xHat^2*zHat^2 + epsilon*
+                Q2^2*xHat^2*zHat^2 + 2*Q2*s11S23*xHat^2*zHat^2 + 2*epsilon*Q2*
+                s11S23*xHat^2*zHat^2 - s11S23^2*xHat^2*zHat^2 + epsilon*
+                s11S23^2*xHat^2*zHat^2 + 2*Q2^2*zHat^3 - 4*epsilon*Q2^2*
+                zHat^3 + 2*Q2^2*xHat*zHat^3 + 2*epsilon*Q2^2*xHat*zHat^3 - 2*
+                Q2*s11S23*xHat*zHat^3 + 2*epsilon*Q2*s11S23*xHat*zHat^3 - 
+               Q2^2*zHat^4 + epsilon*Q2^2*zHat^4)*FeynCalc`FCGV["EL"]^2*
+              S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/
+             (Pi^3*zHat*(-Q2 + s11S23*xHat + Q2*zHat)^2*(Q2 - Q2*xHat - 
+               s11S23*xHat - Q2*zHat + Q2*xHat*zHat)))/s11S23, 
+          {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])))/(8*epsilon*Pi^2), 
+   "PgFF" -> (S11SEpsilon*SMP["g_s"]^2*Inactive[Integrate][
+        (4*CF^2*(-1 + epsilon)*xHat*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
+           s11S23^2*xHat^2)*(-2*Q2^2 + 6*Q2^2*xHat + 4*Q2*s11S23*xHat - 
+           7*Q2^2*xHat^2 + epsilon*Q2^2*xHat^2 - 8*Q2*s11S23*xHat^2 - 
+           2*s11S23^2*xHat^2 + 4*Q2^2*xHat^3 - 2*epsilon*Q2^2*xHat^3 + 
+           6*Q2*s11S23*xHat^3 - 2*epsilon*Q2*s11S23*xHat^3 + 
+           2*s11S23^2*xHat^3 - Q2^2*xHat^4 + epsilon*Q2^2*xHat^4 - 
+           2*Q2*s11S23*xHat^4 + 2*epsilon*Q2*s11S23*xHat^4 - 
+           s11S23^2*xHat^4 + epsilon*s11S23^2*xHat^4 + 2*Q2^2*zHat - 
+           6*Q2^2*xHat*zHat - 2*epsilon*Q2^2*xHat*zHat - 2*Q2*s11S23*xHat*
+            zHat + 6*Q2^2*xHat^2*zHat + 4*epsilon*Q2^2*xHat^2*zHat + 
+           4*Q2*s11S23*xHat^2*zHat + 2*epsilon*Q2*s11S23*xHat^2*zHat - 
+           2*Q2^2*xHat^3*zHat - 2*epsilon*Q2^2*xHat^3*zHat - 
+           2*Q2*s11S23*xHat^3*zHat - 2*epsilon*Q2*s11S23*xHat^3*zHat - 
+           Q2^2*zHat^2 + epsilon*Q2^2*zHat^2 + 2*Q2^2*xHat*zHat^2 - 
+           2*epsilon*Q2^2*xHat*zHat^2 - Q2^2*xHat^2*zHat^2 + 
+           epsilon*Q2^2*xHat^2*zHat^2)*FeynCalc`FCGV["EL"]^2*
+          S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/
+         (Pi^3*Q2*(-1 + xHat)^2*(-Q2 + Q2*xHat + s11S23*xHat)^3*
+          (Q2 - Q2*xHat - s11S23*xHat - Q2*zHat + Q2*xHat*zHat)), 
+        {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2) + 
+     (S11SEpsilon*SMP["g_s"]^2*((2*CF*(-1 + epsilon)*(11*CA - 4*Nf*TF)*
+          (-1 + epsilon - 2*epsilon*xHat - xHat^2 + epsilon*xHat^2 - 
+           2*epsilon*zHat + 2*xHat*zHat + 2*epsilon*xHat*zHat - zHat^2 + 
+           epsilon*zHat^2)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", 0]*
+          SMP["g_s"]^2)/(3*Pi^3*(-1 + xHat)*zHat) + 
+        4*CA*((2*CF*(-1 + epsilon)*(-1 + epsilon - 2*epsilon*xHat - xHat^2 + 
+             epsilon*xHat^2 - 2*epsilon*zHat + 2*xHat*zHat + 
+             2*epsilon*xHat*zHat - zHat^2 + epsilon*zHat^2)*
+            FeynCalc`FCGV["EL"]^2*Log[1 - zHat]*S11ConvolutionTest["Pg", 0]*
+            SMP["g_s"]^2)/(Pi^3*(-1 + xHat)*zHat) + Inactive[Integrate][
+           (2*CF*(-1 + epsilon)*xHat*(-Q2^3 + 3*Q2^3*xHat + 3*Q2^2*s11S23*
+               xHat - 3*Q2^3*xHat^2 - 6*Q2^2*s11S23*xHat^2 - 
+              2*Q2*s11S23^2*xHat^2 + Q2^3*xHat^3 + 3*Q2^2*s11S23*xHat^3 + 
+              2*Q2*s11S23^2*xHat^3 + s11S23^3*xHat^3)*(-Q2^2 + epsilon*Q2^2 + 
+              2*Q2^2*xHat - 4*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 
+              2*epsilon*Q2*s11S23*xHat - 2*Q2^2*xHat^2 + 6*epsilon*Q2^2*xHat^
+                2 - 2*Q2*s11S23*xHat^2 + 6*epsilon*Q2*s11S23*xHat^2 - 
+              s11S23^2*xHat^2 + epsilon*s11S23^2*xHat^2 + 2*Q2^2*xHat^3 - 
+              4*epsilon*Q2^2*xHat^3 + 2*Q2*s11S23*xHat^3 - 6*epsilon*Q2*
+               s11S23*xHat^3 - 2*epsilon*s11S23^2*xHat^3 - Q2^2*xHat^4 + 
+              epsilon*Q2^2*xHat^4 - 2*Q2*s11S23*xHat^4 + 2*epsilon*Q2*s11S23*
+               xHat^4 - s11S23^2*xHat^4 + epsilon*s11S23^2*xHat^4 - 
+              2*epsilon*Q2^2*zHat + 2*Q2^2*xHat*zHat + 6*epsilon*Q2^2*xHat*
+               zHat + 2*epsilon*Q2*s11S23*xHat*zHat - 4*Q2^2*xHat^2*zHat - 
+              6*epsilon*Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 
+              4*epsilon*Q2*s11S23*xHat^2*zHat + 2*Q2^2*xHat^3*zHat + 
+              2*epsilon*Q2^2*xHat^3*zHat + 2*Q2*s11S23*xHat^3*zHat + 
+              2*epsilon*Q2*s11S23*xHat^3*zHat - Q2^2*zHat^2 + 
+              epsilon*Q2^2*zHat^2 + 2*Q2^2*xHat*zHat^2 - 2*epsilon*Q2^2*xHat*
+               zHat^2 - Q2^2*xHat^2*zHat^2 + epsilon*Q2^2*xHat^2*zHat^2)*
+             FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", s11S23]*
+             SMP["g_s"]^2)/(Pi^3*Q2^3*(-1 + xHat)^4*(-Q2 + Q2*xHat + s11S23*
+                xHat)^3*zHat), {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}] + 
+          Inactive[Integrate][((-2*CF*(-1 + epsilon)*(-1 + epsilon - 
+                2*epsilon*xHat - xHat^2 + epsilon*xHat^2 - 2*epsilon*zHat + 
+                2*xHat*zHat + 2*epsilon*xHat*zHat - zHat^2 + epsilon*zHat^2)*
+               FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", 0]*SMP["g_s"]^
+                2)/(Pi^3*(-1 + xHat)*zHat) + (2*CF*(-1 + epsilon)*(-Q2^2 + 
+                epsilon*Q2^2 + 2*Q2^2*xHat - 4*epsilon*Q2^2*xHat + 
+                2*Q2*s11S23*xHat - 2*epsilon*Q2*s11S23*xHat - 2*Q2^2*xHat^2 + 
+                6*epsilon*Q2^2*xHat^2 - 2*Q2*s11S23*xHat^2 + 6*epsilon*Q2*
+                 s11S23*xHat^2 - s11S23^2*xHat^2 + epsilon*s11S23^2*xHat^2 + 
+                2*Q2^2*xHat^3 - 4*epsilon*Q2^2*xHat^3 + 2*Q2*s11S23*xHat^3 - 
+                6*epsilon*Q2*s11S23*xHat^3 - 2*epsilon*s11S23^2*xHat^3 - 
+                Q2^2*xHat^4 + epsilon*Q2^2*xHat^4 - 2*Q2*s11S23*xHat^4 + 
+                2*epsilon*Q2*s11S23*xHat^4 - s11S23^2*xHat^4 + epsilon*
+                 s11S23^2*xHat^4 - 2*epsilon*Q2^2*zHat + 2*Q2^2*xHat*zHat + 
+                6*epsilon*Q2^2*xHat*zHat + 2*epsilon*Q2*s11S23*xHat*zHat - 
+                4*Q2^2*xHat^2*zHat - 6*epsilon*Q2^2*xHat^2*zHat - 
+                2*Q2*s11S23*xHat^2*zHat - 4*epsilon*Q2*s11S23*xHat^2*zHat + 
+                2*Q2^2*xHat^3*zHat + 2*epsilon*Q2^2*xHat^3*zHat + 
+                2*Q2*s11S23*xHat^3*zHat + 2*epsilon*Q2*s11S23*xHat^3*zHat - 
+                Q2^2*zHat^2 + epsilon*Q2^2*zHat^2 + 2*Q2^2*xHat*zHat^2 - 
+                2*epsilon*Q2^2*xHat*zHat^2 - Q2^2*xHat^2*zHat^2 + 
+                epsilon*Q2^2*xHat^2*zHat^2)*FeynCalc`FCGV["EL"]^2*
+               S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/
+              (Pi^3*(-1 + xHat)*(-Q2 + Q2*xHat + s11S23*xHat)^2*zHat))/
+            s11S23, {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])))/
+      (16*epsilon*Pi^2), "PPPPDF" -> (CF*S11SEpsilon*SMP["g_s"]^2*
+      ((3*CF*(-1 + epsilon)*Q2*(-1 + zHat)*FeynCalc`FCGV["EL"]^2*
+         S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/(2*Pi^3*xHat) + 
+       Inactive[Integrate][(CF*(-1 + epsilon)*Q2*(-1 + zHat)*
+          (-2*Q2 + s11S23*xHat + 2*Q2*zHat)*FeynCalc`FCGV["EL"]^2*
+          S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/
+         (Pi^3*(-Q2 + s11S23*xHat + Q2*zHat)^2), {s11S23, 0, 
+         Q2*(-1 + xHat^(-1))*(1 - zHat)}] + 
+       2*((CF*(-1 + epsilon)*Q2*(-1 + zHat)*FeynCalc`FCGV["EL"]^2*
+           Log[1 - xHat]*S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/
+          (Pi^3*xHat) + Inactive[Integrate][
+          (-((CF*(-1 + epsilon)*Q2*(-1 + zHat)*FeynCalc`FCGV["EL"]^2*
+               S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/(Pi^3*xHat)) + 
+            (CF*(-1 + epsilon)*Q2^3*(-1 + zHat)^3*FeynCalc`FCGV["EL"]^2*
+              S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/
+             (Pi^3*xHat*(-Q2 + s11S23*xHat + Q2*zHat)^2))/s11S23, 
+          {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])))/(8*epsilon*Pi^2), 
+   "PPPFF" -> (S11SEpsilon*SMP["g_s"]^2*Inactive[Integrate][
+        (2*CF^2*(-1 + epsilon)*Q2*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
+           s11S23^2*xHat^2)*zHat*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest[
+           "PPP", s11S23]*SMP["g_s"]^2)/(Pi^3*(-Q2 + Q2*xHat + s11S23*xHat)^
+           3), {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/
+      (16*epsilon*Pi^2) + (S11SEpsilon*SMP["g_s"]^2*
+       ((CF*(-1 + epsilon)*(11*CA - 4*Nf*TF)*(-Q2 + Q2*zHat)*
+          FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/
+         (3*Pi^3*xHat) + 4*CA*((CF*(-1 + epsilon)*(-Q2 + Q2*zHat)*
+            FeynCalc`FCGV["EL"]^2*Log[1 - zHat]*S11ConvolutionTest["PPP", 0]*
+            SMP["g_s"]^2)/(Pi^3*xHat) + Inactive[Integrate][
+           (CF*(-1 + epsilon)*(-Q2^3 + 3*Q2^3*xHat + 3*Q2^2*s11S23*xHat - 
+              3*Q2^3*xHat^2 - 6*Q2^2*s11S23*xHat^2 - 2*Q2*s11S23^2*xHat^2 + 
+              Q2^3*xHat^3 + 3*Q2^2*s11S23*xHat^3 + 2*Q2*s11S23^2*xHat^3 + 
+              s11S23^3*xHat^3)*(Q2 - Q2*xHat - s11S23*xHat - Q2*zHat + 
+              Q2*xHat*zHat)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 
+              s11S23]*SMP["g_s"]^2)/(Pi^3*Q2*(-1 + xHat)^2*
+             (-Q2 + Q2*xHat + s11S23*xHat)^3), {s11S23, 0, 
+            Q2*(-1 + xHat^(-1))*(1 - zHat)}] + Inactive[Integrate][
+           (-((CF*(-1 + epsilon)*(-Q2 + Q2*zHat)*FeynCalc`FCGV["EL"]^2*
+                S11ConvolutionTest["PPP", 0]*SMP["g_s"]^2)/(Pi^3*xHat)) + 
+             (CF*(-1 + epsilon)*Q2^2*(-1 + xHat)*(Q2 - Q2*xHat - 
+                s11S23*xHat - Q2*zHat + Q2*xHat*zHat)*FeynCalc`FCGV["EL"]^
+                2*S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/
+              (Pi^3*xHat*(-Q2 + Q2*xHat + s11S23*xHat)^2))/s11S23, 
+           {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])))/
+      (16*epsilon*Pi^2)|>, "CountertermCount" -> 4, 
+ "TestFunction" -> HoldForm[S11ConvolutionTest[projector, s11S23]], 
+ "TestFunctionAssumption" -> 
+  "arbitrary symbolic function regular at s11S23=0 and independent of \
+epsilon", "DistributionActionStatus" -> "all splitting delta/plus \
+distributions have acted; only ordinary inactive integrals remain", 
+ "CombinationDeferredToS12" -> True, 
+ "Checks" -> <|"CurrentHqgS07BindingValidated" -> True, 
+   "S10InputNotRequiredAtCountertermConstructionStage" -> True, 
+   "AuthoritativePaperHashValidated" -> True, 
+   "BigTMDChannel3AReferencesBound" -> True, 
+   "InitialQuarkFragmentingGluonConvention" -> True, 
+   "UpstreamAmplitudeStripSquaredFactorIsNine" -> True, 
+   "DirectGeneratorMatchesStrippedS07WithAmplitudeStripSquaredFactor" -> 
+    True, "TwoRequiredBornChannelsAvailable" -> True, 
+   "HqgRegenerationMatchesS07Pg" -> True, "HqgRegenerationMatchesS07PPP" -> 
+    True, "AllConvolutionMappingsValidated" -> True, 
+   "CorrectedPPPPDFRescalingApplied" -> True, "ExactlyFourCounterterms" -> 
+    True, "PDFContainsOnlyHqgPqq" -> True, "FFContainsHqgPggAndHqqPgq" -> 
+    True, "NoPqgOrHggBornContribution" -> True, "PggNfDependenceRetained" -> 
+    True, "SplittingDistributionsActed" -> True, 
+   "OrdinaryInactiveIntegralsRetained" -> True, "SymbolicSEpsilonRetained" -> 
+    True, "NoMachinePrecisionNumbers" -> True, "NoS10CombinationPerformed" -> 
+    True, "PhysicalLuminosityDeferred" -> True, "CalculationFullySymbolic" -> 
+    True|>, "NotPerformedAtThisStage" -> 
+  {"loading or adding the S10 real-plus-virtual action", 
+   "physical-variable remap and collinear-pole cancellation", 
+   "evaluator-to-paper virtual convention conversion", 
+   "Hermitian Re projection and epsilon -> 0 finite Hqg hard functions", 
+   "finite comparison with BigTMD Pg/Ppp fchn3A", 
+   "numerical PDFs, FFs, test functions, or kinematics"}|>

@@ -1,0 +1,227 @@
+<|"Status" -> "Complete", "StageVersion" -> "HqgS06-v3", 
+ "Channel" -> "Hqg only", "TensorRole" -> "LO", "CacheStage" -> "Final", 
+ "SourceS05" -> 
+  "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s05_result", 
+ "SourceS05SHA256" -> 5419434028347149353548115469617127457482551364315262427\
+8542583910707516698034, "Program" -> "/home/physics/projects/AI_Assisted_SIDI\
+S/scripts/Hqg/s06_spin_color_sum_average_hqg.wl", 
+ "ProgramSHA256" -> 931352749758708067041206162368346304307369785265713174148\
+41982368724216640004, "BigTMDChannel" -> 3, "BigTMDChargeCase" -> "A only", 
+ "ElectricChargeNormalization" -> 
+  <|"FeynArtsReferenceField" -> "F[3,{1}] down type", 
+   "ReferenceCharge" -> -1/3, "AmplitudeStripFactor" -> -3, 
+   "SavedHardAmplitudeConvention" -> "one-photon amplitudes divided by Q_ref; \
+no numerical quark electric charge remains in the hard-kernel normalization", 
+   "BigTMDLuminosityAppliedDownstream" -> "Sum_q e_q^2 f_q D_g"|>, 
+ "FragmentingParton" -> "g(k1)", "GeneratedAt" -> "2026-08-16T20:57:59", 
+ "Expression" -> 4*CF*FCGV["EL"]^2*
+   (2*Q2*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    D*Q2*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] + 
+    2*sHat^2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    D*sHat^2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] + 
+    2*sHat*tHat*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+      LorentzIndex[s05Nu, D]] - D*sHat*tHat*
+     FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]^2*
+     Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] + 
+    8*Q2*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    2*D*Q2*sHat*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+      PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] + 
+    8*sHat^2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    2*D*sHat^2*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+      PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    4*Q2*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] + 
+    8*sHat*tHat*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+      PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    2*D*sHat*tHat*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+      PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] + 
+    2*Q2*sHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    D*Q2*sHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] + 
+    2*sHat^2*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    D*sHat^2*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] + 
+    2*sHat*tHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    D*sHat*tHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]] - 
+    16*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    4*D*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    8*Q2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+     FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    2*D*Q2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    8*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    2*D*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    12*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    2*D*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    4*Q2*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^2*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    2*D*Q2*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^
+      2*Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    4*sHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^
+      2*Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    2*D*sHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    4*tHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^
+      2*Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    2*D*tHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    4*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    2*D*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    8*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    2*D*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] + 
+    4*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]] - 
+    8*Q2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+     FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] + 
+    2*D*Q2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    8*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] + 
+    2*D*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    12*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] + 
+    2*D*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    4*Q2*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^2*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] + 
+    2*D*Q2*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^
+      2*Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    4*sHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^
+      2*Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] + 
+    2*D*sHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    4*tHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^
+      2*Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] + 
+    2*D*tHat*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    8*Q2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+     FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    8*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    8*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    4*Q2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+     FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] + 
+    4*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]] - 
+    4*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[p, D]] + 
+    2*D*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+        0]]^2*Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[p, D]] - 
+    8*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[p, D]] + 
+    2*D*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[p, D]] + 
+    4*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[p, D]] - 
+    4*Q2*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+     FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[p, D]] + 
+    4*tHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[p, D]] + 
+    8*sHat*FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 
+       0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+     Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*
+     Pair[LorentzIndex[s05Nu, D], Momentum[p, D]])*SMP["g_s"]^2|>

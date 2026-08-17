@@ -1,0 +1,19 @@
+<|"Status" -> "Complete", "StageVersion" -> "HqgS07-v3", 
+ "Channel" -> "Hqg only", "TensorRole" -> "LO", "Projector" -> "PPP", 
+ "SourceS06" -> 
+  "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s06_result", 
+ "SourceS06SHA256" -> 8785223190872529214346238788588011446350289503763533980\
+5696423176039817251066, "Program" -> "/home/physics/projects/AI_Assisted_SIDI\
+S/scripts/Hqg/s07_contract_hqg_projectors.wl", 
+ "ProgramSHA256" -> 974546142659160282642000319141263244169800318865888829543\
+87550955338875498738, "BigTMDChannel" -> 3, "BigTMDChargeCase" -> "A only", 
+ "ElectricChargeNormalization" -> 
+  <|"FeynArtsReferenceField" -> "F[3,{1}] down type", 
+   "ReferenceCharge" -> -1/3, "AmplitudeStripFactor" -> -3, 
+   "SavedHardAmplitudeConvention" -> "one-photon amplitudes divided by Q_ref; \
+no numerical quark electric charge remains in the hard-kernel normalization", 
+   "BigTMDLuminosityAppliedDownstream" -> "Sum_q e_q^2 f_q D_g"|>, 
+ "FragmentingParton" -> "g(k1)", "GeneratedAt" -> "2026-08-16T21:07:53", 
+ "Expression" -> 4*CF*(2 - D)*tHat*(Q2 + sHat + tHat)^2*FCGV["EL"]^2*
+   FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^2*
+   SMP["g_s"]^2|>

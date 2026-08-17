@@ -1,0 +1,36 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S08_STAGE: loading validated Hqg s07_result"
+"S08_STAGE: validating Appendix D and BigTMD kinematic identities"
+"S08_STAGE: applying two-body Hqg phase space"
+"S08_STAGE: applying two-body phase space to Hqg LO"
+"S08_STAGE: applying two-body phase space to Hqg renormalized virtual interference"
+"S08_STAGE: integrating the Hqg;qg real projections"
+"S08_STAGE: making propagators explicit for Hqg;qg Pg"
+"S08_STAGE: Appendix D start Hqg;qg Pg, terms 5318"
+"S08_STAGE: Appendix D same-type complete Hqg;qg Pg, terms 5578"
+"S08_STAGE: Appendix D triple complete Hqg;qg Pg, terms 7078"
+"S08_STAGE: Appendix D numerator complete Hqg;qg Pg, terms 79578"
+"S08_STAGE: grouping angular masters for Hqg;qg Pg"
+"S08_STAGE: angular master count Hqg;qg Pg = 72"
+"S08_CHECKPOINT: completed ""Pg"" angular integration leaf count "478032
+"S08_STAGE: making propagators explicit for Hqg;qg PPP"
+"S08_STAGE: Appendix D start Hqg;qg PPP, terms 620"
+"S08_STAGE: Appendix D same-type complete Hqg;qg PPP, terms 656"
+"S08_STAGE: Appendix D triple complete Hqg;qg PPP, terms 816"
+"S08_STAGE: Appendix D numerator complete Hqg;qg PPP, terms 8986"
+"S08_STAGE: grouping angular masters for Hqg;qg PPP"
+"S08_STAGE: angular master count Hqg;qg PPP = 48"
+"S08_CHECKPOINT: completed ""PPP"" angular integration leaf count "125027
+"S08_STAGE: applying zeta-to-s23 change of variables"
+"S08_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s08_result"
+"S08_SUCCESS"
+"S08_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s08_result"
+"S08_RESULT_BYTES="28766545
+"S08_CASE2_MASTER_COUNT="63
+"S08_ANGULAR_LEAF_COUNTS="InputForm[<|"Pg" -> 478032, "PPP" -> 125027|>]
+"S08_TRANSFORMED_LEAF_COUNTS="InputForm[<|"TwoBody" -> <|"LO_OAlphaS" -> <|"Pg" -> 2237, "PPP" -> 365|>, "NLOVirtualInterference_OAlphaS2_Symbolic" -> <|"Pg" -> 2108577, "PPP" -> 2028864|>|>, "ThreeBodyReal" -> <|"Pg" -> 2794725, "PPP" -> 775504|>|>]
+"S08_CHECKS="InputForm[<|"CurrentS07SourceAndProgramBindingsVerified" -> True, "PaperReferenceHashPreserved" -> True, "BigTMDChannel3CaseAEnforced" -> True, "ChargeStrippedHardKernelConventionPreserved" -> True, "FragmentingGluonIsK1" -> True, "TwoBodyLOIntegratedAtFixedK1" -> True, "TwoBodyVirtualIntegratedAtFixedK1" -> True, "VirtualPropagatorPlaceholdersPreserved" -> True, "TwoBodyConstraintIsDeltaS23" -> True, "SoleRealHqgQGChannelAngularIntegrated" -> True, "BothProjectorsRetainedForAllThreeContributions" -> True, "AppendixDIdentitiesD5ThroughD8Verified" -> True, "NoBeta1OrBeta2Remain" -> True, "NoAngleDependentMandelstamVariablesRemain" -> True, "NoExplicitRealPropagatorObjectsRemain" -> True, "AxialReferenceTermsCombinedBeforeAppendixD" -> True, "ZetaReplacedByS23" -> True, "XiS23JacobianIdentityVerified" -> True, "XiS23JacobianIncluded" -> True, "PhysicalXiAndS23LimitsStored" -> True, "BigTMDZHatJacobianSAndTAndBMapsExact" -> True, "CalculationFullySymbolic" -> True, "VirtualQCDCountertermsPreserved" -> True, "EndpointDistributionExpansionNotApplied" -> True, "RealVirtualCombinationNotApplied" -> True, "CollinearFactorizationNotApplied" -> True, "EveryRealCacheBoundToS07AndProgramSHA256" -> True|>]

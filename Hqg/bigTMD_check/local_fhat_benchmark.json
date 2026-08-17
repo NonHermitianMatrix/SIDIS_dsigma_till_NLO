@@ -1,0 +1,80 @@
+{
+	"Status":"CompleteLocalFHatBenchmark",
+	"StageVersion":"HqgBigTMDCheckS01-v1",
+	"GeneratedAt":"2026-08-17T11:35:31",
+	"Source":{
+		"Path":"\/home\/physics\/projects\/AI_Assisted_SIDIS\/scripts\/Hqg\/s13_result",
+		"ByteCount":530803767,
+		"SHA256":"ec90eff70317eb0e14dc8dcfa810e949c7cbb19a2874a1d1cc034690e517242f",
+		"Status":"CompleteFinitePartonicStructureFunctionsHqg",
+		"StageVersion":"HqgS13-v1",
+		"Channel":"Hqg only"
+	},
+	"Construction":{
+		"Method":"one-action-at-a-time projected import from S13 saved F hats",
+		"Epsilon":0,
+		"ActionCoefficients":[
+			"Endpoint",
+			"IntegrandPhiS",
+			"IntegrandPhi0"
+		],
+		"ProjectedActionBytes":{
+			"F1Hat":262856632,
+			"F2Hat":267942157
+		},
+		"DisposableProjectionsDeleted":true,
+		"ReferenceDistributionContent":"regular, delta, plus1B, and plus2B"
+	},
+	"ComparisonLevel":"finite unit-charge Hqg coefficient action before PDFs, gluon FF, physical charge sum, and xi convolution",
+	"Conventions":{
+		"Couplings":"EL=1 and g_s=1; upstream direct Born factor 9 stripped the generated down-quark charge",
+		"Color":"SU(3): CA=3, CF=4\/3, TF=1\/2",
+		"FlavorCount":4,
+		"DirectBornNormalizationFactor":9,
+		"PhysicalLuminosity":"Sum_q e_q^2 f_q D_g deferred",
+		"BigTMDChannel":3,
+		"BigTMDChargeCases":[
+			"A"
+		],
+		"BigTMDPartonicModuleWeight":1,
+		"BigTMDDistributionContent":"regular, delta, plus1B, and plus2B",
+		"Scale":"ScaleMu=Q",
+		"EndpointRegulator":1.0000000000000000e-7,
+		"DifferenceDirectionExpectedByS02":"BigTMD minus local"
+	},
+	"Benchmark":{
+		"ID":"generic_interior_1",
+		"xB":0.23000000000000000,
+		"xi":0.61000000000000000,
+		"xHat":0.37704918032786885,
+		"zH":0.37000000000000000,
+		"Q2":17.000000000000000,
+		"Q":4.1231056256176605,
+		"qT2":3.1000000000000000,
+		"PHT2":0.42439000000000000,
+		"ScaleMu":4.1231056256176605,
+		"Nf":4,
+		"S23UpperB":16.547782608695652,
+		"S23Fraction":0.40000000000000000,
+		"S23Sample":6.6191130434782609
+	},
+	"FieldS23":{
+		"Endpoint":1.0000000000000000e-7,
+		"IntegrandPhiS":6.6191130434782609,
+		"IntegrandPhi0":6.6191130434782609
+	},
+	"LocalFHatByField":{
+		"Endpoint":{
+			"F1Hat":0.00013703732261889639,
+			"F2Hat":0.00010803395191542917
+		},
+		"IntegrandPhiS":{
+			"F1Hat":0.00011862905658552165,
+			"F2Hat":0.000098878423786339843
+		},
+		"IntegrandPhi0":{
+			"F1Hat":-0.000053451720751823508,
+			"F2Hat":-0.000042883664049700148
+		}
+	}
+}

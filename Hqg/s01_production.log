@@ -1,0 +1,98 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["FeynHelpers ", "Text", Bold]Style["2.0.0 (). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceFeynHelpersDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceFeynHelpersDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynHelpersDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feynhelpers-manual/releases/download/dev-manual/FeynHelpersManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feynhelpers-manual/releases/download/dev-manual/FeynHelpersManual.pdf"]], "Text"]
+Style[" If you use FeynHelpers in your research, please evaluate FeynHelpersHowToCite[] to learn how to cite this work.", "Text"]
+Style["Loading FeynArts from /home/physics/.WolframEngine/Applications/FeynCalc/FeynArts", "Text"]
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+Style["FeynArts ", "Text", Bold]Style["3.11 (25 Mar 2022) patched for use with FeynCalc, for documentation see the ", "Text"]Style[DisplayForm[ButtonBox["manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[First[FileNames[{"*.pdf", "*.PDF"}, FileNameJoin[{$FeynArtsDirectory, "manual"}]]]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" or visit ", "Text"]Style[DisplayForm[ButtonBox["www.feynarts.de.", ButtonData :> {URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "www.feynarts.de/"]], "Text"]
+Style["If you use FeynArts in your research, please cite", "Text"]
+Style[" • T. Hahn, Comput. Phys. Commun., 140, 418-431, 2001, arXiv:hep-ph/0012260", "Text"]
+
+FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+
+FAGS::shdw: Symbol FAGS appears in multiple contexts {FeynArts`, Global`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+"S01_STAGE: generating all Hqg ordinary diagrams"
+"S01_STAGE: generating QCD-relevant UV counterterm diagrams"
+"S01_STAGE: converting tree, real, virtual, and counterterm amplitudes"
+"S01_STAGE: reducing all virtual amplitudes"
+"S01_STAGE: TID virtual diagram 1/23"
+"S01_STAGE: TID virtual diagram 2/23"
+"S01_STAGE: TID virtual diagram 3/23"
+"S01_STAGE: TID virtual diagram 4/23"
+"S01_STAGE: TID virtual diagram 5/23"
+"S01_STAGE: TID virtual diagram 6/23"
+"S01_STAGE: TID virtual diagram 7/23"
+"S01_STAGE: TID virtual diagram 8/23"
+"S01_STAGE: TID virtual diagram 9/23"
+"S01_STAGE: TID virtual diagram 10/23"
+"S01_STAGE: TID virtual diagram 11/23"
+"S01_STAGE: TID virtual diagram 12/23"
+"S01_STAGE: TID virtual diagram 13/23"
+"S01_STAGE: TID virtual diagram 14/23"
+"S01_STAGE: TID virtual diagram 15/23"
+"S01_STAGE: TID virtual diagram 16/23"
+"S01_STAGE: TID virtual diagram 17/23"
+"S01_STAGE: TID virtual diagram 18/23"
+"S01_STAGE: TID virtual diagram 19/23"
+"S01_STAGE: TID virtual diagram 20/23"
+"S01_STAGE: TID virtual diagram 21/23"
+"S01_STAGE: TID virtual diagram 22/23"
+"S01_STAGE: TID virtual diagram 23/23"
+"S01_STAGE: evaluating UV poles independently"
+"S01_STAGE: UV pole virtual diagram 1/23"
+"S01_STAGE: UV pole virtual diagram 2/23"
+"S01_STAGE: UV pole virtual diagram 3/23"
+"S01_STAGE: UV pole virtual diagram 4/23"
+"S01_STAGE: UV pole virtual diagram 5/23"
+"S01_STAGE: UV pole virtual diagram 6/23"
+"S01_STAGE: UV pole virtual diagram 7/23"
+"S01_STAGE: UV pole virtual diagram 8/23"
+"S01_STAGE: UV pole virtual diagram 9/23"
+"S01_STAGE: UV pole virtual diagram 10/23"
+"S01_STAGE: UV pole virtual diagram 11/23"
+"S01_STAGE: UV pole virtual diagram 12/23"
+"S01_STAGE: UV pole virtual diagram 13/23"
+"S01_STAGE: UV pole virtual diagram 14/23"
+"S01_STAGE: UV pole virtual diagram 15/23"
+"S01_STAGE: UV pole virtual diagram 16/23"
+"S01_STAGE: UV pole virtual diagram 17/23"
+"S01_STAGE: UV pole virtual diagram 18/23"
+"S01_STAGE: UV pole virtual diagram 19/23"
+"S01_STAGE: UV pole virtual diagram 20/23"
+"S01_STAGE: UV pole virtual diagram 21/23"
+"S01_STAGE: UV pole virtual diagram 22/23"
+"S01_STAGE: UV pole virtual diagram 23/23"
+"S01_STAGE: evaluating IR poles independently"
+"S01_STAGE: IR pole virtual diagram 1/23"
+"S01_STAGE: IR pole virtual diagram 2/23"
+"S01_STAGE: IR pole virtual diagram 3/23"
+"S01_STAGE: IR pole virtual diagram 4/23"
+"S01_STAGE: IR pole virtual diagram 5/23"
+"S01_STAGE: IR pole virtual diagram 6/23"
+"S01_STAGE: IR pole virtual diagram 7/23"
+"S01_STAGE: IR pole virtual diagram 8/23"
+"S01_STAGE: IR pole virtual diagram 9/23"
+"S01_STAGE: IR pole virtual diagram 10/23"
+"S01_STAGE: IR pole virtual diagram 11/23"
+"S01_STAGE: IR pole virtual diagram 12/23"
+"S01_STAGE: IR pole virtual diagram 13/23"
+"S01_STAGE: IR pole virtual diagram 14/23"
+"S01_STAGE: IR pole virtual diagram 15/23"
+"S01_STAGE: IR pole virtual diagram 16/23"
+"S01_STAGE: IR pole virtual diagram 17/23"
+"S01_STAGE: IR pole virtual diagram 18/23"
+"S01_STAGE: IR pole virtual diagram 19/23"
+"S01_STAGE: IR pole virtual diagram 20/23"
+"S01_STAGE: IR pole virtual diagram 21/23"
+"S01_STAGE: IR pole virtual diagram 22/23"
+"S01_STAGE: IR pole virtual diagram 23/23"
+"S01_STAGE: evaluating first-diagram UV/IR split cross-check"
+"S01_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s01_result"
+"S01_SUCCESS"
+"S01_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s01_result"
+"S01_DIAGRAM_COUNTS="InputForm[<|"LO_gammaStar_q_to_g_q" -> 2, "NLOReal_gammaStar_q_to_g_q_g" -> 8, "NLOVirtualBare_gammaStar_q_to_g_q" -> 23, "NLOVirtualQCDRelevantCounterterms" -> 12, "TotalQCDDiagramsIncludingCounterterms" -> 45|>]
+"S01_RESULT_BYTES="5211737

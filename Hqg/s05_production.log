@@ -1,0 +1,52 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["Loading FeynArts from /home/physics/.WolframEngine/Applications/FeynCalc/FeynArts", "Text"]
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+Style["FeynArts ", "Text", Bold]Style["3.11 (25 Mar 2022) patched for use with FeynCalc, for documentation see the ", "Text"]Style[DisplayForm[ButtonBox["manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[First[FileNames[{"*.pdf", "*.PDF"}, FileNameJoin[{$FeynArtsDirectory, "manual"}]]]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" or visit ", "Text"]Style[DisplayForm[ButtonBox["www.feynarts.de.", ButtonData :> {URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "www.feynarts.de/"]], "Text"]
+Style["If you use FeynArts in your research, please cite", "Text"]
+Style[" • T. Hahn, Comput. Phys. Commun., 140, 418-431, 2001, arXiv:hep-ph/0012260", "Text"]
+"S05_STAGE: loading validated Hqg S01 and S04 results"
+
+FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+"S05_STAGE: restoring external states for LO Hqg;q"
+"S05_STAGE: restoring external states for NLO real Hqg;qg"
+"S05_STAGE: restoring external states for NLO bare virtual Hqg;q"
+"S05_STAGE: restoring external states for NLO Hqg;q UV counterterms"
+"S05_STAGE: reducing full virtual amplitudes"
+"S05_STAGE: TID full virtual diagram 1/23"
+"S05_STAGE: TID full virtual diagram 2/23"
+"S05_STAGE: TID full virtual diagram 3/23"
+"S05_STAGE: TID full virtual diagram 4/23"
+"S05_STAGE: TID full virtual diagram 5/23"
+"S05_STAGE: TID full virtual diagram 6/23"
+"S05_STAGE: TID full virtual diagram 7/23"
+"S05_STAGE: TID full virtual diagram 8/23"
+"S05_STAGE: TID full virtual diagram 9/23"
+"S05_STAGE: TID full virtual diagram 10/23"
+"S05_STAGE: TID full virtual diagram 11/23"
+"S05_STAGE: TID full virtual diagram 12/23"
+"S05_STAGE: TID full virtual diagram 13/23"
+"S05_STAGE: TID full virtual diagram 14/23"
+"S05_STAGE: TID full virtual diagram 15/23"
+"S05_STAGE: TID full virtual diagram 16/23"
+"S05_STAGE: TID full virtual diagram 17/23"
+"S05_STAGE: TID full virtual diagram 18/23"
+"S05_STAGE: TID full virtual diagram 19/23"
+"S05_STAGE: TID full virtual diagram 20/23"
+"S05_STAGE: TID full virtual diagram 21/23"
+"S05_STAGE: TID full virtual diagram 22/23"
+"S05_STAGE: TID full virtual diagram 23/23"
+"S05_STAGE: opening the incoming-photon Lorentz index"
+"S05_STAGE: constructing conjugate amplitudes"
+"S05_STAGE: forming Hqg bilinears through O(alpha_s^2)"
+"S05_STAGE: writing /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s05_result"
+"S05_SUCCESS"
+"S05_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s05_result"
+"S05_DIAGRAM_COUNTS="InputForm[<|"LO" -> 2, "RealQG" -> 8, "Virtual" -> 23, "Counterterm" -> 12|>]
+"S05_ORDERED_PAIR_COUNTS="InputForm[<|"LOSquare" -> 4, "NLORealHqgQG" -> 64, "LOVirtualHermitianCrossTerms" -> 140|>]
+"S05_CACHE_REUSED="False
+"S05_RESULT_BYTES="7255265

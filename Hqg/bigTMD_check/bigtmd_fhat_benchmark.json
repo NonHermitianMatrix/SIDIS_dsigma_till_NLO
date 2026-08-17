@@ -1,0 +1,86 @@
+{
+  "Benchmark": {
+    "ID": "generic_interior_1",
+    "Nf": 4,
+    "PHT2": 0.42439,
+    "Q": 4.123105625617661,
+    "Q2": 17.0,
+    "S23Fraction": 0.4,
+    "S23Sample": 6.619113043478261,
+    "S23UpperB": 16.547782608695652,
+    "ScaleMu": 4.123105625617661,
+    "qT2": 3.1,
+    "xB": 0.23,
+    "xHat": 0.3770491803278688,
+    "xi": 0.61,
+    "zH": 0.37
+  },
+  "Conventions": {
+    "ChargeInterpretation": "unit-charge Hqg hard coefficient; physical Sum_q e_q^2 f_q D_g is deferred on both sides",
+    "DistributionContent": "regular, delta, plus1B, and plus2B",
+    "EndpointRegulator": 1e-07,
+    "Excluded": "PDFs, gluon FF, physical flavor-charge sum, alpha_s running, xi convolution, and leptonic prefactors",
+    "PartonicModuleWeight": 1.0
+  },
+  "FHatByField": {
+    "Endpoint": {
+      "F1Hat": 5.605888312589616e-05,
+      "F2Hat": 4.4496354612402094e-05
+    },
+    "IntegrandPhi0": {
+      "F1Hat": 3.969483244982682e-06,
+      "F2Hat": 3.1846680295009604e-06
+    },
+    "IntegrandPhiS": {
+      "F1Hat": -3.4871641616250166e-05,
+      "F2Hat": -2.9083527817512447e-05
+    }
+  },
+  "ProjectorsByField": {
+    "Endpoint": {
+      "Pg": -0.00010917061391341613,
+      "Ppp": 8.810397706458536e-05
+    },
+    "IntegrandPhi0": {
+      "Pg": -7.685303000175035e-06,
+      "Ppp": 7.583171726685699e-06
+    },
+    "IntegrandPhiS": {
+      "Pg": 6.604763796031008e-05,
+      "Ppp": -0.0001104798832622585
+    }
+  },
+  "RawProjectorsByField": {
+    "Pg": {
+      "Endpoint": -0.00010917061391341613,
+      "IntegrandPhi0": -7.685303000175035e-06,
+      "IntegrandPhiS": 6.604763796031008e-05
+    },
+    "Ppp": {
+      "Endpoint": 8.810397706458536e-05,
+      "IntegrandPhi0": 7.583171726685699e-06,
+      "IntegrandPhiS": -0.0001104798832622585
+    }
+  },
+  "Reference": {
+    "Channel": 3,
+    "ChargeCases": [
+      "A"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "ModuleSHA256": {
+      "Pg": "ad094998332145c636303e1694bd69b3414ecce5405afd5031a6c4931aec7329",
+      "Ppp": "cc1519c415f0540207c86512581d35af005c1a861d233817163b3cf6f81fe1d9"
+    },
+    "Modules": {
+      "Pg": "NLO/Pg/fchn3A.py",
+      "Ppp": "NLO/Ppp/fchn3A.py"
+    },
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD"
+  },
+  "Status": "CompleteBigTMDFHatBenchmark"
+}

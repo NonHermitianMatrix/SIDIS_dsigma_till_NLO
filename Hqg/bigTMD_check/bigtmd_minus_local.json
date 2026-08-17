@@ -1,0 +1,174 @@
+{
+  "Benchmark": {
+    "ID": "generic_interior_1",
+    "Nf": 4,
+    "PHT2": 0.42439,
+    "Q": 4.123105625617661,
+    "Q2": 17.0,
+    "S23Fraction": 0.4,
+    "S23Sample": 6.619113043478261,
+    "S23UpperB": 16.547782608695652,
+    "ScaleMu": 4.123105625617661,
+    "qT2": 3.1,
+    "xB": 0.23,
+    "xHat": 0.3770491803278688,
+    "xi": 0.61,
+    "zH": 0.37
+  },
+  "BigTMDSource": {
+    "Channel": 3,
+    "ChargeCases": [
+      "A"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "ModuleSHA256": {
+      "Pg": "ad094998332145c636303e1694bd69b3414ecce5405afd5031a6c4931aec7329",
+      "Ppp": "cc1519c415f0540207c86512581d35af005c1a861d233817163b3cf6f81fe1d9"
+    },
+    "Modules": {
+      "Pg": "NLO/Pg/fchn3A.py",
+      "Ppp": "NLO/Ppp/fchn3A.py"
+    },
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD"
+  },
+  "ComparisonLevel": "finite unit-charge Hqg coefficient action before PDFs, gluon FF, physical charge sum, and xi convolution",
+  "DifferenceDirection": "BigTMD minus local",
+  "DifferencesByField": {
+    "Endpoint": {
+      "F1Hat": {
+        "AbsoluteDifference": 8.097843949300023e-05,
+        "BigTMD": 5.605888312589616e-05,
+        "BigTMDMinusLocal": -8.097843949300023e-05,
+        "Local": 0.0001370373226188964,
+        "NumericallyClose": false,
+        "RelativeDifference": 0.5909225161834409
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 6.353759730302708e-05,
+        "BigTMD": 4.4496354612402094e-05,
+        "BigTMDMinusLocal": -6.353759730302708e-05,
+        "Local": 0.00010803395191542917,
+        "NumericallyClose": false,
+        "RelativeDifference": 0.5881261971492573
+      }
+    },
+    "IntegrandPhi0": {
+      "F1Hat": {
+        "AbsoluteDifference": 5.742120399680619e-05,
+        "BigTMD": 3.969483244982682e-06,
+        "BigTMDMinusLocal": 5.742120399680619e-05,
+        "Local": -5.3451720751823506e-05,
+        "NumericallyClose": false,
+        "RelativeDifference": 1.0742629645809347
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 4.6068332079201106e-05,
+        "BigTMD": 3.1846680295009604e-06,
+        "BigTMDMinusLocal": 4.6068332079201106e-05,
+        "Local": -4.2883664049700145e-05,
+        "NumericallyClose": false,
+        "RelativeDifference": 1.0742629646993336
+      }
+    },
+    "IntegrandPhiS": {
+      "F1Hat": {
+        "AbsoluteDifference": 0.0001535006982017718,
+        "BigTMD": -3.4871641616250166e-05,
+        "BigTMDMinusLocal": -0.0001535006982017718,
+        "Local": 0.00011862905658552165,
+        "NumericallyClose": false,
+        "RelativeDifference": 1.2939553143214169
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 0.00012796195160385228,
+        "BigTMD": -2.9083527817512447e-05,
+        "BigTMDMinusLocal": -0.00012796195160385228,
+        "Local": 9.887842378633984e-05,
+        "NumericallyClose": false,
+        "RelativeDifference": 1.2941342175959156
+      }
+    }
+  },
+  "LocalSource": {
+    "ByteCount": 530803767,
+    "Channel": "Hqg only",
+    "Path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s13_result",
+    "SHA256": "ec90eff70317eb0e14dc8dcfa810e949c7cbb19a2874a1d1cc034690e517242f",
+    "StageVersion": "HqgS13-v1",
+    "Status": "CompleteFinitePartonicStructureFunctionsHqg"
+  },
+  "Rows": [
+    {
+      "AbsoluteDifference": 8.097843949300023e-05,
+      "BigTMD": 5.605888312589616e-05,
+      "BigTMDMinusLocal": -8.097843949300023e-05,
+      "Field": "Endpoint",
+      "Function": "F1Hat",
+      "Local": 0.0001370373226188964,
+      "NumericallyClose": false,
+      "RelativeDifference": 0.5909225161834409
+    },
+    {
+      "AbsoluteDifference": 6.353759730302708e-05,
+      "BigTMD": 4.4496354612402094e-05,
+      "BigTMDMinusLocal": -6.353759730302708e-05,
+      "Field": "Endpoint",
+      "Function": "F2Hat",
+      "Local": 0.00010803395191542917,
+      "NumericallyClose": false,
+      "RelativeDifference": 0.5881261971492573
+    },
+    {
+      "AbsoluteDifference": 0.0001535006982017718,
+      "BigTMD": -3.4871641616250166e-05,
+      "BigTMDMinusLocal": -0.0001535006982017718,
+      "Field": "IntegrandPhiS",
+      "Function": "F1Hat",
+      "Local": 0.00011862905658552165,
+      "NumericallyClose": false,
+      "RelativeDifference": 1.2939553143214169
+    },
+    {
+      "AbsoluteDifference": 0.00012796195160385228,
+      "BigTMD": -2.9083527817512447e-05,
+      "BigTMDMinusLocal": -0.00012796195160385228,
+      "Field": "IntegrandPhiS",
+      "Function": "F2Hat",
+      "Local": 9.887842378633984e-05,
+      "NumericallyClose": false,
+      "RelativeDifference": 1.2941342175959156
+    },
+    {
+      "AbsoluteDifference": 5.742120399680619e-05,
+      "BigTMD": 3.969483244982682e-06,
+      "BigTMDMinusLocal": 5.742120399680619e-05,
+      "Field": "IntegrandPhi0",
+      "Function": "F1Hat",
+      "Local": -5.3451720751823506e-05,
+      "NumericallyClose": false,
+      "RelativeDifference": 1.0742629645809347
+    },
+    {
+      "AbsoluteDifference": 4.6068332079201106e-05,
+      "BigTMD": 3.1846680295009604e-06,
+      "BigTMDMinusLocal": 4.6068332079201106e-05,
+      "Field": "IntegrandPhi0",
+      "Function": "F2Hat",
+      "Local": -4.2883664049700145e-05,
+      "NumericallyClose": false,
+      "RelativeDifference": 1.0742629646993336
+    }
+  ],
+  "Status": "CompleteBigTMDMinusLocalBenchmark",
+  "Summary": {
+    "AllWithinTolerance": false,
+    "ComparisonCount": 6,
+    "MaximumAbsoluteDifference": 0.0001535006982017718,
+    "MaximumRelativeDifference": 1.2941342175959156,
+    "Tolerance": "abs(diff) <= 1e-8 + 1e-6*max(abs(BigTMD),abs(local))"
+  }
+}

@@ -1,0 +1,92 @@
+<|"CacheVersion" -> 2, "StageVersion" -> "HqgS12-v4", 
+ "ProgramSHA256" -> 
+  829252491395715538014708637803786550914337230403601888128535375957504648045\
+7, "S10SHA256" -> 
+  299759313724521051692819522513003940810287518396699984602761328765704304616\
+53, "RealPairCacheSHA256" -> 
+  982744721436699543420438234990558702711163487538930427496651948619631678881\
+11, "Projector" -> "Pg", "Field" -> "IntegrandPhi0", "Position" -> 27, 
+ "TermSHA256" -> 493697556026073422517055086806519527712925351032883778385518\
+15608058155214581, "Powers" -> {-2, -1, 0}, 
+ "Coefficients" -> <|-2 -> 0, 
+   -1 -> -1/16*(((PHT2*xB^2)/xi^2 + (Q2*xB*(1 - xB/xi)*zH^2)/xi)*
+       (Q2^2*xB*xi*zH^2 - Q2^2*xi^2*zH^2)*(2*CA^2*PHT2*Q2^2*xB^3*FCGV["EL"]^2*
+         SMP["g_s"]^4 - 2*CA^4*PHT2*Q2^2*xB^3*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        2*(-1 + CA^2)*PHT2*Q2^2*xB^3*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        2*CA^2*(-1 + CA^2)*PHT2*Q2^2*xB^3*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        2*CA^2*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        2*CA^4*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        2*(-1 + CA^2)*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        2*CA^2*(-1 + CA^2)*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        2*CA^2*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        2*CA^4*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        2*(-1 + CA^2)*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        2*CA^2*(-1 + CA^2)*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        4*CA^2*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        4*CA^4*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        4*(-1 + CA^2)*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        4*CA^2*(-1 + CA^2)*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        2*CA^2*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        2*CA^4*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+        2*(-1 + CA^2)*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+        2*CA^2*(-1 + CA^2)*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4))/
+      (Pi^5*Q2^4*s23*(1 - xB/xi)^2*(xB - xi)*xi*(Q2*xB - Q2*xi)^2*zH^3*
+       (-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)), 
+   0 -> -((((PHT2*xB^2)/xi^2 + (Q2*xB*(1 - xB/xi)*zH^2)/xi)*
+       ((-1/16*(EulerGamma*(Q2^2*xB*xi*zH^2 - Q2^2*xi^2*zH^2))/Pi^5 + 
+          (PHT2*Q2*xB^2 - Q2^2*xB^2*zH^2 + 2*Q2^2*xB*xi*zH^2 - 
+            Q2^2*xi^2*zH^2)/(16*Pi^5) + (Q2^2*xB*xi*zH^2 - Q2^2*xi^2*zH^2)*
+           (Log[2]/(8*Pi^5) + Log[Pi]/(16*Pi^5) - 
+            Log[(Q2*(xB - xi)*(-1 + zH))/xB - PHT2/zH]/(16*Pi^5)) - 
+          ((Q2^2*xB*xi*zH^2 - Q2^2*xi^2*zH^2)*Log[(s23*xB*zH)/
+              (-(PHT2*xB) + Q2*(xB - xi)*(-1 + zH)*zH)])/(16*Pi^5))*
+         (2*CA^2*PHT2*Q2^2*xB^3*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          2*CA^4*PHT2*Q2^2*xB^3*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          2*(-1 + CA^2)*PHT2*Q2^2*xB^3*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          2*CA^2*(-1 + CA^2)*PHT2*Q2^2*xB^3*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          2*CA^2*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          2*CA^4*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          2*(-1 + CA^2)*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          2*CA^2*(-1 + CA^2)*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          2*CA^2*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          2*CA^4*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          2*(-1 + CA^2)*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          2*CA^2*(-1 + CA^2)*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          4*CA^2*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          4*CA^4*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          4*(-1 + CA^2)*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          4*CA^2*(-1 + CA^2)*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          2*CA^2*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          2*CA^4*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+          2*(-1 + CA^2)*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+          2*CA^2*(-1 + CA^2)*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4) + 
+        ((Q2^2*xB*xi*zH^2 - Q2^2*xi^2*zH^2)*(-3*CA^2*PHT2*Q2^2*xB^3*
+            FCGV["EL"]^2*SMP["g_s"]^4 + 3*CA^4*PHT2*Q2^2*xB^3*FCGV["EL"]^2*
+            SMP["g_s"]^4 + 3*(-1 + CA^2)*PHT2*Q2^2*xB^3*FCGV["EL"]^2*
+            SMP["g_s"]^4 - 3*CA^2*(-1 + CA^2)*PHT2*Q2^2*xB^3*FCGV["EL"]^2*
+            SMP["g_s"]^4 + 4*CA^2*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*
+            SMP["g_s"]^4 - 4*CA^4*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*
+            SMP["g_s"]^4 - 4*(-1 + CA^2)*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*
+            SMP["g_s"]^4 + 4*CA^2*(-1 + CA^2)*PHT2*Q2^2*xB^2*xi*FCGV["EL"]^2*
+            SMP["g_s"]^4 - CA^2*PHT2*Q2^2*xB*xi^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           CA^4*PHT2*Q2^2*xB*xi^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           (-1 + CA^2)*PHT2*Q2^2*xB*xi^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           CA^2*(-1 + CA^2)*PHT2*Q2^2*xB*xi^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           3*CA^2*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           3*CA^4*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           3*(-1 + CA^2)*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           3*CA^2*(-1 + CA^2)*Q2^3*xB^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           7*CA^2*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           7*CA^4*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           7*(-1 + CA^2)*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           7*CA^2*(-1 + CA^2)*Q2^3*xB^2*xi*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           5*CA^2*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           5*CA^4*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           5*(-1 + CA^2)*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           5*CA^2*(-1 + CA^2)*Q2^3*xB*xi^2*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           CA^2*Q2^3*xi^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           CA^4*Q2^3*xi^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 + 
+           (-1 + CA^2)*Q2^3*xi^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4 - 
+           CA^2*(-1 + CA^2)*Q2^3*xi^3*zH^2*FCGV["EL"]^2*SMP["g_s"]^4))/
+         (16*Pi^5)))/(Q2^4*s23*(1 - xB/xi)^2*(xB - xi)*xi*(Q2*xB - Q2*xi)^2*
+       zH^3*(-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)))|>|>

@@ -1,0 +1,384 @@
+<|"Status" -> "Complete", "StageVersion" -> "HqgS06-v3", 
+ "Channel" -> "Hqg only", "TensorRole" -> "LO", "CacheStage" -> "PostDirac", 
+ "SourceS05" -> 
+  "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s05_result", 
+ "SourceS05SHA256" -> 5419434028347149353548115469617127457482551364315262427\
+8542583910707516698034, "Program" -> "/home/physics/projects/AI_Assisted_SIDI\
+S/scripts/Hqg/s06_spin_color_sum_average_hqg.wl", 
+ "ProgramSHA256" -> 931352749758708067041206162368346304307369785265713174148\
+41982368724216640004, "BigTMDChannel" -> 3, "BigTMDChargeCase" -> "A only", 
+ "ElectricChargeNormalization" -> 
+  <|"FeynArtsReferenceField" -> "F[3,{1}] down type", 
+   "ReferenceCharge" -> -1/3, "AmplitudeStripFactor" -> -3, 
+   "SavedHardAmplitudeConvention" -> "one-photon amplitudes divided by Q_ref; \
+no numerical quark electric charge remains in the hard-kernel normalization", 
+   "BigTMDLuminosityAppliedDownstream" -> "Sum_q e_q^2 f_q D_g"|>, 
+ "FragmentingParton" -> "g(k1)", "GeneratedAt" -> "2026-08-16T20:57:59", 
+ "Expression" -> 16*Q2*sHat*FCGV["EL"]^2*
+    FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]^2*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   8*D*Q2*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col2], SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col4], SUNFIndex[Col2]] + 16*sHat^2*FCGV["EL"]^2*
+    FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]^2*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   8*D*sHat^2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col2], SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col4], SUNFIndex[Col2]] + 16*sHat*tHat*FCGV["EL"]^2*
+    FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]^2*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   8*D*sHat*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col2], SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col4], SUNFIndex[Col2]] + 64*Q2*sHat*FCGV["EL"]^2*
+    FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+    FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   16*D*Q2*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   64*sHat^2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   16*D*sHat^2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*Q2*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   64*sHat*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   16*D*sHat*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*Q2*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col2], SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col4], SUNFIndex[Col2]] - 8*D*Q2*sHat*FCGV["EL"]^2*
+    FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^2*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*sHat^2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col2], SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col4], SUNFIndex[Col2]] - 8*D*sHat^2*FCGV["EL"]^2*
+    FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^2*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*sHat*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col2], SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, 
+     SUNFIndex[Col4], SUNFIndex[Col2]] - 8*D*sHat*tHat*FCGV["EL"]^2*
+    FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]^2*
+    Pair[LorentzIndex[s05Mu, D], LorentzIndex[s05Nu, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   128*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   32*D*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   64*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   64*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   96*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k2, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k2, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k2, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k2, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k2, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k2, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[p, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[p, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k1, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   64*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*Pair[LorentzIndex[s05Nu, D], 
+     Momentum[k1, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], 
+     SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], 
+     SUNFIndex[Col2]] + 16*D*sHat*FCGV["EL"]^2*FeynAmpDenominator[
+     PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+    FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*Pair[LorentzIndex[s05Nu, D], 
+     Momentum[k1, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], 
+     SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], 
+     SUNFIndex[Col2]] + 32*tHat*FCGV["EL"]^2*FeynAmpDenominator[
+     PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+    FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*Pair[LorentzIndex[s05Nu, D], 
+     Momentum[k1, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], 
+     SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], 
+     SUNFIndex[Col2]] - 64*Q2*FCGV["EL"]^2*FeynAmpDenominator[
+     PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+    FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   64*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   96*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k1, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k1, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k1, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k1, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k1, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       Momentum[k1 - p, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k1, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   64*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   64*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   64*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[k2, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*Pair[LorentzIndex[s05Nu, D], 
+     Momentum[k2, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], 
+     SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], 
+     SUNFIndex[Col2]] + 32*tHat*FCGV["EL"]^2*FeynAmpDenominator[
+     PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+    FeynAmpDenominator[PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*Pair[LorentzIndex[s05Nu, D], 
+     Momentum[k2, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], 
+     SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], 
+     SUNFIndex[Col2]] - 32*sHat*FCGV["EL"]^2*
+    FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]^2*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[p, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+       -Momentum[k1 + k2, D], 0]]^2*Pair[LorentzIndex[s05Mu, D], 
+     Momentum[k1, D]]*Pair[LorentzIndex[s05Nu, D], Momentum[p, D]]*
+    SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   64*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[p, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   16*D*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[p, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   32*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k1, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[p, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+   32*Q2*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[p, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   32*tHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[k2, D]]*
+    Pair[LorentzIndex[s05Nu, D], Momentum[p, D]]*SMP["g_s"]^2*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+    SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+   64*sHat*FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+      -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[
+     PropagatorDenominator[Momentum[k1 - p, D], 0]]*
+    Pair[LorentzIndex[s05Mu, D], Momentum[p, D]]*Pair[LorentzIndex[s05Nu, D], 
+     Momentum[p, D]]*SMP["g_s"]^2*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col2], 
+     SUNFIndex[Col4]]*SUNTF[{SUNIndex[Glu3]}, SUNFIndex[Col4], 
+     SUNFIndex[Col2]]|>

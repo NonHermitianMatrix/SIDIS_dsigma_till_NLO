@@ -1,0 +1,1661 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_STAGE: bounded projected load of S10 metadata and real actions"
+"S12_REAL_PAIR_CHECKPOINT: compact S10 real pairs complete"
+"S12_MEMORY_EPOCH_PAUSE: compact S10 real-pair cache created; restart required before mapped counterterms and Laurent terms"
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_COUNTERTERM_REBOUND: current program provenance installed"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PARTITION: projector=""Pg"" field=""Endpoint"" terms="51" maxLeafCount="75400" strategy=one-level-factorwise"
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "1
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0002"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "2" leafCount="40250" memoryGiB="0.255714811384677887`3.
+"S12_FATAL: Pg Endpoint position 2 Laurent extraction failed or exceeded its bounded resource limit."
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_COUNTERTERM_REBOUND: current program provenance installed"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PARTITION: projector=""Pg"" field=""Endpoint"" terms="51" maxLeafCount="75400" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "1
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "2" leafCount="40250" memoryGiB="0.2557276636362075806`3.
+"S12_PIECEWISE_FACTOR_LIFT: branches="1
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "2
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0003"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "3" leafCount="238" memoryGiB="0.2601474374532699585`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "3
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0004"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "4" leafCount="257" memoryGiB="0.2601499110460281372`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "4
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0005"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "5" leafCount="234" memoryGiB="0.2601521909236907959`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "5
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0006"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "6" leafCount="242" memoryGiB="0.2601548582315444946`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "6
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0007"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "7" leafCount="334" memoryGiB="0.2601573467254638672`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "7
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0008"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "8" leafCount="342" memoryGiB="0.2601635605096817017`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "8
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0009"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "9" leafCount="369" memoryGiB="0.26016959547996521`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "9
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0010"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "10" leafCount="388" memoryGiB="0.2601752802729606628`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "10
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0011"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "11" leafCount="1610" memoryGiB="0.2601815164089202881`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "11
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0012"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "12" leafCount="463" memoryGiB="0.2602155432105064392`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "12
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0013"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "13" leafCount="528" memoryGiB="0.2602263912558555603`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "13
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0014"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "14" leafCount="493" memoryGiB="0.2602380141615867615`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "14
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0015"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "15" leafCount="291" memoryGiB="0.260248333215713501`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "15
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0016"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "16" leafCount="75400" memoryGiB="0.2602541521191596985`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "16
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0017"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "17" leafCount="54902" memoryGiB="0.2613426893949508667`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "17
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0018"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""Endpoint"" position "18
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PARTITION: projector=""Pg"" field=""Endpoint"" terms="51" maxLeafCount="75400" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "15
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "16
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "17
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "18" leafCount="55669" memoryGiB="0.2557297945022583008`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "18
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0019"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "19" leafCount="622" memoryGiB="0.2597190961241722107`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "19
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0020"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "20" leafCount="1406" memoryGiB="0.2597379535436630249`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "20
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0021"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "21" leafCount="2450" memoryGiB="0.2597718238830566406`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "21
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0022"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "22" leafCount="57165" memoryGiB="0.2598378360271453857`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "22
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0023"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "23" leafCount="75176" memoryGiB="0.2607847899198532104`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "23
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0024"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "24" leafCount="1244" memoryGiB="0.2618817836046218872`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "24
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0025"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "25" leafCount="1494" memoryGiB="0.2619129791855812073`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "25
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0026"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "26" leafCount="2456" memoryGiB="0.2619517222046852112`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "26
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0027"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "27" leafCount="2015" memoryGiB="0.2620195746421813965`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "27
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0028"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "28" leafCount="2640" memoryGiB="0.2620783224701881409`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "28
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0029"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "29" leafCount="2588" memoryGiB="0.2621377333998680115`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "29
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0030"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "30" leafCount="2671" memoryGiB="0.2621976956725120544`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "30
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0031"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "31" leafCount="2996" memoryGiB="0.2622598633170127869`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "31
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0032"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "32" leafCount="6143" memoryGiB="0.2623213678598403931`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "32
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0033"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "33" leafCount="5584" memoryGiB="0.2624972611665725708`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "33
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0034"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""Endpoint"" position "34
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PARTITION: projector=""Pg"" field=""Endpoint"" terms="51" maxLeafCount="75400" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "15
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "16
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "17
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "18
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "19
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "20
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "21
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "22
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "23
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "24
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "25
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "26
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "27
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "28
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "29
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "30
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "31
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "32
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "33
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "34" leafCount="6110" memoryGiB="0.2557338476181030273`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "34
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0035"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "35" leafCount="62540" memoryGiB="0.2579220309853553772`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "35
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0036"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "36" leafCount="3643" memoryGiB="0.2603776976466178894`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "36
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0037"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "37" leafCount="6973" memoryGiB="0.2604795247316360474`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "37
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0038"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "38" leafCount="30169" memoryGiB="0.2606826648116111755`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "38
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0039"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "39" leafCount="38288" memoryGiB="0.2611595168709754944`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "39
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0040"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "40" leafCount="5628" memoryGiB="0.2618026062846183777`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "40
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0041"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "41" leafCount="10321" memoryGiB="0.2619738727807998657`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "41
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "42
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "43
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "44
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "45
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "46
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "47
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "48
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "49
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""Endpoint"" position "50
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_endpoint_0051"
+"S12_TERM_STAGE: ""Pg"" ""Endpoint"" position "51" leafCount="22151" memoryGiB="0.2625215053558349609`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""Endpoint"" position "51
+"S12_AGGREGATE_STAGE: ""Pg"" ""Endpoint"" epsilon^"-2" parts="51
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""Endpoint"" epsilon^"-2" leafCount="27555
+"S12_AGGREGATE_STAGE: ""Pg"" ""Endpoint"" epsilon^"-1" parts="51
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""Endpoint"" epsilon^"-1" leafCount="260771
+"S12_AGGREGATE_STAGE: ""Pg"" ""Endpoint"" epsilon^"0" parts="51
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""Endpoint"" epsilon^"0" leafCount="685042
+"S12_S10_PARTITION: projector=""Pg"" field=""IntegrandPhiS"" terms="70" maxLeafCount="427317" strategy=one-level-factorwise"
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "1
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "2
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "3
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "4
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "5
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "6
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "7
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "8
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "9
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "10
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "11
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "12
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "13
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "14
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "15
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "16
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "17
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "18
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "19
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "20
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "21
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "22
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "23
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "24
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "25
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "26
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "27
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "28
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "29
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "30
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "31
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "32
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "33
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "34
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "35
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "36
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "37
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "38
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "39
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "40
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "41
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "42
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "43
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "44
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "45
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "46
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "47
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "48
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "49
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "50
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "51
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "52
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "53
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "54
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "55
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "56
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "57
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "58
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "59
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "60
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "61
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "62
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "63
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "64
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "65
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "66
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "67
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "68
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "69
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhiS"" position "70
+"S12_AGGREGATE_STAGE: ""Pg"" ""IntegrandPhiS"" epsilon^"-2" parts="70
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""IntegrandPhiS"" epsilon^"-2" leafCount="1
+"S12_AGGREGATE_STAGE: ""Pg"" ""IntegrandPhiS"" epsilon^"-1" parts="70
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""IntegrandPhiS"" epsilon^"-1" leafCount="607242
+"S12_AGGREGATE_STAGE: ""Pg"" ""IntegrandPhiS"" epsilon^"0" parts="70
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""IntegrandPhiS"" epsilon^"0" leafCount="1331689
+"S12_S10_PARTITION: projector=""Pg"" field=""IntegrandPhi0"" terms="51" maxLeafCount="75466" strategy=one-level-factorwise"
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "1
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0002"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "2" leafCount="40316" memoryGiB="0.2633545473217964172`3.
+"S12_PIECEWISE_FACTOR_LIFT: branches="1
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "2
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0003"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "3" leafCount="304" memoryGiB="0.2664802893996238708`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "3
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0004"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "4" leafCount="323" memoryGiB="0.2664821073412895203`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "4
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0005"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "5" leafCount="300" memoryGiB="0.2664844021201133728`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "5
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0006"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "6" leafCount="308" memoryGiB="0.2664870843291282654`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "6
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0007"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "7" leafCount="400" memoryGiB="0.2664895877242088318`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "7
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0008"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "8" leafCount="408" memoryGiB="0.2664958164095878601`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "8
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0009"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""IntegrandPhi0"" position "9
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PARTITION: projector=""Pg"" field=""Endpoint"" terms="51" maxLeafCount="75400" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "15
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "16
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "17
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "18
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "19
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "20
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "21
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "22
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "23
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "24
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "25
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "26
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "27
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "28
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "29
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "30
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "31
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "32
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "33
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "34
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "35
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "36
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "37
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "38
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "39
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "40
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "41
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "42
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "43
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "44
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "45
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "46
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "47
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "48
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "49
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "50
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "51
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"0
+"S12_S10_PARTITION: projector=""Pg"" field=""IntegrandPhiS"" terms="70" maxLeafCount="427317" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "1
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "2
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "3
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "4
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "5
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "6
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "7
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "8
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "9
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "10
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "11
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "12
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "13
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "14
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "15
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "16
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "17
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "18
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "19
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "20
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "21
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "22
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "23
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "24
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "25
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "26
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "27
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "28
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "29
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "30
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "31
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "32
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "33
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "34
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "35
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "36
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "37
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "38
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "39
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "40
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "41
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "42
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "43
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "44
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "45
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "46
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "47
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "48
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "49
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "50
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "51
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "52
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "53
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "54
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "55
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "56
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "57
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "58
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "59
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "60
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "61
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "62
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "63
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "64
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "65
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "66
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "67
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "68
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "69
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "70
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"0
+"S12_S10_PARTITION: projector=""Pg"" field=""IntegrandPhi0"" terms="51" maxLeafCount="75466" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "1
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "2
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "3
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "4
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "5
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "6
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "7
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "8
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "9" leafCount="435" memoryGiB="0.2558425143361091614`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "9
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0010"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "10" leafCount="454" memoryGiB="0.2578789517283439636`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "10
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0011"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "11" leafCount="1676" memoryGiB="0.25788840651512146`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "11
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0012"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "12" leafCount="532" memoryGiB="0.2579222247004508972`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "12
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0013"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "13" leafCount="594" memoryGiB="0.2579330354928970337`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "13
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0014"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "14" leafCount="559" memoryGiB="0.2579446732997894287`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "14
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0015"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "15" leafCount="357" memoryGiB="0.2579550072550773621`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "15
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0016"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "16" leafCount="75466" memoryGiB="0.2579609006643295288`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "16
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0017"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "17" leafCount="54968" memoryGiB="0.2602679431438446045`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "17
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0018"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "18" leafCount="55735" memoryGiB="0.260880589485168457`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "18
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0019"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "19" leafCount="691" memoryGiB="0.2615041062235832214`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "19
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0020"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "20" leafCount="1475" memoryGiB="0.2615120783448219299`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "20
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0021"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "21" leafCount="2516" memoryGiB="0.2615444809198379517`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "21
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0022"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "22" leafCount="57231" memoryGiB="0.2616105079650878906`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "22
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0023"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "23" leafCount="75242" memoryGiB="0.26243552565574646`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "23
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0024"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "24" leafCount="1310" memoryGiB="0.2635324746370315552`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "24
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0025"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""IntegrandPhi0"" position "25
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PARTITION: projector=""Pg"" field=""Endpoint"" terms="51" maxLeafCount="75400" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "15
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "16
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "17
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "18
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "19
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "20
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "21
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "22
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "23
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "24
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "25
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "26
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "27
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "28
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "29
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "30
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "31
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "32
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "33
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "34
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "35
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "36
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "37
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "38
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "39
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "40
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "41
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "42
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "43
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "44
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "45
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "46
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "47
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "48
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "49
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "50
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "51
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"0
+"S12_S10_PARTITION: projector=""Pg"" field=""IntegrandPhiS"" terms="70" maxLeafCount="427317" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "1
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "2
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "3
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "4
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "5
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "6
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "7
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "8
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "9
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "10
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "11
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "12
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "13
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "14
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "15
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "16
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "17
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "18
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "19
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "20
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "21
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "22
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "23
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "24
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "25
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "26
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "27
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "28
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "29
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "30
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "31
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "32
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "33
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "34
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "35
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "36
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "37
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "38
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "39
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "40
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "41
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "42
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "43
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "44
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "45
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "46
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "47
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "48
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "49
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "50
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "51
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "52
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "53
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "54
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "55
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "56
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "57
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "58
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "59
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "60
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "61
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "62
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "63
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "64
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "65
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "66
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "67
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "68
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "69
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "70
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"0
+"S12_S10_PARTITION: projector=""Pg"" field=""IntegrandPhi0"" terms="51" maxLeafCount="75466" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "1
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "2
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "3
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "4
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "5
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "6
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "7
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "8
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "9
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "10
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "11
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "12
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "13
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "14
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "15
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "16
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "17
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "18
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "19
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "20
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "21
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "22
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "23
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "24
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "25" leafCount="1560" memoryGiB="0.2558469772338867188`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "25
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0026"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "26" leafCount="2522" memoryGiB="0.2579129338264465332`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "26
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0027"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "27" leafCount="2084" memoryGiB="0.257987581193447113`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "27
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0028"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "28" leafCount="2706" memoryGiB="0.2580467537045478821`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "28
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0029"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "29" leafCount="2657" memoryGiB="0.2581057772040367126`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "29
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0030"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "30" leafCount="2737" memoryGiB="0.2581680044531822205`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "30
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0031"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "31" leafCount="3062" memoryGiB="0.258230648934841156`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "31
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0032"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "32" leafCount="6212" memoryGiB="0.2582918852567672729`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "32
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0033"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "33" leafCount="5650" memoryGiB="0.2585895955562591553`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "33
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0034"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "34" leafCount="6176" memoryGiB="0.2587523236870765686`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "34
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0035"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "35" leafCount="62606" memoryGiB="0.25892610102891922`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "35
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0036"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "36" leafCount="3709" memoryGiB="0.2612561807036399841`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "36
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0037"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "37" leafCount="7039" memoryGiB="0.2613578140735626221`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "37
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0038"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "38" leafCount="30235" memoryGiB="0.2615609690546989441`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "38
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0039"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "39" leafCount="38354" memoryGiB="0.2622819915413856506`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "39
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0040"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "40" leafCount="5697" memoryGiB="0.2629250958561897278`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "40
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0041"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""IntegrandPhi0"" position "41
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PARTITION: projector=""Pg"" field=""Endpoint"" terms="51" maxLeafCount="75400" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "15
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "16
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "17
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "18
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "19
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "20
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "21
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "22
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "23
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "24
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "25
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "26
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "27
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "28
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "29
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "30
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "31
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "32
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "33
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "34
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "35
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "36
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "37
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "38
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "39
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "40
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "41
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "42
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "43
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "44
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "45
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "46
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "47
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "48
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "49
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "50
+"S12_TERM_RESUME: ""Pg"" ""Endpoint"" position "51
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""Pg"" ""Endpoint"" epsilon^"0
+"S12_S10_PARTITION: projector=""Pg"" field=""IntegrandPhiS"" terms="70" maxLeafCount="427317" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "1
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "2
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "3
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "4
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "5
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "6
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "7
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "8
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "9
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "10
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "11
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "12
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "13
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "14
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "15
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "16
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "17
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "18
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "19
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "20
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "21
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "22
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "23
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "24
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "25
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "26
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "27
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "28
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "29
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "30
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "31
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "32
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "33
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "34
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "35
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "36
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "37
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "38
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "39
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "40
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "41
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "42
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "43
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "44
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "45
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "46
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "47
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "48
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "49
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "50
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "51
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "52
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "53
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "54
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "55
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "56
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "57
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "58
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "59
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "60
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "61
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "62
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "63
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "64
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "65
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "66
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "67
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "68
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "69
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhiS"" position "70
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""Pg"" ""IntegrandPhiS"" epsilon^"0
+"S12_S10_PARTITION: projector=""Pg"" field=""IntegrandPhi0"" terms="51" maxLeafCount="75466" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "1
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "2
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "3
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "4
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "5
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "6
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "7
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "8
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "9
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "10
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "11
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "12
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "13
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "14
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "15
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "16
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "17
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "18
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "19
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "20
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "21
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "22
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "23
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "24
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "25
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "26
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "27
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "28
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "29
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "30
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "31
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "32
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "33
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "34
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "35
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "36
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "37
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "38
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "39
+"S12_TERM_RESUME: ""Pg"" ""IntegrandPhi0"" position "40
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "41" leafCount="10390" memoryGiB="0.2558513730764389038`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "41
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "42
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "43
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "44
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "45
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "46
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "47
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "48
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "49
+"S12_TERM_REUSE_PRE_S10V4: ""Pg"" ""IntegrandPhi0"" position "50
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/pg_integrandphi0_0051"
+"S12_TERM_STAGE: ""Pg"" ""IntegrandPhi0"" position "51" leafCount="22217" memoryGiB="0.2583110332489013672`3.
+"S12_TERM_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" position "51
+"S12_AGGREGATE_STAGE: ""Pg"" ""IntegrandPhi0"" epsilon^"-2" parts="51
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" epsilon^"-2" leafCount="1
+"S12_AGGREGATE_STAGE: ""Pg"" ""IntegrandPhi0"" epsilon^"-1" parts="51
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" epsilon^"-1" leafCount="26939
+"S12_AGGREGATE_STAGE: ""Pg"" ""IntegrandPhi0"" epsilon^"0" parts="51
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" ""IntegrandPhi0"" epsilon^"0" leafCount="260907
+"S12_S10_PROJECTOR_COMPLETE: ""Pg"
+"S12_S10_PARTITION: projector=""PPP"" field=""Endpoint"" terms="34" maxLeafCount="75328" strategy=one-level-factorwise"
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""Endpoint"" position "1
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0002"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "2" leafCount="6144" memoryGiB="0.1992053389549255371`3.
+"S12_PIECEWISE_FACTOR_LIFT: branches="1
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "2
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0003"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "3" leafCount="189" memoryGiB="0.199512481689453125`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "3
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0004"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "4" leafCount="227" memoryGiB="0.1995134875178337097`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "4
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0005"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "5" leafCount="183" memoryGiB="0.1995159238576889038`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "5
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0006"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "6" leafCount="196" memoryGiB="0.1995173916220664978`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "6
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0007"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "7" leafCount="239" memoryGiB="0.1995189040899276733`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "7
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0008"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "8" leafCount="226" memoryGiB="0.1995228677988052368`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "8
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0009"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "9" leafCount="420" memoryGiB="0.199525982141494751`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "9
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0010"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "10" leafCount="427" memoryGiB="0.1995327845215797424`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "10
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0011"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "11" leafCount="547" memoryGiB="0.1995428800582885742`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "11
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0012"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "12" leafCount="242" memoryGiB="0.1995542645454406738`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "12
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0013"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "13" leafCount="75328" memoryGiB="0.1995587572455406189`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "13
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0014"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "14" leafCount="54867" memoryGiB="0.2007695585489273071`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "14
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0015"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "15" leafCount="190" memoryGiB="0.2013790979981422424`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "15
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0016"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""Endpoint"" position "16
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_PARTITION: projector=""PPP"" field=""Endpoint"" terms="34" maxLeafCount="75328" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "15
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "16" leafCount="56296" memoryGiB="0.1961612701416015625`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "16
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0017"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "17" leafCount="455" memoryGiB="0.2003270834684371948`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "17
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0018"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "18" leafCount="808" memoryGiB="0.2003327086567878723`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "18
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0019"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "19" leafCount="56829" memoryGiB="0.2003512084484100342`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "19
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0020"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "20" leafCount="74095" memoryGiB="0.2011662870645523071`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "20
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0021"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "21" leafCount="642" memoryGiB="0.2023518085479736328`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "21
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0022"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "22" leafCount="27334" memoryGiB="0.2023715004324913025`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "22
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0023"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "23" leafCount="936" memoryGiB="0.202760256826877594`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "23
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0024"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "24" leafCount="769" memoryGiB="0.2027804702520370483`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "24
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0025"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "25" leafCount="918" memoryGiB="0.2028041929006576538`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "25
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0026"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "26" leafCount="1549" memoryGiB="0.2028262615203857422`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "26
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0027"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "27" leafCount="28761" memoryGiB="0.2028650790452957153`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "27
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0028"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "28" leafCount="1550" memoryGiB="0.2032889425754547119`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "28
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0029"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "29" leafCount="2574" memoryGiB="0.2033370658755302429`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "29
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0030"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "30" leafCount="34526" memoryGiB="0.2034037038683891296`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "30
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0031"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "31" leafCount="2383" memoryGiB="0.2039350196719169617`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "31
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0032"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""Endpoint"" position "32
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_PARTITION: projector=""PPP"" field=""Endpoint"" terms="34" maxLeafCount="75328" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "15
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "16
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "17
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "18
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "19
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "20
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "21
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "22
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "23
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "24
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "25
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "26
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "27
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "28
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "29
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "30
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "31
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "32" leafCount="3194" memoryGiB="0.1961651593446731567`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "32
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0033"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "33" leafCount="6110" memoryGiB="0.1982927322387695312`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "33
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_endpoint_0034"
+"S12_TERM_STAGE: ""PPP"" ""Endpoint"" position "34" leafCount="4820" memoryGiB="0.1984658539295196533`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""Endpoint"" position "34
+"S12_AGGREGATE_STAGE: ""PPP"" ""Endpoint"" epsilon^"-2" parts="34
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""Endpoint"" epsilon^"-2" leafCount="2375
+"S12_AGGREGATE_STAGE: ""PPP"" ""Endpoint"" epsilon^"-1" parts="34
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""Endpoint"" epsilon^"-1" leafCount="145640
+"S12_AGGREGATE_STAGE: ""PPP"" ""Endpoint"" epsilon^"0" parts="34
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""Endpoint"" epsilon^"0" leafCount="428807
+"S12_S10_PARTITION: projector=""PPP"" field=""IntegrandPhiS"" terms="48" maxLeafCount="105353" strategy=one-level-factorwise"
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "1
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "2
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "3
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "4
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "5
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "6
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "7
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "8
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "9
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "10
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "11
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "12
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "13
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "14
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "15
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "16
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "17
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "18
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "19
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "20
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "21
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "22
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "23
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "24
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "25
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "26
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "27
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "28
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "29
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "30
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "31
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "32
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "33
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "34
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "35
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "36
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "37
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "38
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "39
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "40
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "41
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "42
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "43
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "44
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "45
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "46
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "47
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhiS"" position "48
+"S12_AGGREGATE_STAGE: ""PPP"" ""IntegrandPhiS"" epsilon^"-2" parts="48
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""IntegrandPhiS"" epsilon^"-2" leafCount="1
+"S12_AGGREGATE_STAGE: ""PPP"" ""IntegrandPhiS"" epsilon^"-1" parts="48
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""IntegrandPhiS"" epsilon^"-1" leafCount="212757
+"S12_AGGREGATE_STAGE: ""PPP"" ""IntegrandPhiS"" epsilon^"0" parts="48
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""IntegrandPhiS"" epsilon^"0" leafCount="535159
+"S12_S10_PARTITION: projector=""PPP"" field=""IntegrandPhi0"" terms="34" maxLeafCount="75394" strategy=one-level-factorwise"
+"S12_TERM_REUSE_PRE_S10V4: ""PPP"" ""IntegrandPhi0"" position "1
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0002"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "2" leafCount="6210" memoryGiB="0.1988250017166137695`3.
+"S12_PIECEWISE_FACTOR_LIFT: branches="1
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "2
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0003"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "3" leafCount="255" memoryGiB="0.1999741345643997192`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "3
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0004"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "4" leafCount="293" memoryGiB="0.1999754458665847778`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "4
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0005"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "5" leafCount="253" memoryGiB="0.199977383017539978`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "5
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0006"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "6" leafCount="262" memoryGiB="0.1999786496162414551`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "6
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0007"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "7" leafCount="305" memoryGiB="0.1999804079532623291`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "7
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0008"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "8" leafCount="296" memoryGiB="0.1999838128685951233`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "8
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0009"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "9" leafCount="486" memoryGiB="0.1999871283769607544`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "9
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0010"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "10" leafCount="496" memoryGiB="0.1999933719635009766`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "10
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0011"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "11" leafCount="616" memoryGiB="0.2000031471252441406`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "11
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0012"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "12" leafCount="311" memoryGiB="0.2000139132142066956`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "12
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0013"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "13" leafCount="75394" memoryGiB="0.2000178620219230652`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "13
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0014"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "14" leafCount="54933" memoryGiB="0.2012198716402053833`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "14
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0015"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""IntegrandPhi0"" position "15
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_PARTITION: projector=""PPP"" field=""Endpoint"" terms="34" maxLeafCount="75328" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "15
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "16
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "17
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "18
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "19
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "20
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "21
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "22
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "23
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "24
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "25
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "26
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "27
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "28
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "29
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "30
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "31
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "32
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "33
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "34
+"S12_AGGREGATE_RESUME: ""PPP"" ""Endpoint"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""PPP"" ""Endpoint"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""PPP"" ""Endpoint"" epsilon^"0
+"S12_S10_PARTITION: projector=""PPP"" field=""IntegrandPhiS"" terms="48" maxLeafCount="105353" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "1
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "2
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "3
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "4
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "5
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "6
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "7
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "8
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "9
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "10
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "11
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "12
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "13
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "14
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "15
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "16
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "17
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "18
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "19
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "20
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "21
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "22
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "23
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "24
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "25
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "26
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "27
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "28
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "29
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "30
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "31
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "32
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "33
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "34
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "35
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "36
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "37
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "38
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "39
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "40
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "41
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "42
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "43
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "44
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "45
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "46
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "47
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "48
+"S12_AGGREGATE_RESUME: ""PPP"" ""IntegrandPhiS"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""PPP"" ""IntegrandPhiS"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""PPP"" ""IntegrandPhiS"" epsilon^"0
+"S12_S10_PARTITION: projector=""PPP"" field=""IntegrandPhi0"" terms="34" maxLeafCount="75394" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "1
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "2
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "3
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "4
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "5
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "6
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "7
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "8
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "9
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "10
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "11
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "12
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "13
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "14
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "15" leafCount="259" memoryGiB="0.1962270587682723999`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "15
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0016"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "16" leafCount="56362" memoryGiB="0.1982581019401550293`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "16
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0017"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "17" leafCount="521" memoryGiB="0.200412556529045105`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "17
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0018"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "18" leafCount="874" memoryGiB="0.200417347252368927`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "18
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0019"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "19" leafCount="56895" memoryGiB="0.2004357427358627319`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "19
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0020"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "20" leafCount="74161" memoryGiB="0.2012508660554885864`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "20
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0021"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "21" leafCount="711" memoryGiB="0.2024358063936233521`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "21
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0022"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "22" leafCount="27400" memoryGiB="0.2024447396397590637`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "22
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0023"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "23" leafCount="1002" memoryGiB="0.202833913266658783`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "23
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0024"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "24" leafCount="838" memoryGiB="0.2028541415929794312`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "24
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0025"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "25" leafCount="987" memoryGiB="0.2028774172067642212`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "25
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0026"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "26" leafCount="1618" memoryGiB="0.2028995901346206665`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "26
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0027"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "27" leafCount="28827" memoryGiB="0.2029381096363067627`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "27
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0028"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "28" leafCount="1616" memoryGiB="0.2033615261316299438`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "28
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0029"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "29" leafCount="2640" memoryGiB="0.2034100666642189026`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "29
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0030"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "30" leafCount="34592" memoryGiB="0.2034763172268867493`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "30
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0031"
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""IntegrandPhi0"" position "31
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_PARTITION: projector=""PPP"" field=""Endpoint"" terms="34" maxLeafCount="75328" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "3
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "4
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "5
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "6
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "7
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "8
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "9
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "10
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "11
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "12
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "13
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "14
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "15
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "16
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "17
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "18
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "19
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "20
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "21
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "22
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "23
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "24
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "25
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "26
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "27
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "28
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "29
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "30
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "31
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "32
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "33
+"S12_TERM_RESUME: ""PPP"" ""Endpoint"" position "34
+"S12_AGGREGATE_RESUME: ""PPP"" ""Endpoint"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""PPP"" ""Endpoint"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""PPP"" ""Endpoint"" epsilon^"0
+"S12_S10_PARTITION: projector=""PPP"" field=""IntegrandPhiS"" terms="48" maxLeafCount="105353" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "1
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "2
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "3
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "4
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "5
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "6
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "7
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "8
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "9
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "10
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "11
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "12
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "13
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "14
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "15
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "16
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "17
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "18
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "19
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "20
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "21
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "22
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "23
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "24
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "25
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "26
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "27
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "28
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "29
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "30
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "31
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "32
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "33
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "34
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "35
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "36
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "37
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "38
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "39
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "40
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "41
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "42
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "43
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "44
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "45
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "46
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "47
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhiS"" position "48
+"S12_AGGREGATE_RESUME: ""PPP"" ""IntegrandPhiS"" epsilon^"-2
+"S12_AGGREGATE_RESUME: ""PPP"" ""IntegrandPhiS"" epsilon^"-1
+"S12_AGGREGATE_RESUME: ""PPP"" ""IntegrandPhiS"" epsilon^"0
+"S12_S10_PARTITION: projector=""PPP"" field=""IntegrandPhi0"" terms="34" maxLeafCount="75394" strategy=one-level-factorwise"
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "1
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "2
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "3
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "4
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "5
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "6
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "7
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "8
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "9
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "10
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "11
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "12
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "13
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "14
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "15
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "16
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "17
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "18
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "19
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "20
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "21
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "22
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "23
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "24
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "25
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "26
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "27
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "28
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "29
+"S12_TERM_RESUME: ""PPP"" ""IntegrandPhi0"" position "30
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "31" leafCount="2452" memoryGiB="0.1962313652038574219`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "31
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0032"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "32" leafCount="3263" memoryGiB="0.1983398646116256714`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "32
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0033"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "33" leafCount="6176" memoryGiB="0.1984438374638557434`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "33
+"S12_TERM_PRE_S10V4_INVALID: deleting changed quarantined part ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_s10_laurent_parts_pre_s10v4/ppp_integrandphi0_0034"
+"S12_TERM_STAGE: ""PPP"" ""IntegrandPhi0"" position "34" leafCount="4886" memoryGiB="0.1986156180500984192`3.
+"S12_TERM_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" position "34
+"S12_AGGREGATE_STAGE: ""PPP"" ""IntegrandPhi0"" epsilon^"-2" parts="34
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" epsilon^"-2" leafCount="1
+"S12_AGGREGATE_STAGE: ""PPP"" ""IntegrandPhi0"" epsilon^"-1" parts="34
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" epsilon^"-1" leafCount="2402
+"S12_AGGREGATE_STAGE: ""PPP"" ""IntegrandPhi0"" epsilon^"0" parts="34
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" ""IntegrandPhi0"" epsilon^"0" leafCount="146163
+"S12_S10_PROJECTOR_COMPLETE: ""PPP"
+"S12_MEMORY_EPOCH_PAUSE: completed projector checkpoint work; restart required before virtual conversion and pole reduction"
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""PPP"
+"S12_STAGE: loading or constructing converted virtual cache"
+"S12_VIRTUAL_CACHE_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_cache_v2_virtual_coefficients"
+"S12_STAGE: loading the 233 MB S10 evaluator Laurent cache"
+"S12_VIRTUAL_CHECKPOINT: converted virtual cache complete"
+"S12_MEMORY_EPOCH_PAUSE: converted virtual cache created; restart required before pole reduction"
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating S10, S11, paper, and BigTMD bindings"
+"S12_STAGE: loading or constructing compact S10 real-pair cache"
+"S12_REAL_PAIR_RESUME: validated compact S10 real pairs"
+"S12_STAGE: loading and validating compact Hqg S11 input"
+"S12_STAGE: loading or constructing mapped Hqg Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 real Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""PPP"
+"S12_STAGE: loading or constructing converted virtual cache"
+"S12_VIRTUAL_RESUME: validated converted virtual cache"
+"S12_STAGE: adding Eq. (46) and checking every pole component"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""Endpoint"
+"S12_POLE_REDUCTION_STAGE: ""Pg epsilon^-2 Endpoint"" leafCount="28084
+"S12_POLE_REDUCTION_RESULT: ""Pg epsilon^-2 Endpoint"" exact zero"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""IntegrandPhiS"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""IntegrandPhi0"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus1"" field=""Endpoint"
+"S12_POLE_REDUCTION_STAGE: using exact physical endpoint single-pole decomposition for Pg epsilon^-1 Endpoint"
+"S12_POLE_REDUCTION_RESULT: Pg epsilon^-1 Endpoint exact zero in both physical root regions"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus1"" field=""IntegrandPhiS"
+"S12_POLE_REDUCTION_STAGE: ""Pg epsilon^-1 IntegrandPhiS"" leafCount="608420
+"S12_POLE_REDUCTION_RESULT: ""Pg epsilon^-1 IntegrandPhiS"" exact zero"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus1"" field=""IntegrandPhi0"
+"S12_POLE_REDUCTION_STAGE: ""Pg epsilon^-1 IntegrandPhi0"" leafCount="27276
+"S12_POLE_REDUCTION_RESULT: ""Pg epsilon^-1 IntegrandPhi0"" exact zero"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus2"" field=""Endpoint"
+"S12_POLE_REDUCTION_STAGE: ""PPP epsilon^-2 Endpoint"" leafCount="7113
+"S12_POLE_REDUCTION_RESULT: ""PPP epsilon^-2 Endpoint"" exact zero"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus2"" field=""IntegrandPhiS"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus2"" field=""IntegrandPhi0"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus1"" field=""Endpoint"
+"S12_POLE_REDUCTION_STAGE: using exact physical endpoint single-pole decomposition for PPP epsilon^-1 Endpoint"
+"S12_POLE_REDUCTION_RESULT: PPP epsilon^-1 Endpoint exact zero in both physical root regions"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus1"" field=""IntegrandPhiS"
+"S12_POLE_REDUCTION_STAGE: ""PPP epsilon^-1 IntegrandPhiS"" leafCount="213101
+"S12_POLE_REDUCTION_RESULT: ""PPP epsilon^-1 IntegrandPhiS"" exact zero"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus1"" field=""IntegrandPhi0"
+"S12_POLE_REDUCTION_STAGE: ""PPP epsilon^-1 IntegrandPhi0"" leafCount="2493
+"S12_POLE_REDUCTION_RESULT: ""PPP epsilon^-1 IntegrandPhi0"" exact zero"
+"S12_STAGE: constructing finite Hqg coefficient pairs"
+"S12_STAGE: applying physical Hermitian endpoint projection to ""Pg"
+"S12_STAGE: applying physical Hermitian endpoint projection to ""PPP"
+"S12_STAGE: writing finite factorized Hqg result"
+"S12_SUCCESS_FINITE_FACTORIZED_HQG"
+"S12_RESULT_PATH=""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s12_result"
+"S12_RESULT_BYTES="502257967
+"S12_POLE_RESIDUALS="InputForm[<|"Pg" -> <|"Minus2" -> <|"Endpoint" -> 0, "IntegrandPhiS" -> 0, "IntegrandPhi0" -> 0|>, "Minus1" -> <|"Endpoint" -> 0, "IntegrandPhiS" -> 0, "IntegrandPhi0" -> 0|>|>, "PPP" -> <|"Minus2" -> <|"Endpoint" -> 0, "IntegrandPhiS" -> 0, "IntegrandPhi0" -> 0|>, "Minus1" -> <|"Endpoint" -> 0, "IntegrandPhiS" -> 0, "IntegrandPhi0" -> 0|>|>|>]
+"S12_CHECKS="InputForm[<|"CurrentS10AndS11ArtifactsValidated" -> True, "S10PhysicalBranchCoupledEndpointRepairValidated" -> True, "AuthoritativePaperAndBigTMDChannel3ABound" -> True, "FeynCalcInitializedBeforeAllArtifactImports" -> True, "MonolithicS10ResultLoadExcluded" -> True, "ProjectedS10ByteScanUsesFixedMemoryChunks" -> True, "CompactS10RealPairCacheSourceBound" -> True, "NoWholeExpressionSeriesOnLargeS10Actions" -> True, "BoundedSerialPerTermLaurentExtraction" -> True, "DiskBackedPerTermAndAggregateResumeEnabled" -> True, "PreS10V4TermReuseRequiresExactCorrectedTermHash" -> True, "IndependentCountertermAndVirtualCachesReboundToCurrentSources" -> True, "AtomicCheckpointAndResultWritesEnabled" -> True, "FreshKernelMemoryEpochsEnabled" -> True, "ExactlyThreeMappedHqgComponents" -> True, "PDFContainsOnlyHqgPqq" -> True, "FFContainsHqgPggAndHqqPgq" -> True, "NoPqgOrHggBornContribution" -> True, "DirectBornNormalizationFactorIsNine" -> True, "PhysicalLuminosityDeferred" -> True, "PhysicalS08MapRebuilt" -> True, "AllMappedBornDeltaRootsValidated" -> True, "PPPPDFOneOverYSquaredApplied" -> True, "PggNfDependenceRetained" -> True, "PositiveEq46SignApplied" -> True, "PaperSEpsilonExpandedThroughFiniteOrder" -> True, "StandardQCDTFHalfApplied" -> True, "PackageXToPaperVirtualConversionAppliedExactlyOnce" -> True, "PgDoublePoleCancels" -> True, "PgSimplePoleCancels" -> True, "PPPDoublePoleCancels" -> True, "PPPSimplePoleCancels" -> True, "PhysicalHermitianFiniteEndpointProjectionApplied" -> True, "FiniteFunctionsContainNoEpsilonOrDistributionPlaceholder" -> True, "FiniteFunctionsRetainOrdinaryS23Integral" -> True, "FiniteFunctionsRetainArbitrarySymbolicTest" -> True, "NoAccidentalGlobalFeynCalcSymbols" -> True, "CalculationFullySymbolicAndExact" -> True|>]
