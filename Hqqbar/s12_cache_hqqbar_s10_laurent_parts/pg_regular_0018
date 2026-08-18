@@ -1,0 +1,60 @@
+<|"CacheVersion" -> 1, "StageVersion" -> "HqqbarS12-v1", 
+ "ProgramSHA256" -> 
+  "b56647afa5e8cb07bbaccce9bdeff84552cd9d3ef968deec543cd11a4f599e9f", 
+ "S10SHA256" -> 
+  "57e637d3eca490dfe08e341d866e5fa08ec1d69b14c7c476cf17c51890a65cb6", 
+ "Projector" -> "Pg", "Field" -> "IntegrandPhiS", "Family" -> "Regular", 
+ "Position" -> 18, "TermSHA256" -> 
+  "053c68ad10ca8c3efbf1cb7a6072476e94ff463a29ad6ae25872c5600f61ce7e", 
+ "Powers" -> {-2, -1, 0}, "Coefficients" -> <|-2 -> 0, -1 -> 0, 
+   0 -> -1/128*(((PHT2*xB^2)/xi^2 + (Q2*xB*(1 - xB/xi)*zH^2)/xi)*
+       ((-2*Q2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+        (2*CA^2*Q2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+        (8*s23*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+        (8*CA^2*s23*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+        (2*s23*xB*FCGV["EL"]^2*SMP["g_s"]^4)/(SUNN*(xB - xi)) + 
+        (2*CA^2*s23*xB*FCGV["EL"]^2*SMP["g_s"]^4)/(SUNN*(xB - xi)) - 
+        (10*s23^2*xB*FCGV["EL"]^2*SMP["g_s"]^4)/(Q2*SUNN*(xB - xi)) + 
+        (10*CA^2*s23^2*xB*FCGV["EL"]^2*SMP["g_s"]^4)/(Q2*SUNN*(xB - xi)) - 
+        (4*s23^3*FCGV["EL"]^2*SMP["g_s"]^4)/(Q2^2*SUNN*(-1 + xi/xB)^2) + 
+        (4*CA^2*s23^3*FCGV["EL"]^2*SMP["g_s"]^4)/(Q2^2*SUNN*(-1 + xi/xB)^2) + 
+        (2*Q2*(-1 + xi/xB)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+        (2*CA^2*Q2*(-1 + xi/xB)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+        (2*Q2*xi*(Q2*xB + s23*xB - Q2*xi)*zH^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+         (SUNN*xB*(-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)) + 
+        (2*CA^2*Q2*xi*(Q2*xB + s23*xB - Q2*xi)*zH^2*FCGV["EL"]^2*
+          SMP["g_s"]^4)/(SUNN*xB*(-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)) - 
+        (4*s23^2*xB*xi*(Q2*xB + s23*xB - Q2*xi)*zH^2*FCGV["EL"]^2*
+          SMP["g_s"]^4)/(Q2*SUNN*(xB - xi)^2*(-(PHT2*xB) + Q2*xB*zH^2 - 
+           Q2*xi*zH^2)) + (4*CA^2*s23^2*xB*xi*(Q2*xB + s23*xB - Q2*xi)*zH^2*
+          FCGV["EL"]^2*SMP["g_s"]^4)/(Q2*SUNN*(xB - xi)^2*
+          (-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)) - 
+        (6*s23*xi*(Q2*xB + s23*xB - Q2*xi)*zH^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+         (SUNN*(xB - xi)*(-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)) + 
+        (6*CA^2*s23*xi*(Q2*xB + s23*xB - Q2*xi)*zH^2*FCGV["EL"]^2*
+          SMP["g_s"]^4)/(SUNN*(xB - xi)*(-(PHT2*xB) + Q2*xB*zH^2 - 
+           Q2*xi*zH^2)) + (4*s23^2*xB^2*(-(PHT2*s23*xB) + PHT2*Q2*xi + 
+           Q2*s23*xB*zH^2)*FCGV["EL"]^2*SMP["g_s"]^4)/(Q2^2*SUNN*(xB - xi)^2*
+          (-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)) - 
+        (4*CA^2*s23^2*xB^2*(-(PHT2*s23*xB) + PHT2*Q2*xi + Q2*s23*xB*zH^2)*
+          FCGV["EL"]^2*SMP["g_s"]^4)/(Q2^2*SUNN*(xB - xi)^2*
+          (-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)) + 
+        (6*s23*xB*(-(PHT2*s23*xB) + PHT2*Q2*xi + Q2*s23*xB*zH^2)*FCGV["EL"]^2*
+          SMP["g_s"]^4)/(Q2*SUNN*(xB - xi)*(-(PHT2*xB) + Q2*xB*zH^2 - 
+           Q2*xi*zH^2)) - (6*CA^2*s23*xB*(-(PHT2*s23*xB) + PHT2*Q2*xi + 
+           Q2*s23*xB*zH^2)*FCGV["EL"]^2*SMP["g_s"]^4)/(Q2*SUNN*(xB - xi)*
+          (-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)) + 
+        (2*(PHT2*s23*xB - PHT2*Q2*xi - Q2*s23*xB*zH^2)*FCGV["EL"]^2*
+          SMP["g_s"]^4)/(SUNN*(PHT2*xB - Q2*xB*zH^2 + Q2*xi*zH^2)) - 
+        (2*CA^2*(PHT2*s23*xB - PHT2*Q2*xi - Q2*s23*xB*zH^2)*FCGV["EL"]^2*
+          SMP["g_s"]^4)/(SUNN*(PHT2*xB - Q2*xB*zH^2 + Q2*xi*zH^2))))/
+      (Pi^5*(Q2*(1 - xB/xi) - (s23*xB)/xi)^2*(-s23 + Q2*(-1 + xi/xB))^2*
+       zH)|>, "ProvenanceMigration" -> 
+  <|"FromProgramSHA256" -> 
+    "4341ba8d3280365ea8a26ad7403c76221acf0e9fb7eb1f33efd5bd79e52bc42e", 
+   "ToProgramSHA256" -> 
+    "b56647afa5e8cb07bbaccce9bdeff84552cd9d3ef968deec543cd11a4f599e9f", 
+   "OriginalFileSHA256" -> 
+    "e1565cdc3f01ab3cc6f675db5032c1fd5181015ad46d780346f340996795baa9", 
+   "Reason" -> "downstream-only SUNN-to-CA combination canonicalization", 
+   "CoefficientChanged" -> False|>|>

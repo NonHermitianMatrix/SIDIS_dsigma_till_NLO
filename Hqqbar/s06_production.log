@@ -1,0 +1,21 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S06_STAGE: validating the paper and accepted S05 handoff"
+"S06_STAGE: processing the coherent Hqqbar real tensor"
+"S06_STAGE: summing all four external fermion spins"
+"S06_STAGE: evaluating all D-dimensional Dirac traces"
+"S06_CHECKPOINT: post-Dirac tensor leaf count "1059777
+"S06_STAGE: summing all colors"
+"S06_STAGE: applying exactly the incoming-quark average 1/(2 Nc)"
+"S06_CHECKPOINT: final tensor leaf count "722442
+"S06_STAGE: atomically writing the Hqqbar S06 result"
+"S06_SUCCESS"
+"S06_PROGRAM_SHA256=787d001e6d285d1e74cfe9654ca8f61fe9a66d3b2e5972b20291bf39a02014fe"
+"S06_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s06_result"
+"S06_RESULT_SHA256=fd6499e32ce65273381e5350131fe06e8ed3b9a05083b446189b0d7d7323f9ef"
+"S06_CHECK_COUNT="25
+"S06_FINAL_LEAF_COUNT="722442
+"S06_RESULT_BYTES="14674347

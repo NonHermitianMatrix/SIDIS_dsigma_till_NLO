@@ -1,0 +1,1055 @@
+S12_AUTO_EPOCH_START epoch=1
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_STAGE: loading S11 and deriving mapped densities"
+"S12_COUNTERTERM_SERIES: ""Pg"" leafCount="1617
+"S12_COUNTERTERM_SERIES: ""PPP"" leafCount="291
+"S12_COUNTERTERM_CHECKPOINT: mapped cache complete"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_STAGE: loading ""Pg"" action only"
+"S12_S10_PARTITION: ""Pg"" alpha2=1 regular="75" topLeafCounts="InputForm[{11525, 2438149}]
+"S12_TERM_STAGE: ""Pg"" ""Alpha2"" position "1" leafCount="11525
+"S12_TERM_CHECKPOINT: ""Pg"" ""Alpha2"" position "1
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "1" leafCount="9918
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "1
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "2" leafCount="10960
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "2
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "3" leafCount="3195
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "3
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "4" leafCount="3192
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "4
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "5" leafCount="4088
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "5
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "6" leafCount="4082
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "6
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "7" leafCount="6822
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "7
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "8" leafCount="11685
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "8
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "9" leafCount="13207
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "9
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "10" leafCount="11657
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "10
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "11" leafCount="26848
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "11
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "12" leafCount="29330
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "12
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "13" leafCount="9751
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "13
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "14" leafCount="2015
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "14
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "15" leafCount="2001
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "15
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""Regular"" position "16
+S12_AUTO_EPOCH_EXIT epoch=1 code=75
+S12_AUTO_EPOCH_START epoch=2
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_STAGE: loading ""Pg"" action only"
+"S12_S10_PARTITION: ""Pg"" alpha2=1 regular="75" topLeafCounts="InputForm[{11525, 2438149}]
+"S12_TERM_RESUME: ""Pg"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "15
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "16" leafCount="9579
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "16
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "17" leafCount="4479
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "17
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "18" leafCount="4479
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "18
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "19" leafCount="6205
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "19
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "20" leafCount="6205
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "20
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "21" leafCount="40511
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "21
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "22" leafCount="46647
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "22
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "23" leafCount="32968
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "23
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "24" leafCount="17003
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "24
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "25" leafCount="24153
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "25
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "26" leafCount="20553
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "26
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "27" leafCount="27331
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "27
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "28" leafCount="18986
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "28
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "29" leafCount="18978
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "29
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "30" leafCount="21294
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "30
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "31" leafCount="21286
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "31
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""Regular"" position "32
+S12_AUTO_EPOCH_EXIT epoch=2 code=75
+S12_AUTO_EPOCH_START epoch=3
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_STAGE: loading ""Pg"" action only"
+"S12_S10_PARTITION: ""Pg"" alpha2=1 regular="75" topLeafCounts="InputForm[{11525, 2438149}]
+"S12_TERM_RESUME: ""Pg"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "15
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "16
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "17
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "18
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "19
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "20
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "21
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "22
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "23
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "24
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "25
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "26
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "27
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "28
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "29
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "30
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "31
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "32" leafCount="7850
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "32
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "33" leafCount="12102
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "33
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "34" leafCount="20960
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "34
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "35" leafCount="10283
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "35
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "36" leafCount="13578
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "36
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "37" leafCount="18502
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "37
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "38" leafCount="83322
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "38
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "39" leafCount="115288
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "39
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "40" leafCount="22136
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "40
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "41" leafCount="22116
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "41
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "42" leafCount="6752
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "42
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "43" leafCount="5358
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "43
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "44" leafCount="5346
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "44
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "45" leafCount="6740
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "45
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "46" leafCount="19786
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "46
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "47" leafCount="19766
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "47
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""Regular"" position "48
+S12_AUTO_EPOCH_EXIT epoch=3 code=75
+S12_AUTO_EPOCH_START epoch=4
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_STAGE: loading ""Pg"" action only"
+"S12_S10_PARTITION: ""Pg"" alpha2=1 regular="75" topLeafCounts="InputForm[{11525, 2438149}]
+"S12_TERM_RESUME: ""Pg"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "15
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "16
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "17
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "18
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "19
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "20
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "21
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "22
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "23
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "24
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "25
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "26
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "27
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "28
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "29
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "30
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "31
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "32
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "33
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "34
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "35
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "36
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "37
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "38
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "39
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "40
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "41
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "42
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "43
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "44
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "45
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "46
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "47
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "48" leafCount="11153
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "48
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "49" leafCount="6640
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "49
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "50" leafCount="9545
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "50
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "51" leafCount="13648
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "51
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "52" leafCount="6454
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "52
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "53" leafCount="6470
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "53
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "54" leafCount="20777
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "54
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "55" leafCount="24716
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "55
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "56" leafCount="73516
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "56
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "57" leafCount="6638
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "57
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "58" leafCount="14907
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "58
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "59" leafCount="70925
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "59
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "60" leafCount="145394
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "60
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "61" leafCount="48908
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "61
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "62" leafCount="48876
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "62
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "63" leafCount="18538
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "63
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""Pg"" ""Regular"" position "64
+S12_AUTO_EPOCH_EXIT epoch=4 code=75
+S12_AUTO_EPOCH_START epoch=5
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_STAGE: loading ""Pg"" action only"
+"S12_S10_PARTITION: ""Pg"" alpha2=1 regular="75" topLeafCounts="InputForm[{11525, 2438149}]
+"S12_TERM_RESUME: ""Pg"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "1
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "2
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "3
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "4
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "5
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "6
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "7
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "8
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "9
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "10
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "11
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "12
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "13
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "14
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "15
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "16
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "17
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "18
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "19
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "20
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "21
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "22
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "23
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "24
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "25
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "26
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "27
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "28
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "29
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "30
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "31
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "32
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "33
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "34
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "35
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "36
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "37
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "38
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "39
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "40
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "41
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "42
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "43
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "44
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "45
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "46
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "47
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "48
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "49
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "50
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "51
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "52
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "53
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "54
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "55
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "56
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "57
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "58
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "59
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "60
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "61
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "62
+"S12_TERM_RESUME: ""Pg"" ""Regular"" position "63
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "64" leafCount="23242
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "64
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "65" leafCount="61853
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "65
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "66" leafCount="70022
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "66
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "67" leafCount="25408
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "67
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "68" leafCount="25741
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "68
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "69" leafCount="59016
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "69
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "70" leafCount="69713
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "70
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "71" leafCount="84330
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "71
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "72" leafCount="105530
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "72
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "73" leafCount="208235
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "73
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "74" leafCount="199167
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "74
+"S12_TERM_STAGE: ""Pg"" ""Regular"" position "75" leafCount="133602
+"S12_TERM_CHECKPOINT: ""Pg"" ""Regular"" position "75
+"S12_AGGREGATE_STAGE: ""Pg"" epsilon^"-2" parts="76
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" epsilon^"-2" leafCount="1
+"S12_AGGREGATE_STAGE: ""Pg"" epsilon^"-1" parts="76
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" epsilon^"-1" leafCount="169161
+"S12_AGGREGATE_STAGE: ""Pg"" epsilon^"0" parts="76
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" epsilon^"0" leafCount="737224
+"S12_S10_PROJECTOR_COMPLETE: ""Pg"
+"S12_S10_STAGE: loading ""PPP"" action only"
+"S12_S10_PARTITION: ""PPP"" alpha2=1 regular="77" topLeafCounts="InputForm[{904, 1852771}]
+"S12_TERM_STAGE: ""PPP"" ""Alpha2"" position "1" leafCount="904
+"S12_TERM_CHECKPOINT: ""PPP"" ""Alpha2"" position "1
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "1" leafCount="11474
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "1
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "2" leafCount="13030
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "2
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "3" leafCount="13014
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "3
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""Regular"" position "4
+S12_AUTO_EPOCH_EXIT epoch=5 code=75
+S12_AUTO_EPOCH_START epoch=6
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_STAGE: loading ""PPP"" action only"
+"S12_S10_PARTITION: ""PPP"" alpha2=1 regular="77" topLeafCounts="InputForm[{904, 1852771}]
+"S12_TERM_RESUME: ""PPP"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "3
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "4" leafCount="10738
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "4
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "5" leafCount="994
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "5
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "6" leafCount="10360
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "6
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "7" leafCount="5781
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "7
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "8" leafCount="13064
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "8
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "9" leafCount="12103
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "9
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "10" leafCount="8934
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "10
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "11" leafCount="21319
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "11
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "12" leafCount="25741
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "12
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "13" leafCount="1423
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "13
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "14" leafCount="6081
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "14
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "15" leafCount="755
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "15
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "16" leafCount="1824
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "16
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "17" leafCount="22459
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "17
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "18" leafCount="19137
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "18
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "19" leafCount="2947
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "19
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""Regular"" position "20
+S12_AUTO_EPOCH_EXIT epoch=6 code=75
+S12_AUTO_EPOCH_START epoch=7
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_STAGE: loading ""PPP"" action only"
+"S12_S10_PARTITION: ""PPP"" alpha2=1 regular="77" topLeafCounts="InputForm[{904, 1852771}]
+"S12_TERM_RESUME: ""PPP"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "3
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "4
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "5
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "6
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "7
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "8
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "9
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "10
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "11
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "12
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "13
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "14
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "15
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "16
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "17
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "18
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "19
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "20" leafCount="2937
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "20
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "21" leafCount="19127
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "21
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "22" leafCount="1814
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "22
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "23" leafCount="22449
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "23
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "24" leafCount="745
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "24
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "25" leafCount="4385
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "25
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "26" leafCount="4375
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "26
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "27" leafCount="11022
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "27
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "28" leafCount="13065
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "28
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "29" leafCount="14032
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "29
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "30" leafCount="12572
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "30
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "31" leafCount="28535
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "31
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "32" leafCount="10397
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "32
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "33" leafCount="33386
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "33
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "34" leafCount="34839
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "34
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "35" leafCount="6441
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "35
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""Regular"" position "36
+S12_AUTO_EPOCH_EXIT epoch=7 code=75
+S12_AUTO_EPOCH_START epoch=8
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_STAGE: loading ""PPP"" action only"
+"S12_S10_PARTITION: ""PPP"" alpha2=1 regular="77" topLeafCounts="InputForm[{904, 1852771}]
+"S12_TERM_RESUME: ""PPP"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "3
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "4
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "5
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "6
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "7
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "8
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "9
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "10
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "11
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "12
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "13
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "14
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "15
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "16
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "17
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "18
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "19
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "20
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "21
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "22
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "23
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "24
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "25
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "26
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "27
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "28
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "29
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "30
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "31
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "32
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "33
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "34
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "35
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "36" leafCount="6431
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "36
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "37" leafCount="5398
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "37
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "38" leafCount="20811
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "38
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "39" leafCount="24506
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "39
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "40" leafCount="21225
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "40
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "41" leafCount="20805
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "41
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "42" leafCount="22890
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "42
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "43" leafCount="13956
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "43
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "44" leafCount="22500
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "44
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "45" leafCount="27554
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "45
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "46" leafCount="96225
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "46
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "47" leafCount="26040
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "47
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "48" leafCount="23770
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "48
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "49" leafCount="24885
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "49
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "50" leafCount="7542
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "50
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "51" leafCount="8649
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "51
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""Regular"" position "52
+S12_AUTO_EPOCH_EXIT epoch=8 code=75
+S12_AUTO_EPOCH_START epoch=9
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_STAGE: loading ""PPP"" action only"
+"S12_S10_PARTITION: ""PPP"" alpha2=1 regular="77" topLeafCounts="InputForm[{904, 1852771}]
+"S12_TERM_RESUME: ""PPP"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "3
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "4
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "5
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "6
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "7
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "8
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "9
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "10
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "11
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "12
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "13
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "14
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "15
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "16
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "17
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "18
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "19
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "20
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "21
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "22
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "23
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "24
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "25
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "26
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "27
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "28
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "29
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "30
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "31
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "32
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "33
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "34
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "35
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "36
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "37
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "38
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "39
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "40
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "41
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "42
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "43
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "44
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "45
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "46
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "47
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "48
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "49
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "50
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "51
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "52" leafCount="23017
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "52
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "53" leafCount="26711
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "53
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "54" leafCount="5472
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "54
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "55" leafCount="4352
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "55
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "56" leafCount="17972
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "56
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "57" leafCount="16501
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "57
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "58" leafCount="5890
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "58
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "59" leafCount="5894
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "59
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "60" leafCount="25569
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "60
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "61" leafCount="63857
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "61
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "62" leafCount="21676
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "62
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "63" leafCount="53108
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "63
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "64" leafCount="21644
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "64
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "65" leafCount="22060
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "65
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "66" leafCount="13274
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "66
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "67" leafCount="15755
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "67
+"S12_MEMORY_EPOCH_PAUSE: completed "16" new terms; restart required before ""PPP"" ""Regular"" position "68
+S12_AUTO_EPOCH_EXIT epoch=9 code=75
+S12_AUTO_EPOCH_START epoch=10
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_STAGE: loading ""PPP"" action only"
+"S12_S10_PARTITION: ""PPP"" alpha2=1 regular="77" topLeafCounts="InputForm[{904, 1852771}]
+"S12_TERM_RESUME: ""PPP"" ""Alpha2"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "1
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "2
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "3
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "4
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "5
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "6
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "7
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "8
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "9
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "10
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "11
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "12
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "13
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "14
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "15
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "16
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "17
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "18
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "19
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "20
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "21
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "22
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "23
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "24
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "25
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "26
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "27
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "28
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "29
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "30
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "31
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "32
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "33
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "34
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "35
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "36
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "37
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "38
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "39
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "40
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "41
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "42
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "43
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "44
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "45
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "46
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "47
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "48
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "49
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "50
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "51
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "52
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "53
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "54
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "55
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "56
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "57
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "58
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "59
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "60
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "61
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "62
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "63
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "64
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "65
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "66
+"S12_TERM_RESUME: ""PPP"" ""Regular"" position "67
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "68" leafCount="21703
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "68
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "69" leafCount="60504
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "69
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "70" leafCount="33245
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "70
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "71" leafCount="40816
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "71
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "72" leafCount="51146
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "72
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "73" leafCount="67736
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "73
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "74" leafCount="49830
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "74
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "75" leafCount="103971
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "75
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "76" leafCount="222439
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "76
+"S12_TERM_STAGE: ""PPP"" ""Regular"" position "77" leafCount="78623
+"S12_TERM_CHECKPOINT: ""PPP"" ""Regular"" position "77
+"S12_AGGREGATE_STAGE: ""PPP"" epsilon^"-2" parts="78
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" epsilon^"-2" leafCount="1
+"S12_AGGREGATE_STAGE: ""PPP"" epsilon^"-1" parts="78
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" epsilon^"-1" leafCount="106070
+"S12_AGGREGATE_STAGE: ""PPP"" epsilon^"0" parts="78
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" epsilon^"0" leafCount="542842
+"S12_S10_PROJECTOR_COMPLETE: ""PPP"
+"S12_MEMORY_EPOCH_PAUSE: completed projector checkpoint work; restart required before pole reduction"
+S12_AUTO_EPOCH_EXIT epoch=10 code=75
+S12_AUTO_EPOCH_START epoch=11
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_RESUME: validated mapped cache"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""Pg"
+"S12_S10_PROJECTOR_RESUME_COMPLETE: ""PPP"
+"S12_STAGE: adding Eq. (46) and checking every pole component"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""Endpoint"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""IntegrandPhiS"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""IntegrandPhi0"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus1"" field=""Endpoint"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus1"" field=""IntegrandPhiS"
+"S12_POLE_REDUCTION_STAGE: ""Pg epsilon^-1 IntegrandPhiS"" leafCount="174242
+"S12_FATAL: Nonzero or unreduced residual: Pg epsilon^-1 IntegrandPhiS. Exact diagnostic was written to /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_last_nonzero_residual."
+S12_AUTO_EPOCH_EXIT epoch=11 code=1
+S12_CORRECTED_AUTO_EPOCH_START epoch=1
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S12_STAGE: validating exact S10, S11, cache, and paper bindings"
+"S12_COLOR_REGRESSION: saved Pg simple-pole residual is exact zero under SUNN -> CA"
+"S12_STAGE: loading or constructing mapped Eq. (46) cache"
+"S12_COUNTERTERM_CACHE_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_mapped_counterterms"
+"S12_COUNTERTERM_STAGE: loading S11 and deriving mapped densities"
+"S12_COUNTERTERM_SERIES: ""Pg"" leafCount="1617
+"S12_COUNTERTERM_SERIES: ""PPP"" leafCount="291
+"S12_COUNTERTERM_CHECKPOINT: mapped cache complete"
+"S12_STAGE: extracting S10 Laurent coefficients serially with bounded per-term memory"
+"S12_PROJECTOR_MARKER_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_s10_laurent/pg_complete"
+"S12_S10_STAGE: loading ""Pg"" action only"
+"S12_S10_PARTITION: ""Pg"" alpha2=1 regular="75" topLeafCounts="InputForm[{11525, 2438149}]
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Alpha2"" position "1
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "1
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "2
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "3
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "4
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "5
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "6
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "7
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "8
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "9
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "10
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "11
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "12
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "13
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "14
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "15
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "16
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "17
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "18
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "19
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "20
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "21
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "22
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "23
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "24
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "25
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "26
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "27
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "28
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "29
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "30
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "31
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "32
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "33
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "34
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "35
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "36
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "37
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "38
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "39
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "40
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "41
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "42
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "43
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "44
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "45
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "46
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "47
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "48
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "49
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "50
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "51
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "52
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "53
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "54
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "55
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "56
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "57
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "58
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "59
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "60
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "61
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "62
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "63
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "64
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "65
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "66
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "67
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "68
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "69
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "70
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "71
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "72
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "73
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "74
+"S12_TERM_PROVENANCE_MIGRATED: ""Pg"" ""Regular"" position "75
+"S12_AGGREGATE_CACHE_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_s10_laurent/pg_power_minus2"
+"S12_AGGREGATE_STAGE: ""Pg"" epsilon^"-2" parts="76
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" epsilon^"-2" leafCount="1
+"S12_AGGREGATE_CACHE_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_s10_laurent/pg_power_minus1"
+"S12_AGGREGATE_STAGE: ""Pg"" epsilon^"-1" parts="76
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" epsilon^"-1" leafCount="169161
+"S12_AGGREGATE_CACHE_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_s10_laurent/pg_power_0"
+"S12_AGGREGATE_STAGE: ""Pg"" epsilon^"0" parts="76
+"S12_AGGREGATE_CHECKPOINT: ""Pg"" epsilon^"0" leafCount="737224
+"S12_S10_PROJECTOR_COMPLETE: ""Pg"
+"S12_PROJECTOR_MARKER_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_s10_laurent/ppp_complete"
+"S12_S10_STAGE: loading ""PPP"" action only"
+"S12_S10_PARTITION: ""PPP"" alpha2=1 regular="77" topLeafCounts="InputForm[{904, 1852771}]
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Alpha2"" position "1
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "1
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "2
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "3
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "4
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "5
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "6
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "7
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "8
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "9
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "10
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "11
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "12
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "13
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "14
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "15
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "16
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "17
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "18
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "19
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "20
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "21
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "22
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "23
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "24
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "25
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "26
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "27
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "28
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "29
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "30
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "31
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "32
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "33
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "34
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "35
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "36
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "37
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "38
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "39
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "40
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "41
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "42
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "43
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "44
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "45
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "46
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "47
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "48
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "49
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "50
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "51
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "52
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "53
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "54
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "55
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "56
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "57
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "58
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "59
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "60
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "61
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "62
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "63
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "64
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "65
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "66
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "67
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "68
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "69
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "70
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "71
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "72
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "73
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "74
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "75
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "76
+"S12_TERM_PROVENANCE_MIGRATED: ""PPP"" ""Regular"" position "77
+"S12_AGGREGATE_CACHE_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_s10_laurent/ppp_power_minus2"
+"S12_AGGREGATE_STAGE: ""PPP"" epsilon^"-2" parts="78
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" epsilon^"-2" leafCount="1
+"S12_AGGREGATE_CACHE_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_s10_laurent/ppp_power_minus1"
+"S12_AGGREGATE_STAGE: ""PPP"" epsilon^"-1" parts="78
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" epsilon^"-1" leafCount="106070
+"S12_AGGREGATE_CACHE_INVALID: deleting ""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_cache_hqqbar_s10_laurent/ppp_power_0"
+"S12_AGGREGATE_STAGE: ""PPP"" epsilon^"0" parts="78
+"S12_AGGREGATE_CHECKPOINT: ""PPP"" epsilon^"0" leafCount="542842
+"S12_S10_PROJECTOR_COMPLETE: ""PPP"
+"S12_DIAGNOSTIC_CLEANUP: deleting validated obsolete Pg pole residual"
+"S12_STAGE: adding Eq. (46) and checking every pole component"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""Endpoint"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""IntegrandPhiS"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus2"" field=""IntegrandPhi0"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus1"" field=""Endpoint"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus1"" field=""IntegrandPhiS"
+"S12_POLE_REDUCTION_STAGE: ""Pg epsilon^-1 IntegrandPhiS"" leafCount="167690
+"S12_POLE_REDUCTION_RESULT: ""Pg epsilon^-1 IntegrandPhiS"" exact zero"
+"S12_POLE_STAGE: projector=""Pg"" order=""Minus1"" field=""IntegrandPhi0"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus2"" field=""Endpoint"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus2"" field=""IntegrandPhiS"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus2"" field=""IntegrandPhi0"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus1"" field=""Endpoint"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus1"" field=""IntegrandPhiS"
+"S12_POLE_REDUCTION_STAGE: ""PPP epsilon^-1 IntegrandPhiS"" leafCount="106856
+"S12_POLE_REDUCTION_RESULT: ""PPP epsilon^-1 IntegrandPhiS"" exact zero"
+"S12_POLE_STAGE: projector=""PPP"" order=""Minus1"" field=""IntegrandPhi0"
+"S12_STAGE: constructing finite Hqqbar projector actions"
+"S12_STAGE: writing finite factorized Hqqbar result"
+"S12_SUCCESS_FINITE_FACTORIZED_HQQBAR"
+"S12_RESULT_PATH=""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s12_result"
+"S12_RESULT_BYTES="7072450
+"S12_RESULT_SHA256=""30f979da9279ff538fb2974f8639140a941194f8868cbadaf82953decf8f11ba"
+"S12_POLE_RESIDUALS="InputForm[<|"Pg" -> <|"Minus2" -> <|"Endpoint" -> 0, "IntegrandPhiS" -> 0, "IntegrandPhi0" -> 0|>, "Minus1" -> <|"Endpoint" -> 0, "IntegrandPhiS" -> 0, "IntegrandPhi0" -> 0|>|>, "PPP" -> <|"Minus2" -> <|"Endpoint" -> 0, "IntegrandPhiS" -> 0, "IntegrandPhi0" -> 0|>, "Minus1" -> <|"Endpoint" -> 0, "IntegrandPhiS" -> 0, "IntegrandPhi0" -> 0|>|>|>]
+"S12_CHECKS="InputForm[<|"ExactS10ProgramResultAndCachesPinned" -> True, "ExactS11ProgramResultAndPaperPinned" -> True, "AllAcceptedUpstreamChecksTrue" -> True, "FeynCalcLoadedBeforeSerializedArtifacts" -> True, "PhysicalEq29ToEq32MapRebuilt" -> True, "AllMapAndBornDeltaRootResidualsExactZero" -> True, "FourSavedCountertermKeysMapped" -> True, "DirectAndIndependentEq46RebuildsAgree" -> True, "OnlyHgqbarPgqPDFAndHqgPqgFFRoutesUsed" -> True, "OnlyPPPPDFReceivesOneOverYSquared" -> True, "PositiveEq46SignInherited" -> True, "ExactMSBarSEpsilonExpandedBySeries" -> True, "SUNNToCAColorCanonicalizationExact" -> True, "SavedLegacyPoleResidualRegressionPassedWhenPresent" -> True, "NoAdditionalCountertermMuEpsilon" -> True, "S10RealScaleMuPowerNotReapplied" -> True, "S10ActionHasOnlyPhiSField" -> True, "S10PgOneAlpha2Plus75OrdinaryTerms" -> True, "S10PPPOneAlpha2Plus77OrdinaryTerms" -> True, "BoundedSerialPerTermLaurentExtraction" -> True, "AtomicProgramAndExpressionBoundResumeCaches" -> True, "NoWholeLargeActionSeries" -> True, "PgDoublePoleCancels" -> True, "PgSimplePoleCancels" -> True, "PPPDoublePoleCancels" -> True, "PPPSimplePoleCancels" -> True, "FiniteActionsContainNoForbiddenObjectOrMachineNumber" -> True, "FinitePairsAndActionsContainNoSUNN" -> True, "FiniteActionsRetainOrdinaryS23Integral" -> True, "FiniteActionsRetainArbitraryS10Test" -> True, "ChargeStrippedConventionPreserved" -> True, "PhysicalFlavorChargeWeightDeferred" -> True, "IdenticalSpectatorFactorNotReapplied" -> True, "NoLOOrVirtualContributionIntroduced" -> True, "NoHermitianProjectionIntroduced" -> True, "NoAccidentalGlobalFeynCalcSymbols" -> True, "CalculationFullySymbolicAndExact" -> True, "Eq9FHatAndBigTMDDeferred" -> True|>]
+S12_CORRECTED_AUTO_EPOCH_END epoch=1 exit=0

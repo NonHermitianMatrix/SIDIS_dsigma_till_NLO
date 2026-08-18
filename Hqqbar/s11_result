@@ -1,0 +1,291 @@
+<|"Status" -> "Complete", "Stage" -> "HqqbarS11-v1", 
+ "ResultSchemaVersion" -> 1, "Channel" -> "Hqqbar only", 
+ "Contribution" -> 
+  "Eq. (46) Hqqbar initial-state PDF and final-state FF counterterms", 
+ "PerturbativeOrder" -> "O(alpha_s^2)", 
+ "GeneratedAt" -> "2026-08-18T09:13:35", "ProgramPath" -> "/home/physics/proj\
+ects/AI_Assisted_SIDIS/scripts/Hqqbar/s11_calculate_collinear_counterterms_hq\
+qbar.wl", "ProgramSHA256" -> 
+  "2864463cd41d8bbc00247d429244decc061201e877ff60a511664924ce78a3d4", 
+ "PaperReference" -> <|"Path" -> "/home/physics/projects/AI_Assisted_SIDIS/sc\
+ripts/Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering\
+_Beyond_Lowest_Order.pdf", "SHA256" -> 
+    "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+   "Factorization" -> "Eq. (46)", "PartonicPDFAndFF" -> "Eqs. (47)-(50)", 
+   "SplittingFunctions" -> "Eqs. (51)-(53)", "TwoBodyPhaseSpace" -> 
+    "Eqs. (34)-(35)", "SchemeAsNamedByPaper" -> "MS"|>, 
+ "InputProvenance" -> <|"S01SourcePath" -> "/home/physics/projects/AI_Assiste\
+d_SIDIS/scripts/Hqqbar/s01_calculate_hqqbar_real.wl", 
+   "S01SourceSHA256" -> 
+    "750d7c607f57b403d55ba36715a6700015c16fe7b831686204e89758912c4e71", 
+   "S01ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s01_result", 
+   "S01ResultSHA256" -> 
+    "69401e04b6ad1c3023da1a91155b7a90876510e273e4a2183bd11a7bcf9ab3b4", 
+   "S10SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqba\
+r/s10_resolve_endpoints_hqqbar.wl", "S10SourceSHA256" -> 
+    "793f9aaafbda74c605c3885915eabf9323e8b5761c84e9954d0759a5f890ac20", 
+   "S10ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s10_result", 
+   "S10ResultSHA256" -> 
+    "57e637d3eca490dfe08e341d866e5fa08ec1d69b14c7c476cf17c51890a65cb6", 
+   "S10EndpointCachePaths" -> <|"Pg" -> "/home/physics/projects/AI_Assisted_S\
+IDIS/scripts/Hqqbar/s10_cache_hqqbar_pg", "PPP" -> "/home/physics/projects/AI\
+_Assisted_SIDIS/scripts/Hqqbar/s10_cache_hqqbar_ppp"|>, 
+   "S10EndpointCacheSHA256" -> 
+    <|"Pg" -> 
+      "e130cafa2e9b02748f16e9c812d60bfaf29d37d9225eb362045d061d30fc8185", 
+     "PPP" -> 
+      "173e44bc67623274801a8ad9cc2e92183c39456b20d4cb68a21544100f2b225e"|>, 
+   "S10DependencyRole" -> "validated handoff and bookkeeping only; no S10 \
+action enters S11 counterterm construction", "BigTMDChannel5APaths" -> 
+    <|"Pg" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_ch\
+eck/BigTMD_reference/NLO/Pg/fchn5A.py", "PPP" -> "/home/physics/projects/AI_A\
+ssisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5A.py"|>, 
+   "BigTMDChannel5ASHA256" -> 
+    <|"Pg" -> 
+      "9314f660d6ba9e37c203cf010da2f9aee84e993958e5dd3ad7896fb33ac5b48b", 
+     "PPP" -> 
+      "5c275d8ee0e01fa23e47e3ddef6d84150babc71ef01e391d75e3ed9f12f09a5e"|>|>, 
+ "SpeciesRouting" -> <|"ExternalLabels" -> <|"Initial" -> "i0=q", 
+     "Fragmenting" -> "j0=qbar"|>, "PDF" -> {"Hgqbar^(LO) x Pgq"}, 
+   "FF" -> {"Hqg^(LO) x Pqg"}, "AbsentDiagonal" -> 
+    "Hqqbar^(LO)=0, so no Hqqbar x Pqq term exists", 
+   "OneLoopFlavorChangingQuarkKernel" -> 0|>, 
+ "ElectricChargeNormalization" -> 
+  <|"FeynArtsReferenceField" -> "F[3,{1}] up type", "ReferenceCharge" -> 2/3, 
+   "AmplitudeStripFactor" -> 3/2, "IndependentValidationField" -> 
+    "F[4,{1}] down type", "IndependentValidationCharge" -> -1/3, 
+   "IndependentValidationStripFactor" -> -3, 
+   "IndependentChargeStripResidual" -> 0, "PhysicalChargeWeightDeferred" -> 
+    "Sum_q e_q^2 f_q D_qbar"|>, "ChargeStrippingValidation" -> 
+  <|"ReferenceField" -> "F[3,{1}] up type", 
+   "ReferenceAmplitudeStripFactor" -> 3/2, "IndependentField" -> 
+    "F[4,{1}] down type", "IndependentAmplitudeStripFactor" -> -3, 
+   "ProjectedResiduals" -> <|"Hqg" -> <|"Pg" -> 0, "PPP" -> 0|>, 
+     "Hgqbar" -> <|"Pg" -> 0, "PPP" -> 0|>|>, 
+   "PhysicalLuminosityAppliedAtS11" -> False, "PhysicalLuminosityDeferred" -> 
+    "Sum_q e_q^2 f_q D_qbar"|>, "BigTMDConvention" -> 
+  <|"ChannelNumber" -> 5, "ChargeCase" -> "A only", 
+   "ProjectorMapping" -> <|"Pg" -> "NLO.Pg.fchn5A", 
+     "PPP" -> "NLO.Ppp.fchn5A"|>, "UseAtThisStage" -> "hash-pinned convention \
+reference only; no finite comparison is performed"|>, 
+ "BornProjectedSquaredAmplitudes" -> 
+  <|"Hqg" -> <|"Pg" -> -((CF*(-2 + D)*ScaleMu^(2*epsilon)*
+         (-2*Q2^2 + D*Q2^2 + 4*Q2*sHat + 4*sHat^2 - 8*Q2*tHat + 2*D*Q2*tHat + 
+          4*sHat*tHat - 2*tHat^2 + D*tHat^2)*FeynCalc`FCGV["EL"]^2*
+         SMP["g_s"]^2)/(sHat*(Q2 + sHat + tHat))), 
+     "PPP" -> -(CF*(-2 + D)*ScaleMu^(2*epsilon)*tHat*FeynCalc`FCGV["EL"]^2*
+        SMP["g_s"]^2)|>, "Hgqbar" -> 
+    <|"Pg" -> (ScaleMu^(2*epsilon)*(-2*Q2^2 + D*Q2^2 - 8*Q2*sHat + 
+         2*D*Q2*sHat - 2*sHat^2 + D*sHat^2 + 4*Q2*tHat + 4*sHat*tHat + 
+         4*tHat^2)*FeynCalc`FCGV["EL"]^2*SMP["g_s"]^2)/
+       (tHat*(Q2 + sHat + tHat)), "PPP" -> 
+      (4*ScaleMu^(2*epsilon)*sHat*FeynCalc`FCGV["EL"]^2*SMP["g_s"]^2)/
+       (-2 + D)|>|>, "BornGeneration" -> 
+  <|"DiagramCounts" -> <|"Hqg" -> 2, "Hgqbar" -> 2|>, 
+   "InitialAverageDenominators" -> <|"Hqg" -> 2*SUNN, 
+     "Hgqbar" -> (-2 + D)*(-1 + SUNN^2)|>, "AbsoluteScaleFactor" -> 
+    ScaleMu^(2*epsilon), "ScaleReason" -> "one strong vertex at amplitude \
+level, squared; absolute Hqqbar scale convention", 
+   "WardResiduals" -> <|"Hqg" -> <|"qMu_qNu" -> 0, "qMu_pNu" -> 0, 
+       "qMu_k1Nu" -> 0|>, "Hgqbar" -> <|"qMu_qNu" -> 0, "qMu_pNu" -> 0, 
+       "qMu_k1Nu" -> 0|>|>, "WardDiagnostic" -> "q_mu contracted against \
+q_nu, p_nu, and k1_nu after exact two-body kinematics and explicit tree \
+denominators"|>, "FactorizationConvention" -> 
+  <|"Prefactor" -> HoldForm[(alphaS/(4*Pi))*(S11SEpsilon/epsilon) == 
+      SMP["g_s"]^2*(S11SEpsilon/(16*Pi^2*epsilon))], 
+   "Sign" -> "positive because the order-alpha_s partonic PDF and FF terms in \
+Eqs. (49)-(50) are negative and Eq. (46) subtracts them", 
+   "SchemeAsNamedByPaper" -> "MS", "SEpsilonTreatment" -> 
+    "retained symbolically exactly as in Eq. (46)", 
+   "AdditionalMuEpsilonFromPartonicPDForFF" -> 0, 
+   "BornHardPartScaleFactor" -> ScaleMu^(2*epsilon)|>, 
+ "SplittingKernels" -> 
+  <|"PgqPDF" -> HoldForm[Pgq[y] == 2*CF*((1 + (1 - y)^2)/y)], 
+   "PqgFF" -> HoldForm[Pqg[y] == 2*TF*((1 - y)^2 + y^2)], "Pqq" -> 0, 
+   "Pgg" -> 0|>, "ConvolutionMappings" -> <|"EndpointVariable" -> s11S23, 
+   "Interval" -> {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}, 
+   "EndpointUpper" -> Q2*(-1 + xHat^(-1))*(1 - zHat), 
+   "PDFSplittingVariable" -> 1 - (s11S23*xHat)/(Q2*(1 - zHat)), 
+   "FFSplittingVariable" -> 1 - s11S23/(Q2*(-1 + xHat^(-1))), 
+   "PDFInternalKinematics" -> 
+    <|"x" -> xHat/(1 - (s11S23*xHat)/(Q2*(1 - zHat))), "z" -> zHat, 
+     "k1T2" -> (-s11S23 + Q2*(-1 + xHat^(-1))*(1 - zHat))*zHat|>, 
+   "FFInternalKinematics" -> <|"x" -> xHat, 
+     "z" -> zHat/(1 - s11S23/(Q2*(-1 + xHat^(-1)))), 
+     "k1T2" -> ((-s11S23 + Q2*(-1 + xHat^(-1))*(1 - zHat))*zHat)/
+       (1 - s11S23/(Q2*(-1 + xHat^(-1))))^2|>, 
+   "ExternalTransverseMomentumSquared" -> 
+    (-s11S23 + Q2*(-1 + xHat^(-1))*(1 - zHat))*zHat, 
+   "TwoBodyNormalization" -> 1/(8*Pi^3), 
+   "PPPInitialStateExternalProjectorConversion" -> 
+    HoldForm[PDFPPPExternalProjectorFactor == pdfSplittingVariable^(-2)], 
+   "PPPFinalStateAdditionalProjectorConversion" -> 1, 
+   "Checks" -> <|"PDFBornOnShell" -> True, "FFBornOnShell" -> True, 
+     "PDFVariableAtZeroIsOne" -> True, "FFVariableAtZeroIsOne" -> True, 
+     "PDFVariableAtUpperIsX" -> True, "FFVariableAtUpperIsZ" -> True, 
+     "PDFJacobianIsMinusOneOverScale" -> True, 
+     "FFJacobianIsMinusOneOverScale" -> True|>|>, 
+ "CountertermComponents" -> 
+  <|"Pg" -> <|"PDF_Hgqbar_Pgq" -> (S11SEpsilon*SMP["g_s"]^2*
+        Inactive[Integrate][-1/2*(CF*ScaleMu^(2*epsilon)*xHat*
+            (Q2^2 + s11S23^2*xHat^2 - 2*Q2^2*zHat + Q2^2*zHat^2)*
+            (Q2^2 - epsilon*Q2^2 - 2*Q2^2*xHat - 2*Q2*s11S23*xHat + 
+             2*epsilon*Q2*s11S23*xHat + 2*Q2^2*xHat^2 + 2*Q2*s11S23*xHat^2 + 
+             s11S23^2*xHat^2 - epsilon*s11S23^2*xHat^2 - 4*Q2^2*zHat + 
+             2*epsilon*Q2^2*zHat + 4*Q2^2*xHat*zHat + 6*Q2*s11S23*xHat*zHat - 
+             2*epsilon*Q2*s11S23*xHat*zHat - 4*Q2^2*xHat^2*zHat - 
+             2*Q2*s11S23*xHat^2*zHat - 2*s11S23^2*xHat^2*zHat + 
+             7*Q2^2*zHat^2 - epsilon*Q2^2*zHat^2 - 2*Q2^2*xHat*zHat^2 - 
+             8*Q2*s11S23*xHat*zHat^2 + 2*Q2^2*xHat^2*zHat^2 + 
+             2*s11S23^2*xHat^2*zHat^2 - 6*Q2^2*zHat^3 + 4*Q2*s11S23*xHat*
+              zHat^3 + 2*Q2^2*zHat^4)*FeynCalc`FCGV["EL"]^2*
+            S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/
+           (Pi^3*Q2*(-1 + zHat)^2*zHat*(-Q2 + s11S23*xHat + Q2*zHat)^4), 
+         {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2), 
+     "FF_Hqg_Pqg" -> (S11SEpsilon*SMP["g_s"]^2*Inactive[Integrate][
+         -((CF*(-1 + epsilon)*ScaleMu^(2*epsilon)*TF*xHat*
+            (Q2^2 - 2*Q2^2*xHat - 2*Q2*s11S23*xHat + Q2^2*xHat^2 + 
+             2*Q2*s11S23*xHat^2 + 2*s11S23^2*xHat^2)*(-Q2^2 + epsilon*Q2^2 + 
+             2*Q2^2*xHat - 4*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 
+             2*epsilon*Q2*s11S23*xHat - 2*Q2^2*xHat^2 + 6*epsilon*Q2^2*
+              xHat^2 - 2*Q2*s11S23*xHat^2 + 6*epsilon*Q2*s11S23*xHat^2 - 
+             s11S23^2*xHat^2 + epsilon*s11S23^2*xHat^2 + 2*Q2^2*xHat^3 - 
+             4*epsilon*Q2^2*xHat^3 + 2*Q2*s11S23*xHat^3 - 6*epsilon*Q2*s11S23*
+              xHat^3 - 2*epsilon*s11S23^2*xHat^3 - Q2^2*xHat^4 + 
+             epsilon*Q2^2*xHat^4 - 2*Q2*s11S23*xHat^4 + 2*epsilon*Q2*s11S23*
+              xHat^4 - s11S23^2*xHat^4 + epsilon*s11S23^2*xHat^4 - 
+             2*epsilon*Q2^2*zHat + 2*Q2^2*xHat*zHat + 6*epsilon*Q2^2*xHat*
+              zHat + 2*epsilon*Q2*s11S23*xHat*zHat - 4*Q2^2*xHat^2*zHat - 
+             6*epsilon*Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 
+             4*epsilon*Q2*s11S23*xHat^2*zHat + 2*Q2^2*xHat^3*zHat + 
+             2*epsilon*Q2^2*xHat^3*zHat + 2*Q2*s11S23*xHat^3*zHat + 
+             2*epsilon*Q2*s11S23*xHat^3*zHat - Q2^2*zHat^2 + 
+             epsilon*Q2^2*zHat^2 + 2*Q2^2*xHat*zHat^2 - 2*epsilon*Q2^2*xHat*
+              zHat^2 - Q2^2*xHat^2*zHat^2 + epsilon*Q2^2*xHat^2*zHat^2)*
+            FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", s11S23]*
+            SMP["g_s"]^2)/(Pi^3*Q2^3*(-1 + xHat)^4*
+            (-Q2 + Q2*xHat + s11S23*xHat)^2*zHat)), {s11S23, 0, 
+          Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2)|>, 
+   "PPP" -> <|"PDF_Hgqbar_Pgq" -> (S11SEpsilon*SMP["g_s"]^2*
+        Inactive[Integrate][-1/2*(CF*Q2*ScaleMu^(2*epsilon)*
+            (Q2 - Q2*xHat - s11S23*xHat - Q2*zHat + Q2*xHat*zHat)*
+            (Q2^2 + s11S23^2*xHat^2 - 2*Q2^2*zHat + Q2^2*zHat^2)*
+            FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", s11S23]*
+            SMP["g_s"]^2)/((-1 + epsilon)*Pi^3*(-Q2 + s11S23*xHat + Q2*zHat)^
+             4), {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/
+       (16*epsilon*Pi^2), "FF_Hqg_Pqg" -> (S11SEpsilon*SMP["g_s"]^2*
+        Inactive[Integrate][-1/2*(CF*(-1 + epsilon)*ScaleMu^(2*epsilon)*TF*
+            (Q2^2 - 2*Q2^2*xHat - 2*Q2*s11S23*xHat + Q2^2*xHat^2 + 
+             2*Q2*s11S23*xHat^2 + 2*s11S23^2*xHat^2)*(Q2 - Q2*xHat - 
+             s11S23*xHat - Q2*zHat + Q2*xHat*zHat)*FeynCalc`FCGV["EL"]^2*
+            S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/
+           (Pi^3*Q2*(-1 + xHat)^2*(-Q2 + Q2*xHat + s11S23*xHat)^2), 
+         {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2)|>|>, 
+ "Counterterms" -> 
+  <|"PgPDF" -> (S11SEpsilon*SMP["g_s"]^2*Inactive[Integrate][
+       -1/2*(CF*ScaleMu^(2*epsilon)*xHat*(Q2^2 + s11S23^2*xHat^2 - 
+           2*Q2^2*zHat + Q2^2*zHat^2)*(Q2^2 - epsilon*Q2^2 - 2*Q2^2*xHat - 
+           2*Q2*s11S23*xHat + 2*epsilon*Q2*s11S23*xHat + 2*Q2^2*xHat^2 + 
+           2*Q2*s11S23*xHat^2 + s11S23^2*xHat^2 - epsilon*s11S23^2*xHat^2 - 
+           4*Q2^2*zHat + 2*epsilon*Q2^2*zHat + 4*Q2^2*xHat*zHat + 
+           6*Q2*s11S23*xHat*zHat - 2*epsilon*Q2*s11S23*xHat*zHat - 
+           4*Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 2*s11S23^2*xHat^2*
+            zHat + 7*Q2^2*zHat^2 - epsilon*Q2^2*zHat^2 - 2*Q2^2*xHat*zHat^2 - 
+           8*Q2*s11S23*xHat*zHat^2 + 2*Q2^2*xHat^2*zHat^2 + 
+           2*s11S23^2*xHat^2*zHat^2 - 6*Q2^2*zHat^3 + 4*Q2*s11S23*xHat*
+            zHat^3 + 2*Q2^2*zHat^4)*FeynCalc`FCGV["EL"]^2*
+          S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/
+         (Pi^3*Q2*(-1 + zHat)^2*zHat*(-Q2 + s11S23*xHat + Q2*zHat)^4), 
+       {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2), 
+   "PgFF" -> (S11SEpsilon*SMP["g_s"]^2*Inactive[Integrate][
+       -((CF*(-1 + epsilon)*ScaleMu^(2*epsilon)*TF*xHat*(Q2^2 - 2*Q2^2*xHat - 
+           2*Q2*s11S23*xHat + Q2^2*xHat^2 + 2*Q2*s11S23*xHat^2 + 
+           2*s11S23^2*xHat^2)*(-Q2^2 + epsilon*Q2^2 + 2*Q2^2*xHat - 
+           4*epsilon*Q2^2*xHat + 2*Q2*s11S23*xHat - 2*epsilon*Q2*s11S23*
+            xHat - 2*Q2^2*xHat^2 + 6*epsilon*Q2^2*xHat^2 - 
+           2*Q2*s11S23*xHat^2 + 6*epsilon*Q2*s11S23*xHat^2 - 
+           s11S23^2*xHat^2 + epsilon*s11S23^2*xHat^2 + 2*Q2^2*xHat^3 - 
+           4*epsilon*Q2^2*xHat^3 + 2*Q2*s11S23*xHat^3 - 6*epsilon*Q2*s11S23*
+            xHat^3 - 2*epsilon*s11S23^2*xHat^3 - Q2^2*xHat^4 + 
+           epsilon*Q2^2*xHat^4 - 2*Q2*s11S23*xHat^4 + 2*epsilon*Q2*s11S23*
+            xHat^4 - s11S23^2*xHat^4 + epsilon*s11S23^2*xHat^4 - 
+           2*epsilon*Q2^2*zHat + 2*Q2^2*xHat*zHat + 6*epsilon*Q2^2*xHat*
+            zHat + 2*epsilon*Q2*s11S23*xHat*zHat - 4*Q2^2*xHat^2*zHat - 
+           6*epsilon*Q2^2*xHat^2*zHat - 2*Q2*s11S23*xHat^2*zHat - 
+           4*epsilon*Q2*s11S23*xHat^2*zHat + 2*Q2^2*xHat^3*zHat + 
+           2*epsilon*Q2^2*xHat^3*zHat + 2*Q2*s11S23*xHat^3*zHat + 
+           2*epsilon*Q2*s11S23*xHat^3*zHat - Q2^2*zHat^2 + 
+           epsilon*Q2^2*zHat^2 + 2*Q2^2*xHat*zHat^2 - 2*epsilon*Q2^2*xHat*
+            zHat^2 - Q2^2*xHat^2*zHat^2 + epsilon*Q2^2*xHat^2*zHat^2)*
+          FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", s11S23]*
+          SMP["g_s"]^2)/(Pi^3*Q2^3*(-1 + xHat)^4*
+          (-Q2 + Q2*xHat + s11S23*xHat)^2*zHat)), 
+       {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2), 
+   "PPPPDF" -> (S11SEpsilon*SMP["g_s"]^2*Inactive[Integrate][
+       -1/2*(CF*Q2*ScaleMu^(2*epsilon)*(Q2 - Q2*xHat - s11S23*xHat - 
+           Q2*zHat + Q2*xHat*zHat)*(Q2^2 + s11S23^2*xHat^2 - 2*Q2^2*zHat + 
+           Q2^2*zHat^2)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 
+           s11S23]*SMP["g_s"]^2)/((-1 + epsilon)*Pi^3*
+          (-Q2 + s11S23*xHat + Q2*zHat)^4), {s11S23, 0, 
+        Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2), 
+   "PPPFF" -> (S11SEpsilon*SMP["g_s"]^2*Inactive[Integrate][
+       -1/2*(CF*(-1 + epsilon)*ScaleMu^(2*epsilon)*TF*(Q2^2 - 2*Q2^2*xHat - 
+           2*Q2*s11S23*xHat + Q2^2*xHat^2 + 2*Q2*s11S23*xHat^2 + 
+           2*s11S23^2*xHat^2)*(Q2 - Q2*xHat - s11S23*xHat - Q2*zHat + 
+           Q2*xHat*zHat)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 
+           s11S23]*SMP["g_s"]^2)/(Pi^3*Q2*(-1 + xHat)^2*
+          (-Q2 + Q2*xHat + s11S23*xHat)^2), {s11S23, 0, 
+        Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2)|>, 
+ "CountertermCount" -> 4, "TestFunction" -> 
+  HoldForm[S11ConvolutionTest[projector, s11S23]], 
+ "TestFunctionAssumption" -> "arbitrary symbolic function regular on the \
+closed interval and independent of epsilon", "DistributionActionStatus" -> "P\
+gq and Pqg are regular at y=1; each counterterm is one ordinary inactive \
+integral", "Bookkeeping" -> <|"AdditionalMultiplicativeWeightAtS11" -> 1, 
+   "Charge" -> <|"BornHardPartsAreChargeStripped" -> True, 
+     "PhysicalFlavorChargeWeightAppliedAtS11" -> False, 
+     "PhysicalFlavorChargeWeightDeferred" -> "Sum_q e_q^2 f_q D_qbar"|>, 
+   "Scale" -> <|"BornHardPartAbsoluteFactor" -> ScaleMu^(2*epsilon), 
+     "PartonicPDForFFAdditionalMuEpsilon" -> 0, 
+     "S10UnsubtractedRealAbsoluteFactorForLaterCombination" -> 
+      ScaleMu^(4*epsilon)|>, "SymmetryOrFlavorMultiplicityAppliedAtS11" -> 1, 
+   "VirtualContributionAtThisOrder" -> 0, "S10CombinationPerformed" -> 
+    False|>, "Checks" -> <|"AuthoritativePaperHashValidated" -> True, 
+   "AcceptedS01SourceResultAndChecksValidated" -> True, 
+   "AcceptedS10SourceResultBothCachesAndTwentySixChecksValidated" -> True, 
+   "BigTMDChannel5ACurrentHashesValidated" -> True, 
+   "FeynCalcContextLoadedBeforeArtifactDeserialization" -> True, 
+   "ExactlyTwoReferenceAndTwoValidationBornChannelsGenerated" -> True, 
+   "EveryDirectBornChannelHasExactlyTwoDiagrams" -> True, 
+   "ReferenceAndValidationBornWardIdentitiesPass" -> True, 
+   "IndependentUpDownChargeStrippingAgrees" -> True, 
+   "CorrectInitialStateAveragesApplied" -> True, 
+   "AbsoluteBornScaleMuPowerTwoEpsilonAppliedExactlyOnce" -> True, 
+   "AllConvolutionMappingsValidated" -> True, 
+   "CorrectedPPPPDFRescalingAppliedOnlyThere" -> True, 
+   "PaperTwoBodyNormalizationApplied" -> True, "ExactlyFourCounterterms" -> 
+    True, "ExactlyOnePDFAndOneFFComponentPerProjector" -> True, 
+   "PDFContainsOnlyHgqbarTimesPgq" -> True, "FFContainsOnlyHqgTimesPqg" -> 
+    True, "NoHqqbarBornDiagonalPqqOrPggContribution" -> True, 
+   "RegularSplittingKernelsActedWithoutDistributionPlaceholders" -> True, 
+   "ExactlyOneOrdinaryInactiveIntegralPerCounterterm" -> True, 
+   "ArbitrarySymbolicTestsRetained" -> True, 
+   "PaperMSSchemeSEpsilonKeptSymbolic" -> True, 
+   "NoAdditionalMuEpsilonInPartonicPDForFF" -> True, 
+   "CountertermsRetainExactlyOneBornScaleMuPower" -> True, 
+   "PhysicalFlavorChargeLuminosityStillDeferred" -> True, 
+   "NoFlavorMultiplicitySymmetryOrVirtualWeightIntroduced" -> True, 
+   "CalculationRemainsExactAndSymbolic" -> True, 
+   "S10ActionsNotLoadedOrCombinedIntoCounterterms" -> True, 
+   "PoleCancellationFiniteLimitFHatAndBigTMDComparisonDeferred" -> True, 
+   "AtomicSourceBoundResultProtocolConfigured" -> True|>, 
+ "NotPerformedAtThisStage" -> 
+  {"addition to the accepted S10 real convolution actions", 
+   "physical-variable/test-function alignment with S10", 
+   "cancellation of the remaining collinear epsilon poles", 
+   "epsilon -> 0 finite Hqqbar hard parts", 
+   "paper Eq. (9) Pg/PPP inversion or F-hat extraction", 
+   "finite BigTMD channel-5A comparison", 
+   "numerical PDFs, fragmentation functions, test functions, or kinematics"}|>

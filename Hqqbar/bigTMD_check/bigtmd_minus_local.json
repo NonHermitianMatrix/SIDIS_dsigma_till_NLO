@@ -1,0 +1,280 @@
+{
+  "Benchmarks": [
+    {
+      "ID": "interior_1",
+      "Jacobian": 0.025037898728832247,
+      "Nf": 4.0,
+      "PHT2": 0.42439,
+      "Q": 4.123105625617661,
+      "Q2": 17.0,
+      "S23Fraction": 0.4,
+      "S23Sample": 6.619113043478261,
+      "S23UpperB": 16.547782608695652,
+      "qT2": 3.1,
+      "s": 28.08695652173913,
+      "t": -7.431800418235048,
+      "xB": 0.23,
+      "xHat": 0.3770491803278688,
+      "xi": 0.61,
+      "zH": 0.37,
+      "zHat": 0.6883596821413634,
+      "zeta": 0.5375096909351175
+    },
+    {
+      "ID": "interior_2",
+      "Jacobian": 0.010219643127070377,
+      "Nf": 4.0,
+      "PHT2": 0.45387,
+      "Q": 4.795831523312719,
+      "Q2": 23.0,
+      "S23Fraction": 0.35,
+      "S23Sample": 13.111128947368421,
+      "S23UpperB": 37.460368421052635,
+      "qT2": 2.7,
+      "s": 65.36842105263158,
+      "t": -7.41534248434238,
+      "xB": 0.19,
+      "xHat": 0.2602739726027397,
+      "xi": 0.73,
+      "zH": 0.41,
+      "zHat": 0.7677171189979123,
+      "zeta": 0.5340508761028617
+    },
+    {
+      "ID": "interior_3",
+      "Jacobian": 0.017725818802178977,
+      "Nf": 4.0,
+      "PHT2": 0.15979,
+      "Q": 5.385164807134504,
+      "Q2": 29.0,
+      "S23Fraction": 0.55,
+      "S23Sample": 17.231659677419355,
+      "S23UpperB": 31.330290322580645,
+      "qT2": 1.9,
+      "s": 44.903225806451616,
+      "t": -12.97761203046385,
+      "xB": 0.31,
+      "xHat": 0.3924050632911392,
+      "xi": 0.79,
+      "zH": 0.29,
+      "zHat": 0.591232028396168,
+      "zeta": 0.490501167175739
+    }
+  ],
+  "BigTMDSource": {
+    "Channel": 5,
+    "ChargeCases": [
+      "A"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "Driver": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/sidis.py",
+    "DriverSHA256": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+    "ModulePaths": {
+      "PPP5A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5A.py",
+      "PPP5B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5B.py",
+      "PPP5C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5C.py",
+      "Pg5A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Pg/fchn5A.py",
+      "Pg5B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Pg/fchn5B.py",
+      "Pg5C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Pg/fchn5C.py"
+    },
+    "ModuleSHA256": {
+      "PPP5A": "5c275d8ee0e01fa23e47e3ddef6d84150babc71ef01e391d75e3ed9f12f09a5e",
+      "PPP5B": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "PPP5C": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "Pg5A": "9314f660d6ba9e37c203cf010da2f9aee84e993958e5dd3ad7896fb33ac5b48b",
+      "Pg5B": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "Pg5C": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b"
+    },
+    "Process": "gamma* q -> (qbar->h) q q",
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD",
+    "ZeroModulesValidated": [
+      "Pg5B",
+      "PPP5B",
+      "Pg5C",
+      "PPP5C"
+    ]
+  },
+  "ComparisonLevel": "finite charge-stripped Hqqbar coefficient including zeta-to-s23 Jacobian, before physical luminosity, outer xi convolution, and remaining test-function weight",
+  "DifferenceDirection": "BigTMD minus local",
+  "DifferencesByBenchmark": {
+    "interior_1": {
+      "F1Hat": {
+        "AbsoluteDifference": 1.7747856338187397e-06,
+        "BigTMD": -2.4882086045286854e-06,
+        "BigTMDDividedByLocal": 3.4877046390202504,
+        "BigTMDMinusLocal": -1.7747856338187397e-06,
+        "Local": -7.134229707099456e-07,
+        "NumericallyClose": false,
+        "RelativeDifference": 0.7132784729497864,
+        "ToleranceAtPoint": 1.0024882086045287e-10
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 1.3401105193293396e-06,
+        "BigTMD": -3.2449859577711465e-06,
+        "BigTMDDividedByLocal": 1.7035160894433883,
+        "BigTMDMinusLocal": -1.3401105193293396e-06,
+        "Local": -1.904875438441807e-06,
+        "NumericallyClose": false,
+        "RelativeDifference": 0.412978834660292,
+        "ToleranceAtPoint": 1.0032449859577712e-10
+      }
+    },
+    "interior_2": {
+      "F1Hat": {
+        "AbsoluteDifference": 9.165117170274809e-07,
+        "BigTMD": -1.5371355323501941e-06,
+        "BigTMDDividedByLocal": 2.4767588584252302,
+        "BigTMDMinusLocal": -9.165117170274809e-07,
+        "Local": -6.206238153227132e-07,
+        "NumericallyClose": false,
+        "RelativeDifference": 0.5962465233148218,
+        "ToleranceAtPoint": 1.0015371355323502e-10
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 7.673348476872736e-07,
+        "BigTMD": -1.828375427995035e-06,
+        "BigTMDDividedByLocal": 1.7231908580392874,
+        "BigTMDMinusLocal": -7.673348476872736e-07,
+        "Local": -1.0610405803077615e-06,
+        "NumericallyClose": false,
+        "RelativeDifference": 0.4196812295430593,
+        "ToleranceAtPoint": 1.0018283754279951e-10
+      }
+    },
+    "interior_3": {
+      "F1Hat": {
+        "AbsoluteDifference": 8.605218913361558e-07,
+        "BigTMD": -1.4957275475789995e-06,
+        "BigTMDDividedByLocal": 2.354713836186578,
+        "BigTMDMinusLocal": -8.605218913361558e-07,
+        "Local": -6.352056562428438e-07,
+        "NumericallyClose": false,
+        "RelativeDifference": 0.5753199456204479,
+        "ToleranceAtPoint": 1.0014957275475791e-10
+      },
+      "F2Hat": {
+        "AbsoluteDifference": 2.8023854222756443e-08,
+        "BigTMD": -5.553311875080605e-07,
+        "BigTMDDividedByLocal": 0.9519608947929729,
+        "BigTMDMinusLocal": 2.8023854222756443e-08,
+        "Local": -5.833550417308169e-07,
+        "NumericallyClose": false,
+        "RelativeDifference": 0.04803910520702718,
+        "ToleranceAtPoint": 1.0005833550417309e-10
+      }
+    }
+  },
+  "LocalSource": {
+    "ByteCount": 14891953,
+    "Channel": "Hqqbar only",
+    "Path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s13_result",
+    "ProgramPath": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s13_extract_fhat_hqqbar.wl",
+    "ProgramSHA256": "760cad942ee628c0e3de3b76362cbbb103bf6c8d9c920983b84f717b5adf1f13",
+    "SHA256": "4224b46a064087ed3b20e36a049dd1929019f66583263fcb2c28c9b69614c64f",
+    "StageVersion": "HqqbarS13-v1",
+    "Status": "CompleteFinitePartonicStructureFunctionsHqqbar"
+  },
+  "Rows": [
+    {
+      "AbsoluteDifference": 1.7747856338187397e-06,
+      "Benchmark": "interior_1",
+      "BigTMD": -2.4882086045286854e-06,
+      "BigTMDDividedByLocal": 3.4877046390202504,
+      "BigTMDMinusLocal": -1.7747856338187397e-06,
+      "Field": "IntegrandPhiS",
+      "Function": "F1Hat",
+      "Local": -7.134229707099456e-07,
+      "NumericallyClose": false,
+      "RelativeDifference": 0.7132784729497864,
+      "ToleranceAtPoint": 1.0024882086045287e-10
+    },
+    {
+      "AbsoluteDifference": 1.3401105193293396e-06,
+      "Benchmark": "interior_1",
+      "BigTMD": -3.2449859577711465e-06,
+      "BigTMDDividedByLocal": 1.7035160894433883,
+      "BigTMDMinusLocal": -1.3401105193293396e-06,
+      "Field": "IntegrandPhiS",
+      "Function": "F2Hat",
+      "Local": -1.904875438441807e-06,
+      "NumericallyClose": false,
+      "RelativeDifference": 0.412978834660292,
+      "ToleranceAtPoint": 1.0032449859577712e-10
+    },
+    {
+      "AbsoluteDifference": 9.165117170274809e-07,
+      "Benchmark": "interior_2",
+      "BigTMD": -1.5371355323501941e-06,
+      "BigTMDDividedByLocal": 2.4767588584252302,
+      "BigTMDMinusLocal": -9.165117170274809e-07,
+      "Field": "IntegrandPhiS",
+      "Function": "F1Hat",
+      "Local": -6.206238153227132e-07,
+      "NumericallyClose": false,
+      "RelativeDifference": 0.5962465233148218,
+      "ToleranceAtPoint": 1.0015371355323502e-10
+    },
+    {
+      "AbsoluteDifference": 7.673348476872736e-07,
+      "Benchmark": "interior_2",
+      "BigTMD": -1.828375427995035e-06,
+      "BigTMDDividedByLocal": 1.7231908580392874,
+      "BigTMDMinusLocal": -7.673348476872736e-07,
+      "Field": "IntegrandPhiS",
+      "Function": "F2Hat",
+      "Local": -1.0610405803077615e-06,
+      "NumericallyClose": false,
+      "RelativeDifference": 0.4196812295430593,
+      "ToleranceAtPoint": 1.0018283754279951e-10
+    },
+    {
+      "AbsoluteDifference": 8.605218913361558e-07,
+      "Benchmark": "interior_3",
+      "BigTMD": -1.4957275475789995e-06,
+      "BigTMDDividedByLocal": 2.354713836186578,
+      "BigTMDMinusLocal": -8.605218913361558e-07,
+      "Field": "IntegrandPhiS",
+      "Function": "F1Hat",
+      "Local": -6.352056562428438e-07,
+      "NumericallyClose": false,
+      "RelativeDifference": 0.5753199456204479,
+      "ToleranceAtPoint": 1.0014957275475791e-10
+    },
+    {
+      "AbsoluteDifference": 2.8023854222756443e-08,
+      "Benchmark": "interior_3",
+      "BigTMD": -5.553311875080605e-07,
+      "BigTMDDividedByLocal": 0.9519608947929729,
+      "BigTMDMinusLocal": 2.8023854222756443e-08,
+      "Field": "IntegrandPhiS",
+      "Function": "F2Hat",
+      "Local": -5.833550417308169e-07,
+      "NumericallyClose": false,
+      "RelativeDifference": 0.04803910520702718,
+      "ToleranceAtPoint": 1.0005833550417309e-10
+    }
+  ],
+  "StageVersion": "HqqbarBigTMDCheckS02-v1",
+  "Status": "CompleteHqqbarBigTMDMinusLocalComparison",
+  "StructuralChecks": {
+    "BCasesExactZero": true,
+    "BigTMDEndpointAndPhi0ZeroUnderDriverSelection": true,
+    "EndpointAndPhi0Agreement": true,
+    "LocalEndpointAndPhi0ExactZero": true,
+    "OnlyChannel5ARegularSelected": true
+  },
+  "Summary": {
+    "AbsoluteTolerance": 1e-10,
+    "AllRegularCoefficientsWithinTolerance": false,
+    "AllTestedCoefficientsWithinTolerance": false,
+    "MaximumAbsoluteDifference": 1.7747856338187397e-06,
+    "MaximumRelativeDifference": 0.7132784729497864,
+    "NontrivialComparisonCount": 6,
+    "RelativeTolerance": 1e-07,
+    "ToleranceRule": "abs(diff) <= 1e-10 + 1e-7*max(abs(BigTMD),abs(local))"
+  }
+}

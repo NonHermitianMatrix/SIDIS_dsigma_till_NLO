@@ -1,0 +1,41 @@
+{
+  "alpha_s": 0.118,
+  "azimuth_angles_radians": [
+    0.0,
+    1.5707963267948966,
+    3.141592653589793,
+    4.71238898038469
+  ],
+  "checks": {
+    "all_rotated_external_states_massless": true,
+    "all_rotated_points_conserve_four_momentum": true,
+    "four_angle_average_matches_projected_local_s07": true,
+    "hadronic_system_in_rest_frame": true,
+    "input_hashes_exact": true,
+    "photon_four_momentum_fixed": true,
+    "photon_virtuality_fixed": true,
+    "zero_angle_reproduces_accepted_madgraph_point": true
+  },
+  "copied_s07_projected_local_matrix_element": 2.582516889801539e-10,
+  "interpretation": "The four-angle quadrature removes rank-two lepton-hadron azimuthal harmonics while holding q, p, and all hadronic invariants fixed.",
+  "madgraph_azimuthal_average": 2.5825168898015454e-10,
+  "madgraph_matrix_elements": [
+    2.712922727058827e-10,
+    2.1223495001050799e-10,
+    3.372445831937197e-10,
+    2.1223495001050768e-10
+  ],
+  "maximum_conservation_residual": 1.1368683772161603e-13,
+  "maximum_external_mass_squared": 1.1641532182693481e-10,
+  "maximum_photon_momentum_shift": 5.684341886080802e-14,
+  "maximum_q2_shift": 5.820766091346741e-11,
+  "relative_difference": 2.40225131484985e-15,
+  "sha256": {
+    "param_card.dat": "55bb009a781370ab3fdfb523be00d0c8f68ffec442d12eb41b8d2da50307cf64",
+    "s03_libhqqbar_madgraph_bridge.so": "0d1e52d791fb03a9a1776a1a188a9ad683b66daf202ad209a3ffdb0b8fa66a08",
+    "s07_projected_local_point.json": "8f8e8319301efb68cadf8226907ed4cce71df51660e5abe9e27e47142d754ca5"
+  },
+  "stage": "HqqbarMadGraphAzimuthalAverageValidation-v1",
+  "status": "complete",
+  "zero_angle_reference_relative_difference": 3.2396035171647343e-15
+}

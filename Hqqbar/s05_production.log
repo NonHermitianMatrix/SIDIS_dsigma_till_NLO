@@ -1,0 +1,29 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["Loading FeynArts from /home/physics/.WolframEngine/Applications/FeynCalc/FeynArts", "Text"]
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+Style["FeynArts ", "Text", Bold]Style["3.11 (25 Mar 2022) patched for use with FeynCalc, for documentation see the ", "Text"]Style[DisplayForm[ButtonBox["manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[First[FileNames[{"*.pdf", "*.PDF"}, FileNameJoin[{$FeynArtsDirectory, "manual"}]]]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" or visit ", "Text"]Style[DisplayForm[ButtonBox["www.feynarts.de.", ButtonData :> {URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "www.feynarts.de/"]], "Text"]
+Style["If you use FeynArts in your research, please cite", "Text"]
+Style[" • T. Hahn, Comput. Phys. Commun., 140, 418-431, 2001, arXiv:hep-ph/0012260", "Text"]
+"S05_STAGE: loading and validating Hqqbar S01/S04 inputs"
+
+FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+"S05_STAGE: restoring external states for NLO real Hqqbar;q_q"
+"S05_STAGE: opening the incoming-photon Lorentz index"
+"S05_STAGE: constructing the conjugate open-index amplitude"
+"S05_STAGE: forming the coherent 64-pair real bilinear"
+"S05_STAGE: atomically writing the Hqqbar real bilinear result"
+"S05_SUCCESS"
+"S05_PROGRAM_SHA256=af499834c79fd69e69f33306a2e049a32f3d2ed88a50afcc65d5d37b0b9fd29e"
+"S05_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s05_result"
+"S05_RESULT_SHA256=b72245cd5200ab0e649588ca77607feb21c152be2e20faead5ef74bc992a5f17"
+"S05_REAL_DIAGRAM_COUNT="8
+"S05_COHERENT_ORDERED_DIAGRAM_PAIRS="64
+"S05_CHECK_COUNT="27
+"S05_OPEN_AMPLITUDE_LEAF_COUNT="744
+"S05_SCALE_ATTACHED_TENSOR_LEAF_COUNT="1566
+"S05_RESULT_BYTES="62218

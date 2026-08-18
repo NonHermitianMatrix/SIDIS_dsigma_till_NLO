@@ -1,0 +1,2 @@
+gfortran -w -fPIC  -ffixed-line-length-132  -c -o check_sa.o check_sa.f
+gfortran -w -fPIC  -ffixed-line-length-132 -o check matrix.o check_sa.o -L/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/madgraph_check/generated_process/lib -ldhelas -lmodel

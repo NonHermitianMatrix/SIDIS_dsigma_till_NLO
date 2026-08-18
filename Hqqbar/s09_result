@@ -1,0 +1,212 @@
+<|"Status" -> "Complete", "Stage" -> "HqqbarS09-v1", 
+ "ResultSchemaVersion" -> 1, "Channel" -> "Hqqbar only", 
+ "Contribution" -> "H_{q qbar; q q} Appendix-F-expanded real Pg/PPP kernels \
+with formal endpoint handoff", "PerturbativeOrder" -> "O(alpha_s^2)", 
+ "GeneratedAt" -> "2026-08-17T23:54:48", "ProgramPath" -> "/home/physics/proj\
+ects/AI_Assisted_SIDIS/scripts/Hqqbar/s09_expand_endpoints_hqqbar.wl", 
+ "ProgramSHA256" -> 
+  "71c4f10cc35cf767f5ae01a895e78d1beee751100f71b83524cd95e796561280", 
+ "PaperReference" -> <|"Path" -> "/home/physics/projects/AI_Assisted_SIDIS/sc\
+ripts/Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering\
+_Beyond_Lowest_Order.pdf", "SHA256" -> 
+    "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+   "Equations" -> 
+    "Appendix B Eqs. (B18),(B19),(B21)-(B31); Appendix F Eqs. (F1)-(F29)"|>, 
+ "InputProvenance" -> <|"S07SourcePath" -> "/home/physics/projects/AI_Assiste\
+d_SIDIS/scripts/Hqqbar/s07_contract_hqqbar_projectors.wl", 
+   "S07SourceSHA256" -> 
+    "4631639ae9e06a266e507d8854ee0cadf55d9106faff5ab13fe616f33fb50db4", 
+   "S07ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s07_result", 
+   "S07ResultSHA256" -> 
+    "a0bcb6faac5ee4d2e8e5ffdff33bad91f2333424f486e101c9c62d1a49318f50", 
+   "S08SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqba\
+r/s08_phase_space_integrate_hqqbar.wl", "S08SourceSHA256" -> 
+    "2947bef60f303969ba451fc69cf1af76b0550a4f0d18bc2632d43568bf95bda6", 
+   "S08ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s08_result", 
+   "S08ResultSHA256" -> 
+    "163eea0d42febe7642abb106599aa7d8c594eed2e6888a62cc1dde7985ec0dec", 
+   "S08CachePaths" -> <|"Pg" -> "/home/physics/projects/AI_Assisted_SIDIS/scr\
+ipts/Hqqbar/s08_cache_hqqbar_pg", "PPP" -> "/home/physics/projects/AI_Assiste\
+d_SIDIS/scripts/Hqqbar/s08_cache_hqqbar_ppp"|>, 
+   "S08CacheSHA256" -> 
+    <|"Pg" -> 
+      "a762eb92f48397e9150c1c1aed22278979c4104642eede680f9eea7e32a8baec", 
+     "PPP" -> 
+      "57e7ae86126b054513258fdd8a125f8736151b7526fc6cf6e9bfad193947e03b"|>, 
+   "InputKey" -> 
+    "ThreeBodyAngularIntegrated/Hqqbar;q_q/{Pg,PPP}; physical post-1/2!"|>, 
+ "AppendixFExpansion" -> <|"ExactPairsByProjector" -> 
+    <|"Pg" -> {{-1, 0}, {-1, 1}, {-1, 2}, {0, -1}, {0, 1}, {0, 2}, {1, -2}, 
+       {1, -1}, {1, 0}, {1, 1}, {1, 2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}}, 
+     "PPP" -> {{-2, 0}, {-2, 1}, {-1, -1}, {-1, 0}, {-1, 1}, {0, -2}, 
+       {0, -1}, {0, 1}, {0, 2}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, {1, 1}, 
+       {1, 2}, {2, -2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}}|>, 
+   "ExactAllPairs" -> {{-2, 0}, {-2, 1}, {-1, -1}, {-1, 0}, {-1, 1}, {-1, 2}, 
+     {0, -2}, {0, -1}, {0, 1}, {0, 2}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, 
+     {1, 1}, {1, 2}, {2, -2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}}, 
+   "MasterOccurrencesByProjector" -> <|"Pg" -> 68, "PPP" -> 73|>, 
+   "DistinctMasterInstanceCount" -> 59, "ExpansionOrders" -> 
+    <|"NonzeroJExceptF28F29" -> "through epsilon^1", 
+     "F28F29" -> "through epsilon^0", "B18ZeroJ" -> "through epsilon^2", 
+     "B27" -> "through epsilon^2"|>, "ResidualB27SignaturesByProjector" -> 
+    <|"Pg" -> {HoldComplete[1, 1, 1 - epsilon]}, 
+     "PPP" -> {HoldComplete[1, 1, 1 - epsilon]}|>, 
+   "ResidualB27OccurrenceCountsByProjector" -> <|"Pg" -> 3, "PPP" -> 3|>, 
+   "B18BetaSignatures" -> {HoldComplete[2 - epsilon, -epsilon], 
+     HoldComplete[3 - epsilon, -epsilon], HoldComplete[-epsilon, 
+      2 - epsilon], HoldComplete[-epsilon, -epsilon]}, 
+   "B18GammaObjectsBeforeExpansion" -> {Gamma[1 - 2*epsilon], 
+     Gamma[1 - epsilon]}, "IndividualGammaSeriesRatioRegressionResiduals" -> 
+    <|"GammaOneMinusTwoEpsilonOverGammaOneMinusEpsilonSquared" -> 0, 
+     "GammaOneMinusEpsilonOverGammaOneMinusTwoEpsilon" -> 0|>, 
+   "RecurrenceDefinition" -> HoldComplete[
+     D[S09B19Integral[j, l, d, c, epsilon], d] == 
+      (-j)*S09B19Integral[j + 1, l, d, c, epsilon]], 
+   "RecurrenceResiduals" -> <|"F16_to_F17_l0" -> 0, "F22_to_F23_l1" -> 0, 
+     "F15_to_B18_lMinus1" -> 0, "F17_to_B18_l0" -> 0, "F23_to_B18_l1" -> 0, 
+     "F27_to_B18_l2" -> 0, "F12_to_F13_lMinus2" -> 0, 
+     "F20_to_F21_lMinus1" -> 0, "F18_to_F19_l0" -> 0, "F24_to_F25_l1" -> 0, 
+     "F28_to_F29_l2" -> 0|>, "AllRecurrenceResidualsExactZero" -> True, 
+   "F8B19MomentResiduals" -> <|"F8LeadingFromB19Moments" -> 0, 
+     "F8EpsilonFromB19Moments" -> 0|>, "AllF8B19MomentResidualsExactZero" -> 
+    True, "NoPowerExpandOrNumericalBranchSelection" -> True, 
+   "ProjectorSummaries" -> <|"Pg" -> <|"Projector" -> "Pg", 
+       "MasterPairs" -> {{-1, 0}, {-1, 1}, {-1, 2}, {0, -1}, {0, 1}, {0, 2}, 
+         {1, -2}, {1, -1}, {1, 0}, {1, 1}, {1, 2}, {2, -1}, {2, 0}, {2, 1}, 
+         {2, 2}}, "MasterOccurrenceCount" -> 68, "ExpandedLeafCount" -> 
+        2450525, "ExpandedByteCount" -> 69980312, "CacheResumed" -> False, 
+       "CurrentExpandedExpressionValidated" -> True, 
+       "CurrentCacheReloadValidated" -> True|>, 
+     "PPP" -> <|"Projector" -> "PPP", "MasterPairs" -> 
+        {{-2, 0}, {-2, 1}, {-1, -1}, {-1, 0}, {-1, 1}, {0, -2}, {0, -1}, 
+         {0, 1}, {0, 2}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, {1, 1}, {1, 2}, 
+         {2, -2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}}, 
+       "MasterOccurrenceCount" -> 73, "ExpandedLeafCount" -> 1855694, 
+       "ExpandedByteCount" -> 52825896, "CacheResumed" -> False, 
+       "CurrentExpandedExpressionValidated" -> True, 
+       "CurrentCacheReloadValidated" -> True|>|>|>, 
+ "ExpandedKernelCaches" -> <|"StageVersion" -> "HqqbarS09Cache-v1", 
+   "Paths" -> <|"Pg" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq\
+bar/s09_cache_hqqbar_pg", "PPP" -> "/home/physics/projects/AI_Assisted_SIDIS/\
+scripts/Hqqbar/s09_cache_hqqbar_ppp"|>, 
+   "SHA256" -> 
+    <|"Pg" -> 
+      "1f34249af61f94bd91d81cb0315f51480fc9256e03c7558c441e9f7a7f8415b7", 
+     "PPP" -> 
+      "0e208d193319eb6f34b18825fd2805b18a2bf9cddbdeb54e95e27486a7552324"|>, 
+   "ExpressionField" -> "Expression", "ProgramSHA256" -> 
+    "71c4f10cc35cf767f5ae01a895e78d1beee751100f71b83524cd95e796561280", 
+   "PaperSHA256" -> 
+    "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+   "S08ResultSHA256" -> 
+    "163eea0d42febe7642abb106599aa7d8c594eed2e6888a62cc1dde7985ec0dec", 
+   "AtomicSourceBoundAndDiskHashValidated" -> True|>, 
+ "Bookkeeping" -> <|"AdditionalMultiplicativeWeightAtS09" -> 1, 
+   "Scale" -> <|"AbsoluteFactor" -> ScaleMu^(4*epsilon), 
+     "PowerPreservedExactlyOnceInEveryProjection" -> True, 
+     "SeparateMSBarSEpsilonApplied" -> False|>, 
+   "Charge" -> <|"TensorIsChargeStripped" -> True, "PhysicalChargeWeight" -> 
+      "Sum_q e_q^2 f_q D_qbar", "PhysicalChargeWeightAppliedAtS06" -> False, 
+     "BigTMDChannel" -> 5, "BigTMDChargeCase" -> "A only"|>, 
+   "Symmetry" -> <|"Upstream" -> <|"IdenticalUnobservedQuarks" -> 
+        {"q(k2)", "q(k3)"}, "IdenticalSpectatorFactorAppliedAtS06" -> False, 
+       "IdenticalSpectatorFactorDeferred" -> HoldForm[1/2!], 
+       "Destination" -> 
+        "fully integrated three-body spectator phase space"|>, 
+     "IdenticalUnobservedQuarks" -> {"q(k2)", "q(k3)"}, 
+     "LabelledIntegrandSpectatorExchangeSymmetric" -> True, 
+     "IdenticalSpectatorFactor" -> 1/2, 
+     "IdenticalSpectatorFactorAppliedAtS08" -> True, 
+     "ApplicationCountThroughS08" -> 1, 
+     "PhysicalExpressionEqualsPreSymmetryOverTwo" -> True, 
+     "DownstreamReapplicationForbidden" -> True|>, 
+   "VirtualContributionAtThisOrder" -> <|"Applicable" -> False, 
+     "Interference" -> 0, "SourceDisposition" -> 
+      "NotApplicableAtThisOrder"|>, 
+   "PhysicalFlavorChargeWeightAppliedAtS09" -> False, 
+   "SeparateMSBarSEpsilonAppliedAtS09" -> False, 
+   "IdenticalSpectatorFactorReappliedAtS09" -> False|>, 
+ "EndpointExpansion" -> <|"Status" -> "Formal bounded distribution only; \
+endpoint values and stronger singularities unresolved", 
+   "Interval" -> {s23, 0, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH}, 
+   "UpperLimit" -> Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH, 
+   "ExpansionThrough" -> "epsilon^2 with O(epsilon^3) remainder", 
+   "RegularFunctionDefinition" -> HoldComplete[
+     S09RegularEndpointFunction[projector, s23] == s23^(1 + epsilon)*
+       S09ExpandedKernelReference[projector, s23]], 
+   "ExpandedKernelReferenceMeaning" -> "For each projector, the exact \
+Expression field of its hash-pinned S09 cache", "PlusDistributionAction" -> 
+    HoldComplete[Inactive[Integrate][S09PlusDistribution[n, s23, upper]*
+        testFunction[s23], {s23, 0, upper}] == Inactive[Integrate][
+       (Log[s23/upper]^n/s23)*(testFunction[s23] - testFunction[0]), 
+       {s23, 0, upper}]], "FormalDistributionByProjector" -> 
+    <|"Pg" -> -((DiracDelta[s23]*S09EndpointValue["Pg", s23 -> 0])/
+         (epsilon*(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^epsilon)) + 
+       ((S09PlusDistribution[0, s23, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH] - 
+          epsilon*S09PlusDistribution[1, s23, Q2*(-1 + xi/xB)*(1 - zH) - 
+             PHT2/zH] + (epsilon^2*S09PlusDistribution[2, s23, 
+             Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH])/2)*
+         S09RegularEndpointFunction["Pg", s23])/
+        (Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^epsilon, 
+     "PPP" -> -((DiracDelta[s23]*S09EndpointValue["PPP", s23 -> 0])/
+         (epsilon*(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^epsilon)) + 
+       ((S09PlusDistribution[0, s23, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH] - 
+          epsilon*S09PlusDistribution[1, s23, Q2*(-1 + xi/xB)*(1 - zH) - 
+             PHT2/zH] + (epsilon^2*S09PlusDistribution[2, s23, 
+             Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH])/2)*
+         S09RegularEndpointFunction["PPP", s23])/
+        (Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^epsilon|>, 
+   "QuadraticTestFunctionResidualThroughEpsilonSquared" -> 0, 
+   "EndpointValuesResolved" -> False, "StrongerSingularitiesResolved" -> 
+    False, "DownstreamResolutionRequired" -> True|>, 
+ "Checks" -> <|"AuthoritativePaperHashValidated" -> True, 
+   "AcceptedS07SourceAndResultHashesValidated" -> True, 
+   "AcceptedS08SourceResultAndBothCacheHashesValidated" -> True, 
+   "AllThirtySixS08ChecksValidated" -> True, 
+   "S08CachePayloadsExactlyMatchPhysicalPostHalfInputs" -> True, 
+   "OrderedPgPPPInputOnly" -> True, 
+   "ExactTwentyOneMasterClassInventoryValidated" -> True, 
+   "ExactSixtyEightAndSeventyThreeOccurrencesValidated" -> True, 
+   "ExactFiftyNineDistinctMasterInstancesValidated" -> True, 
+   "AllPhysicalAppendixFFormulasImplemented" -> True, 
+   "ElevenExactB19DerivativeRecurrencesPassed" -> True, 
+   "F8ExactB19MomentReductionPassed" -> True, 
+   "B18ZeroJExpandedThroughEpsilonSquared" -> True, 
+   "OnlyB27ResidualHypergeometricSignatureAndThreePerProjectorPresent" -> 
+    True, "B27ExpandedThroughEpsilonSquared" -> True, 
+   "IndividualGammaSeriesReconstructBothRatiosThroughEpsilonSquared" -> True, 
+   "AllBetaGammaAndCase2MasterHeadsRemoved" -> True, 
+   "AppendixFSubstitutionCommutesWithExactXiS23Map" -> True, 
+   "B18B27SubstitutionCommutesWithExactXiS23Map" -> True, 
+   "BothExpandedProjectorsCompletedSerially" -> True, 
+   "AssociationValueMappingShapeAndValuesVerified" -> True, 
+   "AdditionalMultiplicativeWeightIsExactlyOne" -> True, 
+   "IdenticalSpectatorHalfNotReapplied" -> True, 
+   "SingleInheritedScaleMuPowerPreserved" -> True, 
+   "NoExtraMSBarSEpsilonIntroduced" -> True, 
+   "ChargeStrippedChannel5AConventionPreserved" -> True, 
+   "PhysicalFlavorChargeWeightStillDeferred" -> True, 
+   "NoVirtualBranchIntroduced" -> True, 
+   "FormalBoundedEndpointIdentityValidatedThroughEpsilonSquared" -> True, 
+   "EndpointValuesExplicitlyUnresolved" -> True, 
+   "Eq46FactorizationNotApplied" -> True, 
+   "FiniteLimitFHatAndBigTMDComparisonNotClaimed" -> True, 
+   "AtomicProjectorCachesReloadedAndValidated" -> True, 
+   "ActualDiskCacheHashesMappedByAssociationValues" -> True, 
+   "CompactResultDoesNotDuplicateExpandedKernels" -> True|>, 
+ "MemoryStrategy" -> "Pg and PPP expanded serially; each exact kernel is \
+atomically cached and released before the next projector; no parallel \
+duplicate of a large expression", "NotPerformedAtThisStage" -> 
+  {"numerical or symbolic substitution for unresolved endpoint values", 
+   "structural resolution of stronger s23 poles", 
+   "Eq. (46) initial-state PDF and final-state FF subtraction", 
+   "resolved Laurent pole-cancellation test", 
+   "epsilon -> 0 finite hard-part limit", 
+   "Eq. (9) Pg/PPP inversion or F-hat extraction", "BigTMD comparison", 
+   "physical Sum_q e_q^2 f_q D_qbar assembly"}, 
+ "DownstreamInstruction" -> "A separately authorized endpoint stage must load \
+the exact hash-pinned cache expressions, resolve all s23 singularity classes \
+termwise, and must not reapply the S08 1/2!, physical charge weight, or \
+dimensional scale."|>

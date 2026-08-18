@@ -1,0 +1,18 @@
+S13_PRODUCTION_START source_sha256=760cad942ee628c0e3de3b76362cbbb103bf6c8d9c920983b84f717b5adf1f13
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S13_STAGE: validating accepted Hqqbar S12 and fixed references"
+"S13_STAGE: deriving and validating paper Eq. (9) weights"
+"S13_STAGE: combining finite Pg and PPP pairs fieldwise"
+"S13_STAGE: rebuilding exact finite Hqqbar F-hat actions"
+"S13_STAGE: validating exact symbolic Hqqbar F hats"
+"S13_STAGE: writing finite hatted Hqqbar structure functions"
+"S13_SUCCESS_FINITE_FHAT_HQQBAR"
+"S13_RESULT_PATH=""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s13_result"
+"S13_RESULT_BYTES="14891953
+"S13_RESULT_SHA256=""4224b46a064087ed3b20e36a049dd1929019f66583263fcb2c28c9b69614c64f"
+"S13_CHECKS="InputForm[<|"ExactS12ProgramResultAndPaperPinned" -> True, "S12CompleteValidatedAndUpstreamBound" -> True, "S12AllProjectorPolesExactZeroBeforeFiniteInversion" -> True, "S12MappedCountertermCacheHashBound" -> True, "FeynCalcLoadedBeforeSerializedArtifacts" -> True, "ExactlyPgAndPPPFinitePairsConsumed" -> True, "ExactPhysicalXHatAndS23IntervalRetained" -> True, "PaperEq9DimensionalInversionUsed" -> True, "EpsilonSetToZeroOnlyAfterSeparatePoleCancellation" -> True, "FourDimensionalEq9WeightsExact" -> True, "Eq9WeightMatrixInvertibleSymbolically" -> True, "ExactlyF1HatAndF2HatProduced" -> True, "AllFHatPairsExactSchemaAndPure" -> True, "AllFHatActionsExactAndAligned" -> True, "ChargeStrippedConventionPreserved" -> True, "PhysicalFlavorChargeWeightDeferred" -> True, "IdenticalSpectatorFactorNotReapplied" -> True, "NoLOOrVirtualContributionIntroduced" -> True, "NoHermitianProjectionIntroduced" -> True, "AdditionalMultiplicativeWeightAtS13IsOne" -> True, "BigTMDChannel5AHashesAndZeroBCasesPinned" -> True, "BigTMDDriverChannel5OmissionRecorded" -> True, "BigTMDComparisonDeferred" -> True, "CalculationFullySymbolicAndExact" -> True, "SerialExecutionAvoidsUnhelpfulSubkernelCopies" -> True|>]
+S13_PRODUCTION_END exit=0

@@ -1,0 +1,29 @@
+{
+	"stage":"HqqbarFiniteCutPointwiseComparison-v1",
+	"status":"complete",
+	"common_bin_rows":27851,
+	"compile_seconds":5.699e-3,
+	"evaluation_seconds":0.201897,
+	"evaluations_per_second":1.3794657671981258e5,
+	"maximum_relative_difference":2.1789896178582667e-11,
+	"mean_relative_difference":8.997262841183539e-15,
+	"median_relative_difference":3.328531972965403e-15,
+	"relative_difference_99th_percentile":6.693708519782907e-14,
+	"maximum_absolute_difference":3.114335006262149e-22,
+	"all_local_values_positive":true,
+	"input_sha256":{
+		"s09_four_dimensional_unit_projections":"bb6b23a17ab97f6db9cd511c197344a715f415c125700fa95e74c5470dc93a6a",
+		"s10_cut_phase_space_points.csv":"7b83e42e960649402b03a26e7dd768737d0a6cb7d724acf7aee2a7602f5d0441",
+		"s10_cut_phase_space_metadata.json":"086a3809c90d24f66aea6f29648c950a37fd9955fe9987f3e9368c6f6020c824"
+	},
+	"source_sha256":"9d5d61f74ecbf040d88d9526ba3f9f4794d2b99a802ade0921770265b34f17bc",
+	"output_csv_sha256":"0afe3400b01ea9e7598f4507727d1d15b5a5ee4d9649482c2e13d1893845e34f",
+	"checks":{
+		"input_hashes_exact":true,
+		"row_count_exact":true,
+		"wvm_compile_and_shape_valid":true,
+		"all_local_values_finite_positive":true,
+		"maximum_relative_difference_below_2e-9":true,
+		"99th_percentile_relative_difference_below_2e-11":true
+	}
+}

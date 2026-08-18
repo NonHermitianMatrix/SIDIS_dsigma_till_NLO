@@ -1,0 +1,951 @@
+<|"Status" -> "Complete", "Stage" -> "HqqbarS05-v1", 
+ "ResultSchemaVersion" -> 1, "Channel" -> "Hqqbar only", 
+ "Contribution" -> "H_{q qbar; q q} real bilinear", 
+ "PerturbativeOrder" -> "O(alpha_s^2)", 
+ "GeneratedAt" -> "2026-08-17T21:17:43", "ProgramPath" -> "/home/physics/proj\
+ects/AI_Assisted_SIDIS/scripts/Hqqbar/s05_form_hqqbar_real_bilinear.wl", 
+ "ProgramSHA256" -> 
+  "af499834c79fd69e69f33306a2e049a32f3d2ed88a50afcc65d5d37b0b9fd29e", 
+ "Input" -> <|"S01SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/sc\
+ripts/Hqqbar/s01_calculate_hqqbar_real.wl", "S01SourceSHA256" -> 
+    "750d7c607f57b403d55ba36715a6700015c16fe7b831686204e89758912c4e71", 
+   "S01ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s01_result", 
+   "S01ResultSHA256" -> 
+    "69401e04b6ad1c3023da1a91155b7a90876510e273e4a2183bd11a7bcf9ab3b4", 
+   "S04SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqba\
+r/s04_validate_hqqbar_virtual_absence.wl", "S04SourceSHA256" -> 
+    "b4afa7ff960449b2df5dbd38886e8e2a49aa2c14ed06d4cea515edcca65284e3", 
+   "S04ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s04_result", 
+   "S04ResultSHA256" -> 
+    "b92526579c1aff40f40d305fe0087b000dde45355391843364c4ea5e52f72e9e", 
+   "S04StageDisposition" -> "NotApplicableAtThisOrder"|>, 
+ "ExternalProcess" -> <|"Incoming" -> {"gamma*(q)", "q(p)"}, 
+   "Outgoing" -> {"qbar(k1, fragmenting)", "q(k2, spectator)", 
+     "q(k3, spectator)"}, "ExternalSpinors" -> {Spinor[Momentum[p, D], 0, 1], 
+     Spinor[-Momentum[k1, D], 0, 1], Spinor[Momentum[k2, D], 0, 1], 
+     Spinor[Momentum[k3, D], 0, 1]}, "FragmentingParton" -> "qbar(k1)", 
+   "UnobservedPartons" -> "identical q(k2), q(k3)"|>, 
+ "ChargeBookkeeping" -> <|"FeynArtsReferenceCharge" -> 2/3, 
+   "AmplitudeStripFactor" -> 3/2, "FullAmplitudesAreChargeStripped" -> True, 
+   "PhysicalChargeWeight" -> "Sum_q e_q^2 f_q D_qbar", 
+   "PhysicalChargeWeightAppliedAtS05" -> False, "BigTMDChannel" -> 5, 
+   "BigTMDChargeCase" -> "A only"|>, "DiagramCounts" -> 
+  <|"NLORealHqqbarQQ" -> 8, "CoherentOrderedDiagramPairs" -> 64|>, 
+ "FullExternalStateAmplitudes" -> <|"ReferenceChargePerDiagram" -> 
+    {(-I)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k1 - k2, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+        0]]*Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     I*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+        0]]*Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     I*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     (-I)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     (-I)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     I*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     I*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     (-I)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]}, 
+   "ChargeStrippedPerDiagram" -> 
+    {((-3*I)/2)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k1 - k2, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+        0]]*Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     ((3*I)/2)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+        0]]*Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     ((3*I)/2)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     ((-3*I)/2)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     ((-3*I)/2)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     ((3*I)/2)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     ((3*I)/2)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+     ((-3*I)/2)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]}, 
+   "ReferenceChargeCoherentSum" -> 
+    (-I)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k1 - k2, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+        0]]*Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] + 
+     I*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+        0]]*Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] - 
+     I*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] + 
+     I*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] + 
+     I*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] - 
+     I*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] + 
+     I*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] - 
+     I*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+   "ChargeStrippedCoherentSum" -> 
+    ((-3*I)/2)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k1 - k2, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+        0]]*Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] + 
+     ((3*I)/2)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+        0]]*Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] - 
+     ((3*I)/2)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] + 
+     ((3*I)/2)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] + 
+     ((3*I)/2)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] - 
+     ((3*I)/2)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] + 
+     ((3*I)/2)*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]] - 
+     ((3*I)/2)*Spinor[Momentum[k3, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor2, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+       Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+       ((-I)*DiracGamma[LorentzIndex[Lor3, D], D]*SMP["g_s"]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 0]]*
+      Pair[LorentzIndex[Lor1, D], Momentum[Polarization[q, I], D]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]], 
+   "OpenPhotonIndexMu" -> FCGV["EL"]*SMP["g_s"]^2*
+     (Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k1 + k2 + k3, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor2, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k2 - p, D], D] . DiracGamma[LorentzIndex[Lor2, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k3 - p, D], D] . DiracGamma[LorentzIndex[Lor3, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] + 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k1 + k2 + k3, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] + 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k2 - p, D], D] . DiracGamma[LorentzIndex[Lor3, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] + 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor2, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k3 - p, D], D] . DiracGamma[LorentzIndex[Lor2, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] - 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]), 
+   "ConjugateOpenPhotonIndexNu" -> 
+    Spinor[-Momentum[k1, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+        D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[Momentum[p, D], 0, 1] . 
+       DiracGamma[LorentzIndex[s05Nu, D], D] . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       DiracGamma[LorentzIndex[$AL[$12], D], D] . Spinor[Momentum[k3, D], 0, 
+        1]*FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*SMP["g_s"]^2*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col5]]*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col4]] - 
+     Spinor[-Momentum[k1, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$11], D], 
+        D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[Momentum[p, D], 0, 1] . 
+       DiracGamma[LorentzIndex[$AL[$11], D], D] . 
+       DiracGamma[Momentum[k1 + k2 - p, D], D] . 
+       DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k3, D], 0, 1]*
+      FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+        Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^2*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col5]]*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col4]] - 
+     Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+        D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+       DiracGamma[LorentzIndex[$AL[$12], D], D] . 
+       DiracGamma[Momentum[k1 + k3 - p, D], D] . 
+       DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k2, D], 0, 1]*
+      FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k3 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        Momentum[k1 + k3 - p, D], 0]]*SMP["g_s"]^2*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col5]]*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col4]] + 
+     Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+        D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+       DiracGamma[LorentzIndex[s05Nu, D], D] . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       DiracGamma[LorentzIndex[$AL[$12], D], D] . Spinor[Momentum[k2, D], 0, 
+        1]*FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k3 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k2 + k3 - p, D], 0]]*SMP["g_s"]^2*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col5]]*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col4]] - 
+     Spinor[-Momentum[k1, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+        D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[Momentum[p, D], 0, 1] . 
+       DiracGamma[LorentzIndex[s05Nu, D], D] . 
+       DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+       DiracGamma[LorentzIndex[$AL[$12], D], D] . Spinor[Momentum[k2, D], 0, 
+        1]*FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*SMP["g_s"]^2*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] + 
+     Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+        D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+       DiracGamma[LorentzIndex[$AL[$12], D], D] . 
+       DiracGamma[Momentum[k1 + k2 - p, D], D] . 
+       DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k3, D], 0, 1]*
+      FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k2 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^2*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] + 
+     Spinor[-Momentum[k1, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$11], D], 
+        D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[Momentum[p, D], 0, 1] . 
+       DiracGamma[LorentzIndex[$AL[$11], D], D] . 
+       DiracGamma[Momentum[k1 + k3 - p, D], D] . 
+       DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k2, D], 0, 1]*
+      FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+        Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        Momentum[k1 + k3 - p, D], 0]]*SMP["g_s"]^2*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] - 
+     Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+        D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+       DiracGamma[LorentzIndex[s05Nu, D], D] . 
+       DiracGamma[Momentum[k2 + k3 - p, D], D] . 
+       DiracGamma[LorentzIndex[$AL[$12], D], D] . Spinor[Momentum[k3, D], 0, 
+        1]*FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k2 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k2 + k3 - p, D], 0]]*SMP["g_s"]^2*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+      SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]]|>, 
+ "Bilinear" -> <|"PhotonIndices" -> {s05Mu, s05Nu}, 
+   "ChargeStrippedCore" -> FCGV["EL"]*SMP["g_s"]^2*
+     (Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k1 + k2 + k3, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor2, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k2 - p, D], D] . DiracGamma[LorentzIndex[Lor2, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k3 - p, D], D] . DiracGamma[LorentzIndex[Lor3, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] + 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k1 + k2 + k3, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] + 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k2 - p, D], D] . DiracGamma[LorentzIndex[Lor3, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] + 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor2, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k3 - p, D], D] . DiracGamma[LorentzIndex[Lor2, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] - 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]])*
+     (Spinor[-Momentum[k1, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[Momentum[p, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . DiracGamma[
+         Momentum[k1 + k2 + k3, D], D] . DiracGamma[LorentzIndex[$AL[$12], 
+          D], D] . Spinor[Momentum[k3, D], 0, 1]*FCGV["EL"]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+         0]]*SMP["g_s"]^2*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], 
+        SUNFIndex[Col5]]*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], 
+        SUNFIndex[Col4]] - Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$11], D], D] . Spinor[Momentum[k2, D], 0, 
+         1]*Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$11], 
+          D], D] . DiracGamma[Momentum[k1 + k2 - p, D], D] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k3, D], 0, 1]*
+       FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col5]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col4]] - 
+      Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$12], D], D] . 
+        DiracGamma[Momentum[k1 + k3 - p, D], D] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k2, D], 0, 1]*
+       FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         -Momentum[k3 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k3 - p, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col5]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col4]] + 
+      Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k2, D], 0, 1]*FCGV["EL"]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SMP["g_s"]^2*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], 
+        SUNFIndex[Col5]]*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], 
+        SUNFIndex[Col4]] - Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$12], D], D] . Spinor[Momentum[k3, D], 0, 
+         1]*Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[s05Nu, D], 
+         D] . DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+        DiracGamma[LorentzIndex[$AL[$12], D], D] . Spinor[Momentum[k2, D], 0, 
+         1]*FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         -Momentum[k1 + k2 + k3, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] + 
+      Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$12], D], D] . 
+        DiracGamma[Momentum[k1 + k2 - p, D], D] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k3, D], 0, 1]*
+       FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         -Momentum[k2 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] + 
+      Spinor[-Momentum[k1, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$11], D], 
+         D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[Momentum[p, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$11], D], D] . 
+        DiracGamma[Momentum[k1 + k3 - p, D], D] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k2, D], 0, 1]*
+       FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k3 - p, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] - 
+      Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k3, D], 0, 1]*FCGV["EL"]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SMP["g_s"]^2*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], 
+        SUNFIndex[Col4]]*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], 
+        SUNFIndex[Col5]]), "DimensionalScaleFactor" -> ScaleMu^(4*epsilon), 
+   "ScaleConvention" -> "absolute ScaleMu^(4 epsilon) for the square of a \
+two-strong-vertex amplitude", "SeparateMSBarSEpsilonApplied" -> False, 
+   "ScaleAttachedRealTensor" -> ScaleMu^(4*epsilon)*FCGV["EL"]*SMP["g_s"]^2*
+     (Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k1 + k2 + k3, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor2, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k2 - p, D], D] . DiracGamma[LorentzIndex[Lor2, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k3 - p, D], D] . DiracGamma[LorentzIndex[Lor3, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] + 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k1 + k2 + k3, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] + 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k2 - p, D], D] . DiracGamma[LorentzIndex[Lor3, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] + 
+      Spinor[Momentum[k3, D], 0, 1] . DiracGamma[LorentzIndex[Lor2, D], D] . 
+        Spinor[-Momentum[k1, D], 0, 1]*Spinor[Momentum[k2, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Mu, D], D] . DiracGamma[
+         Momentum[k1 + k3 - p, D], D] . DiracGamma[LorentzIndex[Lor2, D], 
+         D] . Spinor[Momentum[p, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] - 
+      Spinor[Momentum[k2, D], 0, 1] . DiracGamma[LorentzIndex[Lor3, D], D] . 
+        Spinor[Momentum[p, D], 0, 1]*Spinor[Momentum[k3, D], 0, 1] . 
+        DiracGamma[LorentzIndex[Lor3, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[s05Mu, D], 
+         D] . Spinor[-Momentum[k1, D], 0, 1]*FeynAmpDenominator[
+        PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]])*
+     (Spinor[-Momentum[k1, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[Momentum[p, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . DiracGamma[
+         Momentum[k1 + k2 + k3, D], D] . DiracGamma[LorentzIndex[$AL[$12], 
+          D], D] . Spinor[Momentum[k3, D], 0, 1]*FCGV["EL"]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+         0]]*SMP["g_s"]^2*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], 
+        SUNFIndex[Col5]]*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], 
+        SUNFIndex[Col4]] - Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$11], D], D] . Spinor[Momentum[k2, D], 0, 
+         1]*Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$11], 
+          D], D] . DiracGamma[Momentum[k1 + k2 - p, D], D] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k3, D], 0, 1]*
+       FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k2, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col5]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col4]] - 
+      Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$12], D], D] . 
+        DiracGamma[Momentum[k1 + k3 - p, D], D] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k2, D], 0, 1]*
+       FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         -Momentum[k3 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k3 - p, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col5]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col4]] + 
+      Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k2, D], 0, 1]*FCGV["EL"]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SMP["g_s"]^2*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], 
+        SUNFIndex[Col5]]*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], 
+        SUNFIndex[Col4]] - Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$12], D], D] . Spinor[Momentum[k3, D], 0, 
+         1]*Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[s05Nu, D], 
+         D] . DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+        DiracGamma[LorentzIndex[$AL[$12], D], D] . Spinor[Momentum[k2, D], 0, 
+         1]*FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         -Momentum[k1 + k2 + k3, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] + 
+      Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$12], D], D] . 
+        DiracGamma[Momentum[k1 + k2 - p, D], D] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k3, D], 0, 1]*
+       FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         -Momentum[k2 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] + 
+      Spinor[-Momentum[k1, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$11], D], 
+         D] . Spinor[Momentum[k3, D], 0, 1]*Spinor[Momentum[p, D], 0, 1] . 
+        DiracGamma[LorentzIndex[$AL[$11], D], D] . 
+        DiracGamma[Momentum[k1 + k3 - p, D], D] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . Spinor[Momentum[k2, D], 0, 1]*
+       FCGV["EL"]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+         Momentum[k1 + k3 - p, D], 0]]*SMP["g_s"]^2*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], SUNFIndex[Col4]]*
+       SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], SUNFIndex[Col5]] - 
+      Spinor[Momentum[p, D], 0, 1] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k2, D], 0, 1]*Spinor[-Momentum[k1, D], 0, 1] . 
+        DiracGamma[LorentzIndex[s05Nu, D], D] . DiracGamma[
+         Momentum[k2 + k3 - p, D], D] . DiracGamma[LorentzIndex[$AL[$12], D], 
+         D] . Spinor[Momentum[k3, D], 0, 1]*FCGV["EL"]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 + k3 - p, D], 
+         0]]*SMP["g_s"]^2*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col2], 
+        SUNFIndex[Col4]]*SUNTF[{SUNIndex[$AL[$10]]}, SUNFIndex[Col3], 
+        SUNFIndex[Col5]])|>, "SymmetryAndAverageBookkeeping" -> 
+  <|"IdenticalSpectatorFactorAppliedAtS05" -> False, 
+   "IdenticalSpectatorFactorDeferred" -> HoldForm[1/2!], 
+   "IdenticalSpectatorFactorDestination" -> 
+    "fully integrated three-body spectator phase space", 
+   "IncomingQuarkSpinColorAverageAppliedAtS05" -> False, 
+   "IncomingQuarkSpinColorAverageDeferred" -> "1/(2 Nc) at S06"|>, 
+ "VirtualContributionAtThisOrder" -> <|"Applicable" -> False, 
+   "Interference" -> 0, "SourceDisposition" -> "NotApplicableAtThisOrder"|>, 
+ "Checks" -> <|"ValidatedS01SourceHash" -> True, "ValidatedS01ResultHash" -> 
+    True, "ValidatedS04SourceHash" -> True, "ValidatedS04ResultHash" -> True, 
+   "S04NoVirtualContractEnforced" -> True, "SingleHqqbarRealPayload" -> True, 
+   "FullAmplitudeCountEight" -> True, "ExactReferenceChargeStripFactor" -> 
+    True, "EachFullAmplitudeContainsOneELAndTwoGSVertices" -> True, 
+   "FourExpectedExternalSpinors" -> True, 
+   "FragmentingAntiquarkOrientationMinusK1" -> True, 
+   "AllDiagramsCoherentlySummedBeforeProduct" -> True, 
+   "CoherentOrderedDiagramPairCount64" -> True, 
+   "PhotonPolarizationRemoved" -> True, "PhotonIndexMuPresent" -> True, 
+   "PhotonIndexNuPresent" -> True, "ExternalSpinorsRetainedForS06" -> True, 
+   "FeynCalcConjugationEvaluated" -> True, 
+   "EveryOrderedPairHasCouplingOrderE2GS4" -> True, 
+   "AbsoluteScaleMuPowerFourEpsilonAttached" -> True, 
+   "NoSeparateMSBarSEpsilonAtS05" -> True, "PhysicalChargeWeightDeferred" -> 
+    True, "IdenticalSpectatorFactorDeferred" -> True, 
+   "IncomingQuarkAverageDeferred" -> True, "NoLoopOrRegulatorData" -> True, 
+   "NoMachinePrecisionNumbers" -> True, "AtomicS05ResultWrite" -> True|>, 
+ "NotPerformed" -> 
+  {"spin/color sums, Dirac traces, or incoming-quark averaging", 
+   "the deferred one 1/2! identical-spectator phase-space factor", 
+   "phase-space integration", "MS-bar PDF/FF collinear factorization", 
+   "projector contraction or F-hat inversion", 
+   "physical flavor-charge assembly or BigTMD numerical comparison"}, 
+ "DownstreamInstruction" -> "Hqqbar S06 must use \
+Bilinear[ScaleAttachedRealTensor], sum all four external fermion spins and \
+colors, and apply exactly the incoming-quark average 1/(2 Nc). It must not \
+add a virtual term, physical flavor charge, or the deferred 1/2! phase-space \
+factor."|>

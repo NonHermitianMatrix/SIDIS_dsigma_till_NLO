@@ -1,0 +1,37 @@
+{
+  "alpha_s": 0.118,
+  "bridge_direct_relative_difference": 0.0,
+  "bridge_matrix_element": 2.7129227270588183e-10,
+  "checks": {
+    "all_external_states_massless": true,
+    "bridge_matches_direct_generated_routine": true,
+    "four_momentum_conserved": true,
+    "identical_u_exchange_invariant": true,
+    "identity_factor_24": true,
+    "pdg_order_exact": true,
+    "spacelike_photon": true
+  },
+  "direct_matrix_element": 2.7129227270588183e-10,
+  "exchanged_u_matrix_element": 2.7129227270588183e-10,
+  "identical_u_exchange_relative_difference": 0.0,
+  "identity_factor": 24,
+  "maximum_conservation_residual": 0.0,
+  "maximum_external_mass_squared": 7.275957614183426e-12,
+  "photon_q2": -105662.43270259356,
+  "process_pdgs": [
+    11,
+    2,
+    11,
+    2,
+    2,
+    -2
+  ],
+  "sha256": {
+    "bridge": "0d1e52d791fb03a9a1776a1a188a9ad683b66daf202ad209a3ffdb0b8fa66a08",
+    "direct_log": "6175ee63cee875d87a9cb95ed299411a7e5735a6f5fcf80ad6f1f3dbe19cea52",
+    "generated_matrix": "4a1f3bc0da60ff3f9ed7f4eaaa9f920b6c0da20cb8a76504734e4a8295e471f0",
+    "parameter_card": "55bb009a781370ab3fdfb523be00d0c8f68ffec442d12eb41b8d2da50307cf64"
+  },
+  "stage": "HqqbarMadGraphBridgeValidation-v1",
+  "status": "complete"
+}

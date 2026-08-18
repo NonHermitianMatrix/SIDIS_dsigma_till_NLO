@@ -1,0 +1,56 @@
+{
+  "acceptance_fraction": 0.23209166666666667,
+  "accepted_events": 27851,
+  "alpha_s": 0.118,
+  "cross_section_common_factor_gev2": 0.06648282151394422,
+  "csv_columns": [
+    "s12",
+    "s13",
+    "s23",
+    "u1",
+    "u2",
+    "u3",
+    "Q2",
+    "madgraph_azimuthal_average"
+  ],
+  "csv_sha256": "7b83e42e960649402b03a26e7dd768737d0a6cb7d724acf7aee2a7602f5d0441",
+  "cuts": {
+    "min_minus_ti_over_shat_plus_2q2": 0.03,
+    "min_minus_ui_over_shat_plus_q2": 0.05,
+    "min_sij_over_shat": 0.05,
+    "q2_over_s_max": 0.4,
+    "q2_over_s_min": 0.08,
+    "shat_over_s_max": 0.75,
+    "shat_over_s_min": 0.25
+  },
+  "gev_minus2_to_pb": 389379338.0,
+  "input_sha256": {
+    "param_card.dat": "55bb009a781370ab3fdfb523be00d0c8f68ffec442d12eb41b8d2da50307cf64",
+    "s03_libhqqbar_madgraph_bridge.so": "0d1e52d791fb03a9a1776a1a188a9ad683b66daf202ad209a3ffdb0b8fa66a08",
+    "s08_azimuthal_average_validation.json": "89da37951365e34cc6aec688dc163fd6e2563b1bfbbd5560d7d5c135644e7a43",
+    "s09_four_dimensional_unit_projections": "bb6b23a17ab97f6db9cd511c197344a715f415c125700fa95e74c5470dc93a6a"
+  },
+  "madgraph_cross_section_gev_minus2": 9.420838734842676e-13,
+  "madgraph_cross_section_pb": 0.0003668279949977799,
+  "madgraph_standard_error_gev_minus2": 1.5368865334619484e-14,
+  "madgraph_standard_error_pb": 5.984318609805283e-06,
+  "massless_flux_factor_inverse_gev_minus2": 5e-07,
+  "maximum_lab_rest_madgraph_relative_difference": 2.9049731968481067e-14,
+  "rambo_maximum_conservation_residual": 1.142197447734361e-11,
+  "rambo_maximum_external_mass_squared": 6.315531209111214e-09,
+  "rambo_phase_space_volume_gev4": 132965.64302788844,
+  "random_generator": "NumPy PCG64",
+  "random_seed": 2026081801,
+  "rotated_event_diagnostics": {
+    "hadronic_rest_spatial_residual": 2.2737367544323206e-13,
+    "max_conservation_residual": 7.048583938740194e-12,
+    "max_external_mass_squared": 2.86672729998827e-09,
+    "max_photon_momentum_shift": 6.821210263296962e-13
+  },
+  "s_gev2": 1000000.0,
+  "source_sha256": "4d156c67daa64e08d6e09deab3b325391c12aa4597282888c329519d1aba2bec",
+  "sqrt_s_gev": 1000.0,
+  "stage": "HqqbarFiniteCutMadGraphSample-v1",
+  "status": "complete",
+  "total_rambo_trials": 120000
+}

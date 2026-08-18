@@ -1,0 +1,38 @@
+<|"CacheVersion" -> 1, "StageVersion" -> "HqqbarS12-v1", 
+ "ProgramSHA256" -> 
+  "b56647afa5e8cb07bbaccce9bdeff84552cd9d3ef968deec543cd11a4f599e9f", 
+ "S10SHA256" -> 
+  "57e637d3eca490dfe08e341d866e5fa08ec1d69b14c7c476cf17c51890a65cb6", 
+ "Projector" -> "PPP", "Field" -> "IntegrandPhiS", "Family" -> "Alpha2", 
+ "Position" -> 1, "TermSHA256" -> 
+  "0d29684da67846870d449759a32a53f7bbcd6f65894d0c9acf3abdfffcf9e9b4", 
+ "Powers" -> {-2, -1, 0}, "Coefficients" -> 
+  <|-2 -> 0, -1 -> ((CA - CA^3 - (-1 + CA^2)/CA + CA*(-1 + CA^2))*Q2*xB*xi*
+      (PHT2*s23 + s23^2*zH^2)*(-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)*
+      FCGV["EL"]^2*SMP["g_s"]^4)/(64*Pi^5*s23*SUNN*(Q2*xB + s23*xB - Q2*xi)^2*
+      zH*(-(PHT2*s23*xB) + PHT2*Q2*xi + Q2*s23*xB*zH^2)), 
+   0 -> -((Q2*xB*xi*(PHT2*s23 + s23^2*zH^2)*(-(PHT2*xB) + Q2*xB*zH^2 - 
+        Q2*xi*zH^2)*FCGV["EL"]^2*
+       (((CA - CA^3 - (-1 + CA^2)/CA + CA*(-1 + CA^2))*(-12*EulerGamma - 
+           24*Log[2] + 12*(EulerGamma + Log[4])))/(768*Pi^5) - 
+        12*(-1/768*((CA - CA^3 - (-1 + CA^2)/CA + CA*(-1 + CA^2))*EulerGamma)/
+            Pi^5 + (((-1 + CA^2)/(64*CA) + ((CA - CA^3 - (-1 + CA^2)/CA + 
+                 CA*(-1 + CA^2))*Log[2])/32)/Pi^5 + 
+            ((CA - CA^3 - (-1 + CA^2)/CA + CA*(-1 + CA^2))*Log[Pi])/
+             (64*Pi^5))/12 + ((CA - CA^3 - (-1 + CA^2)/CA + CA*(-1 + CA^2))*
+            Log[ScaleMu])/(192*Pi^5) - ((CA - CA^3 - (-1 + CA^2)/CA + 
+             CA*(-1 + CA^2))*Log[(Q2*(xB - xi)*(-1 + zH))/xB - PHT2/zH])/
+           (384*Pi^5) - ((CA - CA^3 - (-1 + CA^2)/CA + CA*(-1 + CA^2))*
+            Log[(s23*xB*zH)/(-(PHT2*xB) + Q2*(xB - xi)*(-1 + zH)*zH)])/
+           (384*Pi^5) - ((CA - CA^3 - (-1 + CA^2)/CA + CA*(-1 + CA^2))*
+            Log[zH^2/(PHT2 + s23*zH^2)])/(768*Pi^5)))*SMP["g_s"]^4)/
+      (s23*SUNN*(Q2*xB + s23*xB - Q2*xi)^2*zH*(-(PHT2*s23*xB) + PHT2*Q2*xi + 
+        Q2*s23*xB*zH^2)))|>, "ProvenanceMigration" -> 
+  <|"FromProgramSHA256" -> 
+    "4341ba8d3280365ea8a26ad7403c76221acf0e9fb7eb1f33efd5bd79e52bc42e", 
+   "ToProgramSHA256" -> 
+    "b56647afa5e8cb07bbaccce9bdeff84552cd9d3ef968deec543cd11a4f599e9f", 
+   "OriginalFileSHA256" -> 
+    "4d7d7334052281deba591c2388c88116cf9d2fd5d948ab60480cdc3ec894523f", 
+   "Reason" -> "downstream-only SUNN-to-CA combination canonicalization", 
+   "CoefficientChanged" -> False|>|>

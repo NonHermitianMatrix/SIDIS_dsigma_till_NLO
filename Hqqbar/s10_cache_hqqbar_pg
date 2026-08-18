@@ -1,0 +1,98 @@
+<|"Status" -> "Complete", "Stage" -> "HqqbarS10Cache-v1", 
+ "ResultSchemaVersion" -> 1, "Channel" -> "Hqqbar only", "Projector" -> "Pg", 
+ "GeneratedAt" -> "2026-08-18T08:54:55", "ProgramPath" -> "/home/physics/proj\
+ects/AI_Assisted_SIDIS/scripts/Hqqbar/s10_resolve_endpoints_hqqbar.wl", 
+ "ProgramSHA256" -> 
+  "793f9aaafbda74c605c3885915eabf9323e8b5761c84e9954d0759a5f890ac20", 
+ "PaperPath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Large_Trans\
+verse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Or\
+der.pdf", "PaperSHA256" -> 
+  "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+ "S09SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/\
+s09_expand_endpoints_hqqbar.wl", "S09SourceSHA256" -> 
+  "71c4f10cc35cf767f5ae01a895e78d1beee751100f71b83524cd95e796561280", 
+ "S09ResultPath" -> 
+  "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s09_result", 
+ "S09ResultSHA256" -> 
+  "2b50259061ec86cd735b1c04b0a73712d7cae1ff7176d6d97776a9746a1d7a15", 
+ "S09ExpansionCachePath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts\
+/Hqqbar/s09_cache_hqqbar_pg", "S09ExpansionCacheSHA256" -> 
+  "1f34249af61f94bd91d81cb0315f51480fc9256e03c7558c441e9f7a7f8415b7", 
+ "RemainderTermCount" -> 76, "StandardTermIndices" -> {1, 2, 3, 4, 5, 6, 7, 
+  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 
+  28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 
+  47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 
+  66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76}, "Alpha2TermIndices" -> {8}, 
+ "Alpha2NestedRatioEndpoints" -> {zH^2/PHT2}, 
+ "DirectSingularLogTermIndices" -> {}, "PhysicalBranchLogInventory" -> 
+  <|"1" -> <|"ZeroArgumentPositions" -> {14, 17}, "ZeroSourceTermIndices" -> 
+      {12, 13, 22, 23, 39, 57, 74, 75}, "UnresolvedArgumentPositions" -> 
+      {12, 16}, "UnresolvedSourceTermIndices" -> {12, 13, 22, 23}|>, 
+   "-1" -> <|"ZeroArgumentPositions" -> {24, 31}, "ZeroSourceTermIndices" -> 
+      {40, 61, 73, 76}, "UnresolvedArgumentPositions" -> {}, 
+     "UnresolvedSourceTermIndices" -> {}|>|>, 
+ "CoupledLogEndpointRepairVersion" -> 1, "CoupledLogEndpointGroups" -> 
+  {{12, 22, 57, 75}, {13, 23, 39, 74}, {40, 73}, {61, 76}}, 
+ "CoupledLogEndpointRepairApplied" -> True, 
+ "AdditionalMultiplicativeWeight" -> 1, "ScaleBookkeeping" -> 
+  <|"AbsoluteFactor" -> ScaleMu^(4*epsilon), 
+   "PowerPreservedExactlyOnceInEveryProjection" -> True, 
+   "SeparateMSBarSEpsilonApplied" -> False|>, 
+ "ChargeBookkeeping" -> <|"TensorIsChargeStripped" -> True, 
+   "PhysicalChargeWeight" -> "Sum_q e_q^2 f_q D_qbar", 
+   "PhysicalChargeWeightAppliedAtS06" -> False, "BigTMDChannel" -> 5, 
+   "BigTMDChargeCase" -> "A only"|>, "SymmetryBookkeeping" -> 
+  <|"Upstream" -> <|"IdenticalUnobservedQuarks" -> {"q(k2)", "q(k3)"}, 
+     "IdenticalSpectatorFactorAppliedAtS06" -> False, 
+     "IdenticalSpectatorFactorDeferred" -> HoldForm[1/2!], 
+     "Destination" -> "fully integrated three-body spectator phase space"|>, 
+   "IdenticalUnobservedQuarks" -> {"q(k2)", "q(k3)"}, 
+   "LabelledIntegrandSpectatorExchangeSymmetric" -> True, 
+   "IdenticalSpectatorFactor" -> 1/2, 
+   "IdenticalSpectatorFactorAppliedAtS08" -> True, 
+   "ApplicationCountThroughS08" -> 1, 
+   "PhysicalExpressionEqualsPreSymmetryOverTwo" -> True, 
+   "DownstreamReapplicationForbidden" -> True|>, 
+ "VirtualContributionAtThisOrder" -> <|"Applicable" -> False, 
+   "Interference" -> 0, "SourceDisposition" -> "NotApplicableAtThisOrder"|>, 
+ "PoleCoefficients" -> {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+   0, 0, 0, 0, 0, 0, 0}, "FiniteCoefficients" -> 
+  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+   0}, "RequiredPoleSubtraction" -> {False, False, False, False, False, 
+   False, False, False, False, False, False, False, False, False, False, 
+   False, False, False, False, False, False, False, False, False, False, 
+   False, False, False, False, False, False, False, False, False, False, 
+   False, False, False, False, False, False, False, False, False, False, 
+   False, False, False, False, False, False, False, False, False, False, 
+   False, False, False, False, False, False, False, False, False, False, 
+   False, False, False, False, False, False, False, False, False, False}, 
+ "Methods" -> {"factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular", "factorwise regular", "factorwise regular", 
+   "factorwise regular"}, "CompletedStandardTermCount" -> 75|>

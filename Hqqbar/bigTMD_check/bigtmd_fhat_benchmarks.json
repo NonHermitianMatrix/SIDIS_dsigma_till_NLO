@@ -1,0 +1,181 @@
+{
+  "Benchmarks": [
+    {
+      "ID": "interior_1",
+      "Jacobian": 0.025037898728832247,
+      "Nf": 4.0,
+      "PHT2": 0.42439,
+      "Q": 4.123105625617661,
+      "Q2": 17.0,
+      "S23Fraction": 0.4,
+      "S23Sample": 6.619113043478261,
+      "S23UpperB": 16.547782608695652,
+      "qT2": 3.1,
+      "s": 28.08695652173913,
+      "t": -7.431800418235048,
+      "xB": 0.23,
+      "xHat": 0.3770491803278688,
+      "xi": 0.61,
+      "zH": 0.37,
+      "zHat": 0.6883596821413634,
+      "zeta": 0.5375096909351175
+    },
+    {
+      "ID": "interior_2",
+      "Jacobian": 0.010219643127070377,
+      "Nf": 4.0,
+      "PHT2": 0.45387,
+      "Q": 4.795831523312719,
+      "Q2": 23.0,
+      "S23Fraction": 0.35,
+      "S23Sample": 13.111128947368421,
+      "S23UpperB": 37.460368421052635,
+      "qT2": 2.7,
+      "s": 65.36842105263158,
+      "t": -7.41534248434238,
+      "xB": 0.19,
+      "xHat": 0.2602739726027397,
+      "xi": 0.73,
+      "zH": 0.41,
+      "zHat": 0.7677171189979123,
+      "zeta": 0.5340508761028617
+    },
+    {
+      "ID": "interior_3",
+      "Jacobian": 0.017725818802178977,
+      "Nf": 4.0,
+      "PHT2": 0.15979,
+      "Q": 5.385164807134504,
+      "Q2": 29.0,
+      "S23Fraction": 0.55,
+      "S23Sample": 17.231659677419355,
+      "S23UpperB": 31.330290322580645,
+      "qT2": 1.9,
+      "s": 44.903225806451616,
+      "t": -12.97761203046385,
+      "xB": 0.31,
+      "xHat": 0.3924050632911392,
+      "xi": 0.79,
+      "zH": 0.29,
+      "zHat": 0.591232028396168,
+      "zeta": 0.490501167175739
+    }
+  ],
+  "Conventions": {
+    "AFunctionsNotSelected": [
+      "delta",
+      "plus1B",
+      "plus2B"
+    ],
+    "Couplings": "BigTMD generated module arguments g=gp=1",
+    "DecimalPolicy": "pinned Python decimal expressions executed as written",
+    "DistributionContent": "channel-5A regular only",
+    "DriverCaveat": "sidis.py omits channel 5 from its active loop and applies delta/plus only for channels below 4",
+    "Excluded": "PDFs, antiquark FF, physical flavor-charge sum, alpha_s running, remaining zh/(xi zeta) test-function weight, xi convolution, and leptonic prefactors",
+    "Jacobian": "BigTMD sidis.py zeta-to-s23 Jacobian applied",
+    "PartonicModuleWeight": 1.0,
+    "PhysicalLuminosity": "Sum_q e_q^2 f_q D_qbar deferred",
+    "Scale": "mu=Q"
+  },
+  "FHatByBenchmark": {
+    "interior_1": {
+      "Endpoint": {
+        "F1Hat": 0.0,
+        "F2Hat": 0.0
+      },
+      "IntegrandPhi0": {
+        "F1Hat": 0.0,
+        "F2Hat": 0.0
+      },
+      "IntegrandPhiS": {
+        "F1Hat": -2.4882086045286854e-06,
+        "F2Hat": -3.2449859577711465e-06
+      }
+    },
+    "interior_2": {
+      "Endpoint": {
+        "F1Hat": 0.0,
+        "F2Hat": 0.0
+      },
+      "IntegrandPhi0": {
+        "F1Hat": 0.0,
+        "F2Hat": 0.0
+      },
+      "IntegrandPhiS": {
+        "F1Hat": -1.5371355323501941e-06,
+        "F2Hat": -1.828375427995035e-06
+      }
+    },
+    "interior_3": {
+      "Endpoint": {
+        "F1Hat": 0.0,
+        "F2Hat": 0.0
+      },
+      "IntegrandPhi0": {
+        "F1Hat": 0.0,
+        "F2Hat": 0.0
+      },
+      "IntegrandPhiS": {
+        "F1Hat": -1.4957275475789995e-06,
+        "F2Hat": -5.553311875080605e-07
+      }
+    }
+  },
+  "Program": {
+    "Path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/bigTMD_check/s02_compare_bigtmd_fhat.py",
+    "SHA256": "c5361f7567974ead535b47ebf34e736ed0b0712e42757830a5ce40059c488e4b"
+  },
+  "ProjectorsByBenchmark": {
+    "interior_1": {
+      "Pg": 3.161492260889535e-06,
+      "Ppp": -5.425647799917429e-05
+    },
+    "interior_2": {
+      "Pg": 1.0990011695864366e-06,
+      "Ppp": -0.0001676612917135954
+    },
+    "interior_3": {
+      "Pg": 3.779583226396083e-06,
+      "Ppp": 3.71078361978797e-05
+    }
+  },
+  "Reference": {
+    "Channel": 5,
+    "ChargeCases": [
+      "A"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "Driver": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/sidis.py",
+    "DriverSHA256": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+    "ModulePaths": {
+      "PPP5A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5A.py",
+      "PPP5B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5B.py",
+      "PPP5C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5C.py",
+      "Pg5A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Pg/fchn5A.py",
+      "Pg5B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Pg/fchn5B.py",
+      "Pg5C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Pg/fchn5C.py"
+    },
+    "ModuleSHA256": {
+      "PPP5A": "5c275d8ee0e01fa23e47e3ddef6d84150babc71ef01e391d75e3ed9f12f09a5e",
+      "PPP5B": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "PPP5C": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "Pg5A": "9314f660d6ba9e37c203cf010da2f9aee84e993958e5dd3ad7896fb33ac5b48b",
+      "Pg5B": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "Pg5C": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b"
+    },
+    "Process": "gamma* q -> (qbar->h) q q",
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD",
+    "ZeroModulesValidated": [
+      "Pg5B",
+      "PPP5B",
+      "Pg5C",
+      "PPP5C"
+    ]
+  },
+  "StageVersion": "HqqbarBigTMDCheckS02-v1",
+  "Status": "CompleteBigTMDHqqbarFHatBenchmarks"
+}

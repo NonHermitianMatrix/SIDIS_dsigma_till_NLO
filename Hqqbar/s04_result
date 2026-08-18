@@ -1,0 +1,87 @@
+<|"Status" -> "Complete", "Stage" -> "HqqbarS04-v1", 
+ "ResultSchemaVersion" -> 1, "StageDisposition" -> 
+  "NotApplicableAtThisOrder", "Channel" -> "Hqqbar only", 
+ "Contribution" -> "H_{q qbar; q q}", "PerturbativeOrder" -> "O(alpha_s^2)", 
+ "GeneratedAt" -> "2026-08-17T20:56:31", "ProgramPath" -> "/home/physics/proj\
+ects/AI_Assisted_SIDIS/scripts/Hqqbar/s04_validate_hqqbar_virtual_absence.wl"\
+, "ProgramSHA256" -> 
+  "b4afa7ff960449b2df5dbd38886e8e2a49aa2c14ed06d4cea515edcca65284e3", 
+ "Input" -> <|"S01SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/sc\
+ripts/Hqqbar/s01_calculate_hqqbar_real.wl", "S01SourceSHA256" -> 
+    "750d7c607f57b403d55ba36715a6700015c16fe7b831686204e89758912c4e71", 
+   "S01ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s01_result", 
+   "S01ResultSHA256" -> 
+    "69401e04b6ad1c3023da1a91155b7a90876510e273e4a2183bd11a7bcf9ab3b4", 
+   "S01Stage" -> "HqqbarS01-v1", "ReferencePDFPath" -> "/home/physics/project\
+s/AI_Assisted_SIDIS/scripts/Large_Transverse_Momentum_in_Semi-Inclusive_Deepl\
+y_Inelastic_Scattering_Beyond_Lowest_Order.pdf", 
+   "ReferencePDFSHA256" -> 
+    "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+   "BigTMDReferenceSHA256" -> 
+    <|"sidis.py" -> 
+      "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d", 
+     "Pg_fchn5A.py" -> 
+      "9314f660d6ba9e37c203cf010da2f9aee84e993958e5dd3ad7896fb33ac5b48b", 
+     "Pg_fchn5B.py" -> 
+      "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b", 
+     "Pg_fchn5C.py" -> 
+      "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b", 
+     "Ppp_fchn5A.py" -> 
+      "5c275d8ee0e01fa23e47e3ddef6d84150babc71ef01e391d75e3ed9f12f09a5e", 
+     "Ppp_fchn5B.py" -> 
+      "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b", 
+     "Ppp_fchn5C.py" -> 
+      "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b"|>, 
+   "BigTMDChannel" -> 5, "BigTMDChargeCase" -> 
+    "A only; B and C are exact zero modules"|>, 
+ "ExternalRealProcess" -> <|"Incoming" -> {"gamma*(q)", "q(p)"}, 
+   "Outgoing" -> {"qbar(k1, fragmenting)", "q(k2, spectator)", 
+     "q(k3, spectator)"}, "DiagramCount" -> 8, 
+   "CoherentChargeStrippedAmplitudeInput" -> 
+    "s01_result[NLOReal][Hqqbar;q_q][FeynCalcChargeStrippedAmplitudeSum]", 
+   "IdenticalSpectatorFactor" -> 
+    "one factor 1/2! remains deferred to the squared phase-space stage"|>, 
+ "VirtualRenormalization" -> <|"Applicable" -> False, 
+   "TwoBodyBornContributionAtThisOrder" -> 0, 
+   "OneLoopVirtualContributionAtThisOrder" -> 0, 
+   "LoopPoleContributionAtThisOrder" -> 0, 
+   "UVCountertermContributionAtThisOrder" -> 0, "ZeroMeaning" -> "These \
+sectors are absent at this perturbative order; no loop amplitude was \
+calculated and found to vanish.", "Reason" -> "Paper Table I gives Hqqbar at \
+O(alpha_s^2) only through the tree real H_{q qbar;q q} process."|>, 
+ "RealPayloadAudit" -> <|"DiagramCount" -> 8, "ReferenceAmplitudeCount" -> 8, 
+   "ChargeStrippedAmplitudeCount" -> 8, 
+   "ReferenceAmplitudeSumReconstructs" -> True, 
+   "ChargeStrippedAmplitudeSumReconstructs" -> True, 
+   "ExactChargeStripFactor" -> 3/2, "ExactChargeStripRelationPassed" -> True, 
+   "ExactChargeStripSumResidual" -> 0, "CoherentAmplitudeNonzero" -> True, 
+   "IndependentFlavorResidual" -> 0, "ContainsLoopOrRegulatorObject" -> 
+    False, "ContainsMachinePrecisionNumber" -> False, 
+   "ContainsScaleMu" -> False|>, 
+ "Checks" -> <|"ValidatedS01SourceHash" -> True, "ValidatedS01ResultHash" -> 
+    True, "PinnedPaperHash" -> True, "PinnedBigTMDHashes" -> True, 
+   "CompleteHqqbarS01Schema" -> True, "BigTMDChannel5CaseAOnly" -> True, 
+   "AllS01ChecksTrue" -> True, "PaperTableIRealOnlyLedger" -> True, 
+   "NoTwoBodyBornPayload" -> True, "NoVirtualPayload" -> True, 
+   "NoLoopPolePayload" -> True, "NoUVCountertermPayload" -> True, 
+   "SingleHqqbarRealPayload" -> True, "EightRealDiagramsPresent" -> True, 
+   "ReferenceAmplitudeSumReconstructs" -> True, 
+   "ChargeStrippedAmplitudeSumReconstructs" -> True, 
+   "ExactReferenceChargeStripRelation" -> True, 
+   "IndependentFlavorChargeCheckPassed" -> True, 
+   "FragmentingAntiquarkIsK1" -> True, 
+   "IdenticalSpectatorFactorDeferredOnce" -> True, 
+   "NoLoopObjectsOrRegulators" -> True, "NoMachinePrecisionNumbers" -> True, 
+   "NoPrematureScaleAttachment" -> True, "AtomicS04ResultWrite" -> True|>, 
+ "NotPerformed" -> {"amplitude regeneration or modification", 
+   "conjugation or coherent squared-matrix-element formation", 
+   "spin/color sums or incoming-quark averaging", 
+   "the deferred one 1/2! identical-spectator phase-space factor", 
+   "phase-space integration or dimensional scale attachment", 
+   "MS-bar PDF/FF collinear factorization", 
+   "projector contraction, F-hat inversion, or BigTMD comparison"}, 
+ "DownstreamInstruction" -> "A future Hqqbar S05 must form only the coherent \
+real Hqqbar;q_q bilinear from the accepted S01 amplitude. It must not seek or \
+invent a virtual amplitude in s04_result, and it must keep the single 1/2! \
+spectator factor deferred until the phase-space stage."|>

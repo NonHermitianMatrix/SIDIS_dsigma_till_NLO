@@ -1,0 +1,46 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S08_STAGE: validating the paper and accepted Hqqbar S07 handoff"
+"S08_STAGE: validating Appendix-D frame identities"
+"S08_STAGE: integrating the two Hqqbar projections serially"
+"S08_STAGE: exposing and combining Hqqbar Pg propagators"
+"S08_STAGE: Appendix D start Hqqbar;q q Pg, terms 4128"
+"S08_STAGE: Appendix D exact partitioned reconstruction Hqqbar;q q Pg, chunks 65 of at most 64 terms"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 8/65"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 16/65"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 24/65"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 32/65"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 40/65"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 48/65"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 56/65"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 64/65"
+"S08_STAGE: exact reconstruction Hqqbar;q q Pg chunk 65/65"
+"S08_STAGE: Appendix D partitioned reconstruction passed Hqqbar;q q Pg, terms 35250"
+"S08_STAGE: grouping angular masters for Hqqbar;q q Pg"
+"S08_STAGE: angular master count Hqqbar;q q Pg = 82"
+"S08_CHECKPOINT: completed ""Pg"" pre/physical leaf counts "InputForm[{346828, 346828}]
+"S08_STAGE: exposing and combining Hqqbar PPP propagators"
+"S08_STAGE: Appendix D start Hqqbar;q q PPP, terms 718"
+"S08_STAGE: Appendix D exact partitioned reconstruction Hqqbar;q q PPP, chunks 12 of at most 64 terms"
+"S08_STAGE: exact reconstruction Hqqbar;q q PPP chunk 8/12"
+"S08_STAGE: exact reconstruction Hqqbar;q q PPP chunk 12/12"
+"S08_STAGE: Appendix D partitioned reconstruction passed Hqqbar;q q PPP, terms 9876"
+"S08_STAGE: grouping angular masters for Hqqbar;q q PPP"
+"S08_STAGE: angular master count Hqqbar;q q PPP = 86"
+"S08_CHECKPOINT: completed ""PPP"" pre/physical leaf counts "InputForm[{197268, 197268}]
+"S08_STAGE: applying the exact zeta-to-s23 change of variables"
+"S08_STAGE: validating finalized per-projector caches"
+"S08_STAGE: atomically writing the Hqqbar S08 result"
+"S08_SUCCESS"
+"S08_PROGRAM_SHA256=2947bef60f303969ba451fc69cf1af76b0550a4f0d18bc2632d43568bf95bda6"
+"S08_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s08_result"
+"S08_RESULT_SHA256=163eea0d42febe7642abb106599aa7d8c594eed2e6888a62cc1dde7985ec0dec"
+"S08_CACHE_SHA256="InputForm[<|"Pg" -> "a762eb92f48397e9150c1c1aed22278979c4104642eede680f9eea7e32a8baec", "PPP" -> "57e7ae86126b054513258fdd8a125f8736151b7526fc6cf6e9bfad193947e03b"|>]
+"S08_CHECK_COUNT="36
+"S08_CASE2_MASTER_COUNT="59
+"S08_ANGULAR_LEAF_COUNTS="InputForm[<|"PreSymmetry" -> <|"Pg" -> 346828, "PPP" -> 197268|>, "Physical" -> <|"Pg" -> 346828, "PPP" -> 197268|>|>]
+"S08_TRANSFORMED_LEAF_COUNTS="InputForm[<|"Pg" -> 1986877, "PPP" -> 1298496|>]
+"S08_RESULT_BYTES="12328312

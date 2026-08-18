@@ -1,0 +1,772 @@
+<|"Status" -> "Complete", "Stage" -> "HqqbarS01-v1", 
+ "ResultSchemaVersion" -> 1, "Channel" -> "Hqqbar only", 
+ "Contribution" -> "H_{q qbar; q q}", "PerturbativeOrders" -> 
+  <|"FirstNonzeroHqqbar" -> 
+    "O(alpha_s^2): tree gamma* q -> qbar(fragmenting) q q", 
+   "TwoBodyBornAtThisOrder" -> "Absent", "VirtualAtThisOrder" -> "Absent"|>, 
+ "ProgramPath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s0\
+1_calculate_hqqbar_real.wl", "ProgramSHA256" -> 
+  "750d7c607f57b403d55ba36715a6700015c16fe7b831686204e89758912c4e71", 
+ "ReferencePDF" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Large_Tr\
+ansverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest\
+_Order.pdf", "ReferencePDFSHA256" -> 
+  "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+ "BigTMDConvention" -> 
+  <|"Repository" -> "https://github.com/JeffersonLab/BigTMD", 
+   "VerifiedCommit" -> "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c", 
+   "ReferencePaths" -> <|"sidis.py" -> "/home/physics/projects/AI_Assisted_SI\
+DIS/scripts/Hqq/bigTMD_check/BigTMD_reference/sidis.py", 
+     "Pg_fchn5A.py" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq/\
+bigTMD_check/BigTMD_reference/NLO/Pg/fchn5A.py", "Pg_fchn5B.py" -> "/home/phy\
+sics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO\
+/Pg/fchn5B.py", "Pg_fchn5C.py" -> "/home/physics/projects/AI_Assisted_SIDIS/s\
+cripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Pg/fchn5C.py", 
+     "Ppp_fchn5A.py" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq\
+/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5A.py", "Ppp_fchn5B.py" -> "/home/\
+physics/projects/AI_Assisted_SIDIS/scripts/Hqq/bigTMD_check/BigTMD_reference/\
+NLO/Ppp/fchn5B.py", "Ppp_fchn5C.py" -> "/home/physics/projects/AI_Assisted_SI\
+DIS/scripts/Hqq/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn5C.py"|>, 
+   "ReferenceSHA256" -> <|"sidis.py" -> 
+      "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d", 
+     "Pg_fchn5A.py" -> 
+      "9314f660d6ba9e37c203cf010da2f9aee84e993958e5dd3ad7896fb33ac5b48b", 
+     "Pg_fchn5B.py" -> 
+      "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b", 
+     "Pg_fchn5C.py" -> 
+      "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b", 
+     "Ppp_fchn5A.py" -> 
+      "5c275d8ee0e01fa23e47e3ddef6d84150babc71ef01e391d75e3ed9f12f09a5e", 
+     "Ppp_fchn5B.py" -> 
+      "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b", 
+     "Ppp_fchn5C.py" -> 
+      "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b"|>, 
+   "ChannelNumber" -> 5, "ChargeCase" -> 
+    "A only; B and C are exact zero modules", "ProjectorModules" -> 
+    {"NLO.Pg.fchn5A", "NLO.Ppp.fchn5A"}, "PhysicalLuminosity" -> 
+    "Sum_q e_q^2 f_q D_qbar", "DriverCaveat" -> "Pinned sidis.py omits \
+channel 5 from its NLO loop; call fchn5A explicitly downstream."|>, 
+ "GeneratedAt" -> "2026-08-17T20:25:44", 
+ "Software" -> <|"WolframVersion" -> 
+    "15.0.0 for Linux x86 (64-bit) (May 31, 2026)", 
+   "FeynCalcVersion" -> "10.2.1", "FeynArtsVersion" -> 
+    "FeynArts 3.11 (25 Mar 2022)"|>, "Conventions" -> 
+  <|"Dimension" -> HoldForm[D == 4 - 2*epsilon], 
+   "IncomingFields" -> {V[1], F[3, {1}]}, "OutgoingFields" -> 
+    {-F[3, {1}], F[3, {1}], F[3, {1}]}, "IncomingMomenta" -> {q, p}, 
+   "OutgoingMomenta" -> {k1, k2, k3}, "MomentumConservation" -> 
+    HoldForm[p + q == k1 + k2 + k3], "FragmentingParton" -> "qbar(k1)", 
+   "UnobservedPartons" -> "identical q(k2), q(k3)", 
+   "IdenticalSpectatorFactor" -> 
+    "one factor 1/2! deferred to the squared phase-space stage", 
+   "Masses" -> "all quarks massless", "AmplitudeCouplingOrder" -> 
+    HoldForm[EL*gs^2], "SavedAmplitudeChargeConvention" -> 
+    "divided by Q_ref=2/3 using exact factor 3/2; EL retained", 
+   "DimensionalScaleConvention" -> "no ScaleMu power attached at \
+amplitude-only S01; downstream attachment must follow README.md"|>, 
+ "ElectricChargeNormalization" -> 
+  <|"FeynArtsReferenceField" -> "F[3,{1}] up type", "ReferenceCharge" -> 2/3, 
+   "AmplitudeStripFactor" -> 3/2, "IndependentValidationField" -> 
+    "F[4,{1}] down type", "IndependentValidationCharge" -> -1/3, 
+   "IndependentValidationStripFactor" -> -3, 
+   "IndependentChargeStripResidual" -> 0, "PhysicalChargeWeightDeferred" -> 
+    "Sum_q e_q^2 f_q D_qbar"|>, "DiagramCounts" -> 
+  <|"NLOReal_gammaStar_q_to_qbar_q_q" -> 8, 
+   "IndependentDownFlavorValidationOnly" -> 8, 
+   "ProductionQCDDiagramsAtThisStage" -> 8|>, 
+ "NLOReal" -> <|"Hqqbar;q_q" -> <|"DiagramCount" -> 8, 
+     "DiagramNumbersInSMQCDGeneration" -> {5, 10, 15, 20, 25, 30, 35, 40}, 
+     "FeynArtsDiagrams" -> TopologyList[Process -> 
+         {V[1], F[3, {1, Index[Colour, 2]}]} -> 
+          {-F[3, {1, Index[Colour, 3]}], F[3, {1, Index[Colour, 4]}], 
+           F[3, {1, Index[Colour, 5]}]}, Model -> {"SMQCD"}, 
+        GenericModel -> {"Lorentz"}, InsertionLevel -> {Particles}, 
+        ExcludeParticles -> {}, ExcludeFieldPoints -> {}, 
+        LastSelections -> {}][Topology[1][Propagator[Incoming][Vertex[1][1], 
+          Vertex[3][6], Field[1]], Propagator[Incoming][Vertex[1][2], 
+          Vertex[3][6], Field[2]], Propagator[Outgoing][Vertex[1][3], 
+          Vertex[3][7], Field[3]], Propagator[Outgoing][Vertex[1][4], 
+          Vertex[3][7], Field[4]], Propagator[Outgoing][Vertex[1][5], 
+          Vertex[3][8], Field[5]], Propagator[Internal][Vertex[3][6], 
+          Vertex[3][8], Field[6]], Propagator[Internal][Vertex[3][7], 
+          Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            -F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][6], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][7], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            -F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            -F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 3]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][7], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            -F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 3]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][6], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][7], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            -F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][6], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            -F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            -F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            -F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 5]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]]], "FeynArtsRawAmplitudes" -> 
+      {FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 5], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          -FourMomentum[Outgoing, 1] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[-FourMomentum[Outgoing, 1] - 
+           FourMomentum[Outgoing, 2] - FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 3]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 3]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 2]], FANonCommutative[
+           FADiracSlash[FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 
+               2] + FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 10], Integral[], I*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          -FourMomentum[Outgoing, 1] - FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Outgoing, 1] - 
+           FourMomentum[Outgoing, 2] - FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 5], Index[Colour, 3]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 3]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]], FANonCommutative[
+           FADiracSlash[FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 
+               2] + FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 15], Integral[], I*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[FourMomentum[Incoming, 2] - 
+           FourMomentum[Outgoing, 2] - FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 3]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 3]], FANonCommutative[
+           FADiracSlash[-FourMomentum[Incoming, 2] + FourMomentum[Outgoing, 
+               2] + FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 20], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[FourMomentum[Incoming, 2] - 
+           FourMomentum[Outgoing, 2] - FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 5], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 2]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 3]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 3]], FANonCommutative[
+           FADiracSlash[-FourMomentum[Incoming, 2] + FourMomentum[Outgoing, 
+               2] + FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 25], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 5], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 2]]]*FermionChain[
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               1] - FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 3]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 3]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 30], Integral[], I*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 3]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 5], Index[Colour, 3]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 3]]]*FermionChain[
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               1] - FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 35], Integral[], I*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 2], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*FermionChain[
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               1] - FourMomentum[Outgoing, 2]] + FCGV["MU"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 3]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 3]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 40], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 2], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 3]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 3]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 3]]]*FermionChain[
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               1] - FourMomentum[Outgoing, 2]] + FCGV["MU"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 5], Index[Colour, 2]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]]}, 
+     "FeynCalcReferenceChargeAmplitudesPerDiagram" -> 
+      {-(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]), 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+         DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+          DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]], 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+         DiracGamma[Momentum[k2 + k3 - p, D], D] . (((-2*I)/3)*
+          DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]], 
+       -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+          DiracGamma[Momentum[k2 + k3 - p, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col4], SUNFIndex[Col3]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+         Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]), 
+       FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]], 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 
+          0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]], 
+       -(FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k2 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor2, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col5], SUNFIndex[Col2]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]])}, 
+     "FeynCalcReferenceChargeAmplitudeSum" -> 
+      FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 
+          0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+         DiracGamma[Momentum[k2 + k3 - p, D], D] . (((-2*I)/3)*
+          DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+         DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+          DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k2 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+          0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+         DiracGamma[Momentum[k2 + k3 - p, D], D] . (((-2*I)/3)*
+          DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]] + 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+         DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+          DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]] + 
+       FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]], 
+     "FeynCalcChargeStrippedAmplitudesPerDiagram" -> 
+      {(-3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]])/2, 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]])/2, 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+          DiracGamma[Momentum[k2 + k3 - p, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])/2, 
+       (-3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+          DiracGamma[Momentum[k2 + k3 - p, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]])/2, 
+       (-3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col4], SUNFIndex[Col3]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+         Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]])/2, 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor2, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col4], SUNFIndex[Col2]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]])/2, 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k2 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col5], SUNFIndex[Col3]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])/2, 
+       (-3*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k2 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor2, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col5], SUNFIndex[Col2]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]])/2}, 
+     "FeynCalcChargeStrippedAmplitudeSum" -> 
+      (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k2 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col5], SUNFIndex[Col3]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k2 - p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])/2 + 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]]) . 
+          DiracGamma[Momentum[k2 + k3 - p, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])/2 - 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]])/2 - 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k2 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor2, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col5], SUNFIndex[Col2]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k2, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k2 - p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]])/2 - 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col4], SUNFIndex[Col3]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+         Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]])/2 - 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col3]]) . 
+          DiracGamma[Momentum[k2 + k3 - p, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k3 + p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 - k3 + p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col2]])/2 + 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]])/2 + 
+       (3*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor2, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col4], SUNFIndex[Col2]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col5], SUNFIndex[Col3]])/2, 
+     "UnfilteredSMQCDAmplitudeCount" -> 40, "UnfilteredCouplingSignatures" -> 
+      <|{3, 0} -> 32, {1, 2} -> 8|>|>|>, "ValidationOnly" -> 
+  <|"DownFlavorDiagramCount" -> 8, 
+   "DownFlavorUnfilteredCouplingSignatures" -> <|{3, 0} -> 32, {1, 2} -> 8|>, 
+   "ChargeStrippedCoherentAmplitudeResidual" -> 0, 
+   "ProductionPayloadContainsDownFlavorAmplitudes" -> False|>, 
+ "Checks" -> <|"PaperTableIRealOnlyProcess" -> True, 
+   "BigTMDChannel5CaseAOnly" -> True, "FragmentingLegIsAntiquarkK1" -> True, 
+   "SpectatorsAreIdenticalQuarksK2K3" -> True, 
+   "IdenticalSpectatorFactorDeferredExactlyOnce" -> True, 
+   "ExactEightDiagramCount" -> True, 
+   "EverySelectedDiagramHasCouplingOrderEL1GS2" -> True, 
+   "ReferenceFieldIsUpTypeWithExactChargeTwoThirds" -> True, 
+   "SavedAmplitudeIsChargeStripped" -> True, 
+   "IndependentDownFlavorChargeStripAgrees" -> True, "NoLoopObjects" -> True, 
+   "NoUVOrIRLoopRegulators" -> True, "NoMachinePrecisionNumbers" -> True, 
+   "ReferenceHashesMatchPinnedInputs" -> True, "AtomicResultWrite" -> True|>, 
+ "AbsentAtThisOrder" -> {"Hqqbar two-body Born hard part", 
+   "Hqqbar one-loop virtual hard part", "Hqqbar UV counterterm amplitudes"}, 
+ "NotIncludedAtThisStage" -> 
+  {"amplitude conjugation and coherent squared matrix element", 
+   "spin and color sums and incoming-quark averaging", 
+   "the one 1/2! identical-spectator phase-space factor", 
+   "three-body phase-space angular integration", 
+   "dimensional renormalization-scale attachment", 
+   "MS-bar PDF/FF collinear factorization subtractions", 
+   "projector contraction and F-hat inversion", 
+   "explicit BigTMD channel-5A numerical comparison"}|>

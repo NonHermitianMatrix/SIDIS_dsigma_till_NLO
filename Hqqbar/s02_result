@@ -1,0 +1,49 @@
+<|"Status" -> "Complete", "Stage" -> "HqqbarS02-v1", 
+ "ResultSchemaVersion" -> 1, "Channel" -> "Hqqbar only", 
+ "Purpose" -> "FeynArts diagram visualization/provenance only", 
+ "ProgramPath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s0\
+2_export_hqqbar_diagrams_postscript.wl", "ProgramSHA256" -> 
+  "96c0982c4dc95d4174a3866248936ba110db3ab8b29bf1203cc0e9997c6ca49c", 
+ "GeneratedAt" -> "2026-08-17T20:37:46", 
+ "Input" -> <|"S01SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/sc\
+ripts/Hqqbar/s01_calculate_hqqbar_real.wl", "S01SourceSHA256" -> 
+    "750d7c607f57b403d55ba36715a6700015c16fe7b831686204e89758912c4e71", 
+   "S01ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/s01_result", 
+   "S01ResultSHA256" -> 
+    "69401e04b6ad1c3023da1a91155b7a90876510e273e4a2183bd11a7bcf9ab3b4", 
+   "S01Stage" -> "HqqbarS01-v1", "BigTMDChannel" -> 5, 
+   "BigTMDChargeCase" -> "A only; B and C are exact zero modules"|>, 
+ "DiagramSets" -> <|"Hqqbar;q_q" -> 
+    <|"Label" -> "NLO real Hqqbar;q q: gamma* q -> qbar(fragmenting) q q", 
+     "DiagramCount" -> 8, "RegeneratedAmplitudeCount" -> 8|>|>, 
+ "Layout" -> <|"ColumnsXRows" -> {3, 3}, "DiagramsPerPhysicalPage" -> 9, 
+   "DiagramSetObjectCount" -> 1, "PhysicalPageCount" -> 1|>, 
+ "PostScript" -> <|"Directory" -> "/home/physics/projects/AI_Assisted_SIDIS/s\
+cripts/Hqqbar/.s02_ghostscript/pages", 
+   "Paths" -> {"/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/.s02_\
+ghostscript/pages/s02_set_001.ps"}, 
+   "Bytes" -> <|"/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/.s02\
+_ghostscript/pages/s02_set_001.ps" -> 13181|>, 
+   "SHA256" -> <|"/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/.s0\
+2_ghostscript/pages/s02_set_001.ps" -> 
+      "2c6c53a2f422307eab66eb5e92e916a092277ef89c2ff89097856275b3a1b48d"|>, 
+   "PhysicalPageCounts" -> <|"/home/physics/projects/AI_Assisted_SIDIS/script\
+s/Hqqbar/.s02_ghostscript/pages/s02_set_001.ps" -> 1|>|>, 
+ "Checks" -> <|"ValidatedS01SourceHash" -> True, "ValidatedS01ResultHash" -> 
+    True, "S01CheckLedgerAllTrue" -> True, "PaperTableIRealOnlyPayload" -> 
+    True, "BigTMDChannel5CaseA" -> True, "SingleHqqbarDiagramSetOnly" -> 
+    True, "ExactStoredDiagramCountEight" -> True, 
+   "RegeneratedAmplitudeCountEight" -> True, 
+   "ParametrizedTopologyListAccepted" -> True, 
+   "ParametrizedFeynArtsGraphicsAccepted" -> True, 
+   "ThreeByThreeLayout" -> True, "OneDiagramSetObject" -> True, 
+   "OnePhysicalPostScriptPage" -> True, 
+   "PostScriptHeaderAndPageMarkersValid" -> True, 
+   "AtomicPostScriptWrite" -> True, "NoStaleOrExtraPostScriptFiles" -> True, 
+   "VisualizationOnlyNoPhysicsAlgebra" -> True, "AtomicS02ResultWrite" -> 
+    True|>, "NotPerformed" -> {"amplitude or squared-matrix-element algebra", 
+   "spin/color sums or identical-particle factors", 
+   "phase-space integration or factorization", 
+   "projector contraction or F-hat inversion", 
+   "PDF assembly or BigTMD numerical comparison"}|>

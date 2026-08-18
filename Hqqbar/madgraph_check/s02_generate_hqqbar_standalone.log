@@ -1,0 +1,81 @@
+WARNING:root:[91mpython3.12+ support: For reweighting feature, please use 3.6.X release.[0m
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.7.0                 2026-01-05         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from scripts/Hqqbar/madgraph_check/software/MG5_aMC_v3_7_0/input/mg5_configuration.txt 
+set fastjet to fastjet-config
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid web browser found. Please set in ./input/mg5_configuration.txt
+Using default gzip "pigz". Set another one in ./input/mg5_configuration.txt
+import /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/madgraph_check/s02_generate_hqqbar_standalone.mg5
+The import format was not given, so we guess it as command
+set stdout_level INFO
+set output information to level: 20
+set group_subprocesses False
+Set group_subprocesses to False
+Note that you need to regenerate all processes
+import model sm
+INFO: Restrict model sm with file scripts/Hqqbar/madgraph_check/software/MG5_aMC_v3_7_0/models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+generate e- u > e- u u u~ / z h QED=2 QCD=2 @1
+[1;34mInterpreting 'QCD=2' as 'QCD<=2'[0m
+[1;34mInterpreting 'QED=2' as 'QED<=2'[0m
+INFO: Trying process: e- u > e- u u u~ QCD<=2 QED<=2 / z h @1  
+INFO: Process has 8 diagrams 
+1 processes with 8 diagrams generated in 0.012 s
+Total: 1 processes with 8 diagrams
+output standalone scripts/Hqqbar/madgraph_check/generated_process --prefix=int
+INFO: initialize a new standalone directory: generated_process 
+INFO: Generating Helas calls for process: e- u > e- u u u~ QCD<=2 QED<=2 / z h @1 
+INFO: Processing color information for process: e- u > e- u u u~ QCD<=2 QED<=2 / z h @1 
+INFO: Creating files in directory /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/madgraph_check/generated_process/SubProcesses/P1_emu_emuuux_no_zh 
+INFO: Generating Feynman diagrams for Process: e- u > e- u u u~ QCD<=2 QED<=2 / z h @1 
+Generated helas calls for 1 subprocesses (8 diagrams) in 0.014 s
+Wrote files for 23 helas calls in 0.010 s
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates 1 routines in  0.033 s
+INFO: Use Fortran compiler gfortran 
+INFO: Running make for Source directory 
+Output to directory /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/madgraph_check/generated_process done.
+quit
+quit

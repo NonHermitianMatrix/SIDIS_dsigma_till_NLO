@@ -1,0 +1,25 @@
+<|"CacheVersion" -> 1, "StageVersion" -> "HqqbarS12-v1", 
+ "ProgramSHA256" -> 
+  "b56647afa5e8cb07bbaccce9bdeff84552cd9d3ef968deec543cd11a4f599e9f", 
+ "S10SHA256" -> 
+  "57e637d3eca490dfe08e341d866e5fa08ec1d69b14c7c476cf17c51890a65cb6", 
+ "Projector" -> "PPP", "Field" -> "IntegrandPhiS", "Family" -> "Regular", 
+ "Position" -> 24, "TermSHA256" -> 
+  "3dbd9ab3c1ed9e5de0077c9105e5784a96080036d2ddd03c5e0224e0c805b04f", 
+ "Powers" -> {-2, -1, 0}, "Coefficients" -> <|-2 -> 0, -1 -> 0, 
+   0 -> ((-s23 + Q2*(-1 + xi/xB))^2*((PHT2*xB^2)/xi^2 + 
+       (Q2*xB*(1 - xB/xi)*zH^2)/xi)*
+      ((-3*xB*(-(PHT2*xB) + Q2*xB*zH^2 - Q2*xi*zH^2)*FCGV["EL"]^2*
+         SMP["g_s"]^4)/(Q2*SUNN*xi*(-(PHT2*s23*xB) + PHT2*Q2*xi + 
+          Q2*s23*xB*zH^2)) + (3*CA^2*xB*(-(PHT2*xB) + Q2*xB*zH^2 - 
+          Q2*xi*zH^2)*FCGV["EL"]^2*SMP["g_s"]^4)/(Q2*SUNN*xi*
+         (-(PHT2*s23*xB) + PHT2*Q2*xi + Q2*s23*xB*zH^2))))/
+     (768*Pi^5*(Q2*(1 - xB/xi) - (s23*xB)/xi)^2*zH)|>, 
+ "ProvenanceMigration" -> <|"FromProgramSHA256" -> 
+    "4341ba8d3280365ea8a26ad7403c76221acf0e9fb7eb1f33efd5bd79e52bc42e", 
+   "ToProgramSHA256" -> 
+    "b56647afa5e8cb07bbaccce9bdeff84552cd9d3ef968deec543cd11a4f599e9f", 
+   "OriginalFileSHA256" -> 
+    "337fbe86e362096cce2b387ba80ca4a1a1ac1d95d5a197372b6277afd7a19467", 
+   "Reason" -> "downstream-only SUNN-to-CA combination canonicalization", 
+   "CoefficientChanged" -> False|>|>
