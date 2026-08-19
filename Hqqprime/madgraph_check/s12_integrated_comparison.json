@@ -1,0 +1,57 @@
+{
+  "acceptance_fraction": 0.23209166666666667,
+  "accepted_events": 27851,
+  "checks": {
+    "accepted_and_total_counts_exact": true,
+    "correlation_above_0p999999999": true,
+    "difference_below_one_millionth_of_mg_mc_error": true,
+    "input_hashes_exact": true,
+    "integrated_relative_difference_below_5e-12": true,
+    "madgraph_integral_reproduces_s10_metadata": true,
+    "stored_signed_differences_reconstruct": true
+  },
+  "correlated_difference_standard_error_pb": 1.236237905096582e-19,
+  "cuts": {
+    "min_minus_ti_over_shat_plus_2q2": 0.03,
+    "min_minus_ui_over_shat_plus_q2": 0.05,
+    "min_sij_over_shat": 0.05,
+    "q2_over_s_max": 0.4,
+    "q2_over_s_min": 0.08,
+    "shat_over_s_max": 0.75,
+    "shat_over_s_min": 0.25
+  },
+  "difference_in_correlated_standard_errors": 1.6006417299339597,
+  "difference_relative_to_madgraph_mc_error": 2.9758249145085484e-14,
+  "input_sha256": {
+    "s10_cut_phase_space_metadata.json": "ac6a208789613ffc39a2eca5a9c7a6ee3017d75e1388a6ca68252aeb30721350",
+    "s11_local_vs_madgraph_points.csv": "15d1fc2fa1bad06ddeaccecaed55d7627b3915e2bbe8140fc6e48e32c1e91f28",
+    "s11_pointwise_comparison.json": "27bd819e827041825c440449231f784797c8ac716c676d32561702beaf080ceb"
+  },
+  "integrated_relative_difference": 5.700336579882155e-16,
+  "local_minus_madgraph_cross_section_pb": -1.9787739790237273e-19,
+  "local_projected_cross_section_pb": 0.0003471328317712485,
+  "local_standard_error_pb": 6.64949731879812e-06,
+  "madgraph_cross_section_pb": 0.00034713283177124866,
+  "madgraph_metadata_reproduction_relative_difference": 0.0,
+  "madgraph_standard_error_pb": 6.6494973187981314e-06,
+  "maximum_stored_difference_reconstruction_residual": 0.0,
+  "phase_space_and_flux_normalization": {
+    "common_factor_gev2": 0.06648282151394422,
+    "estimator": "sigma = Phi_4(s)/(2s) * (1/N_trials) * sum_{accepted} matrix_element_squared",
+    "gev_minus2_to_pb": 389379338.0,
+    "incoming_flux_inverse_gev_minus2": 5e-07,
+    "massless_four_body_phase_space_volume_gev4": 132965.64302788844
+  },
+  "pointwise_summary": {
+    "maximum_relative_difference": 2.1785777046371065e-11,
+    "median_relative_difference": 2.7475033404301907e-15,
+    "relative_difference_99th_percentile": 6.705715431613466e-14
+  },
+  "ratio_local_to_madgraph": 0.9999999999999996,
+  "sample_correlation": 1.0,
+  "source_sha256": "467929e82f13750f6d05de8de3475949dfd9f2c933c7655c01dff6d73e80efd9",
+  "sqrt_s_gev": 1000.0,
+  "stage": "HqqprimeFiniteCutIntegratedComparison-v1",
+  "status": "complete",
+  "total_rambo_trials": 120000
+}

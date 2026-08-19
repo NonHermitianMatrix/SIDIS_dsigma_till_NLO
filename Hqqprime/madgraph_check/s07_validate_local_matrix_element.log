@@ -1,0 +1,22 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S07_STAGE: loading copied Hqqprime tensors and projections"
+"S07_STAGE: reducing charge tensor IncomingChargeSquared"
+"S07_CHARGE_RESULT: IncomingChargeSquared Pg=0 PPP=0"
+"S07_STAGE: reducing charge tensor PrimeChargeSquared"
+"S07_CHARGE_RESULT: PrimeChargeSquared Pg=0 PPP=0"
+"S07_STAGE: reducing charge tensor MixedIncomingPrimeCharge"
+"S07_CHARGE_RESULT: MixedIncomingPrimeCharge Pg=0 PPP=0"
+"S07_STAGE: physical up/charm reconstruction"
+"S07_INCOMING_CHARGE="InputForm[2/3]
+"S07_PRIME_CHARGE="InputForm[2/3]
+"S07_LOCAL_TENSOR_MATRIX="InputForm[2.804378302461033756014673089769852950933260811313`30.*^-10]
+"S07_MADGRAPH_LABELED_MATRIX="InputForm[2.804378302461032*^-10]
+"S07_TENSOR_MADGRAPH_RELATIVE="InputForm[5.530507946006608*^-16]
+"S07_PHYSICAL_PG="InputForm[-0.0000143992684918261482523988005374891747750196068956627634`40.]
+"S07_PHYSICAL_PPP="InputForm[33.1477297139387230855782766601453147823495695284314866036259`40.]
+"S07_SUCCESS"
+"S07_OUTPUT=""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/s07_local_tensor_and_projections.json"

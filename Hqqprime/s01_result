@@ -1,0 +1,2472 @@
+<|"Status" -> "Complete", "Stage" -> "HqqprimeS01-v1", 
+ "Channel" -> "Hqqprime only", "Process" -> 
+  "gamma*(q) + q(p) -> qPrime(k1) + q(k2) + qbarPrime(k3)", 
+ "PerturbativeOrder" -> 
+  "tree 2->3 contribution to the O(alpha_s^2) hard part", 
+ "GeneratedAt" -> "2026-08-18T18:35:02", "Program" -> "/home/physics/projects\
+/AI_Assisted_SIDIS/scripts/Hqqprime/s01_calculate_hqqprime_tree.wl", 
+ "ProgramSHA256" -> 
+  "17ed0c69c0c440a63b93a41d7634eade24a948543618a09769eea937427877a4", 
+ "ReferencePDF" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Large_Tr\
+ansverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest\
+_Order.pdf", "ReferencePDFSHA256" -> 
+  "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+ "Software" -> <|"WolframVersion" -> 
+    "15.0.0 for Linux x86 (64-bit) (May 31, 2026)", 
+   "FeynCalcVersion" -> "10.2.1", "FeynArtsVersion" -> 
+    "FeynArts 3.11 (25 Mar 2022)", "FeynArtsModel" -> "SMQCD"|>, 
+ "Conventions" -> <|"Dimension" -> HoldForm[D == 4 - 2*epsilon], 
+   "IncomingMomenta" -> {q, p}, "OutgoingMomenta" -> {k1, k2, k3}, 
+   "FragmentingMomentum" -> k1, "FragmentingFlavor" -> 
+    "qPrime different from incoming q", "UnobservedOrderedFlavors" -> 
+    {"q", "qbarPrime"}, "Masses" -> "all quarks massless", 
+   "ElectromagneticCouplingRetained" -> True, 
+   "StrongCouplingPowerInAmplitude" -> 2, "NoFlavorMultiplicityApplied" -> 
+    True|>, "ModelElectricQuantumNumbers" -> <|"F3" -> (2*Charge)/3, 
+   "F4" -> -1/3*Charge|>, "ModelChargeCoefficients" -> 
+  <|"UpType" -> 2/3, "DownType" -> -1/3|>, 
+ "RepresentativeChargeAssignments" -> 
+  <|"up_up" -> <|"IncomingCharge" -> 2/3, "PrimeCharge" -> 2/3|>, 
+   "up_down" -> <|"IncomingCharge" -> 2/3, "PrimeCharge" -> -1/3|>, 
+   "down_up" -> <|"IncomingCharge" -> -1/3, "PrimeCharge" -> 2/3|>|>, 
+ "MeasuredSelectedDiagramCounts" -> <|"up_up" -> 4, "up_down" -> 4, 
+   "down_up" -> 4|>, "Representatives" -> 
+  <|"up_up" -> <|"Label" -> "up_up", "IncomingField" -> F[3, {1}], 
+     "PrimeField" -> F[3, {2}], "OutgoingFields" -> {F[3, {2}], F[3, {1}], 
+       -F[3, {2}]}, "IncomingMomenta" -> {q, p}, "OutgoingMomenta" -> 
+      {k1, k2, k3}, "Topologies" -> TopologyList[
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]]], 
+     "AllInsertionDiagrams" -> 
+      TopologyList[Process -> {V[1], F[3, {1, Index[Colour, 2]}]} -> 
+          {F[3, {2, Index[Colour, 3]}], F[3, {1, Index[Colour, 4]}], 
+           -F[3, {2, Index[Colour, 5]}]}, Model -> {"SMQCD"}, 
+        GenericModel -> {"Lorentz"}, InsertionLevel -> {Particles}, 
+        ExcludeParticles -> {}, ExcludeFieldPoints -> {}, 
+        LastSelections -> {}][Topology[1][Propagator[Incoming][Vertex[1][1], 
+          Vertex[3][6], Field[1]], Propagator[Incoming][Vertex[1][2], 
+          Vertex[3][6], Field[2]], Propagator[Outgoing][Vertex[1][3], 
+          Vertex[3][7], Field[3]], Propagator[Outgoing][Vertex[1][4], 
+          Vertex[3][8], Field[4]], Propagator[Outgoing][Vertex[1][5], 
+          Vertex[3][7], Field[5]], Propagator[Internal][Vertex[3][6], 
+          Vertex[3][8], Field[6]], Propagator[Internal][Vertex[3][7], 
+          Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 1][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][6], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {2, Index[Colour, 3]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {2, Index[Colour, 3]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {2, Index[Colour, 3]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {2, Index[Colour, 3]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {2, Index[Colour, 5]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]]], "UnfilteredSMQCDAmplitudeCount" -> 
+      20, "UnfilteredCouplingSignatures" -> <|{3, 0} -> 16, {1, 2} -> 4|>, 
+     "SelectedDiagramNumbers" -> {5, 10, 15, 20}, "SelectedDiagramCount" -> 
+      4, "SelectedDiagrams" -> 
+      TopologyList[Process -> {V[1], F[3, {1, Index[Colour, 2]}]} -> 
+          {F[3, {2, Index[Colour, 3]}], F[3, {1, Index[Colour, 4]}], 
+           -F[3, {2, Index[Colour, 5]}]}, Model -> {"SMQCD"}, 
+        GenericModel -> {"Lorentz"}, InsertionLevel -> {Particles}, 
+        ExcludeParticles -> {}, ExcludeFieldPoints -> {}, 
+        LastSelections -> {}][Topology[1][Propagator[Incoming][Vertex[1][1], 
+          Vertex[3][6], Field[1]], Propagator[Incoming][Vertex[1][2], 
+          Vertex[3][6], Field[2]], Propagator[Outgoing][Vertex[1][3], 
+          Vertex[3][7], Field[3]], Propagator[Outgoing][Vertex[1][4], 
+          Vertex[3][8], Field[4]], Propagator[Outgoing][Vertex[1][5], 
+          Vertex[3][7], Field[5]], Propagator[Internal][Vertex[3][6], 
+          Vertex[3][8], Field[6]], Propagator[Internal][Vertex[3][7], 
+          Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {2, Index[Colour, 3]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][6], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {2, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {2, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {2, Index[Colour, 5]}], Field[6] -> 
+             F[3, {2, Index[Colour, 5]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]]], "SelectedRawAmplitudes" -> 
+      {FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 5], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          -FourMomentum[Outgoing, 1] - FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Outgoing, 1] - 
+           FourMomentum[Outgoing, 2] - FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]], FANonCommutative[
+           FADiracSlash[FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 
+               2] + FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 10], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 2] + FourMomentum[Outgoing, 3], FCGV["MC"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*FermionChain[
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               2] - FourMomentum[Outgoing, 3]] + FCGV["MC"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 15], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 3]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*FermionChain[
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               1] - FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 20], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[FourMomentum[Incoming, 2] - 
+           FourMomentum[Outgoing, 1] - FourMomentum[Outgoing, 2], FCGV["MC"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]], FANonCommutative[
+           FADiracSlash[-FourMomentum[Incoming, 2] + FourMomentum[Outgoing, 
+               1] + FourMomentum[Outgoing, 2]] + FCGV["MC"]], 
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]]}, 
+     "FeynCalcAmplitudesPerDiagram" -> 
+      {-(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k2 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col3], SUNFIndex[Col5]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor2, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col4], SUNFIndex[Col2]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) . 
+          DiracGamma[Momentum[k1 + k2 - p, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])}, 
+     "FeynCalcAmplitudeSum" -> -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) - 
+       FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 
+          0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) . 
+         DiracGamma[Momentum[k1 + k2 - p, D], D] . (((-2*I)/3)*
+          DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]|>, 
+   "up_down" -> <|"Label" -> "up_down", "IncomingField" -> F[3, {1}], 
+     "PrimeField" -> F[4, {1}], "OutgoingFields" -> {F[4, {1}], F[3, {1}], 
+       -F[4, {1}]}, "IncomingMomenta" -> {q, p}, "OutgoingMomenta" -> 
+      {k1, k2, k3}, "Topologies" -> TopologyList[
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]]], 
+     "AllInsertionDiagrams" -> 
+      TopologyList[Process -> {V[1], F[3, {1, Index[Colour, 2]}]} -> 
+          {F[4, {1, Index[Colour, 3]}], F[3, {1, Index[Colour, 4]}], 
+           -F[4, {1, Index[Colour, 5]}]}, Model -> {"SMQCD"}, 
+        GenericModel -> {"Lorentz"}, InsertionLevel -> {Particles}, 
+        ExcludeParticles -> {}, ExcludeFieldPoints -> {}, 
+        LastSelections -> {}][Topology[1][Propagator[Incoming][Vertex[1][1], 
+          Vertex[3][6], Field[1]], Propagator[Incoming][Vertex[1][2], 
+          Vertex[3][6], Field[2]], Propagator[Outgoing][Vertex[1][3], 
+          Vertex[3][7], Field[3]], Propagator[Outgoing][Vertex[1][4], 
+          Vertex[3][8], Field[4]], Propagator[Outgoing][Vertex[1][5], 
+          Vertex[3][7], Field[5]], Propagator[Internal][Vertex[3][6], 
+          Vertex[3][8], Field[6]], Propagator[Internal][Vertex[3][7], 
+          Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 1][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][6], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> -S[3]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> -V[3]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 2]}], Field[7] -> -S[3]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 2]}], Field[7] -> -V[3]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][6], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[7] -> -S[3]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[7] -> -V[3]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 4]}], Field[7] -> -S[3]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 4]}], Field[7] -> -V[3]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> S, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> S[3], 
+            Field[7] -> -S[3]]], FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> S, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> S[3], 
+            Field[7] -> -V[3]]], FeynmanGraph[1, Generic == 3][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> V, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> V[3], 
+            Field[7] -> -S[3]]], FeynmanGraph[1, Generic == 4][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> V, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> V[3], 
+            Field[7] -> -V[3]]]], Topology[1][Propagator[Incoming][
+          Vertex[1][1], Vertex[3][6], Field[1]], Propagator[Incoming][
+          Vertex[1][2], Vertex[3][7], Field[2]], Propagator[Outgoing][
+          Vertex[1][3], Vertex[3][8], Field[3]], Propagator[Outgoing][
+          Vertex[1][4], Vertex[3][6], Field[4]], Propagator[Outgoing][
+          Vertex[1][5], Vertex[3][8], Field[5]], Propagator[Internal][
+          Vertex[3][6], Vertex[3][7], Field[6]], Propagator[Internal][
+          Vertex[3][7], Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 1][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 3]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 3]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 3]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 3]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 5]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]]], "UnfilteredSMQCDAmplitudeCount" -> 
+      32, "UnfilteredCouplingSignatures" -> <|{3, 0} -> 28, {1, 2} -> 4|>, 
+     "SelectedDiagramNumbers" -> {5, 12, 27, 32}, "SelectedDiagramCount" -> 
+      4, "SelectedDiagrams" -> 
+      TopologyList[Process -> {V[1], F[3, {1, Index[Colour, 2]}]} -> 
+          {F[4, {1, Index[Colour, 3]}], F[3, {1, Index[Colour, 4]}], 
+           -F[4, {1, Index[Colour, 5]}]}, Model -> {"SMQCD"}, 
+        GenericModel -> {"Lorentz"}, InsertionLevel -> {Particles}, 
+        ExcludeParticles -> {}, ExcludeFieldPoints -> {}, 
+        LastSelections -> {}][Topology[1][Propagator[Incoming][Vertex[1][1], 
+          Vertex[3][6], Field[1]], Propagator[Incoming][Vertex[1][2], 
+          Vertex[3][6], Field[2]], Propagator[Outgoing][Vertex[1][3], 
+          Vertex[3][7], Field[3]], Propagator[Outgoing][Vertex[1][4], 
+          Vertex[3][8], Field[4]], Propagator[Outgoing][Vertex[1][5], 
+          Vertex[3][7], Field[5]], Propagator[Internal][Vertex[3][6], 
+          Vertex[3][8], Field[6]], Propagator[Internal][Vertex[3][7], 
+          Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[3, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 2]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 3]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][6], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+            F[4, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[3, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[4, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[3, {1, Index[Colour, 4]}], Field[5] -> 
+             F[4, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 5]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]]], "SelectedRawAmplitudes" -> 
+      {FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 5], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          -FourMomentum[Outgoing, 1] - FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Outgoing, 1] - 
+           FourMomentum[Outgoing, 2] - FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]], FANonCommutative[
+           FADiracSlash[FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 
+               2] + FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 12], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 2] + FourMomentum[Outgoing, 3], FCGV["MD"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*FermionChain[
+          (I/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] + 
+           (I/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               2] - FourMomentum[Outgoing, 3]] + FCGV["MD"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 27], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 3]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*FermionChain[
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               1] - FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 32], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[FourMomentum[Incoming, 2] - 
+           FourMomentum[Outgoing, 1] - FourMomentum[Outgoing, 2], FCGV["MD"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]], FANonCommutative[
+           FADiracSlash[-FourMomentum[Incoming, 2] + FourMomentum[Outgoing, 
+               1] + FourMomentum[Outgoing, 2]] + FCGV["MD"]], 
+          (I/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] + 
+           (I/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]]}, 
+     "FeynCalcAmplitudesPerDiagram" -> 
+      {-(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k2 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col3], SUNFIndex[Col5]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor2, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col4], SUNFIndex[Col2]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) . 
+          DiracGamma[Momentum[k1 + k2 - p, D], D] . 
+          ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])}, 
+     "FeynCalcAmplitudeSum" -> -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) - 
+       FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 
+          0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) . 
+         DiracGamma[Momentum[k1 + k2 - p, D], D] . 
+         ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]|>, 
+   "down_up" -> <|"Label" -> "down_up", "IncomingField" -> F[4, {1}], 
+     "PrimeField" -> F[3, {1}], "OutgoingFields" -> {F[3, {1}], F[4, {1}], 
+       -F[3, {1}]}, "IncomingMomenta" -> {q, p}, "OutgoingMomenta" -> 
+      {k1, k2, k3}, "Topologies" -> TopologyList[
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[4][7]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[4][6]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[4][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[4][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[4][6]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][6]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][8]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][6]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][7], Vertex[3][8]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6]], 
+        Propagator[Incoming][Vertex[1][2], Vertex[3][7]], 
+        Propagator[Outgoing][Vertex[1][3], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][4], Vertex[3][8]], 
+        Propagator[Outgoing][Vertex[1][5], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][7]], 
+        Propagator[Internal][Vertex[3][6], Vertex[3][8]]]], 
+     "AllInsertionDiagrams" -> 
+      TopologyList[Process -> {V[1], F[4, {1, Index[Colour, 2]}]} -> 
+          {F[3, {1, Index[Colour, 3]}], F[4, {1, Index[Colour, 4]}], 
+           -F[3, {1, Index[Colour, 5]}]}, Model -> {"SMQCD"}, 
+        GenericModel -> {"Lorentz"}, InsertionLevel -> {Particles}, 
+        ExcludeParticles -> {}, ExcludeFieldPoints -> {}, 
+        LastSelections -> {}][Topology[1][Propagator[Incoming][Vertex[1][1], 
+          Vertex[3][6], Field[1]], Propagator[Incoming][Vertex[1][2], 
+          Vertex[3][6], Field[2]], Propagator[Outgoing][Vertex[1][3], 
+          Vertex[3][7], Field[3]], Propagator[Outgoing][Vertex[1][4], 
+          Vertex[3][8], Field[4]], Propagator[Outgoing][Vertex[1][5], 
+          Vertex[3][7], Field[5]], Propagator[Internal][Vertex[3][6], 
+          Vertex[3][8], Field[6]], Propagator[Internal][Vertex[3][7], 
+          Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 1][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 2]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 2]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 2]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 2]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 2]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][6], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 2]}], Field[7] -> S[3]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 2]}], Field[7] -> V[3]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> S[3]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 2]}], Field[7] -> V[3]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][6], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[7] -> S[3]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[7] -> V[3]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 4]}], Field[7] -> S[3]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 4]}], Field[7] -> V[3]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][7], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][8], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> S, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> -S[3], 
+            Field[7] -> S[3]]], FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> S, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> -S[3], 
+            Field[7] -> V[3]]], FeynmanGraph[1, Generic == 3][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> V, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> -V[3], 
+            Field[7] -> S[3]]], FeynmanGraph[1, Generic == 4][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> V, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> -V[3], 
+            Field[7] -> V[3]]]], Topology[1][Propagator[Incoming][
+          Vertex[1][1], Vertex[3][6], Field[1]], Propagator[Incoming][
+          Vertex[1][2], Vertex[3][7], Field[2]], Propagator[Outgoing][
+          Vertex[1][3], Vertex[3][8], Field[3]], Propagator[Outgoing][
+          Vertex[1][4], Vertex[3][6], Field[4]], Propagator[Outgoing][
+          Vertex[1][5], Vertex[3][8], Field[5]], Propagator[Internal][
+          Vertex[3][6], Vertex[3][7], Field[6]], Propagator[Internal][
+          Vertex[3][7], Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 1][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 2]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 2]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 2]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 2]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 1][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> S] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 3]}], Field[7] -> S[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 3]}], Field[7] -> S[2]]], 
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 1][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 3]}], Field[7] -> V[1]], 
+           FeynmanGraph[1, Particles == 2][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 3]}], Field[7] -> V[2]], 
+           FeynmanGraph[1, Particles == 3][Field[1] -> V[1], 
+            Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 5]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]]], "UnfilteredSMQCDAmplitudeCount" -> 
+      32, "UnfilteredCouplingSignatures" -> <|{3, 0} -> 28, {1, 2} -> 4|>, 
+     "SelectedDiagramNumbers" -> {5, 12, 27, 32}, "SelectedDiagramCount" -> 
+      4, "SelectedDiagrams" -> 
+      TopologyList[Process -> {V[1], F[4, {1, Index[Colour, 2]}]} -> 
+          {F[3, {1, Index[Colour, 3]}], F[4, {1, Index[Colour, 4]}], 
+           -F[3, {1, Index[Colour, 5]}]}, Model -> {"SMQCD"}, 
+        GenericModel -> {"Lorentz"}, InsertionLevel -> {Particles}, 
+        ExcludeParticles -> {}, ExcludeFieldPoints -> {}, 
+        LastSelections -> {}][Topology[1][Propagator[Incoming][Vertex[1][1], 
+          Vertex[3][6], Field[1]], Propagator[Incoming][Vertex[1][2], 
+          Vertex[3][6], Field[2]], Propagator[Outgoing][Vertex[1][3], 
+          Vertex[3][7], Field[3]], Propagator[Outgoing][Vertex[1][4], 
+          Vertex[3][8], Field[4]], Propagator[Outgoing][Vertex[1][5], 
+          Vertex[3][7], Field[5]], Propagator[Internal][Vertex[3][6], 
+          Vertex[3][8], Field[6]], Propagator[Internal][Vertex[3][7], 
+          Vertex[3][8], Field[7]]] -> Insertions[Generic][
+         FeynmanGraph[1, Generic == 2][Field[1] -> V[1], 
+           Field[2] -> F[4, {1, Index[Colour, 2]}], Field[3] -> 
+            -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[4, {1, Index[Colour, 2]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][6], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[3, {1, Index[Colour, 3]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][6], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][8], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][7], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]], 
+       Topology[1][Propagator[Incoming][Vertex[1][1], Vertex[3][6], 
+          Field[1]], Propagator[Incoming][Vertex[1][2], Vertex[3][7], 
+          Field[2]], Propagator[Outgoing][Vertex[1][3], Vertex[3][8], 
+          Field[3]], Propagator[Outgoing][Vertex[1][4], Vertex[3][7], 
+          Field[4]], Propagator[Outgoing][Vertex[1][5], Vertex[3][6], 
+          Field[5]], Propagator[Internal][Vertex[3][6], Vertex[3][8], 
+          Field[6]], Propagator[Internal][Vertex[3][7], Vertex[3][8], 
+          Field[7]]] -> Insertions[Generic][FeynmanGraph[1, Generic == 2][
+           Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+           Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+            -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+            F[3, {1, Index[Colour, 5]}], Field[6] -> F, Field[7] -> V] -> 
+          Insertions[Particles][FeynmanGraph[1, Particles == 3][
+            Field[1] -> V[1], Field[2] -> F[4, {1, Index[Colour, 2]}], 
+            Field[3] -> -F[3, {1, Index[Colour, 3]}], Field[4] -> 
+             -F[4, {1, Index[Colour, 4]}], Field[5] -> 
+             F[3, {1, Index[Colour, 5]}], Field[6] -> 
+             F[3, {1, Index[Colour, 5]}], Field[7] -> 
+             V[5, {Index[Gluon, 6]}]]]]], "SelectedRawAmplitudes" -> 
+      {FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 5], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          -FourMomentum[Outgoing, 1] - FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Outgoing, 1] - 
+           FourMomentum[Outgoing, 2] - FourMomentum[Outgoing, 3], FCGV["MD"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]], FANonCommutative[
+           FADiracSlash[FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 
+               2] + FourMomentum[Outgoing, 3]] + FCGV["MD"]], 
+          (I/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] + 
+           (I/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 12], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 2] + FourMomentum[Outgoing, 3], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*FermionChain[
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               2] - FourMomentum[Outgoing, 3]] + FCGV["MU"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 27], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], 0]*
+         FAPropagatorDenominator[-FourMomentum[Incoming, 2] + 
+           FourMomentum[Outgoing, 1] + FourMomentum[Outgoing, 3], FCGV["MD"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 3]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]]]*FermionChain[
+          (I/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] + 
+           (I/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"], FANonCommutative[
+           FADiracSlash[FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 
+               1] - FourMomentum[Outgoing, 3]] + FCGV["MD"]], 
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]], 
+       FAFeynAmp[GraphID[Topology == 1, Generic == 2, Particles == 3, 
+         Number == 32], Integral[], (-I)*FAMetricTensor[Index[Lorentz, 2], 
+          Index[Lorentz, 3]]*FAPropagatorDenominator[
+          FourMomentum[Incoming, 2] - FourMomentum[Outgoing, 2], 0]*
+         FAPropagatorDenominator[FourMomentum[Incoming, 2] - 
+           FourMomentum[Outgoing, 1] - FourMomentum[Outgoing, 2], FCGV["MU"]]*
+         FermionChain[(-I)*FAGS*FANonCommutative[FADiracMatrix[
+              Index[Lorentz, 2]], FAChiralityProjector[-1]]*
+            FASUNT[Index[Gluon, 6], Index[Colour, 4], Index[Colour, 2]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 2]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 4], Index[Colour, 2]]]*FermionChain[
+          (-I)*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[-1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]] - 
+           I*FAGS*FANonCommutative[FADiracMatrix[Index[Lorentz, 3]], 
+             FAChiralityProjector[1]]*FASUNT[Index[Gluon, 6], 
+             Index[Colour, 3], Index[Colour, 5]], FANonCommutative[
+           FADiracSlash[-FourMomentum[Incoming, 2] + FourMomentum[Outgoing, 
+               1] + FourMomentum[Outgoing, 2]] + FCGV["MU"]], 
+          ((-2*I)/3)*FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[-1]]*FCGV["EL"] - ((2*I)/3)*
+            FANonCommutative[FADiracMatrix[Index[Lorentz, 1]], 
+             FAChiralityProjector[1]]*FCGV["EL"]]*SumOver[Index[Gluon, 6], 8]*
+         SumOver[Index[Colour, 2], 3, External]*SumOver[Index[Colour, 3], 3, 
+          External]*SumOver[Index[Colour, 4], 3, External]*
+         SumOver[Index[Colour, 5], 3, External]]}, 
+     "FeynCalcAmplitudesPerDiagram" -> 
+      {-(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+          ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k2 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col3], SUNFIndex[Col5]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+          DiracGamma[Momentum[-k1 - k3 + p, D], D] . ((-I)*FAGS*
+           DiracGamma[LorentzIndex[Lor2, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+            SUNFIndex[Col4], SUNFIndex[Col2]])*FeynAmpDenominator[
+          PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]), 
+       -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) . 
+          DiracGamma[Momentum[k1 + k2 - p, D], D] . (((-2*I)/3)*
+           DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])}, 
+     "FeynCalcAmplitudeSum" -> -(FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+           SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+          DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+          ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+         FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+           0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) - 
+       FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+         DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+         ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 
+          0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+       FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+          SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) . 
+         DiracGamma[Momentum[k1 + k2 - p, D], D] . (((-2*I)/3)*
+          DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+        FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 
+          0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]|>|>, 
+ "ChargeBasis" -> <|"GenericChargeSymbols" -> {S01Qq, S01QqPrime}, 
+   "IncomingLineAmplitude" -> (-3*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+        DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+         0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])/2 - 
+     (3*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+        DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+       Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])/2 - 
+     FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+     (FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+        DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+       Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])/2 - 
+     FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+         SUNFIndex[Col3], SUNFIndex[Col5]]) . DiracGamma[
+        Momentum[k1 + k2 - p, D], D] . 
+       ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+     (FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) . 
+        DiracGamma[Momentum[k1 + k2 - p, D], D] . (((-2*I)/3)*
+         DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 
+         0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])/2, 
+   "PrimePairLineAmplitude" -> FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+     FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+      (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+     FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+         SUNFIndex[Col3], SUNFIndex[Col5]]) . DiracGamma[
+        Momentum[k1 + k2 - p, D], D] . 
+       ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+     FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+         SUNFIndex[Col3], SUNFIndex[Col5]]) . DiracGamma[
+        Momentum[k1 + k2 - p, D], D] . (((-2*I)/3)*
+        DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]], 
+   "GenericAmplitudeSum" -> 
+    (-3*FAGS*S01Qq*DiracGamma[LorentzIndex[Lor2, D], D]*
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]]) . 
+        DiracGamma[Momentum[k1 + k2 + k3, D], D] . 
+        (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 - k3, D], 
+         0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])/2 - 
+     (3*FAGS*S01Qq*DiracGamma[LorentzIndex[Lor3, D], D]*
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+        DiracGamma[Momentum[-k1 - k3 + p, D], D] . 
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor2, D], D]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+       Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])/2 - 
+     FAGS*S01Qq*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+     FAGS*S01QqPrime*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+     (FAGS*S01Qq*DiracGamma[LorentzIndex[Lor2, D], D]*
+       (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+        DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+        ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+       Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])/2 - 
+     FAGS*S01QqPrime*DiracGamma[LorentzIndex[Lor2, D], D]*
+      (((-2*I)/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"]) . 
+       DiracGamma[Momentum[-k2 - k3 + p, D], D] . 
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+        SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+     FAGS*S01Qq*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+         SUNFIndex[Col3], SUNFIndex[Col5]]) . DiracGamma[
+        Momentum[k1 + k2 - p, D], D] . 
+       ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] + 
+     FAGS*S01QqPrime*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+         SUNFIndex[Col3], SUNFIndex[Col5]]) . DiracGamma[
+        Momentum[k1 + k2 - p, D], D] . 
+       ((I/3)*DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]] - 
+     (FAGS*S01Qq*DiracGamma[LorentzIndex[Lor2, D], D]*
+       ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*
+         SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col3], SUNFIndex[Col5]]) . 
+        DiracGamma[Momentum[k1 + k2 - p, D], D] . (((-2*I)/3)*
+         DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+       FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 
+         0]]*Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+       SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]])/2 - 
+     FAGS*S01QqPrime*DiracGamma[LorentzIndex[Lor2, D], D]*
+      ((-I)*FAGS*DiracGamma[LorentzIndex[Lor3, D], D]*SUNTF[{SUNIndex[Glu6]}, 
+         SUNFIndex[Col3], SUNFIndex[Col5]]) . DiracGamma[
+        Momentum[k1 + k2 - p, D], D] . (((-2*I)/3)*
+        DiracGamma[LorentzIndex[Lor1, D], D]*FCGV["EL"])*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k2 + p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[-k1 - k2 + p, D], 0]]*
+      Pair[LorentzIndex[Lor2, D], LorentzIndex[Lor3, D]]*
+      SUNTF[{SUNIndex[Glu6]}, SUNFIndex[Col4], SUNFIndex[Col2]], 
+   "RepresentativeResiduals" -> <|"up_up" -> 0, "up_down" -> 0, 
+     "down_up" -> 0|>, "GenericRepresentativeResiduals" -> 
+    <|"up_up" -> 0, "up_down" -> 0, "down_up" -> 0|>, 
+   "Derivation" -> "Mathematica Solve from up/up and up/down; down/up is the \
+independent exact gate"|>, "Checks" -> 
+  <|"AuthoritativeReferencePresentAndHashed" -> True, 
+   "ResultAbsentAtStart" -> True, "RepresentativeFieldsAreDifferentFlavor" -> 
+    True, "SelectedDiagramSetsAreNonempty" -> True, 
+   "MeasuredSelectedCountsAgree" -> True, 
+   "SelectedCouplingSignaturesAreExact" -> True, 
+   "ConvertedCountsMatchSelections" -> True, 
+   "ConvertedAmplitudesAreNonzero" -> True, 
+   "NoUnevaluatedFeynArtsAmplitude" -> True, 
+   "MasslessDDimensionalConventionRetained" -> True, 
+   "NoLoopMomentumOrUVIRRegulator" -> True, 
+   "SMQCDElectricQuantumNumbersDerived" -> True, 
+   "SMQCDChargeCoefficientsAreIndependent" -> True, 
+   "ChargeBasisSolveIsUnique" -> True, "UpUpReconstructionIsExact" -> True, 
+   "UpDownReconstructionIsExact" -> True, 
+   "DownUpIndependentReconstructionIsExact" -> True, 
+   "GenericChargeAmplitudeReconstructsAllRepresentatives" -> True, 
+   "BothChargeBasisAmplitudesAreNonzero" -> True|>, 
+ "DownstreamBoundary" -> <|"BilinearsDeferred" -> True, 
+   "SpinColorPolarizationSumsDeferred" -> True, "IncomingAverageDeferred" -> 
+    True, "ProjectorsDeferred" -> True, 
+   "PhaseSpaceAndSubtractionsDeferred" -> True, 
+   "FlavorAndChargeTensorAssemblyDeferred" -> True|>|>

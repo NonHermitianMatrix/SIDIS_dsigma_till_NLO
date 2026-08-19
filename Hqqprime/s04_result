@@ -1,0 +1,73 @@
+<|"Status" -> "Complete", "Stage" -> "HqqprimeS04-v1", 
+ "Channel" -> "Hqqprime only", "StageDisposition" -> 
+  "NotApplicableAtThisOrder", "Purpose" -> "Machine-checkable virtual-sector \
+absence gate for the tree-only Hqqprime channel", 
+ "GeneratedAt" -> "2026-08-18T20:25:48", "Program" -> "/home/physics/projects\
+/AI_Assisted_SIDIS/scripts/Hqqprime/s04_validate_hqqprime_virtual_absence.wl"\
+, "ProgramSHA256" -> 
+  "9d9d75d1105e46173fca63077e2b1779532cdece8fab592e6fba5d403e1cfcbc", 
+ "ReferencePDF" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Large_Tr\
+ansverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest\
+_Order.pdf", "ReferencePDFSHA256" -> 
+  "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+ "Inputs" -> <|"S01Program" -> "/home/physics/projects/AI_Assisted_SIDIS/scri\
+pts/Hqqprime/s01_calculate_hqqprime_tree.wl", "S01ProgramSHA256" -> 
+    "17ed0c69c0c440a63b93a41d7634eade24a948543618a09769eea937427877a4", 
+   "S01Result" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s01_result", 
+   "S01ResultSHA256" -> 
+    "842c6a1d06a9b0785e89e0230838891aedadc09bcf46a59a492c2e71dd77fb6b"|>, 
+ "ReferenceClassification" -> <|"Locations" -> {"Table I", "Figure 2"}, 
+   "Channel" -> "H_{q qPrime};q qbarPrime", "FirstContribution" -> 
+    "tree 2->3 contribution to the O(alpha_s^2) hard part", 
+   "VirtualPartnerAtThisOrder" -> "Absent"|>, 
+ "AbsentContributions" -> <|"TwoBodyBorn" -> 0, "OneLoopVirtual" -> 0, 
+   "LoopPole" -> 0, "UVCounterterm" -> 0|>, 
+ "AbsenceStatus" -> <|"TwoBodyBorn" -> "NotApplicableAtThisOrder", 
+   "OneLoopVirtual" -> "NotApplicableAtThisOrder", 
+   "LoopPole" -> "NotApplicableAtThisOrder", "UVCounterterm" -> 
+    "NotApplicableAtThisOrder"|>, "ZeroMeaning" -> "Exact integer zero \
+denotes a structurally absent/not-applicable sector; no virtual expression \
+was evaluated to obtain it.", "RealAmplitudeAudit" -> 
+  <|"RepresentativeOrder" -> {"up_up", "up_down", "down_up"}, 
+   "MeasuredSelectedDiagramCounts" -> <|"up_up" -> 4, "up_down" -> 4, 
+     "down_up" -> 4|>, "RepresentativeListLengths" -> 
+    <|"up_up" -> <|"SelectedDiagramNumbers" -> 4, "SelectedDiagrams" -> 4, 
+       "SelectedRawAmplitudes" -> 4, "FeynCalcAmplitudesPerDiagram" -> 4|>, 
+     "up_down" -> <|"SelectedDiagramNumbers" -> 4, "SelectedDiagrams" -> 4, 
+       "SelectedRawAmplitudes" -> 4, "FeynCalcAmplitudesPerDiagram" -> 4|>, 
+     "down_up" -> <|"SelectedDiagramNumbers" -> 4, "SelectedDiagrams" -> 4, 
+       "SelectedRawAmplitudes" -> 4, "FeynCalcAmplitudesPerDiagram" -> 4|>|>, 
+   "PerDiagramTotalsExact" -> <|"up_up" -> True, "up_down" -> True, 
+     "down_up" -> True|>, "ChargeBasisLeafCounts" -> 
+    <|"IncomingLineAmplitude" -> 537, "PrimePairLineAmplitude" -> 351, 
+     "GenericAmplitudeSum" -> 897|>, "GenericChargeIdentityResidual" -> 0, 
+   "RepresentativeResiduals" -> <|"up_up" -> 0, "up_down" -> 0, 
+     "down_up" -> 0|>, "GenericRepresentativeResiduals" -> 
+    <|"up_up" -> 0, "up_down" -> 0, "down_up" -> 0|>|>, 
+ "VirtualPayloadAudit" -> <|"VirtualSectorKeysPresent" -> {}, 
+   "ForbiddenLoopUVIRScaleSymbolNamesPresent" -> {}, 
+   "MachineRealCountInConvertedPayload" -> 0|>, 
+ "NonInputBoundary" -> 
+  <|"S02" -> "Visualization-only PostScript artifacts were not read", 
+   "S03" -> "Visualization-only PDF artifact was not read"|>, 
+ "Checks" -> <|"PinnedS01SourceHashExact" -> True, 
+   "PinnedS01ResultHashExact" -> True, "PinnedReferenceHashExact" -> True, 
+   "S01IdentityExact" -> True, "AllAcceptedS01ChecksTrue" -> True, 
+   "TreeRealProcessContractExact" -> True, "RepresentativeOrderExact" -> 
+    True, "DifferentFlavorFieldRoutingExact" -> True, 
+   "MomentumRoutingExact" -> True, "SelectedSetsAndCountsExact" -> True, 
+   "MeasuredCountLedgerExact" -> True, "PerDiagramTotalsExact" -> True, 
+   "ChargeAssignmentsExact" -> True, "BothChargeBasisAmplitudesNonzero" -> 
+    True, "GenericChargeIdentityExact" -> True, 
+   "RepresentativeReconstructionsExact" -> True, 
+   "GenericReconstructionsExact" -> True, 
+   "ConvertedPayloadExactNoMachineReals" -> True, 
+   "ConvertedPayloadHasNoLoopUVIRScaleSymbols" -> True, 
+   "NoVirtualSectorPayloadKeys" -> True, 
+   "AbsentContributionValuesAreExactIntegerZeros" -> True|>, 
+ "DownstreamBoundary" -> <|"NextStage" -> "S05", "Instruction" -> "Form the \
+real-amplitude bilinear from hash-validated S01 while preserving e_q^2, \
+e_qPrime^2, and e_q e_qPrime structures.", "BilinearFormedHere" -> False, 
+   "SpinColorPolarizationSumsPerformedHere" -> False, 
+   "ProjectorOrPhaseSpaceOperationsPerformedHere" -> False|>|>

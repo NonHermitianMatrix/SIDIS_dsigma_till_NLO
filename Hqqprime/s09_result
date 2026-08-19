@@ -1,0 +1,396 @@
+<|"Status" -> "Complete", "Stage" -> "HqqprimeS09-v1", 
+ "ResultSchemaVersion" -> 1, "Channel" -> "Hqqprime only", 
+ "Contribution" -> "H_{q qPrime; q qbarPrime} charge-resolved \
+Appendix-F-expanded real Pg/PPP kernels with formal endpoint handoff", 
+ "PerturbativeOrder" -> "O(alpha_s^2)", 
+ "GeneratedAt" -> "2026-08-19T00:03:31", "ProgramPath" -> "/home/physics/proj\
+ects/AI_Assisted_SIDIS/scripts/Hqqprime/s09_expand_endpoints_hqqprime.wl", 
+ "ProgramSHA256" -> 
+  "d1e2c26ccbb5bb0413f930f36b0428346dd621c27d9b52101f54bad16c06ae5f", 
+ "ProjectorOrder" -> {"Pg", "PPP"}, "ChargeKeyOrder" -> 
+  {"IncomingChargeSquared", "PrimeChargeSquared", 
+   "MixedIncomingPrimeCharge"}, "PaperReference" -> 
+  <|"Path" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Large_Transve\
+rse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Orde\
+r.pdf", "SHA256" -> 
+    "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+   "Equations" -> 
+    "Appendix B Eqs. (B18),(B19),(B21)-(B31); Appendix F Eqs. (F1)-(F29)"|>, 
+ "InputProvenance" -> <|"S07SourcePath" -> "/home/physics/projects/AI_Assiste\
+d_SIDIS/scripts/Hqqprime/s07_contract_hqqprime_projectors.wl", 
+   "S07SourceSHA256" -> 
+    "4ac73e5b846e088c7c92acfed2bb935ba969e9049d778f83e5f8cfa34fcab1e7", 
+   "S07ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s07_result", 
+   "S07ResultSHA256" -> 
+    "b59def6d8350183319dda98591e78e001ca3c1e5d2f2a9d0b5060927d4215026", 
+   "S08SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqpr\
+ime/s08_phase_space_integrate_hqqprime.wl", "S08SourceSHA256" -> 
+    "dbbc23d05697f4e45c23471be8f3ed12448d8db0d973e60d67cdebbcabec8ed4", 
+   "S08ResultPath" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s08_result", 
+   "S08ResultSHA256" -> 
+    "4916b943c1bbc7b1aeeb91d5fa022d00b5341166fc805b95e21e8ee4f99bb246", 
+   "S08CachePaths" -> <|"Pg" -> <|"IncomingChargeSquared" -> "/home/physics/p\
+rojects/AI_Assisted_SIDIS/scripts/Hqqprime/s08_cache_hqqprime_incoming_charge\
+_squared_pg", "PrimeChargeSquared" -> "/home/physics/projects/AI_Assisted_SID\
+IS/scripts/Hqqprime/s08_cache_hqqprime_prime_charge_squared_pg", 
+       "MixedIncomingPrimeCharge" -> "/home/physics/projects/AI_Assisted_SIDI\
+S/scripts/Hqqprime/s08_cache_hqqprime_mixed_incoming_prime_charge_pg"|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> "/home/physics/projects/AI_Assiste\
+d_SIDIS/scripts/Hqqprime/s08_cache_hqqprime_incoming_charge_squared_ppp", 
+       "PrimeChargeSquared" -> "/home/physics/projects/AI_Assisted_SIDIS/scri\
+pts/Hqqprime/s08_cache_hqqprime_prime_charge_squared_ppp", 
+       "MixedIncomingPrimeCharge" -> "/home/physics/projects/AI_Assisted_SIDI\
+S/scripts/Hqqprime/s08_cache_hqqprime_mixed_incoming_prime_charge_ppp"|>|>, 
+   "S08CacheSHA256" -> <|"Pg" -> <|"IncomingChargeSquared" -> 
+        "855101208854c720385e89785464f77cfe71a947728fd6b6d022f95130d0f781", 
+       "PrimeChargeSquared" -> 
+        "5c3ead313a0e228174fa5c334d9144d8ce04bad5ec33dfb7d7170b3589d83c28", 
+       "MixedIncomingPrimeCharge" -> 
+        "f9ac39e5b22e1484ec012a17609bf0b5e00a54d3a153705d669ba8a29b63caaa"|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> 
+        "7518ed803aa4dd136405665f9a6c294f7c5b9056f3e911ea63e85a21e1b1e70c", 
+       "PrimeChargeSquared" -> 
+        "bf567c8652ba861dd029abf20bf74ebf992cc7d91aa93c440ae6058fd4ebba43", 
+       "MixedIncomingPrimeCharge" -> 
+        "e8e3de995b764e528495be129c99ff52b66f6207ca016db139a62d849366e491"|>|>\
+, "InputKey" -> "ThreeBodyAngularIntegrated/NLOReal_OAlphaS2/Hqqprime;q_qbarP\
+rime/<projector>/<charge-key>"|>, "AppendixFExpansion" -> 
+  <|"ExactPairsByProjectorAndCharge" -> 
+    <|"Pg" -> <|"IncomingChargeSquared" -> {{-1, 0}, {-1, 1}, {0, -1}, 
+         {0, 1}, {0, 2}, {1, -1}, {1, 0}, {1, 1}, {1, 2}, {2, -1}, {2, 0}, 
+         {2, 1}, {2, 2}}, "PrimeChargeSquared" -> {{-1, 1}, {-1, 2}, {0, 1}, 
+         {0, 2}, {1, -1}, {1, 0}, {1, 1}, {1, 2}, {2, 0}, {2, 1}, {2, 2}}, 
+       "MixedIncomingPrimeCharge" -> {{-1, 0}, {-1, 1}, {0, -1}, {0, 1}, 
+         {1, -2}, {1, -1}, {1, 0}, {1, 1}}|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> {{-1, 1}, {0, 1}, {1, -1}, {1, 0}, 
+         {1, 1}, {2, -2}, {2, -1}, {2, 0}, {2, 1}}, "PrimeChargeSquared" -> 
+        {{0, 1}, {0, 2}, {1, -1}, {1, 0}, {1, 1}, {1, 2}, {2, -2}, {2, -1}, 
+         {2, 0}, {2, 1}, {2, 2}}, "MixedIncomingPrimeCharge" -> 
+        {{-2, 0}, {-2, 1}, {-1, -1}, {-1, 0}, {-1, 1}, {0, -2}, {0, -1}, 
+         {0, 1}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, {1, 1}}|>|>, 
+   "ExactAllPairs" -> {{-2, 0}, {-2, 1}, {-1, -1}, {-1, 0}, {-1, 1}, {-1, 2}, 
+     {0, -2}, {0, -1}, {0, 1}, {0, 2}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, 
+     {1, 1}, {1, 2}, {2, -2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}}, 
+   "MasterOccurrencesByProjectorAndCharge" -> 
+    <|"Pg" -> <|"IncomingChargeSquared" -> 16, "PrimeChargeSquared" -> 12, 
+       "MixedIncomingPrimeCharge" -> 24|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> 9, "PrimeChargeSquared" -> 11, 
+       "MixedIncomingPrimeCharge" -> 26|>|>, 
+   "DistinctMasterInstancesByProjectorAndCharge" -> 
+    <|"Pg" -> <|"IncomingChargeSquared" -> 16, "PrimeChargeSquared" -> 12, 
+       "MixedIncomingPrimeCharge" -> 24|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> 9, "PrimeChargeSquared" -> 11, 
+       "MixedIncomingPrimeCharge" -> 26|>|>, "TotalMasterOccurrenceCount" -> 
+    98, "TotalDistinctMasterInstanceCount" -> 47, 
+   "ExpansionOrders" -> <|"NonzeroJExceptF28F29" -> "through epsilon^1", 
+     "F28F29" -> "through epsilon^0", "B18ZeroJ" -> "through epsilon^2", 
+     "B27" -> "through epsilon^2"|>, 
+   "ResidualB27SignaturesByProjectorAndCharge" -> 
+    <|"Pg" -> <|"IncomingChargeSquared" -> {}, "PrimeChargeSquared" -> {}, 
+       "MixedIncomingPrimeCharge" -> {HoldComplete[1, 1, 1 - epsilon]}|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> {}, "PrimeChargeSquared" -> {}, 
+       "MixedIncomingPrimeCharge" -> {HoldComplete[1, 1, 1 - epsilon]}|>|>, 
+   "ResidualB27OccurrenceCountsByProjectorAndCharge" -> 
+    <|"Pg" -> <|"IncomingChargeSquared" -> 0, "PrimeChargeSquared" -> 0, 
+       "MixedIncomingPrimeCharge" -> 1|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> 0, "PrimeChargeSquared" -> 0, 
+       "MixedIncomingPrimeCharge" -> 1|>|>, "B18BetaSignatures" -> 
+    {HoldComplete[1 - epsilon, 1 - epsilon], HoldComplete[2 - epsilon, 
+      -epsilon], HoldComplete[3 - epsilon, -epsilon], 
+     HoldComplete[-epsilon, 2 - epsilon], HoldComplete[-epsilon, -epsilon]}, 
+   "B18GammaObjectsBeforeExpansion" -> {Gamma[1 - 2*epsilon], 
+     Gamma[1 - epsilon]}, "IndividualGammaSeriesRatioRegressionResiduals" -> 
+    <|"GammaOneMinusTwoEpsilonOverGammaOneMinusEpsilonSquared" -> 0, 
+     "GammaOneMinusEpsilonOverGammaOneMinusTwoEpsilon" -> 0|>, 
+   "RecurrenceDefinition" -> HoldComplete[
+     D[S09B19Integral[j, l, d, c, epsilon], d] == 
+      (-j)*S09B19Integral[j + 1, l, d, c, epsilon]], 
+   "RecurrenceResiduals" -> <|"F16_to_F17_l0" -> 0, "F22_to_F23_l1" -> 0, 
+     "F15_to_B18_lMinus1" -> 0, "F17_to_B18_l0" -> 0, "F23_to_B18_l1" -> 0, 
+     "F27_to_B18_l2" -> 0, "F12_to_F13_lMinus2" -> 0, 
+     "F20_to_F21_lMinus1" -> 0, "F18_to_F19_l0" -> 0, "F24_to_F25_l1" -> 0, 
+     "F28_to_F29_l2" -> 0|>, "AllRecurrenceResidualsExactZero" -> True, 
+   "F8B19MomentResiduals" -> <|"F8LeadingFromB19Moments" -> 0, 
+     "F8EpsilonFromB19Moments" -> 0|>, "AllF8B19MomentResidualsExactZero" -> 
+    True, "PrintedF9EpsilonTermRequiredByCurrentInventory" -> False, 
+   "NoPowerExpandOrNumericalBranchSelection" -> True, 
+   "BranchSummaries" -> <|"Pg" -> <|"IncomingChargeSquared" -> 
+        <|"Projector" -> "Pg", "ChargeKey" -> "IncomingChargeSquared", 
+         "MasterPairs" -> {{-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {0, 2}, 
+           {1, -1}, {1, 0}, {1, 1}, {1, 2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}}, 
+         "MasterOccurrenceCount" -> 16, "DistinctMasterInstanceCount" -> 16, 
+         "ResidualExpansionInventory" -> <|"Case2MasterCount" -> 0, 
+           "HypergeometricCount" -> 0, "BetaCount" -> 0, "GammaCount" -> 0, 
+           "FailedCount" -> 0, "MachineRealCount" -> 0|>, 
+         "ExpandedLeafCount" -> 146839, "ExpandedByteCount" -> 4201920, 
+         "CacheResumed" -> False, "CurrentExpandedExpressionValidated" -> 
+          True, "CurrentCacheReloadValidated" -> True|>, 
+       "PrimeChargeSquared" -> <|"Projector" -> "Pg", "ChargeKey" -> 
+          "PrimeChargeSquared", "MasterPairs" -> {{-1, 1}, {-1, 2}, {0, 1}, 
+           {0, 2}, {1, -1}, {1, 0}, {1, 1}, {1, 2}, {2, 0}, {2, 1}, {2, 2}}, 
+         "MasterOccurrenceCount" -> 12, "DistinctMasterInstanceCount" -> 12, 
+         "ResidualExpansionInventory" -> <|"Case2MasterCount" -> 0, 
+           "HypergeometricCount" -> 0, "BetaCount" -> 0, "GammaCount" -> 0, 
+           "FailedCount" -> 0, "MachineRealCount" -> 0|>, 
+         "ExpandedLeafCount" -> 110679, "ExpandedByteCount" -> 3160376, 
+         "CacheResumed" -> False, "CurrentExpandedExpressionValidated" -> 
+          True, "CurrentCacheReloadValidated" -> True|>, 
+       "MixedIncomingPrimeCharge" -> <|"Projector" -> "Pg", 
+         "ChargeKey" -> "MixedIncomingPrimeCharge", "MasterPairs" -> 
+          {{-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -2}, {1, -1}, {1, 0}, 
+           {1, 1}}, "MasterOccurrenceCount" -> 24, 
+         "DistinctMasterInstanceCount" -> 24, "ResidualExpansionInventory" -> 
+          <|"Case2MasterCount" -> 0, "HypergeometricCount" -> 0, 
+           "BetaCount" -> 0, "GammaCount" -> 0, "FailedCount" -> 0, 
+           "MachineRealCount" -> 0|>, "ExpandedLeafCount" -> 555363, 
+         "ExpandedByteCount" -> 15821008, "CacheResumed" -> False, 
+         "CurrentExpandedExpressionValidated" -> True, 
+         "CurrentCacheReloadValidated" -> True|>|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> <|"Projector" -> "PPP", 
+         "ChargeKey" -> "IncomingChargeSquared", "MasterPairs" -> 
+          {{-1, 1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}, {2, -2}, {2, -1}, 
+           {2, 0}, {2, 1}}, "MasterOccurrenceCount" -> 9, 
+         "DistinctMasterInstanceCount" -> 9, "ResidualExpansionInventory" -> 
+          <|"Case2MasterCount" -> 0, "HypergeometricCount" -> 0, 
+           "BetaCount" -> 0, "GammaCount" -> 0, "FailedCount" -> 0, 
+           "MachineRealCount" -> 0|>, "ExpandedLeafCount" -> 99781, 
+         "ExpandedByteCount" -> 2848360, "CacheResumed" -> False, 
+         "CurrentExpandedExpressionValidated" -> True, 
+         "CurrentCacheReloadValidated" -> True|>, "PrimeChargeSquared" -> 
+        <|"Projector" -> "PPP", "ChargeKey" -> "PrimeChargeSquared", 
+         "MasterPairs" -> {{0, 1}, {0, 2}, {1, -1}, {1, 0}, {1, 1}, {1, 2}, 
+           {2, -2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}}, 
+         "MasterOccurrenceCount" -> 11, "DistinctMasterInstanceCount" -> 11, 
+         "ResidualExpansionInventory" -> <|"Case2MasterCount" -> 0, 
+           "HypergeometricCount" -> 0, "BetaCount" -> 0, "GammaCount" -> 0, 
+           "FailedCount" -> 0, "MachineRealCount" -> 0|>, 
+         "ExpandedLeafCount" -> 105885, "ExpandedByteCount" -> 3013568, 
+         "CacheResumed" -> False, "CurrentExpandedExpressionValidated" -> 
+          True, "CurrentCacheReloadValidated" -> True|>, 
+       "MixedIncomingPrimeCharge" -> <|"Projector" -> "PPP", 
+         "ChargeKey" -> "MixedIncomingPrimeCharge", "MasterPairs" -> 
+          {{-2, 0}, {-2, 1}, {-1, -1}, {-1, 0}, {-1, 1}, {0, -2}, {0, -1}, 
+           {0, 1}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, {1, 1}}, 
+         "MasterOccurrenceCount" -> 26, "DistinctMasterInstanceCount" -> 26, 
+         "ResidualExpansionInventory" -> <|"Case2MasterCount" -> 0, 
+           "HypergeometricCount" -> 0, "BetaCount" -> 0, "GammaCount" -> 0, 
+           "FailedCount" -> 0, "MachineRealCount" -> 0|>, 
+         "ExpandedLeafCount" -> 564118, "ExpandedByteCount" -> 16046064, 
+         "CacheResumed" -> False, "CurrentExpandedExpressionValidated" -> 
+          True, "CurrentCacheReloadValidated" -> True|>|>|>|>, 
+ "ExpandedKernelCaches" -> <|"StageVersion" -> "HqqprimeS09Cache-v1", 
+   "Paths" -> <|"Pg" -> <|"IncomingChargeSquared" -> "/home/physics/projects/\
+AI_Assisted_SIDIS/scripts/Hqqprime/s09_cache_hqqprime_incoming_charge_squared\
+_pg", "PrimeChargeSquared" -> "/home/physics/projects/AI_Assisted_SIDIS/scrip\
+ts/Hqqprime/s09_cache_hqqprime_prime_charge_squared_pg", 
+       "MixedIncomingPrimeCharge" -> "/home/physics/projects/AI_Assisted_SIDI\
+S/scripts/Hqqprime/s09_cache_hqqprime_mixed_incoming_prime_charge_pg"|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> "/home/physics/projects/AI_Assiste\
+d_SIDIS/scripts/Hqqprime/s09_cache_hqqprime_incoming_charge_squared_ppp", 
+       "PrimeChargeSquared" -> "/home/physics/projects/AI_Assisted_SIDIS/scri\
+pts/Hqqprime/s09_cache_hqqprime_prime_charge_squared_ppp", 
+       "MixedIncomingPrimeCharge" -> "/home/physics/projects/AI_Assisted_SIDI\
+S/scripts/Hqqprime/s09_cache_hqqprime_mixed_incoming_prime_charge_ppp"|>|>, 
+   "SHA256" -> <|"Pg" -> <|"IncomingChargeSquared" -> 
+        "159b8d9926103ca9cdc317886cec8cd72fe165420f99a237a2fb7202e86da512", 
+       "PrimeChargeSquared" -> 
+        "6290657216f198e91b72f7fed91652b2a1ec77007394894621bdc28a1af75c06", 
+       "MixedIncomingPrimeCharge" -> 
+        "165cce56c1eb186ef6ea1647d2314c9a264bdaadfc5b50daf181a4bad867c75a"|>, 
+     "PPP" -> <|"IncomingChargeSquared" -> 
+        "a75be55b428da0fb9f4be7932a53004898a7d1e0f7f59172b364f9038f1cd8ef", 
+       "PrimeChargeSquared" -> 
+        "b861d0d7e6b3cf9cce07faefd4ae605545f2428bd90b8d9a8081a71283d3504d", 
+       "MixedIncomingPrimeCharge" -> 
+        "4ed9ff250fd5097ddf0918407e07725a35386ca1dabfa49b2fae3ccf998f2f6c"|>|>\
+, "ExpressionField" -> "Expression", "ProgramSHA256" -> 
+    "d1e2c26ccbb5bb0413f930f36b0428346dd621c27d9b52101f54bad16c06ae5f", 
+   "PaperSHA256" -> 
+    "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+   "S08ResultSHA256" -> 
+    "4916b943c1bbc7b1aeeb91d5fa022d00b5341166fc805b95e21e8ee4f99bb246", 
+   "AtomicSourceBoundMainWriterAndDiskHashValidated" -> True|>, 
+ "ParallelExecution" -> <|"KernelCommand" -> "/home/physics/wolframengine/opt\
+/Wolfram/WolframEngine/15.0/Executables/WolframKernel", 
+   "RequestedLocalKernelCount" -> 3, "LaunchedLocalKernelCount" -> 3, 
+   "WorkerVersions" -> {"15.0.0 for Linux x86 (64-bit) (May 31, 2026)", 
+     "15.0.0 for Linux x86 (64-bit) (May 31, 2026)", 
+     "15.0.0 for Linux x86 (64-bit) (May 31, 2026)"}, 
+   "ChargeKeysProcessedIndependently" -> {"IncomingChargeSquared", 
+     "PrimeChargeSquared", "MixedIncomingPrimeCharge"}, 
+   "ProjectorsSerialWithinEachChargeWorker" -> {"Pg", "PPP"}, 
+   "DeterministicResultOrder" -> True, "ConcurrentCacheWrites" -> False|>, 
+ "Bookkeeping" -> <|"AdditionalMultiplicativeWeightAtS09" -> 1, 
+   "Scale" -> <|"AbsoluteFactor" -> ScaleMu^(4*epsilon), 
+     "AbsoluteExponent" -> 4*epsilon, 
+     "PowerPreservedExactlyOnceInEveryProjection" -> True, 
+     "SeparateMSBarSEpsilonApplied" -> False|>, 
+   "Charge" -> <|"SeparatedTensorKeys" -> {"IncomingChargeSquared", 
+       "PrimeChargeSquared", "MixedIncomingPrimeCharge"}, 
+     "GenericChargeSymbols" -> {S01Qq, S01QqPrime}, 
+     "CoefficientTensorsRemainChargeFree" -> True, 
+     "PhysicalOrderedFlavorSumAppliedAtS06" -> False, 
+     "PhysicalAssemblyInstruction" -> "Sum over ordered q,qPrime with qPrime \
+different from q while retaining Qq^2, QqPrime^2, and Qq QqPrime tensors \
+separately; do not replace by a bare Nf or Nf-1 factor."|>, 
+   "Symmetry" -> <|"Upstream" -> <|"DistinctFinalStateIdentities" -> 
+        {"qPrime(k1)", "q(k2)", "qbarPrime(k3)"}, 
+       "DerivedFinalStateSymmetryFactors" -> <|"up_up" -> 1, "up_down" -> 1, 
+         "down_up" -> 1|>, "NontrivialSymmetryFactorRequired" -> False, 
+       "SymmetryFactorAppliedAtS06" -> False|>, 
+     "DistinctFinalStateIdentities" -> {"qPrime(k1)", "q(k2)", 
+       "qbarPrime(k3)"}, "SpeciesLabelsDerivedFromIdentities" -> 
+      {"qPrime", "q", "qbarPrime"}, "SpeciesMultiplicities" -> 
+      <|"qPrime" -> 1, "q" -> 1, "qbarPrime" -> 1|>, 
+     "FactorDerivedFromSpeciesMultiplicities" -> 1, 
+     "RepresentativeFactorsRevalidated" -> <|"up_up" -> 1, "up_down" -> 1, 
+       "down_up" -> 1|>, "FinalStateSymmetryFactor" -> 1, 
+     "NontrivialSymmetryFactorRequired" -> False, 
+     "NontrivialSymmetryFactorAppliedAtS08" -> False, 
+     "PhysicalExpressionEqualsPreSymmetryExpression" -> True, 
+     "NoDownstreamNontrivialSymmetryFactorRemains" -> True|>, 
+   "FinalStateSymmetryFactorDerivedAtS09" -> 1, 
+   "NontrivialSymmetryFactorAppliedAtS09" -> False, 
+   "VirtualContributionAtThisOrder" -> <|"Applicable" -> False, 
+     "Interference" -> 0, "SourceDisposition" -> "NotApplicableAtThisOrder", 
+     "ZeroMeaning" -> "Exact integer zero denotes a structurally \
+absent/not-applicable sector; no virtual expression was evaluated to obtain \
+it."|>, "PhysicalOrderedFlavorChargeAssemblyAppliedAtS09" -> False, 
+   "SeparateMSBarSEpsilonAppliedAtS09" -> False|>, 
+ "EndpointExpansion" -> <|"Status" -> "Formal bounded distributions only; \
+endpoint values and stronger singularities unresolved", 
+   "Interval" -> {s23, 0, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH}, 
+   "UpperLimit" -> Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH, 
+   "ExpansionThrough" -> "epsilon^2 with O(epsilon^3) remainder", 
+   "RegularFunctionDefinition" -> HoldComplete[
+     S09RegularEndpointFunction[projector, chargeKey, s23] == 
+      s23^(1 + epsilon)*S09ExpandedKernelReference[projector, chargeKey, 
+        s23]], "ExpandedKernelReferenceMeaning" -> "For each projector/charge \
+branch, the exact Expression field of its hash-pinned S09 cache", 
+   "PlusDistributionAction" -> HoldComplete[
+     Inactive[Integrate][S09PlusDistribution[n, s23, upper]*
+        testFunction[s23], {s23, 0, upper}] == Inactive[Integrate][
+       (Log[s23/upper]^n/s23)*(testFunction[s23] - testFunction[0]), 
+       {s23, 0, upper}]], "FormalDistributionByProjectorAndCharge" -> 
+    <|"Pg" -> <|"IncomingChargeSquared" -> 
+        -((DiracDelta[s23]*S09EndpointValue["Pg", "IncomingChargeSquared", 
+             s23 -> 0])/(epsilon*(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^
+             epsilon)) + ((S09PlusDistribution[0, s23, 
+             Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH] - epsilon*
+             S09PlusDistribution[1, s23, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/
+                zH] + (epsilon^2*S09PlusDistribution[2, s23, Q2*(-1 + xi/xB)*
+                 (1 - zH) - PHT2/zH])/2)*S09RegularEndpointFunction["Pg", 
+            "IncomingChargeSquared", s23])/(Q2*(-1 + xi/xB)*(1 - zH) - 
+            PHT2/zH)^epsilon, "PrimeChargeSquared" -> 
+        -((DiracDelta[s23]*S09EndpointValue["Pg", "PrimeChargeSquared", 
+             s23 -> 0])/(epsilon*(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^
+             epsilon)) + ((S09PlusDistribution[0, s23, 
+             Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH] - epsilon*
+             S09PlusDistribution[1, s23, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/
+                zH] + (epsilon^2*S09PlusDistribution[2, s23, Q2*(-1 + xi/xB)*
+                 (1 - zH) - PHT2/zH])/2)*S09RegularEndpointFunction["Pg", 
+            "PrimeChargeSquared", s23])/(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^
+           epsilon, "MixedIncomingPrimeCharge" -> 
+        -((DiracDelta[s23]*S09EndpointValue["Pg", "MixedIncomingPrimeCharge", 
+             s23 -> 0])/(epsilon*(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^
+             epsilon)) + ((S09PlusDistribution[0, s23, 
+             Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH] - epsilon*
+             S09PlusDistribution[1, s23, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/
+                zH] + (epsilon^2*S09PlusDistribution[2, s23, Q2*(-1 + xi/xB)*
+                 (1 - zH) - PHT2/zH])/2)*S09RegularEndpointFunction["Pg", 
+            "MixedIncomingPrimeCharge", s23])/(Q2*(-1 + xi/xB)*(1 - zH) - 
+            PHT2/zH)^epsilon|>, "PPP" -> <|"IncomingChargeSquared" -> 
+        -((DiracDelta[s23]*S09EndpointValue["PPP", "IncomingChargeSquared", 
+             s23 -> 0])/(epsilon*(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^
+             epsilon)) + ((S09PlusDistribution[0, s23, 
+             Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH] - epsilon*
+             S09PlusDistribution[1, s23, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/
+                zH] + (epsilon^2*S09PlusDistribution[2, s23, Q2*(-1 + xi/xB)*
+                 (1 - zH) - PHT2/zH])/2)*S09RegularEndpointFunction["PPP", 
+            "IncomingChargeSquared", s23])/(Q2*(-1 + xi/xB)*(1 - zH) - 
+            PHT2/zH)^epsilon, "PrimeChargeSquared" -> 
+        -((DiracDelta[s23]*S09EndpointValue["PPP", "PrimeChargeSquared", 
+             s23 -> 0])/(epsilon*(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^
+             epsilon)) + ((S09PlusDistribution[0, s23, 
+             Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH] - epsilon*
+             S09PlusDistribution[1, s23, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/
+                zH] + (epsilon^2*S09PlusDistribution[2, s23, Q2*(-1 + xi/xB)*
+                 (1 - zH) - PHT2/zH])/2)*S09RegularEndpointFunction["PPP", 
+            "PrimeChargeSquared", s23])/(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^
+           epsilon, "MixedIncomingPrimeCharge" -> 
+        -((DiracDelta[s23]*S09EndpointValue["PPP", 
+             "MixedIncomingPrimeCharge", s23 -> 0])/
+           (epsilon*(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^epsilon)) + 
+         ((S09PlusDistribution[0, s23, Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH] - 
+            epsilon*S09PlusDistribution[1, s23, Q2*(-1 + xi/xB)*(1 - zH) - 
+               PHT2/zH] + (epsilon^2*S09PlusDistribution[2, s23, 
+               Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH])/2)*
+           S09RegularEndpointFunction["PPP", "MixedIncomingPrimeCharge", 
+            s23])/(Q2*(-1 + xi/xB)*(1 - zH) - PHT2/zH)^epsilon|>|>, 
+   "QuadraticTestFunctionResidualThroughEpsilonSquared" -> 0, 
+   "EndpointValuesResolved" -> False, "StrongerSingularitiesResolved" -> 
+    False, "DistributionActionPerformed" -> False, 
+   "DownstreamResolutionRequired" -> True|>, 
+ "Checks" -> <|"AuthoritativePaperHashValidated" -> True, 
+   "AcceptedS07SourceAndResultHashesValidated" -> True, 
+   "AcceptedS08SourceResultAndSixCacheHashesValidated" -> True, 
+   "AllThirtyEightS08ChecksValidated" -> True, 
+   "SixS08CachePayloadsExactlyMatchPhysicalFactorOneInputs" -> True, 
+   "OrderedPgPPPAndThreeChargeInputsOnly" -> True, 
+   "AcceptedXiS23BranchesReconstructedExactlyFromAngularInputs" -> True, 
+   "ExactTwentyOneMasterClassUnionValidated" -> True, 
+   "ExactSixBranchMasterClassInventoriesValidated" -> True, 
+   "ExactNinetyEightMasterOccurrencesValidated" -> True, 
+   "ExactFortySevenDistinctMasterInstancesValidated" -> True, 
+   "EveryRetainedMasterHasFiveArguments" -> True, 
+   "AllPhysicalAppendixFFormulasImplemented" -> True, 
+   "ElevenExactB19DerivativeRecurrencesPassed" -> True, 
+   "RequiredF8ExactB19MomentReductionPassed" -> True, 
+   "PrintedUnusedF9ExcludedWithoutPatch" -> True, 
+   "B18ZeroJExpandedThroughEpsilonSquared" -> True, 
+   "OnlyB27ResidualSignatureAndTwoMixedOccurrencesPresent" -> True, 
+   "B27ExpandedThroughEpsilonSquared" -> True, 
+   "IndividualGammaSeriesReconstructBothRatiosThroughEpsilonSquared" -> True, 
+   "AllBetaGammaAndCase2MasterHeadsRemoved" -> True, 
+   "AppendixFSubstitutionCommutesWithExactXiS23MapByBranch" -> True, 
+   "B18B27SubstitutionCommutesWithExactXiS23MapByBranch" -> True, 
+   "AllSixExpandedBranchesCompleted" -> True, 
+   "NestedAssociationValueMappingShapeAndValuesVerified" -> True, 
+   "ExactlyThreeChargeWorkersUsed" -> True, 
+   "ProjectorsSerialWithinEachChargeWorker" -> True, 
+   "WorkersNeverWriteCachesOrResult" -> True, 
+   "AdditionalMultiplicativeWeightIsExactlyOne" -> True, 
+   "DistinctFinalStateSymmetryFactorDerivedAsOne" -> True, 
+   "NoNontrivialSymmetryFactorAppliedOrDeferred" -> True, 
+   "SingleInheritedScaleMuPowerPreserved" -> True, 
+   "NoExtraMSBarSEpsilonIntroduced" -> True, 
+   "ThreeChargeTensorsRemainSeparateAndChargeFree" -> True, 
+   "PhysicalOrderedFlavorChargeAssemblyStillDeferred" -> True, 
+   "NoVirtualBranchIntroduced" -> True, 
+   "FormalBoundedEndpointIdentityValidatedThroughEpsilonSquared" -> True, 
+   "AllSixEndpointValuesExplicitlyUnresolved" -> True, 
+   "FactorizationAndResolvedDistributionActionNotApplied" -> True, 
+   "Eq9FiniteLimitFHatAndExternalComparisonNotClaimed" -> True, 
+   "S10NotCreatedOrLaunched" -> True, 
+   "SixAtomicBranchCachesReloadedAndValidated" -> True, 
+   "ActualDiskCacheHashesMappedByNestedAssociationValues" -> True, 
+   "CompactResultDoesNotDuplicateExpandedKernels" -> True|>, 
+ "MemoryStrategy" -> "Exactly three Engine-15 workers process one charge key \
+each, with Pg then PPP serial inside each worker; workers return expressions \
+and write nothing; the main kernel atomically publishes six caches and a \
+compact result.", "NotPerformedAtThisStage" -> 
+  {"numerical or symbolic substitution for unresolved endpoint values", 
+   "structural resolution of stronger s23 poles", 
+   "delta/plus-distribution action on a test function", 
+   "initial-state PDF or final-state FF subtraction/factorization", 
+   "resolved Laurent pole-cancellation test", 
+   "epsilon -> 0 finite hard-part limit", 
+   "Eq. (9) Pg/PPP inversion or F-hat extraction", 
+   "physical ordered q,qPrime flavour/charge assembly", 
+   "external-code comparison", "creation or launch of S10"}, 
+ "DownstreamInstruction" -> "A separately authorized S10 may load the exact \
+hash-pinned six cache expressions and resolve all s23 singularity classes \
+termwise; it must preserve all three charge tensors, the inherited scale, the \
+unit final-state factor, and the absent virtual branch."|>

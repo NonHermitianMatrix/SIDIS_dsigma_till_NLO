@@ -1,0 +1,18 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"HQQPRIME_BIGTMD_S01_STAGE: validating accepted S13 result"
+"HQQPRIME_BIGTMD_S01_STAGE: deriving channel-6 case routing"
+"HQQPRIME_BIGTMD_S01_STAGE: validating caches and evaluating local F hats"
+"HQQPRIME_BIGTMD_S01_CACHE_OK: F1Hat/IncomingChargeSquared"
+"HQQPRIME_BIGTMD_S01_CACHE_OK: F1Hat/PrimeChargeSquared"
+"HQQPRIME_BIGTMD_S01_CACHE_OK: F1Hat/MixedIncomingPrimeCharge"
+"HQQPRIME_BIGTMD_S01_CACHE_OK: F2Hat/IncomingChargeSquared"
+"HQQPRIME_BIGTMD_S01_CACHE_OK: F2Hat/PrimeChargeSquared"
+"HQQPRIME_BIGTMD_S01_CACHE_OK: F2Hat/MixedIncomingPrimeCharge"
+"HQQPRIME_BIGTMD_S01_STAGE: writing compact local benchmarks"
+"HQQPRIME_BIGTMD_S01_SUCCESS"
+"HQQPRIME_BIGTMD_S01_OUTPUT=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/local_fhat_benchmarks.json"
+"HQQPRIME_BIGTMD_S01_OUTPUT_BYTES="10648

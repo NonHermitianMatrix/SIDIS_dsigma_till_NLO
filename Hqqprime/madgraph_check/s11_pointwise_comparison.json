@@ -1,0 +1,40 @@
+{
+	"stage":"HqqprimeFiniteCutPointwiseComparison-v1",
+	"status":"complete",
+	"common_bin_rows":27851,
+	"compile_seconds":1.988e-3,
+	"evaluation_seconds":0.169271,
+	"evaluations_per_second":1.6453497645786934e5,
+	"maximum_relative_difference":2.1785777046371065e-11,
+	"mean_relative_difference":8.484978726621331e-15,
+	"median_relative_difference":2.7475033404301907e-15,
+	"relative_difference_99th_percentile":6.705715431613466e-14,
+	"maximum_absolute_difference":4.464707356254967e-22,
+	"all_local_values_positive":true,
+	"normalization":{
+		"s09_physical_charge_combination_consumed":true,
+		"hadronic_coupling_factor":"EL^2 g_s^4",
+		"electron_side_factor":"EL^2\/Q^4",
+		"extra_charge_or_symmetry_factor":"none"
+	},
+	"derived_leptonic_ratio":"2*s11S*(-1 + s11S\/(s11Q2 + s11SHat))",
+	"input_sha256":{
+		"s09_four_dimensional_physical_projections":"51cb470c5309e06a8122dc48612078967a13b06710ff2b0784e553f755165722",
+		"s10_cut_phase_space_points.csv":"acffeddd2c9c5d0da793cf192648dc5f8d093a7265d9b3d6234df7656e81ffdb",
+		"s10_cut_phase_space_metadata.json":"ac6a208789613ffc39a2eca5a9c7a6ee3017d75e1388a6ca68252aeb30721350",
+		"param_card.dat":"55bb009a781370ab3fdfb523be00d0c8f68ffec442d12eb41b8d2da50307cf64"
+	},
+	"source_sha256":"72c0dcca68c57fd864942cd02a3864dbf8ac4b8afdd4e40171c33b688f57d1fc",
+	"output_csv_sha256":"15d1fc2fa1bad06ddeaccecaed55d7627b3915e2bbe8140fc6e48e32c1e91f28",
+	"checks":{
+		"input_hashes_exact":true,
+		"row_count_and_order_exact":true,
+		"wvm_compile_and_shape_valid":true,
+		"parameter_card_couplings_derived":true,
+		"leptonic_ratio_derived_from_definitions":true,
+		"physical_charge_weights_not_reapplied":true,
+		"all_local_values_finite_positive":true,
+		"maximum_relative_difference_below_2e-9":true,
+		"99th_percentile_relative_difference_below_2e-11":true
+	}
+}

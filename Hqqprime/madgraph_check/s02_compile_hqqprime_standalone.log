@@ -1,0 +1,156 @@
+make: Entering directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/SubProcesses'
+make -C "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/SubProcesses//../lib//../Source/MODEL" shared
+make[1]: Entering directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/Source/MODEL'
+gfortran -shared -o ../../lib/libmodel.so couplings.o lha_read.o printout.o rw_para.o model_functions.o alfas_functions.o couplings1.o couplings2.o couplings3.o -lstdc++ 
+make[1]: Leaving directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/Source/MODEL'
+gfortran -w -fPIC  -ffixed-line-length-132  -c -o all_matrix.o all_matrix.f
+make -C P1_emu_emcucx_no_zh matrix.o
+make[1]: Entering directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/SubProcesses/P1_emu_emcucx_no_zh'
+gfortran -w -fPIC  -ffixed-line-length-132  -c -o matrix.o matrix.f
+make[1]: Leaving directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/SubProcesses/P1_emu_emcucx_no_zh'
+gfortran -shared -fPIC -Wl,-soname,liball_2me.so -o liball_2me.so all_matrix.o */matrix.o ../Source/DHELAS/*.o ../Source/MODEL/*.o
+LDFLAGS="-Wl,-rpath,/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/SubProcesses/" f2py3  -c f2py_wrapper.f -L/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/SubProcesses/ -lall_2me  -m                 all_matrix2py
+updatevars:pdgs: attempt to change 'dimension(npdg)' to 'dimension(*)'. Ignoring.
+updatevars:p: attempt to change 'dimension(0:3,npdg)' to 'dimension(*)'. Ignoring.
+getstrlength: expected a signature of a string but got: {'typespec': 'character', 'charselector': {'*': '20'}, 'attrspec': [], 'intent': ['out'], 'dimension': ['1']}
+Cannot use distutils backend with Python>=3.12, using meson backend instead.
+Using meson backend
+Will pass --lower to f2py
+See https://numpy.org/doc/stable/f2py/buildtools/meson.html
+Reading fortran codes...
+	Reading file 'f2py_wrapper.f' (format:fix,strict)
+Line #36 in f2py_wrapper.f:"      CALL SETPARA(PATH)  !first call to setup the paramaters"
+	analyzeline: No name/args pattern found for line.
+Post-processing...
+	Block: all_matrix2py
+			Block: smatrixhel
+			Block: initialise
+			Block: change_para
+			Block: update_all_coup
+			Block: get_pdg_order
+			Block: get_prefix
+			Block: set_fixed_extra_scale
+			Block: set_mue_over_ref
+			Block: set_mue_ref_fixed
+			Block: set_maxjetflavor
+			Block: set_asmz
+			Block: set_nloop
+			Block: m0_get_nhel_entry
+Applying post-processing hooks...
+  character_backward_compatibility_hook
+Post-processing (stage 2)...
+Building modules...
+    Building module "all_matrix2py"...
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "smatrixhel"...
+          ans = smatrixhel(pdgs,procid,p,alphas,scale2,nhel,[npdg])
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "initialise"...
+          initialise(path)
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "change_para"...
+          change_para(name,value)
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "update_all_coup"...
+          update_all_coup()
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "get_pdg_order"...
+          pdg,allproc = get_pdg_order()
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "get_prefix"...
+          prefix = get_prefix()
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "set_fixed_extra_scale"...
+          set_fixed_extra_scale(new_value)
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "set_mue_over_ref"...
+          set_mue_over_ref(new_value)
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "set_mue_ref_fixed"...
+          set_mue_ref_fixed(new_value)
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "set_maxjetflavor"...
+          set_maxjetflavor(new_value)
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "set_asmz"...
+          set_asmz(new_value)
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "set_nloop"...
+          set_nloop(new_value)
+    Generating possibly empty wrappers"
+    Maybe empty "all_matrix2py-f2pywrappers.f"
+        Constructing wrapper function "m0_get_nhel_entry"...
+          m0_get_nhel_entry()
+		Constructing COMMON block support for "m0_process_nhel"...
+		  m0_nhel
+    Wrote C/API module "all_matrix2py" to file "./all_matrix2pymodule.c"
+    Fortran 77 wrappers are saved to "./all_matrix2py-f2pywrappers.f"
+Traceback (most recent call last):
+  File "/usr/bin/f2py3", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/lib/python3/dist-packages/numpy/f2py/f2py2e.py", line 766, in main
+    run_compile()
+  File "/usr/lib/python3/dist-packages/numpy/f2py/f2py2e.py", line 738, in run_compile
+    builder.compile()
+  File "/usr/lib/python3/dist-packages/numpy/f2py/_backends/_meson.py", line 178, in compile
+    self.run_meson(self.build_dir)
+  File "/usr/lib/python3/dist-packages/numpy/f2py/_backends/_meson.py", line 171, in run_meson
+    self._run_subprocess_command(setup_command, build_dir)
+  File "/usr/lib/python3/dist-packages/numpy/f2py/_backends/_meson.py", line 167, in _run_subprocess_command
+    subprocess.run(command, cwd=cwd, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'meson'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/var/crash/_usr_bin_f2py3.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/usr/bin/f2py3", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/lib/python3/dist-packages/numpy/f2py/f2py2e.py", line 766, in main
+    run_compile()
+  File "/usr/lib/python3/dist-packages/numpy/f2py/f2py2e.py", line 738, in run_compile
+    builder.compile()
+  File "/usr/lib/python3/dist-packages/numpy/f2py/_backends/_meson.py", line 178, in compile
+    self.run_meson(self.build_dir)
+  File "/usr/lib/python3/dist-packages/numpy/f2py/_backends/_meson.py", line 171, in run_meson
+    self._run_subprocess_command(setup_command, build_dir)
+  File "/usr/lib/python3/dist-packages/numpy/f2py/_backends/_meson.py", line 167, in _run_subprocess_command
+    subprocess.run(command, cwd=cwd, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'meson'
+make: *** [makefile:59: all_matrix2py.so] Error 1
+make: Leaving directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/madgraph_check/generated_process/SubProcesses'

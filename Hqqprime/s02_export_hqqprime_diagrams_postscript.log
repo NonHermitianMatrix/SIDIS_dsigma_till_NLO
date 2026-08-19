@@ -1,0 +1,26 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["Loading FeynArts from /home/physics/.WolframEngine/Applications/FeynCalc/FeynArts", "Text"]
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+Style["FeynArts ", "Text", Bold]Style["3.11 (25 Mar 2022) patched for use with FeynCalc, for documentation see the ", "Text"]Style[DisplayForm[ButtonBox["manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[First[FileNames[{"*.pdf", "*.PDF"}, FileNameJoin[{$FeynArtsDirectory, "manual"}]]]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" or visit ", "Text"]Style[DisplayForm[ButtonBox["www.feynarts.de.", ButtonData :> {URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "www.feynarts.de/"]], "Text"]
+Style["If you use FeynArts in your research, please cite", "Text"]
+Style[" • T. Hahn, Comput. Phys. Commun., 140, 418-431, 2001, arXiv:hep-ph/0012260", "Text"]
+"S02_STAGE: validating accepted S01 representative diagram sets"
+"S02_STAGE: painting all accepted Hqqprime representative diagrams"
+"S02_STAGE: rendering native PostScript sheets"
+"S02_STAGE: writing and independently reloading the manifest"
+"S02_DIAGRAM_COUNTS="InputForm[<|"up_up" -> 4, "up_down" -> 4, "down_up" -> 4|>]
+"S02_REGENERATED_COUNTS="InputForm[<|"up_up" -> 4, "up_down" -> 4, "down_up" -> 4|>]
+"S02_PAGE_COUNTS="InputForm[<|"up_up" -> 1, "up_down" -> 1, "down_up" -> 1|>]
+"S02_PAGE_MANIFEST="InputForm[{<|"GlobalPageIndex" -> 1, "Representative" -> "up_up", "RepresentativePageIndex" -> 1, "FileName" -> "s02_page_001.ps", "RelativePath" -> ".s02_ghostscript/pages/s02_page_001.ps", "SHA256" -> "80dbf50748e338f4f2b681d1109d1ca201d43d8debf80ff71542530a422bd820", "Bytes" -> 10763, "PostScriptHeader" -> True|>, <|"GlobalPageIndex" -> 2, "Representative" -> "up_down", "RepresentativePageIndex" -> 1, "FileName" -> "s02_page_002.ps", "RelativePath" -> ".s02_ghostscript/pages/s02_page_002.ps", "SHA256" -> "1acf2dd5756c906e942d8f174434ca5e72930d41fb3d539cadb6e49507911b25", "Bytes" -> 10765, "PostScriptHeader" -> True|>, <|"GlobalPageIndex" -> 3, "Representative" -> "down_up", "RepresentativePageIndex" -> 1, "FileName" -> "s02_page_003.ps", "RelativePath" -> ".s02_ghostscript/pages/s02_page_003.ps", "SHA256" -> "b4c4801423adba773045f36c26bf4fa25e780b86ac114e65b64b7c525151a4da", "Bytes" -> 10765, "PostScriptHeader" -> True|>}]
+"S02_PROGRAM_SHA256=""1af7043dd1530bf19ea72f0261add1a3773f92a1bee9b418e87f29b2e3fd2132"
+"S02_INPUT_S01_RESULT_SHA256=""842c6a1d06a9b0785e89e0230838891aedadc09bcf46a59a492c2e71dd77fb6b"
+"S02_RESULT_SHA256=""2ff55677e07fbf4108e88c3e9e33606e920376e755c57e10e766df8793d3c26d"
+"S02_SUCCESS"
+"S02_RESULT=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s02_result"
+"S02_POSTSCRIPT_DIRECTORY=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/.s02_ghostscript/pages"
+S02_SHELL_EXIT=0

@@ -1,0 +1,56 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S07_STAGE: validating the paper and accepted S06 handoff"
+"S07_STAGE: deriving the exact current-channel Ward-test point"
+"S07_WARD_POINT="InputForm[{Q2 -> 1, sHat -> 3, t1 -> -3/2, u1 -> -3/2, t2 -> -7/4, u2 -> -5/4, t3 -> -7/4, u3 -> -5/4, s12 -> 1, s13 -> 1, s23 -> 1}]
+"S07_STAGE: launching the three independent charge-tensor workers"
+"kernel 1 (Local):"
+"Style[\"Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/\", \"Text\"]\n"
+"kernel 1 (Local):"
+"$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.\n"
+"kernel 1 (Local):"
+"Style[\"FeynCalc \", \"Text\", Bold]Style[\"10.2.1 (stable version). For help, use the \", \"Text\"]Style[DisplayForm[ButtonBox[\"online documentation,\", ButtonData :> {URL[\"https://feyncalc.github.io/referenceDev\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://feyncalc.github.io/referenceDev\"]], \"Text\"]Style[\" visit the \", \"Text\"]Style[DisplayForm[ButtonBox[\"forum\", ButtonData :> {URL[\"https://github.com/FeynCalc/feyncalc/discussions\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://github.com/FeynCalc/feyncalc/discussions/\"]], \"Text\"]Style[\" and have a look at the supplied \", \"Text\"]Style[DisplayForm[ButtonBox[\"examples.\", BaseStyle -> \"Hyperlink\", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, \"Examples\"}]], Evaluator -> Automatic, Method -> \"Preemptive\"]], \"Text\"]Style[\" The PDF-version of the manual can be downloaded \", \"Text\"]Style[DisplayForm[ButtonBox[\"here.\", ButtonData :> {URL[\"https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf\"]], \"Text\"]\n"
+"kernel 1 (Local):"
+"Style[\"If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.\", \"Text\"]\n"
+"kernel 1 (Local):"
+"Style[\"Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!\", {\"Text\", Italic}]\n"
+"kernel 2 (Local):"
+"Style[\"Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/\", \"Text\"]\n"
+"kernel 2 (Local):"
+"$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.\n"
+"kernel 2 (Local):"
+"Style[\"FeynCalc \", \"Text\", Bold]Style[\"10.2.1 (stable version). For help, use the \", \"Text\"]Style[DisplayForm[ButtonBox[\"online documentation,\", ButtonData :> {URL[\"https://feyncalc.github.io/referenceDev\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://feyncalc.github.io/referenceDev\"]], \"Text\"]Style[\" visit the \", \"Text\"]Style[DisplayForm[ButtonBox[\"forum\", ButtonData :> {URL[\"https://github.com/FeynCalc/feyncalc/discussions\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://github.com/FeynCalc/feyncalc/discussions/\"]], \"Text\"]Style[\" and have a look at the supplied \", \"Text\"]Style[DisplayForm[ButtonBox[\"examples.\", BaseStyle -> \"Hyperlink\", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, \"Examples\"}]], Evaluator -> Automatic, Method -> \"Preemptive\"]], \"Text\"]Style[\" The PDF-version of the manual can be downloaded \", \"Text\"]Style[DisplayForm[ButtonBox[\"here.\", ButtonData :> {URL[\"https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf\"]], \"Text\"]\n"
+"kernel 2 (Local):"
+"Style[\"If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.\", \"Text\"]\n"
+"kernel 2 (Local):"
+"Style[\"Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!\", {\"Text\", Italic}]\n"
+"kernel 3 (Local):"
+"Style[\"Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/\", \"Text\"]\n"
+"kernel 3 (Local):"
+"$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.\n"
+"kernel 3 (Local):"
+"Style[\"FeynCalc \", \"Text\", Bold]Style[\"10.2.1 (stable version). For help, use the \", \"Text\"]Style[DisplayForm[ButtonBox[\"online documentation,\", ButtonData :> {URL[\"https://feyncalc.github.io/referenceDev\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://feyncalc.github.io/referenceDev\"]], \"Text\"]Style[\" visit the \", \"Text\"]Style[DisplayForm[ButtonBox[\"forum\", ButtonData :> {URL[\"https://github.com/FeynCalc/feyncalc/discussions\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://github.com/FeynCalc/feyncalc/discussions/\"]], \"Text\"]Style[\" and have a look at the supplied \", \"Text\"]Style[DisplayForm[ButtonBox[\"examples.\", BaseStyle -> \"Hyperlink\", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, \"Examples\"}]], Evaluator -> Automatic, Method -> \"Preemptive\"]], \"Text\"]Style[\" The PDF-version of the manual can be downloaded \", \"Text\"]Style[DisplayForm[ButtonBox[\"here.\", ButtonData :> {URL[\"https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf\"], None}, BaseStyle -> \"Hyperlink\", ButtonNote -> \"https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf\"]], \"Text\"]\n"
+"kernel 3 (Local):"
+"Style[\"If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.\", \"Text\"]\n"
+"kernel 3 (Local):"
+"Style[\"Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!\", {\"Text\", Italic}]\n"
+"S07_STAGE: dispatching three charge tasks across three Engine-15 kernels"
+"S07_CHECKPOINT: ""IncomingChargeSquared"" ""Pg"" leaf count "5181
+"S07_CHECKPOINT: ""IncomingChargeSquared"" ""PPP"" leaf count "84
+"S07_CHECKPOINT: ""PrimeChargeSquared"" ""Pg"" leaf count "5323
+"S07_CHECKPOINT: ""PrimeChargeSquared"" ""PPP"" leaf count "669
+"S07_CHECKPOINT: ""MixedIncomingPrimeCharge"" ""Pg"" leaf count "10067
+"S07_CHECKPOINT: ""MixedIncomingPrimeCharge"" ""PPP"" leaf count "737
+"S07_STAGE: atomically writing the Hqqprime S07 result"
+"S07_SUCCESS"
+"S07_PROGRAM_SHA256=4ac73e5b846e088c7c92acfed2bb935ba969e9049d778f83e5f8cfa34fcab1e7"
+"S07_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s07_result"
+"S07_RESULT_SHA256=b59def6d8350183319dda98591e78e001ca3c1e5d2f2a9d0b5060927d4215026"
+"S07_PROJECTION_COUNT="6
+"S07_LEAF_COUNTS="InputForm[<|"Pg" -> <|"IncomingChargeSquared" -> 5181, "PrimeChargeSquared" -> 5323, "MixedIncomingPrimeCharge" -> 10067|>, "PPP" -> <|"IncomingChargeSquared" -> 84, "PrimeChargeSquared" -> 669, "MixedIncomingPrimeCharge" -> 737|>|>]
+"S07_CHECK_COUNT="33
+"S07_RESULT_BYTES="158979
+S07_PRODUCTION_SHELL_EXIT=0

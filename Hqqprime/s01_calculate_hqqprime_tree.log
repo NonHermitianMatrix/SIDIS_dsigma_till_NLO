@@ -1,0 +1,30 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["Loading FeynArts from /home/physics/.WolframEngine/Applications/FeynCalc/FeynArts", "Text"]
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+Style["FeynArts ", "Text", Bold]Style["3.11 (25 Mar 2022) patched for use with FeynCalc, for documentation see the ", "Text"]Style[DisplayForm[ButtonBox["manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[First[FileNames[{"*.pdf", "*.PDF"}, FileNameJoin[{$FeynArtsDirectory, "manual"}]]]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" or visit ", "Text"]Style[DisplayForm[ButtonBox["www.feynarts.de.", ButtonData :> {URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "www.feynarts.de/"]], "Text"]
+Style["If you use FeynArts in your research, please cite", "Text"]
+Style[" • T. Hahn, Comput. Phys. Commun., 140, 418-431, 2001, arXiv:hep-ph/0012260", "Text"]
+
+FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+
+FAGS::shdw: Symbol FAGS appears in multiple contexts {FeynArts`, Global`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+"S01_STAGE: generating three independent charge representatives"
+"S01_STAGE: generating representative up_up"
+"S01_STAGE: generating representative up_down"
+"S01_STAGE: generating representative down_up"
+"S01_STAGE: deriving SMQCD electric charge coefficients"
+"S01_STAGE: solving the two-component charge basis"
+"S01_STAGE: writing and independently reloading the result"
+"S01_DIAGRAM_COUNTS="InputForm[<|"up_up" -> 4, "up_down" -> 4, "down_up" -> 4|>]
+"S01_MODEL_CHARGE_COEFFICIENTS="InputForm[<|"UpType" -> 2/3, "DownType" -> -1/3|>]
+"S01_CHARGE_BASIS_LEAF_COUNTS="InputForm[{537, 351}]
+"S01_PROGRAM_SHA256=""17ed0c69c0c440a63b93a41d7634eade24a948543618a09769eea937427877a4"
+"S01_REFERENCE_SHA256=""bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b"
+"S01_SUCCESS"
+"S01_RESULT=""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s01_result"
+S01_SHELL_EXIT=0

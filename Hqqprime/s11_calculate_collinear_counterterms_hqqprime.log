@@ -1,0 +1,38 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["Loading FeynArts from /home/physics/.WolframEngine/Applications/FeynCalc/FeynArts", "Text"]
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+Style["FeynArts ", "Text", Bold]Style["3.11 (25 Mar 2022) patched for use with FeynCalc, for documentation see the ", "Text"]Style[DisplayForm[ButtonBox["manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[First[FileNames[{"*.pdf", "*.PDF"}, FileNameJoin[{$FeynArtsDirectory, "manual"}]]]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" or visit ", "Text"]Style[DisplayForm[ButtonBox["www.feynarts.de.", ButtonData :> {URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "www.feynarts.de/"]], "Text"]
+Style["If you use FeynArts in your research, please cite", "Text"]
+Style[" • T. Hahn, Comput. Phys. Commun., 140, 418-431, 2001, arXiv:hep-ph/0012260", "Text"]
+"S11_STAGE: validating paper, accepted S01, and accepted S10 handoff"
+"S11_CHECKPOINT: accepted upstream provenance and bookkeeping validated"
+"S11_STAGE: deriving Eq. (46) species and charge routes"
+"S11_CHECKPOINT: unique PDF/FF species and charge routes derived"
+
+FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+"S11_STAGE: generating charge-stripped Born channel Hqg gamma* q -> g(k1) q"
+"S11_CHECKPOINT: completed Born projections and Ward gates for Hqg gamma* q -> g(k1) q"
+"S11_STAGE: generating charge-stripped Born channel HgqPrime gamma* g -> qPrime(k1) qbarPrime"
+"S11_CHECKPOINT: completed Born projections and Ward gates for HgqPrime gamma* g -> qPrime(k1) qbarPrime"
+"S11_STAGE: generating charge-stripped Born channel validation Hqg gamma* d -> g(k1) d"
+"S11_CHECKPOINT: completed Born projections and Ward gates for validation Hqg gamma* d -> g(k1) d"
+"S11_STAGE: generating charge-stripped Born channel validation HgqPrime gamma* g -> d(k1) dbar"
+"S11_CHECKPOINT: completed Born projections and Ward gates for validation HgqPrime gamma* g -> d(k1) dbar"
+"S11_STAGE: explicitizing reference and charge-validation Born pairs"
+"S11_CHECKPOINT: independent up/down charge stripping agrees exactly"
+"S11_CHECKPOINT: exact Eq. (46) convolution maps validated"
+"S11_STAGE: acting the two regular splitting kernels for Pg and PPP"
+"S11_STAGE: atomically writing the Hqqprime S11 result"
+"S11_SUCCESS_SYMBOLIC_COUNTERTERMS"
+"S11_PROGRAM_SHA256=86725c6c85baf15f1d209e98a06ab7a7c7f28ffe4ec4fcb4efe59e77a3eafd03"
+"S11_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s11_result"
+"S11_RESULT_SHA256=0c58e67a9d108de830768d5b04d4078fd6fd0265abdd03a54a2a1dec0b2c186b"
+"S11_RESULT_BYTES="22090
+"S11_COUNTERTERM_ORDER="InputForm[{{"Pg", "PPP"}, {"IncomingChargeSquared", "PrimeChargeSquared", "MixedIncomingPrimeCharge"}}]
+"S11_COMPONENT_SUPPORT="InputForm[<|"IncomingChargeSquared" -> <|"PDF" -> 0, "FF" -> 1|>, "PrimeChargeSquared" -> <|"PDF" -> 1, "FF" -> 0|>, "MixedIncomingPrimeCharge" -> <|"PDF" -> 0, "FF" -> 0|>|>]
+"S11_CHECKS="InputForm[<|"AuthoritativePaperHashValidated" -> True, "AcceptedS01SourceResultAndNineteenChecksValidated" -> True, "AcceptedS10SourceResultSixCachesAndThirtyTwoChecksValidated" -> True, "FeynCalcContextLoadedBeforeArtifactDeserialization" -> True, "ProjectorFirstChargeSecondOrderPreserved" -> True, "DifferentFlavorExternalSpeciesValidated" -> True, "FullQuarkAntiquarkGluonCandidateSpeciesAudited" -> True, "UniquePDFRouteDerivedAsHgqPrimeTimesPgq" -> True, "UniqueFFRouteDerivedAsHqgTimesPqg" -> True, "SpeciesRoutesMappedToCorrectChargeKeys" -> True, "MixedChargeRouteStructurallyAbsent" -> True, "S01ModelChargesAndReciprocalStripFactorsDerivedExactly" -> True, "ReferenceAndValidationBornChannelKeysAgree" -> True, "CurrentBornDiagramInventoriesMeasuredAndConsistent" -> True, "ReferenceAndValidationBornWardIdentitiesPass" -> True, "IndependentUpDownChargeStrippingAgrees" -> True, "CorrectInitialStateAveragesDerived" -> True, "AbsoluteBornScaleMuPowerTwoEpsilonAppliedExactlyOnce" -> True, "AllConvolutionMappingsValidated" -> True, "PaperTwoBodyNormalizationDerived" -> True, "PPPPDFRescalingAppliedOnlyToPDFDensity" -> True, "ExactlySixOrderedChargeResolvedTotals" -> True, "ExactlyFourNonzeroCountertermComponents" -> True, "ExactlyTwoStructuralMixedChargeZeros" -> True, "RegularSplittingKernelsActedWithoutDistributionPlaceholders" -> True, "ExactlyOneOrdinaryInactiveIntegralPerNonzeroComponent" -> True, "ProjectorAndChargeLabelledSymbolicTestsRetained" -> True, "PaperMSBarSEpsilonKeptSymbolic" -> True, "NoAdditionalMuEpsilonInPartonicPDForFF" -> True, "CountertermsRetainExactlyOneBornScaleMuPower" -> True, "CoefficientExpressionsRemainFreeOfGenericCharges" -> True, "PhysicalOrderedFlavorChargeAssemblyStillDeferred" -> True, "UnitWeightSymmetryAndAbsentVirtualBookkeepingPreserved" -> True, "CalculationRemainsExactAndSymbolic" -> True, "S10ActionsNotLoadedRecomputedOrCombined" -> True, "PoleCancellationFiniteLimitEq9FHatAndExternalComparisonDeferred" -> True, "AtomicSourceBoundResultProtocolConfigured" -> True|>]

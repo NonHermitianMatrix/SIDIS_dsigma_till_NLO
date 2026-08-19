@@ -1,0 +1,863 @@
+<|"Status" -> "Complete", "Stage" -> "HqqprimeS08Cache-v1", 
+ "Channel" -> "Hqqprime only", "Projector" -> "PPP", 
+ "ChargeKey" -> "IncomingChargeSquared", 
+ "GeneratedAt" -> "2026-08-18T23:03:55", "ProgramPath" -> "/home/physics/proj\
+ects/AI_Assisted_SIDIS/scripts/Hqqprime/s08_phase_space_integrate_hqqprime.wl\
+", "ProgramSHA256" -> 
+  "dbbc23d05697f4e45c23471be8f3ed12448d8db0d973e60d67cdebbcabec8ed4", 
+ "PaperPath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Large_Trans\
+verse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Or\
+der.pdf", "PaperSHA256" -> 
+  "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+ "S07SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprim\
+e/s07_contract_hqqprime_projectors.wl", "S07SourceSHA256" -> 
+  "4ac73e5b846e088c7c92acfed2bb935ba969e9049d778f83e5f8cfa34fcab1e7", 
+ "S07ResultPath" -> 
+  "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s07_result", 
+ "S07ResultSHA256" -> 
+  "b59def6d8350183319dda98591e78e001ca3c1e5d2f2a9d0b5060927d4215026", 
+ "InputProjectionKey" -> "ScalarProjections/NLOReal_OAlphaS2/Hqqprime;q_qbarP\
+rime/PPP/IncomingChargeSquared", "InputScalarSHA256" -> 
+  "3de1a9bf44c75b5c1d4b0fa42b619c32121959704c0d59861859451fc5ea1ede", 
+ "ScaleBookkeeping" -> <|"AbsoluteFactor" -> ScaleMu^(4*epsilon), 
+   "AbsoluteExponent" -> 4*epsilon, 
+   "PowerPreservedExactlyOnceInEveryProjection" -> True, 
+   "SeparateMSBarSEpsilonApplied" -> False|>, 
+ "ChargeBookkeeping" -> <|"SeparatedTensorKeys" -> 
+    {"IncomingChargeSquared", "PrimeChargeSquared", 
+     "MixedIncomingPrimeCharge"}, "GenericChargeSymbols" -> 
+    {S01Qq, S01QqPrime}, "CoefficientTensorsRemainChargeFree" -> True, 
+   "PhysicalOrderedFlavorSumAppliedAtS06" -> False, 
+   "PhysicalAssemblyInstruction" -> "Sum over ordered q,qPrime with qPrime \
+different from q while retaining Qq^2, QqPrime^2, and Qq QqPrime tensors \
+separately; do not replace by a bare Nf or Nf-1 factor."|>, 
+ "VirtualContributionAtThisOrder" -> <|"Applicable" -> False, 
+   "Interference" -> 0, "SourceDisposition" -> "NotApplicableAtThisOrder", 
+   "ZeroMeaning" -> "Exact integer zero denotes a structurally \
+absent/not-applicable sector; no virtual expression was evaluated to obtain \
+it."|>, "UpstreamSymmetryBookkeeping" -> 
+  <|"DistinctFinalStateIdentities" -> {"qPrime(k1)", "q(k2)", 
+     "qbarPrime(k3)"}, "DerivedFinalStateSymmetryFactors" -> 
+    <|"up_up" -> 1, "up_down" -> 1, "down_up" -> 1|>, 
+   "NontrivialSymmetryFactorRequired" -> False, 
+   "SymmetryFactorAppliedAtS06" -> False|>, "FinalStateSymmetryFactor" -> 1, 
+ "NontrivialSymmetryFactorAppliedAtS08" -> False, 
+ "AngularRecordSHA256" -> 
+  "931f2f18fa23d7690db5e08846a5a544899d197fe882f0a24aec2e41360cd093", 
+ "AngularRecord" -> <|"PreparationAudit" -> <|"CombinedLeafCount" -> 55, 
+     "ExpandedTermCount" -> 10, "ExpandedLeafCount" -> 296, 
+     "ExactRationalCombinationBeforeExpansion" -> True|>, 
+   "ReductionAudit" -> <|"InputTermCount" -> 10, 
+     "InitialMaximumDenominatorADMVCount" -> 2, 
+     "InitialTermsWithMoreThanTwoDenominatorADMVs" -> 0, 
+     "AfterSameTypeTermCount" -> 10, "AfterTripleTermCount" -> 10, 
+     "ReducedTermCount" -> 260, "InvalidReducedTermCount" -> 0, 
+     "CommonBasis" -> {t2, u2}, "ReconstructionMethod" -> 
+      "exact common-basis residual for every disjoint input-term partition", 
+     "ReconstructionChunkSize" -> 64, "ReconstructionChunkCount" -> 1, 
+     "ReconstructionResidual" -> 0, "EveryReconstructionChunkResidualZero" -> 
+      True, "ReconstructionPassed" -> True|>, 
+   "MasterKeys" -> {{"B19", t2, -2, u2, 0}, {"B19", t2, -2, s13, -1}, 
+     {"B19", t2, -1, s13, -1}, {"B19", t2, 0, s13, -1}, 
+     {"B19", t2, -2, s13, 1}, {"B19", t2, -1, u2, 0}, {"Area"}, 
+     {"B19", t2, -2, s13, 2}, {"B19", t2, -1, s13, 1}, 
+     {"B19", t2, 1, s13, -1}}, "MasterCount" -> 10, 
+   "BeforeFinalStateSymmetryFactor" -> (2^(-8 + 2*epsilon)*Pi^(-6 + epsilon)*
+      Gamma[1 - epsilon]*(-(((-s23 + sHat)*S08Case2Master[1, -1, 
+           (2*s23 - sHat - t1 - 2*u1)/Sqrt[(sHat + t1)^2 + 4*s23*(s23 - 
+                sHat - t1 - u1)], (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + 
+             sHat*t1 - 2*s23*u1)/((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*
+                (s23 - sHat - t1 - u1)]), epsilon]*
+          ((-3*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+           (3*CA^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+           (3*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+           (3*CA^2*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+            SUNN))/Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]) - 
+       (Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]*
+         S08Case2Master[-1, 1, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+           ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*(-((ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN) + 
+          (CA^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN))/
+        (-s23 + sHat) + ((-s23 + sHat)^2*S08Case2Master[2, -2, 
+          (2*s23 - sHat - t1 - 2*u1)/Sqrt[(sHat + t1)^2 + 
+             4*s23*(s23 - sHat - t1 - u1)], (2*s23^2 - 3*s23*sHat + sHat^2 - 
+            s23*t1 + sHat*t1 - 2*s23*u1)/((s23 - sHat)*
+            Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), epsilon]*
+         ((ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN))/
+        ((sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)) + 
+       (2*Pi*Beta[1 - epsilon, 1 - epsilon]*Gamma[1 - 2*epsilon]*
+         ((3*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/Gamma[1 - epsilon]^2 + 
+       (2*S08Case2Master[0, 1, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+           ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*((2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*CA^2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*epsilon*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*
+            sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (3*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/(-s23 + sHat) + (2*(-s23 + sHat)*S08Case2Master[2, -1, 
+          (2*s23 - sHat - t1 - 2*u1)/Sqrt[(sHat + t1)^2 + 
+             4*s23*(s23 - sHat - t1 - u1)], (2*s23^2 - 3*s23*sHat + sHat^2 - 
+            s23*t1 + sHat*t1 - 2*s23*u1)/((s23 - sHat)*
+            Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), epsilon]*
+         ((2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*
+            sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (3*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/((sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)) - 
+       (2*S08Case2Master[1, 0, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (-2*s23^2 + s23*sHat + 3*s23*t1 - sHat*t1 - t1^2 + 2*s23*u1)/
+           ((s23 - t1)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*((-4*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (4*CA^2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (4*epsilon*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (6*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (6*CA^2*ScaleMu^(4*epsilon)*
+            sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (6*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (6*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*CA^2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (6*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (6*CA^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (6*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (6*CA^2*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)] - 
+       (4*S08Case2Master[1, 1, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+           ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*(-((s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+            SUNN) + (CA^2*s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*s23^2*ScaleMu^(4*epsilon)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (CA^2*epsilon*s23^2*
+            ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (4*epsilon*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*
+            sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*epsilon*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*CA^2*s23*ScaleMu^(4*epsilon)*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*CA^2*ScaleMu^(4*epsilon)*sHat*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*
+            sHat*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (CA^2*ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*t1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (4*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*CA^2*s23*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*epsilon*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (6*ScaleMu^(4*epsilon)*sHat*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (6*CA^2*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (6*epsilon*ScaleMu^(4*epsilon)*
+            sHat*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (6*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*sHat*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*t1*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (CA^2*ScaleMu^(4*epsilon)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*
+            u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/((-s23 + sHat)*Sqrt[(sHat + t1)^2 + 
+           4*s23*(s23 - sHat - t1 - u1)]) + 
+       (4*S08Case2Master[2, 0, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (-2*s23^2 + s23*sHat + 3*s23*t1 - sHat*t1 - t1^2 + 2*s23*u1)/
+           ((s23 - t1)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*((s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (CA^2*s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (epsilon*s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (CA^2*epsilon*s23^2*ScaleMu^(4*epsilon)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*s23*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*CA^2*s23*ScaleMu^(4*epsilon)*
+            sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*epsilon*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (4*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*CA^2*ScaleMu^(4*epsilon)*sHat^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (3*epsilon*ScaleMu^(4*epsilon)*
+            sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*s23*ScaleMu^(4*epsilon)*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*CA^2*ScaleMu^(4*epsilon)*sHat*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*
+            sHat*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (CA^2*ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (epsilon*ScaleMu^(4*epsilon)*t1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (4*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*CA^2*s23*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*epsilon*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (6*ScaleMu^(4*epsilon)*sHat*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (6*CA^2*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (6*epsilon*ScaleMu^(4*epsilon)*
+            sHat*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (6*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*sHat*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*epsilon*ScaleMu^(4*epsilon)*t1*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (ScaleMu^(4*epsilon)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (CA^2*ScaleMu^(4*epsilon)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (epsilon*ScaleMu^(4*epsilon)*
+            u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/((sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)) + 
+       (8*S08Case2Master[2, 1, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+           ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*(-((s23^2*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+             SMP["g_s"]^4)/SUNN) + (CA^2*s23^2*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (epsilon*s23^2*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (CA^2*epsilon*s23^2*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*sHat^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (2*CA^2*s23*ScaleMu^(4*epsilon)*
+            sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*
+            sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (ScaleMu^(4*epsilon)*sHat^3*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*sHat^3*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (epsilon*ScaleMu^(4*epsilon)*sHat^3*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^3*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*sHat*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (2*CA^2*s23*ScaleMu^(4*epsilon)*
+            sHat*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*
+            t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*ScaleMu^(4*epsilon)*sHat^2*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*ScaleMu^(4*epsilon)*sHat^2*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (2*epsilon*ScaleMu^(4*epsilon)*sHat^2*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*
+            t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*sHat*
+            t1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*sHat*t1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (epsilon*ScaleMu^(4*epsilon)*sHat*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (s23^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*s23^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*s23^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*s23^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*s23*ScaleMu^(4*epsilon)*sHat*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*s23*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*epsilon*s23*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat^2*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*ScaleMu^(4*epsilon)*sHat^2*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*
+            sHat^2*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*s23*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*ScaleMu^(4*epsilon)*sHat*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*ScaleMu^(4*epsilon)*sHat*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*
+            sHat*t1*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*t1^2*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*t1^2*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*t1^2*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*t1^2*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*
+            sHat*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (2*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*
+            t1*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^3*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^3*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^3*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^3*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*
+            u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*ScaleMu^(4*epsilon)*sHat^2*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*epsilon*s23*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*
+            sHat*(s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*
+            t1*(s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*sHat*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (CA^2*ScaleMu^(4*epsilon)*sHat*
+            u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (epsilon*ScaleMu^(4*epsilon)*sHat*u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*u1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN))/((-s23 + sHat)*
+         ((sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)))))/
+     (s23^epsilon*Gamma[1 - 2*epsilon]), 
+   "PhysicalAfterFinalStateSymmetryFactor" -> 
+    (2^(-8 + 2*epsilon)*Pi^(-6 + epsilon)*Gamma[1 - epsilon]*
+      (-(((-s23 + sHat)*S08Case2Master[1, -1, (2*s23 - sHat - t1 - 2*u1)/
+            Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+           (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+            ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - 
+                 u1)]), epsilon]*((-3*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+             SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+             SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+             SMP["g_s"]^4)/SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*
+             FCGV["EL"]^2*SMP["g_s"]^4)/SUNN))/
+         Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]) - 
+       (Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]*
+         S08Case2Master[-1, 1, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+           ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*(-((ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN) + 
+          (CA^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN))/
+        (-s23 + sHat) + ((-s23 + sHat)^2*S08Case2Master[2, -2, 
+          (2*s23 - sHat - t1 - 2*u1)/Sqrt[(sHat + t1)^2 + 
+             4*s23*(s23 - sHat - t1 - u1)], (2*s23^2 - 3*s23*sHat + sHat^2 - 
+            s23*t1 + sHat*t1 - 2*s23*u1)/((s23 - sHat)*
+            Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), epsilon]*
+         ((ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN))/
+        ((sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)) + 
+       (2*Pi*Beta[1 - epsilon, 1 - epsilon]*Gamma[1 - 2*epsilon]*
+         ((3*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/Gamma[1 - epsilon]^2 + 
+       (2*S08Case2Master[0, 1, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+           ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*((2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*CA^2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*epsilon*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*
+            sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (3*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/(-s23 + sHat) + (2*(-s23 + sHat)*S08Case2Master[2, -1, 
+          (2*s23 - sHat - t1 - 2*u1)/Sqrt[(sHat + t1)^2 + 
+             4*s23*(s23 - sHat - t1 - u1)], (2*s23^2 - 3*s23*sHat + sHat^2 - 
+            s23*t1 + sHat*t1 - 2*s23*u1)/((s23 - sHat)*
+            Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), epsilon]*
+         ((2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*
+            sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (3*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/((sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)) - 
+       (2*S08Case2Master[1, 0, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (-2*s23^2 + s23*sHat + 3*s23*t1 - sHat*t1 - t1^2 + 2*s23*u1)/
+           ((s23 - t1)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*((-4*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (4*CA^2*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (4*epsilon*s23*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (6*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (6*CA^2*ScaleMu^(4*epsilon)*
+            sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (6*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (6*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*CA^2*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (6*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (6*CA^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (6*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (6*CA^2*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)] - 
+       (4*S08Case2Master[1, 1, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+           ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*(-((s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+            SUNN) + (CA^2*s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*s23^2*ScaleMu^(4*epsilon)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (CA^2*epsilon*s23^2*
+            ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (4*epsilon*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*CA^2*ScaleMu^(4*epsilon)*
+            sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*epsilon*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*CA^2*s23*ScaleMu^(4*epsilon)*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*CA^2*ScaleMu^(4*epsilon)*sHat*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*
+            sHat*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (CA^2*ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*t1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (4*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*CA^2*s23*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*epsilon*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (6*ScaleMu^(4*epsilon)*sHat*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (6*CA^2*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (6*epsilon*ScaleMu^(4*epsilon)*
+            sHat*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (6*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*sHat*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*t1*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (CA^2*ScaleMu^(4*epsilon)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*
+            u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/((-s23 + sHat)*Sqrt[(sHat + t1)^2 + 
+           4*s23*(s23 - sHat - t1 - u1)]) + 
+       (4*S08Case2Master[2, 0, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (-2*s23^2 + s23*sHat + 3*s23*t1 - sHat*t1 - t1^2 + 2*s23*u1)/
+           ((s23 - t1)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*((s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (CA^2*s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (epsilon*s23^2*ScaleMu^(4*epsilon)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (CA^2*epsilon*s23^2*ScaleMu^(4*epsilon)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*s23*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*CA^2*s23*ScaleMu^(4*epsilon)*
+            sHat*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*epsilon*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (4*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (3*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*CA^2*ScaleMu^(4*epsilon)*sHat^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (3*epsilon*ScaleMu^(4*epsilon)*
+            sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*s23*ScaleMu^(4*epsilon)*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (4*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*CA^2*ScaleMu^(4*epsilon)*sHat*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*
+            sHat*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (CA^2*ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (epsilon*ScaleMu^(4*epsilon)*t1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*t1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (4*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*CA^2*s23*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*epsilon*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (4*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (6*ScaleMu^(4*epsilon)*sHat*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (6*CA^2*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (6*epsilon*ScaleMu^(4*epsilon)*
+            sHat*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (6*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*sHat*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*epsilon*ScaleMu^(4*epsilon)*t1*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (ScaleMu^(4*epsilon)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (CA^2*ScaleMu^(4*epsilon)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (epsilon*ScaleMu^(4*epsilon)*
+            u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN))/((sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)) + 
+       (8*S08Case2Master[2, 1, (2*s23 - sHat - t1 - 2*u1)/
+           Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)], 
+          (2*s23^2 - 3*s23*sHat + sHat^2 - s23*t1 + sHat*t1 - 2*s23*u1)/
+           ((s23 - sHat)*Sqrt[(sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)]), 
+          epsilon]*(-((s23^2*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+             SMP["g_s"]^4)/SUNN) + (CA^2*s23^2*ScaleMu^(4*epsilon)*sHat*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (epsilon*s23^2*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (CA^2*epsilon*s23^2*ScaleMu^(4*epsilon)*sHat*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*sHat^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (2*CA^2*s23*ScaleMu^(4*epsilon)*
+            sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*sHat^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*
+            sHat^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (ScaleMu^(4*epsilon)*sHat^3*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*sHat^3*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (epsilon*ScaleMu^(4*epsilon)*sHat^3*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^3*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*sHat*t1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (2*CA^2*s23*ScaleMu^(4*epsilon)*
+            sHat*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*
+            t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*ScaleMu^(4*epsilon)*sHat^2*t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*ScaleMu^(4*epsilon)*sHat^2*t1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (2*epsilon*ScaleMu^(4*epsilon)*sHat^2*t1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*
+            t1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*sHat*
+            t1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*sHat*t1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN + (epsilon*ScaleMu^(4*epsilon)*sHat*t1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (s23^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*s23^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*s23^2*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*s23^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*s23*ScaleMu^(4*epsilon)*sHat*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*s23*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*epsilon*s23*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat^2*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*ScaleMu^(4*epsilon)*sHat^2*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*
+            sHat^2*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*s23*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (4*ScaleMu^(4*epsilon)*sHat*t1*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (4*CA^2*ScaleMu^(4*epsilon)*sHat*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*
+            sHat*t1*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*t1^2*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*t1^2*(s23 - sHat - t1 - u1)*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*t1^2*
+            (s23 - sHat - t1 - u1)*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*t1^2*(s23 - sHat - t1 - u1)*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*s23*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*
+            ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (3*ScaleMu^(4*epsilon)*sHat*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (3*CA^2*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (3*epsilon*ScaleMu^(4*epsilon)*
+            sHat*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (3*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (2*ScaleMu^(4*epsilon)*t1*
+            (s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*
+            t1*(s23 - sHat - t1 - u1)^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^3*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^3*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^3*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^3*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*sHat*
+            u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*epsilon*ScaleMu^(4*epsilon)*sHat^2*u1*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (2*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat^2*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*t1*u1*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (2*epsilon*s23*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (2*CA^2*epsilon*s23*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (4*epsilon*ScaleMu^(4*epsilon)*
+            sHat*(s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (4*CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*
+            t1*(s23 - sHat - t1 - u1)*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*t1*(s23 - sHat - t1 - u1)*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (2*epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)^2*u1*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (2*CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)^2*u1*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*sHat*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + (CA^2*ScaleMu^(4*epsilon)*sHat*
+            u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (epsilon*ScaleMu^(4*epsilon)*sHat*u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/
+           SUNN - (CA^2*epsilon*ScaleMu^(4*epsilon)*sHat*u1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN - (ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*
+            u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN + 
+          (CA^2*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1^2*FCGV["EL"]^2*
+            SMP["g_s"]^4)/SUNN + (epsilon*ScaleMu^(4*epsilon)*
+            (s23 - sHat - t1 - u1)*u1^2*FCGV["EL"]^2*SMP["g_s"]^4)/SUNN - 
+          (CA^2*epsilon*ScaleMu^(4*epsilon)*(s23 - sHat - t1 - u1)*u1^2*
+            FCGV["EL"]^2*SMP["g_s"]^4)/SUNN))/((-s23 + sHat)*
+         ((sHat + t1)^2 + 4*s23*(s23 - sHat - t1 - u1)))))/
+     (s23^epsilon*Gamma[1 - 2*epsilon])|>|>

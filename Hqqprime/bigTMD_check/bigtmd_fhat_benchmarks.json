@@ -1,0 +1,304 @@
+{
+  "Benchmarks": [
+    {
+      "ID": "interior_1",
+      "Jacobian": 0.025037898728832247,
+      "Nf": 4.0,
+      "PHT2": 0.42439,
+      "Q": 4.123105625617661,
+      "Q2": 17.0,
+      "S23Fraction": 0.4,
+      "S23Sample": 6.619113043478261,
+      "S23UpperB": 16.547782608695652,
+      "qT2": 3.1,
+      "s": 28.08695652173913,
+      "t": -7.431800418235048,
+      "xB": 0.23,
+      "xHat": 0.3770491803278688,
+      "xi": 0.61,
+      "zH": 0.37,
+      "zHat": 0.6883596821413634,
+      "zeta": 0.5375096909351175
+    },
+    {
+      "ID": "interior_2",
+      "Jacobian": 0.010219643127070377,
+      "Nf": 4.0,
+      "PHT2": 0.45387,
+      "Q": 4.795831523312719,
+      "Q2": 23.0,
+      "S23Fraction": 0.35,
+      "S23Sample": 13.111128947368421,
+      "S23UpperB": 37.460368421052635,
+      "qT2": 2.7,
+      "s": 65.36842105263158,
+      "t": -7.41534248434238,
+      "xB": 0.19,
+      "xHat": 0.2602739726027397,
+      "xi": 0.73,
+      "zH": 0.41,
+      "zHat": 0.7677171189979123,
+      "zeta": 0.5340508761028617
+    },
+    {
+      "ID": "interior_3",
+      "Jacobian": 0.017725818802178977,
+      "Nf": 4.0,
+      "PHT2": 0.15979,
+      "Q": 5.385164807134504,
+      "Q2": 29.0,
+      "S23Fraction": 0.55,
+      "S23Sample": 17.231659677419355,
+      "S23UpperB": 31.330290322580645,
+      "qT2": 1.9,
+      "s": 44.903225806451616,
+      "t": -12.97761203046385,
+      "xB": 0.31,
+      "xHat": 0.3924050632911392,
+      "xi": 0.79,
+      "zH": 0.29,
+      "zHat": 0.591232028396168,
+      "zeta": 0.490501167175739
+    }
+  ],
+  "Conventions": {
+    "Couplings": "BigTMD generated module arguments g=gp=1",
+    "DecimalPolicy": "pinned Python decimal expressions executed as written",
+    "DistributionContent": "channel-6 A/B/C regular only",
+    "DriverCaveat": "sidis.py includes channel 6 in its active loop and applies delta/plus only for channels below 4",
+    "Excluded": "PDFs, fragmentation functions, physical ordered-flavour/charge luminosity, alpha_s running, remaining zh/(xi zeta) driver test factor, xi convolution, and leptonic prefactors",
+    "FunctionsNotSelected": [
+      "delta",
+      "plus1B",
+      "plus2B"
+    ],
+    "Jacobian": "BigTMD sidis.py zeta-to-s23 Jacobian applied",
+    "Nf": 4,
+    "PartonicModuleWeight": 1.0,
+    "PhysicalOrderedFlavorChargeAssembly": "deferred",
+    "Scale": "mu=Q"
+  },
+  "FHatByBenchmarkAndCase": {
+    "interior_1": {
+      "A": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -2.2145680370341602e-07,
+          "F2Hat": -1.7259260287511558e-07
+        }
+      },
+      "B": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -2.7809669912928044e-07,
+          "F2Hat": -4.2685852590660874e-07
+        }
+      },
+      "C": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -2.4441189692989066e-06,
+          "F2Hat": -3.6028568643381644e-06
+        }
+      }
+    },
+    "interior_2": {
+      "A": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -5.502221247653125e-08,
+          "F2Hat": -4.869318366990194e-08
+        }
+      },
+      "B": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -2.35920652374885e-07,
+          "F2Hat": -1.6791127058918603e-07
+        }
+      },
+      "C": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -1.6394168971553428e-06,
+          "F2Hat": -1.9126671708794324e-06
+        }
+      }
+    },
+    "interior_3": {
+      "A": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -1.2006637474872404e-07,
+          "F2Hat": -1.3888382308056848e-07
+        }
+      },
+      "B": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -3.5035601946427864e-07,
+          "F2Hat": -4.0616494061094274e-07
+        }
+      },
+      "C": {
+        "Endpoint": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhi0": {
+          "F1Hat": 0.0,
+          "F2Hat": 0.0
+        },
+        "IntegrandPhiS": {
+          "F1Hat": -1.6935846472881543e-06,
+          "F2Hat": -8.96163424023708e-07
+        }
+      }
+    }
+  },
+  "Program": {
+    "Path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/s02_compare_bigtmd_fhat.py",
+    "SHA256": "58b2fdb09ec5cb0198e5eac439284644ac67d79e5c6720f56e7abe3c121231ae"
+  },
+  "ProjectorsByBenchmarkAndCase": {
+    "interior_1": {
+      "A": {
+        "Pg": 4.3549761164542086e-07,
+        "Ppp": -2.2169831941379372e-07
+      },
+      "B": {
+        "Pg": 2.682385739029906e-07,
+        "Ppp": -8.608297884811113e-06
+      },
+      "C": {
+        "Pg": 2.554655413883067e-06,
+        "Ppp": -6.976154525797767e-05
+      }
+    },
+    "interior_2": {
+      "A": {
+        "Pg": 7.152446880057162e-08,
+        "Ppp": -3.269581347467002e-06
+      },
+      "B": {
+        "Pg": 3.851955688875344e-07,
+        "Ppp": -7.354506861098774e-06
+      },
+      "C": {
+        "Pg": 1.2439163895134346e-06,
+        "Ppp": -0.00017272418390151294
+      }
+    },
+    "interior_3": {
+      "A": {
+        "Pg": 1.8323425290157679e-07,
+        "Ppp": -2.6789807493210594e-06
+      },
+      "B": {
+        "Pg": 5.335353114853444e-07,
+        "Ppp": -7.871266577320412e-06
+      },
+      "C": {
+        "Pg": 3.938868288672964e-06,
+        "Ppp": 2.5975923320124758e-05
+      }
+    }
+  },
+  "Reference": {
+    "CaseToLocalChargeKey": {
+      "A": "IncomingChargeSquared",
+      "B": "MixedIncomingPrimeCharge",
+      "C": "PrimeChargeSquared"
+    },
+    "Channel": 6,
+    "ChargeCases": [
+      "A",
+      "B",
+      "C"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "Driver": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/sidis.py",
+    "DriverSHA256": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+    "LocalSnapshot": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference",
+    "ModulePaths": {
+      "PPP6A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn6A.py",
+      "PPP6B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn6B.py",
+      "PPP6C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn6C.py",
+      "Pg6A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn6A.py",
+      "Pg6B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn6B.py",
+      "Pg6C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn6C.py"
+    },
+    "ModuleSHA256": {
+      "PPP6A": "2a3c88860a52be0946cd824cbb31fbc959d4384706cd9ac790a44f752d54dbd4",
+      "PPP6B": "bd522acf18af68129a125ce69405ab8283d4a7f718d1ee1be6e068cc6ae9e761",
+      "PPP6C": "48bbba2e8c407665ed98824867a9e0f6429746803aaa8f9f59b8a4ab24ac6245",
+      "Pg6A": "502dbfb704a85356d004dcc290604a85cbe6379d664d47e27968aea795e1f3dd",
+      "Pg6B": "ce3bd5d92a0be6da8559f8c4daf629741dd52277cb0c1166b6b3286484a72fb9",
+      "Pg6C": "81fe1c6c909148aef8cdfafff86552645a5df68049d088b1ff6a931eafae2326"
+    },
+    "Process": "gamma* q -> (qPrime->h) q qbarPrime",
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD"
+  },
+  "StageVersion": "HqqprimeBigTMDCheckS02-v1",
+  "Status": "CompleteBigTMDHqqprimeFHatBenchmarks"
+}

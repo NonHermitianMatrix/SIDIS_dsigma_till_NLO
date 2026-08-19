@@ -1,0 +1,6 @@
+set stdout_level INFO
+set group_subprocesses False
+import model sm
+generate e- u > e- c u c~ / z h QED=2 QCD=2 @1
+output standalone scripts/Hqqprime/madgraph_check/generated_process --prefix=int
+quit

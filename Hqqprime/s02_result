@@ -1,0 +1,61 @@
+<|"Status" -> "Complete", "Stage" -> "HqqprimeS02-v1", 
+ "Channel" -> "Hqqprime only", "Purpose" -> 
+  "Diagram visualization and provenance only", 
+ "GeneratedAt" -> "2026-08-18T18:53:25", "Program" -> "/home/physics/projects\
+/AI_Assisted_SIDIS/scripts/Hqqprime/s02_export_hqqprime_diagrams_postscript.w\
+l", "ProgramSHA256" -> 
+  "1af7043dd1530bf19ea72f0261add1a3773f92a1bee9b418e87f29b2e3fd2132", 
+ "InputS01" -> <|"Source" -> "/home/physics/projects/AI_Assisted_SIDIS/script\
+s/Hqqprime/s01_calculate_hqqprime_tree.wl", "SourceSHA256" -> 
+    "17ed0c69c0c440a63b93a41d7634eade24a948543618a09769eea937427877a4", 
+   "Result" -> 
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s01_result", 
+   "ResultSHA256" -> 
+    "842c6a1d06a9b0785e89e0230838891aedadc09bcf46a59a492c2e71dd77fb6b", 
+   "ReferencePDF" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Large_\
+Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowe\
+st_Order.pdf", "ReferencePDFSHA256" -> 
+    "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b"|>, 
+ "Software" -> <|"WolframVersion" -> 
+    "15.0.0 for Linux x86 (64-bit) (May 31, 2026)", 
+   "FeynCalcVersion" -> "10.2.1", "FeynArtsVersion" -> 
+    "FeynArts 3.11 (25 Mar 2022)"|>, "RepresentativeOrder" -> 
+  {"up_up", "up_down", "down_up"}, "DiagramCounts" -> 
+  <|"up_up" -> 4, "up_down" -> 4, "down_up" -> 4|>, 
+ "RegeneratedAmplitudeCounts" -> <|"up_up" -> 4, "up_down" -> 4, 
+   "down_up" -> 4|>, "PaintLayout" -> <|"ColumnsXRows" -> {2, 2}, 
+   "PageCountsByRepresentative" -> <|"up_up" -> 1, "up_down" -> 1, 
+     "down_up" -> 1|>, "TotalPageCount" -> 3|>, 
+ "PageDirectory" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprim\
+e/.s02_ghostscript/pages", "PageManifest" -> 
+  {<|"GlobalPageIndex" -> 1, "Representative" -> "up_up", 
+    "RepresentativePageIndex" -> 1, "FileName" -> "s02_page_001.ps", 
+    "RelativePath" -> ".s02_ghostscript/pages/s02_page_001.ps", 
+    "SHA256" -> 
+     "80dbf50748e338f4f2b681d1109d1ca201d43d8debf80ff71542530a422bd820", 
+    "Bytes" -> 10763, "PostScriptHeader" -> True|>, 
+   <|"GlobalPageIndex" -> 2, "Representative" -> "up_down", 
+    "RepresentativePageIndex" -> 1, "FileName" -> "s02_page_002.ps", 
+    "RelativePath" -> ".s02_ghostscript/pages/s02_page_002.ps", 
+    "SHA256" -> 
+     "1acf2dd5756c906e942d8f174434ca5e72930d41fb3d539cadb6e49507911b25", 
+    "Bytes" -> 10765, "PostScriptHeader" -> True|>, 
+   <|"GlobalPageIndex" -> 3, "Representative" -> "down_up", 
+    "RepresentativePageIndex" -> 1, "FileName" -> "s02_page_003.ps", 
+    "RelativePath" -> ".s02_ghostscript/pages/s02_page_003.ps", 
+    "SHA256" -> 
+     "b4c4801423adba773045f36c26bf4fa25e780b86ac114e65b64b7c525151a4da", 
+    "Bytes" -> 10765, "PostScriptHeader" -> True|>}, 
+ "Checks" -> <|"AcceptedS01SourceHash" -> True, "AcceptedS01ResultHash" -> 
+    True, "S01IdentityAndChecks" -> True, "RepresentativeSetExact" -> True, 
+   "DifferentFlavorAndMomentumOrder" -> True, 
+   "StoredDiagramContainersValid" -> True, 
+   "RegeneratedCountsMatchSavedCounts" -> True, 
+   "EveryRepresentativePainted" -> True, 
+   "PaintedObjectsAreFeynArtsGraphics" -> True, 
+   "OnePostScriptSheetPerPaintedPage" -> True, 
+   "PostScriptHeadersAndSizesValid" -> True, "TemporaryPageSetExact" -> True, 
+   "NoPhysicsTransformation" -> True|>, "DownstreamBoundary" -> 
+  <|"VisualizationOnly" -> True, "AmplitudesUnchanged" -> True, 
+   "PhysicsConsumptionForbidden" -> True, "S03MayOnlyConvertContainer" -> 
+    True|>|>

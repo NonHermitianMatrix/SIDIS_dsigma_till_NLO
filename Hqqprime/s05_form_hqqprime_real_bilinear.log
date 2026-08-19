@@ -1,0 +1,35 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+Style["Loading FeynArts from /home/physics/.WolframEngine/Applications/FeynCalc/FeynArts", "Text"]
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+Style["FeynArts ", "Text", Bold]Style["3.11 (25 Mar 2022) patched for use with FeynCalc, for documentation see the ", "Text"]Style[DisplayForm[ButtonBox["manual", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[First[FileNames[{"*.pdf", "*.PDF"}, FileNameJoin[{$FeynArtsDirectory, "manual"}]]]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" or visit ", "Text"]Style[DisplayForm[ButtonBox["www.feynarts.de.", ButtonData :> {URL["http://www.feynarts.de/"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "www.feynarts.de/"]], "Text"]
+Style["If you use FeynArts in your research, please cite", "Text"]
+Style[" • T. Hahn, Comput. Phys. Commun., 140, 418-431, 2001, arXiv:hep-ph/0012260", "Text"]
+
+FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
+"S05_STAGE: validating clean boundary and pinned S01/S04 inputs"
+"S05_STAGE: regenerating the three full-state representatives"
+"S05_STAGE: restoring full external states for up_up"
+"S05_STAGE: restoring full external states for up_down"
+"S05_STAGE: restoring full external states for down_up"
+"S05_STAGE: solving the full external-state two-charge basis"
+"S05_STAGE: opening the incoming-photon index"
+"S05_STAGE: evaluating the two charge-basis conjugates"
+"S05_STAGE: deriving the three charge tensors from the generic product"
+"S05_STAGE: atomically writing the Hqqprime charge-resolved result"
+"S05_SUCCESS"
+"S05_PROGRAM_SHA256=""95a405581e6b5c9f24af44b513895cfa42c6524c097bc23e624de5c8df1c66f5"
+"S05_RESULT_SHA256=""d78577388379acf513733d6d21e85a30ab34200a1a35e7b7605e6241bfbfdec7"
+"S05_FULL_DIAGRAM_COUNTS="InputForm[<|"up_up" -> 4, "up_down" -> 4, "down_up" -> 4|>]
+"S05_COHERENT_ORDERED_PAIR_COUNT="16
+"S05_CHARGE_TENSOR_KEYS="InputForm[{"IncomingChargeSquared", "PrimeChargeSquared", "MixedIncomingPrimeCharge"}]
+"S05_CHARGE_TENSOR_LEAF_COUNTS="InputForm[<|"IncomingChargeSquared" -> 371, "PrimeChargeSquared" -> 361, "MixedIncomingPrimeCharge" -> 733|>]
+"S05_SCALE_FACTOR="InputForm[ScaleMu^(4*epsilon)]
+"S05_SYMMETRY_FACTORS="InputForm[<|"up_up" -> 1, "up_down" -> 1, "down_up" -> 1|>]
+"S05_CHECK_COUNT="35
+"S05_RESULT_BYTES="127367
+"S05_RESULT=""/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s05_result"

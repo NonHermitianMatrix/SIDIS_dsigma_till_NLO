@@ -1,0 +1,879 @@
+<|"Status" -> "Complete", "Stage" -> "HqqprimeS07Cache-v1", 
+ "Channel" -> "Hqqprime only", "ChargeKey" -> "MixedIncomingPrimeCharge", 
+ "Projector" -> "Pg", "GeneratedAt" -> "2026-08-18T22:16:51", 
+ "ProgramPath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/\
+s07_contract_hqqprime_projectors.wl", "ProgramSHA256" -> 
+  "4ac73e5b846e088c7c92acfed2bb935ba969e9049d778f83e5f8cfa34fcab1e7", 
+ "PaperPath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Large_Trans\
+verse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Or\
+der.pdf", "PaperSHA256" -> 
+  "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b", 
+ "S06SourcePath" -> "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprim\
+e/s06_spin_color_sum_average_hqqprime.wl", "S06SourceSHA256" -> 
+  "eef94883991b5fb6d10345f29943234f90c2da695879c4ca6f2ee99a4a970adc", 
+ "S06ResultPath" -> 
+  "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/s06_result", 
+ "S06ResultSHA256" -> 
+  "92d3d912f69a251f4ba1c3709b768b50fadbb27f0c56d523c34b086e25fc4607", 
+ "InputTensorPath" -> 
+  "Tensors/SpinColorAveragedChargeTensors/MixedIncomingPrimeCharge", 
+ "InputTensorSHA256" -> 
+  "166a8de283e729f8b6cb78f26028a2188b7dccca93121d4653b4d2fe022430b3", 
+ "ExpressionSHA256" -> 
+  "82a469ae65abaa2de6dc1160e50b4c1a58a6b044d7a20a5cdaeb623884342afe", 
+ "Expression" -> ((-1/2 + CA^2/2)*(16*s12*s13*ScaleMu^(4*epsilon)*u1*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*D*s12*s13*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     16*s12*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     2*D*s12*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     8*s13*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     4*D*s13*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     8*s23^2*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     2*D*s23^2*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     8*s23*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     2*D*s23*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     32*s12*s13*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     10*D*s12*s13*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     8*s13^2*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     4*D*s13^2*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     16*s12*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     8*D*s12*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     8*s13*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     2*D*s13*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     8*s13*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     2*D*s13*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     8*s23*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     4*D*s23*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     8*s13*ScaleMu^(4*epsilon)*u2^2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     4*D*s13*ScaleMu^(4*epsilon)*u2^2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     16*s12^2*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     2*D*s12^2*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     8*s12*s13*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     4*D*s12*s13*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     8*s12*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     2*D*s12*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     8*s12*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     2*D*s12*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     16*s23*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     6*D*s23*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     8*s12*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     4*D*s12*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     16*s13*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     6*D*s13*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 + 
+     16*s12*ScaleMu^(4*epsilon)*u3^2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     6*D*s12*ScaleMu^(4*epsilon)*u3^2*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 - p, D], 0]]*SMP["g_s"]^4 - 
+     16*s12*s13*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*D*s12*s13*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s12*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 2*D*s12*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s13*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 4*D*s13*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 16*s23^2*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 6*D*s23^2*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s23*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 2*D*s23*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s12*s13*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 2*D*s12*s13*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s13^2*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 4*D*s13^2*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s13*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 6*D*s13*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 32*s13*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 10*D*s13*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s23*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 4*D*s23*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s13*ScaleMu^(4*epsilon)*u2^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 4*D*s13*ScaleMu^(4*epsilon)*u2^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s12^2*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 2*D*s12^2*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s12*s13*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 4*D*s12*s13*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s12*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 6*D*s12*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s12*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 2*D*s12*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s23*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 2*D*s23*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s12*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 4*D*s12*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s13*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 2*D*s13*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 16*ScaleMu^(4*epsilon)*u1*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*D*ScaleMu^(4*epsilon)*u1*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s12*ScaleMu^(4*epsilon)*u3^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 2*D*s12*ScaleMu^(4*epsilon)*u3^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s12*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 2*D*s12*s23*ScaleMu^(4*epsilon)*u1*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s13*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 4*D*s13*s23*ScaleMu^(4*epsilon)*u1*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s23^2*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 2*D*s23^2*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 16*s23*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 6*D*s23*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 8*s12*s13*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 2*D*s12*s13*ScaleMu^(4*epsilon)*u2*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s13^2*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 4*D*s13^2*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 16*s12*s23*ScaleMu^(4*epsilon)*u2*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*D*s12*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 32*s13*s23*ScaleMu^(4*epsilon)*u2*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 10*D*s13*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 16*s13*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 6*D*s13*ScaleMu^(4*epsilon)*u1*u2*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s23*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 4*D*s23*ScaleMu^(4*epsilon)*u1*u2*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s13*ScaleMu^(4*epsilon)*u2^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 4*D*s13*ScaleMu^(4*epsilon)*u2^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 8*s12^2*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 2*D*s12^2*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 8*s12*s13*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 4*D*s12*s13*ScaleMu^(4*epsilon)*u3*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s12*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 2*D*s12*s23*ScaleMu^(4*epsilon)*u3*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 16*s13*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 8*D*s13*s23*ScaleMu^(4*epsilon)*u3*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s12*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 6*D*s12*ScaleMu^(4*epsilon)*u1*u3*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s23*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 2*D*s23*ScaleMu^(4*epsilon)*u1*u3*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s12*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 4*D*s12*ScaleMu^(4*epsilon)*u2*u3*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s13*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 + 2*D*s13*ScaleMu^(4*epsilon)*u2*u3*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k1 + k2 + k3, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s12*ScaleMu^(4*epsilon)*u3^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 2*D*s12*ScaleMu^(4*epsilon)*u3^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k1 + k2 + k3, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 
+        0]]*FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, 
+         D], 0]]*SMP["g_s"]^4 - 16*s12*s23*ScaleMu^(4*epsilon)*u1*
+      FCGV["EL"]^2*FeynAmpDenominator[PropagatorDenominator[
+        Momentum[k1 + k3, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        -Momentum[k2 - p, D], 0]]*FeynAmpDenominator[PropagatorDenominator[
+        Momentum[k1 + k3 - p, D], 0]]*FeynAmpDenominator[
+       PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*SMP["g_s"]^4 + 
+     6*D*s12*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s13*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 4*D*s13*s23*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s23^2*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 2*D*s23^2*ScaleMu^(4*epsilon)*u1*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s23*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 2*D*s23*ScaleMu^(4*epsilon)*u1^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 16*s12*s13*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 6*D*s12*s13*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s13^2*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 4*D*s13^2*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s13*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 2*D*s13*s23*ScaleMu^(4*epsilon)*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s13*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 2*D*s13*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s23*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 4*D*s23*ScaleMu^(4*epsilon)*u1*u2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*s13*ScaleMu^(4*epsilon)*u2^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 4*D*s13*ScaleMu^(4*epsilon)*u2^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s12^2*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 6*D*s12^2*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s12*s13*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 4*D*s12*s13*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s12*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 2*D*s12*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*s13*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*D*s13*s23*ScaleMu^(4*epsilon)*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s12*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 2*D*s12*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 16*s23*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 2*D*s23*ScaleMu^(4*epsilon)*u1*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 8*s12*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 4*D*s12*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 32*s13*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 10*D*s13*ScaleMu^(4*epsilon)*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 16*ScaleMu^(4*epsilon)*u1*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 8*D*ScaleMu^(4*epsilon)*u1*u2*u3*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 - 16*s12*ScaleMu^(4*epsilon)*u3^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4 + 2*D*s12*ScaleMu^(4*epsilon)*u3^2*FCGV["EL"]^2*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[-Momentum[k2 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k1 + k3 - p, D], 0]]*
+      FeynAmpDenominator[PropagatorDenominator[Momentum[k2 + k3 - p, D], 0]]*
+      SMP["g_s"]^4))/(2*SUNN)|>
