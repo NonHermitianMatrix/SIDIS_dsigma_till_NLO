@@ -25,7 +25,9 @@ $FCAdvice = False;
 
 ClearAll[
   assert, fatal, convertFullAmplitudes, reduceFullVirtualAmplitude,
-  validVirtualCacheQ, openPhotonIndex, conjugateOpenAmplitude
+  validVirtualCacheQ, openPhotonIndex, conjugateOpenAmplitude,
+  sha256Hex, installMassShellAssignments,
+  installScalarProductAssignments
 ];
 
 fatal[message_String] := (
@@ -35,54 +37,114 @@ fatal[message_String] := (
 
 assert[condition_, message_String] :=
   If[! TrueQ[condition], fatal[message]];
+sha256Hex[path_String] := ToLowerCase[
+  IntegerString[FileHash[path, "SHA256"], 16, 64]
+];
 
 scriptDirectory = DirectoryName[ExpandFileName[$InputFileName]];
+stageSourcePath = ExpandFileName[$InputFileName];
+s01SourcePath = FileNameJoin[{
+  scriptDirectory, "s01_calculate_hqg_lo_nlo.wl"
+}];
 s01Path = FileNameJoin[{scriptDirectory, "s01_result"}];
+s04SourcePath = FileNameJoin[{
+  scriptDirectory, "s04_renormalize_hqg_virtual.wl"
+}];
 s04Path = FileNameJoin[{scriptDirectory, "s04_result"}];
 resultPath = FileNameJoin[{scriptDirectory, "s05_result"}];
 virtualTIDCachePath = FileNameJoin[{
   scriptDirectory, "s05_virtual_full_tid_cache"
 }];
+acceptedS01SourceSHA256 =
+  "8e14ab5c5e5c8ea812793cb34b1d48e9edf1e4a133a3200713cf44d4b20800f0";
+acceptedS01ResultSHA256 =
+  "8e4e067f23911d3600c5975f87562abb5dd4c6679c48b01514b4e620a1449198";
+acceptedS04SourceSHA256 =
+  "ad6c5fd46152805538d1234c787feae212a9f5aa217853d7e81b4818bb567e54";
+acceptedS04ResultSHA256 =
+  "2bbeeee841e5e47bfd2391a1588b2184a16865d334bf78716b1b0573d499bf92";
 
 Print["S05_STAGE: loading validated Hqg S01 and S04 results"];
+assert[FileExistsQ[s01SourcePath], "S01 source does not exist."];
 assert[FileExistsQ[s01Path], "s01_result does not exist."];
+assert[FileExistsQ[s04SourcePath], "S04 source does not exist."];
 assert[FileExistsQ[s04Path], "s04_result does not exist."];
+s01SourceSHA256Hex = sha256Hex[s01SourcePath];
+s01ResultSHA256Hex = sha256Hex[s01Path];
+s04SourceSHA256Hex = sha256Hex[s04SourcePath];
+s04ResultSHA256Hex = sha256Hex[s04Path];
+upstreamIdentityGate =
+  s01SourceSHA256Hex === acceptedS01SourceSHA256 &&
+    s01ResultSHA256Hex === acceptedS01ResultSHA256 &&
+    s04SourceSHA256Hex === acceptedS04SourceSHA256 &&
+    s04ResultSHA256Hex === acceptedS04ResultSHA256;
+assert[upstreamIdentityGate,
+  "S01/S04 source-result identities do not match the accepted Hqg ledger."];
 s01 = Check[Get[s01Path], $Failed];
 s04 = Check[Get[s04Path], $Failed];
 
-assert[AssociationQ[s01] && s01["Status"] === "Complete",
-  "s01_result is not a complete Association."];
-assert[AssociationQ[s04] && s04["Status"] === "Complete",
-  "s04_result is not a complete Association."];
-assert[s01["Stage"] === "HqgS01-v2" && s04["Stage"] === "HqgS04-v2",
-  "At least one source has the wrong Hqg stage."];
-assert[s01["Channel"] === "Hqg only" && s04["Channel"] === "Hqg only",
-  "At least one source result is not Hqg-only."];
-
 s01Hash = FileHash[s01Path, "SHA256"];
 s04Hash = FileHash[s04Path, "SHA256"];
-assert[s04["SourceResultSHA256"] === s01Hash,
-  "S04 is not bound to the current Hqg s01_result."];
-assert[s01["ReferencePDFSHA256"] === s04["ReferencePDFSHA256"],
-  "S01 and S04 have different paper hashes."];
-assert[s01["BigTMDConvention", "ChannelNumber"] === 3 &&
-    s01["BigTMDConvention", "ChargeCase"] === "A only",
-  "S01 is not bound to BigTMD Hqg channel 3, case A."];
-assert[s04["BigTMDConvention"] === s01["BigTMDConvention"],
-  "S04 does not preserve the S01 BigTMD convention record."];
-assert[
+sourceSchemaGate =
+  AssociationQ[s01] && s01["Status"] === "Complete" &&
+    s01["Stage"] === "HqgS01-v3" && s01["Channel"] === "Hqg only" &&
+    AssociationQ[s01["Checks"]] &&
+    AllTrue[Values[s01["Checks"]], TrueQ] &&
+    AssociationQ[s04] && s04["Status"] === "Complete" &&
+    s04["Stage"] === "HqgS04-v3" && s04["Channel"] === "Hqg only" &&
+    AssociationQ[s04["Checks"]] &&
+    AllTrue[Values[s04["Checks"]], TrueQ];
+assert[sourceSchemaGate,
+  "S01/S04 do not satisfy complete checked Hqg stage contracts."];
+sourceLineageGate =
+  s04["SourceProgramSHA256"] === FileHash[s01SourcePath, "SHA256"] &&
+    s04["SourceProgramSHA256Hex"] === s01SourceSHA256Hex &&
+    s04["SourceResultSHA256"] === s01Hash &&
+    s04["SourceResultSHA256Hex"] === s01ResultSHA256Hex &&
+    s04["StageSourceSHA256"] === FileHash[s04SourcePath, "SHA256"] &&
+    s04["StageSourceSHA256Hex"] === s04SourceSHA256Hex;
+assert[sourceLineageGate,
+  "S04 is not bound to the exact accepted S01/S04 source lineage."];
+paperAndBigTMDGate =
+  s01["ReferencePDFSHA256"] === s04["ReferencePDFSHA256"] &&
+    s01["BigTMDConvention", "ChannelNumber"] === 3 &&
+    s01["BigTMDConvention", "ChargeCase"] === "A only" &&
+    s04["BigTMDConvention"] === s01["BigTMDConvention"];
+assert[paperAndBigTMDGate,
+  "S01/S04 paper or BigTMD convention records disagree."];
+chargeConventionGate =
   s04["ElectricChargeNormalization"] ===
       s01["ElectricChargeNormalization"] &&
-    s01["ElectricChargeNormalization", "ReferenceCharge"] === -1/3 &&
-    s01["ElectricChargeNormalization", "AmplitudeStripFactor"] === -3,
+    s01["Checks", "ReferenceChargeDerivedFromSMQCDClassMetadata"] === True &&
+    s01["ElectricChargeNormalization", "ReferenceCharge"] ===
+      Lookup[
+        s01["ElectricChargeNormalization", "ModelChargeCoefficients"],
+        "F" <> ToString[
+          s01["ElectricChargeNormalization", "FeynArtsReferenceClass"]
+        ],
+        Missing["Absent"]
+      ] &&
+    Together[
+      s01["ElectricChargeNormalization", "ReferenceCharge"] *
+        s01["ElectricChargeNormalization", "AmplitudeStripFactor"]
+    ] === 1;
+assert[chargeConventionGate,
   "S01/S04 do not preserve the corrected charge-stripped convention."
 ];
 amplitudeStripFactor =
   s01["ElectricChargeNormalization", "AmplitudeStripFactor"];
-assert[amplitudeStripFactor === -3,
-  "The regenerated full-amplitude strip factor is not exactly -3."];
-assert[s01["Conventions", "FragmentingParton"] === "g(k1)" &&
-    s04["ExternalProcess", "FragmentingParton"] === "g(k1)",
+amplitudeStripFactorGate =
+  Together[
+    amplitudeStripFactor *
+      s01["ElectricChargeNormalization", "ReferenceCharge"]
+  ] === 1;
+assert[amplitudeStripFactorGate,
+  "The regenerated full-amplitude strip factor is not the exact reciprocal of the model-derived reference charge."
+];
+fragmentingPartonGate =
+  s01["Conventions", "FragmentingParton"] === "g(k1)" &&
+    s04["ExternalProcess", "FragmentingParton"] === "g(k1)";
+assert[fragmentingPartonGate,
   "The sources do not fix the fragmenting gluon at k1."];
 
 masslessRules = {
@@ -96,7 +158,7 @@ masslessRules = {
 
 convertFullAmplitudes[
     diagrams_, outgoingMomenta_List, loopMomenta_List, label_String
-  ] := Module[{raw, answer},
+  ] := Module[{raw, answer, preStripAnswer},
   Print["S05_STAGE: restoring external states for " <> label];
   raw = Check[
     FeynArts`CreateFeynAmp[
@@ -129,19 +191,68 @@ convertFullAmplitudes[
   assert[FreeQ[answer, _FeynArts`FAFeynAmp],
     label <> " conversion left a FeynArts amplitude unevaluated."];
   assert[FreeQ[answer, $Failed], label <> " conversion contains $Failed."];
-  (* Restoring external states regenerates the SMQCD down-quark charge. *)
+  (* FCFAConvert can retain FeynArts`FCGV depending on session context. *)
+  answer = answer /. HoldPattern[
+      FeynArts`FCGV[name_String]
+    ] :> FeynCalc`FCGV[name];
+  assert[FreeQ[answer, _FeynArts`FCGV],
+    label <> " conversion left a FeynArts-context FCGV symbol."];
+  (* Restoring external states regenerates the model-derived representative-quark charge. *)
+  preStripAnswer = answer;
   answer = (amplitudeStripFactor # & /@ answer);
   assert[FreeQ[answer, $Failed | _Real],
     label <> " charge stripping produced an invalid amplitude list."];
+  AssociateTo[
+    conversionAudit,
+    label -> <|
+      "PreStripExpressionHash" -> Hash[preStripAnswer, "SHA256"],
+      "StrippedExpressionHash" -> Hash[answer, "SHA256"],
+      "AmplitudeStripFactor" -> amplitudeStripFactor,
+      "AppliedExactly" ->
+        SameQ[answer, amplitudeStripFactor preStripAnswer],
+      "FeynArtsFCGVAbsentBeforeStrip" ->
+        FreeQ[preStripAnswer, _FeynArts`FCGV],
+      "FeynArtsFCGVAbsentAfterStrip" ->
+        FreeQ[answer, _FeynArts`FCGV]
+    |>
+  ];
   answer
 ];
 
-expectedCounts = <|
-  "LO" -> 2,
-  "RealQG" -> 8,
-  "Virtual" -> 23,
-  "Counterterm" -> 12
-|>;
+s01OrdinaryDiagramCounts = s01[
+  "GenerationLedgers", "OrdinaryDiagramCounts"
+];
+s01CountertermDiagramCount = s01[
+  "GenerationLedgers", "CountertermDiagramCount"
+];
+generatedCountLedgerGate =
+  AssociationQ[s01OrdinaryDiagramCounts] &&
+    And @@ (KeyExistsQ[s01OrdinaryDiagramCounts, #] & /@
+      {"LO", "RealQG", "Virtual"}) &&
+    AllTrue[
+      Values[s01OrdinaryDiagramCounts],
+      IntegerQ[#] && # > 0 &
+    ] &&
+    IntegerQ[s01CountertermDiagramCount] &&
+    s01CountertermDiagramCount > 0;
+assert[generatedCountLedgerGate,
+  "The accepted S01 generated-count ledger is missing or invalid."];
+expectedCounts = Join[
+  s01OrdinaryDiagramCounts,
+  <|"Counterterm" -> s01CountertermDiagramCount|>
+];
+sourceDiagramCollectionGate =
+  s01["LO", "DiagramCount"] === expectedCounts["LO"] &&
+    s01["NLOReal", "Hqg;qg", "DiagramCount"] ===
+      expectedCounts["RealQG"] &&
+    s01["NLOVirtual", "BareLoop", "DiagramCount"] ===
+      expectedCounts["Virtual"] &&
+    s01["NLOVirtual", "UVCounterterms", "DiagramCount"] ===
+      expectedCounts["Counterterm"];
+assert[sourceDiagramCollectionGate,
+  "An S01 FeynArts diagram collection disagrees with its generated ledger."];
+
+conversionAudit = <||>;
 
 loFullPerDiagram = convertFullAmplitudes[
   s01["LO", "FeynArtsDiagrams"],
@@ -174,27 +285,168 @@ convertedCounts = <|
   "Virtual" -> Length[virtualFullPerDiagram],
   "Counterterm" -> Length[countertermFullPerDiagramOriginal]
 |>;
-assert[convertedCounts === expectedCounts,
+fullAmplitudeCountGate = convertedCounts === expectedCounts;
+fullAmplitudeExactGate = FreeQ[
+  {
+    loFullPerDiagram, realFullPerDiagram, virtualFullPerDiagram,
+    countertermFullPerDiagramOriginal
+  },
+  _Real
+];
+feynArtsFCGVCanonicalizationGate = FreeQ[
+  {
+    loFullPerDiagram, realFullPerDiagram, virtualFullPerDiagram,
+    countertermFullPerDiagramOriginal
+  },
+  _FeynArts`FCGV
+];
+amplitudeStripAuditGate =
+  Length[conversionAudit] === Length[convertedCounts] &&
+    AllTrue[
+      Values[conversionAudit],
+      TrueQ[Lookup[#, "AppliedExactly"]] &&
+        TrueQ[Lookup[#, "FeynArtsFCGVAbsentBeforeStrip"]] &&
+        TrueQ[Lookup[#, "FeynArtsFCGVAbsentAfterStrip"]] &&
+        Lookup[#, "AmplitudeStripFactor"] === amplitudeStripFactor &
+    ];
+assert[fullAmplitudeCountGate,
   "Full-amplitude counts do not match the Hqg S01 contract."];
-assert[FreeQ[
-    {loFullPerDiagram, realFullPerDiagram, virtualFullPerDiagram,
-      countertermFullPerDiagramOriginal},
-    _Real
-  ],
+assert[fullAmplitudeExactGate,
   "Machine-precision numbers appeared in full amplitudes."];
+assert[feynArtsFCGVCanonicalizationGate,
+  "A regenerated full amplitude contains a FeynArts-context FCGV."];
+assert[amplitudeStripAuditGate,
+  "The model-derived strip factor was not applied exactly to every regenerated collection."];
 
-(* Massless 2 -> 2 kinematics with the observed gluon at k1. *)
+(* Install the exact tool-derived two-body kinematics accepted at S01. *)
+s01KinematicDerivation = s01["KinematicDerivation"];
+kinematicRecordGate =
+  AssociationQ[s01KinematicDerivation] &&
+    s01KinematicDerivation["SerializationSchema"] ===
+      "HqgS01Kinematics-v2" &&
+    TrueQ[s01KinematicDerivation["UniqueExactSolution"]] &&
+    ListQ[s01KinematicDerivation["MassShellAssignments"]] &&
+    AllTrue[
+      s01KinematicDerivation["MassShellAssignments"],
+      Function[assignment,
+        AssociationQ[assignment] &&
+          And @@ (KeyExistsQ[assignment, #] & /@ {
+            "Momentum", "MassSquared"
+          })
+      ]
+    ] &&
+    ListQ[s01KinematicDerivation["ScalarProductAssignments"]] &&
+    AllTrue[
+      s01KinematicDerivation["ScalarProductAssignments"],
+      Function[assignment,
+        AssociationQ[assignment] &&
+          And @@ (KeyExistsQ[assignment, #] & /@ {
+            "Momentum1", "Momentum2", "Dimension", "Value"
+          }) &&
+          Lookup[assignment, "Dimension"] === D
+      ]
+    ] &&
+    Head[s01KinematicDerivation["DefiningEquationsHeld"]] ===
+      HoldComplete &&
+    Head[s01KinematicDerivation["SolvedScalarProductsHeld"]] ===
+      HoldComplete &&
+    ! FreeQ[
+      s01KinematicDerivation["DefiningEquationsHeld"],
+      _FeynCalc`Pair
+    ] &&
+    ! FreeQ[
+      s01KinematicDerivation["SolvedScalarProductsHeld"],
+      _FeynCalc`Pair
+    ] &&
+    ListQ[
+      s01KinematicDerivation["MassShellInstallationResiduals"]
+    ] &&
+    ListQ[
+      s01KinematicDerivation["ScalarProductInstallationResiduals"]
+    ] &&
+    ListQ[s01KinematicDerivation["EquationResiduals"]] &&
+    And @@ (# === 0 & /@ Join[
+      s01KinematicDerivation["MassShellInstallationResiduals"],
+      s01KinematicDerivation["ScalarProductInstallationResiduals"],
+      s01KinematicDerivation["EquationResiduals"]
+    ]) &&
+    TrueQ[
+      s01[
+        "Checks", "TwoBodyKinematicLedgerSerializationRoundTrip"
+      ]
+    ] &&
+    ! KeyExistsQ[s01KinematicDerivation, "MassShellValues"] &&
+    ! KeyExistsQ[s01KinematicDerivation, "SolvedScalarProducts"] &&
+    ! MissingQ[s01KinematicDerivation["MandelstamURule"]] &&
+    FreeQ[s01KinematicDerivation, _Real | _Missing];
+assert[kinematicRecordGate,
+  "The accepted S01 inert two-body kinematic record is invalid."];
+
+installMassShellAssignments[assignments_List] := Scan[
+  Function[assignment,
+    With[
+      {
+        momentum = Lookup[assignment, "Momentum"],
+        massSquared = Lookup[assignment, "MassSquared"]
+      },
+      FeynCalc`SPD[momentum, momentum] = massSquared
+    ]
+  ],
+  assignments
+];
+
+installScalarProductAssignments[assignments_List] := Scan[
+  Function[assignment,
+    With[
+      {
+        momentum1 = Lookup[assignment, "Momentum1"],
+        momentum2 = Lookup[assignment, "Momentum2"],
+        value = Lookup[assignment, "Value"]
+      },
+      FeynCalc`SPD[momentum1, momentum2] = value
+    ]
+  ],
+  assignments
+];
+
 FeynCalc`FCClearScalarProducts[];
-FeynCalc`SPD[p, p] = 0;
-FeynCalc`SPD[q, q] = -Q2;
-FeynCalc`SPD[k1, k1] = 0;
-FeynCalc`SPD[k2, k2] = 0;
-FeynCalc`SPD[p, q] = (sHat + Q2)/2;
-FeynCalc`SPD[k1, k2] = sHat/2;
-FeynCalc`SPD[q, k1] = (-Q2 - tHat)/2;
-FeynCalc`SPD[q, k2] = (sHat + tHat)/2;
-FeynCalc`SPD[p, k1] = (Q2 + sHat + tHat)/2;
-FeynCalc`SPD[p, k2] = -tHat/2;
+installMassShellAssignments[
+  s01KinematicDerivation["MassShellAssignments"]
+];
+installScalarProductAssignments[
+  s01KinematicDerivation["ScalarProductAssignments"]
+];
+installedMassShellResiduals = Together[
+    FeynCalc`SPD[
+      Lookup[#, "Momentum"], Lookup[#, "Momentum"]
+    ] - Lookup[#, "MassSquared"]
+  ] & /@ s01KinematicDerivation["MassShellAssignments"];
+installedScalarProductResiduals = Together[
+    FeynCalc`SPD[
+      Lookup[#, "Momentum1"], Lookup[#, "Momentum2"]
+    ] - Lookup[#, "Value"]
+  ] & /@ s01KinematicDerivation["ScalarProductAssignments"];
+kinematicInstallationGate =
+  AllTrue[
+    Join[installedMassShellResiduals, installedScalarProductResiduals],
+    SameQ[#, 0] &
+  ];
+assert[kinematicInstallationGate,
+  "The accepted S01 inert kinematics were not reinstalled exactly."];
+kinematicDerivationGate =
+  kinematicRecordGate && kinematicInstallationGate;
+kinematicInstallationAudit = <|
+  "SerializationSchema" ->
+    s01KinematicDerivation["SerializationSchema"],
+  "MassShellResiduals" -> installedMassShellResiduals,
+  "ScalarProductResiduals" -> installedScalarProductResiduals,
+  "InstalledExactly" -> kinematicInstallationGate
+|>;
+kinematicContentHash = Hash[s01KinematicDerivation, "SHA256"];
+kinematicInstallationAuditContentHash = Hash[
+  kinematicInstallationAudit,
+  "SHA256"
+];
 
 reduceFullVirtualAmplitude[amp_, index_Integer] := Module[{answer},
   Print[
@@ -219,17 +471,46 @@ reduceFullVirtualAmplitude[amp_, index_Integer] := Module[{answer},
   answer
 ];
 
+stageSourceSHA256 = FileHash[stageSourcePath, "SHA256"];
+stageSourceSHA256Hex = sha256Hex[stageSourcePath];
+chargeNormalizationContentHash = Hash[
+  s01["ElectricChargeNormalization"],
+  "SHA256"
+];
+fullVirtualInputContentHash = Hash[
+  virtualFullPerDiagram,
+  "SHA256"
+];
+
 validVirtualCacheQ[cache_] :=
   AssociationQ[cache] &&
   cache["Status"] === "Complete" &&
-  cache["Stage"] === "HqgS05FullVirtualTIDCache-v3" &&
+  cache["Stage"] === "HqgS05FullVirtualTIDCache-v4" &&
   cache["Channel"] === "Hqg only" &&
   cache["S01SHA256"] === s01Hash &&
+  cache["S01SourceSHA256Hex"] === s01SourceSHA256Hex &&
+  cache["S01ResultSHA256Hex"] === s01ResultSHA256Hex &&
+  cache["S04SHA256"] === s04Hash &&
+  cache["S04SourceSHA256Hex"] === s04SourceSHA256Hex &&
+  cache["S04ResultSHA256Hex"] === s04ResultSHA256Hex &&
+  cache["S05SourceSHA256"] === stageSourceSHA256 &&
+  cache["S05SourceSHA256Hex"] === stageSourceSHA256Hex &&
+  cache["ChargeNormalizationContentHash"] ===
+    chargeNormalizationContentHash &&
+  cache["KinematicDerivationContentHash"] === kinematicContentHash &&
+  cache["KinematicInstallationAuditContentHash"] ===
+    kinematicInstallationAuditContentHash &&
+  cache["KinematicSerializationSchema"] ===
+    s01KinematicDerivation["SerializationSchema"] &&
+  cache["FullVirtualInputContentHash"] === fullVirtualInputContentHash &&
   cache["FragmentingParton"] === "g(k1)" &&
   cache["VirtualDiagramCount"] === expectedCounts["Virtual"] &&
   ListQ[cache["Expressions"]] &&
   Length[cache["Expressions"]] === expectedCounts["Virtual"] &&
-  FreeQ[cache["Expressions"], $Failed | FeynCalc`TID];
+  FreeQ[
+    cache["Expressions"],
+    $Failed | FeynCalc`TID | _FeynArts`FCGV | _Real
+  ];
 
 virtualTIDCacheWasReused = False;
 virtualCache = $Failed;
@@ -261,9 +542,24 @@ If[virtualTIDCacheWasReused,
     "At least one full virtual TID call remained unevaluated."];
   virtualCache = <|
     "Status" -> "Complete",
-    "Stage" -> "HqgS05FullVirtualTIDCache-v3",
+    "Stage" -> "HqgS05FullVirtualTIDCache-v4",
     "Channel" -> "Hqg only",
     "S01SHA256" -> s01Hash,
+    "S01SourceSHA256Hex" -> s01SourceSHA256Hex,
+    "S01ResultSHA256Hex" -> s01ResultSHA256Hex,
+    "S04SHA256" -> s04Hash,
+    "S04SourceSHA256Hex" -> s04SourceSHA256Hex,
+    "S04ResultSHA256Hex" -> s04ResultSHA256Hex,
+    "S05SourceSHA256" -> stageSourceSHA256,
+    "S05SourceSHA256Hex" -> stageSourceSHA256Hex,
+    "ChargeNormalizationContentHash" ->
+      chargeNormalizationContentHash,
+    "KinematicDerivationContentHash" -> kinematicContentHash,
+    "KinematicInstallationAuditContentHash" ->
+      kinematicInstallationAuditContentHash,
+    "KinematicSerializationSchema" ->
+      s01KinematicDerivation["SerializationSchema"],
+    "FullVirtualInputContentHash" -> fullVirtualInputContentHash,
     "FragmentingParton" -> "g(k1)",
     "VirtualDiagramCount" -> expectedCounts["Virtual"],
     "GeneratedAt" -> DateString[Now, "ISODateTime"],
@@ -275,22 +571,42 @@ If[virtualTIDCacheWasReused,
     "The Hqg full-virtual TID cache was not written."]
 ];
 
-assert[validVirtualCacheQ[virtualCache],
+virtualCacheContractGate = TrueQ[validVirtualCacheQ[virtualCache]];
+virtualTIDCompletenessGate = FreeQ[
+  virtualFullTIDPerDiagram,
+  $Failed | FeynCalc`TID | _FeynArts`FCGV | _Real
+];
+assert[virtualCacheContractGate,
   "The Hqg full-virtual TID cache contract is invalid."];
-assert[FreeQ[virtualFullTIDPerDiagram, $Failed | FeynCalc`TID],
+assert[virtualTIDCompletenessGate,
   "The validated full-virtual TID expressions are incomplete."];
 
 qcdProjectionRules = s04["QCDProjection", "RulesApplied"];
 countertermFullPerDiagramQCD =
   Expand[# /. qcdProjectionRules] & /@ countertermFullPerDiagramOriginal;
-assert[FreeQ[countertermFullPerDiagramQCD, dZAA1 | dZe1 | dZZA1],
-  "An electroweak counterterm survived the S04 QCD projection."];
-assert[FreeQ[countertermFullPerDiagramQCD, _dMf1],
-  "A quark-mass counterterm survived the massless-QCD projection."];
-assert[! FreeQ[countertermFullPerDiagramQCD, dZGG1] &&
+qcdProjectionRuleHandoffGate =
+  ListQ[qcdProjectionRules] &&
+    qcdProjectionRules === s04["QCDProjection", "RulesApplied"];
+electroweakCountertermsRemovedGate =
+  FreeQ[countertermFullPerDiagramQCD, dZAA1 | dZe1 | dZZA1];
+massCountertermRemovedGate =
+  FreeQ[countertermFullPerDiagramQCD, _dMf1];
+qcdCountertermsRetainedGate =
+  ! FreeQ[countertermFullPerDiagramQCD, dZGG1] &&
     ! FreeQ[countertermFullPerDiagramQCD, dZgs1] &&
-    ! FreeQ[countertermFullPerDiagramQCD, _dZfL1 | _dZfR1],
+    ! FreeQ[countertermFullPerDiagramQCD, _dZfL1 | _dZfR1];
+countertermProjectionExactGate =
+  FreeQ[countertermFullPerDiagramQCD, _Real | _FeynArts`FCGV];
+assert[qcdProjectionRuleHandoffGate,
+  "The accepted S04 QCD projection rule list is missing or altered."];
+assert[electroweakCountertermsRemovedGate,
+  "An electroweak counterterm survived the S04 QCD projection."];
+assert[massCountertermRemovedGate,
+  "A quark-mass counterterm survived the massless-QCD projection."];
+assert[qcdCountertermsRetainedGate,
   "At least one required symbolic QCD counterterm is absent."];
+assert[countertermProjectionExactGate,
+  "The projected full counterterms are not exact/context-clean."];
 
 loFullSum = Total[loFullPerDiagram];
 realFullSum = Total[realFullPerDiagram];
@@ -299,14 +615,30 @@ countertermFullQCDSum = Total[countertermFullPerDiagramQCD];
 renormalizedVirtualFullSumSymbolic =
   bareVirtualFullTIDSum + countertermFullQCDSum;
 
-assert[SameQ[loFullSum, Total[loFullPerDiagram]],
+loCoherentSumGate = SameQ[loFullSum, Total[loFullPerDiagram]];
+realCoherentSumGate = SameQ[realFullSum, Total[realFullPerDiagram]];
+bareVirtualCoherentSumGate = SameQ[
+  bareVirtualFullTIDSum,
+  Total[virtualFullTIDPerDiagram]
+];
+countertermCoherentSumGate = SameQ[
+  countertermFullQCDSum,
+  Total[countertermFullPerDiagramQCD]
+];
+renormalizedVirtualSumGate = SameQ[
+  renormalizedVirtualFullSumSymbolic,
+  bareVirtualFullTIDSum + countertermFullQCDSum
+];
+assert[loCoherentSumGate,
   "The coherent LO sum failed reconstruction."];
-assert[SameQ[realFullSum, Total[realFullPerDiagram]],
+assert[realCoherentSumGate,
   "The coherent real sum failed reconstruction."];
-assert[SameQ[bareVirtualFullTIDSum, Total[virtualFullTIDPerDiagram]],
+assert[bareVirtualCoherentSumGate,
   "The coherent bare-virtual sum failed reconstruction."];
-assert[SameQ[countertermFullQCDSum, Total[countertermFullPerDiagramQCD]],
+assert[countertermCoherentSumGate,
   "The coherent counterterm sum failed reconstruction."];
+assert[renormalizedVirtualSumGate,
+  "The symbolic renormalized virtual sum failed reconstruction."];
 
 (*
   Contract may place the photon polarization in a slashed vector, Lorentz
@@ -396,8 +728,10 @@ realMuPerDiagram = MapIndexed[
   realFullPerDiagram
 ];
 realMu = Total[realMuPerDiagram];
-assert[Length[realMuPerDiagram] === expectedCounts["RealQG"],
-  "The real open-amplitude block count is not eight."];
+realOpenBlockCountGate =
+  Length[realMuPerDiagram] === expectedCounts["RealQG"];
+assert[realOpenBlockCountGate,
+  "The real open-amplitude block count disagrees with the generated ledger."];
 bareVirtualMu = openPhotonIndex[
   bareVirtualFullTIDSum, s05Mu, "bare virtual Hqg;q amplitude", {k1}
 ];
@@ -450,21 +784,36 @@ realConjugateNuPerDiagram = MapIndexed[
   realMuPerDiagram
 ];
 realConjugateNu = Total[realConjugateNuPerDiagram];
-assert[Length[realConjugateNuPerDiagram] === expectedCounts["RealQG"],
-  "The real conjugate-amplitude block count is not eight."];
+realConjugateBlockCountGate =
+  Length[realConjugateNuPerDiagram] === expectedCounts["RealQG"];
+assert[realConjugateBlockCountGate,
+  "The real conjugate-amplitude block count disagrees with the generated ledger."];
 renormalizedVirtualConjugateNuSymbolic = conjugateOpenAmplitude[
   renormalizedVirtualMuSymbolic,
   s05Mu,
   s05Nu,
   "renormalized virtual Hqg;q"
 ];
+openAmplitudeReconstructionGate =
+  SameQ[realMu, Total[realMuPerDiagram]] &&
+    SameQ[realConjugateNu, Total[realConjugateNuPerDiagram]] &&
+    SameQ[
+      renormalizedVirtualMuSymbolic,
+      bareVirtualMu + countertermMu
+    ];
+assert[openAmplitudeReconstructionGate,
+  "An open-index amplitude sum failed reconstruction."];
 
 Print["S05_STAGE: forming Hqg bilinears through O(alpha_s^2)"];
 loSquareMuNu = loMu loConjugateNu;
 realSquareMuNu = realMu realConjugateNu;
-virtualInterferenceMuNuSymbolic =
-  loMu renormalizedVirtualConjugateNuSymbolic +
-  renormalizedVirtualMuSymbolic loConjugateNu;
+virtualInterferenceTermsMuNuSymbolic = {
+  loMu renormalizedVirtualConjugateNuSymbolic,
+  renormalizedVirtualMuSymbolic loConjugateNu
+};
+virtualInterferenceMuNuSymbolic = Total[
+  virtualInterferenceTermsMuNuSymbolic
+];
 
 bilinears = <|
   "LOSquare_OAlphaS" -> loSquareMuNu,
@@ -480,85 +829,253 @@ allBilinearExpressions = {
   realSquareMuNu,
   virtualInterferenceMuNuSymbolic
 };
-assert[And @@ (! FreeQ[#, FeynCalc`LorentzIndex[s05Mu, D]] & /@
-      allBilinearExpressions),
-  "At least one bilinear is missing photon index s05Mu."];
-assert[And @@ (! FreeQ[#, FeynCalc`LorentzIndex[s05Nu, D]] & /@
-      allBilinearExpressions),
-  "At least one bilinear is missing photon index s05Nu."];
-assert[And @@ (FreeQ[#, FeynCalc`Polarization[q, ___]] & /@
-      allBilinearExpressions),
-  "At least one bilinear still contains a photon polarization."];
-assert[And @@ (! FreeQ[#, FeynCalc`Polarization[k1, ___]] & /@
-      allBilinearExpressions),
-  "At least one bilinear lost the fragmenting-gluon polarization."];
-assert[! FreeQ[realSquareMuNu, FeynCalc`Polarization[k3, ___]],
-  "The real bilinear lost the unobserved final-gluon polarization."];
-assert[And @@ (! FreeQ[#, _FeynCalc`Spinor] & /@ allBilinearExpressions),
-  "At least one bilinear is missing external spinors."];
-assert[FreeQ[allBilinearExpressions, FeynCalc`ComplexConjugate | FeynCalc`TID],
-  "An unevaluated conjugation or TID call remains in a bilinear."];
-assert[FreeQ[allBilinearExpressions, $Failed],
-  "A bilinear contains $Failed."];
-assert[FreeQ[allBilinearExpressions, _Real],
-  "Machine-precision numbers appeared in symbolic bilinears."];
-assert[! FreeQ[virtualInterferenceMuNuSymbolic, dZGG1] &&
+bilinearConstructionGate =
+  SameQ[loSquareMuNu, loMu loConjugateNu] &&
+    SameQ[realSquareMuNu, realMu realConjugateNu] &&
+    SameQ[
+      virtualInterferenceMuNuSymbolic,
+      Total[virtualInterferenceTermsMuNuSymbolic]
+    ];
+photonIndexMuGate = And @@ (
+  ! FreeQ[#, FeynCalc`LorentzIndex[s05Mu, D]] & /@
+    allBilinearExpressions
+);
+photonIndexNuGate = And @@ (
+  ! FreeQ[#, FeynCalc`LorentzIndex[s05Nu, D]] & /@
+    allBilinearExpressions
+);
+photonPolarizationRemovedGate = And @@ (
+  FreeQ[#, FeynCalc`Polarization[q, ___]] & /@
+    allBilinearExpressions
+);
+fragmentingGluonPolarizationGate = And @@ (
+  ! FreeQ[#, FeynCalc`Polarization[k1, ___]] & /@
+    allBilinearExpressions
+);
+realUnobservedGluonPolarizationGate =
+  ! FreeQ[realSquareMuNu, FeynCalc`Polarization[k3, ___]];
+externalSpinorsRetainedGate = And @@ (
+  ! FreeQ[#, _FeynCalc`Spinor] & /@ allBilinearExpressions
+);
+colorStructuresRetainedGate = ! FreeQ[
+  allBilinearExpressions,
+  _FeynCalc`SUNFIndex | _FeynCalc`SUNT |
+    _FeynCalc`SUNDelta | _FeynCalc`SUNFDelta
+];
+conjugationAndTIDEvaluatedGate = FreeQ[
+  allBilinearExpressions,
+  FeynCalc`ComplexConjugate | FeynCalc`TID
+];
+bilinearFailureFreeGate = FreeQ[allBilinearExpressions, $Failed];
+bilinearFCGVContextGate =
+  FreeQ[allBilinearExpressions, _FeynArts`FCGV];
+bilinearExactGate = FreeQ[allBilinearExpressions, _Real];
+virtualCountertermsRetainedGate =
+  ! FreeQ[virtualInterferenceMuNuSymbolic, dZGG1] &&
     ! FreeQ[virtualInterferenceMuNuSymbolic, dZgs1] &&
-    ! FreeQ[virtualInterferenceMuNuSymbolic, _dZfL1 | _dZfR1],
+    ! FreeQ[
+      virtualInterferenceMuNuSymbolic,
+      _dZfL1 | _dZfR1
+    ];
+virtualSquareExcludedGate =
+  ! KeyExistsQ[bilinears, "NLOVirtualSquare_OAlphaS2"] &&
+    ! KeyExistsQ[bilinears, "NLOVirtualSquare"];
+spinColorSumsDeferredGate =
+  externalSpinorsRetainedGate &&
+    fragmentingGluonPolarizationGate &&
+    colorStructuresRetainedGate;
+
+assert[bilinearConstructionGate,
+  "At least one coherent bilinear failed exact reconstruction."];
+assert[photonIndexMuGate,
+  "At least one bilinear is missing photon index s05Mu."];
+assert[photonIndexNuGate,
+  "At least one bilinear is missing photon index s05Nu."];
+assert[photonPolarizationRemovedGate,
+  "At least one bilinear still contains a photon polarization."];
+assert[fragmentingGluonPolarizationGate,
+  "At least one bilinear lost the fragmenting-gluon polarization."];
+assert[realUnobservedGluonPolarizationGate,
+  "The real bilinear lost the unobserved final-gluon polarization."];
+assert[externalSpinorsRetainedGate,
+  "At least one bilinear is missing external spinors."];
+assert[colorStructuresRetainedGate,
+  "The bilinears contain no unsummed FeynCalc color structure."];
+assert[conjugationAndTIDEvaluatedGate,
+  "An unevaluated conjugation or TID call remains in a bilinear."];
+assert[bilinearFailureFreeGate,
+  "A bilinear contains $Failed."];
+assert[bilinearFCGVContextGate,
+  "A bilinear contains a noncanonical FeynArts-context FCGV symbol."];
+assert[bilinearExactGate,
+  "Machine-precision numbers appeared in symbolic bilinears."];
+assert[virtualCountertermsRetainedGate,
   "The symbolic virtual interference lost QCD counterterms."];
+assert[virtualSquareExcludedGate,
+  "A virtual-square term was included beyond the requested order."];
+assert[spinColorSumsDeferredGate,
+  "External spin/polarization/color structures were summed prematurely."];
 
+loDiagramIndices = Range[expectedCounts["LO"]];
+realDiagramIndices = Range[expectedCounts["RealQG"]];
+virtualContributionIndices = Join[
+  {"BareLoop", #} & /@ Range[expectedCounts["Virtual"]],
+  {"UVCountertermQCDProjected", #} & /@
+    Range[expectedCounts["Counterterm"]]
+];
+orderedPairLedgers = <|
+  "LOSquare" -> Tuples[{loDiagramIndices, loDiagramIndices}],
+  "NLORealHqgQG" -> Tuples[{realDiagramIndices, realDiagramIndices}],
+  "LOVirtualHermitianOrientations" -> <|
+    "LOxVirtualConjugate" ->
+      Tuples[{loDiagramIndices, virtualContributionIndices}],
+    "VirtualxLOConjugate" ->
+      Tuples[{virtualContributionIndices, loDiagramIndices}]
+  |>
+|>;
 orderedPairCounts = <|
-  "LOSquare" -> expectedCounts["LO"]^2,
-  "NLORealHqgQG" -> expectedCounts["RealQG"]^2,
-  "LOVirtualHermitianCrossTerms" ->
-    2 expectedCounts["LO"]
-      (expectedCounts["Virtual"] + expectedCounts["Counterterm"])
+  "LOSquare" -> Length[orderedPairLedgers["LOSquare"]],
+  "NLORealHqgQG" -> Length[orderedPairLedgers["NLORealHqgQG"]],
+  "LOVirtualHermitianCrossTerms" -> Total[
+    Length /@ Values[
+      orderedPairLedgers["LOVirtualHermitianOrientations"]
+    ]
+  ]
 |>;
-assert[Values[orderedPairCounts] === {4, 64, 140},
-  "The coherent ordered-pair counts are inconsistent."];
+orderedPairLedgerGate =
+  AllTrue[Values[orderedPairCounts], IntegerQ[#] && # > 0 &] &&
+    Length[DeleteDuplicates[orderedPairLedgers["LOSquare"]]] ===
+      orderedPairCounts["LOSquare"] &&
+    Length[DeleteDuplicates[orderedPairLedgers["NLORealHqgQG"]]] ===
+      orderedPairCounts["NLORealHqgQG"] &&
+    Length[
+      orderedPairLedgers["LOVirtualHermitianOrientations"]
+    ] === Length[virtualInterferenceTermsMuNuSymbolic] &&
+    Total[
+      Length /@ Values[
+        orderedPairLedgers["LOVirtualHermitianOrientations"]
+      ]
+    ] === orderedPairCounts["LOVirtualHermitianCrossTerms"];
+assert[orderedPairLedgerGate,
+  "The tool-built coherent ordered-pair ledgers are inconsistent."];
 
+allCoherentSumsGate = And[
+  loCoherentSumGate,
+  realCoherentSumGate,
+  bareVirtualCoherentSumGate,
+  countertermCoherentSumGate,
+  renormalizedVirtualSumGate,
+  openAmplitudeReconstructionGate,
+  bilinearConstructionGate
+];
+calculationFullySymbolicGate = And[
+  fullAmplitudeExactGate,
+  countertermProjectionExactGate,
+  virtualTIDCompletenessGate,
+  bilinearFailureFreeGate,
+  bilinearExactGate
+];
 s05Checks = <|
-  "S01AndS04SHA256Bound" -> True,
-  "PaperAndBigTMDConventionsPreserved" -> True,
-  "ChargeStrippedHardKernelConventionPreserved" -> True,
-  "AmplitudeStripFactorAppliedToEveryRegeneratedFullAmplitude" -> True,
-  "FullAmplitudeCountsMatchS01" -> True,
-  "HqgLocalVirtualTIDCacheSourceBound" -> True,
-  "AllDiagramsCoherentlySummedBeforeProducts" -> True,
-  "CoherentOrderedPairCountsAre4_64_140" -> True,
-  "PhotonPolarizationRemoved" -> True,
-  "PhotonIndexMuPresent" -> True,
-  "PhotonIndexNuPresent" -> True,
-  "FragmentingGluonPolarizationRetained" -> True,
-  "RealUnobservedGluonPolarizationRetained" -> True,
-  "ExternalSpinorsRetained" -> True,
-  "FeynCalcConjugationEvaluated" -> True,
-  "VirtualCountertermsIncluded" -> True,
-  "VirtualSquareExcludedBeyondOAlphaS2" -> True,
-  "CalculationFullySymbolic" -> True,
-  "SpinColorSumsNotYetApplied" -> True
+  "AcceptedS01AndS04SourceResultIdentities" -> upstreamIdentityGate,
+  "CompleteCheckedS01AndS04Schemas" -> sourceSchemaGate,
+  "S04PreservesExactAcceptedS01Lineage" -> sourceLineageGate,
+  "PaperAndBigTMDConventionsPreserved" -> paperAndBigTMDGate,
+  "ChargeStrippedHardKernelConventionPreserved" -> chargeConventionGate,
+  "AmplitudeStripFactorExactReciprocal" -> amplitudeStripFactorGate,
+  "FragmentingGluonRoutingPreserved" -> fragmentingPartonGate,
+  "GeneratedCountLedgerValid" -> generatedCountLedgerGate,
+  "SourceDiagramCollectionsMatchGeneratedLedger" ->
+    sourceDiagramCollectionGate,
+  "FullAmplitudeCountsMatchGeneratedLedger" -> fullAmplitudeCountGate,
+  "AmplitudeStripFactorAppliedToEveryRegeneratedCollection" ->
+    amplitudeStripAuditGate,
+  "FeynArtsFCGVCanonicalizedToFeynCalc" ->
+    feynArtsFCGVCanonicalizationGate,
+  "S01KinematicSerializationSchemaAccepted" -> kinematicRecordGate,
+  "S01KinematicsReinstalledWithZeroResiduals" ->
+    kinematicInstallationGate,
+  "S01ToolDerivedKinematicsInstalled" -> kinematicDerivationGate,
+  "VirtualTIDCacheFullProvenanceValid" -> virtualCacheContractGate,
+  "VirtualTIDExpressionsComplete" -> virtualTIDCompletenessGate,
+  "S04QCDProjectionRulesPreserved" -> qcdProjectionRuleHandoffGate,
+  "ElectroweakCountertermsRemoved" ->
+    electroweakCountertermsRemovedGate,
+  "MassCountertermRemoved" -> massCountertermRemovedGate,
+  "SymbolicQCDCountertermsRetained" -> qcdCountertermsRetainedGate,
+  "AllDiagramsCoherentlySummedBeforeProducts" -> allCoherentSumsGate,
+  "RealOpenAmplitudeBlockCountMatchesGeneratedLedger" ->
+    realOpenBlockCountGate,
+  "RealConjugateBlockCountMatchesGeneratedLedger" ->
+    realConjugateBlockCountGate,
+  "CoherentOrderedPairLedgersToolBuilt" -> orderedPairLedgerGate,
+  "PhotonPolarizationRemoved" -> photonPolarizationRemovedGate,
+  "PhotonIndexMuPresent" -> photonIndexMuGate,
+  "PhotonIndexNuPresent" -> photonIndexNuGate,
+  "FragmentingGluonPolarizationRetained" ->
+    fragmentingGluonPolarizationGate,
+  "RealUnobservedGluonPolarizationRetained" ->
+    realUnobservedGluonPolarizationGate,
+  "ExternalSpinorsRetained" -> externalSpinorsRetainedGate,
+  "UnsummedColorStructuresRetained" -> colorStructuresRetainedGate,
+  "FeynCalcConjugationAndTIDEvaluated" ->
+    conjugationAndTIDEvaluatedGate,
+  "BilinearsContainNoFeynArtsFCGV" -> bilinearFCGVContextGate,
+  "VirtualCountertermsIncluded" -> virtualCountertermsRetainedGate,
+  "VirtualSquareExcludedBeyondOAlphaS2" -> virtualSquareExcludedGate,
+  "CalculationFullySymbolic" -> calculationFullySymbolicGate,
+  "SpinColorSumsNotYetApplied" -> spinColorSumsDeferredGate
 |>;
+assert[
+  AllTrue[Values[s05Checks], TrueQ],
+  "At least one derived S05 validation gate is not True."
+];
 
 s05Result = <|
   "Status" -> "Complete",
-  "Stage" -> "HqgS05-v3",
+  "Stage" -> "HqgS05-v4",
   "Channel" -> "Hqg only",
   "Contribution" -> "Hqg LO, Hqg;qg real, and Hqg;q virtual interference",
   "GeneratedAt" -> DateString[Now, "ISODateTime"],
+  "StageSource" -> stageSourcePath,
+  "StageSourceSHA256" -> stageSourceSHA256,
+  "StageSourceSHA256Hex" -> stageSourceSHA256Hex,
   "SourceResults" -> <|
+    "S01Source" -> s01SourcePath,
+    "S01SourceSHA256" -> FileHash[s01SourcePath, "SHA256"],
+    "S01SourceSHA256Hex" -> s01SourceSHA256Hex,
     "S01" -> s01Path,
     "S01SHA256" -> s01Hash,
+    "S01ResultSHA256Hex" -> s01ResultSHA256Hex,
+    "S04Source" -> s04SourcePath,
+    "S04SourceSHA256" -> FileHash[s04SourcePath, "SHA256"],
+    "S04SourceSHA256Hex" -> s04SourceSHA256Hex,
     "S04" -> s04Path,
     "S04SHA256" -> s04Hash,
+    "S04ResultSHA256Hex" -> s04ResultSHA256Hex,
     "ReferencePDFSHA256" -> s01["ReferencePDFSHA256"]
   |>,
   "BigTMDConvention" -> s01["BigTMDConvention"],
   "ElectricChargeNormalization" -> s01["ElectricChargeNormalization"],
+  "KinematicDerivation" -> s01KinematicDerivation,
+  "KinematicInstallationAudit" -> kinematicInstallationAudit,
+  "FullAmplitudeConversionAudit" -> conversionAudit,
   "VirtualTIDCache" -> <|
     "Path" -> virtualTIDCachePath,
     "SHA256" -> FileHash[virtualTIDCachePath, "SHA256"],
     "Stage" -> virtualCache["Stage"],
     "S01SHA256" -> virtualCache["S01SHA256"],
+    "S04SHA256" -> virtualCache["S04SHA256"],
+    "S05SourceSHA256" -> virtualCache["S05SourceSHA256"],
+    "ChargeNormalizationContentHash" ->
+      virtualCache["ChargeNormalizationContentHash"],
+    "KinematicDerivationContentHash" ->
+      virtualCache["KinematicDerivationContentHash"],
+    "KinematicInstallationAuditContentHash" ->
+      virtualCache["KinematicInstallationAuditContentHash"],
+    "KinematicSerializationSchema" ->
+      virtualCache["KinematicSerializationSchema"],
+    "FullVirtualInputContentHash" ->
+      virtualCache["FullVirtualInputContentHash"],
     "ReusedInThisRun" -> virtualTIDCacheWasReused
   |>,
   "PhotonIndices" -> {s05Mu, s05Nu},
@@ -576,6 +1093,7 @@ s05Result = <|
   |>,
   "DiagramCounts" -> convertedCounts,
   "CoherentOrderedPairCounts" -> orderedPairCounts,
+  "CoherentOrderedPairLedgers" -> orderedPairLedgers,
   "OpenPhotonIndexAmplitudeSums" -> <|
     "LO_Mu" -> loMu,
     "NLOReal_Mu" -> <|"Hqg;qg" -> realMu|>,

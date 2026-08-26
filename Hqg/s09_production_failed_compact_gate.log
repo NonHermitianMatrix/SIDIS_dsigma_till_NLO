@@ -1,0 +1,27 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S09_STAGE: validating the paper and accepted Hqg S07/S08 handoff"
+"S09_MASTER_PAIRS_BY_PROJECTOR="InputForm[<|"Pg" -> {{-2, -1}, {-2, 0}, {-2, 1}, {-1, -2}, {-1, -1}, {-1, 0}, {-1, 1}, {-1, 2}, {0, -3}, {0, -2}, {0, -1}, {0, 1}, {0, 2}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, {1, 1}, {1, 2}, {2, -2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}}, "PPP" -> {{-2, 0}, {-2, 1}, {-1, -1}, {-1, 0}, {-1, 1}, {0, -2}, {0, -1}, {0, 1}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, {1, 1}, {2, -3}, {2, -2}, {2, -1}, {2, 0}, {2, 1}}|>]
+"S09_MASTER_OCCURRENCES="InputForm[<|"Pg" -> 61, "PPP" -> 43|>]
+"S09_MASTER_DISTINCT_INSTANCES="InputForm[<|"Pg" -> 61, "PPP" -> 43|>]
+"S09_STAGE: checking Appendix-F formulas with the exact B19 recurrence"
+"S09_APPENDIX_F_RECURRENCE_RESIDUALS="InputForm[<|"{-2, -1}" -> 0, "{-2, 0}" -> 0, "{-2, 1}" -> 0, "{-1, -2}" -> 0, "{-1, -1}" -> 0, "{-1, 1}" -> 0, "{-1, 2}" -> 0, "{1, -3}" -> 0, "{1, -2}" -> 0, "{1, -1}" -> 0, "{1, 0}" -> 0, "{1, 1}" -> 0, "{1, 2}" -> 0|>]
+"S09_F8_B19_MOMENT_RESIDUALS="InputForm[<|"BetaTwoOddMomentOne" -> 0, "BetaTwoOddMomentThree" -> 0, "KLogSplitResidual" -> 0, "LDefinitionResidual" -> 0, "KDefinitionResidual" -> 0, "F8LeadingFromB19Moments" -> 0, "F8EpsilonFromB19Moments" -> 0|>]
+"S09_B27_B30_SIGNATURES="InputForm[<|"Pg" -> {HoldComplete[1, 1, 1 - epsilon], HoldComplete[1, 2, 1 - epsilon]}, "PPP" -> {HoldComplete[1, 1, 1 - epsilon]}|>]
+"S09_B27_B30_COUNTS="InputForm[<|"Pg" -> 3, "PPP" -> 2|>]
+"S09_B18_BETA_SIGNATURES="InputForm[{HoldComplete[2 - epsilon, 2 - epsilon], HoldComplete[2 - epsilon, -epsilon], HoldComplete[3 - epsilon, 2 - epsilon], HoldComplete[3 - epsilon, -epsilon], HoldComplete[-epsilon, -1 - epsilon], HoldComplete[-epsilon, 2 - epsilon], HoldComplete[-epsilon, -epsilon]}]
+"S09_B18_GAMMA_OBJECTS="InputForm[{Gamma[1 - 2*epsilon], Gamma[1 - epsilon]}]
+"S09_STAGE: processing expanded projectors serially"
+"S09_STAGE: applying accepted exact xi,s23 map to angular input Pg"
+"S09_STAGE: fused Appendix-F/B18/B27/B30 expansion for Hqg Pg"
+"S09_""Pg""_RESIDUAL_EXPANSION_INVENTORY="InputForm[<|"Case2MasterCount" -> 0, "HypergeometricCount" -> 0, "BetaCount" -> 0, "GammaCount" -> 0, "FailedCount" -> 0, "MachineRealCount" -> 0|>]
+"S09_CHECKPOINT: completed ""Pg"" expanded leaf/byte counts "InputForm[{43081075, 1111995608}]
+"S09_STAGE: applying accepted exact xi,s23 map to angular input PPP"
+"S09_STAGE: fused Appendix-F/B18/B27/B30 expansion for Hqg PPP"
+"S09_""PPP""_RESIDUAL_EXPANSION_INVENTORY="InputForm[<|"Case2MasterCount" -> 0, "HypergeometricCount" -> 0, "BetaCount" -> 0, "GammaCount" -> 0, "FailedCount" -> 0, "MachineRealCount" -> 0|>]
+"S09_CHECKPOINT: completed ""PPP"" expanded leaf/byte counts "InputForm[{9520066, 245646264}]
+"S09_STAGE: validating finalized source-bound projector caches"
+"S09_FATAL: At least one computed final Hqg S09 validation check failed."

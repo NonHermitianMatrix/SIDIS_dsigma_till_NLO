@@ -1,0 +1,57 @@
+{
+  "acceptance_fraction": 0.23209166666666667,
+  "accepted_events": 27851,
+  "checks": {
+    "accepted_and_total_counts_exact": true,
+    "correlation_above_0p999999999": true,
+    "difference_below_one_millionth_of_mg_mc_error": true,
+    "input_hashes_exact": true,
+    "integrated_relative_difference_below_5e-12": true,
+    "madgraph_integral_reproduces_s10_metadata": true,
+    "stored_signed_differences_reconstruct": true
+  },
+  "correlated_difference_standard_error_pb": 1.9397673271779363e-18,
+  "cuts": {
+    "min_minus_ti_over_shat_plus_2q2": 0.03,
+    "min_minus_ui_over_shat_plus_q2": 0.05,
+    "min_sij_over_shat": 0.05,
+    "q2_over_s_max": 0.4,
+    "q2_over_s_min": 0.08,
+    "shat_over_s_max": 0.75,
+    "shat_over_s_min": 0.25
+  },
+  "difference_in_correlated_standard_errors": 3.109803491599932,
+  "difference_relative_to_madgraph_mc_error": 3.605579249639296e-14,
+  "input_sha256": {
+    "s10_cut_phase_space_metadata.json": "78881497b9341b00d0346781657d795f8459bdc4d02ca58ebee379ec12de0b1d",
+    "s11_local_vs_madgraph_points.csv": "4f3439167d6567dc35d2bca0f6e6534ec6f6d0e26daed273f47875fac372d270",
+    "s11_pointwise_comparison.json": "95eddd1c31df107af425ae4ff7c5e4a0bf1a4ff56fc780ac5587ac3bd71984f7"
+  },
+  "integrated_relative_difference": 5.954836449099844e-16,
+  "local_minus_madgraph_cross_section_pb": -6.032295206949415e-18,
+  "local_projected_cross_section_pb": 0.010130077053352619,
+  "local_standard_error_pb": 0.00016730446869397977,
+  "madgraph_cross_section_pb": 0.010130077053352624,
+  "madgraph_metadata_reproduction_relative_difference": 1.7124484511227755e-16,
+  "madgraph_standard_error_pb": 0.00016730446869397999,
+  "maximum_stored_difference_reconstruction_residual": 0.0,
+  "phase_space_and_flux_normalization": {
+    "common_factor_gev2": 0.06648282151394422,
+    "estimator": "sigma = Phi_4(s)/(2s) * (1/N_trials) * sum_{accepted} matrix_element_squared",
+    "gev_minus2_to_pb": 389379338.0,
+    "incoming_flux_inverse_gev_minus2": 5e-07,
+    "massless_four_body_phase_space_volume_gev4": 132965.64302788844
+  },
+  "pointwise_summary": {
+    "maximum_relative_difference": 2.179208133497826e-11,
+    "median_relative_difference": 2.6734483251578605e-15,
+    "relative_difference_99th_percentile": 6.427960527741967e-14
+  },
+  "ratio_local_to_madgraph": 0.9999999999999994,
+  "sample_correlation": 1.0,
+  "source_sha256": "2eed6feca975a4702e63d542386eeefa0845262d08e4b0d177df64b0fd28c244",
+  "sqrt_s_gev": 1000.0,
+  "stage": "HqgFiniteCutIntegratedComparison-v1",
+  "status": "complete",
+  "total_rambo_trials": 120000
+}

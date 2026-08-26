@@ -222,8 +222,24 @@ def main() -> int:
 
     conventions = local["Conventions"]
     expected_distribution = "regular, delta, plus1B, and plus2B"
+    reference_charge = float(conventions.get("ReferenceCharge", 0.0))
+    amplitude_strip = float(conventions.get("AmplitudeStripFactor", 0.0))
+    direct_born_factor = float(
+        conventions.get("DirectBornNormalizationFactor", 0.0)
+    )
     if (
-        int(conventions.get("DirectBornNormalizationFactor", 0)) != 9
+        not math.isclose(
+            reference_charge * amplitude_strip,
+            1.0,
+            rel_tol=1.0e-15,
+            abs_tol=1.0e-15,
+        )
+        or not math.isclose(
+            direct_born_factor,
+            amplitude_strip * amplitude_strip,
+            rel_tol=1.0e-15,
+            abs_tol=1.0e-15,
+        )
         or conventions.get("PhysicalLuminosity")
         != "Sum_q e_q^2 f_q D_g deferred"
         or int(conventions.get("BigTMDChannel", 0)) != CHANNEL

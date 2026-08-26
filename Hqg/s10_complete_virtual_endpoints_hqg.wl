@@ -1,7 +1,7 @@
 (* ::Package:: *)
 
 (*
-  Hqg stage s10.
+  Hqg stage s10, corrected current-lineage implementation.
 
   This stage is fully analytic and symbolic.  It does not choose numerical
   kinematics, PDFs, fragmentation functions, or a numerical test function.
@@ -29,6 +29,17 @@
 *)
 
 $HistoryLength = 0;
+$S10BootstrapDirectory = DirectoryName[ExpandFileName[$InputFileName]];
+$S10BundledApplicationsPath = FileNameJoin[{
+  $S10BootstrapDirectory,
+  "Applications"
+}];
+If[
+  DirectoryQ[$S10BundledApplicationsPath] &&
+    FreeQ[$Path, $S10BundledApplicationsPath],
+  PrependTo[$Path, $S10BundledApplicationsPath]
+];
+$LoadFeynArts = False;
 $LoadAddOns = {"FeynHelpers"};
 Needs["FeynCalc`"];
 $FCAdvice = False;
@@ -36,21 +47,43 @@ $FCAdvice = False;
 gibibyte = 1024^3;
 parallelMemoryReserveBytes = 6 gibibyte;
 endpointWorkerMemoryLimitBytes = 1280 1024^2;
+endpointParallelBatchTimeLimitSeconds = 900;
 availableMemoryAtLaunch = Quiet@Check[MemoryAvailable[], 0];
-requestedParallelKernels = Min[
-  8,
-  Max[
-    2,
-    Floor[
-      Max[0, availableMemoryAtLaunch - parallelMemoryReserveBytes]/
-        endpointWorkerMemoryLimitBytes
+schedulerSlotText = Environment["NSLOTS"];
+schedulerSlots = If[
+  StringQ[schedulerSlotText] &&
+    StringMatchQ[schedulerSlotText, DigitCharacter ..],
+  FromDigits[schedulerSlotText],
+  Missing["NoSchedulerSlotContract"]
+];
+requestedParallelKernels = If[
+  IntegerQ[schedulerSlots],
+  Min[8, Max[0, schedulerSlots - 1]],
+  Min[
+    8,
+    Max[
+      2,
+      Floor[
+        Max[0, availableMemoryAtLaunch - parallelMemoryReserveBytes]/
+          endpointWorkerMemoryLimitBytes
+      ]
     ]
   ]
 ];
-parallelKernelExecutable =
-  "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel";
+parallelKernelExecutable = With[
+  {configured = Environment["HQG_WOLFRAM_KERNEL"]},
+  If[
+    StringQ[configured] && configured =!= "" && FileExistsQ[configured],
+    configured,
+    If[
+      $VersionNumber >= 14,
+      "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+      First[$CommandLine]
+    ]
+  ]
+];
 parallelKernelConfiguration = If[
-  Length[$ConfiguredKernels] > 0,
+  $VersionNumber >= 14 && Length[$ConfiguredKernels] > 0,
   ReplacePart[
     First[$ConfiguredKernels],
     {
@@ -60,10 +93,12 @@ parallelKernelConfiguration = If[
       {1, "LimitByLicense"} -> True
     }
   ],
-  Missing["NoLocalKernelConfiguration"]
+  Missing["NativeLocalLaunch"]
 ];
 parallelKernelCount = 0;
 parallelKernelIDsSeen = {};
+parallelKernelLaunchIDSetsSeen = {};
+alpha2ParallelKernelIDSetsSeen = {};
 endpointParallelWorkRequired = False;
 Print[
   "S10_ENDPOINT_MEMORY_PLAN: availableGiB=",
@@ -71,7 +106,10 @@ Print[
   " reserveGiB=", N[parallelMemoryReserveBytes/gibibyte, 3],
   " perWorkerLimitGiB=",
   N[endpointWorkerMemoryLimitBytes/gibibyte, 3],
-  " requestedKernels=", requestedParallelKernels
+  " schedulerSlots=", InputForm[schedulerSlots],
+  " requestedKernels=", requestedParallelKernels,
+  " batchDeadlineSeconds=", endpointParallelBatchTimeLimitSeconds,
+  " kernel=", parallelKernelExecutable
 ];
 Print[
   "S10_MEMORY_STAGE: virtual reconstruction remains serial; bounded " <>
@@ -79,24 +117,35 @@ Print[
 ];
 
 ClearAll[
-  fatal, assert, writeAtomic, zeroEquivalentQ, setTwoBodyKinematics,
+  fatal, assert, writeAtomic, zeroEquivalentQ, fileSHA256Hex,
+  atomicReloadSameQ, resolveRecordedOrColocated,
+  immutableInputIdentitiesQ, compactS10ResultValidQ,
+  installMassShellAssignments,
+  installScalarProductAssignments, installKinematicRecord,
+  setTwoBodyKinematics,
   ensureEndpointParallelKernels, closeEndpointParallelKernels,
   endpointWorkerEvaluate,
   evaluatePaVe, obtainPaVeRules, transformTwoBodyCoefficient,
   virtualLaurentTerms, boundedLaurentPieces, partitionLaurentPieces,
   pppTerm2FactorwiseLaurent, cleanupLaurentSubpartCaches,
   laurentSubpartCachePath, laurentSubpartCachePattern,
-  validPreCorrectionProgramSHA256Q, validIndependentCacheStageVersionQ,
-  validLaurentInputHashQ,
   finiteLaurentTerm,
   finiteLaurentProjector, finiteLaurentPair,
+  migrateAcceptedVirtualCache, migrateAcceptedEndpointCacheMetadata,
   invalidEndpointQ, vanishingEndpointQ,
   exceptionalPowerTermIndices, singularLogTermIndices,
   splitEndpointProjection, endpointFactorwiseLaurent,
-  endpointTermLaurent, structuralAlpha2EndpointData, exactPhysicalZeroQ,
-  coupledEndpointGroupFinite, repairCoupledEndpointGroups,
+  endpointTermLaurent, alpha2ExactAgreementQ,
+  alpha2SeriesDataCoefficientAssociation,
+  alpha2CoefficientChunkWorker,
+  parallelAlpha2InvalidFactorEndpoint,
+  structuralAlpha2EndpointData, exactPhysicalZeroQ,
+  discoverCoupledEndpointGroups, seriesKnownThroughZeroQ,
+  seriesMinimumPower, coupledEndpointGroupLaurent,
   loadExpansion, processProjection, S10ConvolutionTest,
-  S10EndpointCA, S10EndpointCF, S10EndpointFCGV, S10EndpointSMP
+  S10EndpointCA, S10EndpointCF, S10EndpointFCGV, S10EndpointSMP,
+  S10PhysicalA, S10PhysicalRT, S10EndpointT, S10CommonRoot,
+  S10EndpointLog, S10RootOccurrence, S10SharedFunctionOccurrence
 ];
 
 fatal[message_String] := (
@@ -111,11 +160,20 @@ ensureEndpointParallelKernels[reason_String] := Module[
   {launchResult, currentIDs},
   If[$KernelCount > 0, Quiet[CloseKernels[]]];
   ClearSystemCache[];
+  assert[requestedParallelKernels > 0,
+    "The scheduler or local planner allocated no endpoint workers."];
   launchResult = Quiet@Check[
     If[
-      MissingQ[parallelKernelConfiguration],
-      {},
-      LaunchKernels[parallelKernelConfiguration]
+      $VersionNumber < 14,
+      Block[
+        {$DefaultKernels = {"localhost"}},
+        LaunchKernels[requestedParallelKernels]
+      ],
+      If[
+        MissingQ[parallelKernelConfiguration],
+        {},
+        LaunchKernels[parallelKernelConfiguration]
+      ]
     ],
     {}
   ];
@@ -124,8 +182,24 @@ ensureEndpointParallelKernels[reason_String] := Module[
     "Endpoint parallel launch created " <>
       ToString[parallelKernelCount] <> " of the required " <>
       ToString[requestedParallelKernels] <> " workers."];
+  With[
+    {applicationsPath = $S10BundledApplicationsPath},
+    ParallelEvaluate[
+      $HistoryLength = 0;
+      If[
+        DirectoryQ[applicationsPath] && FreeQ[$Path, applicationsPath],
+        PrependTo[$Path, applicationsPath]
+      ];
+      $LoadFeynArts = False;
+      $LoadAddOns = {"FeynHelpers"};
+      Needs["FeynCalc`"];
+      $FCAdvice = False;
+    ]
+  ];
   DistributeDefinitions[
-    fatal, assert, invalidEndpointQ, endpointInertRules,
+    fatal, assert, invalidEndpointQ, alpha2ExactAgreementQ,
+    alpha2SeriesDataCoefficientAssociation,
+    alpha2CoefficientChunkWorker, endpointInertRules,
     endpointActiveRules, endpointFactorwiseLaurent,
     endpointTermLaurent, endpointWorkerEvaluate,
     endpointWorkerMemoryLimitBytes, s23, epsilon
@@ -140,7 +214,8 @@ ensureEndpointParallelKernels[reason_String] := Module[
       DuplicateFreeQ[currentIDs],
     "The endpoint worker set does not contain the requested number of " <>
       "distinct kernels."];
-  parallelKernelIDsSeen = Union[parallelKernelIDsSeen, currentIDs];
+  parallelKernelIDsSeen = currentIDs;
+  AppendTo[parallelKernelLaunchIDSetsSeen, currentIDs];
   Print[
     "S10_ENDPOINT_PARALLEL_KERNELS: reason=" <> reason <>
       " count=" <> ToString[parallelKernelCount] <> " IDs=" <>
@@ -187,40 +262,72 @@ zeroEquivalentQ[expression_, seconds_Integer : 600] := Module[{answer},
   TrueQ[answer === 0]
 ];
 
-scriptDirectory = DirectoryName[ExpandFileName[$InputFileName]];
+fileSHA256Hex[path_String] :=
+  IntegerString[FileHash[path, "SHA256"], 16, 64];
+
+atomicReloadSameQ[expression_, path_String] := Module[{reloaded},
+  reloaded = Quiet@Check[Get[path], $Failed];
+  TrueQ[reloaded =!= $Failed && SameQ[reloaded, expression]]
+];
+
+resolveRecordedOrColocated[path_] := Module[{colocated},
+  If[! StringQ[path], Return[Missing["InvalidRecordedPath", path]]];
+  colocated = FileNameJoin[{scriptDirectory, FileNameTake[path]}];
+  Which[
+    FileExistsQ[path], ExpandFileName[path],
+    FileExistsQ[colocated], ExpandFileName[colocated],
+    True, ExpandFileName[path]
+  ]
+];
+
+scriptDirectory = $S10BootstrapDirectory;
 programPath = ExpandFileName[$InputFileName];
-programSHA256 = FileHash[programPath, "SHA256"];
+programSHA256 = fileSHA256Hex[programPath];
 s09Path = FileNameJoin[{scriptDirectory, "s09_result"}];
 resultPath = FileNameJoin[{scriptDirectory, "s10_result"}];
-paperPath = FileNameJoin[{
-  DirectoryName[scriptDirectory],
-  "Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Order.pdf"
-}];
-stageVersion = "HqgS10-v4";
-independentLegacyStageVersion = "HqgS10-v3";
+paperCandidates = {
+  FileNameJoin[{
+    scriptDirectory,
+    "Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Order.pdf"
+  }],
+  FileNameJoin[{
+    DirectoryName[scriptDirectory],
+    "Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Order.pdf"
+  }]
+};
+paperPath = SelectFirst[paperCandidates, FileExistsQ, First[paperCandidates]];
+stageVersion = "HqgS10-v6";
+resultSchemaVersion = 2;
+preflightOnly = TrueQ[Environment["HQG_S10_PREFLIGHT_ONLY"] === "1"];
+acceptedS09ProgramSHA256 =
+  "f7a88a6863d90f76972b45f8c0281001d3f16e8f5da220b6c3ae977234d994d0";
+acceptedS09ResultSHA256 =
+  "a1f585334a749146230b1ea0f32e98df34290217798cc8293bbfdbc9ec2b6624";
+acceptedPaperSHA256 =
+  "bf36878f0b451c88322b9ec69fa19815930a6d171ac586be6712380a1d3c775b";
 paVeCachePath = FileNameJoin[{
-  scriptDirectory, "s10_cache_v1_virtual_pax_rules"
+  scriptDirectory, "s10_cache_v2_virtual_pax_rules"
 }];
 scalarMasterCachePath = FileNameJoin[{
-  scriptDirectory, "s10_cache_v1_virtual_scalar_rules"
+  scriptDirectory, "s10_cache_v2_virtual_scalar_rules"
 }];
 laurentCachePath = FileNameJoin[{
-  scriptDirectory, "s10_cache_v1_virtual_laurent"
+  scriptDirectory, "s10_cache_v2_virtual_laurent"
 }];
 laurentProgressCachePath[projector_String] := FileNameJoin[{
   scriptDirectory,
-  "s10_cache_v1_virtual_laurent_progress_" <> ToLowerCase[projector]
+  "s10_cache_v2_virtual_laurent_progress_" <> ToLowerCase[projector]
 }];
 laurentSubtermCachePath[projector_String, index_Integer] := FileNameJoin[{
   scriptDirectory,
-  "s10_cache_v1_virtual_laurent_progress_" <> ToLowerCase[projector] <>
+  "s10_cache_v2_virtual_laurent_progress_" <> ToLowerCase[projector] <>
     "_term_" <> ToString[index]
 }];
 laurentSubpartCachePath[
     projector_String, index_Integer, subindex_Integer, partindex_Integer
   ] := FileNameJoin[{
   scriptDirectory,
-  "s10_cache_v1_virtual_laurent_progress_" <> ToLowerCase[projector] <>
+  "s10_cache_v2_virtual_laurent_progress_" <> ToLowerCase[projector] <>
     "_term_" <> ToString[index] <> "_subterm_" <> ToString[subindex] <>
     "_part_" <> IntegerString[partindex, 10, 3]
 }];
@@ -228,204 +335,777 @@ laurentSubpartCachePattern[
     projector_String, index_Integer, subindex_Integer
   ] := FileNameJoin[{
   scriptDirectory,
-  "s10_cache_v1_virtual_laurent_progress_" <> ToLowerCase[projector] <>
+  "s10_cache_v2_virtual_laurent_progress_" <> ToLowerCase[projector] <>
     "_term_" <> ToString[index] <> "_subterm_" <> ToString[subindex] <>
     "_part_*"
 }];
-paVeCacheVersion = 1;
-scalarMasterCacheVersion = 1;
-laurentCacheVersion = 1;
-laurentProgressCacheVersion = 1;
-laurentSubtermCacheVersion = 1;
-laurentSubpartCacheVersion = 1;
+paVeCacheVersion = 2;
+scalarMasterCacheVersion = 2;
+laurentCacheVersion = 2;
+laurentProgressCacheVersion = 2;
+laurentSubtermCacheVersion = 2;
+laurentSubpartCacheVersion = 2;
 pppLaurentPartLeafBudget = 1000000;
 pppLaurentPartHardLeafLimit = 2500000;
-preMemoryCorrectionProgramSHA256 =
-  105760057790227778240537465937350466528734936791302150062908418547664897330660;
-preMemoryCorrectionPgInputHash =
-  73690668794968757684088104940735542713574535462437010271582036713425121427451;
-preMemoryCorrectionPPPInputHash =
-  113207599498339542855002826815744439221100513971733186586557211857627814175290;
-preStreamingCorrectionProgramSHA256 =
-  88727092961982947139784268582512358451798471613035552058436348586515368963509;
-preStreamingCorrectionPgInputHash =
-  23632057988757400540690277099449042473169350800685535831980231815537741239398;
-preStreamingCorrectionPPPInputHash =
-  77039341318221425383923231772192566332462063065583882903867272228856932463173;
-preEndpointParallelProgramSHA256 =
-  29536845413302882737092486927461240061273268817742180667577153972701132942689;
-preEndpointParallelPgInputHash =
-  62844477781471776907482706440449183341738769456923699851445086865921914608489;
-preEndpointParallelPPPInputHash =
-  91935397678780209361012889363405298831864870963016118579034916187669593182187;
-preAdaptiveEndpointProgramSHA256 =
-  26580586771229033880957082344206381766879270180779290096376147513489070811866;
-preCoupledEndpointRepairProgramSHA256 =
-  68570205711600407259774659632846623623348185839062313821133718429552064183539;
-endpointCacheVersion = 2;
-legacyEndpointCacheVersion = 1;
-coupledEndpointRepairVersion = 1;
-coupledEndpointGroups = <|
-  "Pg" -> {{65, 66}},
-  "PPP" -> {{38, 47}}
+endpointCacheVersion = 14;
+coupledEndpointRepairVersion = 9;
+coupledGroupSeriesEvaluatorVersion = 10;
+alpha2EndpointConstructionVersion = 2;
+acceptedLegacyVirtualProgramSHA256 =
+  "238ebcf663b4ba9f7b3ad36d6137850b9237212f4803f58c6e54d856b3a340f4";
+acceptedLegacyVirtualCacheSHA256ByName = <|
+  "s10_cache_v2_virtual_pax_rules" ->
+    "60e4e280bcd833acf653613664aa19727f225a5db0e7a8e018939f66c0773b8f",
+  "s10_cache_v2_virtual_scalar_rules" ->
+    "2ff61fb658d347f47b093b6a8f50f789a7cb5dfa3a4e09383ac32615954c437b",
+  "s10_cache_v2_virtual_laurent" ->
+    "73e57a95016d73655f91166c47a0d5e52f0c3cc879f428c07327fd89bfea4a3b"
+|>;
+acceptedFirstMigrationVirtualProgramSHA256 =
+  "a5fbed83c006ef40b94224a8b86785813f765c6024b57f354db38f1ce84ede2c";
+acceptedFirstMigrationVirtualCacheSHA256ByName = <|
+  "s10_cache_v2_virtual_pax_rules" ->
+    "5cea57973979562820ce3522585265a09fe9fc99620e6aedff3a7129925ffa1f",
+  "s10_cache_v2_virtual_scalar_rules" ->
+    "1a85ce5e1ec0ed9bc60343353445546f99a1fefce2e8b9d53f9057fe769b2b78",
+  "s10_cache_v2_virtual_laurent" ->
+    "eacc384e773d6b069bab6ba1d20712023416e2e34bb70cf7fdd7066c3638697c"
+|>;
+acceptedSecondMigrationVirtualProgramSHA256 =
+  "db7a88decaf2352d412b8cedb0b1219e92c84528b06acd78a4bcfd8bc55177b8";
+acceptedSecondMigrationVirtualCacheSHA256ByName = <|
+  "s10_cache_v2_virtual_pax_rules" ->
+    "1864b732643310a247b88eb119ba7354a13adf0e85cb80954b7c9ee0e047509b",
+  "s10_cache_v2_virtual_scalar_rules" ->
+    "9ea773df0fb3b86dfa9b6474aaa8dc7795cb19d98ea050035af99f3a2870d774",
+  "s10_cache_v2_virtual_laurent" ->
+    "c5cfe5dabb96e88deadf9790699cbea2c2e2aec8d89a6dbb674e84c19b3bd911"
+|>;
+acceptedThirdMigrationVirtualProgramSHA256 =
+  "897f28aad15069992e2c98f780ed31aef9d3e92cda3cdf23a811c987239bd734";
+acceptedThirdMigrationVirtualCacheSHA256ByName = <|
+  "s10_cache_v2_virtual_pax_rules" ->
+    "fd041bbaec122f3b032461be3f417eda41b21ea89bb0ea670cdbcf1a50fd4968",
+  "s10_cache_v2_virtual_scalar_rules" ->
+    "1bdf75464a1f0b6b705109728a2475c5fe67378f324151d4c9bd56c6fc4b7940",
+  "s10_cache_v2_virtual_laurent" ->
+    "e2692af9f27441af720e52c1b81c432bf6aa62ff88c4e8a017e51ef64e80133d"
+|>;
+acceptedFourthMigrationVirtualProgramSHA256 =
+  "ea92ac48df30d1292463a03ee6f36fd6d4b80cc3881aabc2c32255004fe665b8";
+acceptedFourthMigrationVirtualCacheSHA256ByName = <|
+  "s10_cache_v2_virtual_pax_rules" ->
+    "cbd17459c7ddf1b782f0047a481831be404cdc86d98c94b38d98f07eb31d02cf",
+  "s10_cache_v2_virtual_scalar_rules" ->
+    "94229575151abb56a059cfd1e797318fd25974a7087adb75f820aec0d81a5f98",
+  "s10_cache_v2_virtual_laurent" ->
+    "b0d8e18a9af40c09d62e511c2bc0c9db27ffcf719560cb783770625af8f1c2e2"
+|>;
+virtualCacheMigrationRecords = <||>;
+acceptedEndpointMetadataCorrectionProgramSHA256 =
+  "ea92ac48df30d1292463a03ee6f36fd6d4b80cc3881aabc2c32255004fe665b8";
+acceptedEndpointMetadataCorrectionCacheSHA256ByProjector = <|
+  "Pg" ->
+    "8d6e117c53d489bf46ee4b9e0388f70295b1cfee77252c70e3f1d17e034c104c"
+|>;
+endpointCacheMetadataMigrationRecords = <||>;
+acceptedAlpha2InvalidFactorEndpointSHA256HexByProjector = <|
+  "Pg" -> {
+    "7e469c3695147752a91c50630fb855149d5b7e355839079c1884ffddd9d0b5ae"
+  }
 |>;
 projectors = {"Pg", "PPP"};
+endpointParallelBatchTimeoutCountByProjector = AssociationMap[0 &, projectors];
+endpointSerialFallbackSourceIndices = AssociationMap[{} &, projectors];
 endpointCachePaths = <|
-  "Pg" -> FileNameJoin[{scriptDirectory, "s10_cache_v2_endpoint_pg"}],
-  "PPP" -> FileNameJoin[{scriptDirectory, "s10_cache_v2_endpoint_pp"}]
-|>;
-legacyEndpointCachePaths = <|
-  "Pg" -> FileNameJoin[{scriptDirectory, "s10_cache_v1_endpoint_pg"}],
-  "PPP" -> FileNameJoin[{scriptDirectory, "s10_cache_v1_endpoint_pp"}]
+  "Pg" -> FileNameJoin[{scriptDirectory, "s10_cache_v14_endpoint_pg"}],
+  "PPP" -> FileNameJoin[{scriptDirectory, "s10_cache_v14_endpoint_pp"}]
 |>;
 
-validPreCorrectionProgramSHA256Q[hash_] :=
-  TrueQ[hash === programSHA256 ||
-    hash === preMemoryCorrectionProgramSHA256 ||
-    hash === preStreamingCorrectionProgramSHA256 ||
-    hash === preEndpointParallelProgramSHA256 ||
-    hash === preAdaptiveEndpointProgramSHA256 ||
-    hash === preCoupledEndpointRepairProgramSHA256];
+migrateAcceptedVirtualCache[
+    cache_String, expectedVersion_Integer, expectedType_String
+  ] := Module[
+  {
+    cacheName, acceptedDiskSHA256, acceptedFirstMigrationDiskSHA256,
+    acceptedSecondMigrationDiskSHA256, acceptedThirdMigrationDiskSHA256,
+    acceptedFourthMigrationDiskSHA256, diskSHA256Before, payload,
+    migrationSourceProgramSHA256,
+    migrationSourceGate, typeGate, migrationMetadataKeys,
+    dependencyMetadataUpdates, mathematicalPayloadBefore, migratedPayload,
+    reloadedPayload, diskSHA256After, dependencyMetadataGate
+  },
+  If[! FileExistsQ[cache], Return[False]];
+  cacheName = FileNameTake[cache];
+  acceptedDiskSHA256 = Lookup[
+    acceptedLegacyVirtualCacheSHA256ByName,
+    cacheName,
+    Missing["NoAcceptedLegacyCache"]
+  ];
+  acceptedFirstMigrationDiskSHA256 = Lookup[
+    acceptedFirstMigrationVirtualCacheSHA256ByName,
+    cacheName,
+    Missing["NoAcceptedFirstMigrationCache"]
+  ];
+  acceptedSecondMigrationDiskSHA256 = Lookup[
+    acceptedSecondMigrationVirtualCacheSHA256ByName,
+    cacheName,
+    Missing["NoAcceptedSecondMigrationCache"]
+  ];
+  acceptedThirdMigrationDiskSHA256 = Lookup[
+    acceptedThirdMigrationVirtualCacheSHA256ByName,
+    cacheName,
+    Missing["NoAcceptedThirdMigrationCache"]
+  ];
+  acceptedFourthMigrationDiskSHA256 = Lookup[
+    acceptedFourthMigrationVirtualCacheSHA256ByName,
+    cacheName,
+    Missing["NoAcceptedFourthMigrationCache"]
+  ];
+  payload = Quiet@Check[Get[cache], $Failed];
+  assert[AssociationQ[payload],
+    "The existing virtual cache " <> cacheName <> " is unreadable."];
+  If[Lookup[payload, "ProgramSHA256", Missing[]] === programSHA256,
+    Return[False]
+  ];
+  diskSHA256Before = fileSHA256Hex[cache];
+  migrationSourceProgramSHA256 = Lookup[
+    payload, "ProgramSHA256", Missing[]
+  ];
+  migrationSourceGate = TrueQ[
+    (
+      diskSHA256Before === acceptedDiskSHA256 &&
+        migrationSourceProgramSHA256 ===
+          acceptedLegacyVirtualProgramSHA256
+    ) || (
+      diskSHA256Before === acceptedFirstMigrationDiskSHA256 &&
+        migrationSourceProgramSHA256 ===
+          acceptedFirstMigrationVirtualProgramSHA256 &&
+        Lookup[payload, "MigratedFromProgramSHA256", Missing[]] ===
+          acceptedLegacyVirtualProgramSHA256 &&
+        Lookup[payload, "MigrationSourceCacheSHA256", Missing[]] ===
+          acceptedDiskSHA256
+    ) || (
+      diskSHA256Before === acceptedSecondMigrationDiskSHA256 &&
+        migrationSourceProgramSHA256 ===
+          acceptedSecondMigrationVirtualProgramSHA256 &&
+        Lookup[payload, "MigratedFromProgramSHA256", Missing[]] ===
+          acceptedFirstMigrationVirtualProgramSHA256 &&
+        Lookup[payload, "MigrationSourceCacheSHA256", Missing[]] ===
+          acceptedFirstMigrationDiskSHA256 &&
+        Lookup[payload, "OriginalAcceptedProgramSHA256", Missing[]] ===
+          acceptedLegacyVirtualProgramSHA256 &&
+        Lookup[payload, "OriginalAcceptedCacheSHA256", Missing[]] ===
+          acceptedDiskSHA256
+    ) || (
+      diskSHA256Before === acceptedThirdMigrationDiskSHA256 &&
+        migrationSourceProgramSHA256 ===
+          acceptedThirdMigrationVirtualProgramSHA256 &&
+        Lookup[payload, "MigratedFromProgramSHA256", Missing[]] ===
+          acceptedSecondMigrationVirtualProgramSHA256 &&
+        Lookup[payload, "MigrationSourceCacheSHA256", Missing[]] ===
+          acceptedSecondMigrationDiskSHA256 &&
+        Lookup[payload, "OriginalAcceptedProgramSHA256", Missing[]] ===
+          acceptedLegacyVirtualProgramSHA256 &&
+        Lookup[payload, "OriginalAcceptedCacheSHA256", Missing[]] ===
+          acceptedDiskSHA256
+    ) || (
+      diskSHA256Before === acceptedFourthMigrationDiskSHA256 &&
+        migrationSourceProgramSHA256 ===
+          acceptedFourthMigrationVirtualProgramSHA256 &&
+        Lookup[payload, "MigratedFromProgramSHA256", Missing[]] ===
+          acceptedThirdMigrationVirtualProgramSHA256 &&
+        Lookup[payload, "MigrationSourceCacheSHA256", Missing[]] ===
+          acceptedThirdMigrationDiskSHA256 &&
+        Lookup[payload, "OriginalAcceptedProgramSHA256", Missing[]] ===
+          acceptedLegacyVirtualProgramSHA256 &&
+        Lookup[payload, "OriginalAcceptedCacheSHA256", Missing[]] ===
+          acceptedDiskSHA256
+    )
+  ];
+  assert[
+    ! MissingQ[acceptedDiskSHA256] &&
+      ! MissingQ[acceptedFirstMigrationDiskSHA256] &&
+      ! MissingQ[acceptedSecondMigrationDiskSHA256] &&
+      ! MissingQ[acceptedThirdMigrationDiskSHA256] &&
+      ! MissingQ[acceptedFourthMigrationDiskSHA256] &&
+      migrationSourceGate &&
+      Lookup[payload, "StageVersion", Missing[]] === stageVersion &&
+      Lookup[payload, "CacheVersion", Missing[]] === expectedVersion &&
+      Lookup[payload, "SourceS09SHA256", Missing[]] === s09SHA256 &&
+      Lookup[payload, "SourceS08SHA256", Missing[]] === s08SHA256 &&
+      Lookup[payload, "SourceS07SHA256", Missing[]] === s07SHA256,
+    "The legacy virtual cache " <> cacheName <>
+      " does not match the exact accepted migration lineage."
+  ];
+  typeGate = Which[
+    expectedType === "PaVe" || expectedType === "scalar master",
+      Lookup[payload, "IntegralType", Missing[]] === expectedType &&
+        ListQ[Lookup[payload, "Integrals", Missing[]]] &&
+        ListQ[Lookup[payload, "Values", Missing[]]] &&
+        Length[payload["Integrals"]] === Length[payload["Values"]],
+    expectedType === "virtual Laurent",
+      AssociationQ[Lookup[payload, "LaurentThroughFinite", Missing[]]] &&
+        Sort[Keys[payload["LaurentThroughFinite"]]] === Sort[projectors] &&
+        AllTrue[
+          Values[payload["LaurentThroughFinite"]],
+          # =!= $Failed && # =!= 0 &
+        ],
+    True,
+      False
+  ];
+  assert[typeGate,
+    "The legacy virtual cache " <> cacheName <>
+      " fails its type-specific mathematical payload gate."];
+  migrationMetadataKeys = {
+    "Program", "ProgramSHA256", "MigratedFromProgramSHA256",
+    "MigrationSourceCacheSHA256", "OriginalAcceptedProgramSHA256",
+    "OriginalAcceptedCacheSHA256"
+  };
+  dependencyMetadataUpdates = <||>;
+  If[expectedType === "virtual Laurent",
+    migrationMetadataKeys = Join[
+      migrationMetadataKeys,
+      {
+        "PaVeCache", "PaVeCacheSHA256", "ScalarMasterCache",
+        "ScalarMasterCacheSHA256"
+      }
+    ];
+    dependencyMetadataUpdates = <|
+      "PaVeCache" -> paVeCachePath,
+      "PaVeCacheSHA256" -> fileSHA256Hex[paVeCachePath],
+      "ScalarMasterCache" -> scalarMasterCachePath,
+      "ScalarMasterCacheSHA256" ->
+        fileSHA256Hex[scalarMasterCachePath]
+|>
+  ];
+  mathematicalPayloadBefore = KeyDrop[
+    payload,
+    migrationMetadataKeys
+  ];
+  migratedPayload = Join[
+    payload,
+    <|
+      "Program" -> programPath,
+      "ProgramSHA256" -> programSHA256,
+      "MigratedFromProgramSHA256" ->
+        migrationSourceProgramSHA256,
+      "MigrationSourceCacheSHA256" -> diskSHA256Before,
+      "OriginalAcceptedProgramSHA256" ->
+        acceptedLegacyVirtualProgramSHA256,
+      "OriginalAcceptedCacheSHA256" -> acceptedDiskSHA256
+    |>,
+    dependencyMetadataUpdates
+  ];
+  writeAtomic[migratedPayload, cache];
+  reloadedPayload = Quiet@Check[Get[cache], $Failed];
+  diskSHA256After = fileSHA256Hex[cache];
+  dependencyMetadataGate = TrueQ[
+    expectedType =!= "virtual Laurent" || (
+      reloadedPayload["PaVeCache"] === paVeCachePath &&
+        reloadedPayload["PaVeCacheSHA256"] ===
+          fileSHA256Hex[paVeCachePath] &&
+        reloadedPayload["ScalarMasterCache"] === scalarMasterCachePath &&
+        reloadedPayload["ScalarMasterCacheSHA256"] ===
+          fileSHA256Hex[scalarMasterCachePath]
+    )
+  ];
+  assert[
+    AssociationQ[reloadedPayload] &&
+      reloadedPayload["ProgramSHA256"] === programSHA256 &&
+      reloadedPayload["MigratedFromProgramSHA256"] ===
+        migrationSourceProgramSHA256 &&
+      reloadedPayload["MigrationSourceCacheSHA256"] ===
+        diskSHA256Before &&
+      reloadedPayload["OriginalAcceptedProgramSHA256"] ===
+        acceptedLegacyVirtualProgramSHA256 &&
+      reloadedPayload["OriginalAcceptedCacheSHA256"] ===
+        acceptedDiskSHA256 &&
+      dependencyMetadataGate &&
+      SameQ[
+        KeyDrop[reloadedPayload, migrationMetadataKeys],
+        mathematicalPayloadBefore
+      ],
+    "The virtual cache migration changed mathematical content for " <>
+      cacheName <> "."
+  ];
+  AssociateTo[
+    virtualCacheMigrationRecords,
+    cacheName -> <|
+      "Migrated" -> True,
+      "CacheType" -> expectedType,
+      "SourceProgramSHA256" -> migrationSourceProgramSHA256,
+      "SourceCacheSHA256" -> diskSHA256Before,
+      "OriginalAcceptedProgramSHA256" ->
+        acceptedLegacyVirtualProgramSHA256,
+      "OriginalAcceptedCacheSHA256" -> acceptedDiskSHA256,
+      "MigratedCacheSHA256" -> diskSHA256After,
+      "MathematicalPayloadUnchanged" -> True,
+      "DependencyMetadataRefreshed" ->
+        TrueQ[expectedType === "virtual Laurent" && dependencyMetadataGate]
+    |>
+  ];
+  Print[
+    "S10_VIRTUAL_CACHE_MIGRATED: cache=", cacheName,
+    " sourceSHA256=", diskSHA256Before,
+    " migratedSHA256=", diskSHA256After
+  ];
+  True
+];
 
-validIndependentCacheStageVersionQ[version_] :=
-  MemberQ[{stageVersion, independentLegacyStageVersion}, version];
-
-validLaurentInputHashQ[projector_String, hash_, currentHash_] := TrueQ[
-  hash === currentHash ||
-    (projector === "Pg" && hash === preMemoryCorrectionPgInputHash) ||
-    (projector === "PPP" && hash === preMemoryCorrectionPPPInputHash) ||
-    (projector === "Pg" && hash === preStreamingCorrectionPgInputHash) ||
-    (projector === "PPP" && hash === preStreamingCorrectionPPPInputHash) ||
-    (projector === "Pg" && hash === preEndpointParallelPgInputHash) ||
-    (projector === "PPP" && hash === preEndpointParallelPPPInputHash)
+migrateAcceptedEndpointCacheMetadata[
+    projector_String, cache_String, standardTermCount_Integer,
+    groups_List, groupedPositions_List
+  ] := Module[
+  {
+    acceptedDiskSHA256, diskSHA256Before, payload, groupSourceIndices,
+    expectedAbsorbedCount, methods, migrationMetadataKeys,
+    mathematicalPayloadBefore, migratedPayload, reloadedPayload,
+    diskSHA256After
+  },
+  If[! FileExistsQ[cache], Return[False]];
+  payload = Quiet@Check[Get[cache], $Failed];
+  assert[AssociationQ[payload],
+    "The existing endpoint cache for " <> projector <> " is unreadable."];
+  If[Lookup[payload, "ProgramSHA256", Missing[]] === programSHA256,
+    Return[False]
+  ];
+  acceptedDiskSHA256 = Lookup[
+    acceptedEndpointMetadataCorrectionCacheSHA256ByProjector,
+    projector,
+    Missing["NoAcceptedEndpointMetadataCorrectionCache"]
+  ];
+  diskSHA256Before = fileSHA256Hex[cache];
+  groupSourceIndices = Lookup[groups, "SourceIndices", Missing[]];
+  assert[
+    ListQ[groupSourceIndices] &&
+      AllTrue[groupSourceIndices, ListQ] &&
+      Length[groupSourceIndices] === Length[groups],
+    projector <> " endpoint groups lack exact source-index lists."
+  ];
+  expectedAbsorbedCount =
+    Total[Length /@ groupSourceIndices] - Length[groups];
+  methods = Lookup[payload, "Methods", Missing[]];
+  assert[
+    ! MissingQ[acceptedDiskSHA256] &&
+      diskSHA256Before === acceptedDiskSHA256 &&
+      Lookup[payload, "ProgramSHA256", Missing[]] ===
+        acceptedEndpointMetadataCorrectionProgramSHA256 &&
+      Lookup[payload, "CacheVersion", Missing[]] === endpointCacheVersion &&
+      Lookup[payload, "StageVersion", Missing[]] === stageVersion &&
+      Lookup[payload, "SourceS09SHA256", Missing[]] === s09SHA256 &&
+      Lookup[payload, "SourceS08SHA256", Missing[]] === s08SHA256 &&
+      Lookup[payload, "SourceS07SHA256", Missing[]] === s07SHA256 &&
+      Lookup[payload, "PaperSHA256", Missing[]] === referencePDFSHA256 &&
+      Lookup[payload, "Projector", Missing[]] === projector &&
+      Lookup[payload, "SourceExpansionSHA256", Missing[]] ===
+        expansionCacheSHA256[projector] &&
+      Lookup[payload, "CoupledLogEndpointGroups", Missing[]] === groups &&
+      TrueQ[Lookup[payload, "GroupedBeforeIndividualLaurent", False]] &&
+      TrueQ[Lookup[payload, "CoupledLogEndpointRepairApplied", False]] &&
+      AssociationQ[Lookup[
+        payload, "PreIndividualGroupAnswers", Missing[]
+      ]] &&
+      Sort[Keys[payload["PreIndividualGroupAnswers"]]] ===
+        groupedPositions &&
+      ListQ[Lookup[payload, "CoupledGroupCertificates", Missing[]]] &&
+      Length[payload["CoupledGroupCertificates"]] === Length[groups] &&
+      ListQ[methods] && Length[methods] === standardTermCount &&
+      Lookup[payload, "CompletedStandardTermCount", Missing[]] ===
+        standardTermCount &&
+      Length[Lookup[payload, "PoleCoefficients", {}]] ===
+        standardTermCount &&
+      Length[Lookup[payload, "FiniteCoefficients", {}]] ===
+        standardTermCount &&
+      Length[Lookup[payload, "RequiredPoleSubtraction", {}]] ===
+        standardTermCount &&
+      Count[methods, "physical-branch grouped Laurent"] ===
+        Length[groups] &&
+      Count[
+        methods,
+        "absorbed into pre-individual physical-branch group"
+      ] === expectedAbsorbedCount,
+    "The endpoint cache for " <> projector <>
+      " does not match the exact accepted metadata-correction lineage."
+  ];
+  migrationMetadataKeys = {
+    "Program", "ProgramSHA256", "MigratedFromProgramSHA256",
+    "MigrationSourceCacheSHA256", "OriginalAcceptedProgramSHA256",
+    "OriginalAcceptedCacheSHA256"
+  };
+  mathematicalPayloadBefore = KeyDrop[payload, migrationMetadataKeys];
+  migratedPayload = Join[
+    payload,
+    <|
+      "Program" -> programPath,
+      "ProgramSHA256" -> programSHA256,
+      "MigratedFromProgramSHA256" ->
+        acceptedEndpointMetadataCorrectionProgramSHA256,
+      "MigrationSourceCacheSHA256" -> diskSHA256Before,
+      "OriginalAcceptedProgramSHA256" ->
+        acceptedEndpointMetadataCorrectionProgramSHA256,
+      "OriginalAcceptedCacheSHA256" -> acceptedDiskSHA256
+    |>
+  ];
+  writeAtomic[migratedPayload, cache];
+  reloadedPayload = Quiet@Check[Get[cache], $Failed];
+  diskSHA256After = fileSHA256Hex[cache];
+  assert[
+    AssociationQ[reloadedPayload] &&
+      reloadedPayload["Program"] === programPath &&
+      reloadedPayload["ProgramSHA256"] === programSHA256 &&
+      reloadedPayload["MigratedFromProgramSHA256"] ===
+        acceptedEndpointMetadataCorrectionProgramSHA256 &&
+      reloadedPayload["MigrationSourceCacheSHA256"] ===
+        diskSHA256Before &&
+      reloadedPayload["OriginalAcceptedProgramSHA256"] ===
+        acceptedEndpointMetadataCorrectionProgramSHA256 &&
+      reloadedPayload["OriginalAcceptedCacheSHA256"] ===
+        acceptedDiskSHA256 &&
+      SameQ[
+        KeyDrop[reloadedPayload, migrationMetadataKeys],
+        mathematicalPayloadBefore
+      ],
+    "The endpoint cache metadata migration changed mathematical content " <>
+      "for " <> projector <> "."
+  ];
+  AssociateTo[
+    endpointCacheMetadataMigrationRecords,
+    projector -> <|
+      "Migrated" -> True,
+      "Projector" -> projector,
+      "SourceProgramSHA256" ->
+        acceptedEndpointMetadataCorrectionProgramSHA256,
+      "SourceCacheSHA256" -> diskSHA256Before,
+      "OriginalAcceptedProgramSHA256" ->
+        acceptedEndpointMetadataCorrectionProgramSHA256,
+      "OriginalAcceptedCacheSHA256" -> acceptedDiskSHA256,
+      "MigratedCacheSHA256" -> diskSHA256After,
+      "MathematicalPayloadUnchanged" -> True
+    |>
+  ];
+  Print[
+    "S10_ENDPOINT_CACHE_METADATA_MIGRATED: projector=", projector,
+    " sourceSHA256=", diskSHA256Before,
+    " migratedSHA256=", diskSHA256After
+  ];
+  True
 ];
 
 Print["S10_STAGE: loading and validating s09, s08, and s07 inputs"];
 assert[FileExistsQ[s09Path], "s09_result does not exist."];
 s09 = Check[Get[s09Path], $Failed];
 assert[AssociationQ[s09], "s09_result did not load as an Association."];
-assert[
-  s09["Status"] === "CompleteWithSymbolicVirtual" &&
-    s09["Stage"] === "HqgS09-v3" &&
-    s09["Channel"] === "Hqg only",
+s09SHA256 = fileSHA256Hex[s09Path];
+s09IdentityGate = TrueQ[
+  s09["Status"] === "Complete" &&
+    s09["Stage"] === "HqgS09-v5" &&
+    s09["ResultSchemaVersion"] === 2 &&
+    s09["Channel"] === "Hqg only" &&
+    s09SHA256 === acceptedS09ResultSHA256
+];
+assert[s09IdentityGate,
   "s09_result is not the validated Hqg S09 artifact."
 ];
-assert[AllTrue[Values[s09["Checks"]], TrueQ],
+s09ChecksGate = AssociationQ[s09["Checks"]] &&
+  AllTrue[Values[s09["Checks"]], TrueQ];
+assert[s09ChecksGate,
   "At least one s09 validation check is not True."];
-assert[
-  FileExistsQ[s09["Program"]] &&
-    s09["ProgramSHA256"] === FileHash[s09["Program"], "SHA256"] &&
-    FileExistsQ[s09["SourceResult"]] &&
-    s09["SourceResultSHA256"] ===
-      FileHash[s09["SourceResult"], "SHA256"],
-  "An S09 program/source binding is stale."
+s09ProgramRecordedPath = s09["ProgramPath"];
+s09ProgramPath = resolveRecordedOrColocated[s09ProgramRecordedPath];
+s09ProgramSHA256 = s09["ProgramSHA256"];
+s09ProgramGate = TrueQ[
+  FileExistsQ[s09ProgramPath] &&
+    s09ProgramSHA256 === acceptedS09ProgramSHA256 &&
+    s09ProgramSHA256 === fileSHA256Hex[s09ProgramPath]
 ];
-s09SHA256 = FileHash[s09Path, "SHA256"];
+assert[s09ProgramGate, "The accepted S09 source binding is stale."];
 
-s08Path = s09["SourceResult"];
+s08RecordedPath = s09["InputProvenance", "S08ResultPath"];
+s08Path = resolveRecordedOrColocated[s08RecordedPath];
 assert[FileExistsQ[s08Path], "The s08 source result recorded by s09 is absent."];
 s08 = Check[Get[s08Path], $Failed];
-assert[
+s08SHA256 = fileSHA256Hex[s08Path];
+s08IdentityGate = TrueQ[
   AssociationQ[s08] && s08["Status"] === "Complete" &&
-    s08["Stage"] === "HqgS08-v4" && s08["Channel"] === "Hqg only",
+    s08["Stage"] === "HqgS08-v5" && s08["Channel"] === "Hqg only" &&
+    s08SHA256 === s09["InputProvenance", "S08ResultSHA256"]
+];
+assert[s08IdentityGate,
   "s08_result is absent, invalid, or incomplete."];
-assert[AllTrue[Values[s08["Checks"]], TrueQ],
+s08ChecksGate = AssociationQ[s08["Checks"]] &&
+  AllTrue[Values[s08["Checks"]], TrueQ];
+assert[s08ChecksGate,
   "At least one s08 validation check is not True."];
-assert[
-  s08Path === s09["SourceResult"] &&
-    FileHash[s08Path, "SHA256"] === s09["SourceResultSHA256"] &&
-    FileExistsQ[s08["Program"]] &&
-    s08["ProgramSHA256"] === FileHash[s08["Program"], "SHA256"] &&
-    FileExistsQ[s08["SourceResult"]] &&
-    s08["SourceResultSHA256"] ===
-      FileHash[s08["SourceResult"], "SHA256"],
+s08ProgramRecordedPath = s09["InputProvenance", "S08SourcePath"];
+s08ProgramPath = resolveRecordedOrColocated[s08ProgramRecordedPath];
+s08ProgramSHA256 = s09["InputProvenance", "S08SourceSHA256"];
+s08ProgramGate = TrueQ[
+  s08["Program"] === s08ProgramRecordedPath &&
+    s08["ProgramSHA256Hex"] === s08ProgramSHA256 &&
+    FileExistsQ[s08ProgramPath] &&
+    fileSHA256Hex[s08ProgramPath] === s08ProgramSHA256
+];
+assert[s08ProgramGate,
   "An S08 source/program binding is stale."
 ];
-s08SHA256 = FileHash[s08Path, "SHA256"];
 
-s07Path = s08["SourceResult"];
+s07RecordedPath = s09["InputProvenance", "S07ResultPath"];
+s07Path = resolveRecordedOrColocated[s07RecordedPath];
 assert[FileExistsQ[s07Path], "The s07 source result recorded by s08 is absent."];
 s07 = Check[Get[s07Path], $Failed];
-assert[
+s07SHA256 = fileSHA256Hex[s07Path];
+s07IdentityGate = TrueQ[
   AssociationQ[s07] && s07["Status"] === "Complete" &&
-    s07["Stage"] === "HqgS07-v3" && s07["Channel"] === "Hqg only",
+    s07["Stage"] === "HqgS07-v5" && s07["Channel"] === "Hqg only" &&
+    s07SHA256 === s09["InputProvenance", "S07ResultSHA256"] &&
+    s08["SourceResult"] === s07RecordedPath &&
+    s08["SourceResultSHA256Hex"] === s07SHA256
+];
+assert[s07IdentityGate,
   "s07_result is absent, invalid, or incomplete."];
-assert[AllTrue[Values[s07["Checks"]], TrueQ],
+s07ChecksGate = AssociationQ[s07["Checks"]] &&
+  AllTrue[Values[s07["Checks"]], TrueQ];
+assert[s07ChecksGate,
   "At least one s07 validation check is not True."];
-assert[
-  s07Path === s08["SourceResult"] &&
-    FileHash[s07Path, "SHA256"] === s08["SourceResultSHA256"] &&
-    FileExistsQ[s07["Program"]] &&
-    s07["ProgramSHA256"] === FileHash[s07["Program"], "SHA256"],
+s07ProgramRecordedPath = s09["InputProvenance", "S07SourcePath"];
+s07ProgramPath = resolveRecordedOrColocated[s07ProgramRecordedPath];
+s07ProgramSHA256 = s09["InputProvenance", "S07SourceSHA256"];
+s07ProgramGate = TrueQ[
+  s07["Program"] === s07ProgramRecordedPath &&
+    s07["ProgramSHA256Hex"] === s07ProgramSHA256 &&
+    FileExistsQ[s07ProgramPath] &&
+    fileSHA256Hex[s07ProgramPath] === s07ProgramSHA256 &&
+    s08["SourceProgram"] === s07ProgramRecordedPath &&
+    s08["SourceProgramSHA256Hex"] === s07ProgramSHA256
+];
+assert[s07ProgramGate,
   "An S07 source/program binding is stale."
 ];
-s07SHA256 = FileHash[s07Path, "SHA256"];
-assert[
-  FileExistsQ[paperPath] &&
-    s09["ReferencePDFSHA256"] === FileHash[paperPath, "SHA256"] &&
-    s08["ReferencePDFSHA256"] === s09["ReferencePDFSHA256"] &&
-    s07["ReferencePDFSHA256"] === s09["ReferencePDFSHA256"],
+assert[FileExistsQ[paperPath], "The reference paper is absent."];
+recordedPaperPath = s09["PaperReference", "Path"];
+referencePDFSHA256 = fileSHA256Hex[paperPath];
+paperBindingGate = TrueQ[
+  FileExistsQ[paperPath] && referencePDFSHA256 === acceptedPaperSHA256 &&
+    StringQ[recordedPaperPath] &&
+    FileNameTake[recordedPaperPath] === FileNameTake[paperPath] &&
+    s09["PaperReference", "SHA256"] === referencePDFSHA256 &&
+    IntegerString[s08["ReferencePDFSHA256"], 16, 64] ===
+      referencePDFSHA256 &&
+    IntegerString[s07["ReferencePDFSHA256"], 16, 64] ===
+      referencePDFSHA256
+];
+assert[paperBindingGate,
   "The S07-S09 paper binding is stale or inconsistent."
 ];
-assert[
-  s09["BigTMDConvention", "ChannelNumber"] === 3 &&
-    s09["BigTMDConvention", "ChargeCase"] === "A only" &&
-    s09["BigTMDProjectorMapping", "Pg"] === "NLO.Pg.fchn3A" &&
-    s09["BigTMDProjectorMapping", "PPP"] === "NLO.Ppp.fchn3A" &&
-    s09["ElectricChargeNormalization", "ReferenceCharge"] === -1/3 &&
-    s09["ElectricChargeNormalization", "AmplitudeStripFactor"] === -3 &&
-    s09[
-      "ElectricChargeNormalization", "BigTMDLuminosityAppliedDownstream"
+chargeBookkeeping = s09["Bookkeeping", "Charge"];
+electricChargeNormalization =
+  chargeBookkeeping["ElectricChargeNormalization"];
+bigTMDConvention = chargeBookkeeping["BigTMDConvention"];
+bigTMDProjectorMapping = chargeBookkeeping["BigTMDProjectorMapping"];
+fragmentingParton = chargeBookkeeping["FragmentingParton"];
+initialStateBookkeeping = s09["Bookkeeping", "InitialState"];
+dimensionalBookkeeping = s09["Bookkeeping", "Dimensional"];
+chargeBookkeepingGate = TrueQ[
+  bigTMDConvention["ChannelNumber"] === 3 &&
+    bigTMDConvention["ChargeCase"] === "A only" &&
+    bigTMDProjectorMapping["Pg"] === "NLO.Pg.fchn3A" &&
+    bigTMDProjectorMapping["PPP"] === "NLO.Ppp.fchn3A" &&
+    AssociationQ[electricChargeNormalization] &&
+    electricChargeNormalization["ReferenceCharge"] ===
+      Lookup[
+        electricChargeNormalization["ModelChargeCoefficients"],
+        "F" <> ToString[
+          electricChargeNormalization["FeynArtsReferenceClass"]
+        ],
+        Missing["Absent"]
+      ] &&
+    Together[
+      electricChargeNormalization["ReferenceCharge"] *
+        electricChargeNormalization["AmplitudeStripFactor"]
+    ] === 1 &&
+    electricChargeNormalization[
+      "BigTMDLuminosityAppliedDownstream"
     ] === "Sum_q e_q^2 f_q D_g" &&
-    s09["FragmentingParton"] === "gluon g(k1)",
+    fragmentingParton === "gluon g(k1)" &&
+    electricChargeNormalization === s08["ElectricChargeNormalization"] &&
+    electricChargeNormalization === s07["ElectricChargeNormalization"]
+];
+assert[chargeBookkeepingGate,
   "The S09 BigTMD/charge/fragmentation convention is invalid."
 ];
-electricChargeNormalization = s09["ElectricChargeNormalization"];
-s09ProgramSHA256 = s09["ProgramSHA256"];
-bigTMDConvention = s09["BigTMDConvention"];
-bigTMDProjectorMapping = s09["BigTMDProjectorMapping"];
-referencePDFSHA256 = s09["ReferencePDFSHA256"];
-fragmentingParton = s09["FragmentingParton"];
 
 virtualInput = s07[
   "ScalarProjections", "NLOVirtualInterference_OAlphaS2_Symbolic"
 ];
 loInput = s07["ScalarProjections", "LO_OAlphaS"];
-loReference = s09["LOReferenceKernels"];
+loReference = s08[
+  "XiS23ConvolutionKernels", "TwoBody", "LO_OAlphaS"
+];
 changeOfVariables = s08["XiS23ChangeOfVariables"];
 partonicRules = changeOfVariables["PartonicKinematicRules"];
 xiS23Jacobian =
   changeOfVariables["Jacobian_dXi_dZeta_to_dXi_dS23"];
 s23UpperB = changeOfVariables["S23UpperB"];
-expansionCachePaths = s09[
-  "AppendixF", "ExpandedKernelCachesByProjector"
+recordedExpansionCachePaths = s09["ExpandedKernelCaches", "Paths"];
+expansionCachePaths = AssociationMap[
+  resolveRecordedOrColocated[recordedExpansionCachePaths[#]] &,
+  projectors
 ];
+recordedExpansionCacheSHA256 = s09["ExpandedKernelCaches", "SHA256"];
 assert[
-  AssociationQ[expansionCachePaths] &&
+  AssociationQ[recordedExpansionCachePaths] &&
+    Sort[Keys[recordedExpansionCachePaths]] === Sort[projectors] &&
+    AssociationQ[expansionCachePaths] &&
     Sort[Keys[expansionCachePaths]] === Sort[projectors] &&
     AllTrue[Values[expansionCachePaths], FileExistsQ],
   "S09 does not provide both expansion caches."
 ];
 expansionCacheSHA256 = AssociationMap[
-  FileHash[expansionCachePaths[#], "SHA256"] &,
+  fileSHA256Hex[expansionCachePaths[#]] &,
   projectors
 ];
-endpointPlaceholderCount = s09[
-  "EndpointExpansion", "SymbolicPlaceholderCount"
+expansionCacheDiskHashGate = TrueQ[
+  expansionCacheSHA256 === recordedExpansionCacheSHA256
 ];
-assert[endpointPlaceholderCount === 2,
-  "Expected exactly two S09 endpoint placeholders."];
-hardKernelWeight = s09["HardKernelWeight", "AppliedMultiplicativeWeight"];
+assert[expansionCacheDiskHashGate,
+  "An S09 expansion-cache disk hash is stale."];
+formalEndpointDistributions =
+  s09["EndpointExpansion", "FormalDistributionByProjector"];
+endpointPlaceholderCountsByProjector = AssociationMap[
+  Count[formalEndpointDistributions[#], _S09EndpointValue, Infinity] &,
+  projectors
+];
+endpointPlaceholderCount = Total[Values[endpointPlaceholderCountsByProjector]];
+assert[
+  Sort[Keys[formalEndpointDistributions]] === Sort[projectors] &&
+    AllTrue[Values[endpointPlaceholderCountsByProjector], TrueQ[# > 0] &],
+  "The accepted S09 formal endpoint handoff is incomplete."
+];
+hardKernelWeight =
+  s09["Bookkeeping", "AdditionalMultiplicativeWeightAtS09"];
 assert[hardKernelWeight === 1,
   "The S09 Hqg hard-kernel weight is not unity."];
 flavorChargeWeight = hardKernelWeight;
+expandedKernelCacheStageVersion =
+  s09["ExpandedKernelCaches", "StageVersion"];
+measuredScalePowersByProjector =
+  s09["Bookkeeping", "MeasuredScalePowersByProjector"];
+loAndVirtualReferenceExpressionSHA256 =
+  s09["Bookkeeping", "LOAndVirtualReferenceExpressionSHA256"];
+physicalFlavorChargeWeightAppliedAtS09 =
+  s09["Bookkeeping", "PhysicalFlavorChargeWeightAppliedAtS09"];
 
 assert[Sort[Keys[virtualInput]] === Sort[projectors],
   "The s07 virtual input lacks Pg or PPP."];
 assert[Sort[Keys[loInput]] === Sort[projectors],
   "The s07 LO input lacks Pg or PPP."];
 assert[Sort[Keys[loReference]] === Sort[projectors],
-  "The s09 LO reference lacks Pg or PPP."];
+  "The accepted S08 transformed LO reference lacks Pg or PPP."];
+s07InputContentSHA256 = <|
+  "LO" -> Hash[loInput, "SHA256"],
+  "VirtualInterference" -> Hash[virtualInput, "SHA256"]
+|>;
+s07InputContentHashGate = TrueQ[
+  s07InputContentSHA256["LO"] ===
+      s08["InputContentSHA256", "LO"] &&
+    s07InputContentSHA256["VirtualInterference"] ===
+      s08["InputContentSHA256", "VirtualInterference"]
+];
+twoBodyReferenceExpressionSHA256 = Association@Map[
+  Function[sector,
+    sector -> AssociationMap[
+      Hash[
+        s08["TwoBodyPhaseSpaceIntegrated", sector, #],
+        "SHA256"
+      ] &,
+      projectors
+    ]
+  ],
+  {"LO_OAlphaS", "NLOVirtualInterference_OAlphaS2_Symbolic"}
+];
+s09TwoBodyReferenceHashGate = TrueQ[
+  twoBodyReferenceExpressionSHA256 ===
+    s09["Bookkeeping", "LOAndVirtualReferenceExpressionSHA256"]
+];
+loVirtualReferenceHashGate = TrueQ[
+  s07InputContentHashGate && s09TwoBodyReferenceHashGate
+];
+assert[loVirtualReferenceHashGate,
+  "The accepted raw S07 inputs or S08 two-body references do not match " <>
+    "their S08/S09 content ledgers."];
+
+twoBodyKinematicRecord = s07["KinematicConventions", "TwoBody"];
+twoBodyKinematicRecordGate = TrueQ[
+  AssociationQ[twoBodyKinematicRecord] &&
+    twoBodyKinematicRecord["SerializationSchema"] ===
+      "HqgS01Kinematics-v2" &&
+    ListQ[twoBodyKinematicRecord["MassShellAssignments"]] &&
+    ListQ[twoBodyKinematicRecord["ScalarProductAssignments"]] &&
+    AllTrue[
+      Join[
+        twoBodyKinematicRecord["MassShellInstallationResiduals"],
+        twoBodyKinematicRecord["ScalarProductInstallationResiduals"],
+        twoBodyKinematicRecord["EquationResiduals"]
+      ],
+      SameQ[#, 0] &
+    ] &&
+    FreeQ[twoBodyKinematicRecord, _Real | _Missing]
+];
+assert[twoBodyKinematicRecordGate,
+  "S07 does not preserve the accepted inert two-body kinematic record."];
+
+installMassShellAssignments[assignments_List] := Scan[
+  Function[entry,
+    With[
+      {
+        momentum = Lookup[entry, "Momentum"],
+        value = Lookup[entry, "MassSquared"]
+      },
+      FeynCalc`SPD[momentum, momentum] = value
+    ]
+  ],
+  assignments
+];
+
+installScalarProductAssignments[assignments_List] := Scan[
+  Function[entry,
+    With[
+      {
+        momentum1 = Lookup[entry, "Momentum1"],
+        momentum2 = Lookup[entry, "Momentum2"],
+        value = Lookup[entry, "Value"]
+      },
+      FeynCalc`SPD[momentum1, momentum2] = value
+    ]
+  ],
+  assignments
+];
+
+installKinematicRecord[record_Association] := Module[
+  {massResiduals, scalarResiduals, audit},
+  FeynCalc`FCClearScalarProducts[];
+  installMassShellAssignments[record["MassShellAssignments"]];
+  installScalarProductAssignments[record["ScalarProductAssignments"]];
+  massResiduals = Together[
+      FeynCalc`SPD[Lookup[#, "Momentum"], Lookup[#, "Momentum"]] -
+        Lookup[#, "MassSquared"]
+    ] & /@ record["MassShellAssignments"];
+  scalarResiduals = Together[
+      FeynCalc`SPD[Lookup[#, "Momentum1"], Lookup[#, "Momentum2"]] -
+        Lookup[#, "Value"]
+    ] & /@ record["ScalarProductAssignments"];
+  audit = <|
+    "SerializationSchema" -> record["SerializationSchema"],
+    "MassShellResiduals" -> massResiduals,
+    "ScalarProductResiduals" -> scalarResiduals,
+    "InstalledExactly" -> AllTrue[
+      Join[massResiduals, scalarResiduals], SameQ[#, 0] &
+    ]
+  |>;
+  assert[TrueQ[audit["InstalledExactly"]],
+    "The inherited two-body kinematic record did not install exactly."];
+  audit
+];
 
 (*
   Remove all saved symbolic QCD counterterm coefficients before evaluating the
@@ -449,48 +1129,216 @@ bareVirtualSymbolicD = Map[(# /. countertermZeroRules) &, virtualInput];
 bareVirtualDimensional =
   Map[(# /. D -> 4 - 2 epsilon) &, bareVirtualSymbolicD];
 
-assert[And @@ (! FreeQ[
+inheritedCountertermPresenceGate = And @@ (! FreeQ[
       #, dZGG1 | dZgs1 | _dZq1
-    ] & /@ Values[virtualDimensional]),
+    ] & /@ Values[virtualDimensional]);
+assert[inheritedCountertermPresenceGate,
   "The inherited virtual pair does not contain the expected QCD counterterms."];
-assert[And @@ (FreeQ[
+bareCountertermRemovalGate = And @@ (FreeQ[
       #, dZGG1 | dZgs1 | _dZq1
-    ] & /@ Values[bareVirtualDimensional]),
+    ] & /@ Values[bareVirtualDimensional]);
+assert[bareCountertermRemovalGate,
   "A symbolic QCD counterterm survived the bare-loop split."];
 
 uniquePaVe = DeleteDuplicates@Cases[
   Values[bareVirtualDimensional], _FeynCalc`PaVe, Infinity
 ];
-assert[Length[uniquePaVe] === 97,
-  "Expected 97 unique virtual PaVe functions, found " <>
-    ToString[Length[uniquePaVe]] <> "."];
 uniqueScalarMasters = DeleteDuplicates@Cases[
   Values[bareVirtualDimensional],
   _FeynCalc`B0 | _FeynCalc`C0 | _FeynCalc`D0,
   Infinity
 ];
-assert[Length[uniqueScalarMasters] === 4 &&
-    Count[uniqueScalarMasters, _FeynCalc`B0] === 2 &&
-    Count[uniqueScalarMasters, _FeynCalc`C0] === 2 &&
-    Count[uniqueScalarMasters, _FeynCalc`D0] === 0,
-  "Expected exactly two B0 and two C0 virtual scalar masters."];
-expectedScalarMasters = {
-  FeynCalc`C0[0, 0, sHat, 0, 0, 0],
-  FeynCalc`B0[sHat, 0, 0],
-  FeynCalc`B0[-Q2 - sHat - tHat, 0, 0],
-  FeynCalc`C0[0, 0, -Q2 - sHat - tHat, 0, 0, 0]
-};
 assert[
-  Sort[uniqueScalarMasters] === Sort[expectedScalarMasters],
-  "The Hqg direct scalar-master basis differs from its audited basis."
+  Length[uniquePaVe] > 0 && DuplicateFreeQ[uniquePaVe] &&
+    Length[uniqueScalarMasters] > 0 &&
+    DuplicateFreeQ[uniqueScalarMasters] &&
+    AllTrue[
+      uniqueScalarMasters,
+      MatchQ[#, _FeynCalc`B0 | _FeynCalc`C0 | _FeynCalc`D0] &
+    ],
+  "The runtime virtual-integral inventory is empty or malformed."
 ];
 virtualIntegralBasis = <|
   "PaVeCount" -> Length[uniquePaVe],
+  "PaVeInventorySHA256" -> Hash[uniquePaVe, "SHA256"],
   "B0Count" -> Count[uniqueScalarMasters, _FeynCalc`B0],
   "C0Count" -> Count[uniqueScalarMasters, _FeynCalc`C0],
   "D0Count" -> Count[uniqueScalarMasters, _FeynCalc`D0],
-  "DirectScalarMasters" -> uniqueScalarMasters
+  "DirectScalarMasterCount" -> Length[uniqueScalarMasters],
+  "DirectScalarMasters" -> uniqueScalarMasters,
+  "DirectScalarMasterInventorySHA256" ->
+    Hash[uniqueScalarMasters, "SHA256"]
 |>;
+virtualIntegralInventoryGate = TrueQ[
+  virtualIntegralBasis["PaVeCount"] === Length[uniquePaVe] &&
+    Total[Lookup[
+      virtualIntegralBasis,
+      {"B0Count", "C0Count", "D0Count"}
+    ]] === virtualIntegralBasis["DirectScalarMasterCount"] &&
+    virtualIntegralBasis["PaVeInventorySHA256"] ===
+      Hash[uniquePaVe, "SHA256"] &&
+    virtualIntegralBasis["DirectScalarMasterInventorySHA256"] ===
+      Hash[uniqueScalarMasters, "SHA256"]
+];
+assert[virtualIntegralInventoryGate,
+  "The runtime virtual-integral inventory failed its content gates."];
+Print["S10_RUNTIME_VIRTUAL_INVENTORY=", InputForm[virtualIntegralBasis]];
+
+expansionCacheValidation = <||>;
+expansionCacheSummaries = <||>;
+loadExpansion[projector_String] := Module[
+  {
+    payload, path, metadataChecks, metadataGate, expressionGate,
+    expression
+  },
+  path = expansionCachePaths[projector];
+  Print["S10_STAGE: loading accepted S09 cache for " <> projector];
+  assert[
+    fileSHA256Hex[path] === recordedExpansionCacheSHA256[projector],
+    projector <> " S09 cache no longer has its accepted disk identity."
+  ];
+  payload = Quiet@Check[Get[path], $Failed];
+  assert[AssociationQ[payload],
+    projector <> " S09 expansion cache is not an Association."];
+  metadataChecks = <|
+    "Status" -> TrueQ[payload["Status"] === "Complete"],
+    "Stage" -> TrueQ[
+      payload["Stage"] === expandedKernelCacheStageVersion
+    ],
+    "ResultSchemaVersion" -> TrueQ[
+      payload["ResultSchemaVersion"] === 2
+    ],
+    "Channel" -> TrueQ[payload["Channel"] === "Hqg only"],
+    "TensorRole" -> TrueQ[payload["TensorRole"] === "RealQG"],
+    "Projector" -> TrueQ[payload["Projector"] === projector],
+    "ProgramPath" -> TrueQ[
+      payload["ProgramPath"] === s09ProgramRecordedPath
+    ],
+    "ProgramSHA256" -> TrueQ[
+      payload["ProgramSHA256"] === s09ProgramSHA256
+    ],
+    "PaperPath" -> TrueQ[payload["PaperPath"] === recordedPaperPath],
+    "PaperSHA256" -> TrueQ[
+      payload["PaperSHA256"] === referencePDFSHA256
+    ],
+    "S08SourcePath" -> TrueQ[
+      payload["S08SourcePath"] === s08ProgramRecordedPath
+    ],
+    "S08SourceSHA256" -> TrueQ[
+      payload["S08SourceSHA256"] === s08ProgramSHA256
+    ],
+    "S08ResultPath" -> TrueQ[
+      payload["S08ResultPath"] === s08RecordedPath
+    ],
+    "S08ResultSHA256" -> TrueQ[
+      payload["S08ResultSHA256"] === s08SHA256
+    ],
+    "AdditionalMultiplicativeWeight" -> TrueQ[
+      payload["AdditionalMultiplicativeWeight"] === hardKernelWeight
+    ],
+    "ScalePowers" -> TrueQ[
+      payload["ScalePowers"] ===
+        measuredScalePowersByProjector[projector]
+    ],
+    "ChargeBookkeeping" -> TrueQ[
+      payload["ChargeBookkeeping"] === chargeBookkeeping
+    ],
+    "InitialStateBookkeeping" -> TrueQ[
+      payload["InitialStateBookkeeping"] === initialStateBookkeeping
+    ],
+    "DimensionalBookkeeping" -> TrueQ[
+      payload["DimensionalBookkeeping"] === dimensionalBookkeeping
+    ],
+    "TwoBodyReferenceHashes" -> TrueQ[
+      payload["TwoBodyReferenceHashes"] ===
+        loAndVirtualReferenceExpressionSHA256
+    ],
+    "ExpandedLeafCount" -> TrueQ[
+      IntegerQ[payload["ExpandedLeafCount"]] &&
+        payload["ExpandedLeafCount"] > 0
+    ],
+    "ExpandedByteCount" -> TrueQ[
+      IntegerQ[payload["ExpandedByteCount"]] &&
+        payload["ExpandedByteCount"] > 0
+    ]
+  |>;
+  metadataGate = AllTrue[Values[metadataChecks], TrueQ];
+  If[! metadataGate,
+    Print[
+      "S10_S09_METADATA_FALSE_KEYS_" <> projector <> "=",
+      InputForm[Keys@Select[metadataChecks, ! TrueQ[#] &]]
+    ]
+  ];
+  assert[metadataGate,
+    projector <> " S09 expansion cache has invalid current provenance."];
+  expression = Lookup[payload, "Expression", Missing["Absent"]];
+  expressionGate = TrueQ[
+    ! MissingQ[expression] && expression =!= 0 && expression =!= $Failed
+  ];
+  assert[expressionGate,
+    projector <> " S09 expansion cache lacks a valid expression."];
+  AssociateTo[expansionCacheValidation, projector ->
+    <|"Metadata" -> metadataGate, "ExpressionPresent" -> expressionGate|>];
+  AssociateTo[expansionCacheSummaries, projector -> <|
+    "ExpandedLeafCount" -> payload["ExpandedLeafCount"],
+    "ExpandedByteCount" -> payload["ExpandedByteCount"],
+    "DiskSHA256" -> recordedExpansionCacheSHA256[projector]
+  |>];
+  Clear[payload];
+  expression
+];
+
+If[preflightOnly,
+  preflightArtifactPathsBefore = Sort@FileNames[
+    FileNameJoin[{scriptDirectory, "s10_cache_*"}]
+  ];
+  preflightExpansionExpressions = AssociationMap[loadExpansion, projectors];
+  preflightExpansionShapeGate = TrueQ[
+    Sort[Keys[preflightExpansionExpressions]] === Sort[projectors] &&
+      AllTrue[Values[preflightExpansionExpressions], # =!= 0 &]
+  ];
+  Clear[preflightExpansionExpressions];
+  ClearSystemCache[];
+  preflightArtifactPathsAfter = Sort@FileNames[
+    FileNameJoin[{scriptDirectory, "s10_cache_*"}]
+  ];
+  preflightChecks = <|
+    "AcceptedS09IdentityAndChecksValidated" ->
+      (s09IdentityGate && s09ChecksGate && s09ProgramGate),
+    "AcceptedS08IdentityAndChecksValidated" ->
+      (s08IdentityGate && s08ChecksGate && s08ProgramGate),
+    "AcceptedS07IdentityAndChecksValidated" ->
+      (s07IdentityGate && s07ChecksGate && s07ProgramGate),
+    "PaperAndChargeBookkeepingValidated" ->
+      (paperBindingGate && chargeBookkeepingGate),
+    "LOAndVirtualReferenceHashesValidated" -> loVirtualReferenceHashGate,
+    "S09CacheDiskHashesValidated" -> expansionCacheDiskHashGate,
+    "BothS09CachePayloadsValidated" ->
+      AllTrue[Flatten[Values /@ Values[expansionCacheValidation]], TrueQ],
+    "RuntimeVirtualIntegralInventoryDerived" ->
+      virtualIntegralInventoryGate,
+    "FormalEndpointPlaceholderInventoryDerived" ->
+      (endpointPlaceholderCount ===
+        Total[Values[endpointPlaceholderCountsByProjector]]),
+    "BothExpansionExpressionsLoaded" -> preflightExpansionShapeGate,
+    "EndpointParallelBatchDeadlineConfigured" -> TrueQ[
+      IntegerQ[endpointParallelBatchTimeLimitSeconds] &&
+        endpointParallelBatchTimeLimitSeconds > 0 &&
+        endpointParallelBatchTimeoutCountByProjector ===
+          AssociationMap[0 &, projectors] &&
+        endpointSerialFallbackSourceIndices ===
+          AssociationMap[{} &, projectors]
+    ],
+    "NoS10CacheArtifactCreated" ->
+      (preflightArtifactPathsBefore === preflightArtifactPathsAfter),
+    "NoS10ResultCreated" -> ! FileExistsQ[resultPath]
+  |>;
+  assert[AllTrue[Values[preflightChecks], TrueQ],
+    "At least one Hqg S10 prefix-preflight check failed."];
+  Print["S10_PREFIX_PREFLIGHT_CHECKS=", InputForm[preflightChecks]];
+  Print["HQG_S10_V6_PREFIX_PREFLIGHT_OK"];
+  Quit[0]
+];
 
 evaluatePaVe[
     integral_, index_Integer, total_Integer, label_String
@@ -530,20 +1378,28 @@ evaluatePaVe[
   answer
 ];
 
+ruleCacheValidation = <||>;
 obtainPaVeRules[
     integrals_List, cache_String, version_Integer, label_String
   ] := Module[
-  {payload, cachedIntegrals = {}, values = {}, index, total},
+  {
+    payload, cachedIntegrals = {}, values = {}, index, total,
+    inventoryHash, reloadGate, finalCacheGate
+  },
   total = Length[integrals];
+  inventoryHash = Hash[integrals, "SHA256"];
   If[FileExistsQ[cache],
     Print["S10_STAGE: loading resumable Package-X cache"];
     payload = Check[Get[cache], $Failed];
     assert[AssociationQ[payload] &&
         payload["CacheVersion"] === version &&
-        validIndependentCacheStageVersionQ[payload["StageVersion"]] &&
+        payload["StageVersion"] === stageVersion &&
         payload["IntegralType"] === label &&
+        payload["IntegralInventorySHA256"] === inventoryHash &&
+        payload["SourceS09SHA256"] === s09SHA256 &&
+        payload["SourceS08SHA256"] === s08SHA256 &&
         payload["SourceS07SHA256"] === s07SHA256 &&
-        validPreCorrectionProgramSHA256Q[payload["ProgramSHA256"]],
+        payload["ProgramSHA256"] === programSHA256,
       "The Package-X " <> label <> " cache is invalid."];
     cachedIntegrals = payload["Integrals"];
     values = payload["Values"];
@@ -563,6 +1419,11 @@ obtainPaVeRules[
       "CacheVersion" -> version,
       "StageVersion" -> stageVersion,
       "IntegralType" -> label,
+      "IntegralInventorySHA256" -> inventoryHash,
+      "SourceS09" -> s09Path,
+      "SourceS09SHA256" -> s09SHA256,
+      "SourceS08" -> s08Path,
+      "SourceS08SHA256" -> s08SHA256,
       "SourceS07" -> s07Path,
       "SourceS07SHA256" -> s07SHA256,
       "Program" -> programPath,
@@ -573,8 +1434,10 @@ obtainPaVeRules[
       "Values" -> values
     |>;
     writeAtomic[payload, cache];
-    assert[FileExistsQ[cache] && FileByteCount[cache] > 0,
-      "The resumable Package-X " <> label <> " cache was not written."];
+    reloadGate = atomicReloadSameQ[payload, cache];
+    assert[reloadGate,
+      "The resumable Package-X " <> label <>
+        " cache failed atomic reload equality."];
   ];
   assert[Length[values] === total,
     "The Package-X " <> label <> " cache has incomplete coverage."];
@@ -583,7 +1446,33 @@ obtainPaVeRules[
           _FeynCalc`PaXEvaluateUVIRSplit
       ] & /@ values),
     "At least one cached Package-X " <> label <> " value is unresolved."];
+  payload = Quiet@Check[Get[cache], $Failed];
+  finalCacheGate = TrueQ[
+    AssociationQ[payload] &&
+      payload["IntegralInventorySHA256"] === inventoryHash &&
+      SameQ[payload["Integrals"], integrals] &&
+      SameQ[payload["Values"], values]
+  ];
+  assert[finalCacheGate,
+    "The finalized Package-X " <> label <> " cache is incomplete."
+  ];
+  AssociateTo[ruleCacheValidation, label -> finalCacheGate];
   Thread[integrals -> values]
+];
+
+Scan[
+  Function[specification,
+    migrateAcceptedVirtualCache @@ specification
+  ],
+  {
+    {paVeCachePath, paVeCacheVersion, "PaVe"},
+    {
+      scalarMasterCachePath,
+      scalarMasterCacheVersion,
+      "scalar master"
+    },
+    {laurentCachePath, laurentCacheVersion, "virtual Laurent"}
+  }
 ];
 
 Print["S10_STAGE: completing all analytic scalar one-loop integrals"];
@@ -599,34 +1488,25 @@ bareVirtualSplit = Map[
   (# /. Dispatch[loopIntegralRules]) &,
   bareVirtualSymbolicD
 ];
-assert[And @@ (FreeQ[
+loopIntegralResolutionGate = And @@ (FreeQ[
       #, _FeynCalc`PaVe | _FeynCalc`B0 | _FeynCalc`C0 | _FeynCalc`D0 |
         _FeynCalc`PaXEvaluateUVIRSplit
-    ] & /@ Values[bareVirtualSplit]),
+    ] & /@ Values[bareVirtualSplit]);
+assert[loopIntegralResolutionGate,
   "A PaVe, scalar master, or Package-X evaluator remains in the virtual pair."];
-assert[And @@ (! FreeQ[#, FeynCalc`EpsilonUV] & /@
-      Values[bareVirtualSplit]),
+uvRegulatorPresenceGate = And @@ (! FreeQ[#, FeynCalc`EpsilonUV] & /@
+      Values[bareVirtualSplit]);
+assert[uvRegulatorPresenceGate,
   "A bare virtual projector lacks its explicit UV regulator."];
-assert[And @@ (! FreeQ[#, FeynCalc`EpsilonIR] & /@
-      Values[bareVirtualSplit]),
+irRegulatorPresenceGate = And @@ (! FreeQ[#, FeynCalc`EpsilonIR] & /@
+      Values[bareVirtualSplit]);
+assert[irRegulatorPresenceGate,
   "A bare virtual projector lacks its explicit IR regulator."];
 
-setTwoBodyKinematics[] := (
-  FeynCalc`FCClearScalarProducts[];
-  FeynCalc`SPD[p, p] = 0;
-  FeynCalc`SPD[q, q] = -Q2;
-  FeynCalc`SPD[k1, k1] = 0;
-  FeynCalc`SPD[k2, k2] = 0;
-  FeynCalc`SPD[p, q] = (sHat + Q2)/2;
-  FeynCalc`SPD[k1, k2] = sHat/2;
-  FeynCalc`SPD[q, k1] = (-Q2 - tHat)/2;
-  FeynCalc`SPD[q, k2] = (sHat + tHat)/2;
-  FeynCalc`SPD[p, k1] = (Q2 + sHat + tHat)/2;
-  FeynCalc`SPD[p, k2] = -tHat/2;
-);
+setTwoBodyKinematics[] := installKinematicRecord[twoBodyKinematicRecord];
 
 Print["S10_STAGE: resolving ordinary tree propagator denominators"];
-setTwoBodyKinematics[];
+twoBodyInstallationAudit = setTwoBodyKinematics[];
 bareVirtualExplicit = Map[
   Function[expression,
     Quiet@Check[
@@ -653,31 +1533,54 @@ assert[FreeQ[Values[bareVirtualExplicit], $Failed | Indeterminate |
 assert[FreeQ[Values[loExplicit], $Failed | Indeterminate |
       ComplexInfinity | DirectedInfinity],
   "LO propagator expansion failed or became indeterminate."];
-assert[And @@ (FreeQ[#, _FeynCalc`FeynAmpDenominator] & /@
-      Values[bareVirtualExplicit]),
+bareDenominatorResolutionGate = And @@ (FreeQ[
+      #, _FeynCalc`FeynAmpDenominator
+    ] & /@ Values[bareVirtualExplicit]);
+assert[bareDenominatorResolutionGate,
   "A bare-loop FeynAmpDenominator remains unresolved."];
-assert[And @@ (FreeQ[#, _FeynCalc`FeynAmpDenominator] & /@
-      Values[loExplicit]),
+loDenominatorResolutionGate = And @@ (FreeQ[
+      #, _FeynCalc`FeynAmpDenominator
+    ] & /@ Values[loExplicit]);
+assert[loDenominatorResolutionGate,
   "An LO FeynAmpDenominator remains unresolved."];
-assert[And @@ (FreeQ[#, _FeynCalc`Pair] & /@
-      Join[Values[bareVirtualExplicit], Values[loExplicit]]),
+scalarPairResolutionGate = And @@ (FreeQ[#, _FeynCalc`Pair] & /@
+      Join[Values[bareVirtualExplicit], Values[loExplicit]]);
+assert[scalarPairResolutionGate,
   "A scalar Pair survived the symbolic-D denominator expansion."];
 
-(* Explicit one-loop QCD constants in the convention of the saved amplitudes. *)
+(* Solve the explicit one-loop QCD definitions in the saved-amplitude convention. *)
 aSLoop = FeynCalc`SMP["g_s"]^2/(16 Pi^2);
-deltaZGG = aSLoop (5 FeynCalc`CA/3 - 2 FeynCalc`Nf/3) *
-  (1/FeynCalc`EpsilonUV - 1/FeynCalc`EpsilonIR);
-deltaZgs = -aSLoop (11 FeynCalc`CA/6 - FeynCalc`Nf/3) /
-  FeynCalc`EpsilonUV;
-deltaZqAggregate = -2 aSLoop FeynCalc`CF *
-  (1/FeynCalc`EpsilonUV - 1/FeynCalc`EpsilonIR);
+countertermDefinitionEquations = {
+  s10DeltaZGG ==
+    aSLoop (5 FeynCalc`CA/3 - 2 FeynCalc`Nf/3) *
+      (1/FeynCalc`EpsilonUV - 1/FeynCalc`EpsilonIR),
+  s10DeltaZgs ==
+    -aSLoop (11 FeynCalc`CA/6 - FeynCalc`Nf/3) /
+      FeynCalc`EpsilonUV,
+  s10DeltaZqAggregate ==
+    -2 aSLoop FeynCalc`CF *
+      (1/FeynCalc`EpsilonUV - 1/FeynCalc`EpsilonIR)
+};
+countertermDefinitionSolutions = Solve[
+  countertermDefinitionEquations,
+  {s10DeltaZGG, s10DeltaZgs, s10DeltaZqAggregate}
+];
+assert[Length[countertermDefinitionSolutions] === 1,
+  "The explicit QCD counterterm definitions lack a unique solution."];
+countertermDefinitionSolution = First[countertermDefinitionSolutions];
+deltaZGG = s10DeltaZGG /. countertermDefinitionSolution;
+deltaZgs = s10DeltaZgs /. countertermDefinitionSolution;
+deltaZqAggregate = s10DeltaZqAggregate /. countertermDefinitionSolution;
 explicitCountertermMultiplier =
   deltaZGG + 2 deltaZgs + deltaZqAggregate;
 
-expectedBareUVRatio =
-  FeynCalc`SMP["g_s"]^2 (FeynCalc`CF + FeynCalc`CA)/(8 Pi^2);
-colorRule = FeynCalc`CF ->
-  (FeynCalc`CA^2 - 1)/(2 FeynCalc`CA);
+colorDefinitionSolutions = Solve[
+  2 FeynCalc`CA FeynCalc`CF == FeynCalc`CA^2 - 1,
+  FeynCalc`CF
+];
+assert[Length[colorDefinitionSolutions] === 1,
+  "The fundamental-color defining relation lacks a unique solution."];
+colorRule = First[colorDefinitionSolutions];
 
 Print["S10_STAGE: validating the explicit UV counterterm cancellation"];
 bareUVResidues = AssociationMap[
@@ -699,14 +1602,13 @@ bareUVResidues = AssociationMap[
 assert[FreeQ[Values[bareUVResidues], $Failed],
   "Extraction of a bare UV residue failed or timed out."];
 
-bareUVRatioResiduals = AssociationMap[
+bareUVRatios = AssociationMap[
   Function[projector,
     Check[
       TimeConstrained[
         Together@Cancel[
           (bareUVResidues[projector]/
-              (loExplicit[projector] /. epsilon -> 0) -
-            expectedBareUVRatio) /. colorRule
+              (loExplicit[projector] /. epsilon -> 0)) /. colorRule
         ],
         900,
         $Failed
@@ -716,17 +1618,27 @@ bareUVRatioResiduals = AssociationMap[
   ],
   projectors
 ];
-assert[And @@ (TrueQ[# === 0] & /@ Values[bareUVRatioResiduals]),
-  "The evaluated bare UV residue is not the expected multiple of LO."];
+assert[FreeQ[Values[bareUVRatios], $Failed],
+  "Derivation of a bare UV/LO ratio failed or timed out."];
+expectedBareUVRatio = First[Values[bareUVRatios]];
+bareUVRatioResiduals = AssociationMap[
+  Together@Cancel[bareUVRatios[#] - expectedBareUVRatio] &,
+  projectors
+];
+bareUVCommonRatioGate =
+  And @@ (TrueQ[# === 0] & /@ Values[bareUVRatioResiduals]);
+assert[bareUVCommonRatioGate,
+  "The evaluated bare UV residues do not derive one common LO multiple."];
 
 countertermUVRatio = SeriesCoefficient[
   explicitCountertermMultiplier,
   {FeynCalc`EpsilonUV, 0, -1}
 ];
 uvCancellationRatio = Together@Cancel[
-  (expectedBareUVRatio + countertermUVRatio) /. colorRule
+  expectedBareUVRatio + (countertermUVRatio /. colorRule)
 ];
-assert[uvCancellationRatio === 0,
+uvCancellationGate = TrueQ[uvCancellationRatio === 0];
+assert[uvCancellationGate,
   "The explicit QCD constants do not cancel the bare UV residue."];
 
 (*
@@ -734,7 +1646,15 @@ assert[uvCancellationRatio === 0,
   multiply by 2 Pi/(2 Pi)^4 and by d zeta/d s23, apply the saved partonic
   substitutions, and then enforce the two-body endpoint s23=0.
 *)
-twoBodyPhaseCoefficient = (2 Pi)/(2 Pi)^4;
+twoBodyPhaseFactor = s08["PhaseSpaceDefinitions", "TwoBodyEq34"];
+twoBodyPhaseCoefficient =
+  twoBodyPhaseFactor /. DiracDelta[s23] -> 1;
+twoBodyPhaseDefinitionGate = TrueQ[
+  ! FreeQ[twoBodyPhaseFactor, DiracDelta[s23]] &&
+    FreeQ[twoBodyPhaseCoefficient, DiracDelta[s23] | _Real]
+];
+assert[twoBodyPhaseDefinitionGate,
+  "The accepted S08 two-body phase definition is invalid."];
 transformTwoBodyCoefficient[expression_] :=
   (twoBodyPhaseCoefficient xiS23Jacobian *
       (expression /. partonicRules)) /. s23 -> 0;
@@ -751,8 +1671,9 @@ loNormalizationResiduals = AssociationMap[
   loTransformed[#] - loStoredCoefficients[#] &,
   projectors
 ];
-assert[And @@ (zeroEquivalentQ[#, 600] & /@
-      Values[loNormalizationResiduals]),
+loNormalizationGate = And @@ (zeroEquivalentQ[#, 600] & /@
+      Values[loNormalizationResiduals]);
+assert[loNormalizationGate,
   "The reconstructed two-body normalization does not match the s09 LO reference."];
 
 bareVirtualTransformed = Map[
@@ -764,10 +1685,21 @@ renormalizedVirtualSplit = AssociationMap[
     loStoredCoefficients[#] explicitCountertermMultiplier &,
   projectors
 ];
-assert[And @@ (FreeQ[
+explicitCountertermInsertionResiduals = AssociationMap[
+  renormalizedVirtualSplit[#] -
+    (bareVirtualTransformed[#] +
+      loStoredCoefficients[#] explicitCountertermMultiplier) &,
+  projectors
+];
+explicitCountertermInsertionGate =
+  AllTrue[Values[explicitCountertermInsertionResiduals], SameQ[#, 0] &];
+assert[explicitCountertermInsertionGate,
+  "The explicit QCD counterterm insertion residual is nonzero."];
+renormalizedVirtualResolutionGate = And @@ (FreeQ[
       #, dZGG1 | dZgs1 | _dZq1 | _FeynCalc`PaVe | _FeynCalc`B0 |
         _FeynCalc`C0 | _FeynCalc`D0 | _FeynCalc`FeynAmpDenominator
-    ] & /@ Values[renormalizedVirtualSplit]),
+    ] & /@ Values[renormalizedVirtualSplit]);
+assert[renormalizedVirtualResolutionGate,
   "The renormalized virtual pair retains a symbolic dZ, loop integral, or denominator."];
 
 (*
@@ -1007,6 +1939,8 @@ pppTerm2FactorwiseLaurent[
         "LaurentPart" -> partAnswer
       |>;
       writeAtomic[payload, partCache];
+      assert[atomicReloadSameQ[payload, partCache],
+        "PPP bounded Laurent part cache failed reload equality."];
       Print[
         "S10_PART_CHECKPOINT: PPP virtual Laurent term 2 subterm " <>
           ToString[subindex] <> " part " <> ToString[partindex] <> "/" <>
@@ -1025,7 +1959,7 @@ finiteLaurentTerm[
   ] := Module[
   {
     pieces, subCommonFactor, subterms, subtermCache, payload,
-    values = {}, reusedInputHashes = {}, subindex, subtotal, subtermAnswer
+    values = {}, subindex, subtotal, subtermAnswer
   },
   pieces = virtualLaurentTerms[term];
   subCommonFactor = pieces["CommonFactor"];
@@ -1061,20 +1995,16 @@ finiteLaurentTerm[
     payload = Check[Get[subtermCache], $Failed];
     assert[AssociationQ[payload] &&
         payload["CacheVersion"] === laurentSubtermCacheVersion &&
+        payload["StageVersion"] === stageVersion &&
+        payload["ProgramSHA256"] === programSHA256 &&
         payload["Projector"] === projector &&
         payload["CoarseTermIndex"] === index &&
-        validLaurentInputHashQ[
-          projector, payload["InputHash"], inputHash
-        ] &&
+        payload["InputHash"] === inputHash &&
         payload["SubtermCount"] === subtotal,
       projector <> " virtual Laurent subterm cache is invalid."];
     values = payload["LaurentSubterms"];
     assert[ListQ[values] && Length[values] <= subtotal,
       projector <> " virtual Laurent subterm progress is invalid."];
-    reusedInputHashes = DeleteDuplicates@Join[
-      Lookup[payload, "ReusedInputHashes", {}],
-      If[payload["InputHash"] === inputHash, {}, {payload["InputHash"]}]
-    ];
   ];
   For[subindex = Length[values] + 1, subindex <= subtotal, subindex++,
     subtermAnswer = If[
@@ -1105,16 +2035,17 @@ finiteLaurentTerm[
     AppendTo[values, subtermAnswer];
     payload = <|
       "CacheVersion" -> laurentSubtermCacheVersion,
+      "StageVersion" -> stageVersion,
+      "ProgramSHA256" -> programSHA256,
       "Projector" -> projector,
       "CoarseTermIndex" -> index,
       "InputHash" -> inputHash,
-      "ReusedInputHashes" -> reusedInputHashes,
       "SubtermCount" -> subtotal,
       "LaurentSubterms" -> values
     |>;
     writeAtomic[payload, subtermCache];
-    assert[FileExistsQ[subtermCache] && FileByteCount[subtermCache] > 0,
-      projector <> " virtual Laurent subterm cache was not written."];
+    assert[atomicReloadSameQ[payload, subtermCache],
+      projector <> " virtual Laurent subterm cache failed reload equality."];
     Print[
       "S10_SUBTERM_CHECKPOINT: " <> projector <> " virtual Laurent term " <>
         ToString[index] <> " subterm " <> ToString[subindex] <> "/" <>
@@ -1132,7 +2063,7 @@ finiteLaurentProjector[
   ] := Module[
   {
     pieces, commonFactor, terms, inputHash, payload, values = {},
-    reusedInputHashes = {}, index, total, termAnswer
+    index, total, termAnswer
   },
   Print["S10_MEMORY_STAGE: locating additive boundary for " <> projector];
   pieces = virtualLaurentTerms[expression];
@@ -1144,10 +2075,12 @@ finiteLaurentProjector[
     projector <> " virtual expression has no safe additive split boundary."];
   inputHash = Hash[
     {
-      FileHash[$InputFileName, "SHA256"],
-      FileHash[s07Path, "SHA256"],
-      FileHash[paVeCachePath, "SHA256"],
-      FileHash[scalarMasterCachePath, "SHA256"],
+      programSHA256,
+      s09SHA256,
+      s08SHA256,
+      s07SHA256,
+      fileSHA256Hex[paVeCachePath],
+      fileSHA256Hex[scalarMasterCachePath],
       projector,
       laurentProgressCacheVersion
     },
@@ -1162,18 +2095,14 @@ finiteLaurentProjector[
     values = payload["LaurentTerms"];
     assert[
         payload["CacheVersion"] === laurentProgressCacheVersion &&
+        payload["StageVersion"] === stageVersion &&
+        payload["ProgramSHA256"] === programSHA256 &&
         payload["Projector"] === projector &&
-        validLaurentInputHashQ[
-          projector, payload["InputHash"], inputHash
-        ] &&
+        payload["InputHash"] === inputHash &&
         payload["TermCount"] === total,
       projector <> " virtual Laurent progress cache is invalid."];
     assert[ListQ[values] && Length[values] <= total,
       projector <> " virtual Laurent progress has an invalid term list."];
-    reusedInputHashes = DeleteDuplicates@Join[
-      Lookup[payload, "ReusedInputHashes", {}],
-      If[payload["InputHash"] === inputHash, {}, {payload["InputHash"]}]
-    ];
   ];
   Print[
     "S10_STAGE: bounded virtual Laurent terms for " <> projector <>
@@ -1189,15 +2118,16 @@ finiteLaurentProjector[
     AppendTo[values, termAnswer];
     payload = <|
       "CacheVersion" -> laurentProgressCacheVersion,
+      "StageVersion" -> stageVersion,
+      "ProgramSHA256" -> programSHA256,
       "Projector" -> projector,
       "InputHash" -> inputHash,
-      "ReusedInputHashes" -> reusedInputHashes,
       "TermCount" -> total,
       "LaurentTerms" -> values
     |>;
     writeAtomic[payload, progressCache];
-    assert[FileExistsQ[progressCache] && FileByteCount[progressCache] > 0,
-      projector <> " virtual Laurent progress cache was not written."];
+    assert[atomicReloadSameQ[payload, progressCache],
+      projector <> " virtual Laurent progress cache failed reload equality."];
     If[FileExistsQ[laurentSubtermCachePath[projector, index]],
       DeleteFile[laurentSubtermCachePath[projector, index]]
     ];
@@ -1211,23 +2141,34 @@ finiteLaurentProjector[
   Total[values]
 ];
 
+virtualLaurentCacheValidationGate = False;
 finiteLaurentPair[pair_Association, cache_String] := Module[
-  {payload, answer = <||>, projector, projectorExpression, progressCache},
+  {
+    payload, answer = <||>, projector, projectorExpression, progressCache,
+    cacheMetadataGate, reloadGate
+  },
   If[FileExistsQ[cache],
     Print["S10_STAGE: loading virtual Laurent cache"];
     payload = Check[Get[cache], $Failed];
-    assert[AssociationQ[payload] &&
+    cacheMetadataGate = TrueQ[AssociationQ[payload] &&
         payload["CacheVersion"] === laurentCacheVersion &&
-        validIndependentCacheStageVersionQ[payload["StageVersion"]] &&
+        payload["StageVersion"] === stageVersion &&
+        payload["SourceS09SHA256"] === s09SHA256 &&
+        payload["SourceS08SHA256"] === s08SHA256 &&
         payload["SourceS07SHA256"] === s07SHA256 &&
-        validPreCorrectionProgramSHA256Q[payload["ProgramSHA256"]] &&
-        payload["PaVeCacheSHA256"] === FileHash[paVeCachePath, "SHA256"] &&
+        payload["ProgramSHA256"] === programSHA256 &&
+        payload["PaVeCacheSHA256"] === fileSHA256Hex[paVeCachePath] &&
         payload["ScalarMasterCacheSHA256"] ===
-          FileHash[scalarMasterCachePath, "SHA256"],
+          fileSHA256Hex[scalarMasterCachePath]];
+    assert[cacheMetadataGate,
       "The virtual Laurent cache is invalid."];
     answer = payload["LaurentThroughFinite"];
     assert[AssociationQ[answer] && Sort[Keys[answer]] === Sort[projectors],
       "The virtual Laurent cache has invalid projector keys."];
+    virtualLaurentCacheValidationGate = TrueQ[
+      cacheMetadataGate &&
+        AllTrue[Values[answer], # =!= $Failed && # =!= 0 &]
+    ];
     Scan[
       Function[projector,
         progressCache = laurentProgressCachePath[projector];
@@ -1255,23 +2196,32 @@ finiteLaurentPair[pair_Association, cache_String] := Module[
   payload = <|
     "CacheVersion" -> laurentCacheVersion,
     "StageVersion" -> stageVersion,
+    "SourceS09" -> s09Path,
+    "SourceS09SHA256" -> s09SHA256,
+    "SourceS08" -> s08Path,
+    "SourceS08SHA256" -> s08SHA256,
     "SourceS07" -> s07Path,
     "SourceS07SHA256" -> s07SHA256,
     "Program" -> programPath,
     "ProgramSHA256" -> programSHA256,
     "PaVeCache" -> paVeCachePath,
-    "PaVeCacheSHA256" -> FileHash[paVeCachePath, "SHA256"],
+    "PaVeCacheSHA256" -> fileSHA256Hex[paVeCachePath],
     "ScalarMasterCache" -> scalarMasterCachePath,
     "ScalarMasterCacheSHA256" ->
-      FileHash[scalarMasterCachePath, "SHA256"],
+      fileSHA256Hex[scalarMasterCachePath],
     "RegulatorsUnifiedAfterUVCheck" -> True,
     "EvaluatorConvention" -> "Package-X implicit prefactor 1",
     "OrdersRetained" -> {-2, -1, 0},
     "LaurentThroughFinite" -> answer
   |>;
   writeAtomic[payload, cache];
-  assert[FileExistsQ[cache] && FileByteCount[cache] > 0,
-    "The virtual Laurent cache was not written."];
+  reloadGate = atomicReloadSameQ[payload, cache];
+  assert[reloadGate,
+    "The virtual Laurent cache failed atomic reload equality."];
+  virtualLaurentCacheValidationGate = TrueQ[
+    reloadGate && Sort[Keys[answer]] === Sort[projectors] &&
+      AllTrue[Values[answer], # =!= $Failed && # =!= 0 &]
+  ];
   Scan[
     Function[projector,
       progressCache = laurentProgressCachePath[projector];
@@ -1287,17 +2237,27 @@ virtualLaurent = finiteLaurentPair[
   renormalizedVirtualSplit,
   laurentCachePath
 ];
-assert[And @@ (FreeQ[
+virtualLaurentResolutionGate = And @@ (FreeQ[
       #,
       FeynCalc`EpsilonUV | FeynCalc`EpsilonIR | _SeriesData |
         _FeynCalc`PaVe | _FeynCalc`B0 | _FeynCalc`C0 | _FeynCalc`D0 |
         _FeynCalc`FeynAmpDenominator |
         dZGG1 | dZgs1 | _dZq1
-    ] & /@ Values[virtualLaurent]),
+    ] & /@ Values[virtualLaurent]);
+assert[virtualLaurentResolutionGate,
   "A completed virtual Laurent coefficient retains an unresolved object."];
 
+virtualDoublePoleDefinitionSolutions = Solve[
+  s10VirtualDoublePoleRatio ==
+    -FeynCalc`SMP["g_s"]^2 *
+      (2 FeynCalc`CF + FeynCalc`CA)/(8 Pi^2),
+  s10VirtualDoublePoleRatio
+];
+assert[Length[virtualDoublePoleDefinitionSolutions] === 1,
+  "The virtual double-pole defining equation lacks a unique solution."];
 expectedVirtualDoublePoleRatio =
-  -FeynCalc`SMP["g_s"]^2 (2 FeynCalc`CF + FeynCalc`CA)/(8 Pi^2);
+  s10VirtualDoublePoleRatio /.
+    First[virtualDoublePoleDefinitionSolutions];
 virtualDoublePoleResiduals = AssociationMap[
   Function[projector,
     Check[
@@ -1316,7 +2276,9 @@ virtualDoublePoleResiduals = AssociationMap[
   ],
   projectors
 ];
-assert[And @@ (TrueQ[# === 0] & /@ Values[virtualDoublePoleResiduals]),
+virtualDoublePoleGate =
+  And @@ (TrueQ[# === 0] & /@ Values[virtualDoublePoleResiduals]);
+assert[virtualDoublePoleGate,
   "The renormalized virtual double pole is not the universal LO multiple."];
 
 invalidEndpointQ[expression_] := ! FreeQ[
@@ -1338,6 +2300,7 @@ vanishingEndpointQ[expression_] := Module[{value, reduced},
 
 exactPhysicalZeroQ[expression_, assumptions_] := Module[
   {combined, simplified},
+  If[TrueQ[expression === 0], Return[True]];
   combined = Quiet@Check[
     TimeConstrained[Together[expression], 300, $Failed],
     $Failed
@@ -1356,36 +2319,221 @@ exactPhysicalZeroQ[expression_, assumptions_] := Module[
 ];
 
 (*
-  The Hqg endpoint logarithms in the proven groups are coupled through the
-  physical square root
-
-    Sqrt[Q2^2 (a zH-r (1-zH))^2/(r+zH-r zH)^2].
-
-  Resolve that root separately on the two physical signs of
-  delta=a zH-r (1-zH).  A logarithm that vanishes only after this branch
-  resolution is represented as Log[s23]+Log[slope], and every positive
-  power of the inert endpoint logarithm must cancel in the complete group.
-  No branch-blind PowerExpand is used.
+  Root-coupled Hqg terms are not individual Laurent objects.  Discover their
+  exact groups first.  The grouped evaluator below derives the single common
+  radicand and every exact s23 scaling from the source, introduces a positive
+  endpoint coordinate through s23=t^2, and derives both physical root jets
+  from the defining square equation.  Every literal Log and PolyLog occurrence
+  is reversibly compressed, normalized to a shared runtime basis, and expanded
+  once per root sign.  Only the complete group may be tested for negative
+  endpoint powers and endpoint logarithms.  No branch-blind PowerExpand is
+  used and grouped source positions never call endpointTermLaurent.
 *)
-coupledEndpointGroupFinite[
-    sourceTerms_List, finiteTerms_List, sourceIndices_List,
-    label_String
+discoverCoupledEndpointGroups[
+    standardTerms_List, standardIndices_List, label_String
   ] := Module[
   {
-    aPhysical, rTPhysical, denominatorPhysical, deltaPhysical,
-    expectedRootRadicand, physicalSubstitution, inverseSubstitution,
-    originalDelta, endpointLog, heldLog, heldPolyLog, qcdRules,
-    branchResults = <||>, rootSign, positiveRoot, rootRule,
-    branchAssumptions, canonical, transformTerm, branchTerms,
-    maximumDegree, coefficient, constant, groupResult, groupPosition
+    aPhysical, rTPhysical, deltaPhysical, physicalSubstitution,
+    baseAssumptions, canonicalRadicand, branchRootData,
+    records, groupedRecords, groups
   },
-  assert[Length[sourceTerms] === Length[finiteTerms] ===
-      Length[sourceIndices],
-    label <> " coupled endpoint group has inconsistent term lists."];
-  denominatorPhysical = rTPhysical + zH - rTPhysical zH;
+  assert[Length[standardTerms] === Length[standardIndices],
+    label <> " standard endpoint term/index lists are inconsistent."];
+  aPhysical = S10PhysicalA;
+  rTPhysical = S10PhysicalRT;
   deltaPhysical = aPhysical zH - rTPhysical (1 - zH);
-  expectedRootRadicand =
-    Q2^2 deltaPhysical^2/denominatorPhysical^2;
+  physicalSubstitution = {
+    xi -> xB (1 + aPhysical),
+    PHT2 -> rTPhysical Q2 aPhysical zH (1 - zH)
+  };
+  baseAssumptions =
+    aPhysical > 0 && 0 < rTPhysical < 1 && 0 < zH < 1 && Q2 > 0;
+  canonicalRadicand[value_] := Quiet@Check[
+    Factor[Together[value /. s23 -> 0]],
+    $Failed
+  ];
+  branchRootData[radicand_] := Module[
+    {canonical, plusRoot, minusRoot, gate},
+    canonical = canonicalRadicand[radicand];
+    If[canonical === $Failed || invalidEndpointQ[canonical], Return[$Failed]];
+    plusRoot = Quiet@Check[
+      FullSimplify[
+        Sqrt[canonical],
+        Assumptions -> baseAssumptions && deltaPhysical > 0
+      ],
+      $Failed
+    ];
+    minusRoot = Quiet@Check[
+      FullSimplify[
+        Sqrt[canonical],
+        Assumptions -> baseAssumptions && deltaPhysical < 0
+      ],
+      $Failed
+    ];
+    gate = TrueQ[
+      plusRoot =!= $Failed && minusRoot =!= $Failed &&
+        FreeQ[plusRoot, Abs | Sign | s23] &&
+        FreeQ[minusRoot, Abs | Sign | s23] &&
+        plusRoot =!= minusRoot &&
+        Together[plusRoot + minusRoot] === 0 &&
+        Together[plusRoot^2 - canonical] === 0 &&
+        Together[minusRoot^2 - canonical] === 0
+    ];
+    If[
+      gate,
+      <|
+        "PhysicalRootRadicand" -> canonical,
+        "RootByDeltaSign" -> <|1 -> plusRoot, -1 -> minusRoot|>
+      |>,
+      $Failed
+    ]
+  ];
+  records = MapThread[
+    Function[{term, sourceIndex},
+      Module[{radicands, branchRecords},
+        radicands = DeleteDuplicates[
+          (# /. physicalSubstitution) & /@ Cases[
+            term,
+            Power[
+              radicand_,
+              power_Rational?((Denominator[#] === 2) &)
+            ] :> radicand,
+            Infinity
+          ]
+        ];
+        branchRecords = DeleteCases[
+          branchRootData /@ radicands,
+          $Failed
+        ];
+        branchRecords = DeleteDuplicatesBy[
+          branchRecords,
+          # ["PhysicalRootRadicand"] &
+        ];
+        If[branchRecords === {},
+          Nothing,
+          assert[Length[branchRecords] === 1,
+            label <> " term " <> ToString[sourceIndex] <>
+              " contains multiple inequivalent physical branch roots."];
+          Append[First[branchRecords], "SourceIndex" -> sourceIndex]
+        ]
+      ]
+    ],
+    {standardTerms, standardIndices}
+  ];
+  assert[records =!= {},
+    label <> " has no tool-detected physical root-coupled endpoint terms."];
+  groupedRecords = GatherBy[records, # ["PhysicalRootRadicand"] &];
+  groups = Map[
+    Function[groupRecords,
+      <|
+        "SourceIndices" -> Sort@DeleteDuplicates@Lookup[
+          groupRecords, "SourceIndex"
+        ],
+        "PhysicalRootRadicand" ->
+          First[groupRecords]["PhysicalRootRadicand"],
+        "RootByDeltaSign" -> First[groupRecords]["RootByDeltaSign"]
+      |>
+    ],
+    groupedRecords
+  ];
+  assert[
+    DuplicateFreeQ[Flatten[Lookup[groups, "SourceIndices"]]] &&
+      AllTrue[Lookup[groups, "SourceIndices"], Length[#] > 1 &],
+    label <> " root-coupled groups overlap or lack a cancellation partner."
+  ];
+  Print[
+    "S10_DERIVED_COUPLED_ENDPOINT_GROUPS: label=", label,
+    " groups=", InputForm[Lookup[groups, "SourceIndices"]]
+  ];
+  groups
+];
+
+seriesKnownThroughZeroQ[value_] := Which[
+  Head[value] === SeriesData,
+    TrueQ[value[[5]]/value[[6]] > 0],
+  TrueQ[value === 0],
+    True,
+  FreeQ[value, S10EndpointT],
+    True,
+  True,
+    False
+];
+
+seriesMinimumPower[value_] := Which[
+  Head[value] === SeriesData,
+    value[[4]]/value[[6]],
+  TrueQ[value === 0],
+    Infinity,
+  FreeQ[value, S10EndpointT],
+    0,
+  True,
+    Quiet@Check[Exponent[value, S10EndpointT, Min], $Failed]
+];
+
+coupledEndpointGroupLaurent[
+    sourceTerms_List, sourceIndices_List, expectedRootRadicand_,
+    rootByDeltaSign_Association, label_String
+  ] := Module[
+  {
+    sourceHashesBefore, aPhysical, rTPhysical, deltaPhysical,
+    physicalSubstitution, inverseSubstitution, originalDelta,
+    branchAssumptions, qcdRules, endpointPowerTransform,
+    exactUniqueExpressions, rootPowerExpressions, physicalRootBases,
+    commonCandidates,
+    commonRadicand, commonEndpointRadicand, rootRecords,
+    rootPlaceholderRules, rootReverseRules, rootFormulaRules,
+    rootPlaceholderDispatch, rootReverseDispatch, rootFormulaDispatch,
+    rawFunctions, functionPlaceholderRules, functionReverseRules,
+    functionPlaceholderDispatch, functionReverseDispatch,
+    placeholderTerms, reconstructionGate, compressedTerms,
+    normalizeFunctionRecord, functionRecords, basisFunctions,
+    functionBasisIDs, basisFunctionHashToID, commonRadicandT,
+    deriveRootPolynomial,
+    rootResidualCoefficients, rootProbeOrder, rootProbePolynomials,
+    termFactorLists, supportFactors, supportFactorHashes,
+    supportFactorHashToID, termSupportFactorIDs,
+    supportMinimumPower, supportMinimumPowersBySign,
+    termSupportBoundsBySign, finiteSupportBounds,
+    requiredFunctionSeriesOrder, requiredRootSeriesOrder,
+    rootPolynomials, rootResiduals, rootGate,
+    seriesKnownThroughOrderQ, normalizeGeneratedEndpointLogs,
+    deriveFunctionSeries, factorSeriesCoefficientData,
+    convolveLaurentCoefficientData, functionSeriesBySign,
+    functionSeriesGate,
+    branchResults = <||>, branchCertificates = <||>, rootSign,
+    branchFunctionRules, branchSubstitutionDispatch,
+    branchBaseFactorLists,
+    branchFactorizationGate, branchFactorLists,
+    branchFactorHashGroups, branchUniqueFactors, branchFactorHashes,
+    branchFactorHashToID, branchTermFactorIDs,
+    branchPilotFactorData, branchFactorMinimumPowerBounds,
+    branchTermMinimumPowerBounds, branchRequiredFactorMaxima,
+    branchFactorData, branchTermCoefficientData,
+    branchTotalCoefficients, negativePowers, negativeResiduals,
+    finiteCoefficient, maximumLogDegree, logPowers, logResiduals,
+    branchConstant, groupResult, sourceHashesAfter,
+    expressionSHA256Hex
+  },
+  assert[
+    Length[sourceTerms] === Length[sourceIndices] &&
+      Length[sourceTerms] > 1,
+    label <> " coupled endpoint group has inconsistent source lists."
+  ];
+  assert[
+    FreeQ[
+      sourceTerms,
+      _S10RootOccurrence | _S10SharedFunctionOccurrence |
+        S10CommonRoot | S10EndpointT | S10EndpointLog
+    ],
+    label <> " source group already contains an internal series symbol."
+  ];
+  sourceHashesBefore = Hash[#, "SHA256"] & /@ sourceTerms;
+  expressionSHA256Hex[value_] := IntegerString[
+    Hash[value, "SHA256"], 16, 64
+  ];
+  aPhysical = S10PhysicalA;
+  rTPhysical = S10PhysicalRT;
+  deltaPhysical = aPhysical zH - rTPhysical (1 - zH);
   physicalSubstitution = {
     xi -> xB (1 + aPhysical),
     PHT2 -> rTPhysical Q2 aPhysical zH (1 - zH)
@@ -1400,149 +2548,1148 @@ coupledEndpointGroupFinite[
     FeynCalc`TF -> 1/2,
     FeynCalc`CF -> (FeynCalc`CA^2 - 1)/(2 FeynCalc`CA)
   };
+  endpointPowerTransform[value_] :=
+    (value /. HoldPattern[
+        Power[s23, power_?((IntegerQ[2 #]) &)]
+      ] :> S10EndpointT^(2 power)) /. s23 -> S10EndpointT^2;
+
+  exactUniqueExpressions[values_List, objectLabel_String] := Module[
+    {hashGroups},
+    hashGroups = GatherBy[values, Hash[#, "SHA256"] &];
+    assert[
+      AllTrue[
+        hashGroups,
+        Function[currentGroup,
+          AllTrue[Rest[currentGroup], SameQ[First[currentGroup], #] &]
+        ]
+      ],
+      label <> " has a SHA-256 collision in " <> objectLabel <> "."
+    ];
+    First /@ hashGroups
+  ];
+
+  Print["S10_GROUP_PHASE_START: label=", label,
+    " phase=root-inventory"];
+
+  rootPowerExpressions = exactUniqueExpressions[
+    Cases[
+      sourceTerms,
+      HoldPattern[Power[rootBase_, rootExponent_Rational]] /;
+          Denominator[rootExponent] === 2 && rootBase =!= s23 :>
+        Power[rootBase, rootExponent],
+      Infinity
+    ],
+    "root occurrences"
+  ];
+  assert[rootPowerExpressions =!= {},
+    label <> " coupled group contains no half-integer root powers."];
+  physicalRootBases = exactUniqueExpressions[
+    (#[[1]] /. physicalSubstitution) & /@ rootPowerExpressions,
+    "physical root bases"
+  ];
+  commonCandidates = Select[
+    physicalRootBases,
+    Function[currentBase,
+      Module[{endpoint},
+        endpoint = Quiet@Check[
+          Factor[Together[currentBase /. s23 -> 0]],
+          $Failed
+        ];
+        endpoint =!= $Failed && ! invalidEndpointQ[endpoint] &&
+          ! TrueQ[endpoint === 0] &&
+          zeroEquivalentQ[endpoint - expectedRootRadicand, 120]
+      ]
+    ]
+  ];
+  assert[commonCandidates =!= {},
+    label <> " cannot derive its common endpoint radicand."];
+  commonRadicand = First@SortBy[
+    exactUniqueExpressions[commonCandidates, "common radicands"],
+    Hash[#, "SHA256"] &
+  ];
+  commonEndpointRadicand = Quiet@Check[
+    Factor[Together[commonRadicand /. s23 -> 0]],
+    $Failed
+  ];
+  assert[
+    commonEndpointRadicand =!= $Failed &&
+      zeroEquivalentQ[
+        commonEndpointRadicand - expectedRootRadicand,
+        120
+      ] &&
+      AllTrue[
+        {1, -1},
+        Function[currentSign,
+          Module[{root0},
+            root0 = Lookup[
+              rootByDeltaSign,
+              currentSign,
+              Missing["Absent"]
+            ];
+            ! MissingQ[root0] &&
+              zeroEquivalentQ[root0^2 - commonEndpointRadicand, 120]
+          ]
+        ]
+      ],
+    label <> " common root does not match both physical branches."
+  ];
+  rootRecords = MapIndexed[
+    Function[{rootExpression, position},
+      Module[
+        {
+          physicalBase, ratio, ratioNumerator, ratioDenominator,
+          ratioExponent, rootExponent, formula
+        },
+        physicalBase = rootExpression[[1]] /. physicalSubstitution;
+        rootExponent = rootExpression[[2]];
+        ratio = Quiet@Check[
+          Cancel[Together[physicalBase/commonRadicand]],
+          $Failed
+        ];
+        assert[ratio =!= $Failed,
+          label <> " root-radicand ratio reduction failed."];
+        ratioNumerator = Numerator[ratio];
+        ratioDenominator = Denominator[ratio];
+        ratioExponent = Quiet@Check[
+          Exponent[ratioNumerator, s23, Min] -
+            Exponent[ratioDenominator, s23, Min],
+          $Failed
+        ];
+        assert[
+          IntegerQ[ratioExponent] && IntegerQ[2 rootExponent] &&
+            IntegerQ[2 ratioExponent rootExponent] &&
+            TrueQ[
+              Cancel[Together[ratio - s23^ratioExponent]] === 0
+            ],
+          label <> " found a radical outside the one-root s23 basis."
+        ];
+        formula = S10CommonRoot^(2 rootExponent) *
+          S10EndpointT^(2 ratioExponent rootExponent);
+        <|
+          "OccurrenceID" -> First[position],
+          "Expression" -> rootExpression,
+          "RatioExponent" -> ratioExponent,
+          "RootExponent" -> rootExponent,
+          "Formula" -> formula
+        |>
+      ]
+    ],
+    rootPowerExpressions
+  ];
+  rootPlaceholderRules = Map[
+    # ["Expression"] -> S10RootOccurrence[# ["OccurrenceID"]] &,
+    rootRecords
+  ];
+  rootReverseRules = Map[
+    S10RootOccurrence[# ["OccurrenceID"]] -> # ["Expression"] &,
+    rootRecords
+  ];
+  rootFormulaRules = Map[
+    S10RootOccurrence[# ["OccurrenceID"]] -> # ["Formula"] &,
+    rootRecords
+  ];
+  rootPlaceholderDispatch = Dispatch[rootPlaceholderRules];
+  rootReverseDispatch = Dispatch[rootReverseRules];
+  rootFormulaDispatch = Dispatch[rootFormulaRules];
+  Print["S10_GROUP_PHASE_DONE: label=", label,
+    " phase=root-inventory roots=", Length[rootPowerExpressions]];
+
+  Print["S10_GROUP_PHASE_START: label=", label,
+    " phase=function-inventory"];
+  rawFunctions = exactUniqueExpressions[
+    Cases[
+      sourceTerms,
+      currentFunction : (Log[_] | PolyLog[_, _]) :> currentFunction,
+      Infinity
+    ],
+    "special-function occurrences"
+  ];
+  assert[
+    rawFunctions =!= {} &&
+      AllTrue[
+        rawFunctions,
+        MatchQ[#, Log[_] | PolyLog[2, _]] &
+      ],
+    label <> " has an empty or unsupported special-function inventory."
+  ];
+  functionPlaceholderRules = MapIndexed[
+    #1 -> S10SharedFunctionOccurrence[First[#2]] &,
+    rawFunctions
+  ];
+  functionReverseRules = MapIndexed[
+    S10SharedFunctionOccurrence[First[#2]] -> #1 &,
+    rawFunctions
+  ];
+  functionPlaceholderDispatch = Dispatch[functionPlaceholderRules];
+  functionReverseDispatch = Dispatch[functionReverseRules];
+  placeholderTerms = sourceTerms /.
+    functionPlaceholderDispatch /. rootPlaceholderDispatch;
+  reconstructionGate = And @@ MapThread[
+    SameQ,
+    {
+      placeholderTerms /. rootReverseDispatch /. functionReverseDispatch,
+      sourceTerms
+    }
+  ];
+  assert[reconstructionGate,
+    label <> " literal root/function compression failed reconstruction."];
+  compressedTerms = endpointPowerTransform /@
+    (placeholderTerms /. rootFormulaDispatch /. physicalSubstitution);
+  assert[
+    FreeQ[compressedTerms, s23 | _Log | _PolyLog | _S10RootOccurrence],
+    label <> " compressed group retains an unresolved endpoint object."
+  ];
+
+  normalizeFunctionRecord[currentFunction_, occurrenceID_Integer] := Module[
+    {
+      transformedFunction, functionKind, functionOrder,
+      functionArgument, normalizedArgument, normalizedFunction
+    },
+    transformedFunction = endpointPowerTransform[
+      currentFunction /. rootPlaceholderDispatch /. rootFormulaDispatch /.
+        physicalSubstitution
+    ];
+    functionKind = If[Head[currentFunction] === Log, "Log", "PolyLog"];
+    functionOrder = If[
+      functionKind === "Log",
+      Missing["NotApplicable"],
+      currentFunction[[1]]
+    ];
+    functionArgument = If[
+      functionKind === "Log",
+      transformedFunction[[1]],
+      transformedFunction[[2]]
+    ];
+    normalizedArgument = Quiet@Check[
+      Cancel[Together[functionArgument]],
+      $Failed
+    ];
+    assert[
+      normalizedArgument =!= $Failed &&
+        FreeQ[normalizedArgument, s23 | _Log | _PolyLog],
+      label <> " failed to normalize shared function occurrence " <>
+        ToString[occurrenceID] <> "."
+    ];
+    normalizedFunction = If[
+      functionKind === "Log",
+      Log[normalizedArgument],
+      PolyLog[functionOrder, normalizedArgument]
+    ];
+    <|
+      "OccurrenceID" -> occurrenceID,
+      "Kind" -> functionKind,
+      "Order" -> functionOrder,
+      "NormalizedArgument" -> normalizedArgument,
+      "NormalizedFunction" -> normalizedFunction
+    |>
+  ];
+  functionRecords = MapIndexed[
+    Function[{currentFunction, currentPosition},
+      Module[{answer},
+        Print[
+          "S10_GROUP_FUNCTION_NORMALIZE_START: label=", label,
+          " function=", First[currentPosition], "/", Length[rawFunctions]
+        ];
+        answer = normalizeFunctionRecord[
+          currentFunction,
+          First[currentPosition]
+        ];
+        Print[
+          "S10_GROUP_FUNCTION_NORMALIZE_DONE: label=", label,
+          " function=", First[currentPosition],
+          " valid=", AssociationQ[answer]
+        ];
+        answer
+      ]
+    ],
+    rawFunctions
+  ];
+  basisFunctions = exactUniqueExpressions[
+    Lookup[functionRecords, "NormalizedFunction"],
+    "normalized shared-function basis"
+  ];
+  basisFunctionHashToID = AssociationThread[
+    expressionSHA256Hex /@ basisFunctions,
+    Range[Length[basisFunctions]]
+  ];
+  assert[
+    Length[basisFunctionHashToID] === Length[basisFunctions],
+    label <> " normalized shared-function basis has a hash collision."
+  ];
+  functionBasisIDs = Lookup[
+    basisFunctionHashToID,
+    expressionSHA256Hex /@ Lookup[
+      functionRecords,
+      "NormalizedFunction"
+    ]
+  ];
+  assert[
+    Length[basisFunctions] > 0 &&
+      Length[functionBasisIDs] === Length[rawFunctions] &&
+      AllTrue[functionBasisIDs, IntegerQ] &&
+      FreeQ[functionBasisIDs, _Missing],
+    label <> " shared function basis construction failed."
+  ];
+  Print["S10_GROUP_PHASE_DONE: label=", label,
+    " phase=function-inventory occurrences=", Length[rawFunctions],
+    " basis=", Length[basisFunctions]];
+
+  commonRadicandT = endpointPowerTransform[commonRadicand];
+  deriveRootPolynomial[root0_, maximumOrder_Integer] := Module[
+    {
+      polynomial = root0, coefficient, equation, solutions,
+      currentOrder
+    },
+    Do[
+      coefficient = Unique["S10RootCoefficient"];
+      equation = Coefficient[
+        Normal@Series[
+          (polynomial + coefficient S10EndpointT^currentOrder)^2 -
+            commonRadicandT,
+          {S10EndpointT, 0, currentOrder}
+        ],
+        S10EndpointT,
+        currentOrder
+      ] == 0;
+      solutions = Solve[equation, coefficient];
+      If[Length[solutions] =!= 1, Return[$Failed]];
+      polynomial = polynomial +
+        (coefficient /. First[solutions]) *
+          S10EndpointT^currentOrder;,
+      {currentOrder, 1, maximumOrder}
+    ];
+    polynomial
+  ];
+  rootResidualCoefficients[polynomial_, maximumOrder_Integer] := Table[
+    Factor[Together[Coefficient[
+      Normal@Series[
+        polynomial^2 - commonRadicandT,
+        {S10EndpointT, 0, maximumOrder}
+      ],
+      S10EndpointT,
+      currentOrder
+    ]]],
+    {currentOrder, 0, maximumOrder}
+  ];
+  rootProbeOrder = 6;
+  rootProbePolynomials = Map[
+    deriveRootPolynomial[#, rootProbeOrder] &,
+    rootByDeltaSign
+  ];
+  assert[FreeQ[Values[rootProbePolynomials], $Failed],
+    label <> " root-probe polynomial derivation failed."];
+
+  Print["S10_GROUP_PHASE_START: label=", label,
+    " phase=structural-support"];
+  termFactorLists = Map[
+    If[Head[#] === Times, List @@ #, {#}] &,
+    compressedTerms
+  ];
+  supportFactors = exactUniqueExpressions[
+    Flatten[termFactorLists, 1],
+    "compressed top-level factors"
+  ];
+  supportFactorHashes = expressionSHA256Hex /@ supportFactors;
+  supportFactorHashToID = AssociationThread[
+    supportFactorHashes,
+    Range[Length[supportFactors]]
+  ];
+  assert[
+    Length[supportFactorHashToID] === Length[supportFactors],
+    label <> " compressed top-level factors have a hash collision."
+  ];
+  termSupportFactorIDs = Map[
+    Lookup[supportFactorHashToID, expressionSHA256Hex /@ #] &,
+    termFactorLists
+  ];
+  assert[
+    FreeQ[termSupportFactorIDs, _Missing] &&
+      Length[termSupportFactorIDs] === Length[compressedTerms],
+    label <> " cannot map its compressed factors."
+  ];
+  supportMinimumPower[
+      currentFactor_, rootPolynomial_, currentSign_Integer,
+      currentPosition_Integer
+    ] := Module[
+    {parts, partSeries, partMinimumPowers, finitePartMinimumPowers},
+    Print[
+      "S10_GROUP_SUPPORT_FACTOR_START: label=", label,
+      " rootSign=", currentSign,
+      " factor=", currentPosition, "/", Length[supportFactors]
+    ];
+    parts = If[
+      Head[currentFactor] === Plus,
+      List @@ currentFactor,
+      {currentFactor}
+    ];
+    partSeries = Map[
+      Function[currentPart,
+        If[
+          FreeQ[currentPart, S10EndpointT | S10CommonRoot],
+          currentPart,
+          CheckAbort[
+            Quiet@Series[
+              currentPart /.
+                S10CommonRoot -> rootPolynomial /. qcdRules,
+              {S10EndpointT, 0, 0}
+            ],
+            $Failed
+          ]
+        ]
+      ],
+      parts
+    ];
+    assert[
+      FreeQ[partSeries, $Failed] &&
+        AllTrue[partSeries, seriesKnownThroughZeroQ],
+      label <> " structural-support factor " <>
+        ToString[currentPosition] <> " failed on root sign " <>
+        ToString[currentSign] <> "."
+    ];
+    partMinimumPowers = seriesMinimumPower /@ partSeries;
+    finitePartMinimumPowers = DeleteCases[
+      partMinimumPowers,
+      Infinity
+    ];
+    assert[
+      AllTrue[finitePartMinimumPowers, IntegerQ],
+      label <> " structural-support factor has a noninteger power."
+    ];
+    Print[
+      "S10_GROUP_SUPPORT_FACTOR_DONE: label=", label,
+      " rootSign=", currentSign,
+      " factor=", currentPosition,
+      " minimumPowerBound=",
+      If[finitePartMinimumPowers === {}, Infinity,
+        Min[finitePartMinimumPowers]]
+    ];
+    If[
+      finitePartMinimumPowers === {},
+      Infinity,
+      Min[finitePartMinimumPowers]
+    ]
+  ];
+  supportMinimumPowersBySign = Association@Table[
+    rootSign -> MapIndexed[
+      supportMinimumPower[
+        #1,
+        rootProbePolynomials[rootSign],
+        rootSign,
+        First[#2]
+      ] &,
+      supportFactors
+    ],
+    {rootSign, {1, -1}}
+  ];
+  termSupportBoundsBySign = Association@Table[
+    rootSign -> Map[
+      Function[currentFactorIDs,
+        Module[{currentBounds},
+          currentBounds =
+            supportMinimumPowersBySign[rootSign][[currentFactorIDs]];
+          If[MemberQ[currentBounds, Infinity], Infinity,
+            Total[currentBounds]]
+        ]
+      ],
+      termSupportFactorIDs
+    ],
+    {rootSign, {1, -1}}
+  ];
+  finiteSupportBounds = DeleteCases[
+    Flatten[Values[termSupportBoundsBySign]],
+    Infinity
+  ];
+  assert[
+    finiteSupportBounds =!= {} &&
+      AllTrue[finiteSupportBounds, IntegerQ],
+    label <> " grouped structural support is not integer-powered in t."
+  ];
+  requiredFunctionSeriesOrder = Max[0, -Min[finiteSupportBounds]];
+  assert[requiredFunctionSeriesOrder <= 8,
+    label <> " requires shared function order " <>
+      ToString[requiredFunctionSeriesOrder] <>
+      ", beyond the validated bounded evaluator."];
+  requiredRootSeriesOrder = Max[
+    rootProbeOrder,
+    requiredFunctionSeriesOrder + 4
+  ];
+  Print["S10_GROUP_PHASE_DONE: label=", label,
+    " phase=structural-support factors=", Length[supportFactors],
+    " functionOrder=", requiredFunctionSeriesOrder,
+    " rootOrder=", requiredRootSeriesOrder];
+  rootPolynomials = Map[
+    deriveRootPolynomial[#, requiredRootSeriesOrder] &,
+    rootByDeltaSign
+  ];
+  rootResiduals = Map[
+    rootResidualCoefficients[#, requiredRootSeriesOrder] &,
+    rootPolynomials
+  ];
+  rootGate = TrueQ[
+    FreeQ[Values[rootPolynomials], $Failed] &&
+      AllTrue[Flatten[Values[rootResiduals]], # === 0 &]
+  ];
+  assert[rootGate,
+    label <> " common-root defining-equation jet failed."];
+
+  seriesKnownThroughOrderQ[value_, maximumOrder_Integer] := Module[
+    {embeddedSeries, nonSeriesRemainder},
+    Which[
+      Head[value] === SeriesData,
+        TrueQ[
+          value[[1]] === S10EndpointT && value[[2]] === 0 &&
+            value[[5]]/value[[6]] > maximumOrder
+        ],
+      TrueQ[value === 0],
+        True,
+      FreeQ[value, S10EndpointT],
+        True,
+      True,
+        embeddedSeries = Cases[value, _SeriesData, {0, Infinity}];
+        nonSeriesRemainder = value /. _SeriesData -> 0;
+        TrueQ[
+          embeddedSeries =!= {} &&
+            AllTrue[
+              embeddedSeries,
+              Function[currentSeries,
+                currentSeries[[1]] === S10EndpointT &&
+                  currentSeries[[2]] === 0 &&
+                  currentSeries[[5]]/currentSeries[[6]] > maximumOrder
+              ]
+            ] &&
+            FreeQ[nonSeriesRemainder, S10EndpointT]
+        ]
+    ]
+  ];
+  normalizeGeneratedEndpointLogs[value_, maximumOrder_Integer] := Module[
+    {
+      endpointLogs, endpointLogRules, normalizedValue
+    },
+    endpointLogs = DeleteDuplicates@Cases[
+      value,
+      currentLog : Log[currentArgument_] /;
+          ! FreeQ[currentArgument, S10EndpointT] :> currentLog,
+      Infinity
+    ];
+    endpointLogRules = Map[
+      Function[currentLog,
+        Module[
+          {
+            argumentSeries, minimumPower, leadingCoefficient,
+            unitSeries, replacement
+          },
+          argumentSeries = CheckAbort[
+            Quiet@Series[
+              currentLog[[1]],
+              {S10EndpointT, 0, maximumOrder + 2}
+            ],
+            $Failed
+          ];
+          If[argumentSeries === $Failed, Return[$Failed]];
+          minimumPower = seriesMinimumPower[argumentSeries];
+          If[! IntegerQ[minimumPower],
+            Return[$Failed]
+          ];
+          leadingCoefficient = Coefficient[
+            Normal[argumentSeries],
+            S10EndpointT,
+            minimumPower
+          ];
+          If[
+            invalidEndpointQ[leadingCoefficient] ||
+              TrueQ[leadingCoefficient === 0],
+            Return[$Failed]
+          ];
+          unitSeries = CheckAbort[
+            Quiet@Series[
+              Normal[argumentSeries]/(
+                leadingCoefficient S10EndpointT^minimumPower
+              ),
+              {S10EndpointT, 0, maximumOrder}
+            ],
+            $Failed
+          ];
+          If[
+            unitSeries === $Failed ||
+              ! zeroEquivalentQ[
+                (Normal[unitSeries] /. S10EndpointT -> 0) - 1,
+                60
+              ],
+            Return[$Failed]
+          ];
+          replacement = minimumPower S10EndpointLog +
+            Log[leadingCoefficient] +
+            Normal@Series[
+              Log[Normal[unitSeries]],
+              {S10EndpointT, 0, maximumOrder}
+            ];
+          currentLog -> replacement
+        ]
+      ],
+      endpointLogs
+    ];
+    If[MemberQ[endpointLogRules, $Failed], Return[$Failed]];
+    normalizedValue = CheckAbort[
+      Quiet@Series[
+        Normal[value] /. endpointLogRules,
+        {S10EndpointT, 0, maximumOrder}
+      ],
+      $Failed
+    ];
+    If[
+      normalizedValue === $Failed ||
+        Cases[
+          normalizedValue,
+          Log[currentArgument_] /;
+            ! FreeQ[currentArgument, S10EndpointT],
+          Infinity
+        ] =!= {},
+      $Failed,
+      normalizedValue
+    ]
+  ];
+  deriveFunctionSeries[
+      normalizedFunction_, rootPolynomial_, maximumOrder_Integer
+    ] := Module[
+    {rawSeries, normalizedSeries},
+    rawSeries = CheckAbort[
+      Quiet@Series[
+        normalizedFunction /.
+          S10CommonRoot -> rootPolynomial,
+        {S10EndpointT, 0, maximumOrder}
+      ],
+      $Failed
+    ];
+    If[rawSeries === $Failed, Return[$Failed]];
+    normalizedSeries = normalizeGeneratedEndpointLogs[
+      rawSeries,
+      maximumOrder
+    ];
+    If[
+      normalizedSeries === $Failed ||
+        ! seriesKnownThroughOrderQ[normalizedSeries, maximumOrder] ||
+        ! FreeQ[
+          normalizedSeries,
+          S10CommonRoot | _Series | _SeriesCoefficient |
+            _ConditionalExpression
+        ],
+      $Failed,
+      normalizedSeries
+    ]
+  ];
+  factorSeriesCoefficientData[
+      currentFactor_, currentSubstitutionDispatch_,
+      maximumOrder_Integer
+    ] := Module[
+    {
+      parts, transformedParts, partSeries, partMinimumPowers,
+      finitePartMinimumPowers, minimumPowerBound,
+      coefficientPowers, coefficients
+    },
+    parts = If[
+      Head[currentFactor] === Plus,
+      List @@ currentFactor,
+      {currentFactor}
+    ];
+    transformedParts = parts /. currentSubstitutionDispatch;
+    If[
+      ! FreeQ[
+        transformedParts,
+        s23 | S10CommonRoot | _S10RootOccurrence |
+          _S10SharedFunctionOccurrence
+      ],
+      Return[$Failed]
+    ];
+    partSeries = Map[
+      Function[currentPart,
+        If[
+          FreeQ[currentPart, S10EndpointT],
+          currentPart,
+          CheckAbort[
+            Quiet@Series[
+              currentPart,
+              {S10EndpointT, 0, maximumOrder}
+            ],
+            $Failed
+          ]
+        ]
+      ],
+      transformedParts
+    ];
+    If[
+      ! FreeQ[partSeries, $Failed] ||
+        ! AllTrue[
+          partSeries,
+          seriesKnownThroughOrderQ[#, maximumOrder] &
+        ],
+      Return[$Failed]
+    ];
+    partMinimumPowers = seriesMinimumPower /@ partSeries;
+    finitePartMinimumPowers = DeleteCases[
+      partMinimumPowers,
+      Infinity
+    ];
+    If[
+      ! AllTrue[finitePartMinimumPowers, IntegerQ],
+      Return[$Failed]
+    ];
+    minimumPowerBound = If[
+      finitePartMinimumPowers === {},
+      Infinity,
+      Min[finitePartMinimumPowers]
+    ];
+    coefficientPowers = If[
+      minimumPowerBound === Infinity ||
+        minimumPowerBound > maximumOrder,
+      {},
+      Range[minimumPowerBound, maximumOrder]
+    ];
+    coefficients = AssociationMap[
+      Function[currentPower,
+        Total[
+          Coefficient[
+            Normal[#],
+            S10EndpointT,
+            currentPower
+          ] & /@ partSeries
+        ]
+      ],
+      coefficientPowers
+    ];
+    If[
+      ! FreeQ[
+        Values[coefficients],
+        s23 | S10EndpointT | S10CommonRoot | _S10RootOccurrence |
+          _S10SharedFunctionOccurrence | _Series | _SeriesCoefficient
+      ],
+      Return[$Failed]
+    ];
+    <|
+      "MinimumPowerBound" -> minimumPowerBound,
+      "MaximumPower" -> maximumOrder,
+      "Coefficients" -> coefficients
+    |>
+  ];
+  convolveLaurentCoefficientData[
+      currentFactorData_List, maximumOrder_Integer
+    ] := Module[
+    {
+      answer = <|0 -> 1|>, nextAnswer, remainingMinimumBounds,
+      maximumPartialPower, currentFactor, totalPower,
+      currentFactorIndex
+    },
+    Do[
+      currentFactor = currentFactorData[[currentFactorIndex]];
+      remainingMinimumBounds = Lookup[
+        Drop[currentFactorData, currentFactorIndex],
+        "MinimumPowerBound"
+      ];
+      If[MemberQ[remainingMinimumBounds, Infinity],
+        Return[<||>]
+      ];
+      maximumPartialPower = maximumOrder -
+        Total[remainingMinimumBounds];
+      nextAnswer = <||>;
+      KeyValueMap[
+        Function[{leftPower, leftCoefficient},
+          KeyValueMap[
+            Function[{rightPower, rightCoefficient},
+              totalPower = leftPower + rightPower;
+              If[totalPower <= maximumPartialPower,
+                AssociateTo[
+                  nextAnswer,
+                  totalPower ->
+                    Lookup[nextAnswer, totalPower, 0] +
+                      leftCoefficient rightCoefficient
+                ]
+              ]
+            ],
+            currentFactor["Coefficients"]
+          ]
+        ],
+        answer
+      ];
+      answer = nextAnswer;,
+      {currentFactorIndex, Length[currentFactorData]}
+    ];
+    KeySelect[answer, # <= maximumOrder &]
+  ];
+
+  Print["S10_GROUP_PHASE_START: label=", label,
+    " phase=shared-function-series"];
+  functionSeriesBySign = Association@Table[
+    rootSign -> MapIndexed[
+      Function[{basisFunction, basisPosition},
+        Module[{answer},
+          Print[
+            "S10_GROUP_FUNCTION_START: label=", label,
+            " rootSign=", rootSign,
+            " basis=", First[basisPosition], "/", Length[basisFunctions]
+          ];
+          answer = deriveFunctionSeries[
+            basisFunction,
+            rootPolynomials[rootSign],
+            requiredFunctionSeriesOrder
+          ];
+          Print[
+            "S10_GROUP_FUNCTION_DONE: label=", label,
+            " rootSign=", rootSign,
+            " basis=", First[basisPosition],
+            " valid=", answer =!= $Failed
+          ];
+          answer
+        ]
+      ],
+      basisFunctions
+    ],
+    {rootSign, {1, -1}}
+  ];
+  functionSeriesGate = TrueQ[
+    FreeQ[Values[functionSeriesBySign], $Failed] &&
+      AllTrue[
+        Flatten[Values[functionSeriesBySign]],
+        seriesKnownThroughOrderQ[#, requiredFunctionSeriesOrder] &
+      ]
+  ];
+  assert[functionSeriesGate,
+    label <> " shared group function series failed."];
+  Print["S10_GROUP_PHASE_DONE: label=", label,
+    " phase=shared-function-series basis=", Length[basisFunctions]];
 
   Do[
-    positiveRoot = rootSign Q2 deltaPhysical/denominatorPhysical;
-    rootRule = HoldPattern[
-      Power[
-        rootArgument_,
-        rootPower_Rational?((Denominator[#] === 2) &)
-      ]
-    ] /; TrueQ[
-      Cancel[Together[rootArgument - expectedRootRadicand]] === 0
-    ] :> positiveRoot^(2 rootPower);
-    canonical[value_] := FixedPoint[
-      Factor[Together[# /. rootRule]] &,
-      value,
-      3
-    ];
     branchAssumptions =
       aPhysical > 0 && 0 < rTPhysical < 1 && 0 < zH < 1 &&
         Q2 > 0 && rootSign deltaPhysical > 0;
-
-    transformTerm[sourceTerm_, finiteTerm_, sourceIndex_] := Module[
-      {
-        held, transformed, rootRadicands, sourceLogArguments,
-        zeroSourceLogArguments, slopes, slope,
-        zeroHeldLogCount = 0, result
-      },
-      held = finiteTerm /. Log[value_] :> heldLog[value];
-      held = held /. PolyLog[order_, value_] :> heldPolyLog[order, value];
-      transformed = held /. physicalSubstitution;
-      rootRadicands = DeleteDuplicates@Cases[
-        transformed,
-        Power[
-          radicand_,
-          power_Rational?((Denominator[#] === 2) &)
-        ] :> radicand,
-        Infinity
-      ];
-      assert[And @@ (
-          TrueQ[Cancel[Together[# - expectedRootRadicand]] === 0] & /@
-            rootRadicands
-        ),
-        label <> " term " <> ToString[sourceIndex] <>
-          " has an unexpected physical endpoint square root."];
-      transformed = transformed /. rootRule;
-
-      sourceLogArguments = DeleteDuplicates@Cases[
-        sourceTerm,
-        Log[value_] :> value,
-        Infinity
-      ];
-      zeroSourceLogArguments = Select[
-        sourceLogArguments,
-        TrueQ[canonical[(# /. physicalSubstitution) /. s23 -> 0] === 0] &
-      ];
-      slopes = {};
-      slope = Missing["NotNeeded"];
-
-      transformed = transformed /. heldLog[value_] :> Module[
-        {argument = canonical[value]},
-        If[TrueQ[argument === 0],
-          zeroHeldLogCount++;
-          If[slopes === {},
-            slopes = Quiet@DeleteDuplicates[
-              canonical[
-                ((D[#, s23] /. s23 -> 0) /. physicalSubstitution)
-              ] & /@ zeroSourceLogArguments
-            ];
-            assert[
-              Length[slopes] === 1 &&
-                And @@ (
-                  FreeQ[#, s23] && ! invalidEndpointQ[#] &&
-                    ! TrueQ[# === 0] & /@ slopes
-                ),
-              label <> " term " <> ToString[sourceIndex] <>
-                " has a non-linear or invalid vanishing logarithm."];
-            slope = First[slopes]
+    branchFunctionRules = MapThread[
+      S10SharedFunctionOccurrence[#1] ->
+        functionSeriesBySign[rootSign][[#2]] &,
+      {Range[Length[rawFunctions]], functionBasisIDs}
+    ];
+    branchSubstitutionDispatch = Dispatch@Join[
+      {S10CommonRoot -> rootPolynomials[rootSign]},
+      branchFunctionRules,
+      qcdRules
+    ];
+    Print["S10_GROUP_PHASE_START: label=", label,
+      " phase=branch-factor-ledger rootSign=", rootSign];
+    branchBaseFactorLists = Map[
+      If[Head[#] === Times, List @@ #, {#}] &,
+      compressedTerms
+    ];
+    branchFactorizationGate = And @@ MapThread[
+      SameQ[Times @@ #1, #2] &,
+      {branchBaseFactorLists, compressedTerms}
+    ];
+    assert[branchFactorizationGate,
+      label <> " branch factor split failed exact reconstruction."];
+    branchFactorLists = MapIndexed[
+      Function[{currentFactorList, currentPosition},
+        Module[{answer},
+          Print[
+            "S10_GROUP_LEDGER_TERM_TRANSFORM_START: label=", label,
+            " rootSign=", rootSign,
+            " term=", First[currentPosition], "/",
+            Length[branchBaseFactorLists]
           ];
-          assert[! MissingQ[slope] && ! invalidEndpointQ[slope],
-            label <> " term " <> ToString[sourceIndex] <>
-              " cannot match its endpoint logarithm to a source slope."];
-          endpointLog + heldLog[slope],
-          heldLog[argument]
+          answer = Join[{S10EndpointT^2}, currentFactorList];
+          Print[
+            "S10_GROUP_LEDGER_TERM_TRANSFORM_DONE: label=", label,
+            " rootSign=", rootSign,
+            " term=", First[currentPosition],
+            " factors=", Length[answer]
+          ];
+          answer
         ]
-      ];
-      transformed = transformed /.
-        heldPolyLog[order_, value_] :> heldPolyLog[order, canonical[value]];
-      assert[zeroHeldLogCount <= 2,
-        label <> " term " <> ToString[sourceIndex] <>
-          " has an unexpected number of endpoint logarithms."];
-      result = transformed /.
-        heldLog[value_] :> Log[value] /.
-        heldPolyLog[order_, value_] :> PolyLog[order, value];
-      assert[
-        FreeQ[result, heldLog | heldPolyLog] &&
-          ! invalidEndpointQ[result] && FreeQ[result, s23],
-        label <> " term " <> ToString[sourceIndex] <>
-          " did not produce a valid branch-resolved endpoint value."];
-      result
+      ],
+      branchBaseFactorLists
     ];
-
-    branchTerms = MapThread[
-      transformTerm,
-      {sourceTerms, finiteTerms, sourceIndices}
-    ] /. qcdRules;
-    maximumDegree = Max[
-      0,
-      Sequence @@ Replace[
-        Exponent[#, endpointLog] & /@ branchTerms,
-        -Infinity -> 0,
-        {1}
-      ]
-    ];
-    If[maximumDegree === 0,
-      Print[
-        "S10_COUPLED_ENDPOINT_CHECK: label=", label,
-        " rootSign=", rootSign,
-        " logPower=none status=log-free-after-branch-grouping"
-      ]
-    ];
-    Do[
-      coefficient = Total[
-        Coefficient[#, endpointLog, groupPosition] & /@ branchTerms
-      ];
-      assert[
-        exactPhysicalZeroQ[coefficient, branchAssumptions],
-        label <> " retains endpoint Log[s23]^" <>
-          ToString[groupPosition] <> " on root sign " <>
-          ToString[rootSign] <> "."];
-      Print[
-        "S10_COUPLED_ENDPOINT_CHECK: label=", label,
-        " rootSign=", rootSign,
-        " logPower=", groupPosition,
-        " status=zero"
-      ];,
-      {groupPosition, maximumDegree, 1, -1}
-    ];
-    constant = Total[(# /. endpointLog -> 0) & /@ branchTerms];
     assert[
-      FreeQ[constant, endpointLog | s23] && ! invalidEndpointQ[constant],
-      label <> " has an invalid grouped endpoint constant on root sign " <>
-        ToString[rootSign] <> "."];
-    branchResults[rootSign] = constant;
-    Clear[branchTerms, coefficient, constant];
+      FreeQ[
+        Flatten[branchFactorLists, 1],
+        s23 | _Log | _PolyLog | _S10RootOccurrence
+      ],
+      label <> " branch factor ledger retains an uncompressed object."
+    ];
+    Print[
+      "S10_GROUP_LEDGER_HASH_START: label=", label,
+      " rootSign=", rootSign,
+      " factors=", Length[Flatten[branchFactorLists, 1]]
+    ];
+    branchFactorHashGroups = GatherBy[
+      Flatten[branchFactorLists, 1],
+      expressionSHA256Hex
+    ];
+    assert[
+      AllTrue[
+        branchFactorHashGroups,
+        Function[currentGroup,
+          AllTrue[Rest[currentGroup], SameQ[First[currentGroup], #] &]
+        ]
+      ],
+      label <> " branch factor ledger has a SHA-256 collision."
+    ];
+    branchUniqueFactors = First /@ branchFactorHashGroups;
+    Print[
+      "S10_GROUP_LEDGER_HASH_DONE: label=", label,
+      " rootSign=", rootSign,
+      " uniqueFactors=", Length[branchUniqueFactors]
+    ];
+    branchFactorHashes = expressionSHA256Hex /@ branchUniqueFactors;
+    branchFactorHashToID = AssociationThread[
+      branchFactorHashes,
+      Range[Length[branchUniqueFactors]]
+    ];
+    assert[
+      Length[branchFactorHashToID] === Length[branchUniqueFactors],
+      label <> " branch factor ledger hash map is inconsistent."
+    ];
+    branchTermFactorIDs = Map[
+      Lookup[branchFactorHashToID, expressionSHA256Hex /@ #] &,
+      branchFactorLists
+    ];
+    assert[
+      FreeQ[branchTermFactorIDs, _Missing],
+      label <> " branch factor ledger cannot map a term factor."
+    ];
+    branchPilotFactorData = MapIndexed[
+      Function[{currentFactor, currentPosition},
+        Module[{answer},
+          Print[
+            "S10_GROUP_LEDGER_FACTOR_START: label=", label,
+            " rootSign=", rootSign,
+            " phase=pilot factor=", First[currentPosition], "/",
+            Length[branchUniqueFactors]
+          ];
+          answer = factorSeriesCoefficientData[
+            currentFactor,
+            branchSubstitutionDispatch,
+            0
+          ];
+          Print[
+            "S10_GROUP_LEDGER_FACTOR_DONE: label=", label,
+            " rootSign=", rootSign,
+            " phase=pilot factor=", First[currentPosition],
+            " valid=", AssociationQ[answer]
+          ];
+          answer
+        ]
+      ],
+      branchUniqueFactors
+    ];
+    assert[
+      FreeQ[branchPilotFactorData, $Failed] &&
+        AllTrue[branchPilotFactorData, AssociationQ],
+      label <> " branch factor pilot failed on root sign " <>
+        ToString[rootSign] <> "."
+    ];
+    branchFactorMinimumPowerBounds = Lookup[
+      branchPilotFactorData,
+      "MinimumPowerBound"
+    ];
+    branchTermMinimumPowerBounds = Map[
+      Function[currentFactorIDs,
+        Module[{currentBounds},
+          currentBounds =
+            branchFactorMinimumPowerBounds[[currentFactorIDs]];
+          If[MemberQ[currentBounds, Infinity], Infinity,
+            Total[currentBounds]]
+        ]
+      ],
+      branchTermFactorIDs
+    ];
+    branchRequiredFactorMaxima = ConstantArray[
+      0,
+      Length[branchUniqueFactors]
+    ];
+    MapThread[
+      Function[{currentFactorIDs, currentTermMinimum},
+        If[currentTermMinimum =!= Infinity,
+          Scan[
+            Function[currentFactorID,
+              branchRequiredFactorMaxima[[currentFactorID]] = Max[
+                branchRequiredFactorMaxima[[currentFactorID]],
+                -(
+                  currentTermMinimum -
+                    branchFactorMinimumPowerBounds[[currentFactorID]]
+                )
+              ]
+            ],
+            currentFactorIDs
+          ]
+        ]
+      ],
+      {branchTermFactorIDs, branchTermMinimumPowerBounds}
+    ];
+    assert[
+      AllTrue[branchRequiredFactorMaxima, IntegerQ] &&
+        Max[branchRequiredFactorMaxima] <= 12,
+      label <> " branch factor ledger requires unbounded support."
+    ];
+    branchFactorData = MapThread[
+      Function[{pilotData, currentFactor, neededMaximum},
+        If[
+          neededMaximum <= 0,
+          pilotData,
+          Module[{answer},
+            Print[
+              "S10_GROUP_LEDGER_FACTOR_START: label=", label,
+              " rootSign=", rootSign,
+              " phase=extend maximum=", neededMaximum
+            ];
+            answer = factorSeriesCoefficientData[
+              currentFactor,
+              branchSubstitutionDispatch,
+              neededMaximum
+            ];
+            Print[
+              "S10_GROUP_LEDGER_FACTOR_DONE: label=", label,
+              " rootSign=", rootSign,
+              " phase=extend maximum=", neededMaximum,
+              " valid=", AssociationQ[answer]
+            ];
+            answer
+          ]
+        ]
+      ],
+      {
+        branchPilotFactorData,
+        branchUniqueFactors,
+        branchRequiredFactorMaxima
+      }
+    ];
+    assert[
+      FreeQ[branchFactorData, $Failed] &&
+        AllTrue[branchFactorData, AssociationQ],
+      label <> " branch factor extension failed on root sign " <>
+        ToString[rootSign] <> "."
+    ];
+    branchTermCoefficientData = MapIndexed[
+      Function[{currentFactorIDs, currentPosition},
+        Print[
+          "S10_GROUP_LEDGER_TERM: label=", label,
+          " rootSign=", rootSign,
+          " term=", First[currentPosition], "/",
+          Length[branchTermFactorIDs]
+        ];
+        convolveLaurentCoefficientData[
+          branchFactorData[[currentFactorIDs]],
+          0
+        ]
+      ],
+      branchTermFactorIDs
+    ];
+    assert[
+      AllTrue[branchTermCoefficientData, AssociationQ] &&
+        FreeQ[
+          Values /@ branchTermCoefficientData,
+          S10EndpointT | _Series | _SeriesCoefficient
+        ],
+      label <> " branch coefficient ledger is unresolved."
+    ];
+    branchTotalCoefficients = <||>;
+    Scan[
+      Function[currentTermCoefficients,
+        KeyValueMap[
+          Function[{currentPower, currentCoefficient},
+            AssociateTo[
+              branchTotalCoefficients,
+              currentPower ->
+                Lookup[branchTotalCoefficients, currentPower, 0] +
+                  currentCoefficient
+            ]
+          ],
+          currentTermCoefficients
+        ]
+      ],
+      branchTermCoefficientData
+    ];
+    negativePowers = If[
+      Min[DeleteCases[branchTermMinimumPowerBounds, Infinity]] < 0,
+      Range[
+        Min[DeleteCases[branchTermMinimumPowerBounds, Infinity]],
+        -1
+      ],
+      {}
+    ];
+    negativeResiduals = AssociationMap[
+      Lookup[branchTotalCoefficients, #, 0] &,
+      negativePowers
+    ];
+    assert[
+      AllTrue[
+        Values[negativeResiduals],
+        exactPhysicalZeroQ[#, branchAssumptions] &
+      ],
+      label <> " retains a negative endpoint-coordinate power on root " <>
+        "sign " <> ToString[rootSign] <> "."
+    ];
+    finiteCoefficient = Lookup[branchTotalCoefficients, 0, 0];
+    assert[PolynomialQ[finiteCoefficient, S10EndpointLog],
+      label <> " finite group coefficient is not polynomial in its " <>
+        "endpoint logarithm."];
+    maximumLogDegree = Replace[
+      Exponent[finiteCoefficient, S10EndpointLog],
+      -Infinity -> 0
+    ];
+    logPowers = If[maximumLogDegree > 0,
+      Range[maximumLogDegree, 1, -1],
+      {}
+    ];
+    logResiduals = AssociationMap[
+      Coefficient[finiteCoefficient, S10EndpointLog, #] &,
+      logPowers
+    ];
+    assert[
+      AllTrue[
+        Values[logResiduals],
+        exactPhysicalZeroQ[#, branchAssumptions] &
+      ],
+      label <> " retains an endpoint logarithm on root sign " <>
+        ToString[rootSign] <> "."
+    ];
+    branchConstant = finiteCoefficient /. S10EndpointLog -> 0;
+    assert[
+      ! invalidEndpointQ[branchConstant] &&
+        FreeQ[
+          branchConstant,
+          s23 | S10EndpointT | S10EndpointLog | S10CommonRoot |
+            _S10RootOccurrence | _S10SharedFunctionOccurrence |
+            _Series | _SeriesCoefficient
+        ],
+      label <> " has an invalid finite group value on root sign " <>
+        ToString[rootSign] <> "."
+    ];
+    branchResults[rootSign] = branchConstant;
+    branchCertificates[rootSign] = <|
+      "TermMinimumPowerBounds" -> branchTermMinimumPowerBounds,
+      "UniqueFactorCount" -> Length[branchUniqueFactors],
+      "MaximumFactorOrder" -> Max[branchRequiredFactorMaxima],
+      "NegativePowersChecked" -> negativePowers,
+      "NegativePowerResidualsZero" -> True,
+      "EndpointLogPowersChecked" -> logPowers,
+      "EndpointLogResidualsZero" -> True,
+      "FiniteCoefficientSHA256" ->
+        expressionSHA256Hex[branchConstant]
+    |>;
+    Print[
+      "S10_GROUP_BRANCH_COMPLETE: label=", label,
+      " rootSign=", rootSign,
+      " minimumPowerBound=",
+      Min[DeleteCases[branchTermMinimumPowerBounds, Infinity]],
+      " logDegree=", maximumLogDegree
+    ];
+    Print["S10_GROUP_PHASE_DONE: label=", label,
+      " phase=branch-factor-ledger rootSign=", rootSign,
+      " factors=", Length[branchUniqueFactors]];
+    Clear[
+      branchBaseFactorLists, branchFactorizationGate,
+      branchSubstitutionDispatch,
+      branchFactorLists, branchFactorHashGroups,
+      branchUniqueFactors, branchPilotFactorData, branchFactorData,
+      branchTermCoefficientData, branchTotalCoefficients,
+      negativeResiduals, finiteCoefficient, logResiduals,
+      branchConstant
+    ];
     ClearSystemCache[];,
     {rootSign, {1, -1}}
   ];
@@ -1551,50 +3698,45 @@ coupledEndpointGroupFinite[
     {{branchResults[1] /. inverseSubstitution, originalDelta >= 0}},
     branchResults[-1] /. inverseSubstitution
   ];
+  sourceHashesAfter = Hash[#, "SHA256"] & /@ sourceTerms;
   assert[
-    FreeQ[groupResult, endpointLog | heldLog | heldPolyLog | s23] &&
-      ! invalidEndpointQ[groupResult],
-    label <> " grouped endpoint result is invalid."];
-  groupResult
-];
-
-repairCoupledEndpointGroups[
-    standardTerms_List, standardIndices_List, finite_List,
-    methods_List, groups_List, label_String
-  ] := Module[
-  {
-    repairedFinite = finite, repairedMethods = methods,
-    group, positions, groupedFinite
-  },
-  assert[DuplicateFreeQ[Flatten[groups]],
-    label <> " coupled endpoint groups overlap."];
-  Do[
-    positions = Flatten[
-      FirstPosition[standardIndices, #] & /@ group
-    ];
-    assert[Length[positions] === Length[group] &&
-        And @@ (IntegerQ /@ positions),
-      label <> " coupled endpoint source indices are missing."];
-    Print[
-      "S10_COUPLED_ENDPOINT_STAGE: label=", label,
-      " sourceTerms=", group
-    ];
-    groupedFinite = coupledEndpointGroupFinite[
-      standardTerms[[positions]], repairedFinite[[positions]], group, label
-    ];
-    repairedFinite[[First[positions]]] = groupedFinite;
-    repairedMethods[[First[positions]]] =
-      "physical-branch coupled group";
-    Scan[(repairedFinite[[#]] = 0) &, Rest[positions]];
-    Scan[
-      (repairedMethods[[#]] = "absorbed into physical-branch group") &,
-      Rest[positions]
-    ];,
-    {group, groups}
+    sourceHashesAfter === sourceHashesBefore &&
+      ! invalidEndpointQ[groupResult] &&
+      FreeQ[
+        groupResult,
+        s23 | S10EndpointT | S10EndpointLog | S10CommonRoot |
+          _S10RootOccurrence | _S10SharedFunctionOccurrence |
+          _Series | _SeriesCoefficient
+      ],
+    label <> " grouped Laurent result is invalid or changed its source."
   ];
   <|
-    "FiniteCoefficients" -> repairedFinite,
-    "Methods" -> repairedMethods
+    "PoleCoefficient" -> 0,
+    "FiniteCoefficient" -> groupResult,
+    "RequiredPoleSubtraction" -> False,
+    "FirstMethod" -> "physical-branch grouped Laurent",
+    "AbsorbedMethod" ->
+      "absorbed into pre-individual physical-branch group",
+    "Certificate" -> <|
+      "EvaluatorVersion" -> coupledGroupSeriesEvaluatorVersion,
+      "SourceIndices" -> sourceIndices,
+      "RootOccurrenceCount" -> Length[rootPowerExpressions],
+      "CommonRadicandSHA256" ->
+        expressionSHA256Hex[commonRadicand],
+      "FunctionOccurrenceCount" -> Length[rawFunctions],
+      "SharedFunctionBasisCount" -> Length[basisFunctions],
+      "StructuralSupportFactorCount" -> Length[supportFactors],
+      "StructuralTermPowerBoundsByBranch" ->
+        termSupportBoundsBySign,
+      "RequiredFunctionSeriesOrder" ->
+        requiredFunctionSeriesOrder,
+      "RequiredRootSeriesOrder" -> requiredRootSeriesOrder,
+      "RootResidualsZero" -> rootGate,
+      "AllFunctionSeriesResolved" -> functionSeriesGate,
+      "LiteralReconstruction" -> reconstructionGate,
+      "BranchCertificates" -> branchCertificates,
+      "ExactSourceUnchanged" -> True
+    |>
   |>
 ];
 
@@ -1906,12 +4048,311 @@ splitEndpointProjection[expression_, label_String] := Module[
   and finite nonzero ratio(0), changes the endpoint exponent from alpha=1
   to alpha=2.  Refactor it without relying on any channel-specific index.
 *)
+(* Exact coefficientwise alpha-two helpers accepted by the S10 diagnostic. *)
+alpha2ExactAgreementQ[left_, right_] := If[
+  SameQ[left, right],
+  True,
+  TrueQ[
+    Quiet@Check[
+      TimeConstrained[Cancel[Together[left - right]], 300, $Failed],
+      $Failed
+    ] === 0
+  ]
+];
+
+alpha2SeriesDataCoefficientAssociation[expression_] := Module[
+  {series, parts, powers, coefficients},
+  series = Quiet@Check[
+    TimeConstrained[Series[expression, {s23, 0, 0}], 60, $Failed],
+    $Failed
+  ];
+  If[series === $Failed || ! FreeQ[series, _Series], Return[$Failed]];
+  If[Head[series] =!= SeriesData,
+    Return[
+      If[
+        ! invalidEndpointQ[series] && FreeQ[series, s23],
+        <|0 -> series|>,
+        $Failed
+      ]
+    ]
+  ];
+  parts = List @@ series;
+  If[
+    Length[parts] =!= 6 || ! SameQ[parts[[1]], s23] ||
+      ! TrueQ[parts[[2]] === 0] || ! ListQ[parts[[3]]] ||
+      ! IntegerQ[parts[[4]]] || ! IntegerQ[parts[[5]]] ||
+      ! IntegerQ[parts[[6]]] || ! TrueQ[parts[[6]] > 0],
+    Return[$Failed]
+  ];
+  powers = Range[parts[[4]], parts[[5]] - 1]/parts[[6]];
+  coefficients = parts[[3]];
+  If[
+    Length[coefficients] > Length[powers] ||
+      ! AllTrue[powers, TrueQ[# <= 0] &] ||
+      ! AllTrue[coefficients, FreeQ[#, s23] &],
+    Return[$Failed]
+  ];
+  coefficients = PadRight[coefficients, Length[powers], 0];
+  Join[<|0 -> 0|>, AssociationThread[powers, coefficients]]
+];
+
+alpha2CoefficientChunkWorker[input_List] := Module[
+  {
+    sourcePositions, addends, perAddendPowerAssociations = {},
+    structuralMismatchPositions = {}, localPosition, sourcePosition,
+    addend, seriesDataRecord, seriesCoefficientValue,
+    seriesDataConstant, agreementGate, chunkPowers, chunkPowerSums
+  },
+  If[Length[input] =!= 2,
+    Return[<|
+      "Success" -> False,
+      "FailureReason" -> "MalformedChunkInput",
+      "KernelID" -> $KernelID
+    |>]
+  ];
+  sourcePositions = input[[1]];
+  addends = input[[2]];
+  If[
+    ! ListQ[sourcePositions] || ! ListQ[addends] ||
+      Length[sourcePositions] =!= Length[addends] ||
+      sourcePositions === {},
+    Return[<|
+      "Success" -> False,
+      "FailureReason" -> "InconsistentChunkInventory",
+      "KernelID" -> $KernelID
+    |>]
+  ];
+  Do[
+    sourcePosition = sourcePositions[[localPosition]];
+    addend = addends[[localPosition]];
+    seriesDataRecord = alpha2SeriesDataCoefficientAssociation[addend];
+    If[! AssociationQ[seriesDataRecord],
+      Return[<|
+        "Success" -> False,
+        "FailureReason" -> "SeriesDataExtraction",
+        "FailureSourcePosition" -> sourcePosition,
+        "KernelID" -> $KernelID
+      |>]
+    ];
+    seriesCoefficientValue = Quiet@Check[
+      TimeConstrained[
+        SeriesCoefficient[addend, {s23, 0, 0}],
+        60,
+        $Failed
+      ],
+      $Failed
+    ];
+    If[
+      seriesCoefficientValue === $Failed ||
+        invalidEndpointQ[seriesCoefficientValue] ||
+        ! FreeQ[seriesCoefficientValue, s23],
+      Return[<|
+        "Success" -> False,
+        "FailureReason" -> "SeriesCoefficientExtraction",
+        "FailureSourcePosition" -> sourcePosition,
+        "KernelID" -> $KernelID
+      |>]
+    ];
+    seriesDataConstant = Lookup[seriesDataRecord, 0, 0];
+    agreementGate = alpha2ExactAgreementQ[
+      seriesDataConstant,
+      seriesCoefficientValue
+    ];
+    If[! TrueQ[agreementGate],
+      Return[<|
+        "Success" -> False,
+        "FailureReason" -> "ConstantCoefficientDisagreement",
+        "FailureSourcePosition" -> sourcePosition,
+        "KernelID" -> $KernelID
+      |>]
+    ];
+    If[! SameQ[seriesDataConstant, seriesCoefficientValue],
+      AppendTo[structuralMismatchPositions, sourcePosition]
+    ];
+    AppendTo[perAddendPowerAssociations, seriesDataRecord];
+    Clear[
+      addend,
+      seriesDataRecord,
+      seriesCoefficientValue,
+      seriesDataConstant
+    ];
+    If[Mod[localPosition, 5] === 0, ClearSystemCache[]],
+    {localPosition, Length[addends]}
+  ];
+  chunkPowers = Sort@DeleteDuplicates@Flatten[
+    Keys /@ perAddendPowerAssociations
+  ];
+  If[
+    chunkPowers === {} || ! MemberQ[chunkPowers, 0] ||
+      ! AllTrue[chunkPowers, NumericQ[#] && TrueQ[# <= 0] &],
+    Return[<|
+      "Success" -> False,
+      "FailureReason" -> "ChunkLaurentPowerInventory",
+      "KernelID" -> $KernelID
+    |>]
+  ];
+  chunkPowerSums = AssociationMap[
+    Function[power,
+      Total[Lookup[perAddendPowerAssociations, power, 0]]
+    ],
+    chunkPowers
+  ];
+  <|
+    "Success" -> True,
+    "KernelID" -> $KernelID,
+    "SourcePositionRange" -> MinMax[sourcePositions],
+    "ProcessedCount" -> Length[sourcePositions],
+    "StructuralMismatchPositions" -> structuralMismatchPositions,
+    "PowerSums" -> chunkPowerSums
+  |>
+];
+
+parallelAlpha2InvalidFactorEndpoint[
+    invalidFactor_, label_String
+  ] := Module[
+  {
+    addends, chunkCount, chunkSize, chunks, waves, waveIndex,
+    waveChunks, waveInputs, waveResults, currentIDs,
+    waveKernelIDSets = {}, chunkResults = {}, chunkPowerSums,
+    laurentPowers, coefficientSums, negativePowers,
+    negativeReducedSums, endpoint, endpointSHA256Hex
+  },
+  assert[Head[invalidFactor] === Plus,
+    label <> " invalid alpha-two factor is not additive."];
+  addends = List @@ invalidFactor;
+  assert[SameQ[invalidFactor, Total[addends]],
+    label <> " invalid alpha-two addends do not reconstruct their factor."];
+  chunkCount = 2 requestedParallelKernels;
+  chunkSize = Ceiling[Length[addends]/chunkCount];
+  chunks = Partition[Range[Length[addends]], UpTo[chunkSize]];
+  waves = Partition[chunks, UpTo[requestedParallelKernels]];
+  assert[Sort@Flatten[chunks] === Range[Length[addends]],
+    label <> " alpha-two worker chunks do not cover every addend."];
+  Do[
+    ensureEndpointParallelKernels[
+      label <> " alpha-two wave " <> ToString[waveIndex]
+    ];
+    currentIDs = Sort[ParallelEvaluate[$KernelID]];
+    AppendTo[waveKernelIDSets, currentIDs];
+    waveChunks = waves[[waveIndex]];
+    waveInputs = Map[
+      Function[chunk, {chunk, addends[[chunk]]}],
+      waveChunks
+    ];
+    Print[
+      "S10_ALPHA2_ENDPOINT_WAVE: label=", label,
+      " wave=", waveIndex, "/", Length[waves],
+      " state=start chunkRanges=", InputForm[MinMax /@ waveChunks]
+    ];
+    waveResults = Quiet@Check[
+      ParallelMap[
+        alpha2CoefficientChunkWorker,
+        waveInputs,
+        Method -> "FinestGrained"
+      ],
+      $Failed
+    ];
+    closeEndpointParallelKernels[
+      label <> " alpha-two wave " <> ToString[waveIndex]
+    ];
+    assert[
+      ListQ[waveResults] &&
+        Length[waveResults] === Length[waveChunks] &&
+        AllTrue[waveResults, AssociationQ] &&
+        AllTrue[waveResults, TrueQ[Lookup[#, "Success", False]] &],
+      label <> " alpha-two worker wave failed: " <>
+        ToString[InputForm[waveResults]]
+    ];
+    Print[
+      "S10_ALPHA2_ENDPOINT_WAVE: label=", label,
+      " wave=", waveIndex, "/", Length[waves],
+      " state=complete processed=",
+      Total[Lookup[waveResults, "ProcessedCount"]],
+      " mismatchCount=",
+      Length@Flatten[
+        Lookup[waveResults, "StructuralMismatchPositions"]
+      ]
+    ];
+    chunkResults = Join[chunkResults, waveResults];
+    Clear[waveInputs, waveResults];
+    ClearSystemCache[],
+    {waveIndex, Length[waves]}
+  ];
+  alpha2ParallelKernelIDSetsSeen = Join[
+    alpha2ParallelKernelIDSetsSeen,
+    waveKernelIDSets
+  ];
+  parallelKernelIDsSeen = {};
+  assert[
+    Length[waveKernelIDSets] === Length[waves] &&
+      AllTrue[
+        waveKernelIDSets,
+        Length[#] === requestedParallelKernels && DuplicateFreeQ[#] &
+      ],
+    label <> " alpha-two worker sets are incomplete."];
+  assert[
+    Lookup[chunkResults, "SourcePositionRange", {}] ===
+      (MinMax /@ chunks) &&
+      Total[Lookup[chunkResults, "ProcessedCount", 0]] ===
+        Length[addends],
+    label <> " alpha-two worker result coverage is incomplete."];
+  chunkPowerSums = Lookup[chunkResults, "PowerSums", {}];
+  laurentPowers = Sort@DeleteDuplicates@Flatten[Keys /@ chunkPowerSums];
+  assert[
+    laurentPowers =!= {} && MemberQ[laurentPowers, 0] &&
+      AllTrue[laurentPowers, NumericQ[#] && TrueQ[# <= 0] &],
+    label <> " alpha-two Laurent power inventory is invalid."];
+  coefficientSums = AssociationMap[
+    Function[power, Total[Lookup[chunkPowerSums, power, 0]]],
+    laurentPowers
+  ];
+  negativePowers = Select[laurentPowers, TrueQ[# < 0] &];
+  negativeReducedSums = Map[
+    Function[power,
+      With[{value = Lookup[coefficientSums, power, $Failed]},
+        If[SameQ[value, 0], 0, Cancel[Together[value]]]
+      ]
+    ],
+    negativePowers
+  ];
+  assert[AllTrue[negativeReducedSums, SameQ[#, 0] &],
+    label <> " alpha-two negative Laurent coefficients do not cancel."];
+  endpoint = Lookup[coefficientSums, 0, $Failed];
+  assert[
+    endpoint =!= $Failed && ! invalidEndpointQ[endpoint] &&
+      FreeQ[endpoint, s23],
+    label <> " alpha-two invalid-factor endpoint is not finite."];
+  endpointSHA256Hex = IntegerString[Hash[endpoint, "SHA256"], 16, 64];
+  Print[
+    "S10_ALPHA2_INVALID_FACTOR_ENDPOINT: label=", label,
+    " addends=", Length[addends],
+    " powers=", InputForm[laurentPowers],
+    " endpointSHA256=", endpointSHA256Hex
+  ];
+  <|
+    "Endpoint" -> endpoint,
+    "EndpointSHA256Hex" -> endpointSHA256Hex,
+    "AddendCount" -> Length[addends],
+    "LaurentPowers" -> laurentPowers,
+    "ChunkRanges" -> (MinMax /@ chunks),
+    "WorkerKernelIDSets" -> waveKernelIDSets,
+    "StructuralMismatchPositions" -> Sort@Flatten[
+      Lookup[chunkResults, "StructuralMismatchPositions", {}]
+    ]
+  |>
+];
+
 structuralAlpha2EndpointData[
-    prefactor_, term_, index_Integer, label_String
+    prefactor_, term_, index_Integer, label_String, projector_String
   ] := Module[
   {
     powers, nestedBase, nestedExponent, nestedPower, nestedRatio,
-    ratioEndpoint, specialRemainder, regularFunction, endpointValue
+    ratioEndpoint, termFactors, nestedFactorPositions,
+    structuralRemainder, regularFunction, regularFactors,
+    factorEndpointValues, factorEndpointValidity,
+    invalidFactorPositions, invalidFactorData,
+    invalidFactorEndpointSHA256Hex, expectedEndpointSHA256Hex,
+    endpointValue, position
   },
   powers = DeleteDuplicates@Cases[
     term,
@@ -1948,68 +4389,121 @@ structuralAlpha2EndpointData[
     FreeQ[ratioEndpoint, s23] &&
     ! TrueQ[ratioEndpoint === 0],
     label <> " alpha-two nested ratio has no finite nonzero endpoint."];
-  assert[TrueQ[
-      Cancel[Together[ratioEndpoint - zH^2/PHT2]] === 0
-    ],
-    label <> " alpha-two nested ratio does not match zH^2/PHT2."];
-  specialRemainder = term/nestedPower;
-  regularFunction = Quiet@Check[
-    TimeConstrained[
-      Cancel[Together[
-        prefactor nestedRatio^(-1 - epsilon) specialRemainder
-      ]],
-      600,
-      $Failed
-    ],
-    $Failed
+  termFactors = If[Head[term] === Times, List @@ term, {term}];
+  nestedFactorPositions = Flatten@Position[
+    termFactors,
+    nestedPower,
+    {1},
+    Heads -> False
   ];
-  assert[regularFunction =!= $Failed,
-    label <> " alpha-two regular-function construction failed."];
-  endpointValue = Quiet@Check[
-    TimeConstrained[regularFunction /. s23 -> 0, 600, $Failed],
-    $Failed
+  assert[Length[nestedFactorPositions] === 1,
+    label <> " alpha-two nested power is not one top-level factor."];
+  structuralRemainder = Times @@ Delete[
+    termFactors,
+    First[nestedFactorPositions]
+  ];
+  assert[SameQ[term, nestedPower structuralRemainder],
+    label <> " alpha-two structural factor removal failed reconstruction."];
+  regularFunction =
+    prefactor nestedRatio^(-1 - epsilon) structuralRemainder;
+  regularFactors = If[
+    Head[regularFunction] === Times,
+    List @@ regularFunction,
+    {regularFunction}
+  ];
+  assert[SameQ[regularFunction, Times @@ regularFactors],
+    label <> " alpha-two regular factors do not reconstruct their source."];
+  factorEndpointValues = Map[
+    Function[factor,
+      Quiet@Check[
+        TimeConstrained[factor /. s23 -> 0, 120, $Failed],
+        $Failed
+      ]
+    ],
+    regularFactors
+  ];
+  factorEndpointValidity = Map[
+    Function[value,
+      TrueQ[
+        value =!= $Failed && ! invalidEndpointQ[value] &&
+          FreeQ[value, s23]
+      ]
+    ],
+    factorEndpointValues
+  ];
+  invalidFactorPositions = Flatten@Position[
+    factorEndpointValidity,
+    False
+  ];
+  assert[invalidFactorPositions =!= {},
+    label <> " alpha-two regular factor inventory has no invalid factor."];
+  invalidFactorData = Map[
+    parallelAlpha2InvalidFactorEndpoint[
+      regularFactors[[#]],
+      label <> " term " <> ToString[index] <>
+        " factor " <> ToString[#]
+    ] &,
+    invalidFactorPositions
+  ];
+  invalidFactorEndpointSHA256Hex = Lookup[
+    invalidFactorData,
+    "EndpointSHA256Hex",
+    {}
+  ];
+  If[
+    KeyExistsQ[
+      acceptedAlpha2InvalidFactorEndpointSHA256HexByProjector,
+      projector
+    ],
+    expectedEndpointSHA256Hex =
+      acceptedAlpha2InvalidFactorEndpointSHA256HexByProjector[projector];
+    assert[
+      invalidFactorEndpointSHA256Hex === expectedEndpointSHA256Hex,
+      label <> " alpha-two invalid-factor endpoint hashes disagree with " <>
+        "the independently accepted diagnostic: observed=" <>
+        ToString[InputForm[invalidFactorEndpointSHA256Hex]] <>
+        " expected=" <> ToString[InputForm[expectedEndpointSHA256Hex]]
+    ]
+  ];
+  Do[
+    factorEndpointValues[[invalidFactorPositions[[position]]]] =
+      invalidFactorData[[position, "Endpoint"]],
+    {position, Length[invalidFactorPositions]}
   ];
   assert[
-    ! invalidEndpointQ[endpointValue] && FreeQ[endpointValue, s23],
+    AllTrue[
+      factorEndpointValues,
+      # =!= $Failed && ! invalidEndpointQ[#] && FreeQ[#, s23] &
+    ],
+    label <> " alpha-two factor endpoints are not all finite."];
+  endpointValue = Times @@ factorEndpointValues;
+  assert[
+    endpointValue =!= $Failed &&
+      ! invalidEndpointQ[endpointValue] && FreeQ[endpointValue, s23],
     label <> " alpha-two endpoint value is not finite."];
   Print["S10_CHECKPOINT: " <> label <> " term " <> ToString[index] <>
-    " structurally refactored as alpha=2"];
+    " structurally refactored as alpha=2 with endpoint method version " <>
+    ToString[alpha2EndpointConstructionVersion]];
   <|
     "SourceTermIndex" -> index,
     "NestedExponent" -> nestedExponent,
     "NestedRatioEndpoint" -> ratioEndpoint,
+    "NestedRatioEndpointSHA256" -> Hash[ratioEndpoint, "SHA256"],
+    "EndpointConstructionVersion" -> alpha2EndpointConstructionVersion,
+    "InvalidRegularFactorPositions" -> invalidFactorPositions,
+    "InvalidFactorEndpointSHA256Hex" ->
+      invalidFactorEndpointSHA256Hex,
+    "InvalidFactorEndpointMetadata" ->
+      (KeyDrop[#, {"Endpoint", "WorkerKernelIDSets"}] & /@
+        invalidFactorData),
     "RegularFunction" -> regularFunction,
-    "EndpointValue" -> endpointValue
+    "EndpointValue" -> endpointValue,
+    "EndpointValueSHA256Hex" -> IntegerString[
+      Hash[endpointValue, "SHA256"],
+      16,
+      64
+    ]
   |>
-];
-
-loadExpansion[projector_String] := Module[{payload, path},
-  path = expansionCachePaths[projector];
-  Print["S10_STAGE: loading S09 Appendix-F cache for " <> projector];
-  payload = Check[Get[path], $Failed];
-  assert[AssociationQ[payload],
-    projector <> " S09 expansion cache is not an Association."];
-  assert[payload["StageVersion"] === "HqgS09-v3",
-    projector <> " S09 expansion cache has the wrong stage version."];
-  assert[
-    payload["Channel"] === "Hqg only" &&
-      payload["TensorRole"] === "RealQG" &&
-      payload["ProgramSHA256"] === s09ProgramSHA256 &&
-      payload["ElectricChargeNormalization"] ===
-        electricChargeNormalization &&
-      payload["AppliedHardKernelWeight"] === 1,
-    projector <> " S09 expansion cache has invalid Hqg provenance."
-  ];
-  assert[payload["SourceS08SHA256"] === s08SHA256,
-    projector <> " S09 expansion cache has stale S08 provenance."];
-  assert[payload["Projector"] === projector,
-    projector <> " S09 expansion cache has the wrong projector label."];
-  assert[FreeQ[
-      payload["Expression"],
-      _S08Case2Master | _Hypergeometric2F1 | _Beta
-    ],
-    projector <> " S09 expansion cache is incomplete."];
-  payload["Expression"]
 ];
 
 processProjection[projector_String] := Module[
@@ -2017,15 +4511,23 @@ processProjection[projector_String] := Module[
     label, expression, split, terms, prefactor, termCount,
     exceptionalIndices, logIndices, alpha2Data,
     standardIndices, standardTerms, standardTermCount,
-    groups, cachePath, cachePayload, legacyCachePath, legacyCachePayload,
-    repairCurrent, repairResult,
+    groups, coupledSourceIndices, uncoveredLogIndices,
+    groupedPositions, ordinaryPositions, groupCertificates = {},
+    group, groupIndices, groupPositions, groupAnswer,
+    groupAnswerByPosition = <||>,
+    cachePath, cachePayload,
     poles = {}, finite = {}, flags = {}, methods = {}, startIndex,
-    remainingPositions, batchPositions, batchInputs, batchAnswers,
-    batchOffset, position, sourceIndex, termAnswer,
+    remainingPositions, batchPositions, batchAnswers,
+    ordinaryBatchOffsets, ordinaryBatchPositions, ordinaryBatchInputs,
+    ordinaryBatchAnswers, batchOffset, position, termAnswer,
+    batchTimedOut,
+    failedOffset,
+    failedBatchOffsets, fallbackSourceIndices,
     rawPoleResidual, reducedPoleResidual, poleOrders,
     prefactorEndpoint, endpointValue, regularFunction,
     alpha2RegularFunction, alpha2EndpointValue,
-    testAtS, testAtZero, logarithmTower, alpha2LogarithmTower, action
+    testAtS, testAtZero, logarithmTower, alpha2LogarithmTower, action,
+    endpointCacheSHA256, endpointCacheReloadGate
   },
   label = "Hqg;qg " <> projector;
   expression = loadExpansion[projector];
@@ -2037,16 +4539,15 @@ processProjection[projector_String] := Module[
     ", terms=" <> ToString[termCount]];
   exceptionalIndices = exceptionalPowerTermIndices[terms];
   logIndices = singularLogTermIndices[terms];
-  assert[logIndices === {},
-    projector <> " has structurally detected singular endpoint logarithms " <>
-      "at terms " <> ToString[logIndices] <>
-      "; grouped treatment is required before continuation."];
+  Print["S10_CHECKPOINT: " <> projector <>
+    " direct-substitution singular-log source terms " <>
+    ToString[InputForm[logIndices]]];
   Print["S10_CHECKPOINT: " <> projector <>
     " structural alpha=2 source terms " <>
     ToString[InputForm[exceptionalIndices]]];
   alpha2Data = Map[
     structuralAlpha2EndpointData[
-      prefactor, terms[[#]], #, label
+      prefactor, terms[[#]], #, label, projector
     ] &,
     exceptionalIndices
   ];
@@ -2055,14 +4556,47 @@ processProjection[projector_String] := Module[
   standardTermCount = Length[standardTerms];
   assert[standardTermCount + Length[alpha2Data] === termCount,
     projector <> " structural endpoint partition is incomplete."];
-  groups = Lookup[coupledEndpointGroups, projector, {}];
+  groups = discoverCoupledEndpointGroups[
+    standardTerms, standardIndices, label
+  ];
+  coupledSourceIndices = DeleteDuplicates@Flatten[
+    Lookup[groups, "SourceIndices"]
+  ];
   assert[groups =!= {} &&
-      ContainsAll[standardIndices, DeleteDuplicates[Flatten[groups]]],
+      ContainsAll[standardIndices, coupledSourceIndices],
     projector <> " coupled endpoint groups are not contained in the " <>
       "standard source-term partition."];
+  uncoveredLogIndices = Complement[logIndices, coupledSourceIndices];
+  assert[uncoveredLogIndices === {},
+    projector <> " has structurally detected singular endpoint logarithms " <>
+      "outside the tool-derived physical-root groups at terms " <>
+      ToString[InputForm[uncoveredLogIndices]] <> "."];
+  Print[
+    "S10_COUPLED_ENDPOINT_COVERAGE: projector=", projector,
+    " singularLogTerms=", InputForm[logIndices],
+    " coupledSourceTerms=", InputForm[coupledSourceIndices],
+    " uncovered={}"];
+  groupedPositions = Sort@Flatten[
+    FirstPosition[standardIndices, #] & /@ coupledSourceIndices
+  ];
+  ordinaryPositions = Complement[
+    Range[standardTermCount],
+    groupedPositions
+  ];
+  assert[
+    Length[groupedPositions] === Length[coupledSourceIndices] &&
+      And @@ (IntegerQ /@ groupedPositions) &&
+      DuplicateFreeQ[groupedPositions] &&
+      Sort@Join[groupedPositions, ordinaryPositions] ===
+        Range[standardTermCount],
+    projector <> " grouped and ordinary standard positions do not form " <>
+      "an exact partition."
+  ];
 
   cachePath = endpointCachePaths[projector];
-  legacyCachePath = legacyEndpointCachePaths[projector];
+  migrateAcceptedEndpointCacheMetadata[
+    projector, cachePath, standardTermCount, groups, groupedPositions
+  ];
   If[FileExistsQ[cachePath],
     cachePayload = Check[Get[cachePath], $Failed];
     If[
@@ -2070,10 +4604,13 @@ processProjection[projector_String] := Module[
       cachePayload["CacheVersion"] === endpointCacheVersion &&
       cachePayload["StageVersion"] === stageVersion &&
       cachePayload["SourceS09SHA256"] === s09SHA256 &&
+      cachePayload["SourceS08SHA256"] === s08SHA256 &&
+      cachePayload["SourceS07SHA256"] === s07SHA256 &&
       cachePayload["ProgramSHA256"] === programSHA256 &&
+      cachePayload["PaperSHA256"] === referencePDFSHA256 &&
       cachePayload["ElectricChargeNormalization"] ===
         electricChargeNormalization &&
-      cachePayload["AppliedHardKernelWeight"] === 1 &&
+      cachePayload["AppliedHardKernelWeight"] === hardKernelWeight &&
       cachePayload["Projector"] === projector &&
       cachePayload["SourceExpansionSHA256"] ===
         expansionCacheSHA256[projector] &&
@@ -2082,96 +4619,194 @@ processProjection[projector_String] := Module[
         standardIndices &&
       Lookup[cachePayload, "Alpha2TermIndices", $Failed] ===
         exceptionalIndices &&
+      Lookup[cachePayload, "Alpha2NestedRatioEndpoints", $Failed] ===
+        Lookup[alpha2Data, "NestedRatioEndpoint", {}] &&
+      Lookup[
+        cachePayload,
+        "Alpha2NestedRatioEndpointSHA256",
+        $Failed
+      ] === Lookup[alpha2Data, "NestedRatioEndpointSHA256", {}] &&
+      Lookup[cachePayload, "Alpha2EndpointConstructionVersion", 0] ===
+        alpha2EndpointConstructionVersion &&
+      Lookup[
+        cachePayload,
+        "Alpha2InvalidFactorEndpointSHA256Hex",
+        $Failed
+      ] === Lookup[
+        alpha2Data,
+        "InvalidFactorEndpointSHA256Hex",
+        {}
+      ] &&
+      Lookup[
+        cachePayload,
+        "Alpha2EndpointValueSHA256Hex",
+        $Failed
+      ] === Lookup[alpha2Data, "EndpointValueSHA256Hex", {}] &&
+      Lookup[
+        cachePayload,
+        "Alpha2InvalidFactorEndpointMetadata",
+        $Failed
+      ] === Lookup[alpha2Data, "InvalidFactorEndpointMetadata", {}] &&
       Lookup[
         cachePayload,
         "DirectSubstitutionSingularLogTermIndices",
         $Failed
       ] === logIndices &&
+      Lookup[
+        cachePayload,
+        "UncoveredSingularLogTermIndices",
+        $Failed
+      ] === uncoveredLogIndices &&
       Lookup[cachePayload, "CoupledLogEndpointRepairVersion", 0] ===
         coupledEndpointRepairVersion &&
       Lookup[cachePayload, "CoupledLogEndpointGroups", {}] === groups &&
-      MemberQ[
-        {True, False},
-        Lookup[cachePayload, "CoupledLogEndpointRepairApplied", Missing[]]
-      ],
+      Lookup[cachePayload, "CoupledGroupSeriesEvaluatorVersion", 0] ===
+        coupledGroupSeriesEvaluatorVersion &&
+      TrueQ[Lookup[
+        cachePayload,
+        "GroupedBeforeIndividualLaurent",
+        False
+      ]] &&
+      AssociationQ[Lookup[
+        cachePayload,
+        "PreIndividualGroupAnswers",
+        Missing[]
+      ]] &&
+      Sort[Keys[cachePayload["PreIndividualGroupAnswers"]]] ===
+        groupedPositions &&
+      ListQ[Lookup[cachePayload, "CoupledGroupCertificates", Missing[]]] &&
+      Length[cachePayload["CoupledGroupCertificates"]] === Length[groups] &&
+      Lookup[cachePayload, "ParallelBatchTimeLimitSeconds", 0] ===
+        endpointParallelBatchTimeLimitSeconds &&
+      IntegerQ[
+        Lookup[cachePayload, "ParallelBatchTimeoutCount", -1]
+      ] &&
+      Lookup[cachePayload, "ParallelBatchTimeoutCount", -1] >= 0 &&
+      With[{
+        fallbackIndices = Lookup[
+          cachePayload,
+          "SerialFallbackSourceIndices",
+          $Failed
+        ]
+      },
+        ListQ[fallbackIndices] && DuplicateFreeQ[fallbackIndices] &&
+          ContainsAll[standardIndices, fallbackIndices]
+      ] &&
+      TrueQ[Lookup[
+        cachePayload,
+        "CoupledLogEndpointRepairApplied",
+        False
+      ]],
       poles = Lookup[cachePayload, "PoleCoefficients", {}];
       finite = Lookup[cachePayload, "FiniteCoefficients", {}];
       flags = Lookup[cachePayload, "RequiredPoleSubtraction", {}];
       methods = Lookup[cachePayload, "Methods", {}];
+      groupAnswerByPosition = cachePayload["PreIndividualGroupAnswers"];
+      groupCertificates = cachePayload["CoupledGroupCertificates"];
+      endpointParallelBatchTimeoutCountByProjector[projector] = Lookup[
+        cachePayload,
+        "ParallelBatchTimeoutCount"
+      ];
+      endpointSerialFallbackSourceIndices[projector] = Lookup[
+        cachePayload,
+        "SerialFallbackSourceIndices"
+      ];
       assert[
         ListQ[poles] && ListQ[finite] && ListQ[flags] && ListQ[methods] &&
         Length[poles] === Length[finite] === Length[flags] ===
           Length[methods] && Length[poles] <= standardTermCount,
         projector <> " endpoint cache has inconsistent completed lists."
       ];
-      assert[
-        ! TrueQ[cachePayload["CoupledLogEndpointRepairApplied"]] ||
-          Length[poles] === standardTermCount,
-        projector <> " endpoint cache claims a repair before completion."
-      ];
+      assert[AllTrue[
+          Select[groupedPositions, # <= Length[poles] &],
+          Function[currentPosition,
+            Module[{savedAnswer},
+              savedAnswer = groupAnswerByPosition[currentPosition];
+              SameQ[poles[[currentPosition]],
+                  savedAnswer["PoleCoefficient"]] &&
+                SameQ[finite[[currentPosition]],
+                  savedAnswer["FiniteCoefficient"]] &&
+                SameQ[flags[[currentPosition]],
+                  savedAnswer["RequiredPoleSubtraction"]] &&
+                SameQ[methods[[currentPosition]], savedAnswer["Method"]]
+            ]
+          ]
+        ],
+        projector <> " cached grouped positions disagree with their " <>
+          "pre-individual certificate."];
       Print["S10_STAGE: resuming " <> projector <> " endpoint cache at " <>
         ToString[Length[poles]] <> "/" <> ToString[standardTermCount]],
       Print["S10_STAGE: removing stale endpoint cache for " <> projector];
       DeleteFile[cachePath]
     ]
   ];
-  If[! FileExistsQ[cachePath] && poles === {} &&
-      FileExistsQ[legacyCachePath],
+  If[groupAnswerByPosition === <||>,
     Print[
-      "S10_STAGE: validating and migrating v1 raw endpoint coefficients " <>
-        "for " <> projector
+      "S10_GROUP_STAGE: projector=", projector,
+      " groups=", InputForm[Lookup[groups, "SourceIndices"]]
     ];
-    legacyCachePayload = Check[Get[legacyCachePath], $Failed];
+    Do[
+      groupIndices = group["SourceIndices"];
+      groupPositions = Flatten[
+        FirstPosition[standardIndices, #] & /@ groupIndices
+      ];
+      assert[
+        Length[groupPositions] === Length[groupIndices] &&
+          And @@ (IntegerQ /@ groupPositions),
+        label <> " coupled group source positions are missing."
+      ];
+      groupAnswer = coupledEndpointGroupLaurent[
+        standardTerms[[groupPositions]],
+        groupIndices,
+        group["PhysicalRootRadicand"],
+        group["RootByDeltaSign"],
+        label
+      ];
+      AssociateTo[
+        groupAnswerByPosition,
+        First[groupPositions] -> <|
+          "PoleCoefficient" -> groupAnswer["PoleCoefficient"],
+          "FiniteCoefficient" -> groupAnswer["FiniteCoefficient"],
+          "RequiredPoleSubtraction" ->
+            groupAnswer["RequiredPoleSubtraction"],
+          "Method" -> groupAnswer["FirstMethod"]
+        |>
+      ];
+      Scan[
+        Function[currentPosition,
+          AssociateTo[
+            groupAnswerByPosition,
+            currentPosition -> <|
+              "PoleCoefficient" -> 0,
+              "FiniteCoefficient" -> 0,
+              "RequiredPoleSubtraction" -> False,
+              "Method" -> groupAnswer["AbsorbedMethod"]
+            |>
+          ]
+        ],
+        Rest[groupPositions]
+      ];
+      AppendTo[groupCertificates, groupAnswer["Certificate"]];
+      Print[
+        "S10_GROUP_COMPLETE: projector=", projector,
+        " sourceTerms=", InputForm[groupIndices],
+        " functionOrder=",
+        groupAnswer["Certificate", "RequiredFunctionSeriesOrder"],
+        " rootOrder=",
+        groupAnswer["Certificate", "RequiredRootSeriesOrder"]
+      ];,
+      {group, groups}
+    ];
     assert[
-      AssociationQ[legacyCachePayload] &&
-        legacyCachePayload["CacheVersion"] === legacyEndpointCacheVersion &&
-        legacyCachePayload["StageVersion"] ===
-          independentLegacyStageVersion &&
-        legacyCachePayload["SourceS09SHA256"] === s09SHA256 &&
-        validPreCorrectionProgramSHA256Q[
-          legacyCachePayload["ProgramSHA256"]
-        ] &&
-        legacyCachePayload["ElectricChargeNormalization"] ===
-          electricChargeNormalization &&
-        legacyCachePayload["AppliedHardKernelWeight"] === 1 &&
-        legacyCachePayload["Projector"] === projector &&
-        legacyCachePayload["SourceExpansionSHA256"] ===
-          expansionCacheSHA256[projector] &&
-        legacyCachePayload["RemainderTermCount"] === termCount &&
-        Lookup[legacyCachePayload, "StandardTermIndices", $Failed] ===
-          standardIndices &&
-        Lookup[legacyCachePayload, "Alpha2TermIndices", $Failed] ===
-          exceptionalIndices &&
-        Lookup[legacyCachePayload, "SingularLogTermIndices", $Failed] ===
-          {} &&
-        Lookup[
-          legacyCachePayload,
-          "CompletedStandardTermCount",
-          0
-        ] === standardTermCount,
-      projector <> " legacy endpoint cache is invalid."
-    ];
-    poles = Lookup[legacyCachePayload, "PoleCoefficients", {}];
-    finite = Lookup[legacyCachePayload, "FiniteCoefficients", {}];
-    flags = Lookup[legacyCachePayload, "RequiredPoleSubtraction", {}];
-    methods = Lookup[legacyCachePayload, "Methods", {}];
-    assert[
-      ListQ[poles] && ListQ[finite] && ListQ[flags] && ListQ[methods] &&
-        Length[poles] === Length[finite] === Length[flags] ===
-          Length[methods] === standardTermCount,
-      projector <> " legacy endpoint cache has incomplete coefficient lists."
-    ];
-    cachePayload = legacyCachePayload
+      Sort[Keys[groupAnswerByPosition]] === groupedPositions &&
+        Length[groupCertificates] === Length[groups],
+      projector <> " pre-individual group evaluation has incomplete " <>
+        "position coverage."
+    ]
   ];
   startIndex = Length[poles] + 1;
   remainingPositions = Range[startIndex, standardTermCount];
   While[Length[remainingPositions] > 0,
-    endpointParallelWorkRequired = True;
-    If[$KernelCount =!= requestedParallelKernels,
-      ensureEndpointParallelKernels[
-        projector <> " endpoint worker recovery"
-      ]
-    ];
     batchPositions = Take[
       remainingPositions,
       UpTo[requestedParallelKernels]
@@ -2182,7 +4817,20 @@ processProjection[projector_String] := Module[
         ToString[Last[batchPositions]] <> "/" <>
         ToString[standardTermCount]
     ];
-    batchInputs = Map[
+    batchAnswers = ConstantArray[$Failed, Length[batchPositions]];
+    Do[
+      If[KeyExistsQ[groupAnswerByPosition, batchPositions[[batchOffset]]],
+        batchAnswers[[batchOffset]] =
+          groupAnswerByPosition[batchPositions[[batchOffset]]]
+      ],
+      {batchOffset, Length[batchPositions]}
+    ];
+    ordinaryBatchOffsets = Flatten@Position[
+      KeyExistsQ[groupAnswerByPosition, #] & /@ batchPositions,
+      False
+    ];
+    ordinaryBatchPositions = batchPositions[[ordinaryBatchOffsets]];
+    ordinaryBatchInputs = Map[
       Function[currentPosition,
         {
           standardTerms[[currentPosition]],
@@ -2191,43 +4839,96 @@ processProjection[projector_String] := Module[
           termCount
         }
       ],
-      batchPositions
+      ordinaryBatchPositions
     ];
-    batchAnswers = Quiet@Check[
-      ParallelMap[
-        endpointWorkerEvaluate,
-        batchInputs,
-        Method -> "FinestGrained"
-      ],
-      $Failed
-    ];
-    If[batchAnswers === $Failed || ! ListQ[batchAnswers] ||
-        Length[batchAnswers] =!= Length[batchInputs],
-      Print[
-        "S10_ENDPOINT_FALLBACK: parallel batch failed; evaluating " <>
-          projector <> " positions " <>
-          ToString[InputForm[batchPositions]] <> " serially"
+    If[ordinaryBatchInputs =!= {},
+      endpointParallelWorkRequired = True;
+      If[$KernelCount =!= requestedParallelKernels,
+        ensureEndpointParallelKernels[
+          projector <> " ordinary endpoint worker recovery"
+        ]
       ];
-      batchAnswers = endpointTermLaurent[
-          #[[1]], #[[2]], #[[3]], #[[4]]
-        ] & /@ batchInputs,
-      Do[
-        If[! AssociationQ[batchAnswers[[batchOffset]]],
-          Print[
-            "S10_ENDPOINT_FALLBACK: worker memory bound reached for " <>
-              projector <> " position " <>
-              ToString[batchPositions[[batchOffset]]] <>
-              "; evaluating that term serially"
-          ];
-          batchAnswers[[batchOffset]] = endpointTermLaurent[
-            batchInputs[[batchOffset, 1]],
-            batchInputs[[batchOffset, 2]],
-            batchInputs[[batchOffset, 3]],
-            batchInputs[[batchOffset, 4]]
-          ]
+      batchTimedOut = False;
+      ordinaryBatchAnswers = Quiet@Check[
+        TimeConstrained[
+          ParallelMap[
+            endpointWorkerEvaluate,
+            ordinaryBatchInputs,
+            Method -> "FinestGrained"
+          ],
+          endpointParallelBatchTimeLimitSeconds,
+          (batchTimedOut = True; $Failed)
         ],
-        {batchOffset, Length[batchAnswers]}
-      ]
+        $Failed
+      ];
+      If[
+        ordinaryBatchAnswers === $Failed ||
+          ! ListQ[ordinaryBatchAnswers] ||
+          Length[ordinaryBatchAnswers] =!= Length[ordinaryBatchInputs],
+        If[TrueQ[batchTimedOut],
+          endpointParallelBatchTimeoutCountByProjector[projector]++
+        ];
+        closeEndpointParallelKernels[
+          projector <> " ordinary endpoint full-batch serial fallback"
+        ];
+        fallbackSourceIndices = standardIndices[[ordinaryBatchPositions]];
+        endpointSerialFallbackSourceIndices[projector] =
+          DeleteDuplicates@Join[
+            endpointSerialFallbackSourceIndices[projector],
+            fallbackSourceIndices
+          ];
+        Print[
+          "S10_ENDPOINT_FALLBACK: parallel ordinary batch unavailable; " <>
+            "evaluating " <> projector <> " positions " <>
+            ToString[InputForm[ordinaryBatchPositions]] <> " serially" <>
+            " timedOut=" <> ToString[TrueQ[batchTimedOut]] <>
+            " deadlineSeconds=" <>
+            ToString[endpointParallelBatchTimeLimitSeconds]
+        ];
+        ordinaryBatchAnswers = endpointTermLaurent[
+            #[[1]], #[[2]], #[[3]], #[[4]]
+          ] & /@ ordinaryBatchInputs,
+        failedBatchOffsets = Flatten@Position[
+          AssociationQ /@ ordinaryBatchAnswers,
+          False
+        ];
+        If[failedBatchOffsets =!= {},
+          closeEndpointParallelKernels[
+            projector <> " ordinary endpoint partial serial fallback"
+          ];
+          fallbackSourceIndices = standardIndices[[
+            ordinaryBatchPositions[[failedBatchOffsets]]
+          ]];
+          endpointSerialFallbackSourceIndices[projector] =
+            DeleteDuplicates@Join[
+              endpointSerialFallbackSourceIndices[projector],
+              fallbackSourceIndices
+            ];
+          Do[
+            Print[
+              "S10_ENDPOINT_FALLBACK: worker memory bound reached for " <>
+                projector <> " ordinary position " <>
+                ToString[ordinaryBatchPositions[[failedOffset]]] <>
+                "; evaluating that term serially"
+            ];
+            ordinaryBatchAnswers[[failedOffset]] = endpointTermLaurent[
+              ordinaryBatchInputs[[failedOffset, 1]],
+              ordinaryBatchInputs[[failedOffset, 2]],
+              ordinaryBatchInputs[[failedOffset, 3]],
+              ordinaryBatchInputs[[failedOffset, 4]]
+            ],
+            {failedOffset, failedBatchOffsets}
+          ]
+        ]
+      ];
+      assert[AllTrue[ordinaryBatchAnswers, AssociationQ],
+        projector <> " ordinary endpoint batch returned an invalid result."];
+      Do[
+        batchAnswers[[ordinaryBatchOffsets[[batchOffset]]]] =
+          ordinaryBatchAnswers[[batchOffset]],
+        {batchOffset, Length[ordinaryBatchAnswers]}
+      ],
+      ordinaryBatchAnswers = {}
     ];
     assert[AllTrue[batchAnswers, AssociationQ],
       projector <> " endpoint batch returned an invalid result."];
@@ -2247,10 +4948,16 @@ processProjection[projector_String] := Module[
       "TensorRole" -> "RealQGEndpoint",
       "SourceS09" -> s09Path,
       "SourceS09SHA256" -> s09SHA256,
+      "SourceS08" -> s08Path,
+      "SourceS08SHA256" -> s08SHA256,
+      "SourceS07" -> s07Path,
+      "SourceS07SHA256" -> s07SHA256,
       "Program" -> programPath,
       "ProgramSHA256" -> programSHA256,
+      "Paper" -> paperPath,
+      "PaperSHA256" -> referencePDFSHA256,
       "ElectricChargeNormalization" -> electricChargeNormalization,
-      "AppliedHardKernelWeight" -> 1,
+      "AppliedHardKernelWeight" -> hardKernelWeight,
       "Projector" -> projector,
       "SourceExpansionCache" -> expansionCachePaths[projector],
       "SourceExpansionSHA256" -> expansionCacheSHA256[projector],
@@ -2259,11 +4966,33 @@ processProjection[projector_String] := Module[
       "Alpha2TermIndices" -> exceptionalIndices,
       "Alpha2NestedRatioEndpoints" ->
         Lookup[alpha2Data, "NestedRatioEndpoint", {}],
+      "Alpha2NestedRatioEndpointSHA256" ->
+        Lookup[alpha2Data, "NestedRatioEndpointSHA256", {}],
+      "Alpha2EndpointConstructionVersion" ->
+        alpha2EndpointConstructionVersion,
+      "Alpha2InvalidFactorEndpointSHA256Hex" ->
+        Lookup[alpha2Data, "InvalidFactorEndpointSHA256Hex", {}],
+      "Alpha2EndpointValueSHA256Hex" ->
+        Lookup[alpha2Data, "EndpointValueSHA256Hex", {}],
+      "Alpha2InvalidFactorEndpointMetadata" ->
+        Lookup[alpha2Data, "InvalidFactorEndpointMetadata", {}],
       "DirectSubstitutionSingularLogTermIndices" -> logIndices,
+      "UncoveredSingularLogTermIndices" -> uncoveredLogIndices,
+      "ParallelBatchTimeLimitSeconds" ->
+        endpointParallelBatchTimeLimitSeconds,
+      "ParallelBatchTimeoutCount" ->
+        endpointParallelBatchTimeoutCountByProjector[projector],
+      "SerialFallbackSourceIndices" ->
+        endpointSerialFallbackSourceIndices[projector],
       "CoupledLogEndpointRepairVersion" ->
         coupledEndpointRepairVersion,
       "CoupledLogEndpointGroups" -> groups,
-      "CoupledLogEndpointRepairApplied" -> False,
+      "CoupledGroupSeriesEvaluatorVersion" ->
+        coupledGroupSeriesEvaluatorVersion,
+      "GroupedBeforeIndividualLaurent" -> True,
+      "PreIndividualGroupAnswers" -> groupAnswerByPosition,
+      "CoupledGroupCertificates" -> groupCertificates,
+      "CoupledLogEndpointRepairApplied" -> True,
       "PoleCoefficients" -> poles,
       "FiniteCoefficients" -> finite,
       "RequiredPoleSubtraction" -> flags,
@@ -2271,6 +5000,8 @@ processProjection[projector_String] := Module[
       "CompletedStandardTermCount" -> position
     |>;
     writeAtomic[cachePayload, cachePath];
+    assert[atomicReloadSameQ[cachePayload, cachePath],
+      projector <> " endpoint batch cache failed reload equality."];
     Print[
       "S10_CACHE_CHECKPOINT: " <> projector <> " " <>
         ToString[position] <> "/" <> ToString[standardTermCount] <>
@@ -2280,7 +5011,10 @@ processProjection[projector_String] := Module[
       remainingPositions,
       Length[batchPositions]
     ];
-    Clear[batchInputs, batchAnswers, termAnswer];
+    Clear[
+      ordinaryBatchInputs, ordinaryBatchAnswers,
+      batchAnswers, termAnswer
+    ];
     If[$KernelCount > 0,
       Quiet[ParallelEvaluate[ClearSystemCache[]]]
     ];
@@ -2290,62 +5024,18 @@ processProjection[projector_String] := Module[
       Length[finite] === standardTermCount,
     projector <> " endpoint cache does not cover every standard term."];
 
-  repairCurrent = TrueQ[
-    AssociationQ[cachePayload] &&
-      Lookup[cachePayload, "CoupledLogEndpointRepairVersion", 0] ===
-        coupledEndpointRepairVersion &&
-      Lookup[cachePayload, "CoupledLogEndpointGroups", {}] === groups &&
-      Lookup[cachePayload, "CoupledLogEndpointRepairApplied", False]
-  ];
-  If[! repairCurrent,
-    repairResult = repairCoupledEndpointGroups[
-      standardTerms, standardIndices, finite, methods, groups, label
-    ];
-    finite = repairResult["FiniteCoefficients"];
-    methods = repairResult["Methods"];
-    cachePayload = <|
-      "CacheVersion" -> endpointCacheVersion,
-      "StageVersion" -> stageVersion,
-      "Channel" -> "Hqg only",
-      "TensorRole" -> "RealQGEndpoint",
-      "SourceS09" -> s09Path,
-      "SourceS09SHA256" -> s09SHA256,
-      "Program" -> programPath,
-      "ProgramSHA256" -> programSHA256,
-      "ElectricChargeNormalization" -> electricChargeNormalization,
-      "AppliedHardKernelWeight" -> 1,
-      "Projector" -> projector,
-      "SourceExpansionCache" -> expansionCachePaths[projector],
-      "SourceExpansionSHA256" -> expansionCacheSHA256[projector],
-      "RemainderTermCount" -> termCount,
-      "StandardTermIndices" -> standardIndices,
-      "Alpha2TermIndices" -> exceptionalIndices,
-      "Alpha2NestedRatioEndpoints" ->
-        Lookup[alpha2Data, "NestedRatioEndpoint", {}],
-      "DirectSubstitutionSingularLogTermIndices" -> logIndices,
-      "CoupledLogEndpointRepairVersion" ->
-        coupledEndpointRepairVersion,
-      "CoupledLogEndpointGroups" -> groups,
-      "CoupledLogEndpointRepairApplied" -> True,
-      "PoleCoefficients" -> poles,
-      "FiniteCoefficients" -> finite,
-      "RequiredPoleSubtraction" -> flags,
-      "Methods" -> methods,
-      "CompletedStandardTermCount" -> standardTermCount
-    |>;
-    writeAtomic[cachePayload, cachePath];
-    Print[
-      "S10_COUPLED_ENDPOINT_SUCCESS: projector=", projector,
-      " repairVersion=", coupledEndpointRepairVersion,
-      " groups=", groups
-    ]
-  ];
   assert[
-    TrueQ[cachePayload["CoupledLogEndpointRepairApplied"]] &&
-      Count[methods, "physical-branch coupled group"] === Length[groups] &&
-      Count[methods, "absorbed into physical-branch group"] ===
-        Total[Length /@ groups] - Length[groups],
-    projector <> " coupled endpoint repair metadata is incomplete."
+    TrueQ[cachePayload["GroupedBeforeIndividualLaurent"]] &&
+      TrueQ[cachePayload["CoupledLogEndpointRepairApplied"]] &&
+      Count[methods, "physical-branch grouped Laurent"] ===
+        Length[groups] &&
+      Count[
+        methods,
+        "absorbed into pre-individual physical-branch group"
+      ] ===
+        Total[Length /@ Lookup[groups, "SourceIndices"]] -
+          Length[groups],
+    projector <> " pre-individual grouped Laurent metadata is incomplete."
   ];
 
   Print["S10_STAGE: reducing stronger endpoint pole for " <> projector];
@@ -2427,6 +5117,22 @@ processProjection[projector_String] := Module[
     projector <> " action lacks its endpoint-subtracted integral."];
   assert[! FreeQ[action, _S10ConvolutionTest],
     projector <> " action lacks the symbolic test function."];
+  cachePayload = Join[
+    cachePayload,
+    <|
+      "Finalized" -> True,
+      "ReducedStrongerPoleResidual" -> reducedPoleResidual,
+      "StrongerPoleOrders" -> poleOrders,
+      "EndpointValue" -> endpointValue,
+      "Alpha2EndpointValue" -> alpha2EndpointValue,
+      "Action" -> action
+    |>
+  ];
+  writeAtomic[cachePayload, cachePath];
+  endpointCacheReloadGate = atomicReloadSameQ[cachePayload, cachePath];
+  assert[endpointCacheReloadGate,
+    projector <> " finalized endpoint cache failed reload equality."];
+  endpointCacheSHA256 = fileSHA256Hex[cachePath];
   Print["S10_CHECKPOINT: completed symbolic distribution action for " <>
     projector];
   <|
@@ -2436,13 +5142,35 @@ processProjection[projector_String] := Module[
     "Alpha2TermIndices" -> exceptionalIndices,
     "Alpha2NestedRatioEndpoints" ->
       Lookup[alpha2Data, "NestedRatioEndpoint", {}],
+    "Alpha2NestedRatioEndpointSHA256" ->
+      Lookup[alpha2Data, "NestedRatioEndpointSHA256", {}],
+    "Alpha2EndpointConstructionVersion" ->
+      alpha2EndpointConstructionVersion,
+    "Alpha2InvalidFactorEndpointSHA256Hex" ->
+      Lookup[alpha2Data, "InvalidFactorEndpointSHA256Hex", {}],
+    "Alpha2EndpointValueSHA256Hex" ->
+      Lookup[alpha2Data, "EndpointValueSHA256Hex", {}],
+    "Alpha2InvalidFactorEndpointMetadata" ->
+      Lookup[alpha2Data, "InvalidFactorEndpointMetadata", {}],
     "DirectSubstitutionSingularLogTermIndices" -> logIndices,
+    "UncoveredSingularLogTermIndices" -> uncoveredLogIndices,
+    "ParallelBatchTimeLimitSeconds" ->
+      endpointParallelBatchTimeLimitSeconds,
+    "ParallelBatchTimeoutCount" ->
+      endpointParallelBatchTimeoutCountByProjector[projector],
+    "SerialFallbackSourceIndices" ->
+      endpointSerialFallbackSourceIndices[projector],
     "CoupledLogEndpointRepairVersion" -> coupledEndpointRepairVersion,
     "CoupledLogEndpointGroups" -> groups,
+    "CoupledGroupSeriesEvaluatorVersion" ->
+      coupledGroupSeriesEvaluatorVersion,
+    "GroupedBeforeIndividualLaurent" -> True,
+    "CoupledGroupCertificates" -> groupCertificates,
     "CoupledLogEndpointRepairApplied" -> True,
     "PoleSubtractionTermCount" -> Count[flags, True],
     "EndpointCache" -> cachePath,
-    "EndpointCacheSHA256" -> FileHash[cachePath, "SHA256"],
+    "EndpointCacheSHA256" -> endpointCacheSHA256,
+    "EndpointCacheReloadValidated" -> endpointCacheReloadGate,
     "ReducedStrongerPoleResidual" -> reducedPoleResidual,
     "StrongerPoleOrders" -> poleOrders,
     "EndpointValue" -> endpointValue,
@@ -2452,9 +5180,9 @@ processProjection[projector_String] := Module[
   |>
 ];
 
-virtualLaurentCacheSHA256 = FileHash[laurentCachePath, "SHA256"];
-paVeCacheSHA256 = FileHash[paVeCachePath, "SHA256"];
-scalarMasterCacheSHA256 = FileHash[scalarMasterCachePath, "SHA256"];
+virtualLaurentCacheSHA256 = fileSHA256Hex[laurentCachePath];
+paVeCacheSHA256 = fileSHA256Hex[paVeCachePath];
+scalarMasterCacheSHA256 = fileSHA256Hex[scalarMasterCachePath];
 Print["S10_MEMORY_STAGE: releasing completed virtual data before real endpoints"];
 Clear[
   renormalizedVirtualSplit, virtualLaurent, loStoredCoefficients,
@@ -2490,7 +5218,7 @@ combinedConvolutionActions = AssociationMap[
   realConvolutionActions[#] + virtualConvolutionActions[#] &,
   projectors
 ];
-assert[
+virtualActionResolutionGate =
   AllTrue[
     Values[virtualConvolutionActions],
     FreeQ[
@@ -2499,87 +5227,338 @@ assert[
         _FeynCalc`PaVe | _FeynCalc`B0 | _FeynCalc`C0 | _FeynCalc`D0 |
         _FeynCalc`FeynAmpDenominator | dZGG1 | dZgs1 | _dZq1
     ] &
-  ],
+  ];
+assert[virtualActionResolutionGate,
   "A virtual action retains an unresolved loop, regulator, or counterterm."
 ];
-assert[
+realActionStructureGate = AllTrue[
+  Values[realConvolutionActions],
+  Function[action,
+    FreeQ[
+      action,
+      _S09EndpointValue | _S09PlusDistribution | DiracDelta[s23]
+    ] &&
+      ! FreeQ[action, _S10ConvolutionTest] &&
+      ! FreeQ[action, Inactive[Integrate][___]]
+  ]
+];
+assert[realActionStructureGate,
+  "A real endpoint action has invalid symbolic-test-function structure."];
+combinedActionResolutionGate =
   AllTrue[
     Values[combinedConvolutionActions],
-    FreeQ[#, _S09EndpointValue | _S09PlusDistribution | DiracDelta[s23]] &
-  ],
+    FreeQ[
+      #,
+      _S09EndpointValue | _S09PlusDistribution | DiracDelta[s23] |
+        FeynCalc`EpsilonUV | FeynCalc`EpsilonIR | _SeriesData |
+        _FeynCalc`PaVe | _FeynCalc`B0 | _FeynCalc`C0 | _FeynCalc`D0 |
+        _FeynCalc`FeynAmpDenominator | dZGG1 | dZgs1 | _dZq1
+    ] &
+  ];
+assert[combinedActionResolutionGate,
   "A combined action retains an endpoint distribution placeholder."
 ];
 
+endpointFinalCacheReloadGate = AllTrue[
+  Values[
+    endpointDataByProjector[[All, "EndpointCacheReloadValidated"]]
+  ],
+  TrueQ
+];
+endpointFinalCacheDiskHashGate = AllTrue[
+  projectors,
+  Function[projector,
+    fileSHA256Hex[endpointDataByProjector[projector, "EndpointCache"]] ===
+      endpointDataByProjector[projector, "EndpointCacheSHA256"]
+  ]
+];
+alpha2RatioGate = AllTrue[
+  projectors,
+  Function[projector,
+    Module[{ratios, hashes},
+      ratios = endpointDataByProjector[
+        projector, "Alpha2NestedRatioEndpoints"
+      ];
+      hashes = endpointDataByProjector[
+        projector, "Alpha2NestedRatioEndpointSHA256"
+      ];
+      Length[ratios] > 0 && Length[ratios] === Length[hashes] &&
+        AllTrue[
+          ratios,
+          ! invalidEndpointQ[#] && FreeQ[#, s23] && ! TrueQ[# === 0] &
+        ] &&
+        SameQ[Hash[#, "SHA256"] & /@ ratios, hashes]
+    ]
+  ]
+];
+alpha2EndpointConstructionGate =
+  alpha2ParallelKernelIDSetsSeen =!= {} &&
+  AllTrue[
+    alpha2ParallelKernelIDSetsSeen,
+    Length[#] === requestedParallelKernels && DuplicateFreeQ[#] &
+  ] &&
+  AllTrue[
+    projectors,
+    Function[projector,
+      Module[
+        {
+          termIndices, invalidFactorHashes, endpointHashes,
+          expectedHashes
+        },
+        termIndices = endpointDataByProjector[
+          projector,
+          "Alpha2TermIndices"
+        ];
+        invalidFactorHashes = endpointDataByProjector[
+          projector,
+          "Alpha2InvalidFactorEndpointSHA256Hex"
+        ];
+        endpointHashes = endpointDataByProjector[
+          projector,
+          "Alpha2EndpointValueSHA256Hex"
+        ];
+        expectedHashes = Lookup[
+          acceptedAlpha2InvalidFactorEndpointSHA256HexByProjector,
+          projector,
+          Missing["NoIndependentHashContract"]
+        ];
+        endpointDataByProjector[
+          projector,
+          "Alpha2EndpointConstructionVersion"
+        ] === alpha2EndpointConstructionVersion &&
+          Length[termIndices] > 0 &&
+          Length[invalidFactorHashes] === Length[termIndices] &&
+          Length[endpointHashes] === Length[termIndices] &&
+          AllTrue[invalidFactorHashes, ListQ[#] && # =!= {} &] &&
+          AllTrue[
+            Flatten[invalidFactorHashes],
+            StringQ[#] && StringLength[#] === 64 &
+          ] &&
+          AllTrue[
+            endpointHashes,
+            StringQ[#] && StringLength[#] === 64 &
+          ] &&
+          If[
+            MissingQ[expectedHashes],
+            True,
+            Flatten[invalidFactorHashes] === expectedHashes
+          ]
+      ]
+    ]
+  ];
+derivedCoupledGroupGate = AllTrue[
+  projectors,
+  Function[projector,
+    Module[{groups, certificates},
+      groups = endpointDataByProjector[
+        projector, "CoupledLogEndpointGroups"
+      ];
+      certificates = endpointDataByProjector[
+        projector, "CoupledGroupCertificates"
+      ];
+      ListQ[groups] && groups =!= {} &&
+        AllTrue[
+          groups,
+          AssociationQ[#] &&
+            Length[Lookup[#, "SourceIndices", {}]] > 1 &&
+            AssociationQ[Lookup[#, "RootByDeltaSign", <||>]] &
+        ] &&
+        DuplicateFreeQ[Flatten[Lookup[groups, "SourceIndices"]]] &&
+        endpointDataByProjector[
+          projector,
+          "CoupledGroupSeriesEvaluatorVersion"
+        ] === coupledGroupSeriesEvaluatorVersion &&
+        TrueQ[endpointDataByProjector[
+          projector,
+          "GroupedBeforeIndividualLaurent"
+        ]] &&
+        ListQ[certificates] && Length[certificates] === Length[groups] &&
+        AllTrue[
+          certificates,
+          AssociationQ[#] &&
+            Lookup[#, "EvaluatorVersion", 0] ===
+              coupledGroupSeriesEvaluatorVersion &&
+            TrueQ[Lookup[#, "RootResidualsZero", False]] &&
+            TrueQ[Lookup[#, "AllFunctionSeriesResolved", False]] &&
+            TrueQ[Lookup[#, "LiteralReconstruction", False]] &&
+            TrueQ[Lookup[#, "ExactSourceUnchanged", False]] &&
+            Sort[Keys[Lookup[#, "BranchCertificates", <||>]]] ===
+              {-1, 1} &
+        ] &&
+        TrueQ[endpointDataByProjector[
+          projector, "CoupledLogEndpointRepairApplied"
+        ]]
+    ]
+  ]
+];
+progressCacheCleanupGate = FileNames[
+  FileNameJoin[{scriptDirectory, "s10_cache_v2_virtual_laurent_progress_*"}]
+] === {};
+temporaryArtifactGate = FileNames[
+  FileNameJoin[{scriptDirectory, "s10_*.tmp.*"}]
+] === {};
+fullySymbolicActionGate = FreeQ[
+  Join[
+    Values[realConvolutionActions],
+    Values[virtualConvolutionActions],
+    Values[combinedConvolutionActions]
+  ],
+  _Real | $Failed | Indeterminate | ComplexInfinity | DirectedInfinity
+];
+endpointBatchRecoveryGate = TrueQ[
+  IntegerQ[endpointParallelBatchTimeLimitSeconds] &&
+    endpointParallelBatchTimeLimitSeconds > 0 &&
+    AssociationQ[endpointParallelBatchTimeoutCountByProjector] &&
+    AssociationQ[endpointSerialFallbackSourceIndices] &&
+    Sort[Keys[endpointParallelBatchTimeoutCountByProjector]] ===
+      Sort[projectors] &&
+    Sort[Keys[endpointSerialFallbackSourceIndices]] === Sort[projectors] &&
+    parallelKernelLaunchIDSetsSeen =!= {} &&
+    AllTrue[
+      parallelKernelLaunchIDSetsSeen,
+      Length[#] === requestedParallelKernels && DuplicateFreeQ[#] &
+    ] &&
+    AllTrue[
+      projectors,
+      Function[projector,
+        IntegerQ[endpointParallelBatchTimeoutCountByProjector[projector]] &&
+          endpointParallelBatchTimeoutCountByProjector[projector] >= 0 &&
+          ListQ[endpointSerialFallbackSourceIndices[projector]] &&
+          DuplicateFreeQ[endpointSerialFallbackSourceIndices[projector]] &&
+          AllTrue[
+            endpointSerialFallbackSourceIndices[projector],
+            IntegerQ
+          ] &&
+          ContainsAll[
+            endpointDataByProjector[projector, "StandardTermIndices"],
+            endpointSerialFallbackSourceIndices[projector]
+          ]
+      ]
+    ]
+];
+
+immutableInputIdentitiesQ[] := TrueQ[
+  fileSHA256Hex[programPath] === programSHA256 &&
+    fileSHA256Hex[paperPath] === referencePDFSHA256 &&
+    fileSHA256Hex[s09Path] === s09SHA256 &&
+    fileSHA256Hex[s09ProgramPath] === s09ProgramSHA256 &&
+    fileSHA256Hex[s08Path] === s08SHA256 &&
+    fileSHA256Hex[s08ProgramPath] === s08ProgramSHA256 &&
+    fileSHA256Hex[s07Path] === s07SHA256 &&
+    fileSHA256Hex[s07ProgramPath] === s07ProgramSHA256 &&
+    AssociationMap[
+      fileSHA256Hex[expansionCachePaths[#]] &,
+      projectors
+    ] === recordedExpansionCacheSHA256
+];
+immutableInputIdentityGate = immutableInputIdentitiesQ[];
+assert[immutableInputIdentityGate,
+  "An accepted source, result, paper, or S09 cache identity changed before " <>
+    "final S10 assembly."];
+virtualCacheMigrationGate = AllTrue[
+  Values[virtualCacheMigrationRecords],
+  AssociationQ[#] && TrueQ[Lookup[#, "Migrated", False]] &&
+    Lookup[#, "OriginalAcceptedProgramSHA256", Missing[]] ===
+      acceptedLegacyVirtualProgramSHA256 &&
+    MemberQ[
+      Values[acceptedLegacyVirtualCacheSHA256ByName],
+      Lookup[#, "OriginalAcceptedCacheSHA256", Missing[]]
+    ] &&
+    TrueQ[Lookup[#, "MathematicalPayloadUnchanged", False]] &&
+    (
+      Lookup[#, "CacheType", Missing[]] =!= "virtual Laurent" ||
+        TrueQ[Lookup[#, "DependencyMetadataRefreshed", False]]
+    ) &
+];
+endpointCacheMetadataMigrationGate = AllTrue[
+  Values[endpointCacheMetadataMigrationRecords],
+  AssociationQ[#] && TrueQ[Lookup[#, "Migrated", False]] &&
+    Lookup[#, "OriginalAcceptedProgramSHA256", Missing[]] ===
+      acceptedEndpointMetadataCorrectionProgramSHA256 &&
+    Lookup[
+      acceptedEndpointMetadataCorrectionCacheSHA256ByProjector,
+      Lookup[#, "Projector", Missing[]],
+      Missing[]
+    ] === Lookup[#, "OriginalAcceptedCacheSHA256", Missing[]] &&
+    TrueQ[Lookup[#, "MathematicalPayloadUnchanged", False]] &
+];
+
 s10Checks = <|
-  "CurrentS09S08S07ProgramAndSourceBindingsVerified" -> True,
-  "PaperReferenceHashPreserved" -> True,
-  "BigTMDChannel3CaseAProjectorsPreserved" -> True,
-  "ChargeStrippedHardKernelConventionPreserved" -> True,
-  "FragmentingGluonIsK1" -> True,
-  "All97UniquePaVeFunctionsEvaluated" ->
-    virtualIntegralBasis["PaVeCount"] === 97,
-  "AllFourDirectScalarMastersEvaluated" ->
-    Total[Lookup[virtualIntegralBasis, {"B0Count", "C0Count", "D0Count"}]] === 4,
-  "PackageXAnalyticContinuationApplied" -> True,
-  "SavedSymbolicCountertermsRemovedBeforeExplicitInsertion" -> True,
-  "AggregateExternalLegCountertermInsertedExactlyOnce" -> True,
-  "BareUVResidueMatchesLO" -> True,
-  "ExplicitQCDCountertermsCancelUVPole" -> True,
-  "VirtualDoublePoleMatchesUniversalIRFactor" -> True,
-  "S09LONormalizationMatched" -> True,
-  "VirtualLaurentExpandedThroughFiniteTerm" -> True,
-  "EvaluatorToPaperConventionDeferredExactlyOnce" -> True,
-  "HermitianProjectionDeferredUntilFiniteFactorizedEndpoint" -> True,
-  "S09ExpansionCachesValidated" -> True,
-  "ExactlyTwoS09EndpointPlaceholdersReceived" -> True,
-  "BothProjectorsProcessed" -> True,
-  "AllCurrentS09RemainderTermsResolved" ->
+  "AcceptedS09S08S07IdentitiesAndChecksValidated" ->
+    (s09IdentityGate && s09ChecksGate && s09ProgramGate &&
+      s08IdentityGate && s08ChecksGate && s08ProgramGate &&
+      s07IdentityGate && s07ChecksGate && s07ProgramGate),
+  "PaperReferenceHashValidated" -> paperBindingGate,
+  "InheritedChargeStateAndDimensionalBookkeepingValidated" ->
+    chargeBookkeepingGate,
+  "AcceptedTwoBodyKinematicsInstalledExactly" ->
+    (twoBodyKinematicRecordGate &&
+      TrueQ[twoBodyInstallationAudit["InstalledExactly"]]),
+  "LOAndVirtualReferenceContentHashesValidated" ->
+    loVirtualReferenceHashGate,
+  "RuntimeVirtualIntegralInventoriesDerivedAndContentBound" ->
+    virtualIntegralInventoryGate,
+  "AllRuntimeLoopIntegralsEvaluated" -> loopIntegralResolutionGate,
+  "PackageXRuleCachesExactlyReloaded" ->
+    (Sort[Keys[ruleCacheValidation]] === Sort[{"PaVe", "scalar master"}] &&
+      AllTrue[Values[ruleCacheValidation], TrueQ]),
+  "LegacyVirtualCacheMigrationsAreExactWhenUsed" ->
+    virtualCacheMigrationGate,
+  "EndpointCacheMetadataMigrationsAreExactWhenUsed" ->
+    endpointCacheMetadataMigrationGate,
+  "SeparateBareUVAndIRRegulatorsPresent" ->
+    (uvRegulatorPresenceGate && irRegulatorPresenceGate),
+  "InheritedSymbolicCountertermsRemoved" ->
+    (inheritedCountertermPresenceGate && bareCountertermRemovalGate),
+  "PropagatorDenominatorsAndScalarPairsResolved" ->
+    (bareDenominatorResolutionGate && loDenominatorResolutionGate &&
+      scalarPairResolutionGate),
+  "CountertermDefinitionsUniquelySolvedAndInserted" ->
+    (Length[countertermDefinitionSolutions] === 1 &&
+      explicitCountertermInsertionGate &&
+      renormalizedVirtualResolutionGate),
+  "BareUVResiduesDeriveOneCommonLOMultiple" -> bareUVCommonRatioGate,
+  "ExplicitQCDCountertermsCancelUVPole" -> uvCancellationGate,
+  "AcceptedS08TwoBodyNormalizationMatched" ->
+    (twoBodyPhaseDefinitionGate && loNormalizationGate),
+  "VirtualLaurentExpandedThroughFiniteTerm" ->
+    (virtualLaurentResolutionGate && virtualLaurentCacheValidationGate),
+  "VirtualDoublePoleMatchesDefinedUniversalFactor" ->
+    virtualDoublePoleGate,
+  "AcceptedS09CacheHashesAndMetadataValidated" ->
+    (expansionCacheDiskHashGate &&
+      AllTrue[
+        Flatten[Values /@ Values[expansionCacheValidation]],
+        TrueQ
+      ]),
+  "FormalEndpointPlaceholderInventoryDerived" ->
+    (endpointPlaceholderCount ===
+      Total[Values[endpointPlaceholderCountsByProjector]] &&
+      AllTrue[
+        Values[endpointPlaceholderCountsByProjector],
+        TrueQ[# > 0] &
+      ]),
+  "BothProjectorsProcessed" ->
+    Sort[Keys[endpointDataByProjector]] === Sort[projectors],
+  "AllCurrentRemainderTermsStructurallyPartitioned" ->
     AllTrue[
       Values[endpointDataByProjector],
       Length[# ["StandardTermIndices"]] +
           Length[# ["Alpha2TermIndices"]] ===
         # ["RemainderTermCount"] &
     ],
-  "OneHqgAlpha2TermPerProjectorDetectedStructurally" ->
+  "AllExceptionalEndpointRatiosDerivedAndContentBound" -> alpha2RatioGate,
+  "Alpha2EndpointsDerivedByTwoExactMethodsAndContentBound" ->
+    alpha2EndpointConstructionGate,
+  "NoSingularLogTermOutsideDerivedGroups" ->
     AllTrue[
-      Values[endpointDataByProjector[[All, "Alpha2TermIndices"]]],
-      Length[#] === 1 &
-    ],
-  "AllDetectedAlpha2TermsHavePhysicalNestedRatio" ->
-    AllTrue[
-      Flatten[Values[
-        endpointDataByProjector[[All, "Alpha2NestedRatioEndpoints"]]
-      ]],
-      TrueQ[Cancel[Together[# - zH^2/PHT2]] === 0] &
-    ],
-  "DirectEndpointLogScanHasNoAdditionalGroups" ->
-    AllTrue[
-      Values[
-        endpointDataByProjector[[
-          All,
-          "DirectSubstitutionSingularLogTermIndices"
-        ]]
-      ],
+      Values[endpointDataByProjector[[
+        All, "UncoveredSingularLogTermIndices"
+      ]]],
       # === {} &
     ],
-  "PhysicalBranchCoupledEndpointRepairApplied" ->
-    AllTrue[
-      projectors,
-      Function[projector,
-        endpointDataByProjector[
-          projector,
-          "CoupledLogEndpointRepairVersion"
-        ] === coupledEndpointRepairVersion &&
-          endpointDataByProjector[
-            projector,
-            "CoupledLogEndpointGroups"
-          ] === coupledEndpointGroups[projector] &&
-          TrueQ[endpointDataByProjector[
-            projector,
-            "CoupledLogEndpointRepairApplied"
-          ]]
-      ]
-    ],
+  "PhysicalBranchGroupsDerivedBeforeIndividualLaurent" ->
+    derivedCoupledGroupGate,
   "StrongerEndpointPoleAbsentThroughFiniteRequirement" ->
     AllTrue[
       Flatten[
@@ -2589,51 +5568,122 @@ s10Checks = <|
       ],
       TrueQ[# === 0] &
     ],
-  "UnitHqgHardKernelWeightRetained" -> hardKernelWeight === 1,
-  "EndpointValuesAreS23Independent" ->
+  "EndpointValuesAreFiniteAndS23Independent" ->
     AllTrue[
       Join[
         Values[endpointDataByProjector[[All, "EndpointValue"]]],
         Values[endpointDataByProjector[[All, "Alpha2EndpointValue"]]]
       ],
-      FreeQ[#, s23] &
+      ! invalidEndpointQ[#] && FreeQ[#, s23] &
     ],
-  "DiracDeltaActedOnSymbolicTestFunction" -> True,
-  "AllPlusDistributionsActedOnSymbolicTestFunction" -> True,
-  "FinalActionsContainNoDistributionPlaceholders" ->
-    AllTrue[Values[combinedConvolutionActions],
-      FreeQ[
-        #,
-        _S09EndpointValue | _S09PlusDistribution | DiracDelta[s23]
-      ] &],
-  "VirtualActionsContainNoUnresolvedLoopObjects" -> True,
-  "RealVirtualSymbolicActionsFormed" -> True,
-  "EndpointWorkersUsedOnlyWhenRawTermsRequired" ->
-    If[
-      endpointParallelWorkRequired,
-      Length[parallelKernelIDsSeen] === requestedParallelKernels &&
-        DuplicateFreeQ[parallelKernelIDsSeen],
-      parallelKernelIDsSeen === {}
-    ],
-  "AllEndpointWorkersClosedBeforeFinalVirtualAssembly" ->
-    $KernelCount === 0,
-  "ParentOnlyAtomicEndpointCheckpointWrites" -> True,
-  "AllCachesBoundToCurrentSourcesAndProgram" -> True,
-  "PhysicalBigTMDLuminosityDeferred" -> True,
-  "CalculationRemainsFullySymbolic" -> True,
-  "CollinearFactorizationNotApplied" -> True
+  "RealActionsHaveSubtractedSymbolicTestFunctionForm" ->
+    realActionStructureGate,
+  "VirtualActionsContainNoUnresolvedLoopObjects" ->
+    virtualActionResolutionGate,
+  "CombinedActionsContainNoDistributionOrLoopPlaceholders" ->
+    combinedActionResolutionGate,
+  "EndpointCachesExactlyReloadedAndDiskBound" ->
+    (endpointFinalCacheReloadGate && endpointFinalCacheDiskHashGate),
+  "EndpointParallelBatchesBoundedAndFallbacksProvenanced" ->
+    endpointBatchRecoveryGate,
+  "UnitAdditionalHqgWeightRetained" -> TrueQ[hardKernelWeight === 1],
+  "EndpointWorkersValidatedAndClosed" ->
+    (AllTrue[
+        parallelKernelLaunchIDSetsSeen,
+        Length[#] === requestedParallelKernels && DuplicateFreeQ[#] &
+      ] && If[
+        endpointParallelWorkRequired,
+        Length[parallelKernelIDsSeen] === requestedParallelKernels &&
+          DuplicateFreeQ[parallelKernelIDsSeen],
+        parallelKernelIDsSeen === {}
+      ] && $KernelCount === 0),
+  "CompletedLaurentProgressCachesRemoved" -> progressCacheCleanupGate,
+  "NoTemporaryArtifactRemains" -> temporaryArtifactGate,
+  "CalculationRemainsFullySymbolic" -> fullySymbolicActionGate,
+  "ImmutableInputsUnchangedBeforePublication" ->
+    immutableInputIdentityGate
 |>;
 assert[AllTrue[Values[s10Checks], TrueQ],
   "At least one final S10 validation check is not True."];
 
+compactEndpointDataByProjector = Map[
+  KeyDrop[
+    #,
+    {
+      "Action", "EndpointValue", "Alpha2EndpointValue",
+      "ReducedStrongerPoleResidual"
+    }
+  ] &,
+  endpointDataByProjector
+];
+endpointCacheSHA256 = AssociationMap[
+  endpointDataByProjector[#, "EndpointCacheSHA256"] &,
+  projectors
+];
+virtualCachePaths = <|
+  "PaVe" -> paVeCachePath,
+  "ScalarMasters" -> scalarMasterCachePath,
+  "Laurent" -> laurentCachePath
+|>;
+virtualCacheSHA256 = <|
+  "PaVe" -> paVeCacheSHA256,
+  "ScalarMasters" -> scalarMasterCacheSHA256,
+  "Laurent" -> virtualLaurentCacheSHA256
+|>;
+
+compactS10ResultValidQ[candidate_Association] := Module[
+  {endpointSummaries, distributionLedger, endpointCacheBytes},
+  endpointSummaries = Quiet@Check[
+    candidate[
+      "EndpointResolution", "EndpointDataByProjector"
+    ],
+    $Failed
+  ];
+  distributionLedger = Quiet@Check[
+    candidate["DistributionActions"],
+    $Failed
+  ];
+  endpointCacheBytes = Total[FileByteCount /@ Values[endpointCachePaths]];
+  AssociationQ[endpointSummaries] &&
+    Sort[Keys[endpointSummaries]] === Sort[projectors] &&
+    AllTrue[
+      projectors,
+      Function[projector,
+        AssociationQ[endpointSummaries[projector]] &&
+          Intersection[
+            Keys[endpointSummaries[projector]],
+            {
+              "Action", "EndpointValue", "Alpha2EndpointValue",
+              "ReducedStrongerPoleResidual"
+            }
+          ] === {}
+      ]
+    ] &&
+    AssociationQ[distributionLedger] &&
+    Intersection[
+      Keys[distributionLedger],
+      {"RealActions", "VirtualActions", "CombinedActions"}
+    ] === {} &&
+    distributionLedger["RealEndpointCacheByProjector"] ===
+      endpointCachePaths &&
+    distributionLedger["RealEndpointCacheSHA256"] ===
+      endpointCacheSHA256 &&
+    distributionLedger["VirtualLaurentCache"] === laurentCachePath &&
+    distributionLedger["VirtualLaurentCacheSHA256"] ===
+      virtualLaurentCacheSHA256 &&
+    endpointCacheBytes > 0 && ByteCount[candidate] < endpointCacheBytes
+];
+
 s10Result = <|
-  "Status" -> "CompleteSymbolic",
+  "Status" -> "Complete",
   "Stage" -> stageVersion,
+  "ResultSchemaVersion" -> resultSchemaVersion,
   "Channel" -> "Hqg only",
   "Contribution" ->
     "Hqg;qg real endpoint action plus UV-renormalized symbolic virtual action",
   "GeneratedAt" -> DateString[Now, "ISODateTime"],
   "Program" -> programPath,
+  "ProgramPath" -> programPath,
   "ProgramSHA256" -> programSHA256,
   "SourceResult" -> s09Path,
   "SourceResultSHA256" -> s09SHA256,
@@ -2641,11 +5691,40 @@ s10Result = <|
   "SourceS08SHA256" -> s08SHA256,
   "SourceS07" -> s07Path,
   "SourceS07SHA256" -> s07SHA256,
+  "InputProvenance" -> <|
+    "S09ResultPath" -> s09Path,
+    "S09ResultSHA256" -> s09SHA256,
+    "S09SourcePath" -> s09ProgramPath,
+    "S09SourceSHA256" -> s09ProgramSHA256,
+    "S08ResultPath" -> s08Path,
+    "S08ResultSHA256" -> s08SHA256,
+    "S08SourcePath" -> s08ProgramPath,
+    "S08SourceSHA256" -> s08ProgramSHA256,
+    "S07ResultPath" -> s07Path,
+    "S07ResultSHA256" -> s07SHA256,
+    "S07SourcePath" -> s07ProgramPath,
+    "S07SourceSHA256" -> s07ProgramSHA256
+  |>,
+  "PaperReference" -> <|
+    "Path" -> paperPath,
+    "SHA256" -> referencePDFSHA256,
+    "Equations" ->
+      "endpoint identities and Appendix E virtual-convention handoff"
+  |>,
   "ReferencePDFSHA256" -> referencePDFSHA256,
   "BigTMDConvention" -> bigTMDConvention,
   "BigTMDProjectorMapping" -> bigTMDProjectorMapping,
   "ElectricChargeNormalization" -> electricChargeNormalization,
   "FragmentingParton" -> fragmentingParton,
+  "Bookkeeping" -> <|
+    "Charge" -> chargeBookkeeping,
+    "InitialState" -> initialStateBookkeeping,
+    "Dimensional" -> dimensionalBookkeeping,
+    "AdditionalMultiplicativeWeightAtS10" -> hardKernelWeight,
+    "PhysicalFlavorChargeWeightAppliedAtS10" ->
+      physicalFlavorChargeWeightAppliedAtS09,
+    "CollinearFactorizationAppliedAtS10" -> False
+  |>,
   "CalculationMode" ->
     "fully analytic and symbolic; no numerical kinematics, PDFs, FFs, or concrete test function",
   "EndpointResolution" -> <|
@@ -2654,8 +5733,35 @@ s10Result = <|
     "S09PlaceholderCountBefore" -> endpointPlaceholderCount,
     "S09PlaceholderCountAfter" -> 0,
     "Method" ->
-      "corrected Hqg factorwise endpoint Laurent extraction for structurally ordinary alpha=1 terms; proven root-coupled terms are resolved separately on both physical square-root signs before grouping; every Hqg-detected base^(-1-epsilon) with base/s23 finite is refactored into the alpha=2 delta coefficient and doubled logarithmic tower",
-    "EndpointDataByProjector" -> endpointDataByProjector
+      "runtime-derived physical-root groups are resolved as complete equations on both root signs in one shared t-series basis before any individual extraction; only nongrouped ordinary alpha=1 terms use factorwise endpoint Laurent extraction; every Hqg-detected base^(-1-epsilon) with base/s23 finite is refactored into the alpha=2 delta coefficient and doubled logarithmic tower",
+    "S09PlaceholderCountsByProjectorBefore" ->
+      endpointPlaceholderCountsByProjector,
+    "S09PlaceholderCountsByProjectorAfter" ->
+      AssociationMap[Count[#, _S09EndpointValue, Infinity] &,
+        combinedConvolutionActions],
+    "Alpha2EndpointConstruction" -> <|
+      "Version" -> alpha2EndpointConstructionVersion,
+      "ExactCoefficientMethods" -> {"SeriesData", "SeriesCoefficient"},
+      "AcceptedInvalidFactorEndpointSHA256HexByProjector" ->
+        acceptedAlpha2InvalidFactorEndpointSHA256HexByProjector,
+      "InvalidFactorEndpointSHA256HexByProjector" ->
+        AssociationMap[
+          endpointDataByProjector[
+            #,
+            "Alpha2InvalidFactorEndpointSHA256Hex"
+          ] &,
+          projectors
+        ],
+      "EndpointValueSHA256HexByProjector" ->
+        AssociationMap[
+          endpointDataByProjector[
+            #,
+            "Alpha2EndpointValueSHA256Hex"
+          ] &,
+          projectors
+        ]
+    |>,
+    "EndpointDataByProjector" -> compactEndpointDataByProjector
   |>,
   "VirtualLaurentExpansion" -> <|
     "IntegralBasis" -> virtualIntegralBasis,
@@ -2686,9 +5792,18 @@ s10Result = <|
       "arbitrary symbolic function regular at s23=0 and independent of epsilon",
     "EndpointDeltaConvention" ->
       "the lower-endpoint delta has full weight, matching the paper's endpoint identity",
-    "RealByProjector" -> realConvolutionActions,
-    "VirtualByProjector" -> virtualConvolutionActions,
-    "RealPlusVirtualByProjector" -> combinedConvolutionActions,
+    "RealEndpointCacheByProjector" -> endpointCachePaths,
+    "RealEndpointCacheSHA256" -> endpointCacheSHA256,
+    "RealActionField" -> "Action",
+    "VirtualLaurentCache" -> laurentCachePath,
+    "VirtualLaurentCacheSHA256" -> virtualLaurentCacheSHA256,
+    "VirtualExpressionField" -> "LaurentThroughFinite",
+    "CombinedActionDefinition" -> HoldComplete[
+      S10CombinedAction[projector] ==
+        S10RealActionFromEndpointCache[projector] +
+          S10VirtualLaurentFromCache[projector] *
+            S10ConvolutionTest[projector, 0]
+    ],
     "RemainingIntegralType" ->
       "ordinary endpoint-subtracted integral on 0<=s23<=B(xi); a concrete PDF/FF test function is intentionally not supplied"
   |>,
@@ -2702,20 +5817,63 @@ s10Result = <|
     "StageVersion" -> stageVersion,
     "ProgramSHA256" -> programSHA256,
     "SourceS09SHA256" -> s09SHA256,
-    "VirtualCaches" -> <|
-      "PaVe" -> paVeCachePath,
-      "ScalarMasters" -> scalarMasterCachePath,
-      "Laurent" -> laurentCachePath
-    |>,
+    "SourceS08SHA256" -> s08SHA256,
+    "SourceS07SHA256" -> s07SHA256,
+    "VirtualCaches" -> virtualCachePaths,
+    "VirtualCacheSHA256" -> virtualCacheSHA256,
+    "AcceptedLegacyVirtualProgramSHA256" ->
+      acceptedLegacyVirtualProgramSHA256,
+    "AcceptedLegacyVirtualCacheSHA256ByName" ->
+      acceptedLegacyVirtualCacheSHA256ByName,
+    "AcceptedFirstMigrationVirtualProgramSHA256" ->
+      acceptedFirstMigrationVirtualProgramSHA256,
+    "AcceptedFirstMigrationVirtualCacheSHA256ByName" ->
+      acceptedFirstMigrationVirtualCacheSHA256ByName,
+    "AcceptedSecondMigrationVirtualProgramSHA256" ->
+      acceptedSecondMigrationVirtualProgramSHA256,
+    "AcceptedSecondMigrationVirtualCacheSHA256ByName" ->
+      acceptedSecondMigrationVirtualCacheSHA256ByName,
+    "AcceptedThirdMigrationVirtualProgramSHA256" ->
+      acceptedThirdMigrationVirtualProgramSHA256,
+    "AcceptedThirdMigrationVirtualCacheSHA256ByName" ->
+      acceptedThirdMigrationVirtualCacheSHA256ByName,
+    "AcceptedFourthMigrationVirtualProgramSHA256" ->
+      acceptedFourthMigrationVirtualProgramSHA256,
+    "AcceptedFourthMigrationVirtualCacheSHA256ByName" ->
+      acceptedFourthMigrationVirtualCacheSHA256ByName,
+    "VirtualCacheMigrationRecords" -> virtualCacheMigrationRecords,
+    "AcceptedEndpointMetadataCorrectionProgramSHA256" ->
+      acceptedEndpointMetadataCorrectionProgramSHA256,
+    "AcceptedEndpointMetadataCorrectionCacheSHA256ByProjector" ->
+      acceptedEndpointMetadataCorrectionCacheSHA256ByProjector,
+    "EndpointCacheMetadataMigrationRecords" ->
+      endpointCacheMetadataMigrationRecords,
     "SourceExpansionCaches" -> expansionCachePaths,
     "SourceExpansionSHA256" -> expansionCacheSHA256,
     "EndpointCaches" -> endpointCachePaths,
-    "AllCachesSourceBound" -> True
+    "EndpointCacheSHA256" -> endpointCacheSHA256,
+    "AllCachesSourceBound" -> TrueQ[
+      AllTrue[Values[ruleCacheValidation], TrueQ] &&
+        virtualLaurentCacheValidationGate &&
+        endpointFinalCacheReloadGate &&
+        endpointFinalCacheDiskHashGate &&
+        expansionCacheDiskHashGate
+    ]
   |>,
   "ParallelExecution" -> <|
+    "SchedulerSlots" -> schedulerSlots,
+    "SchedulerSlotContractActive" -> IntegerQ[schedulerSlots],
     "RequestedEndpointWorkerCount" -> requestedParallelKernels,
     "RawEndpointParallelWorkRequired" -> endpointParallelWorkRequired,
     "ValidatedKernelIDsSeen" -> parallelKernelIDsSeen,
+    "ParallelKernelLaunchIDSetsSeen" -> parallelKernelLaunchIDSetsSeen,
+    "Alpha2WorkerKernelIDSetsSeen" -> alpha2ParallelKernelIDSetsSeen,
+    "EndpointParallelBatchTimeLimitSeconds" ->
+      endpointParallelBatchTimeLimitSeconds,
+    "EndpointParallelBatchTimeoutCountByProjector" ->
+      endpointParallelBatchTimeoutCountByProjector,
+    "EndpointSerialFallbackSourceIndices" ->
+      endpointSerialFallbackSourceIndices,
     "KernelExecutable" -> parallelKernelExecutable,
     "PerWorkerMemoryLimitBytes" -> endpointWorkerMemoryLimitBytes,
     "MemoryAvailableAtPlannerBytes" -> availableMemoryAtLaunch,
@@ -2723,17 +5881,17 @@ s10Result = <|
     "ParallelizedWork" ->
       If[
         endpointParallelWorkRequired,
-        "independent uncached standard endpoint Laurent terms in deterministic memory-admitted batches of up to the requested worker count",
-        "none: every standard per-term coefficient was present in the validated migration input; physical-branch group repair is intrinsically serial"
+        "independent uncached nongrouped endpoint Laurent terms in deterministic memory-admitted batches of up to the requested worker count; grouped positions never enter a worker",
+        "none: every ordinary coefficient and every pre-individual grouped equation was present in the exact current-source cache"
       ],
     "CheckpointWriter" -> "parent kernel only, atomically after each batch",
     "Fallback" ->
-      "a failed or memory-bounded worker result is recomputed serially before checkpointing",
+      "a parent-deadline, malformed, or memory-bounded worker result closes all workers and is recomputed exactly once serially before checkpointing; later batches launch fresh bounded workers",
     "VirtualAlgebraMode" ->
       "serial bounded reconstruction; no large virtual expression is copied to a worker"
   |>,
   "MemoryStrategy" ->
-    "evaluate/checkpoint Package-X and bounded virtual Laurent work serially; release completed virtual expressions; launch two to eight 1.25-GiB bounded workers lazily only for missing real endpoint terms; apply physical-branch group repair serially; close any workers; reload only the validated Laurent cache for final actions",
+    "validate or exactly migrate unchanged virtual caches; derive each physical-root group serially from one compressed shared root/function basis before individual extraction; release completed virtual expressions; launch two to eight 1.25-GiB bounded workers lazily only for missing nongrouped endpoint terms; impose a 900-second parent deadline per ordinary batch, close workers before exact serial fallback, and relaunch fresh workers for later batches; close any workers and reload only validated caches for final actions",
   "Checks" -> s10Checks,
   "NotPerformedAtThisStage" -> {
     "physical Sum_q e_q^2 PDF luminosity and gluon fragmentation function",
@@ -2747,11 +5905,98 @@ s10Result = <|
   }
 |>;
 
+compactResultGate = compactS10ResultValidQ[s10Result];
+AssociateTo[
+  s10Checks,
+  "CompactResultReferencesCachesWithoutDuplicatingActions" ->
+    compactResultGate
+];
+s10Result["Checks"] = s10Checks;
+finalCompactResultGate = compactS10ResultValidQ[s10Result];
+assert[
+  compactResultGate && finalCompactResultGate &&
+    AllTrue[Values[s10Result["Checks"]], TrueQ],
+  "The compact S10 result candidate failed its source-native gate."
+];
+
 Print["S10_STAGE: writing " <> resultPath];
 writeAtomic[s10Result, resultPath];
+reloadedResult = Quiet@Check[Get[resultPath], $Failed];
+resultReloadGate = TrueQ[
+  AssociationQ[reloadedResult] && SameQ[reloadedResult, s10Result] &&
+    reloadedResult["Status"] === "Complete" &&
+    reloadedResult["Stage"] === stageVersion &&
+    reloadedResult["ResultSchemaVersion"] === resultSchemaVersion &&
+    reloadedResult["ProgramSHA256"] === programSHA256 &&
+    reloadedResult["InputProvenance", "S09ResultSHA256"] === s09SHA256 &&
+    reloadedResult[
+      "DistributionActions", "RealEndpointCacheSHA256"
+    ] === endpointCacheSHA256 &&
+    reloadedResult[
+      "DistributionActions", "VirtualLaurentCacheSHA256"
+    ] === virtualLaurentCacheSHA256 &&
+    AllTrue[Values[reloadedResult["Checks"]], TrueQ] &&
+    compactS10ResultValidQ[reloadedResult]
+];
+assert[resultReloadGate,
+  "The final compact S10 result failed exact reload validation."];
+
+resultCacheDiskBindingGate = TrueQ[
+  AssociationMap[
+    fileSHA256Hex[endpointCachePaths[#]] &,
+    projectors
+  ] === endpointCacheSHA256 &&
+    AssociationMap[
+      fileSHA256Hex[virtualCachePaths[#]] &,
+      Keys[virtualCachePaths]
+    ] === virtualCacheSHA256 &&
+    AssociationMap[
+      fileSHA256Hex[expansionCachePaths[#]] &,
+      projectors
+    ] === recordedExpansionCacheSHA256
+];
+assert[resultCacheDiskBindingGate,
+  "The final S10 result cache identities do not match the disk files."];
+
+postPublicationInputIdentityGate = immutableInputIdentitiesQ[];
+assert[postPublicationInputIdentityGate,
+  "An accepted input identity changed during S10 publication."];
+postPublicationTemporaryArtifactGate = FileNames[
+  FileNameJoin[{scriptDirectory, "s10_*.tmp.*"}]
+] === {};
+assert[postPublicationTemporaryArtifactGate,
+  "An S10 temporary artifact remains after final publication."];
+
+resultSHA256 = fileSHA256Hex[resultPath];
+resultDiskIdentityGate = TrueQ[
+  StringLength[resultSHA256] === 64 &&
+    StringMatchQ[
+      resultSHA256,
+      RegularExpression["[0-9a-f]{64}"]
+    ] &&
+    fileSHA256Hex[resultPath] === resultSHA256
+];
+assert[resultDiskIdentityGate,
+  "The finalized S10 result does not have a stable SHA-256 identity."];
+resultCompactDiskSizeGate = TrueQ[
+  FileByteCount[resultPath] <
+    Total[FileByteCount /@ Values[endpointCachePaths]]
+];
+assert[resultCompactDiskSizeGate,
+  "The finalized S10 result is not compact relative to its endpoint caches."];
 Print["S10_SUCCESS_SYMBOLIC"];
 Print["S10_RESULT_PATH=" <> resultPath];
+Print["S10_RESULT_SHA256=" <> resultSHA256];
 Print["S10_RESULT_BYTES=", FileByteCount[resultPath]];
 Print["S10_CHECKS=", InputForm[s10Checks]];
+Print["S10_RESULT_RELOAD_GATE=", InputForm[resultReloadGate]];
+Print[
+  "S10_RESULT_CACHE_DISK_BINDING_GATE=",
+  InputForm[resultCacheDiskBindingGate]
+];
+Print[
+  "S10_UPSTREAM_IDENTITIES_UNCHANGED=",
+  InputForm[postPublicationInputIdentityGate]
+];
 
 Quit[0];

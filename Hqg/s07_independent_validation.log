@@ -1,0 +1,26 @@
+Style["Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/", "Text"]
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+Style["FeynCalc ", "Text", Bold]Style["10.2.1 (stable version). For help, use the ", "Text"]Style[DisplayForm[ButtonBox["online documentation,", ButtonData :> {URL["https://feyncalc.github.io/referenceDev"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://feyncalc.github.io/referenceDev"]], "Text"]Style[" visit the ", "Text"]Style[DisplayForm[ButtonBox["forum", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc/discussions"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc/discussions/"]], "Text"]Style[" and have a look at the supplied ", "Text"]Style[DisplayForm[ButtonBox["examples.", BaseStyle -> "Hyperlink", ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, "Examples"}]], Evaluator -> Automatic, Method -> "Preemptive"]], "Text"]Style[" The PDF-version of the manual can be downloaded ", "Text"]Style[DisplayForm[ButtonBox["here.", ButtonData :> {URL["https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"], None}, BaseStyle -> "Hyperlink", ButtonNote -> "https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf"]], "Text"]
+Style["If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.", "Text"]
+Style["Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!", {"Text", Italic}]
+"S07_VALIDATION_STAGE: loading accepted S06 only"
+"S07_VALIDATION_STAGE: recomputing LO Pg"
+"S07_VALIDATION_CHECKPOINT: LO Pg leaf count 392"
+"S07_VALIDATION_STAGE: recomputing LO PPP"
+"S07_VALIDATION_CHECKPOINT: LO PPP leaf count 34"
+"S07_VALIDATION_STAGE: recomputing RealQG Pg"
+"S07_VALIDATION_CHECKPOINT: RealQG Pg leaf count 311870"
+"S07_VALIDATION_STAGE: recomputing RealQG PPP"
+"S07_VALIDATION_CHECKPOINT: RealQG PPP leaf count 27672"
+"S07_VALIDATION_STAGE: recomputing VirtualInterference Pg"
+"S07_VALIDATION_CHECKPOINT: VirtualInterference Pg leaf count 527458"
+"S07_VALIDATION_STAGE: recomputing VirtualInterference PPP"
+"S07_VALIDATION_CHECKPOINT: VirtualInterference PPP leaf count 413187"
+"S07_VALIDATION_FRESH_COMPLETE_BEFORE_S07_PAYLOAD_LOAD"
+"S07_VALIDATION_CACHE_METADATA="InputForm[{True, True, True, True, True, True}]
+"S07_VALIDATION_CACHE_EXPRESSIONS="InputForm[{True, True, True, True, True, True}]
+"S07_VALIDATION_STAGE: loading s07_result last"
+"S07_VALIDATION_RESULT_EXPRESSIONS="InputForm[{True, True, True, True, True, True}]
+"S07_VALIDATION_RESULT_GATES="InputForm[<|"CompleteSchema" -> True, "CurrentProgramAndS06" -> True, "EmbeddedLineage" -> True, "StateAndRouting" -> True, "PhotonIndicesAndProjectors" -> True, "Kinematics" -> True, "InputContentHashes" -> True, "ProjectionCount" -> True, "FreshResultRawEquality" -> True, "FreshCacheRawEquality" -> True, "CacheContentProvenance" -> True, "SavedChecks" -> True, "VirtualCounterterms" -> True, "NoTemporaries" -> True|>]
+"S07_VALIDATION_POST_IDENTITIES="InputForm[True]
+"HQG_S07_KINV2_INDEPENDENT_VALIDATION_OK"

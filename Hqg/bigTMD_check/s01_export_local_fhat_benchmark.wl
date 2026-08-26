@@ -727,6 +727,23 @@ assert[
       "Sum_q e_q^2 f_q D_g",
   "the Hqg channel-3A or deferred-luminosity binding is invalid."];
 
+electricChargeNormalization = s13Metadata["ElectricChargeNormalization"];
+directBornNormalizationFactor =
+  s13Metadata["AppliedDirectBornNormalizationFactor"];
+assert[
+  AssociationQ[electricChargeNormalization] &&
+    Together[
+      electricChargeNormalization["ReferenceCharge"] *
+        electricChargeNormalization["AmplitudeStripFactor"]
+    ] === 1 &&
+    directBornNormalizationFactor ===
+      electricChargeNormalization["AmplitudeStripFactor"]^2 &&
+    Together[
+      directBornNormalizationFactor *
+        electricChargeNormalization["ReferenceCharge"]^2
+    ] === 1,
+  "the inherited Hqg electric-charge normalization is invalid."];
+
 xHatExpression = s13Metadata["XHat"];
 intervalExpression = s13Metadata["IntegrationInterval"];
 assert[MatchQ[intervalExpression, {s23, 0, _}],
@@ -842,10 +859,15 @@ payload = <|
     "finite unit-charge Hqg coefficient action before PDFs, gluon FF, physical charge sum, and xi convolution",
   "Conventions" -> <|
     "Couplings" ->
-      "EL=1 and g_s=1; upstream direct Born factor 9 stripped the generated down-quark charge",
+      "EL=1 and g_s=1; the upstream direct Born factor is derived from the model-backed representative-charge strip",
     "Color" -> "SU(3): CA=3, CF=4/3, TF=1/2",
     "FlavorCount" -> benchmark["Nf"],
-    "DirectBornNormalizationFactor" -> 9,
+    "ReferenceCharge" ->
+      N[electricChargeNormalization["ReferenceCharge"], 17],
+    "AmplitudeStripFactor" ->
+      N[electricChargeNormalization["AmplitudeStripFactor"], 17],
+    "DirectBornNormalizationFactor" ->
+      N[directBornNormalizationFactor, 17],
     "PhysicalLuminosity" -> "Sum_q e_q^2 f_q D_g deferred",
     "BigTMDChannel" -> 3,
     "BigTMDChargeCases" -> {"A"},

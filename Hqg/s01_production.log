@@ -17,6 +17,7 @@ FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; def
 FAGS::shdw: Symbol FAGS appears in multiple contexts {FeynArts`, Global`}; definitions in context FeynArts` may shadow or be shadowed by other definitions.
 "S01_STAGE: generating all Hqg ordinary diagrams"
 "S01_STAGE: generating QCD-relevant UV counterterm diagrams"
+"S01_STAGE: deriving the representative electric charge from SMQCD metadata"
 "S01_STAGE: converting tree, real, virtual, and counterterm amplitudes"
 "S01_STAGE: reducing all virtual amplitudes"
 "S01_STAGE: TID virtual diagram 1/23"
@@ -95,4 +96,4 @@ FAGS::shdw: Symbol FAGS appears in multiple contexts {FeynArts`, Global`}; defin
 "S01_SUCCESS"
 "S01_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg/s01_result"
 "S01_DIAGRAM_COUNTS="InputForm[<|"LO_gammaStar_q_to_g_q" -> 2, "NLOReal_gammaStar_q_to_g_q_g" -> 8, "NLOVirtualBare_gammaStar_q_to_g_q" -> 23, "NLOVirtualQCDRelevantCounterterms" -> 12, "TotalQCDDiagramsIncludingCounterterms" -> 45|>]
-"S01_RESULT_BYTES="5211737
+"S01_RESULT_BYTES="5219152
