@@ -71,20 +71,20 @@
     },
     "IntegrandPhiS": {
       "F1Hat": {
-        "AbsoluteDifference": 1.9659987968804643e-05,
+        "AbsoluteDifference": 7.821163069710413e-06,
         "BigTMD": -3.894249678879983e-06,
-        "BigTMDMinusLocal": -1.9659987968804643e-05,
-        "Local": 1.5765738289924658e-05,
+        "BigTMDMinusLocal": -7.821163069710413e-06,
+        "Local": 3.9269133908304295e-06,
         "NumericallyClose": false,
-        "RelativeDifference": 1.247007124390024
+        "RelativeDifference": 1.9916820900540568
       },
       "F2Hat": {
-        "AbsoluteDifference": 1.8094526096539274e-05,
+        "AbsoluteDifference": 6.381900732032689e-06,
         "BigTMD": -2.493993262585821e-06,
-        "BigTMDMinusLocal": -1.8094526096539274e-05,
-        "Local": 1.5600532833953452e-05,
+        "BigTMDMinusLocal": -6.381900732032689e-06,
+        "Local": 3.887907469446868e-06,
         "NumericallyClose": false,
-        "RelativeDifference": 1.1598659026028793
+        "RelativeDifference": 1.6414744389327356
       }
     }
   },
@@ -110,24 +110,24 @@
       "RelativeDifference": 0.0
     },
     {
-      "AbsoluteDifference": 1.9659987968804643e-05,
+      "AbsoluteDifference": 7.821163069710413e-06,
       "BigTMD": -3.894249678879983e-06,
-      "BigTMDMinusLocal": -1.9659987968804643e-05,
+      "BigTMDMinusLocal": -7.821163069710413e-06,
       "Field": "IntegrandPhiS",
       "Function": "F1Hat",
-      "Local": 1.5765738289924658e-05,
+      "Local": 3.9269133908304295e-06,
       "NumericallyClose": false,
-      "RelativeDifference": 1.247007124390024
+      "RelativeDifference": 1.9916820900540568
     },
     {
-      "AbsoluteDifference": 1.8094526096539274e-05,
+      "AbsoluteDifference": 6.381900732032689e-06,
       "BigTMD": -2.493993262585821e-06,
-      "BigTMDMinusLocal": -1.8094526096539274e-05,
+      "BigTMDMinusLocal": -6.381900732032689e-06,
       "Field": "IntegrandPhiS",
       "Function": "F2Hat",
-      "Local": 1.5600532833953452e-05,
+      "Local": 3.887907469446868e-06,
       "NumericallyClose": false,
-      "RelativeDifference": 1.1598659026028793
+      "RelativeDifference": 1.6414744389327356
     },
     {
       "AbsoluteDifference": 0.0,
@@ -154,8 +154,8 @@
   "Summary": {
     "AllWithinTolerance": false,
     "ComparisonCount": 6,
-    "MaximumAbsoluteDifference": 1.9659987968804643e-05,
-    "MaximumRelativeDifference": 1.247007124390024,
+    "MaximumAbsoluteDifference": 7.821163069710413e-06,
+    "MaximumRelativeDifference": 1.9916820900540568,
     "Tolerance": "abs(diff) <= 1e-8 + 1e-6*max(abs(BigTMD),abs(local))"
   }
 }

@@ -1,5 +1,5 @@
 <|"Status" -> "CompleteSymbolicCounterterms", "Channel" -> "Hgg only", 
- "GeneratedAt" -> "2026-08-15T20:25:19", "StageVersion" -> "HggS11-v1", 
+ "GeneratedAt" -> "2026-08-30T09:36:33", "StageVersion" -> "HggS11-v2", 
  "SourceResults" -> <|"AuthoritativePaper" -> "/home/physics/projects/AI_Assi\
 sted_SIDIS/scripts/Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelast\
 ic_Scattering_Beyond_Lowest_Order.pdf", "AuthoritativePaperSHA256" -> 
@@ -19,14 +19,18 @@ partonic PDF and FF counterterms in Eqs. (49)-(50) are negative"|>,
   <|"PqgPDF" -> HoldForm[Pqg[y] == 2*TF*((1 - y)^2 + y^2)], 
    "PgqFF" -> HoldForm[Pgq[y] == 2*CF*((1 + (1 - y)^2)/y)], "Pqq" -> 0, 
    "Pgg" -> 0|>, "FlavorSpeciesSum" -> 
-  <|"RepresentativeFlavor" -> "F[3,{1}] down type", 
-   "RepresentativeChargeSquared" -> 1/9, "PhysicalChargeSumDefinition" -> 
+  <|"RepresentativeFlavor" -> HoldForm[F[3, {1}]], 
+   "ModelElectricQuantumNumbers" -> <|"RepresentativeF3" -> (2*Charge)/3, 
+     "ValidationF4" -> -1/3*Charge|>, "RepresentativeCharge" -> 2/3, 
+   "RepresentativeChargeSquared" -> 4/9, "ValidationCharge" -> -1/3, 
+   "ValidationChargeSquared" -> 1/9, "PhysicalChargeSumDefinition" -> 
     HoldForm[S11HggFlavorChargeSum == Sum[Qf[flavor]^2, 
        {flavor, ActiveQuarkFlavors}]], "PerSpeciesAppliedWeight" -> 
-    9*S11HggFlavorChargeSum, "PDFSpecies" -> {"q", "qbar"}, 
-   "FFSpecies" -> {"q", "qbar"}, "RealSpectatorPairCounting" -> "not part of \
-this counterterm species sum; the S09 real q-qbar pair remains counted once"|>\
-, "BornProjectedSquaredAmplitudes" -> 
+    (9*S11HggFlavorChargeSum)/4, "NormalizationIdentityVerified" -> True, 
+   "PDFSpecies" -> {"q", "qbar"}, "FFSpecies" -> {"q", "qbar"}, 
+   "RealSpectatorPairCounting" -> "not part of this counterterm species sum; \
+the S09 real q-qbar pair remains counted once"|>, 
+ "BornProjectedSquaredAmplitudes" -> 
   <|"Hqg" -> <|"Pg" -> (-4*CF*(-2 + D)*(-2*Q2^2 + D*Q2^2 + 4*Q2*sHat + 
          4*sHat^2 - 8*Q2*tHat + 2*D*Q2*tHat + 4*sHat*tHat - 2*tHat^2 + 
          D*tHat^2)*FeynCalc`FCGV["EL"]^2*SMP["g_s"]^2)/
@@ -92,7 +96,7 @@ this counterterm species sum; the S09 real q-qbar pair remains counted once"|>\
             "Pg", s11S23]*SMP["g_s"]^2)/(9*Pi^3*Q2^2*(-1 + zHat)^2*zHat*
            (-Q2 + s11S23*xHat + Q2*zHat)^2*(Q2 - Q2*xHat - s11S23*xHat - 
             Q2*zHat + Q2*xHat*zHat)), {s11S23, 0, Q2*(-1 + xHat^(-1))*
-           (1 - zHat)}])/(16*epsilon*Pi^2), "PDF_HqbarG_Pqg" -> 
+           (1 - zHat)}])/(64*epsilon*Pi^2), "PDF_HqbarG_Pqg" -> 
       (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
         Inactive[Integrate][(-4*CF*(-1 + epsilon)*TF*xHat*
            (Q2^2 - 2*Q2*s11S23*xHat + 2*s11S23^2*xHat^2 - 2*Q2^2*zHat + 
@@ -118,7 +122,7 @@ this counterterm species sum; the S09 real q-qbar pair remains counted once"|>\
             "Pg", s11S23]*SMP["g_s"]^2)/(9*Pi^3*Q2^2*(-1 + zHat)^2*zHat*
            (-Q2 + s11S23*xHat + Q2*zHat)^2*(Q2 - Q2*xHat - s11S23*xHat - 
             Q2*zHat + Q2*xHat*zHat)), {s11S23, 0, Q2*(-1 + xHat^(-1))*
-           (1 - zHat)}])/(16*epsilon*Pi^2), "FF_Hgq_Pgq" -> 
+           (1 - zHat)}])/(64*epsilon*Pi^2), "FF_Hgq_Pgq" -> 
       (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
         Inactive[Integrate][(-2*CF*xHat*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
             s11S23^2*xHat^2)*(Q2^2 - epsilon*Q2^2 - 4*Q2^2*xHat + 
@@ -134,7 +138,7 @@ this counterterm species sum; the S09 real q-qbar pair remains counted once"|>\
             "Pg", s11S23]*SMP["g_s"]^2)/(9*Pi^3*Q2^2*(-1 + xHat)^2*
            (-Q2 + Q2*xHat + s11S23*xHat)^2*zHat*(Q2 - Q2*xHat - s11S23*xHat - 
             Q2*zHat + Q2*xHat*zHat)), {s11S23, 0, Q2*(-1 + xHat^(-1))*
-           (1 - zHat)}])/(16*epsilon*Pi^2), "FF_Hgqbar_Pgq" -> 
+           (1 - zHat)}])/(64*epsilon*Pi^2), "FF_Hgqbar_Pgq" -> 
       (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
         Inactive[Integrate][(-2*CF*xHat*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
             s11S23^2*xHat^2)*(Q2^2 - epsilon*Q2^2 - 4*Q2^2*xHat + 
@@ -150,33 +154,33 @@ this counterterm species sum; the S09 real q-qbar pair remains counted once"|>\
             "Pg", s11S23]*SMP["g_s"]^2)/(9*Pi^3*Q2^2*(-1 + xHat)^2*
            (-Q2 + Q2*xHat + s11S23*xHat)^2*zHat*(Q2 - Q2*xHat - s11S23*xHat - 
             Q2*zHat + Q2*xHat*zHat)), {s11S23, 0, Q2*(-1 + xHat^(-1))*
-           (1 - zHat)}])/(16*epsilon*Pi^2)|>, 
+           (1 - zHat)}])/(64*epsilon*Pi^2)|>, 
    "PPP" -> <|"PDF_Hqg_Pqg" -> (9*S11HggFlavorChargeSum*S11SEpsilon*
         SMP["g_s"]^2*Inactive[Integrate][(-2*CF*(-1 + epsilon)*TF*
            (Q2^2 - 2*Q2*s11S23*xHat + 2*s11S23^2*xHat^2 - 2*Q2^2*zHat + 
             2*Q2*s11S23*xHat*zHat + Q2^2*zHat^2)*FeynCalc`FCGV["EL"]^2*
            S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/
           (9*Pi^3*(-Q2 + s11S23*xHat + Q2*zHat)^2), {s11S23, 0, 
-          Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2), 
+          Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(64*epsilon*Pi^2), 
      "PDF_HqbarG_Pqg" -> (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
         Inactive[Integrate][(-2*CF*(-1 + epsilon)*TF*
            (Q2^2 - 2*Q2*s11S23*xHat + 2*s11S23^2*xHat^2 - 2*Q2^2*zHat + 
             2*Q2*s11S23*xHat*zHat + Q2^2*zHat^2)*FeynCalc`FCGV["EL"]^2*
            S11ConvolutionTest["PPP", s11S23]*SMP["g_s"]^2)/
           (9*Pi^3*(-Q2 + s11S23*xHat + Q2*zHat)^2), {s11S23, 0, 
-          Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(16*epsilon*Pi^2), 
+          Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(64*epsilon*Pi^2), 
      "FF_Hgq_Pgq" -> (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
         Inactive[Integrate][(-2*CF*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
             s11S23^2*xHat^2)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 
             s11S23]*SMP["g_s"]^2)/(9*(-1 + epsilon)*Pi^3*
            (-Q2 + Q2*xHat + s11S23*xHat)^2), {s11S23, 0, Q2*(-1 + xHat^(-1))*
-           (1 - zHat)}])/(16*epsilon*Pi^2), "FF_Hgqbar_Pgq" -> 
+           (1 - zHat)}])/(64*epsilon*Pi^2), "FF_Hgqbar_Pgq" -> 
       (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
         Inactive[Integrate][(-2*CF*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
             s11S23^2*xHat^2)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 
             s11S23]*SMP["g_s"]^2)/(9*(-1 + epsilon)*Pi^3*
            (-Q2 + Q2*xHat + s11S23*xHat)^2), {s11S23, 0, Q2*(-1 + xHat^(-1))*
-           (1 - zHat)}])/(16*epsilon*Pi^2)|>|>, 
+           (1 - zHat)}])/(64*epsilon*Pi^2)|>|>, 
  "Counterterms" -> <|"PgPDF" -> (9*S11HggFlavorChargeSum*S11SEpsilon*
       SMP["g_s"]^2*Inactive[Integrate][(-4*CF*(-1 + epsilon)*TF*xHat*
          (Q2^2 - 2*Q2*s11S23*xHat + 2*s11S23^2*xHat^2 - 2*Q2^2*zHat + 
@@ -201,7 +205,7 @@ this counterterm species sum; the S09 real q-qbar pair remains counted once"|>\
           s11S23]*SMP["g_s"]^2)/(9*Pi^3*Q2^2*(-1 + zHat)^2*zHat*
          (-Q2 + s11S23*xHat + Q2*zHat)^2*(Q2 - Q2*xHat - s11S23*xHat - 
           Q2*zHat + Q2*xHat*zHat)), {s11S23, 0, Q2*(-1 + xHat^(-1))*
-         (1 - zHat)}])/(8*epsilon*Pi^2), 
+         (1 - zHat)}])/(32*epsilon*Pi^2), 
    "PgFF" -> (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
       Inactive[Integrate][(-2*CF*xHat*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
           s11S23^2*xHat^2)*(Q2^2 - epsilon*Q2^2 - 4*Q2^2*xHat + 
@@ -216,19 +220,19 @@ this counterterm species sum; the S09 real q-qbar pair remains counted once"|>\
          FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["Pg", s11S23]*SMP["g_s"]^2)/
         (9*Pi^3*Q2^2*(-1 + xHat)^2*(-Q2 + Q2*xHat + s11S23*xHat)^2*zHat*
          (Q2 - Q2*xHat - s11S23*xHat - Q2*zHat + Q2*xHat*zHat)), 
-       {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(8*epsilon*Pi^2), 
+       {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(32*epsilon*Pi^2), 
    "PPPPDF" -> (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
       Inactive[Integrate][(-2*CF*(-1 + epsilon)*TF*(Q2^2 - 2*Q2*s11S23*xHat + 
           2*s11S23^2*xHat^2 - 2*Q2^2*zHat + 2*Q2*s11S23*xHat*zHat + 
           Q2^2*zHat^2)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 
           s11S23]*SMP["g_s"]^2)/(9*Pi^3*(-Q2 + s11S23*xHat + Q2*zHat)^2), 
-       {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(8*epsilon*Pi^2), 
+       {s11S23, 0, Q2*(-1 + xHat^(-1))*(1 - zHat)}])/(32*epsilon*Pi^2), 
    "PPPFF" -> (9*S11HggFlavorChargeSum*S11SEpsilon*SMP["g_s"]^2*
       Inactive[Integrate][(-2*CF*(Q2^2 - 2*Q2^2*xHat + Q2^2*xHat^2 + 
           s11S23^2*xHat^2)*FeynCalc`FCGV["EL"]^2*S11ConvolutionTest["PPP", 
           s11S23]*SMP["g_s"]^2)/(9*(-1 + epsilon)*Pi^3*
          (-Q2 + Q2*xHat + s11S23*xHat)^2), {s11S23, 0, Q2*(-1 + xHat^(-1))*
-         (1 - zHat)}])/(8*epsilon*Pi^2)|>, "CountertermCount" -> 4, 
+         (1 - zHat)}])/(32*epsilon*Pi^2)|>, "CountertermCount" -> 4, 
  "TestFunction" -> HoldForm[S11ConvolutionTest[projector, s11S23]], 
  "TestFunctionAssumption" -> 
   "arbitrary symbolic function regular at s11S23=0 and independent of \
@@ -243,9 +247,11 @@ counterterms are ordinary inactive integrals",
     True, "BothProjectorsHavePDFAndFF" -> True, 
    "PDFContainsQuarkAndAntiquarkPqgSpecies" -> True, 
    "FFContainsQuarkAndAntiquarkPgqSpecies" -> True, 
-   "PhysicalFlavorChargeWeightApplied" -> True, "NoPqqOrPggContribution" -> 
-    True, "NoSplittingDistributionPlaceholder" -> True, 
-   "OrdinaryInactiveIntegralsRetained" -> True, 
+   "PhysicalFlavorChargeWeightApplied" -> True, 
+   "RepresentativeChargeDerivedFromSMQCD" -> True, 
+   "RepresentativeChargeNormalizationIdentityVerified" -> True, 
+   "NoPqqOrPggContribution" -> True, "NoSplittingDistributionPlaceholder" -> 
+    True, "OrdinaryInactiveIntegralsRetained" -> True, 
    "ArbitrarySymbolicTestsRetained" -> True, "PaperSEpsilonKeptSymbolic" -> 
     True, "NoHggLOOrVirtualContributionIntroduced" -> True, 
    "NoS10CombinationPerformed" -> True, "CalculationFullySymbolic" -> True|>, 

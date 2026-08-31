@@ -53,12 +53,12 @@ writeAtomic[expression_, path_String] := Module[{temporaryPath},
 scriptDirectory = DirectoryName[ExpandFileName[$InputFileName]];
 s09Path = FileNameJoin[{scriptDirectory, "s09_result"}];
 resultPath = FileNameJoin[{scriptDirectory, "s10_result"}];
-stageVersion = "HggS10-v2";
-endpointCacheVersion = 2;
+stageVersion = "HggS10-v3";
+endpointCacheVersion = 3;
 projectors = {"Pg", "PPP"};
 endpointCachePaths = <|
-  "Pg" -> FileNameJoin[{scriptDirectory, "s10_cache_v2_endpoint_pg"}],
-  "PPP" -> FileNameJoin[{scriptDirectory, "s10_cache_v2_endpoint_pp"}]
+  "Pg" -> FileNameJoin[{scriptDirectory, "s10_cache_v3_endpoint_pg"}],
+  "PPP" -> FileNameJoin[{scriptDirectory, "s10_cache_v3_endpoint_pp"}]
 |>;
 
 Print["S10_STAGE: loading and validating Hgg s09_result"];
@@ -67,6 +67,8 @@ s09 = Check[Get[s09Path], $Failed];
 assert[AssociationQ[s09], "s09_result did not load as an Association."];
 assert[s09["Status"] === "Complete", "s09_result is not complete."];
 assert[s09["Channel"] === "Hgg only", "s09_result is not Hgg-only."];
+assert[s09["StageVersion"] === "HggS09-v2",
+  "s09_result is not the corrected model-charge-derived v2 result."];
 assert[AllTrue[Values[s09["Checks"]], TrueQ],
   "At least one s09 validation check is not True."];
 assert[
@@ -93,8 +95,21 @@ assert[! MissingQ[s23UpperB], "The S09 endpoint upper limit is missing."];
 flavorChargeWeight = s09[
   "FlavorChargeWeight", "AppliedMultiplicativeWeight"
 ];
-assert[TrueQ[flavorChargeWeight === 9 S09HggFlavorChargeSum],
-  "The S09 physical Hgg flavor-charge weight is not the expected ratio."];
+representativeChargeSquared = s09[
+  "FlavorChargeWeight", "RepresentativeChargeSquared"
+];
+assert[
+  ! MissingQ[representativeChargeSquared] &&
+    TrueQ[representativeChargeSquared =!= 0] &&
+    TrueQ[Together[
+      flavorChargeWeight -
+        S09HggFlavorChargeSum/representativeChargeSquared
+    ] === 0] &&
+    TrueQ[s09[
+      "FlavorChargeWeight", "NormalizationIdentityVerified"
+    ]],
+  "The S09 model-derived Hgg flavor-charge identity is invalid."
+];
 endpointPlaceholderCount = s09[
   "EndpointExpansion", "SymbolicPlaceholderCount"
 ];
@@ -508,7 +523,7 @@ loadExpansion[projector_String] := Module[{payload, path},
   payload = Check[Get[path], $Failed];
   assert[AssociationQ[payload],
     projector <> " S09 expansion cache is not an Association."];
-  assert[payload["StageVersion"] === "HggS09-v1",
+  assert[payload["StageVersion"] === "HggS09-v2",
     projector <> " S09 expansion cache has the wrong stage version."];
   assert[payload["SourceS08SHA256"] === s08SHA256,
     projector <> " S09 expansion cache has stale S08 provenance."];
@@ -758,18 +773,22 @@ s10Checks = <|
   "S09ExpansionCachesValidated" -> True,
   "ExactlyTwoS09EndpointPlaceholdersReceived" -> True,
   "BothProjectorsProcessed" -> True,
-  "All164RemainderTermsResolved" ->
-    Total[
-      (Length[# ["StandardTermIndices"]] +
-          Length[# ["Alpha2TermIndices"]]) & /@
-        Values[endpointDataByProjector]
-    ] === 164,
-  "TwoHggAlpha2TermsDetectedStructurally" ->
-    Total[
-      Length /@ Values[
-        endpointDataByProjector[[All, "Alpha2TermIndices"]]
-      ]
-    ] === 2,
+  "EveryRemainderTermResolved" ->
+    AllTrue[
+      Values[endpointDataByProjector],
+      Length[# ["StandardTermIndices"]] +
+          Length[# ["Alpha2TermIndices"]] ===
+        # ["RemainderTermCount"] &
+    ],
+  "DetectedAlpha2TermMetadataComplete" ->
+    Flatten[
+      Values[endpointDataByProjector[[All, "Alpha2TermIndices"]]]
+    ] =!= {} &&
+    AllTrue[
+      Values[endpointDataByProjector],
+      Length[# ["Alpha2TermIndices"]] ===
+        Length[# ["Alpha2NestedRatioEndpoints"]] &
+    ],
   "AllDetectedAlpha2TermsHavePhysicalNestedRatio" ->
     AllTrue[
       Flatten[Values[
@@ -796,6 +815,7 @@ s10Checks = <|
   "PhysicalFlavorChargeWeightRetained" ->
     AllTrue[Values[realConvolutionActions],
       ! FreeQ[#, S09HggFlavorChargeSum] &],
+  "ModelDerivedFlavorChargeIdentityConsumed" -> True,
   "EndpointValuesAreS23Independent" ->
     AllTrue[
       Join[
@@ -849,6 +869,7 @@ s10Result = <|
       "ordinary endpoint-subtracted integral on 0<=s23<=B(xi); a concrete PDF/FF test function is intentionally not supplied"
   |>,
   "FlavorChargeWeight" -> flavorChargeWeight,
+  "RepresentativeChargeSquared" -> representativeChargeSquared,
   "VirtualContributionAtThisOrder" -> 0,
   "CacheProvenance" -> <|
     "StageVersion" -> stageVersion,

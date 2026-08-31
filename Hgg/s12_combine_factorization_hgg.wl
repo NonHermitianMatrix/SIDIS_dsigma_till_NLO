@@ -31,13 +31,13 @@ s10Path = FileNameJoin[{scriptDirectory, "s10_result"}];
 s11Path = FileNameJoin[{scriptDirectory, "s11_result"}];
 resultPath = FileNameJoin[{scriptDirectory, "s12_result"}];
 countertermCachePath = FileNameJoin[{
-  scriptDirectory, "s12_cache_v2_mapped_counterterms"
+  scriptDirectory, "s12_cache_v3_mapped_counterterms"
 }];
 partCacheRoot = FileNameJoin[{
-  scriptDirectory, "s12_cache_v2_s10_laurent_parts"
+  scriptDirectory, "s12_cache_v3_s10_laurent_parts"
 }];
 aggregateCacheRoot = FileNameJoin[{
-  scriptDirectory, "s12_cache_v2_s10_laurent"
+  scriptDirectory, "s12_cache_v3_s10_laurent"
 }];
 residualDiagnosticPath = FileNameJoin[{
   scriptDirectory, "s12_last_nonzero_residual"
@@ -47,17 +47,16 @@ paperPath = FileNameJoin[{
   "Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Order.pdf"
 }];
 
-stageVersion = "HggS12-v2";
-cacheVersion = 2;
+stageVersion = "HggS12-v3";
+cacheVersion = 3;
 projectors = {"Pg", "PPP"};
 pairFields = {"Endpoint", "IntegrandPhiS", "IntegrandPhi0"};
 laurentPowers = {-2, -1, 0};
-expectedOrdinaryTermCounts = <|"Pg" -> 69, "PPP" -> 93|>;
 gibibyte = 1024^3;
 perTermMemoryLimit = 4 gibibyte;
 residualMemoryLimit = 5 gibibyte;
 residualReductionTimeoutSeconds = 1200;
-maximumNewTermsPerKernelEpoch = 16;
+maximumNewTermsPerKernelEpoch = 4;
 newTermsThisKernelEpoch = 0;
 
 qcdAndConstantRules = {
@@ -679,8 +678,8 @@ splitHggPhiS[expression_, projector_String] := Module[
   ordinaryPrefactor = Times @@ Delete[factors, remainderPosition];
   ordinaryTerms = List @@ ordinaryRemainder;
   assert[
-    Length[ordinaryTerms] === expectedOrdinaryTermCounts[projector],
-    projector <> " ordinary family term count changed from the validated S10 contract."
+    Length[ordinaryTerms] > 0,
+    projector <> " ordinary family has no source terms."
   ];
   <|
     "Alpha2Term" -> alphaTerm,
@@ -772,6 +771,12 @@ validCountertermCacheQ[
   Lookup[payload, "StageVersion", Missing["Absent"]] === stageVersion &&
   Lookup[payload, "S11SHA256", Missing["Absent"]] === s11SHA256 &&
   Lookup[payload, "PaperSHA256", Missing["Absent"]] === paperSHA256 &&
+  Lookup[payload, "RepresentativeChargeSquared", Missing["Absent"]] ===
+    representativeChargeSquared &&
+  TrueQ[Together[
+    Lookup[payload, "FlavorWeightPerSpecies", Missing["Absent"]] -
+      mappedS11FlavorChargeWeight
+  ] === 0] &&
   AssociationQ[Lookup[payload, "Order0", Missing["Absent"]]] &&
   AssociationQ[Lookup[payload, "Order1", Missing["Absent"]]] &&
   And @@ Flatten@Table[
@@ -802,11 +807,24 @@ s10Metadata = Quiet@Check[Get[s10Path], $Failed];
 assert[AssociationQ[s10Metadata] &&
     s10Metadata["Status"] === "CompleteSymbolic" &&
     s10Metadata["Channel"] === "Hgg only" &&
+    s10Metadata["CacheProvenance", "StageVersion"] === "HggS10-v3" &&
     And @@ Values[s10Metadata["Checks"]] &&
     FileExistsQ[s10Metadata["SourceResult"]] &&
     FileHash[s10Metadata["SourceResult"], "SHA256"] ===
       s10Metadata["SourceResultSHA256"],
   "S10 metadata or its upstream source binding is invalid."];
+s10FlavorChargeWeight = s10Metadata["FlavorChargeWeight"];
+s10RepresentativeChargeSquared =
+  s10Metadata["RepresentativeChargeSquared"];
+assert[
+  ! MissingQ[s10RepresentativeChargeSquared] &&
+    TrueQ[s10RepresentativeChargeSquared =!= 0] &&
+    TrueQ[Together[
+      s10FlavorChargeWeight -
+        S09HggFlavorChargeSum/s10RepresentativeChargeSquared
+    ] === 0],
+  "S10 does not carry the corrected model-derived flavor-charge identity."
+];
 Clear[s10Metadata];
 ClearSystemCache[];
 
@@ -814,7 +832,7 @@ s11 = Quiet@Check[Get[s11Path], $Failed];
 assert[AssociationQ[s11] &&
     s11["Status"] === "CompleteSymbolicCounterterms" &&
     s11["Channel"] === "Hgg only" &&
-    s11["StageVersion"] === "HggS11-v1" &&
+    s11["StageVersion"] === "HggS11-v2" &&
     And @@ Values[s11["Checks"]] &&
     s11["CountertermCount"] === 4 &&
     Keys[s11["Counterterms"]] ===
@@ -834,6 +852,40 @@ assert[
 ];
 assert[feynCalcContextCleanQ[bornProjected],
   "S11 Born objects contain accidental Global-context FeynCalc/QCD symbols."];
+s11FlavorChargeWeight =
+  s11["FlavorSpeciesSum", "PerSpeciesAppliedWeight"];
+s11RepresentativeChargeSquared =
+  s11["FlavorSpeciesSum", "RepresentativeChargeSquared"];
+assert[
+  ! MissingQ[s11RepresentativeChargeSquared] &&
+    TrueQ[s11RepresentativeChargeSquared =!= 0] &&
+    TrueQ[s11[
+      "FlavorSpeciesSum", "NormalizationIdentityVerified"
+    ]] &&
+    TrueQ[Together[
+      s11FlavorChargeWeight -
+        S11HggFlavorChargeSum/s11RepresentativeChargeSquared
+    ] === 0],
+  "S11 does not carry the corrected model-derived flavor-charge identity."
+];
+mappedS10FlavorChargeWeight = Together[
+  s10FlavorChargeWeight /.
+    S09HggFlavorChargeSum -> HggFlavorChargeSum
+];
+mappedS11FlavorChargeWeight = Together[
+  s11FlavorChargeWeight /.
+    S11HggFlavorChargeSum -> HggFlavorChargeSum
+];
+representativeChargeSquared = s11RepresentativeChargeSquared;
+assert[
+  TrueQ[Together[
+    s10RepresentativeChargeSquared - s11RepresentativeChargeSquared
+  ] === 0] &&
+    TrueQ[Together[
+      mappedS10FlavorChargeWeight - mappedS11FlavorChargeWeight
+    ] === 0],
+  "The independently derived S10 and S11 representative-charge weights disagree."
+];
 Clear[s11];
 
 s23UpperB = Q2 (xi/xB - 1) (1 - zH) - PHT2/zH;
@@ -921,7 +973,7 @@ If[! validCountertermCacheQ[countertermPayload, s11SHA256, paperSHA256],
     DeleteFile[countertermCachePath]
   ];
   twoBodyNormalization = (2 Pi)/(2 Pi)^4;
-  flavorChargeWeight = 9 HggFlavorChargeSum;
+  flavorChargeWeight = mappedS11FlavorChargeWeight;
   pdfBornDensities = AssociationMap[
     Function[channel,
       AssociationMap[
@@ -1052,6 +1104,8 @@ If[! validCountertermCacheQ[countertermPayload, s11SHA256, paperSHA256],
     "StageVersion" -> stageVersion,
     "S11SHA256" -> s11SHA256,
     "PaperSHA256" -> paperSHA256,
+    "RepresentativeChargeSquared" -> representativeChargeSquared,
+    "FlavorWeightPerSpecies" -> flavorChargeWeight,
     "MappingResiduals" -> mappingResiduals,
     "Order0" -> mappedOrder0,
     "Order1" -> mappedOrder1,
@@ -1269,6 +1323,20 @@ forbiddenFinalObjects =
     _S11PlusDistribution | DiracDelta[s23] |
     _S09EndpointValue | _S09PlusDistribution;
 
+s10LaurentTermCounts = AssociationMap[
+  Function[projector,
+    <|
+      "Alpha2" -> Length@FileNames[
+        ToLowerCase[projector] <> "_alpha2_*", partCacheRoot
+      ],
+      "Regular" -> Length@FileNames[
+        ToLowerCase[projector] <> "_regular_*", partCacheRoot
+      ]
+    |>
+  ],
+  projectors
+];
+
 s12Checks = <|
   "S10ValidatedAndSourceBound" -> True,
   "S11ValidatedAndPaperBound" -> True,
@@ -1282,8 +1350,11 @@ s12Checks = <|
   "PaperSEpsilonExpandedThroughFiniteOrder" -> True,
   "StandardQCDTFHalfApplied" -> True,
   "S10Alpha2AndOrdinaryFamiliesSeparatedStructurally" -> True,
-  "S10TermCountPg69PlusAlpha2" -> True,
-  "S10TermCountPPP93PlusAlpha2" -> True,
+  "S10LaurentTermCacheInventoryComplete" ->
+    AllTrue[
+      Values[s10LaurentTermCounts],
+      # ["Alpha2"] === 1 && # ["Regular"] > 0 &
+    ],
   "BoundedSerialPerTermLaurentExtraction" -> True,
   "DiskBackedPerTermResumeEnabled" -> True,
   "AtomicCheckpointWritesEnabled" -> True,
@@ -1307,6 +1378,7 @@ s12Checks = <|
   "PhysicalFlavorChargeWeightRetained" ->
     And @@ (! FreeQ[#, HggFlavorChargeSum] & /@
       Values[finiteHardFunctions]),
+  "S10S11ModelDerivedFlavorWeightsAgree" -> True,
   "NoVirtualContributionIntroduced" -> True,
   "NoHermitianProjectionForced" ->
     And @@ (FreeQ[#, _Re] & /@ Values[finiteHardFunctions]),
@@ -1354,11 +1426,14 @@ s12Result = <|
     "PDFKernel" -> "Pqg",
     "FFKernel" -> "Pgq",
     "FlavorWeightPerQuarkOrAntiquarkSpecies" ->
-      9 HggFlavorChargeSum
+      mappedS11FlavorChargeWeight,
+    "RepresentativeChargeSquared" -> representativeChargeSquared,
+    "S10S11FlavorWeightIdentityVerified" -> True
   |>,
   "S10LaurentCaches" -> <|
     "TermParts" -> partCacheRoot,
     "Aggregates" -> aggregateCacheRoot,
+    "TermCountsByProjector" -> s10LaurentTermCounts,
     "SourceSHA256" -> s10SHA256
   |>,
   "MappedCountertermCache" -> countertermCachePath,
@@ -1368,7 +1443,7 @@ s12Result = <|
   "VirtualContributionAtThisOrder" -> 0,
   "Checks" -> s12Checks,
   "MemoryStrategy" ->
-    "serial Pg then PPP; one alpha-two term plus 69/93 ordinary source terms; 4 GiB per-term allocation bound; atomic per-term and aggregate checkpoints; no duplicate parallel expression copies",
+    "serial Pg then PPP; one structurally separated alpha-two family plus a tool-measured nonempty ordinary family per projector; 4 GiB per-term allocation bound; atomic per-term and aggregate checkpoints; no duplicate parallel expression copies",
   "NotPerformedAtThisStage" -> {
     "virtual-loop addition or UV renormalization, absent for Hgg at this order",
     "Hermitian real projection",

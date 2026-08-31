@@ -81,12 +81,12 @@ paperPath = FileNameJoin[{
   "Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Order.pdf"
 }];
 
-stageVersion = "HggS13-v1";
+stageVersion = "HggS13-v2";
 projectors = {"Pg", "PPP"};
 pairFields = {"Endpoint", "IntegrandPhiS", "IntegrandPhi0"};
 structureFunctions = {"F1Hat", "F2Hat"};
 
-Print["S13_STAGE: loading and validating completed Hgg S12 v2"];
+Print["S13_STAGE: loading and validating completed Hgg S12 v3"];
 assert[FileExistsQ[s12Path] && FileByteCount[s12Path] > 0,
   "s12_result is absent or empty."];
 assert[FileExistsQ[paperPath] && FileByteCount[paperPath] > 0,
@@ -98,9 +98,9 @@ paperSHA256 = FileHash[paperPath, "SHA256"];
 s12 = Quiet@Check[Get[s12Path], $Failed];
 assert[AssociationQ[s12] &&
     s12["Status"] === "CompleteFiniteFactorizedHgg" &&
-    s12["StageVersion"] === "HggS12-v2" &&
+    s12["StageVersion"] === "HggS12-v3" &&
     s12["Channel"] === "Hgg only",
-  "s12_result is unreadable, incomplete, or not HggS12-v2."];
+  "s12_result is unreadable, incomplete, or not HggS12-v3."];
 assert[AssociationQ[s12["Checks"]] && And @@ Values[s12["Checks"]],
   "s12_result contains a failed validation check."];
 assert[Sort[Keys[s12["FiniteHattedHardFunctionsByProjector"]]] ===
@@ -274,7 +274,7 @@ functionChecks = AssociationMap[
 ];
 
 s13Checks = <|
-  "HggS12V2CompleteValidatedAndSourceBound" -> True,
+  "HggS12V3CompleteValidatedAndSourceBound" -> True,
   "BothProjectorHardFunctionsConsumed" -> True,
   "PaperEq9PartonicInversionUsed" -> True,
   "EpsilonSetToZero" -> And @@ Table[
@@ -331,7 +331,7 @@ s13Result = <|
   "SourceResult" -> s12Path,
   "SourceResultBytes" -> s12ByteCount,
   "SourceResultSHA256" -> s12SHA256,
-  "SourceStageVersion" -> "HggS12-v2",
+  "SourceStageVersion" -> "HggS12-v3",
   "AuthoritativePaper" -> paperPath,
   "AuthoritativePaperSHA256" -> paperSHA256,
   "PaperReference" -> <|

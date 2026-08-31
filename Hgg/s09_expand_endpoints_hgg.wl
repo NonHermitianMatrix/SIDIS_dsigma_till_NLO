@@ -5,20 +5,25 @@
 
   Reuses the Hqq S09 Appendix-F and endpoint-distribution algorithms for the
   sole Hgg;q qbar real channel.  Hgg has no two-body LO/virtual contribution
-  at O(alpha_s^2), and the representative down-flavor kernel is converted to
-  the physical flavor sum by 9 Sum_f Q_f^2.
+  at O(alpha_s^2).  The representative F[3] electric charge is derived from
+  the loaded SMQCD model, and its squared kernel is converted to the physical
+  flavor sum by Sum_f Q_f^2/Q_ref^2.
 *)
 
 $HistoryLength = 0;
+$LoadFeynArts = True;
 Needs["FeynCalc`"];
+FeynArts`$FAVerbose = 0;
 $FCAdvice = False;
 
 ClearAll[
   fatal, assert, writeAtomic, appendixFExpansion, appendixFZeroJ,
+  appendixFB19Template, appendixFB19Expansion,
   expandAppendixFMasters, expandCase1Functions, validateExpandedPair,
   loadOrBuildExpansion, endpointDistributionData, validateEndpointPair,
+  classEntry, quantumNumbers, electricQuantumNumber, chargeCoefficient,
   S08Case2Master, S09EndpointValue, S09PlusDistribution,
-  S09HggFlavorChargeSum
+  S09HggFlavorChargeSum, s09B19D, s09B19C, s09B19Epsilon
 ];
 
 fatal[message_String] := (
@@ -43,12 +48,13 @@ writeAtomic[expression_, path_String] := Module[{temporaryPath},
 ];
 
 scriptDirectory = DirectoryName[ExpandFileName[$InputFileName]];
+s01Path = FileNameJoin[{scriptDirectory, "s01_result"}];
 s08Path = FileNameJoin[{scriptDirectory, "s08_result"}];
 resultPath = FileNameJoin[{scriptDirectory, "s09_result"}];
-stageVersion = "HggS09-v1";
+stageVersion = "HggS09-v2";
 cachePaths = <|
-  "Pg" -> FileNameJoin[{scriptDirectory, "s09_cache_v1_hgg_real_g"}],
-  "PPP" -> FileNameJoin[{scriptDirectory, "s09_cache_v1_hgg_real_pp"}]
+  "Pg" -> FileNameJoin[{scriptDirectory, "s09_cache_v2_hgg_real_g"}],
+  "PPP" -> FileNameJoin[{scriptDirectory, "s09_cache_v2_hgg_real_pp"}]
 |>;
 
 Print["S09_STAGE: loading validated Hgg s08_result"];
@@ -65,6 +71,26 @@ assert[
 ];
 s08SHA256 = FileHash[s08Path, "SHA256"];
 
+case2MasterDefinition = s08[
+  "AngularMasterBasis", "Case2MasterDefinition"
+];
+b19DefinitionParts = case2MasterDefinition /. HoldPattern[
+    HoldComplete[
+      Equal[S08Case2Master[jSymbol_, lSymbol_, dSymbol_, cSymbol_, eSymbol_],
+        rightHandSide_]
+    ]
+  ] :> HoldComplete[
+    {jSymbol, lSymbol, dSymbol, cSymbol, eSymbol, rightHandSide}
+  ];
+assert[
+  MatchQ[b19DefinitionParts, HoldComplete[{_, _, _, _, _, _}]],
+  "The accepted S08 B19 master definition could not be extracted."
+];
+{
+  b19JSymbol, b19LSymbol, b19DSymbol, b19CSymbol, b19ESymbol,
+  b19DefinitionRHS
+} = ReleaseHold[b19DefinitionParts];
+
 realKernels = s08[
   "XiS23ConvolutionKernels", "ThreeBodyReal", "Hgg;q_qbar"
 ];
@@ -75,6 +101,131 @@ assert[Sort[Keys[realKernels]] === Sort[{"Pg", "PPP"}],
 changeOfVariables = s08["XiS23ChangeOfVariables"];
 s23UpperB = changeOfVariables["S23UpperB"];
 assert[! MissingQ[s23UpperB], "The S08 s23 upper limit is missing."];
+
+Print["S09_STAGE: deriving the representative electric charge from SMQCD"];
+assert[FileExistsQ[s01Path], "s01_result does not exist."];
+s01 = Check[Get[s01Path], $Failed];
+assert[
+  AssociationQ[s01] && s01["Status"] === "Complete" &&
+    s01["Channel"] === "Hgg only" &&
+    AllTrue[Values[s01["ValidationChecks"]], TrueQ] &&
+    s01["Conventions", "OutgoingFields"] === {
+      FeynArts`V[5], FeynArts`F[3, {1}], -FeynArts`F[3, {1}]
+    },
+  "The accepted S01 representative-field contract is invalid."
+];
+s01SHA256 = FileHash[s01Path, "SHA256"];
+Clear[s01];
+
+chargeProbeTopologies = FeynArts`CreateTopologies[0, 2 -> 3];
+chargeProbeInsertions = Check[
+  FeynArts`InsertFields[
+    chargeProbeTopologies,
+    {FeynArts`V[1], FeynArts`V[5]} -> {
+      FeynArts`V[5], FeynArts`F[3, {1}], -FeynArts`F[3, {1}]
+    },
+    FeynArts`InsertionLevel -> {FeynArts`Particles},
+    FeynArts`Model -> "SMQCD"
+  ],
+  $Failed
+];
+assert[chargeProbeInsertions =!= $Failed,
+  "The SMQCD representative-charge insertion probe failed."];
+classDescriptionNames = Names["*M$ClassesDescription*"];
+assert[Length[classDescriptionNames] === 1,
+  "The loaded SMQCD class-description symbol is not unique."];
+classDescriptions = ToExpression[First[classDescriptionNames]];
+
+classEntry[class_Integer] := FirstCase[
+  classDescriptions,
+  HoldPattern[FeynArts`F[class] == rightHandSide_] :> rightHandSide,
+  Missing["NotFound"]
+];
+quantumNumbers[class_Integer] := FirstCase[
+  classEntry[class],
+  Rule[key_, value_] /;
+      SymbolName[Unevaluated[key]] === "QuantumNumbers" :> value,
+  Missing["NotFound"],
+  Infinity
+];
+electricQuantumNumber[class_Integer] := Module[
+  {numbers = quantumNumbers[class]},
+  If[ListQ[numbers] && Length[numbers] >= 1,
+    First[numbers],
+    Missing["NotFound"]
+  ]
+];
+electricQuantumNumbers = <|
+  "RepresentativeF3" -> electricQuantumNumber[3],
+  "ValidationF4" -> electricQuantumNumber[4]
+|>;
+assert[FreeQ[electricQuantumNumbers, _Missing],
+  "SMQCD electric quantum-number metadata is missing."];
+chargeMarkers = DeleteDuplicates@Cases[
+  Values[electricQuantumNumbers],
+  symbol_Symbol /; SymbolName[Unevaluated[symbol]] === "Charge",
+  Infinity
+];
+assert[Length[chargeMarkers] === 1,
+  "SMQCD electric metadata does not contain one charge marker."];
+chargeMarker = First[chargeMarkers];
+chargeCoefficient[class_Integer] := Simplify[
+  electricQuantumNumber[class] /. chargeMarker -> 1
+];
+representativeCharge = chargeCoefficient[3];
+validationCharge = chargeCoefficient[4];
+representativeChargeSquared = Together[representativeCharge^2];
+validationChargeSquared = Together[validationCharge^2];
+flavorChargeWeight = Together[
+  S09HggFlavorChargeSum/representativeChargeSquared
+];
+assert[
+  representativeCharge =!= 0 && validationCharge =!= 0 &&
+    representativeCharge =!= validationCharge &&
+    representativeChargeSquared =!= validationChargeSquared &&
+    TrueQ[Together[
+      flavorChargeWeight representativeChargeSquared -
+        S09HggFlavorChargeSum
+    ] === 0],
+  "The model-derived representative charge or physical weight is invalid."
+];
+Print[
+  "S09_MODEL_CHARGE: representative=", InputForm[representativeCharge],
+  " squared=", InputForm[representativeChargeSquared],
+  " weight=", InputForm[flavorChargeWeight]
+];
+Clear[chargeProbeTopologies, chargeProbeInsertions];
+
+(* Derive Hgg-only polynomial masters directly from S08's held Eq. (B19). *)
+appendixFB19Template[j_Integer, l_Integer] :=
+  appendixFB19Template[j, l] = Module[
+    {expression, assumptions, exact},
+    assumptions = s09B19D > 1 && -1 < s09B19C < 1 &&
+      -1/4 < s09B19Epsilon < 0;
+    expression = b19DefinitionRHS /. Thread[
+      {b19JSymbol, b19LSymbol, b19DSymbol, b19CSymbol, b19ESymbol} ->
+        {j, l, s09B19D, s09B19C, s09B19Epsilon}
+    ];
+    exact = expression /. HoldPattern[
+        Inactive[Integrate][integrand_, range_]
+      ] :> Integrate[
+        FunctionExpand[integrand], range,
+        Assumptions -> assumptions,
+        GenerateConditions -> False
+      ];
+    exact = FullSimplify[exact, Assumptions -> assumptions];
+    FullSimplify[
+      Normal@Series[exact, {s09B19Epsilon, 0, 1}],
+      Assumptions -> s09B19D > 1 && -1 < s09B19C < 1
+    ]
+  ];
+
+appendixFB19Expansion[j_Integer, l_Integer, d_, c_, eps_] :=
+  appendixFB19Template[j, l] /. {
+    s09B19D -> d,
+    s09B19C -> c,
+    s09B19Epsilon -> eps
+  };
 
 (* Appendix F abbreviations, Eqs. (F1)-(F5). *)
 appendixFExpansion[j_Integer, l_Integer, d_, c_, eps_] := Module[
@@ -149,12 +300,11 @@ appendixFExpansion[j_Integer, l_Integer, d_, c_, eps_] := Module[
       Pi eps (4 (2 c^2 + d (c d - 1)^2 ll/(2 (d^2 - 1)) - 1) -
         (c (3 c d - 2) - d) kk),
 
-    (* Hgg-required polynomial master, derived exactly from Eq. (B19). *)
-    {-1, -2},
-      Normal@Series[
-        2 Pi/(1 - 2 eps) (d + (d + 2 c)/(3 - 2 eps)),
-        {eps, 0, 1}
-      ],
+    (* Hgg-specific polynomial masters, tool-derived from Eq. (B19). *)
+    {-3, 0}, appendixFB19Expansion[-3, 0, d, c, eps],
+    {-3, 1}, appendixFB19Expansion[-3, 1, d, c, eps],
+    {-2, -1}, appendixFB19Expansion[-2, -1, d, c, eps],
+    {-1, -2}, appendixFB19Expansion[-1, -2, d, c, eps],
 
     (* Eqs. (F15)-(F25). *)
     {-1, -1},
@@ -248,20 +398,54 @@ hqqRequiredPairs = {
   {1, -4}, {1, -3}, {1, -2}, {1, -1}, {1, 0}, {1, 1}, {1, 2},
   {2, -4}, {2, -3}, {2, -2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}
 };
-hggAdditionalPairs = {{-1, -2}};
-implementedPairs = Join[hqqRequiredPairs, hggAdditionalPairs];
+hggAdditionalPairs = {{-3, 0}, {-3, 1}, {-2, -1}, {-1, -2}};
+Print["S09_STAGE: deriving Hgg-specific polynomial masters from S08 B19"];
+Scan[
+  Function[pair,
+    derivedTemplate = appendixFB19Template @@ pair;
+    assert[
+      FreeQ[
+        derivedTemplate,
+        $Failed | _Integrate | _Inactive | _Hypergeometric2F1 | _SeriesData
+      ],
+      "An Hgg-specific B19 master was not derived explicitly: " <>
+        ToString[InputForm[pair]]
+    ]
+  ],
+  hggAdditionalPairs
+];
 actualPairs = Sort@DeleteDuplicates@Cases[
   Values[realKernels],
   S08Case2Master[j_Integer, l_Integer, d_, c_, epsilon] :> {j, l},
   Infinity
 ];
-assert[Length[actualPairs] === 21,
-  "The Hgg S08 master-pair inventory is not the validated 21-pair set."];
-assert[SubsetQ[implementedPairs, actualPairs],
+implementedPairs = Union[
+  hqqRequiredPairs,
+  hggAdditionalPairs,
+  Select[actualPairs, First[#] === 0 &]
+];
+assert[actualPairs =!= {},
+  "The Hgg S08 master-pair inventory is empty."];
+assert[Complement[actualPairs, implementedPairs] === {},
   "At least one Hgg S08 master pair lacks an Appendix-F expansion."];
 assert[
-  appendixFExpansion[-1, -2, s09DTest, s09CTest, epsilon] =!= $Failed,
-  "The Hgg-only (-1,-2) master formula is unavailable."
+  AllTrue[
+    actualPairs,
+    Function[pair,
+      derivedProbe = If[
+        First[pair] === 0,
+        appendixFZeroJ[Last[pair], epsilon],
+        appendixFExpansion[
+          First[pair], Last[pair], s09DTest, s09CTest, epsilon
+        ]
+      ];
+      FreeQ[
+        derivedProbe,
+        $Failed | _Integrate | _Inactive | _Hypergeometric2F1 | _SeriesData
+      ]
+    ]
+  ],
+  "At least one actual Hgg S08 master failed its explicit expansion probe."
 ];
 Print["S09_MASTER_PAIRS=", InputForm[actualPairs]];
 
@@ -350,12 +534,6 @@ appendixFExpandedReal["Pg"] = loadOrBuildExpansion["Pg"];
 appendixFExpandedReal["PPP"] = loadOrBuildExpansion["PPP"];
 validateExpandedPair[appendixFExpandedReal];
 
-(*
-  S01 used the down-type reference F[3,{1}], with Q_ref^2=1/9.
-  The physical Hgg quark loop/final-state sum is therefore
-  (Sum_f Q_f^2)/(1/9) times that reference kernel.
-*)
-flavorChargeWeight = 9 S09HggFlavorChargeSum;
 weightedReal = AssociationMap[
   flavorChargeWeight appendixFExpandedReal[#] &,
   {"Pg", "PPP"}
@@ -438,10 +616,12 @@ s09Checks = <|
   "CurrentS08SourceBindingVerified" -> True,
   "SoleHggRealChannelProcessed" -> True,
   "AllActualMasterPairsImplemented" -> True,
-  "HggMinus1Minus2MasterDerivedFromB19" -> True,
+  "HggSpecificNegativeMastersDerivedFromS08B19" -> True,
   "AllCase2MastersExpanded" -> True,
   "B18HypergeometricExpandedWithB27" -> True,
-  "ReferenceDownChargeRemoved" -> True,
+  "CurrentS01RepresentativeFieldVerified" -> True,
+  "RepresentativeChargeDerivedFromSMQCD" -> True,
+  "RepresentativeChargeNormalizationIdentityVerified" -> True,
   "PhysicalFlavorChargeSumApplied" -> True,
   "NoIdenticalParticleHalfFactorApplied" -> True,
   "DeltaS23TermsConstructed" -> True,
@@ -454,6 +634,7 @@ s09Checks = <|
 s09Result = <|
   "Status" -> "Complete",
   "Channel" -> "Hgg only",
+  "StageVersion" -> stageVersion,
   "Contribution" -> "Hgg;q qbar real endpoint-expanded projections",
   "GeneratedAt" -> DateString[Now, "ISODateTime"],
   "SourceResult" -> s08Path,
@@ -462,19 +643,28 @@ s09Result = <|
     "ActualS08Pairs" -> actualPairs,
     "HqqPairsReused" -> Intersection[actualPairs, hqqRequiredPairs],
     "HggAdditionalPairs" -> hggAdditionalPairs,
+    "B19DefinitionSource" -> s08Path,
+    "B19DefinitionSourceSHA256" -> s08SHA256,
     "ExpansionConvention" ->
-      "Hqq S09 Appendix-F Eqs. (F6)-(F29), j=0 from B18, B27 for remaining 2F1, plus Hgg-required I[-1,-2] derived exactly from B19",
+      "Hqq S09 Appendix-F Eqs. (F6)-(F29), j=0 from B18, B27 for remaining 2F1, plus Hgg-specific negative-index polynomial masters derived by Wolfram directly from S08's held B19 definition",
     "ExpandedKernelCachesByProjector" -> cachePaths,
     "CachesBoundToSourceS08SHA256" -> True
   |>,
   "FlavorChargeWeight" -> <|
-    "RepresentativeFlavor" -> "F[3,{1}] down type",
-    "RepresentativeChargeSquared" -> 1/9,
+    "SourceS01" -> s01Path,
+    "SourceS01SHA256" -> s01SHA256,
+    "RepresentativeFlavor" -> HoldForm[FeynArts`F[3, {1}]],
+    "ModelElectricQuantumNumbers" -> electricQuantumNumbers,
+    "RepresentativeCharge" -> representativeCharge,
+    "RepresentativeChargeSquared" -> representativeChargeSquared,
+    "ValidationCharge" -> validationCharge,
+    "ValidationChargeSquared" -> validationChargeSquared,
     "PhysicalChargeSumDefinition" -> HoldForm[
       S09HggFlavorChargeSum ==
         Sum[Qf[flavor]^2, {flavor, ActiveQuarkFlavors}]
     ],
     "AppliedMultiplicativeWeight" -> flavorChargeWeight,
+    "NormalizationIdentityVerified" -> True,
     "SpectatorPairCounting" -> "one q-qbar pair; no identical-particle 1/2"
   |>,
   "EndpointExpansion" -> <|

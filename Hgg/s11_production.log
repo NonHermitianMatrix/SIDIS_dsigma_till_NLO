@@ -22,11 +22,13 @@ FCGV::shdw: Symbol FCGV appears in multiple contexts {FeynArts`, FeynCalc`}; def
 "S11_CHECKPOINT: completed Born projections for Hgqbar gamma* g -> qbar q"
 "S11_STAGE: explicitizing all four Born projection pairs"
 "S11_CHECKPOINT: charge-conjugate Born projections agree exactly"
+"S11_STAGE: deriving the representative electric charge from SMQCD"
+"S11_MODEL_CHARGE: representative="InputForm[2/3]" squared="InputForm[4/9]" weight="InputForm[(9*S11HggFlavorChargeSum)/4]
 "S11_CHECKPOINT: validated all Eq. (46) convolution maps"
 "S11_STAGE: acting the Hgg regular splitting kernels"
 "S11_STAGE: writing four symbolic Hgg counterterms"
 "S11_SUCCESS_SYMBOLIC_COUNTERTERMS"
 "S11_RESULT_PATH=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s11_result"
-"S11_RESULT_BYTES="16980
+"S11_RESULT_BYTES="17360
 "S11_COUNTERTERM_KEYS="InputForm[{"PgPDF", "PgFF", "PPPPDF", "PPPFF"}]
-"S11_CHECKS="InputForm[<|"AuthoritativePaperPresentAndHashed" -> True, "FourDirectBornChannelsGenerated" -> True, "PDFChargeConjugateBornPairsAgree" -> True, "FFChargeConjugateBornPairsAgree" -> True, "AllConvolutionMappingsValidated" -> True, "ExactlyFourCounterterms" -> True, "BothProjectorsHavePDFAndFF" -> True, "PDFContainsQuarkAndAntiquarkPqgSpecies" -> True, "FFContainsQuarkAndAntiquarkPgqSpecies" -> True, "PhysicalFlavorChargeWeightApplied" -> True, "NoPqqOrPggContribution" -> True, "NoSplittingDistributionPlaceholder" -> True, "OrdinaryInactiveIntegralsRetained" -> True, "ArbitrarySymbolicTestsRetained" -> True, "PaperSEpsilonKeptSymbolic" -> True, "NoHggLOOrVirtualContributionIntroduced" -> True, "NoS10CombinationPerformed" -> True, "CalculationFullySymbolic" -> True|>]
+"S11_CHECKS="InputForm[<|"AuthoritativePaperPresentAndHashed" -> True, "FourDirectBornChannelsGenerated" -> True, "PDFChargeConjugateBornPairsAgree" -> True, "FFChargeConjugateBornPairsAgree" -> True, "AllConvolutionMappingsValidated" -> True, "ExactlyFourCounterterms" -> True, "BothProjectorsHavePDFAndFF" -> True, "PDFContainsQuarkAndAntiquarkPqgSpecies" -> True, "FFContainsQuarkAndAntiquarkPgqSpecies" -> True, "PhysicalFlavorChargeWeightApplied" -> True, "RepresentativeChargeDerivedFromSMQCD" -> True, "RepresentativeChargeNormalizationIdentityVerified" -> True, "NoPqqOrPggContribution" -> True, "NoSplittingDistributionPlaceholder" -> True, "OrdinaryInactiveIntegralsRetained" -> True, "ArbitrarySymbolicTestsRetained" -> True, "PaperSEpsilonKeptSymbolic" -> True, "NoHggLOOrVirtualContributionIntroduced" -> True, "NoS10CombinationPerformed" -> True, "CalculationFullySymbolic" -> True|>]

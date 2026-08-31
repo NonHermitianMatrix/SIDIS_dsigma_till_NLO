@@ -330,7 +330,7 @@ s13SHA256 = FileHash[s13Path, "SHA256"];
 s13 = Quiet@Check[Get[s13Path], $Failed];
 assert[AssociationQ[s13] &&
     s13["Status"] === "CompleteFinitePartonicStructureFunctionsHgg" &&
-    s13["StageVersion"] === "HggS13-v1" &&
+    s13["StageVersion"] === "HggS13-v2" &&
     s13["Channel"] === "Hgg only",
   "s13_result is unreadable or incomplete."];
 assert[AssociationQ[s13["Checks"]] && And @@ Values[s13["Checks"]],
@@ -420,7 +420,7 @@ payload = <|
     "ByteCount" -> s13ByteCount,
     "SHA256" -> IntegerString[s13SHA256, 16, 64],
     "Status" -> "CompleteFinitePartonicStructureFunctionsHgg",
-    "StageVersion" -> "HggS13-v1",
+    "StageVersion" -> "HggS13-v2",
     "Channel" -> "Hgg only"
   |>,
   "Construction" -> <|

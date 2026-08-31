@@ -9,11 +9,12 @@
     PDF: (Hqg + Hqbar g) convoluted with Pqg,
     FF:  (Hgq + Hg qbar) convoluted with Pgq.
 
-  The four representative down-flavor Born processes are generated directly.
-  Charge-conjugate pairs are validated exactly, and each representative
-  squared kernel is multiplied by 9 Sum_f Q_f^2 before the distinct quark and
-  antiquark species are summed.  Pqq, Pgg, virtual terms, and combination with
-  S10 are deliberately absent.
+  The four representative F[3] Born processes are generated directly.
+  Charge-conjugate pairs are validated exactly, the representative electric
+  charge is derived from the loaded SMQCD model, and each squared kernel is
+  multiplied by Sum_f Q_f^2/Q_ref^2 before the distinct quark and antiquark
+  species are summed. Pqq, Pgg, virtual terms, and combination with S10 are
+  deliberately absent.
 *)
 
 $HistoryLength = 0;
@@ -27,6 +28,7 @@ ClearAll[
   fatal, assert, writeAtomic, setTwoBodyKinematics, openPhotonIndex,
   conjugateOpenAmplitude, validateProjectedPair,
   generateBornProjectedPair, explicitProjectedPair, zeroEquivalentQ,
+  classEntry, quantumNumbers, electricQuantumNumber, chargeCoefficient,
   bornM2, s23Function, regularKernelAction,
   S11ConvolutionTest, S11SEpsilon, S11HggFlavorChargeSum,
   xHat, zHat, s11S23, k1T2, s11Mu, s11Nu
@@ -68,7 +70,7 @@ paperPath = FileNameJoin[{
   DirectoryName[scriptDirectory],
   "Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Order.pdf"
 }];
-stageVersion = "HggS11-v1";
+stageVersion = "HggS11-v2";
 projectors = {"Pg", "PPP"};
 
 Print["S11_STAGE: validating the authoritative paper input"];
@@ -424,6 +426,70 @@ assert[AllTrue[Flatten[Values /@ Values[chargeConjugationChecks]], TrueQ],
   "At least one charge-conjugate Born projection does not agree."];
 Print["S11_CHECKPOINT: charge-conjugate Born projections agree exactly"];
 
+Print["S11_STAGE: deriving the representative electric charge from SMQCD"];
+classDescriptionNames = Names["*M$ClassesDescription*"];
+assert[Length[classDescriptionNames] === 1,
+  "The loaded SMQCD class-description symbol is not unique."];
+classDescriptions = ToExpression[First[classDescriptionNames]];
+classEntry[class_Integer] := FirstCase[
+  classDescriptions,
+  HoldPattern[FeynArts`F[class] == rightHandSide_] :> rightHandSide,
+  Missing["NotFound"]
+];
+quantumNumbers[class_Integer] := FirstCase[
+  classEntry[class],
+  Rule[key_, value_] /;
+      SymbolName[Unevaluated[key]] === "QuantumNumbers" :> value,
+  Missing["NotFound"],
+  Infinity
+];
+electricQuantumNumber[class_Integer] := Module[
+  {numbers = quantumNumbers[class]},
+  If[ListQ[numbers] && Length[numbers] >= 1,
+    First[numbers],
+    Missing["NotFound"]
+  ]
+];
+electricQuantumNumbers = <|
+  "RepresentativeF3" -> electricQuantumNumber[3],
+  "ValidationF4" -> electricQuantumNumber[4]
+|>;
+assert[FreeQ[electricQuantumNumbers, _Missing],
+  "SMQCD electric quantum-number metadata is missing."];
+chargeMarkers = DeleteDuplicates@Cases[
+  Values[electricQuantumNumbers],
+  symbol_Symbol /; SymbolName[Unevaluated[symbol]] === "Charge",
+  Infinity
+];
+assert[Length[chargeMarkers] === 1,
+  "SMQCD electric metadata does not contain one charge marker."];
+chargeMarker = First[chargeMarkers];
+chargeCoefficient[class_Integer] := Simplify[
+  electricQuantumNumber[class] /. chargeMarker -> 1
+];
+representativeCharge = chargeCoefficient[3];
+validationCharge = chargeCoefficient[4];
+representativeChargeSquared = Together[representativeCharge^2];
+validationChargeSquared = Together[validationCharge^2];
+flavorChargeWeight = Together[
+  S11HggFlavorChargeSum/representativeChargeSquared
+];
+assert[
+  representativeCharge =!= 0 && validationCharge =!= 0 &&
+    representativeCharge =!= validationCharge &&
+    representativeChargeSquared =!= validationChargeSquared &&
+    TrueQ[Together[
+      flavorChargeWeight representativeChargeSquared -
+        S11HggFlavorChargeSum
+    ] === 0],
+  "The model-derived representative charge or physical weight is invalid."
+];
+Print[
+  "S11_MODEL_CHARGE: representative=", InputForm[representativeCharge],
+  " squared=", InputForm[representativeChargeSquared],
+  " weight=", InputForm[flavorChargeWeight]
+];
+
 bornM2[channel_String, projector_String, x_, z_, transverse2_] :=
   Together[
     bornProjected[channel, projector] /. {
@@ -538,7 +604,6 @@ pgqFFKernel = 2 CF (1 + (1 - ffSplittingVariable)^2)/
 
 factorizationPrefactor =
   FeynCalc`SMP["g_s"]^2/(16 Pi^2) S11SEpsilon/epsilon;
-flavorChargeWeight = 9 S11HggFlavorChargeSum;
 
 Print["S11_STAGE: acting the Hgg regular splitting kernels"];
 countertermComponents = AssociationMap[
@@ -624,6 +689,8 @@ s11Checks = <|
   "PhysicalFlavorChargeWeightApplied" ->
     AllTrue[Values[counterterms],
       ! FreeQ[#, S11HggFlavorChargeSum] &],
+  "RepresentativeChargeDerivedFromSMQCD" -> True,
+  "RepresentativeChargeNormalizationIdentityVerified" -> True,
   "NoPqqOrPggContribution" ->
     AllTrue[Values[counterterms], FreeQ[#, Pqq | Pgg] &],
   "NoSplittingDistributionPlaceholder" ->
@@ -681,13 +748,18 @@ s11Result = <|
     "Pgg" -> 0
   |>,
   "FlavorSpeciesSum" -> <|
-    "RepresentativeFlavor" -> "F[3,{1}] down type",
-    "RepresentativeChargeSquared" -> 1/9,
+    "RepresentativeFlavor" -> HoldForm[FeynArts`F[3, {1}]],
+    "ModelElectricQuantumNumbers" -> electricQuantumNumbers,
+    "RepresentativeCharge" -> representativeCharge,
+    "RepresentativeChargeSquared" -> representativeChargeSquared,
+    "ValidationCharge" -> validationCharge,
+    "ValidationChargeSquared" -> validationChargeSquared,
     "PhysicalChargeSumDefinition" -> HoldForm[
       S11HggFlavorChargeSum ==
         Sum[Qf[flavor]^2, {flavor, ActiveQuarkFlavors}]
     ],
     "PerSpeciesAppliedWeight" -> flavorChargeWeight,
+    "NormalizationIdentityVerified" -> True,
     "PDFSpecies" -> {"q", "qbar"},
     "FFSpecies" -> {"q", "qbar"},
     "RealSpectatorPairCounting" ->

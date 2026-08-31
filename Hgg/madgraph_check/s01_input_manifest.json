@@ -1,0 +1,94 @@
+{
+  "Channel": {
+    "CurrentRepresentative": "SMQCD F[3] up type derived in-tool",
+    "DiagramCount": "derive from copied S01 and measure in S02",
+    "FinalStateSymmetryFactor": "derive from current external identities",
+    "FragmentingMomentum": "k1",
+    "GeneratedIDEN": "derive and measure after S02",
+    "GeneratedPDGOrder": "measure after S02",
+    "HadronicProcess": "gamma* g -> g(k1) u(k2) ubar(k3)",
+    "LocalFinalMomentumOrder": [
+      "g(k1)",
+      "u(k2)",
+      "ubar(k3)"
+    ],
+    "MadGraphProcess": "e- g -> e- g u u~",
+    "Name": "Hgg only",
+    "PhysicalFlavorChargeSum": "deferred"
+  },
+  "Checks": {
+    "AllCopyHashesExact": true,
+    "AllOriginalHashesExact": true,
+    "DiagramAndIDENValuesNotCopiedFromAnotherChannel": true,
+    "MadGraphAndSixReusedWithoutInstallation": true,
+    "ParentArtifactsRemainReadOnly": true,
+    "SixAcceptedArtifactsCopied": true
+  },
+  "ComparisonBoundary": "copied pre-angular S06 open tensor and S07 Pg/PPP projections against a four-dimensional bare-tree MadGraph matrix element",
+  "CopiedHggArtifacts": {
+    "s01_calculate_hgg_real.wl": {
+      "bytes": 9586,
+      "copy_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/madgraph_check/upstream_copies/s01_calculate_hgg_real.wl",
+      "sha256": "9ec55e7e9881f0715289a9d2a2fce45b1c04a024260783a0d7742464d91c358e",
+      "source_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s01_calculate_hgg_real.wl"
+    },
+    "s01_result": {
+      "bytes": 38736,
+      "copy_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/madgraph_check/upstream_copies/s01_result",
+      "sha256": "f9dc6222b793830691c2a82db1d2ce045b2cb92ebd2dacc21948382adf3fa4be",
+      "source_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s01_result"
+    },
+    "s06_result": {
+      "bytes": 8686412,
+      "copy_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/madgraph_check/upstream_copies/s06_result",
+      "sha256": "dd1ccc91960f3a37b4acc397acc90f91da64340a79dd89132cdf4fcd9f5616e3",
+      "source_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s06_result"
+    },
+    "s06_spin_color_sum_average_hgg.wl": {
+      "bytes": 15804,
+      "copy_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/madgraph_check/upstream_copies/s06_spin_color_sum_average_hgg.wl",
+      "sha256": "aa6fede493ab224965f09dec28263fda1e94f3b85e51c55ce7331cc242f6e68e",
+      "source_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s06_spin_color_sum_average_hgg.wl"
+    },
+    "s07_contract_hgg_projectors.wl": {
+      "bytes": 10030,
+      "copy_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/madgraph_check/upstream_copies/s07_contract_hgg_projectors.wl",
+      "sha256": "4aaedba41d5051218defe4bb927cbcf6a640957860c3578232c6a39db14accc6",
+      "source_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s07_contract_hgg_projectors.wl"
+    },
+    "s07_result": {
+      "bytes": 2117863,
+      "copy_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/madgraph_check/upstream_copies/s07_result",
+      "sha256": "94bcbf6259f59d67dad3051f60f31041475fcd61d96a9fd1e31b473bd8550197",
+      "source_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/s07_result"
+    }
+  },
+  "ExcludedInputs": [
+    "S08 phase-space result",
+    "S10 endpoint-distribution result",
+    "S11 factorization counterterm",
+    "S12 finite factorized coefficient",
+    "S13 F-hat action",
+    "BigTMD benchmark outputs"
+  ],
+  "Program": {
+    "Path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hgg/madgraph_check/s01_prepare_inputs.py",
+    "SHA256": "f3e23ac68c255caec1a3ca8e41e77ea4245172bd71c4f107c9347a2f42273a48"
+  },
+  "ReusedDependencies": {
+    "Hqqbar/madgraph_check/python_deps/six.py": {
+      "bytes": 34703,
+      "mode": "read-only reuse without installation",
+      "path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/madgraph_check/python_deps/six.py",
+      "sha256": "c51c91f703d3d4b3696c923cb5fec213e05e75d9215393befac7f2fa6a3904df"
+    },
+    "Hqqbar/madgraph_check/software/MG5_aMC_v3_7_0/bin/mg5_aMC": {
+      "bytes": 9016,
+      "mode": "read-only reuse without installation",
+      "path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/madgraph_check/software/MG5_aMC_v3_7_0/bin/mg5_aMC",
+      "sha256": "d51e70db5c95fb72df985760819a0733c9bdb2401de3b27995d53788d2050a74"
+    }
+  },
+  "StageVersion": "HggMadGraphInputProvenance-v1",
+  "Status": "Complete"
+}

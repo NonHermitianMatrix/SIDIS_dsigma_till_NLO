@@ -124,7 +124,7 @@ def main() -> int:
     if (
         source.get("Status")
         != "CompleteFinitePartonicStructureFunctionsHgg"
-        or source.get("StageVersion") != "HggS13-v1"
+        or source.get("StageVersion") != "HggS13-v2"
         or source.get("Channel") != "Hgg only"
     ):
         raise RuntimeError("local benchmark is not bound to validated Hgg S13")
