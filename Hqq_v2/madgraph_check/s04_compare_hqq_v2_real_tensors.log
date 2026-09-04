@@ -1,0 +1,33 @@
+Loading FeynCalc from /home/physics/.WolframEngine/Applications/FeynCalc/
+$PrePrint is set to FeynCalcForm. Use FI and FC to change the display format.
+FeynCalc 10.2.1 (stable version). For help, use the DisplayForm[ButtonBox[online documentation,, ButtonData :> {URL[https://feyncalc.github.io/referenceDev], None}, BaseStyle -> Hyperlink, ButtonNote -> https://feyncalc.github.io/referenceDev]] visit the DisplayForm[ButtonBox[forum, ButtonData :> {URL[https://github.com/FeynCalc/feyncalc/discussions], None}, BaseStyle -> Hyperlink, ButtonNote -> https://github.com/FeynCalc/feyncalc/discussions/]] and have a look at the supplied DisplayForm[ButtonBox[examples., BaseStyle -> Hyperlink, ButtonFunction :> SystemOpen[FileNameJoin[{$FeynCalcDirectory, Examples}]], Evaluator -> Automatic, Method -> Preemptive]] The PDF-version of the manual can be downloaded DisplayForm[ButtonBox[here., ButtonData :> {URL[https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf], None}, BaseStyle -> Hyperlink, ButtonNote -> https://github.com/FeynCalc/feyncalc-manual/releases/download/dev-manual/FeynCalcManual.pdf]]
+If you use FeynCalc in your research, please evaluate FeynCalcHowToCite[] to learn how to cite this software.
+Please keep in mind that the proper academic attribution of our work is crucial to ensure the future development of this package!
+S04_STAGE=load and validate Hqq_v2 and MadGraph inputs
+S04_STAGE=derive and validate common physical benchmark
+S04_STAGE=derive spin-averaged electron tensor with FeynCalc
+S04_STAGE=evaluate local tensor Hqq;gg
+S04_RESULT_FAMILY=Hqq;gg
+S04_RESULT_LOCAL=InputForm[8.6354536178470211010704608841`17.*^-10]
+S04_RESULT_MADGRAPH_LABELED=InputForm[8.635453617847025*^-10]
+S04_RESULT_RELATIVE_DIFFERENCE=InputForm[4.7894450549967675*^-16]
+S04_RESULT_WITHIN_TOLERANCE=True
+S04_STAGE=evaluate local tensor Hqq;q_qbar_sameFlavor
+S04_RESULT_FAMILY=Hqq;q_qbar_sameFlavor
+S04_RESULT_LOCAL=InputForm[5.4258454541176394648340719338`17.*^-10]
+S04_RESULT_MADGRAPH_LABELED=InputForm[5.425845454117637*^-10]
+S04_RESULT_RELATIVE_DIFFERENCE=InputForm[5.716947383231899*^-16]
+S04_RESULT_WITHIN_TOLERANCE=True
+S04_STAGE=evaluate local tensor Hqq;qPrime_qbarPrime
+S04_RESULT_FAMILY=Hqq;qPrime_qbarPrime
+S04_RESULT_LOCAL=InputForm[2.407732269377358232255940624`17.*^-11]
+S04_RESULT_MADGRAPH_LABELED=InputForm[2.407732269377357*^-11]
+S04_RESULT_RELATIVE_DIFFERENCE=InputForm[5.367995950182366*^-16]
+S04_RESULT_WITHIN_TOLERANCE=True
+S04_COMPARISON_COUNT=3
+S04_ALL_WITHIN_TOLERANCE=True
+S04_MAX_ABS=InputForm[4.1359030627651384*^-25]
+S04_MAX_REL=InputForm[5.716947383231899*^-16]
+S04_JSON_OUTPUT=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s04_local_vs_madgraph.json
+S04_REPORT_OUTPUT=/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s04_local_vs_madgraph.md
+S04_SUCCESS

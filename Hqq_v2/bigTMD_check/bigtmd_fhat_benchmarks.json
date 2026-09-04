@@ -1,0 +1,505 @@
+{
+  "Benchmarks": [
+    {
+      "ID": "interior_1",
+      "Jacobian": 0.025037898728832247,
+      "Jacobian0": 0.014627339953416595,
+      "Nf": 4.0,
+      "PHT2": 0.42439,
+      "Q": 4.123105625617661,
+      "Q2": 17.0,
+      "S23Fraction": 0.4,
+      "S23Sample": 6.619113043478261,
+      "S23UpperB": 16.547782608695652,
+      "qT2": 3.1,
+      "s": 28.08695652173913,
+      "t": -7.431800418235048,
+      "t0": -4.48166736372508,
+      "xB": 0.23,
+      "xHat": 0.3770491803278688,
+      "xi": 0.61,
+      "zH": 0.37,
+      "zHat": 0.6883596821413634,
+      "zHat0": 0.9005994702356057,
+      "zeta": 0.5375096909351175,
+      "zeta0": 0.4108374613003096
+    },
+    {
+      "ID": "interior_2",
+      "Jacobian": 0.010219643127070377,
+      "Jacobian0": 0.006531208429601624,
+      "Nf": 4.0,
+      "PHT2": 0.45387,
+      "Q": 4.795831523312719,
+      "Q2": 23.0,
+      "S23Fraction": 0.35,
+      "S23Sample": 13.111128947368421,
+      "S23UpperB": 37.460368421052635,
+      "qT2": 2.7,
+      "s": 65.36842105263158,
+      "t": -7.41534248434238,
+      "t0": -3.5052192066805845,
+      "xB": 0.19,
+      "xHat": 0.2602739726027397,
+      "xi": 0.73,
+      "zH": 0.41,
+      "zHat": 0.7677171189979123,
+      "zHat0": 0.9603340292275574,
+      "zeta": 0.5340508761028617,
+      "zeta0": 0.42693478260869566
+    },
+    {
+      "ID": "interior_3",
+      "Jacobian": 0.017725818802178977,
+      "Jacobian0": 0.00673160620210728,
+      "Nf": 4.0,
+      "PHT2": 0.15979,
+      "Q": 5.385164807134504,
+      "Q2": 29.0,
+      "S23Fraction": 0.55,
+      "S23Sample": 17.231659677419355,
+      "S23UpperB": 31.330290322580645,
+      "qT2": 1.9,
+      "s": 44.903225806451616,
+      "t": -12.97761203046385,
+      "t0": -3.0001378454752223,
+      "xB": 0.31,
+      "xHat": 0.3924050632911392,
+      "xi": 0.79,
+      "zH": 0.29,
+      "zHat": 0.591232028396168,
+      "zHat0": 0.9594045075470398,
+      "zeta": 0.490501167175739,
+      "zeta0": 0.3022708333333333
+    }
+  ],
+  "Conventions": {
+    "CaseWeightsFromPinnedDriver": {
+      "A": 0.4444444444444444,
+      "B": 0.0,
+      "C": 0.6666666666666666
+    },
+    "Couplings": "g=gp=1",
+    "DecimalPolicy": "pinned Python decimal expressions executed as written",
+    "DistributionObservables": [
+      "Delta",
+      "Plus0",
+      "Plus1",
+      "Ordinary"
+    ],
+    "EndpointRegulatorFromPinnedDriver": 1e-07,
+    "Excluded": "PDFs, FFs, remaining zh/(xi zeta) test factor, outer xi convolution, and leptonic prefactors",
+    "FixedIncomingAndFragmentingParton": "up quark",
+    "Jacobian": "pinned sidis.py zeta-to-s23 Jacobian applied",
+    "Nf": 4,
+    "OrdinaryAssembly": "regular plus endpoint-subtracted plus1B and plus2B densities",
+    "Scale": "mu=Q"
+  },
+  "FHatByBenchmark": {
+    "interior_1": {
+      "Delta": {
+        "F1Hat": -4.515123185089386e-05,
+        "F2Hat": -3.53324453137829e-05
+      },
+      "Ordinary": {
+        "F1Hat": -2.0409488866465695e-05,
+        "F2Hat": -1.7627947894949736e-05
+      },
+      "Plus0": {
+        "F1Hat": -0.000296328442757553,
+        "F2Hat": -0.00024025456192599713
+      },
+      "Plus1": {
+        "F1Hat": 7.465722599899567e-05,
+        "F2Hat": 6.0529927370754126e-05
+      }
+    },
+    "interior_2": {
+      "Delta": {
+        "F1Hat": -8.508849870743368e-05,
+        "F2Hat": -4.485950003667297e-05
+      },
+      "Ordinary": {
+        "F1Hat": -9.43988049881238e-06,
+        "F2Hat": -5.433470134712589e-06
+      },
+      "Plus0": {
+        "F1Hat": -0.0002897118612406461,
+        "F2Hat": -0.00015496953896572868
+      },
+      "Plus1": {
+        "F1Hat": 6.68403467789534e-05,
+        "F2Hat": 3.575351619277853e-05
+      }
+    },
+    "interior_3": {
+      "Delta": {
+        "F1Hat": -0.0001927141968123035,
+        "F2Hat": -0.00015520483203070485
+      },
+      "Ordinary": {
+        "F1Hat": -3.564308972259978e-05,
+        "F2Hat": -2.8484723297113044e-05
+      },
+      "Plus0": {
+        "F1Hat": -0.0004093482535367627,
+        "F2Hat": -0.0003317066473809143
+      },
+      "Plus1": {
+        "F1Hat": 8.80413154229004e-05,
+        "F2Hat": 7.134240664194516e-05
+      }
+    }
+  },
+  "Program": {
+    "Path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/bigTMD_check/s02_compare_bigtmd_fhat.py",
+    "SHA256": "315641298404144b1e3bb353c0a19a9125d7fbf01472a1600b1555d9acff2473"
+  },
+  "RawProjectorsByBenchmarkAndCase": {
+    "interior_1": {
+      "A": {
+        "Pg": {
+          "Delta": 0.000199349551530127,
+          "Ordinary": 8.515508836791106e-05,
+          "Plus0": 0.001283370496779937,
+          "Plus1": -0.000323333394370699
+        },
+        "Ppp": {
+          "Delta": -0.00011452601522813147,
+          "Ordinary": -0.00020128479421927735,
+          "Plus0": -0.0014979441639919276,
+          "Plus1": 0.00037739325372202625
+        }
+      },
+      "B": {
+        "Pg": {
+          "Delta": 2.7532819357877035e-13,
+          "Ordinary": 1.6566515174921363e-14,
+          "Plus0": -1.0965561393671527e-13,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 3.2958811040755484e-13,
+          "Ordinary": 1.6704882665536562e-14,
+          "Plus0": -1.1057146608036463e-13,
+          "Plus1": 0.0
+        }
+      },
+      "C": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": 8.353326548381852e-09,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 1.157212194724278e-06,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        }
+      }
+    },
+    "interior_2": {
+      "A": {
+        "Pg": {
+          "Delta": 0.00038044807993245267,
+          "Ordinary": 4.023679604154517e-05,
+          "Plus0": 0.0012857196219238102,
+          "Plus1": -0.0002966324714246756
+        },
+        "Ppp": {
+          "Delta": -0.0002079704167258846,
+          "Ordinary": -0.0001915395658996775,
+          "Plus0": -0.0015264644977386272,
+          "Plus1": 0.0003521754856950848
+        }
+      },
+      "B": {
+        "Pg": {
+          "Delta": 9.894346954199603e-14,
+          "Ordinary": 3.886941127204905e-15,
+          "Plus0": -5.096217473983166e-14,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 1.141766013105178e-13,
+          "Ordinary": 3.5313473785851296e-15,
+          "Plus0": -4.629996097506286e-14,
+          "Plus1": 0.0
+        }
+      },
+      "C": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": -2.0416010505983808e-09,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 6.144576493685693e-07,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        }
+      }
+    },
+    "interior_3": {
+      "A": {
+        "Pg": {
+          "Delta": 0.0008558585882659877,
+          "Ordinary": 0.0001589014167549111,
+          "Plus0": 0.00181211915376093,
+          "Plus1": -0.00038974480199803333
+        },
+        "Ppp": {
+          "Delta": -0.0005346472214376075,
+          "Ordinary": -7.095387020075521e-05,
+          "Plus0": -0.0014100562557508257,
+          "Plus1": 0.0003032703949055384
+        }
+      },
+      "B": {
+        "Pg": {
+          "Delta": 1.655509193675316e-13,
+          "Ordinary": 3.997453939349647e-15,
+          "Plus0": -6.888273418699166e-14,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 1.37402179388353e-13,
+          "Ordinary": 2.7720516921942058e-15,
+          "Plus0": -4.776682190311842e-14,
+          "Plus1": 0.0
+        }
+      },
+      "C": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": 1.704993593202269e-08,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 1.2576698355272778e-06,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        }
+      }
+    }
+  },
+  "Reference": {
+    "Channel": 2,
+    "ChargeCases": [
+      "A",
+      "B",
+      "C"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "Driver": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/sidis.py",
+    "DriverSHA256": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+    "LocalSnapshot": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference",
+    "ModulePaths": {
+      "PPP2A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn2A.py",
+      "PPP2B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn2B.py",
+      "PPP2C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn2C.py",
+      "Pg2A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn2A.py",
+      "Pg2B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn2B.py",
+      "Pg2C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn2C.py"
+    },
+    "ModuleSHA256": {
+      "PPP2A": "f1a04d5fb041b174e61f82e5290dc81a01c1583c741a754de8a76d17e0d75e72",
+      "PPP2B": "59746b925caa9e016f7548836c443aa158a5521d32a9df4d9e22b3f8d5ffe586",
+      "PPP2C": "38cf2594a02e35ee51d7d5c83e94167d24cf65fbc864aac6df8fa4742a71050e",
+      "Pg2A": "9d24bb4b02ef7b69b125059b7b8fe4ba993c4fb1d3c3972dd826f221d3e64c23",
+      "Pg2B": "48d5e92a0b33abee65d000327d4bc1c6edb30dab97b396d237541e53291f07b3",
+      "Pg2C": "c5da8f58bad64c6738b88f7d8acb0872bdbc5153444a1c7fc489af53872fd3c2"
+    },
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD"
+  },
+  "StageVersion": "HqqV2BigTMDCheckS02-v1",
+  "Status": "CompleteBigTMDHqqV2FHatBenchmarks",
+  "TotalProjectorsByBenchmark": {
+    "interior_1": {
+      "Pg": {
+        "Delta": 8.859980068005643e-05,
+        "Ordinary": 3.785227482565939e-05,
+        "Plus0": 0.0005703868874577497,
+        "Plus1": -0.00014370373083142176
+      },
+      "Ppp": {
+        "Delta": -5.090045121250287e-05,
+        "Ordinary": -8.868843374541819e-05,
+        "Plus0": -0.00066575296177419,
+        "Plus1": 0.00016773033498756722
+      }
+    },
+    "interior_2": {
+      "Pg": {
+        "Delta": 0.00016908803552553452,
+        "Ordinary": 1.78816593955419e-05,
+        "Plus0": 0.0005714309430772489,
+        "Plus1": -0.00013183665396652248
+      },
+      "Ppp": {
+        "Delta": -9.243129632261537e-05,
+        "Ordinary": -8.471905752249984e-05,
+        "Plus0": -0.000678428665661612,
+        "Plus1": 0.00015652243808670437
+      }
+    },
+    "interior_3": {
+      "Pg": {
+        "Delta": 0.0003803815947848834,
+        "Ordinary": 7.063421851502627e-05,
+        "Plus0": 0.0008053862905604134,
+        "Plus1": -0.00017321991199912591
+      },
+      "Ppp": {
+        "Delta": -0.0002376209873056033,
+        "Ordinary": -3.0696606865539685e-05,
+        "Plus0": -0.0006266916692225892,
+        "Plus1": 0.00013478684218023928
+      }
+    }
+  },
+  "WeightedProjectorsByBenchmarkAndCase": {
+    "interior_1": {
+      "A": {
+        "Pg": {
+          "Delta": 8.859980068005643e-05,
+          "Ordinary": 3.78467059412938e-05,
+          "Plus0": 0.0005703868874577497,
+          "Plus1": -0.00014370373083142176
+        },
+        "Ppp": {
+          "Delta": -5.090045121250287e-05,
+          "Ordinary": -8.945990854190104e-05,
+          "Plus0": -0.00066575296177419,
+          "Plus1": 0.00016773033498756722
+        }
+      },
+      "B": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": 0.0,
+          "Plus0": -0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 0.0,
+          "Plus0": -0.0,
+          "Plus1": 0.0
+        }
+      },
+      "C": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": 5.5688843655879015e-09,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 7.71474796482852e-07,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        }
+      }
+    },
+    "interior_2": {
+      "A": {
+        "Pg": {
+          "Delta": 0.00016908803552553452,
+          "Ordinary": 1.7883020462908963e-05,
+          "Plus0": 0.0005714309430772489,
+          "Plus1": -0.00013183665396652248
+        },
+        "Ppp": {
+          "Delta": -9.243129632261537e-05,
+          "Ordinary": -8.512869595541221e-05,
+          "Plus0": -0.000678428665661612,
+          "Plus1": 0.00015652243808670437
+        }
+      },
+      "B": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": 0.0,
+          "Plus0": -0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 0.0,
+          "Plus0": -0.0,
+          "Plus1": 0.0
+        }
+      },
+      "C": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": -1.3610673670655871e-09,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 4.0963843291237956e-07,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        }
+      }
+    },
+    "interior_3": {
+      "A": {
+        "Pg": {
+          "Delta": 0.0003803815947848834,
+          "Ordinary": 7.062285189107159e-05,
+          "Plus0": 0.0008053862905604134,
+          "Plus1": -0.00017321991199912591
+        },
+        "Ppp": {
+          "Delta": -0.0002376209873056033,
+          "Ordinary": -3.153505342255787e-05,
+          "Plus0": -0.0006266916692225892,
+          "Plus1": 0.00013478684218023928
+        }
+      },
+      "B": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": 0.0,
+          "Plus0": -0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 0.0,
+          "Plus0": -0.0,
+          "Plus1": 0.0
+        }
+      },
+      "C": {
+        "Pg": {
+          "Delta": 0.0,
+          "Ordinary": 1.1366623954681793e-08,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        },
+        "Ppp": {
+          "Delta": 0.0,
+          "Ordinary": 8.384465570181852e-07,
+          "Plus0": 0.0,
+          "Plus1": 0.0
+        }
+      }
+    }
+  }
+}

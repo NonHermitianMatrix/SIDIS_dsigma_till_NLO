@@ -1,0 +1,8 @@
+set stdout_level INFO
+set group_subprocesses False
+import model sm
+generate e- u > e- u g g / z h QED=2 QCD=2 @1
+add process e- u > e- u u u~ / z h QED=2 QCD=2 @2
+add process e- u > e- u d d~ / z h QED=2 QCD=2 @3
+output standalone scripts/Hqq_v2/madgraph_check/generated_process --prefix=int
+quit

@@ -1,0 +1,195 @@
+{
+  "BenchmarkConstruction": {
+    "incoming_energy": 500.0,
+    "maximum_conservation_residual": 0.0,
+    "maximum_external_mass_squared": 7.275957614183426e-12,
+    "outgoing_count": 4,
+    "outgoing_energy": 250.0,
+    "photon_q2": -105662.43270259356
+  },
+  "Checks": {
+    "AllBridgeValuesMatchDirectGeneratedRoutines": true,
+    "AllExternalStatesMassless": true,
+    "BeamHelicityFactorsParsed": true,
+    "CouplingsParsedFromParameterCard": true,
+    "DiagramCountsAgreeWithGenerationLog": true,
+    "DispatcherPDGsParsed": true,
+    "GeneratedHashesExact": true,
+    "GeneratedVersionExact": true,
+    "IdenticalParticleExchangesInvariant": true,
+    "IdentityFactorsDerivedFromFinalPDGs": true,
+    "InitialColorStatesDerivedFromIDEN": true,
+    "InitialStateAveragingCommon": true,
+    "InvalidProcessIDRejected": true,
+    "MomentumConservation": true,
+    "PhotonSpacelike": true,
+    "ProcessCommandsExact": true
+  },
+  "CouplingsFromParameterCard": {
+    "AlphaEMInverse": {
+      "decimal": "132.5070",
+      "denominator": 1000,
+      "float": 132.507,
+      "numerator": 132507
+    },
+    "AlphaS": {
+      "decimal": "0.1180000",
+      "denominator": 500,
+      "float": 0.118,
+      "numerator": 59
+    }
+  },
+  "GeneratedInputs": {
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/Cards/param_card.dat": "55bb009a781370ab3fdfb523be00d0c8f68ffec442d12eb41b8d2da50307cf64",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/MGMEVersion.txt": "78f751fdc6ec75262557675ab2349c82a3b3c161fcf4ed81d4b1a3f6d9d5df47",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/SubProcesses/P1_emu_emugg_no_zh/matrix.f": "0120dfd14d7743c02ec36fafa9bc0f06d602ff0c896af83e5deafcae6b6a1962",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/SubProcesses/P2_emu_emuuux_no_zh/matrix.f": "aceeb6caaed7ea57aafd34348a36ceafaffdd1b2cbeb230ced19417d1f49bd77",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/SubProcesses/P3_emu_emuddx_no_zh/matrix.f": "76baa973586f9b2d90e45ed9e9dff57e0dbc2f966f79fc6f91d4fbb86bb849c8",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/SubProcesses/all_matrix.f": "13764a16588bce5678cf4866aef9434e8abe4fde437e30c411ed50f2b274d56e",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/SubProcesses/liball_2me.so": "1295bb0b67009747184d329706b5e7e67030fc0cd1f673f2f54e9c0d54cb3491",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s01_generate_hqq_v2_standalone.log": "74a21bb432a3926af08a3d5a3662c8513ba8ff8f912dd1e6f23cb2acddf69199",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s01_generate_hqq_v2_standalone.mg5": "4b285a44cd7c2a7951c5c7e8a6c54b772407e27c88835637cf835d12b1d3e016",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s02_build_generated_library.log": "07db20d5eacab83b1282d8a7d6b721f96fe7c50965f66b99a3390b6289a5c42e",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s02_compile_bridge.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s02_libhqq_v2_madgraph_bridge.so": "7004a082805d69e4a3ac751530d8f1f15fea74eacd1d7c7e88ca47a79edb3b30",
+    "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s02_madgraph_c_bridge.f90": "35b3262b79f301dce3342e46a89eb0fafa171fa9be9c1bb46a782ec3b8e9db01"
+  },
+  "Generator": {
+    "GeneratedVersionRecord": "5.3.7.0",
+    "Name": "MadGraph5_aMC@NLO",
+    "Version": "3.7.0"
+  },
+  "InitialColorStatesFromIDEN": 3,
+  "InitialStateAveragingDenominatorFromIDEN": 12,
+  "MomentaParticleMajor": [
+    [
+      500.0,
+      0.0,
+      0.0,
+      500.0
+    ],
+    [
+      500.0,
+      0.0,
+      0.0,
+      -500.0
+    ],
+    [
+      250.0,
+      144.33756729740645,
+      144.33756729740645,
+      144.33756729740645
+    ],
+    [
+      250.0,
+      144.33756729740645,
+      -144.33756729740645,
+      -144.33756729740645
+    ],
+    [
+      250.0,
+      -144.33756729740645,
+      144.33756729740645,
+      -144.33756729740645
+    ],
+    [
+      250.0,
+      -144.33756729740645,
+      -144.33756729740645,
+      144.33756729740645
+    ]
+  ],
+  "Processes": {
+    "1": {
+      "bridge_direct_relative_difference": 0.0,
+      "bridge_matrix_element": 4.3177268089235127e-10,
+      "direct_matrix_element": 4.3177268089235127e-10,
+      "exchanged_matrix_element": 4.317726808923513e-10,
+      "family": "Hqq;gg",
+      "identical_exchange_relative_difference": 1.1973612637491919e-16,
+      "labeled_madgraph_matrix_element": 8.635453617847025e-10,
+      "metadata": {
+        "beam_helicity_average_factors": [
+          2,
+          2
+        ],
+        "diagram_count": 8,
+        "identity_denominator": 24,
+        "labeled_final_state_factor": 2,
+        "matrix_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/SubProcesses/P1_emu_emugg_no_zh/matrix.f",
+        "matrix_sha256": "0120dfd14d7743c02ec36fafa9bc0f06d602ff0c896af83e5deafcae6b6a1962",
+        "pdgs": [
+          11,
+          2,
+          11,
+          2,
+          21,
+          21
+        ]
+      },
+      "process_command": "e- u > e- u g g QCD<=2 QED<=2 / z h @1"
+    },
+    "2": {
+      "bridge_direct_relative_difference": 0.0,
+      "bridge_matrix_element": 2.7129227270588183e-10,
+      "direct_matrix_element": 2.7129227270588183e-10,
+      "exchanged_matrix_element": 2.7129227270588183e-10,
+      "family": "Hqq;q_qbar_sameFlavor",
+      "identical_exchange_relative_difference": 0.0,
+      "labeled_madgraph_matrix_element": 5.425845454117637e-10,
+      "metadata": {
+        "beam_helicity_average_factors": [
+          2,
+          2
+        ],
+        "diagram_count": 8,
+        "identity_denominator": 24,
+        "labeled_final_state_factor": 2,
+        "matrix_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/SubProcesses/P2_emu_emuuux_no_zh/matrix.f",
+        "matrix_sha256": "aceeb6caaed7ea57aafd34348a36ceafaffdd1b2cbeb230ced19417d1f49bd77",
+        "pdgs": [
+          11,
+          2,
+          11,
+          2,
+          2,
+          -2
+        ]
+      },
+      "process_command": "e- u > e- u u u~ QCD<=2 QED<=2 / z h @2"
+    },
+    "3": {
+      "bridge_direct_relative_difference": 0.0,
+      "bridge_matrix_element": 2.407732269377357e-11,
+      "direct_matrix_element": 2.407732269377357e-11,
+      "family": "Hqq;qPrime_qbarPrime",
+      "labeled_madgraph_matrix_element": 2.407732269377357e-11,
+      "metadata": {
+        "beam_helicity_average_factors": [
+          2,
+          2
+        ],
+        "diagram_count": 4,
+        "identity_denominator": 12,
+        "labeled_final_state_factor": 1,
+        "matrix_path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/generated_process/SubProcesses/P3_emu_emuddx_no_zh/matrix.f",
+        "matrix_sha256": "76baa973586f9b2d90e45ed9e9dff57e0dbc2f966f79fc6f91d4fbb86bb849c8",
+        "pdgs": [
+          11,
+          2,
+          11,
+          2,
+          1,
+          -1
+        ]
+      },
+      "process_command": "e- u > e- u d d~ QCD<=2 QED<=2 / z h @3"
+    }
+  },
+  "Program": {
+    "Path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/madgraph_check/s03_evaluate_madgraph_reference.py",
+    "SHA256": "1e2d6ce4cafed9b1f1d00ef5f6cad936792611364d8941d50fb1e49b4d7a489b"
+  },
+  "Stage": "HqqV2MadGraphS03-v1",
+  "Status": "CompleteMadGraphReference"
+}

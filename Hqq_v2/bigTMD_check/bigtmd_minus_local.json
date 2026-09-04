@@ -1,0 +1,735 @@
+{
+  "Benchmarks": [
+    {
+      "ID": "interior_1",
+      "Jacobian": 0.025037898728832247,
+      "Jacobian0": 0.014627339953416595,
+      "Nf": 4.0,
+      "PHT2": 0.42439,
+      "Q": 4.123105625617661,
+      "Q2": 17.0,
+      "S23Fraction": 0.4,
+      "S23Sample": 6.619113043478261,
+      "S23UpperB": 16.547782608695652,
+      "qT2": 3.1,
+      "s": 28.08695652173913,
+      "t": -7.431800418235048,
+      "t0": -4.48166736372508,
+      "xB": 0.23,
+      "xHat": 0.3770491803278688,
+      "xi": 0.61,
+      "zH": 0.37,
+      "zHat": 0.6883596821413634,
+      "zHat0": 0.9005994702356057,
+      "zeta": 0.5375096909351175,
+      "zeta0": 0.4108374613003096
+    },
+    {
+      "ID": "interior_2",
+      "Jacobian": 0.010219643127070377,
+      "Jacobian0": 0.006531208429601624,
+      "Nf": 4.0,
+      "PHT2": 0.45387,
+      "Q": 4.795831523312719,
+      "Q2": 23.0,
+      "S23Fraction": 0.35,
+      "S23Sample": 13.111128947368421,
+      "S23UpperB": 37.460368421052635,
+      "qT2": 2.7,
+      "s": 65.36842105263158,
+      "t": -7.41534248434238,
+      "t0": -3.5052192066805845,
+      "xB": 0.19,
+      "xHat": 0.2602739726027397,
+      "xi": 0.73,
+      "zH": 0.41,
+      "zHat": 0.7677171189979123,
+      "zHat0": 0.9603340292275574,
+      "zeta": 0.5340508761028617,
+      "zeta0": 0.42693478260869566
+    },
+    {
+      "ID": "interior_3",
+      "Jacobian": 0.017725818802178977,
+      "Jacobian0": 0.00673160620210728,
+      "Nf": 4.0,
+      "PHT2": 0.15979,
+      "Q": 5.385164807134504,
+      "Q2": 29.0,
+      "S23Fraction": 0.55,
+      "S23Sample": 17.231659677419355,
+      "S23UpperB": 31.330290322580645,
+      "qT2": 1.9,
+      "s": 44.903225806451616,
+      "t": -12.97761203046385,
+      "t0": -3.0001378454752223,
+      "xB": 0.31,
+      "xHat": 0.3924050632911392,
+      "xi": 0.79,
+      "zH": 0.29,
+      "zHat": 0.591232028396168,
+      "zHat0": 0.9594045075470398,
+      "zeta": 0.490501167175739,
+      "zeta0": 0.3022708333333333
+    }
+  ],
+  "BigTMDSource": {
+    "Channel": 2,
+    "ChargeCases": [
+      "A",
+      "B",
+      "C"
+    ],
+    "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+    "Driver": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/sidis.py",
+    "DriverSHA256": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+    "LocalSnapshot": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference",
+    "ModulePaths": {
+      "PPP2A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn2A.py",
+      "PPP2B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn2B.py",
+      "PPP2C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Ppp/fchn2C.py",
+      "Pg2A": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn2A.py",
+      "Pg2B": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn2B.py",
+      "Pg2C": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqprime/bigTMD_check/BigTMD_reference/NLO/Pg/fchn2C.py"
+    },
+    "ModuleSHA256": {
+      "PPP2A": "f1a04d5fb041b174e61f82e5290dc81a01c1583c741a754de8a76d17e0d75e72",
+      "PPP2B": "59746b925caa9e016f7548836c443aa158a5521d32a9df4d9e22b3f8d5ffe586",
+      "PPP2C": "38cf2594a02e35ee51d7d5c83e94167d24cf65fbc864aac6df8fa4742a71050e",
+      "Pg2A": "9d24bb4b02ef7b69b125059b7b8fe4ba993c4fb1d3c3972dd826f221d3e64c23",
+      "Pg2B": "48d5e92a0b33abee65d000327d4bc1c6edb30dab97b396d237541e53291f07b3",
+      "Pg2C": "c5da8f58bad64c6738b88f7d8acb0872bdbc5153444a1c7fc489af53872fd3c2"
+    },
+    "Projectors": [
+      "Pg",
+      "Ppp"
+    ],
+    "Repository": "https://github.com/JeffersonLab/BigTMD"
+  },
+  "CaseWeightsFromPinnedDriver": {
+    "A": 0.4444444444444444,
+    "B": 0.0,
+    "C": 0.6666666666666666
+  },
+  "ComparisonLevel": "finite fixed-up-flavor Hqq coefficient including zeta-to-s23 Jacobian, before the common remaining driver test factor and outer convolution",
+  "DifferenceDirection": "BigTMD minus local",
+  "DifferencesByBenchmark": {
+    "interior_1": {
+      "Delta": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.010120067685040646,
+          "BigTMD": -4.515123185089386e-05,
+          "BigTMDDividedByLocal": -0.004481549009431124,
+          "BigTMDMinusLocal": -0.010120067685040646,
+          "Local": 0.010074916453189751,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.0044815490094312,
+          "ToleranceAtPoint": 1.1074916453189752e-09
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.008363420133013418,
+          "BigTMD": -3.53324453137829e-05,
+          "BigTMDDividedByLocal": -0.0042425640361553815,
+          "BigTMDMinusLocal": -0.008363420133013418,
+          "Local": 0.008328087687699635,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.0042425640361554,
+          "ToleranceAtPoint": 9.328087687699635e-10
+        }
+      },
+      "Ordinary": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.00026784012785799783,
+          "BigTMD": -2.0409488866465695e-05,
+          "BigTMDDividedByLocal": 0.0708049124171951,
+          "BigTMDMinusLocal": 0.00026784012785799783,
+          "Local": -0.0002882496167244635,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.9291950875828049,
+          "ToleranceAtPoint": 1.2882496167244636e-10
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.00020375632583183293,
+          "BigTMD": -1.7627947894949736e-05,
+          "BigTMDDividedByLocal": 0.07962601678159373,
+          "BigTMDMinusLocal": 0.00020375632583183293,
+          "Local": -0.00022138427372678267,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.9203739832184062,
+          "ToleranceAtPoint": 1.2213842737267827e-10
+        }
+      },
+      "Plus0": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.0017859521397037574,
+          "BigTMD": -0.000296328442757553,
+          "BigTMDDividedByLocal": -0.19892838934090512,
+          "BigTMDMinusLocal": -0.0017859521397037574,
+          "Local": 0.0014896236969462043,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.198928389340905,
+          "ToleranceAtPoint": 2.489623696946204e-10
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.0014479985279451078,
+          "BigTMD": -0.00024025456192599713,
+          "BigTMDDividedByLocal": -0.19892838936542903,
+          "BigTMDMinusLocal": -0.0014479985279451078,
+          "Local": 0.0012077439660191107,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.198928389365429,
+          "ToleranceAtPoint": 2.2077439660191109e-10
+        }
+      },
+      "Plus1": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.005029293788119282,
+          "BigTMD": 7.465722599899567e-05,
+          "BigTMDDividedByLocal": 0.014627339837800717,
+          "BigTMDMinusLocal": -0.005029293788119282,
+          "Local": 0.005103951014118278,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.9853726601621992,
+          "ToleranceAtPoint": 6.103951014118278e-10
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.004077606470966285,
+          "BigTMD": 6.0529927370754126e-05,
+          "BigTMDDividedByLocal": 0.014627339832268172,
+          "BigTMDMinusLocal": -0.004077606470966285,
+          "Local": 0.004138136398337039,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.9853726601677318,
+          "ToleranceAtPoint": 5.138136398337039e-10
+        }
+      }
+    },
+    "interior_2": {
+      "Delta": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.03142683706693963,
+          "BigTMD": -8.508849870743368e-05,
+          "BigTMDDividedByLocal": -0.0027148612503923556,
+          "BigTMDMinusLocal": -0.03142683706693963,
+          "Local": 0.03134174856823219,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.0027148612503924,
+          "ToleranceAtPoint": 3.2341748568232194e-09
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.016954591177354237,
+          "BigTMD": -4.485950003667297e-05,
+          "BigTMDDividedByLocal": -0.002652880654330356,
+          "BigTMDMinusLocal": -0.016954591177354237,
+          "Local": 0.016909731677317564,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.0026528806543304,
+          "ToleranceAtPoint": 1.7909731677317563e-09
+        }
+      },
+      "Ordinary": {
+        "F1Hat": {
+          "AbsoluteDifference": 1.537015097641751e-05,
+          "BigTMD": -9.43988049881238e-06,
+          "BigTMDDividedByLocal": -1.5918128076047837,
+          "BigTMDMinusLocal": -1.537015097641751e-05,
+          "Local": 5.930270477605127e-06,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.6282145709737754,
+          "ToleranceAtPoint": 1.0094398804988124e-10
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 4.9325110901165184e-05,
+          "BigTMD": -5.433470134712589e-06,
+          "BigTMDDividedByLocal": -0.12379282341309776,
+          "BigTMDMinusLocal": -4.9325110901165184e-05,
+          "Local": 4.38916407664526e-05,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.1237928234130976,
+          "ToleranceAtPoint": 1.0438916407664526e-10
+        }
+      },
+      "Plus0": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.000681843491804286,
+          "BigTMD": -0.0002897118612406461,
+          "BigTMDDividedByLocal": 0.2981938809072133,
+          "BigTMDMinusLocal": 0.000681843491804286,
+          "Local": -0.0009715553530449321,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.7018061190927867,
+          "ToleranceAtPoint": 1.971555353044932e-10
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.00036472435441833347,
+          "BigTMD": -0.00015496953896572868,
+          "BigTMDDividedByLocal": 0.29819388093368204,
+          "BigTMDMinusLocal": 0.00036472435441833347,
+          "Local": -0.0005196938933840621,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.701806119066318,
+          "ToleranceAtPoint": 1.5196938933840623e-10
+        }
+      },
+      "Plus1": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.010167153674047021,
+          "BigTMD": 6.68403467789534e-05,
+          "BigTMDDividedByLocal": 0.006531208308597272,
+          "BigTMDMinusLocal": -0.010167153674047021,
+          "Local": 0.010233994020825974,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.9934687916914028,
+          "ToleranceAtPoint": 1.1233994020825975e-09
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.005438504003858469,
+          "BigTMD": 3.575351619277853e-05,
+          "BigTMDDividedByLocal": 0.006531208307577723,
+          "BigTMDMinusLocal": -0.005438504003858469,
+          "Local": 0.0054742575200512475,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.9934687916924223,
+          "ToleranceAtPoint": 6.474257520051247e-10
+        }
+      }
+    },
+    "interior_3": {
+      "Delta": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.030440547989007083,
+          "BigTMD": -0.0001927141968123035,
+          "BigTMDDividedByLocal": -0.006371173490844555,
+          "BigTMDMinusLocal": -0.030440547989007083,
+          "Local": 0.03024783379219478,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.0063711734908445,
+          "ToleranceAtPoint": 3.124783379219478e-09
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.024843236296412857,
+          "BigTMD": -0.00015520483203070485,
+          "BigTMDDividedByLocal": -0.0062866426695308425,
+          "BigTMDMinusLocal": -0.024843236296412857,
+          "Local": 0.024688031464382153,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.0062866426695307,
+          "ToleranceAtPoint": 2.568803146438215e-09
+        }
+      },
+      "Ordinary": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.0003223948485576744,
+          "BigTMD": -3.564308972259978e-05,
+          "BigTMDDividedByLocal": -0.12429946329675319,
+          "BigTMDMinusLocal": -0.0003223948485576744,
+          "Local": 0.00028675175883507466,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.1242994632967531,
+          "ToleranceAtPoint": 1.2867517588350748e-10
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.0002948332744056619,
+          "BigTMD": -2.8484723297113044e-05,
+          "BigTMDDividedByLocal": -0.1069452909676398,
+          "BigTMDMinusLocal": -0.0002948332744056619,
+          "Local": 0.0002663485511085489,
+          "NumericallyClose": false,
+          "RelativeDifference": 1.1069452909676398,
+          "ToleranceAtPoint": 1.266348551108549e-10
+        }
+      },
+      "Plus0": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.0051701613267847845,
+          "BigTMD": -0.0004093482535367627,
+          "BigTMDDividedByLocal": 0.073366350150289,
+          "BigTMDMinusLocal": 0.0051701613267847845,
+          "Local": -0.005579509580321548,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.926633649849711,
+          "ToleranceAtPoint": 6.579509580321547e-10
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.004189530223981963,
+          "BigTMD": -0.0003317066473809143,
+          "BigTMDDividedByLocal": 0.07336635014235053,
+          "BigTMDMinusLocal": 0.004189530223981963,
+          "Local": -0.004521236871362877,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.9266336498576494,
+          "ToleranceAtPoint": 5.521236871362877e-10
+        }
+      },
+      "Plus1": {
+        "F1Hat": {
+          "AbsoluteDifference": 0.01299075650891214,
+          "BigTMD": 8.80413154229004e-05,
+          "BigTMDDividedByLocal": 0.006731606115899008,
+          "BigTMDMinusLocal": -0.01299075650891214,
+          "Local": 0.01307879782433504,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.993268393884101,
+          "ToleranceAtPoint": 1.407879782433504e-09
+        },
+        "F2Hat": {
+          "AbsoluteDifference": 0.01052678312844789,
+          "BigTMD": 7.134240664194516e-05,
+          "BigTMDDividedByLocal": 0.006731606113339024,
+          "BigTMDMinusLocal": -0.01052678312844789,
+          "Local": 0.010598125535089835,
+          "NumericallyClose": false,
+          "RelativeDifference": 0.9932683938866611,
+          "ToleranceAtPoint": 1.1598125535089836e-09
+        }
+      }
+    }
+  },
+  "LocalSource": {
+    "ByteCount": 75324899,
+    "FHatSHA256": {
+      "F1Hat": "24010c0ba80c1da601d39fcad6684a986024773cd84beafcbc09e956d6da4823",
+      "F2Hat": "54aa977540c56796b7c5b03aead322022788455caa110b9fe285373fec139b36"
+    },
+    "Path": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/s08_result.wl",
+    "ProgramPath": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqq_v2/s08_extract_hqq_fhats.wl",
+    "ProgramSHA256": "f426373c24143950cb8cdb09a6410e7ec76e0d4f960293f6380021cf54c211b7",
+    "SHA256": "0b69a0db7740127ab16c53d181317b7defbd17af846e55582213ca28d1d35741",
+    "Stage": "HqqV2S08-v1"
+  },
+  "Rows": [
+    {
+      "AbsoluteDifference": 0.010120067685040646,
+      "Benchmark": "interior_1",
+      "BigTMD": -4.515123185089386e-05,
+      "BigTMDDividedByLocal": -0.004481549009431124,
+      "BigTMDMinusLocal": -0.010120067685040646,
+      "Function": "F1Hat",
+      "Local": 0.010074916453189751,
+      "NumericallyClose": false,
+      "Observable": "Delta",
+      "RelativeDifference": 1.0044815490094312,
+      "ToleranceAtPoint": 1.1074916453189752e-09
+    },
+    {
+      "AbsoluteDifference": 0.008363420133013418,
+      "Benchmark": "interior_1",
+      "BigTMD": -3.53324453137829e-05,
+      "BigTMDDividedByLocal": -0.0042425640361553815,
+      "BigTMDMinusLocal": -0.008363420133013418,
+      "Function": "F2Hat",
+      "Local": 0.008328087687699635,
+      "NumericallyClose": false,
+      "Observable": "Delta",
+      "RelativeDifference": 1.0042425640361554,
+      "ToleranceAtPoint": 9.328087687699635e-10
+    },
+    {
+      "AbsoluteDifference": 0.0017859521397037574,
+      "Benchmark": "interior_1",
+      "BigTMD": -0.000296328442757553,
+      "BigTMDDividedByLocal": -0.19892838934090512,
+      "BigTMDMinusLocal": -0.0017859521397037574,
+      "Function": "F1Hat",
+      "Local": 0.0014896236969462043,
+      "NumericallyClose": false,
+      "Observable": "Plus0",
+      "RelativeDifference": 1.198928389340905,
+      "ToleranceAtPoint": 2.489623696946204e-10
+    },
+    {
+      "AbsoluteDifference": 0.0014479985279451078,
+      "Benchmark": "interior_1",
+      "BigTMD": -0.00024025456192599713,
+      "BigTMDDividedByLocal": -0.19892838936542903,
+      "BigTMDMinusLocal": -0.0014479985279451078,
+      "Function": "F2Hat",
+      "Local": 0.0012077439660191107,
+      "NumericallyClose": false,
+      "Observable": "Plus0",
+      "RelativeDifference": 1.198928389365429,
+      "ToleranceAtPoint": 2.2077439660191109e-10
+    },
+    {
+      "AbsoluteDifference": 0.005029293788119282,
+      "Benchmark": "interior_1",
+      "BigTMD": 7.465722599899567e-05,
+      "BigTMDDividedByLocal": 0.014627339837800717,
+      "BigTMDMinusLocal": -0.005029293788119282,
+      "Function": "F1Hat",
+      "Local": 0.005103951014118278,
+      "NumericallyClose": false,
+      "Observable": "Plus1",
+      "RelativeDifference": 0.9853726601621992,
+      "ToleranceAtPoint": 6.103951014118278e-10
+    },
+    {
+      "AbsoluteDifference": 0.004077606470966285,
+      "Benchmark": "interior_1",
+      "BigTMD": 6.0529927370754126e-05,
+      "BigTMDDividedByLocal": 0.014627339832268172,
+      "BigTMDMinusLocal": -0.004077606470966285,
+      "Function": "F2Hat",
+      "Local": 0.004138136398337039,
+      "NumericallyClose": false,
+      "Observable": "Plus1",
+      "RelativeDifference": 0.9853726601677318,
+      "ToleranceAtPoint": 5.138136398337039e-10
+    },
+    {
+      "AbsoluteDifference": 0.00026784012785799783,
+      "Benchmark": "interior_1",
+      "BigTMD": -2.0409488866465695e-05,
+      "BigTMDDividedByLocal": 0.0708049124171951,
+      "BigTMDMinusLocal": 0.00026784012785799783,
+      "Function": "F1Hat",
+      "Local": -0.0002882496167244635,
+      "NumericallyClose": false,
+      "Observable": "Ordinary",
+      "RelativeDifference": 0.9291950875828049,
+      "ToleranceAtPoint": 1.2882496167244636e-10
+    },
+    {
+      "AbsoluteDifference": 0.00020375632583183293,
+      "Benchmark": "interior_1",
+      "BigTMD": -1.7627947894949736e-05,
+      "BigTMDDividedByLocal": 0.07962601678159373,
+      "BigTMDMinusLocal": 0.00020375632583183293,
+      "Function": "F2Hat",
+      "Local": -0.00022138427372678267,
+      "NumericallyClose": false,
+      "Observable": "Ordinary",
+      "RelativeDifference": 0.9203739832184062,
+      "ToleranceAtPoint": 1.2213842737267827e-10
+    },
+    {
+      "AbsoluteDifference": 0.03142683706693963,
+      "Benchmark": "interior_2",
+      "BigTMD": -8.508849870743368e-05,
+      "BigTMDDividedByLocal": -0.0027148612503923556,
+      "BigTMDMinusLocal": -0.03142683706693963,
+      "Function": "F1Hat",
+      "Local": 0.03134174856823219,
+      "NumericallyClose": false,
+      "Observable": "Delta",
+      "RelativeDifference": 1.0027148612503924,
+      "ToleranceAtPoint": 3.2341748568232194e-09
+    },
+    {
+      "AbsoluteDifference": 0.016954591177354237,
+      "Benchmark": "interior_2",
+      "BigTMD": -4.485950003667297e-05,
+      "BigTMDDividedByLocal": -0.002652880654330356,
+      "BigTMDMinusLocal": -0.016954591177354237,
+      "Function": "F2Hat",
+      "Local": 0.016909731677317564,
+      "NumericallyClose": false,
+      "Observable": "Delta",
+      "RelativeDifference": 1.0026528806543304,
+      "ToleranceAtPoint": 1.7909731677317563e-09
+    },
+    {
+      "AbsoluteDifference": 0.000681843491804286,
+      "Benchmark": "interior_2",
+      "BigTMD": -0.0002897118612406461,
+      "BigTMDDividedByLocal": 0.2981938809072133,
+      "BigTMDMinusLocal": 0.000681843491804286,
+      "Function": "F1Hat",
+      "Local": -0.0009715553530449321,
+      "NumericallyClose": false,
+      "Observable": "Plus0",
+      "RelativeDifference": 0.7018061190927867,
+      "ToleranceAtPoint": 1.971555353044932e-10
+    },
+    {
+      "AbsoluteDifference": 0.00036472435441833347,
+      "Benchmark": "interior_2",
+      "BigTMD": -0.00015496953896572868,
+      "BigTMDDividedByLocal": 0.29819388093368204,
+      "BigTMDMinusLocal": 0.00036472435441833347,
+      "Function": "F2Hat",
+      "Local": -0.0005196938933840621,
+      "NumericallyClose": false,
+      "Observable": "Plus0",
+      "RelativeDifference": 0.701806119066318,
+      "ToleranceAtPoint": 1.5196938933840623e-10
+    },
+    {
+      "AbsoluteDifference": 0.010167153674047021,
+      "Benchmark": "interior_2",
+      "BigTMD": 6.68403467789534e-05,
+      "BigTMDDividedByLocal": 0.006531208308597272,
+      "BigTMDMinusLocal": -0.010167153674047021,
+      "Function": "F1Hat",
+      "Local": 0.010233994020825974,
+      "NumericallyClose": false,
+      "Observable": "Plus1",
+      "RelativeDifference": 0.9934687916914028,
+      "ToleranceAtPoint": 1.1233994020825975e-09
+    },
+    {
+      "AbsoluteDifference": 0.005438504003858469,
+      "Benchmark": "interior_2",
+      "BigTMD": 3.575351619277853e-05,
+      "BigTMDDividedByLocal": 0.006531208307577723,
+      "BigTMDMinusLocal": -0.005438504003858469,
+      "Function": "F2Hat",
+      "Local": 0.0054742575200512475,
+      "NumericallyClose": false,
+      "Observable": "Plus1",
+      "RelativeDifference": 0.9934687916924223,
+      "ToleranceAtPoint": 6.474257520051247e-10
+    },
+    {
+      "AbsoluteDifference": 1.537015097641751e-05,
+      "Benchmark": "interior_2",
+      "BigTMD": -9.43988049881238e-06,
+      "BigTMDDividedByLocal": -1.5918128076047837,
+      "BigTMDMinusLocal": -1.537015097641751e-05,
+      "Function": "F1Hat",
+      "Local": 5.930270477605127e-06,
+      "NumericallyClose": false,
+      "Observable": "Ordinary",
+      "RelativeDifference": 1.6282145709737754,
+      "ToleranceAtPoint": 1.0094398804988124e-10
+    },
+    {
+      "AbsoluteDifference": 4.9325110901165184e-05,
+      "Benchmark": "interior_2",
+      "BigTMD": -5.433470134712589e-06,
+      "BigTMDDividedByLocal": -0.12379282341309776,
+      "BigTMDMinusLocal": -4.9325110901165184e-05,
+      "Function": "F2Hat",
+      "Local": 4.38916407664526e-05,
+      "NumericallyClose": false,
+      "Observable": "Ordinary",
+      "RelativeDifference": 1.1237928234130976,
+      "ToleranceAtPoint": 1.0438916407664526e-10
+    },
+    {
+      "AbsoluteDifference": 0.030440547989007083,
+      "Benchmark": "interior_3",
+      "BigTMD": -0.0001927141968123035,
+      "BigTMDDividedByLocal": -0.006371173490844555,
+      "BigTMDMinusLocal": -0.030440547989007083,
+      "Function": "F1Hat",
+      "Local": 0.03024783379219478,
+      "NumericallyClose": false,
+      "Observable": "Delta",
+      "RelativeDifference": 1.0063711734908445,
+      "ToleranceAtPoint": 3.124783379219478e-09
+    },
+    {
+      "AbsoluteDifference": 0.024843236296412857,
+      "Benchmark": "interior_3",
+      "BigTMD": -0.00015520483203070485,
+      "BigTMDDividedByLocal": -0.0062866426695308425,
+      "BigTMDMinusLocal": -0.024843236296412857,
+      "Function": "F2Hat",
+      "Local": 0.024688031464382153,
+      "NumericallyClose": false,
+      "Observable": "Delta",
+      "RelativeDifference": 1.0062866426695307,
+      "ToleranceAtPoint": 2.568803146438215e-09
+    },
+    {
+      "AbsoluteDifference": 0.0051701613267847845,
+      "Benchmark": "interior_3",
+      "BigTMD": -0.0004093482535367627,
+      "BigTMDDividedByLocal": 0.073366350150289,
+      "BigTMDMinusLocal": 0.0051701613267847845,
+      "Function": "F1Hat",
+      "Local": -0.005579509580321548,
+      "NumericallyClose": false,
+      "Observable": "Plus0",
+      "RelativeDifference": 0.926633649849711,
+      "ToleranceAtPoint": 6.579509580321547e-10
+    },
+    {
+      "AbsoluteDifference": 0.004189530223981963,
+      "Benchmark": "interior_3",
+      "BigTMD": -0.0003317066473809143,
+      "BigTMDDividedByLocal": 0.07336635014235053,
+      "BigTMDMinusLocal": 0.004189530223981963,
+      "Function": "F2Hat",
+      "Local": -0.004521236871362877,
+      "NumericallyClose": false,
+      "Observable": "Plus0",
+      "RelativeDifference": 0.9266336498576494,
+      "ToleranceAtPoint": 5.521236871362877e-10
+    },
+    {
+      "AbsoluteDifference": 0.01299075650891214,
+      "Benchmark": "interior_3",
+      "BigTMD": 8.80413154229004e-05,
+      "BigTMDDividedByLocal": 0.006731606115899008,
+      "BigTMDMinusLocal": -0.01299075650891214,
+      "Function": "F1Hat",
+      "Local": 0.01307879782433504,
+      "NumericallyClose": false,
+      "Observable": "Plus1",
+      "RelativeDifference": 0.993268393884101,
+      "ToleranceAtPoint": 1.407879782433504e-09
+    },
+    {
+      "AbsoluteDifference": 0.01052678312844789,
+      "Benchmark": "interior_3",
+      "BigTMD": 7.134240664194516e-05,
+      "BigTMDDividedByLocal": 0.006731606113339024,
+      "BigTMDMinusLocal": -0.01052678312844789,
+      "Function": "F2Hat",
+      "Local": 0.010598125535089835,
+      "NumericallyClose": false,
+      "Observable": "Plus1",
+      "RelativeDifference": 0.9932683938866611,
+      "ToleranceAtPoint": 1.1598125535089836e-09
+    },
+    {
+      "AbsoluteDifference": 0.0003223948485576744,
+      "Benchmark": "interior_3",
+      "BigTMD": -3.564308972259978e-05,
+      "BigTMDDividedByLocal": -0.12429946329675319,
+      "BigTMDMinusLocal": -0.0003223948485576744,
+      "Function": "F1Hat",
+      "Local": 0.00028675175883507466,
+      "NumericallyClose": false,
+      "Observable": "Ordinary",
+      "RelativeDifference": 1.1242994632967531,
+      "ToleranceAtPoint": 1.2867517588350748e-10
+    },
+    {
+      "AbsoluteDifference": 0.0002948332744056619,
+      "Benchmark": "interior_3",
+      "BigTMD": -2.8484723297113044e-05,
+      "BigTMDDividedByLocal": -0.1069452909676398,
+      "BigTMDMinusLocal": -0.0002948332744056619,
+      "Function": "F2Hat",
+      "Local": 0.0002663485511085489,
+      "NumericallyClose": false,
+      "Observable": "Ordinary",
+      "RelativeDifference": 1.1069452909676398,
+      "ToleranceAtPoint": 1.266348551108549e-10
+    }
+  ],
+  "StageVersion": "HqqV2BigTMDCheckS02-v1",
+  "Status": "CompleteHqqV2BigTMDMinusLocalComparison",
+  "StructuralChecks": {
+    "AllABCModulesEvaluated": true,
+    "Channel2Selected": true,
+    "DeltaAndBothPlusOrdersCompared": true,
+    "DriverCaseWeightsUsed": true,
+    "DriverEndpointRegulatorUsed": true,
+    "LocalExactUntilFinalEvaluation": true,
+    "MatchedJacobianAppliedOnlyToReference": true,
+    "OrdinaryIncludesDriverPlusRemainders": true
+  },
+  "Summary": {
+    "AbsoluteTolerance": 1e-10,
+    "AllTestedCoefficientsWithinTolerance": false,
+    "ComparisonCount": 24,
+    "MaximumAbsoluteDifference": 0.03142683706693963,
+    "MaximumRelativeDifference": 1.6282145709737754,
+    "RelativeTolerance": 1e-07,
+    "ToleranceRule": "abs(diff) <= 1e-10 + 1e-7*max(abs(BigTMD),abs(local))"
+  }
+}
