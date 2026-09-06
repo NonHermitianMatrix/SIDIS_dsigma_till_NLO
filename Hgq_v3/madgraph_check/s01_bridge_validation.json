@@ -1,0 +1,24 @@
+{
+ "Status": "CompleteHgqV3CopiedBridgeValidation",
+ "AlphaS": 0.118,
+ "PinnedMatrixElement": 6.297541985951792e-11,
+ "BridgeMatrixElement": 6.297541985951792e-11,
+ "RelativeDifference": 0.0,
+ "PhotonQ2": -105662.43270259356,
+ "MaximumConservationResidual": 0.0,
+ "MaximumExternalMassSquared": 7.275957614183426e-12,
+ "UpstreamSource": "scripts/Hgq/madgraph_check (S05 accepted, S18 agreed 8.2e-16)",
+ "SHA256": {
+  "ident_card.dat": "1ffb5f4b85f443835290727c4e62f0db467d05a4eda5c2b6b40ac4c821b851ce",
+  "param_card.dat": "55bb009a781370ab3fdfb523be00d0c8f68ffec442d12eb41b8d2da50307cf64",
+  "s03_libhgq_madgraph_bridge.so": "62a5914cf613da70fbb9bfa23f431a0bd0dac45c98c159235883d04232a9b980",
+  "s03_madgraph_c_bridge.f90": "3091bb8fa519185d95975dda5c61eb3dbc87cacf159547d067933f66079dda2b",
+  "s05_bridge_validation.json": "0fe684fce5b4530846960fda84ef7cd306600f20b299bea1d741514d0e3d8884"
+ },
+ "Checks": {
+  "FourMomentumConserved": true,
+  "AllExternalStatesMassless": true,
+  "SpacelikePhoton": true,
+  "ReproducesPinnedMatrixElement": true
+ }
+}

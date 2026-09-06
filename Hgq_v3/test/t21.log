@@ -1,0 +1,12 @@
+"[t21] dPi3 = "InputForm[(2^(-4 + 4*eps)*Pi^(-2 + (1 - 2*eps)/2 + 2*eps))/((Q2 + s + t + u)^eps*Gamma[(1 - 2*eps)/2])]
+"[t21] exact pf (unexpanded) = "InputForm[(16^(-2 + eps)*Pi^(-11/2 + eps))/Gamma[1/2 - eps]]
+"[t21] pf to O(eps^1) [what s07a uses] = "InputForm[(1 + eps*(Log[16*Pi] + PolyGamma[0, 1/2]))/(256*Pi^6)]
+"[t21] pf eps^2 coefficient [DROPPED]  = "InputForm[-1/1024*(Pi^2 - 2*(Log[16] + Log[Pi] + PolyGamma[0, 1/2])^2)/Pi^6]
+"[t21] --- log comparison, order by order in eps ---"
+"[t21]  eps^"0" : Log[pf*256Pi^6] = "InputForm[0]"    Log[Sfac] = "InputForm[0]
+"[t21]  eps^"1" : Log[pf*256Pi^6] = "InputForm[Log[16] + Log[Pi] + PolyGamma[0, 1/2]]"    Log[Sfac] = "InputForm[-EulerGamma + Log[4*Pi]]
+"[t21]  eps^"2" : Log[pf*256Pi^6] = "InputForm[-1/4*Pi^2 + 8*Log[2]^2 - Log[16]^2/2]"    Log[Sfac] = "InputForm[0]
+"[t21]  eps^"3" : Log[pf*256Pi^6] = "InputForm[(32*Log[2]^3)/3 - 8*Log[2]^2*Log[16] + Log[16]^3/3 - Log[16]*Log[Pi]^2 + Log[64]*Log[Pi]^2 - Log[4]*Log[Pi]*Log[256*Pi] - Log[256]*Log[Pi]*PolyGamma[0, 1/2] + Log[1024]*Log[Pi]*PolyGamma[0, 1/2] - Log[4]*Log[256*Pi]*PolyGamma[0, 1/2] + Log[16]^2*(Log[Pi] + PolyGamma[0, 1/2]) + PolyGamma[2, 1/2]/6]"    Log[Sfac] = "InputForm[0]
+"[t21] ratio pf*256Pi^6 / Sfac  (series) = "InputForm[1 + eps*(EulerGamma + Log[4] + PolyGamma[0, 1/2]) + (eps^2*(2*EulerGamma^2 - Pi^2 + 8*Log[2]^2 + 4*EulerGamma*Log[4] + 4*(EulerGamma + Log[4])*PolyGamma[0, 1/2] + 2*PolyGamma[0, 1/2]^2))/4]
+"[t21] ratio pf*256Pi^6 / Sfac^2 (series) = "InputForm[1 + (eps^2*(8*EulerGamma^2 - Pi^2 - 8*EulerGamma*(Log[Pi] - PolyGamma[0, 1/2]) + 2*(Log[Pi] - PolyGamma[0, 1/2])^2))/4 + eps*(2*EulerGamma - Log[Pi] + PolyGamma[0, 1/2])]
+"[t21] done"

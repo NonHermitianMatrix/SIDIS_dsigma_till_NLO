@@ -1,0 +1,41 @@
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+"[s04] frame on-shell/invariant checks (all 0): "{{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}
+"[s04] frame ADMV-relation checks (all 0): "{{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}
+"[s04] dPi3 derivation vs paper Eq.(2to3ps) (must be 1): "1
+"[s04] self-test point "{Q2 -> 1, s -> 4, t -> -2, u -> -1}"  s23="2"  D="1.15470053837925168416234100732253864408`10."  cos(p,q)="-0.86602540378443864676372317075293618347`10."  cos(k1,q)="0"  cos(p,k1)="0.5`10.
+"[s04] group A (regular integrands, decisive):"
+"  ""1""  terms="1"  resid("0.02")="ScientificForm[-0.010471981542118591, 3]"  resid("0.01")="ScientificForm[-0.002564573868380826, 3]"  ratio="4.083322251400074" (expect ~4)"
+"  ""1/t2""  terms="1"  resid("0.02")="ScientificForm[0.010060898254718786 + 2.577563924765823*^-16*I, 3]"  resid("0.01")="ScientificForm[0.0024625691811372974 + 1.2887819623829115*^-16*I, 3]"  ratio="4.085529183010536 - 1.0914586333959702*^-13*I" (expect ~4)"
+"  ""1/t2^2""  terms="1"  resid("0.02")="ScientificForm[-0.018855486652385345, 3]"  resid("0.01")="ScientificForm[-0.004611157979774738, 3]"  ratio="4.089100120856511" (expect ~4)"
+"  ""1/(t2 t3)""  terms="2"  resid("0.02")="ScientificForm[-0.0050304488502836975 - 1.2887819623829115*^-16*I, 3]"  resid("0.01")="ScientificForm[-0.0012312847115918402 - 6.443909811914557*^-17*I, 3]"  ratio="4.085528556413398 - 1.0914581981876493*^-13*I" (expect ~4)"
+"  ""s13/t2""  terms="3"  resid("0.02")="ScientificForm[0.010060899765076847 + 2.9763144516340327*^-16*I, 3]"  resid("0.01")="ScientificForm[0.0024625693625921485 + 1.4881572258170164*^-16*I, 3]"  ratio="4.085529495293708 - 1.2603079674510937*^-13*I" (expect ~4)"
+"  ""u2 u3/t2^2""  terms="2"  resid("0.02")="ScientificForm[-0.02655500251153775 + 2.6456128458969177*^-16*I, 3]"  resid("0.01")="ScientificForm[-0.006498841572923908 + 1.3228064229484588*^-16*I, 3]"  ratio="4.0861132270362965 + 4.246178253087967*^-14*I" (expect ~4)"
+"  ""t3/t2^2""  terms="2"  resid("0.02")="ScientificForm[0.06536104185965286 - 2.577563924765823*^-16*I, 3]"  resid("0.01")="ScientificForm[0.015982055986626165 - 1.2887819623829115*^-16*I, 3]"  ratio="4.089651663987862 + 1.6850806770196465*^-14*I" (expect ~4)"
+"[s04] group B (light-like denominators, eps<0):"
+
+NIntegrate::slwcon: Numerical integration converging too slowly; suspect one of the following: singularity, value of the integration is 0, highly oscillatory integrand or WorkingPrecision too small.
+
+                                                                                  1.2        0.2
+                                  -0.5 (-3. + 2. (0.5 - 0.866025 Cos[b1])) Sin[b1]    Sin[b2]                                                                                                                                               -10            -9
+NIntegrate::inumri: The integrand -------------------------------------------------------------- has evaluated to Overflow, Indeterminate or Infinity for all sampling points in the region with boundaries {{2.61799, 2.61799}, {1.77259 10   , 7.99952 10  }}.
+                                           1. + 0.866025 Cos[b1] - 0.5 Cos[b2] Sin[b1]
+
+NIntegrate::slwcon: Numerical integration converging too slowly; suspect one of the following: singularity, value of the integration is 0, highly oscillatory integrand or WorkingPrecision too small.
+
+                                                                                  1.2        0.2
+                                  -0.5 (-3. + 2. (0.5 - 0.866025 Cos[b1])) Sin[b1]    Sin[b2]                                                                                                                                               -10            -9
+NIntegrate::inumri: The integrand -------------------------------------------------------------- has evaluated to Overflow, Indeterminate or Infinity for all sampling points in the region with boundaries {{2.61799, 2.61799}, {1.77259 10   , 7.99952 10  }}.
+                                           1. + 0.866025 Cos[b1] - 0.5 Cos[b2] Sin[b1]
+
+NIntegrate::slwcon: Numerical integration converging too slowly; suspect one of the following: singularity, value of the integration is 0, highly oscillatory integrand or WorkingPrecision too small.
+
+General::stop: Further output of NIntegrate::slwcon will be suppressed during this calculation.
+
+                                                                                  1.2        0.2
+                                  -0.5 (-3. + 2. (0.5 - 0.866025 Cos[b1])) Sin[b1]    Sin[b2]                                                                                                                                               -10            -9
+NIntegrate::inumri: The integrand -------------------------------------------------------------- has evaluated to Overflow, Indeterminate or Infinity for all sampling points in the region with boundaries {{2.61799, 2.61799}, {1.77259 10   , 7.99952 10  }}.
+                                           1. + 0.866025 Cos[b1] - 0.5 Cos[b2] Sin[b1]
+
+General::stop: Further output of NIntegrate::inumri will be suppressed during this calculation.
+"  ""t3/u2""  terms="2"  resid("-0.1")="ScientificForm[11.623892818282235 - 1.*NIntegrate[(-0.5*(-3. + 2.*(0.5 - 0.8660254037844386*Cos[b1]))*Sin[b1]^1.2*Sin[b2]^0.2)/(1. + 0.8660254037844386*Cos[b1] - 0.5*Cos[b2]*Sin[b1]), {b1, 0., 3.141592653589793}, {b2, 0., 3.141592653589793}, AccuracyGoal -> 10., PrecisionGoal -> 7., MaxRecursion -> 60., Method -> {"GlobalAdaptive", "SymbolicProcessing" -> 0., "SingularityDepth" -> 10.}], 3]"  resid("-0.05")="ScientificForm[19.949113350295185 - 1.*NIntegrate[(-0.5*(-3. + 2.*(0.5 - 0.8660254037844386*Cos[b1]))*Sin[b1]^1.1*Sin[b2]^0.1)/(1. + 0.8660254037844386*Cos[b1] - 0.5*Cos[b2]*Sin[b1]), {b1, 0., 3.141592653589793}, {b2, 0., 3.141592653589793}, AccuracyGoal -> 10., PrecisionGoal -> 7., MaxRecursion -> 60., Method -> {"GlobalAdaptive", "SymbolicProcessing" -> 0., "SingularityDepth" -> 10.}], 3]"  ratio="If[Abs[19.949113350295185 - 1.*NIntegrate[(-0.5*(-3. + 2.*(0.5 - 0.8660254037844386*Cos[b1]))*Sin[b1]^1.1*Sin[b2]^0.1)/(1. + 0.8660254037844386*Cos[b1] - 0.5*Cos[b2]*Sin[b1]), {b1, 0., 3.141592653589793}, {b2, 0., 3.141592653589793}, AccuracyGoal -> 10., PrecisionGoal -> 7., MaxRecursion -> 60., Method -> {"GlobalAdaptive", "SymbolicProcessing" -> 0., "SingularityDepth" -> 10.}]] > 1/10000000000000, N[r1$1724151/r2$1724151, 4], "-"]" (expect ~4)"

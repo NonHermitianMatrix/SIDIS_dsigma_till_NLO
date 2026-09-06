@@ -1,0 +1,63 @@
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+"[s04] ADMV definitions vs s02 (must be {0,0,0,0}): "{0, 0, 0, 0}
+"[s04] frame on-shell/invariant checks (all 0): "{{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}
+"[s04] frame ADMV-relation checks (all 0): "{{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}
+"[s04] dPi3 derivation vs paper Eq.(2to3ps) (must be 1): "1
+"[s04] ""Mg"": "30" numerator monomials"
+"[s04] ""Mg"": "630" reduced terms  ("6" s)"
+"[s04] ""Mg"": "195" distinct angular integrals  ("127" s)"
+"[s04] ""Mg"": "10" (X,Y,frame) groups"
+
+Series::ztest: Unable to decide whether numeric quantities {PolyGamma[2, 1] - 9 PolyGamma[2, 2] + 8 PolyGamma[2, 3], 2 PolyGamma[2, 1] - 18 PolyGamma[2, 2] + 16 PolyGamma[2, 3]} are equal to zero. Assuming they are.
+"[s04] ""Mg"": pair "1"/"10" "{"t2", "u3", "Y"}"  ("30" integrals)  mem="297" MB"
+
+                           3           2
+PolynomialQuotient::poly: x  Sqrt[1 - x ] is not a polynomial.
+
+                            3           2
+PolynomialRemainder::poly: x  Sqrt[1 - x ] is not a polynomial.
+
+                                                     3                                     2
+PolynomialQuotient::poly: Integrate`ImproperDump`newx  Sqrt[1 - Integrate`ImproperDump`newx ] is not a polynomial.
+
+                                                      3                                     2
+PolynomialRemainder::poly: Integrate`ImproperDump`newx  Sqrt[1 - Integrate`ImproperDump`newx ] is not a polynomial.
+
+                           2           2
+PolynomialQuotient::poly: x  Sqrt[1 - x ] is not a polynomial.
+
+General::stop: Further output of PolynomialQuotient::poly will be suppressed during this calculation.
+
+                            2           2
+PolynomialRemainder::poly: x  Sqrt[1 - x ] is not a polynomial.
+
+General::stop: Further output of PolynomialRemainder::poly will be suppressed during this calculation.
+"[s04] ""Mg"": pair "2"/"10" "{"t2", "u3", "X"}"  ("15" integrals)  mem="366" MB"
+"[s04] ""Mg"": pair "3"/"10" "{"s13", "u3", "Y"}"  ("30" integrals)  mem="305" MB"
+"[s04] ""Mg"": pair "4"/"10" "{"s13", "u3", "X"}"  ("9" integrals)  mem="323" MB"
+"[s04] ""Mg"": pair "5"/"10" "{"t2", "s13", "Y"}"  ("28" integrals)  mem="328" MB"
+"[s04] ""Mg"": pair "6"/"10" "{"t2", "u2", "Y"}"  ("25" integrals)  mem="306" MB"
+"[s04] ""Mg"": pair "7"/"10" "{"t2", "s13", "X"}"  ("13" integrals)  mem="307" MB"
+"[s04] ""Mg"": pair "8"/"10" "{"t2", "u2", "X"}"  ("12" integrals)  mem="308" MB"
+"[s04] ""Mg"": pair "9"/"10" "{"s13", "u2", "Y"}"  ("25" integrals)  mem="308" MB"
+"[s04] ""Mg"": pair "10"/"10" "{"s13", "u2", "X"}"  ("8" integrals)  mem="324" MB"
+"[s04] ""Mg"": angular integration done ("305" s)"
+"[s04] memory after Mg: "265" MB"
+"[s04] ""Mpp"": "28" numerator monomials"
+"[s04] ""Mpp"": "588" reduced terms  ("5" s)"
+"[s04] ""Mpp"": "189" distinct angular integrals  ("130" s)"
+"[s04] ""Mpp"": "10" (X,Y,frame) groups"
+"[s04] ""Mpp"": pair "1"/"10" "{"t2", "u3", "Y"}"  ("26" integrals)  mem="309" MB"
+"[s04] ""Mpp"": pair "2"/"10" "{"t2", "u3", "X"}"  ("18" integrals)  mem="346" MB"
+"[s04] ""Mpp"": pair "3"/"10" "{"s13", "u3", "Y"}"  ("26" integrals)  mem="311" MB"
+"[s04] ""Mpp"": pair "4"/"10" "{"s13", "u3", "X"}"  ("9" integrals)  mem="311" MB"
+"[s04] ""Mpp"": pair "5"/"10" "{"t2", "s13", "Y"}"  ("28" integrals)  mem="311" MB"
+"[s04] ""Mpp"": pair "6"/"10" "{"t2", "u2", "Y"}"  ("22" integrals)  mem="311" MB"
+"[s04] ""Mpp"": pair "7"/"10" "{"t2", "s13", "X"}"  ("16" integrals)  mem="313" MB"
+"[s04] ""Mpp"": pair "8"/"10" "{"t2", "u2", "X"}"  ("14" integrals)  mem="315" MB"
+"[s04] ""Mpp"": pair "9"/"10" "{"s13", "u2", "Y"}"  ("22" integrals)  mem="315" MB"
+"[s04] ""Mpp"": pair "10"/"10" "{"s13", "u2", "X"}"  ("8" integrals)  mem="315" MB"
+"[s04] ""Mpp"": angular integration done ("175" s)"
+"[s04] memory after Mpp: "280" MB"
+"[s04] done"

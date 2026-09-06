@@ -1,0 +1,10 @@
+"[s07] scheme: ""MSbar"
+"[s07] --- loading real-part partials from s07a ---"
+"[s07] stage A: reusing ""s08ck_real.m"
+"[s07] --- UV gate: 2 UV(loop) must equal (as/4Pi) 2 (CA+CF) |M_LO|^2 ---"
+"  Gamma=""g"" : residual = "(-4*as^2*eq^2*(-2 + 3*Nc^2)*(Q2^2 + s^2 + 2*Q2*u + 2*s*u + 2*u^2))/(Nc*u*(Q2 + s + u))
+"  Gamma=""pp"" : residual = "(-4*as^2*eq^2*(-2 + 3*Nc^2)*s)/Nc
+"[s07] stage B: reusing ""s08ck_virt.m"
+"[s07] --- subtractions ---"
+"[s07] stage C: reusing ""s08ck_sub.m"
+"[s07] --- pole cancellation gate (max |value| over 3 random points) ---"

@@ -1,0 +1,11 @@
+
+SetDelayed::wrsym: Symbol Discard is Protected.
+"[t29] FeynCalc+FeynHelpers loaded: "True
+"[t29] prefactor ""1/(2Pi)^D""  -> "InputForm[((-1/16*I)*(-1 + Epsilon*(-2 + EulerGamma) - Epsilon*Log[(-4*Pi*ScaleMu^2)/psq]))/(Epsilon*Pi^2)]
+"[t29]    atoms: Log[4Pi]="0" Log[2Pi]="0" Log[Pi]="0" EulerGamma="1
+"[t29] prefactor ""1/(2Pi)^4""  -> "InputForm[((-1/16*I)*(-1 + Epsilon*(-2 + EulerGamma + Log[Pi]) - Epsilon*Log[-(ScaleMu^2/psq)]))/(Epsilon*Pi^2)]
+"[t29]    atoms: Log[4Pi]="0" Log[2Pi]="0" Log[Pi]="1" EulerGamma="1
+"[t29] prefactor ""1""  -> "InputForm[(-I*Pi^2*(-1 + Epsilon*(-2 + EulerGamma + Log[Pi]) - Epsilon*Log[-(ScaleMu^2/psq)]))/Epsilon]
+"[t29]    atoms: Log[4Pi]="0" Log[2Pi]="0" Log[Pi]="1" EulerGamma="1
+"[t29] exact closed form, eps^-1 and eps^0: "InputForm[((-1/16*I)*(-1 + eps*EulerGamma + eps*Log[-1/4*psq/Pi]))/(eps*Pi^2)]
+"[t29] done"

@@ -1,0 +1,27 @@
+
+NIntegrate::slwcon: Numerical integration converging too slowly; suspect one of the following: singularity, value of the integration is 0, highly oscillatory integrand or WorkingPrecision too small.
+
+NIntegrate::zeroregion: Integration region {{3.14159, 3.14159265358979285582327481041533126212951325791901447999235428427}, {1.37445, 1.5708}} cannot be further subdivided at the specified working precision. NIntegrate assumes zero integral there and on any further indivisible regions.
+
+NIntegrate::inumri: The integrand fnum[x, y] has evaluated to Overflow, Indeterminate or Infinity for all sampling points in the region with boundaries {{3.14159264129882469831335760680202909191777171926673872803803533316, 3.14159263986622699481118957525757298026095054588324728683801367879}, {1.32536, 1.3499}}.
+
+NIntegrate::slwcon: Numerical integration converging too slowly; suspect one of the following: singularity, value of the integration is 0, highly oscillatory integrand or WorkingPrecision too small.
+
+NIntegrate::zeroregion: Integration region {{3.14159, 3.14159265358979285582327481041533126212951325791901447999235428427}, {1.37445, 1.5708}} cannot be further subdivided at the specified working precision. NIntegrate assumes zero integral there and on any further indivisible regions.
+
+NIntegrate::inumri: The integrand fnum[x, y] has evaluated to Overflow, Indeterminate or Infinity for all sampling points in the region with boundaries {{3.14159264129882469831335760680202909191777171926673872803803533316, 3.14159263986622699481118957525757298026095054588324728683801367879}, {1.32536, 1.3499}}.
+"=== ""Wg3"" ==="
+"  s04 bulk         = "-4007.73146444655581422540716437403450014599`16.15051499783199 + 0``12.547616383629515*I
+
+NIntegrate::slwcon: Numerical integration converging too slowly; suspect one of the following: singularity, value of the integration is 0, highly oscillatory integrand or WorkingPrecision too small.
+
+General::stop: Further output of NIntegrate::slwcon will be suppressed during this calculation.
+
+NIntegrate::zeroregion: Integration region {{3.14159, 3.14159265358979285582327481041533126212951325791901447999235428427}, {1.37445, 1.5708}} cannot be further subdivided at the specified working precision. NIntegrate assumes zero integral there and on any further indivisible regions.
+
+General::stop: Further output of NIntegrate::zeroregion will be suppressed during this calculation.
+
+NIntegrate::inumri: The integrand fnum[x, y] has evaluated to Overflow, Indeterminate or Infinity for all sampling points in the region with boundaries {{3.14159264129882469831335760680202909191777171926673872803803533316, 3.14159263986622699481118957525757298026095054588324728683801367879}, {1.32536, 1.3499}}.
+
+General::stop: Further output of NIntegrate::inumri will be suppressed during this calculation.
+"  direct integral  = "NIntegrate[fnum[x, y], {x, 0, Pi}, {y, 0, Pi}, MinRecursion -> 4, MaxRecursion -> 30, PrecisionGoal -> 5, AccuracyGoal -> 8]
