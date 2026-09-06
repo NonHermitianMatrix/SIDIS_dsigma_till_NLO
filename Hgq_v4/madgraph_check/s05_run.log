@@ -1,0 +1,23 @@
+MONITOR_START job=14688012 host=n7404 kernel_pid=67369
+{
+  "PhysicalPoints": 16,
+  "ProjectionComparisons": 32,
+  "AllProjectorsWithinTolerance": false,
+  "AllAzimuthAveragesWithinTolerance": false,
+  "MaximumProjectorRelativeDifference": 1.9999999999999951,
+  "MaximumAzimuthAverageRelativeDifference": 1.9999999999999982,
+  "ByProcess": {
+    "born": {
+      "Count": 16,
+      "AllWithinTolerance": true,
+      "MaximumRelativeDifference": 6.291654908100499e-13
+    },
+    "real": {
+      "Count": 16,
+      "AllWithinTolerance": false,
+      "MaximumRelativeDifference": 1.9999999999999951
+    }
+  }
+}
+HGQ_MADGRAPH_S05_SUCCESS
+MONITOR_WAKE {"stage": "s05", "source": "s05_compare.py", "source_sha256": "702697f5dfde7a82f88c12c947ec80b118cdf79fb26b506c1ff39cf503aa5174", "job_id": "14688012", "host": "n7404", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 0, "elapsed_seconds": 0.5640881080180407, "completed_utc": "2026-09-06T13:37:55.008820+00:00"}

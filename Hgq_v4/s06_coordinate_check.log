@@ -1,0 +1,10 @@
+"DOMAIN "{0.390561, Inequality[-1, Less, x, Less, 1]}
+"DEFINITION "InputForm[1 - c*x - Sqrt[1 - c^2]*Sqrt[1 - x^2]*yy]
+"SOLVE "{0.060029, {yy -> (1 - bb - c*x)/(Sqrt[1 - c^2]*Sqrt[1 - x^2])}}
+"REFINE "{0.130015, {yy -> -((-1 + bb + c*x)/Sqrt[(-1 + c^2)*(-1 + x^2)])}}
+
+                                         2            2
+LinearSolve::matrix: Argument {Sqrt[1 - c ] Sqrt[1 - x ]} at position 1 is not a non-empty rectangular matrix.
+"LINEAR "{0.036222, {yy -> LinearSolve[{Sqrt[1 - c^2]*Sqrt[1 - x^2]}, 1 - bb - c*x]}}
+"RECONSTRUCTION "1 - bb - c*x - Sqrt[(-1 + c^2)*(-1 + x^2)]*LinearSolve[{Sqrt[(-1 + c^2)*(-1 + x^2)]}, 1 - bb - c*x]
+"CHECK_DONE"

@@ -1,0 +1,35 @@
+MONITOR_START job=14687395 host=n7136 kernel_pid=65296
+"Wolfram: ""13.1.0 for Linux x86 (64-bit) (June 16, 2022)""; FeynCalc: ""10.2.1"
+"PASS: ""graph identity removes internal vertex counts"
+"Generate ""Born""; memory = "113235656
+"PASS: ""Born has nonzero generated amplitudes"
+"PASS: ""Born is massless"
+"PASS: ""Born coupling order matches the graph identity"
+"PASS: ""Born external species identified"
+"Born"": graph count = "2"; coupling degrees = "InputForm[{{1, 1}}]
+"Generate ""Real""; memory = "117192368
+"PASS: ""Real has nonzero generated amplitudes"
+"PASS: ""Real is massless"
+"PASS: ""Real coupling order matches the graph identity"
+"PASS: ""Real external species identified"
+"Real"": graph count = "8"; coupling degrees = "InputForm[{{1, 2}}]
+"Generate ""Virtual""; memory = "117830016
+"PASS: ""Virtual has nonzero generated amplitudes"
+"PASS: ""Virtual is massless"
+"PASS: ""Virtual coupling order matches the graph identity"
+"PASS: ""Virtual external species identified"
+"Virtual"": graph count = "15"; coupling degrees = "InputForm[{{1, 3}}]
+"Generate ""AuxHqqBorn""; memory = "120384672
+"PASS: ""AuxHqqBorn has nonzero generated amplitudes"
+"PASS: ""AuxHqqBorn is massless"
+"PASS: ""AuxHqqBorn coupling order matches the graph identity"
+"PASS: ""AuxHqqBorn external species identified"
+"AuxHqqBorn"": graph count = "2"; coupling degrees = "InputForm[{{1, 1}}]
+"Generate ""ChargeVertex""; memory = "120459280
+"PASS: ""ChargeVertex has nonzero generated amplitudes"
+"PASS: ""ChargeVertex is massless"
+"PASS: ""ChargeVertex coupling order matches the graph identity"
+"PASS: ""ChargeVertex external species identified"
+"ChargeVertex"": graph count = "1"; coupling degrees = "InputForm[{{1, 0}}]
+"S01_SUCCESS; peak kernel memory = "122566192
+MONITOR_WAKE {"stage": "s01", "source": "s01_generate_amplitudes.wl", "source_sha256": "bd03ca4e615f35e19a470fcb3d317b6484f46fed71e1729cd393cecbd3655c6b", "job_id": "14687395", "host": "n7136", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 0, "elapsed_seconds": 24.073238380253315, "completed_utc": "2026-09-06T07:32:37.993612+00:00"}

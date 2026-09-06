@@ -1,0 +1,35 @@
+MONITOR_START job=14687440 host=n7138 kernel_pid=10505
+"PASS: ""S01 source identity"
+"Charge measurement: "InputForm[<|"VertexSquare" -> (-16*(-2 + D)*kappa*SUNN)/9, "UnitCurrentSquare" -> -4*(-2 + D)*kappa*SUNN, "Ratio" -> 4/9, "FundamentalDimension" -> SUNN|>]
+"PASS: ""model charge is a positive exact constant"
+"Measured model charge squared = "InputForm[4/9]
+"PASS: ""physical gluon polarization trace evaluated"
+"Derived initial averages = "InputForm[<|"Hgq" -> 1/((-2 + D)*(-1 + SUNN)*(1 + SUNN)), "AuxHqq" -> 1/(2*SUNN)|>]
+"PASS: ""invariant equations reconstruct exactly"
+"Hgq"" Born ""Pg"
+"PASS: ""Hgq Pg is scalar and exact"
+"Hgq"" Born ""Ppp"
+"PASS: ""Hgq Ppp is scalar and exact"
+"Hgq"" Born ""PhotonWard"
+"PASS: ""Hgq PhotonWard is scalar and exact"
+"PASS: ""Hgq PhotonWard"
+"Hgq"" Born ""GluonWard"
+"PASS: ""Hgq GluonWard is scalar and exact"
+"PASS: ""Hgq GluonWard"
+"AuxHqq"" Born ""Pg"
+"PASS: ""AuxHqq Pg is scalar and exact"
+"AuxHqq"" Born ""Ppp"
+"PASS: ""AuxHqq Ppp is scalar and exact"
+"AuxHqq"" Born ""PhotonWard"
+MONITOR_HEARTBEAT elapsed=31s rss=175.7MiB peak=175.7MiB
+"PASS: ""AuxHqq PhotonWard is scalar and exact"
+"PASS: ""AuxHqq PhotonWard"
+"AuxHqq"" Born ""GluonWard"
+"PASS: ""AuxHqq GluonWard is scalar and exact"
+"PASS: ""AuxHqq GluonWard"
+"PASS: ""derived projectors equal paper Eq. 9"
+"PASS: ""invariant equations reconstruct exactly"
+"Hgq Born Pg = "InputForm[(-2*Q2^2 + D*Q2^2 - 8*Q2*s + 2*D*Q2*s - 2*s^2 + D*s^2 + 4*Q2*t + 4*s*t + 4*t^2)/(t*(Q2 + s + t))]
+"Hgq Born Ppp = "InputForm[(4*s)/(-2 + D)]
+"S02_SUCCESS; peak kernel memory = "269515672
+MONITOR_WAKE {"stage": "s02", "source": "s02_born_and_projectors.wl", "source_sha256": "4cdd00d8d5049eb190fb6b3e11a856b507083f9e7ab51713b912df3723f272e1", "job_id": "14687440", "host": "n7138", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 337457152, "elapsed_seconds": 32.00124383717775, "completed_utc": "2026-09-06T07:50:37.906998+00:00"}

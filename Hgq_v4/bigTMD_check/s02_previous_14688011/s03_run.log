@@ -1,0 +1,14 @@
+MONITOR_START job=14688017 host=n7044 kernel_pid=38873
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/bigTMD_check/s03_compare_bigtmd_fhat.py", line 216, in <module>
+    main()
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/bigTMD_check/s03_compare_bigtmd_fhat.py", line 92, in main
+    data = json.loads((ROOT / "s02_result.json").read_text())
+  File "/u/local/apps/anaconda3/2023.03/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/u/local/apps/anaconda3/2023.03/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/u/local/apps/anaconda3/2023.03/lib/python3.10/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 526 column 31 (char 19397)
+MONITOR_WAKE {"stage": "s03", "source": "s03_compare_bigtmd_fhat.py", "source_sha256": "74fd1d8757a9d2e72f20eb6c68de74a924a36b13df1c971465982a755fd2c937", "job_id": "14688017", "host": "n7044", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 9490432, "elapsed_seconds": 0.5063974838703871, "completed_utc": "2026-09-06T13:44:18.681287+00:00"}

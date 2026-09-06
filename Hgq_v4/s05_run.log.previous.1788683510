@@ -1,0 +1,27 @@
+MONITOR_START job=14687512 host=n6406 kernel_pid=164101
+"PASS: ""accepted S03 input exists"
+"PASS: ""S03 source identity"
+"PASS: ""all real Ward identities passed"
+"PASS: ""physical rest-frame transverse square"
+"PASS: ""rest frame reproduces all invariant scalar products"
+"Parallel budget inputs: "InputForm[{2, 1, Infinity}]
+
+KernelConfiguration::unk: Option name in LimitByLicense -> True is not among the documented options.
+
+BinaryWrite::errwstrm: Could not write to stream "in:0".
+
+KernelObject::proce: Process ssh -4 -x -o StrictHostKeyChecking=no -o BatchMode=yes -R 59797:localhost:64830 -o ExitOnForwardFailure=yes local sh -s 2 59797@localhost failed with code 255. Error output:ssh: Could not resolve hostname local: Name or service not known
+                                                                                                                                                                                           	
+
+KernelObject::giveup: Timeout for ssh://local/. Received only 0 of 2 connections.
+"Parallel launch unavailable; bounded tasks run serially."
+"Angular worker count = "0
+"Pg"": factoring angular denominators."
+"PASS: ""angular scale sign determined"
+
+                                 1
+Power::infy: Infinite expression - encountered.
+                                 0
+"Angular norm and gap: "InputForm[{0, ConditionalExpression[(s - s23)^2/4, s > s23 && Inequality[-Q2 - s + s23, Less, t, Less, -((Q2*s23)/s)]]}]
+"FAIL: ""paper angular case applies"
+MONITOR_WAKE {"stage": "s05", "source": "s05_real_angular_basis.wl", "source_sha256": "8b845b4d38fbaacbf098052c72639399de6f3ea059942595f4c5789051ad9c89", "job_id": "14687512", "host": "n6406", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 353378304, "elapsed_seconds": 11.2248754799366, "completed_utc": "2026-09-06T08:26:35.136444+00:00"}

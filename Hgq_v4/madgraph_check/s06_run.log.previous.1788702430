@@ -1,0 +1,11 @@
+MONITOR_START job=14688016 host=n7404 kernel_pid=67904
+"PASS: ""s02_born_and_projectors.wl unchanged"
+"PASS: ""s02_result.wl unchanged"
+"PASS: ""s01_generate_amplitudes.wl unchanged"
+"PASS: ""s01_result.wl unchanged"
+"PASS: ""s03_contract_real.wl unchanged"
+"PASS: ""s03_result.wl unchanged"
+"PASS: ""s10_final_hats.wl unchanged"
+"PASS: ""s10_result.wl unchanged"
+"FAIL: ""stored scalar products equal defining four-vector products"
+MONITOR_WAKE {"stage": "s06", "source": "s06_validate_real_projection.wl", "source_sha256": "36fff7e51961e3e73464e78b005b8e78c29573c470a70479baf3fffb9ea8ac40", "job_id": "14688016", "host": "n7404", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": "stage gate failure", "peak_rss_bytes": 182386688, "elapsed_seconds": 8.010704571381211, "completed_utc": "2026-09-06T13:44:01.098785+00:00"}

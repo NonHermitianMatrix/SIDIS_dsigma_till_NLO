@@ -1,0 +1,112 @@
+MONITOR_START job=14688006 host=n6133 kernel_pid=5259
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.7.0                 2026-01-05         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from software/MG5_aMC_v3_7_0/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+lhapdf-config does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+Using default gzip "pigz". Set another one in ./input/mg5_configuration.txt
+import /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/s02_generate_processes.mg5
+The import format was not given, so we guess it as command
+set automatic_html_opening False
+This option will be the default in any output that you are going to create in this session.
+In order to keep this changes permanent please run 'save options'
+set auto_update 0
+save options auto_update
+save configuration file to /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/software/MG5_aMC_v3_7_0/input/mg5_configuration.txt
+set nb_core 1
+This option will be the default in any output that you are going to create in this session.
+In order to keep this changes permanent please run 'save options'
+import model sm
+INFO: Restrict model sm with file software/MG5_aMC_v3_7_0/models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+generate e- g > e- u u~ / z h QED=2 QCD=1
+[1;34mInterpreting 'QCD=1' as 'QCD<=1'[0m
+[1;34mInterpreting 'QED=2' as 'QED<=2'[0m
+INFO: Trying process: e- g > e- u u~ QCD<=1 QED<=2 / z h @1  
+INFO: Process has 2 diagrams 
+1 processes with 2 diagrams generated in 0.006 s
+Total: 1 processes with 2 diagrams
+output standalone /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/born
+INFO: initialize a new standalone directory: born 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: e- g > e- u u~ QCD<=1 QED<=2 / z h @1 
+INFO: Processing color information for process: e- g > e- u u~ QCD<=1 QED<=2 / z h @1 
+INFO: Creating files in directory /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/born/SubProcesses/P1_emg_emuux_no_zh 
+INFO: Generating Feynman diagrams for Process: e- g > e- u u~ QCD<=1 QED<=2 / z h @1 
+Generated helas calls for 1 subprocesses (2 diagrams) in 0.006 s
+Wrote files for 10 helas calls in 0.047 s
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates 1 routines in  0.086 s
+INFO: Use Fortran compiler gfortran 
+INFO: Running make for Source directory 
+Output to directory /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/born done.
+generate e- g > e- u u~ g / z h QED=2 QCD=2
+[1;34mInterpreting 'QCD=2' as 'QCD<=2'[0m
+[1;34mInterpreting 'QED=2' as 'QED<=2'[0m
+INFO: Trying process: e- g > e- u u~ g QCD<=2 QED<=2 / z h @1  
+INFO: Process has 8 diagrams 
+1 processes with 8 diagrams generated in 0.019 s
+Total: 1 processes with 8 diagrams
+output standalone /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/real
+INFO: initialize a new standalone directory: real 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: e- g > e- u u~ g QCD<=2 QED<=2 / z h @1 
+INFO: Processing color information for process: e- g > e- u u~ g QCD<=2 QED<=2 / z h @1 
+INFO: Creating files in directory /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/real/SubProcesses/P1_emg_emuuxg_no_zh 
+INFO: Generating Feynman diagrams for Process: e- g > e- u u~ g QCD<=2 QED<=2 / z h @1 
+Generated helas calls for 1 subprocesses (8 diagrams) in 0.026 s
+Wrote files for 22 helas calls in 0.060 s
+ALOHA: aloha starts to compute helicity amplitudes
+ALOHA: aloha creates 3 routines in  0.159 s
+INFO: Use Fortran compiler gfortran 
+INFO: Running make for Source directory 
+Output to directory /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/real done.
+quit
+quit
+S02_SUCCESS
+MONITOR_WAKE {"stage": "s02", "source": "s02_generate_processes.mg5", "source_sha256": "2ef64cfa9a8d02585a7f3f715ed9cc5bbd4dcbb41399be3c8283cc56507e5f76", "job_id": "14688006", "host": "n6133", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 109907968, "elapsed_seconds": 9.179249332053587, "completed_utc": "2026-09-06T13:34:13.582059+00:00"}

@@ -1,0 +1,61 @@
+MONITOR_START job=14687461 host=n7441 kernel_pid=36917
+"PASS: ""accepted Born and virtual inputs exist"
+"PASS: ""S01 source identity"
+"PASS: ""S02 source identity"
+"PASS: ""S04 source identity"
+"PASS: ""self-energy graph identity removes internal counts"
+"Generate two-point diagrams: ""quark"
+"PASS: ""generated two-point QCD coupling order"
+"quark"": generated "1" diagrams."
+"Generate two-point diagrams: ""gluon and ghost"
+"PASS: ""generated two-point QCD coupling order"
+"gluon and ghost"": generated "3" diagrams."
+"Generate two-point diagrams: ""one quark flavor"
+"Selected loop fermions: "InputForm[{F[3, {1, Index[Colour, 3]}], F[3, {1, Index[Colour, 4]}]}]
+"PASS: ""closed flavor is exactly the selected massless quark"
+"PASS: ""generated two-point QCD coupling order"
+"one quark flavor"": generated "1" diagrams."
+"Parallel budget inputs: "InputForm[{4, 1, Infinity}]
+
+Get::noopen: Cannot open SubKernels`LocalKernels`.
+
+Needs::nocont: Context SubKernels`LocalKernels` was not created when Needs was evaluated.
+"No local parallel kernel available; residue calculations remain serial."
+"PASS: ""two-point color structure is the external identity"
+"quark"": reduce propagator insertion."
+"PASS: ""on-shell residue has no undefined kinematic quotient"
+"PASS: ""scaleless residue vanishes after identifying regulators"
+"PASS: ""residue has both UV and IR parts"
+"PASS: ""external residue is real"
+"quark"" propagator residue: "InputForm[((-1 + SUNN)*(1 + SUNN))/(32*EpsilonIR*Pi^2*SUNN) - ((-1 + SUNN)*(1 + SUNN))/(32*EpsilonUV*Pi^2*SUNN)]
+"PASS: ""two-point color structure is the external identity"
+"PASS: ""two external vector indices remain"
+"PASS: ""gluon and ghost gluon self energy is transverse"
+"gluon and ghost"": reduce propagator insertion."
+"PASS: ""on-shell residue has no undefined kinematic quotient"
+"PASS: ""scaleless residue vanishes after identifying regulators"
+"PASS: ""residue has both UV and IR parts"
+"PASS: ""external residue is real"
+"gluon and ghost"" propagator residue: "InputForm[(-5*SUNN)/(48*EpsilonIR*Pi^2) + (5*SUNN)/(48*EpsilonUV*Pi^2)]
+"PASS: ""two-point color structure is the external identity"
+"PASS: ""two external vector indices remain"
+"PASS: ""one quark flavor gluon self energy is transverse"
+"one quark flavor"": reduce propagator insertion."
+"PASS: ""on-shell residue has no undefined kinematic quotient"
+"PASS: ""scaleless residue vanishes after identifying regulators"
+"PASS: ""residue has both UV and IR parts"
+"PASS: ""external residue is real"
+"one quark flavor"" propagator residue: "InputForm[1/(24*EpsilonIR*Pi^2) - 1/(24*EpsilonUV*Pi^2)]
+"PASS: ""all generated propagator residues evaluated"
+"PASS: ""Dirac-adjoint residue equals the real quark residue"
+"PASS: ""all generated external fields have residues"
+"PASS: ""generated Born has a unique strong-coupling degree"
+"PASS: ""UV extraction contains no IR regulator"
+"PASS: ""UV extraction contains no IR regulator"
+"PASS: ""both projectors determine the same coupling UV residue"
+"PASS: ""coupling UV residue is real and kinematics independent"
+"Derived coupling residue per gs^2: "InputForm[-1/96*(-2*Nf + 11*SUNN)/Pi^2]
+"PASS: ""Pg complete UV cancellation"
+"PASS: ""Ppp complete UV cancellation"
+"S07_SUCCESS; peak memory = "135327192" bytes."
+MONITOR_WAKE {"stage": "s07", "source": "s07_renormalize_virtual.wl", "source_sha256": "a8aace38a4ea7d32fb98636dd5ab58f2a5d51a711ad7f65d24aa96173bc3708c", "job_id": "14687461", "host": "n7441", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 199737344, "elapsed_seconds": 22.570771027356386, "completed_utc": "2026-09-06T08:03:39.017838+00:00"}

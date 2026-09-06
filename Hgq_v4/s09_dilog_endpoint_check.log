@@ -1,0 +1,18 @@
+"PASS ""saved branch identified"
+"PASS ""one mixed denominator is massive"
+"MASTER DATA "InputForm[{{"Pg", 65}, {"ML", 1, 2}, -1}]
+"MASSIVE ENDPOINT "InputForm[1 + (2*Q2)/omega]
+"PASS ""massive endpoint is finite and separated"
+"PASS ""mixed master with an angular endpoint"
+"PASS ""angular approach direction derived"
+"PASS ""dilogarithm inversion derived from its derivative and anchor"
+"INVERSION FORMULA "InputForm[(-Pi^2 - 3*Log[-x]^2)/6]
+"PASS ""inverted arguments have proved negative real domain"
+"INVERTED ARGUMENTS "InputForm[{(-1 + c)/(1 + c), ((-1 + c)*(1 + d))/((1 + c)*(-1 + d))}]
+"TRANSFORMED MASTER "InputForm[-((Pi*(-1 + c*d - 2*eps + c^2*eps + 2*c*d*eps - d^2*eps + c^2*eps^2 - 2*c*d*eps^2 + d^2*eps^2 + 4*c*eps^2*ArcCoth[d] - 4*d*eps^2*ArcCoth[d]))/((c - d)^3*eps)) + Log[1 + c]*((-2*(-1 + c*d)*eps*Pi*ArcCoth[d])/(c - d)^3 - ((-1 + c*d)*eps*Pi*Log[-1 + d])/(c - d)^3 + ((-1 + c*d)*eps*Pi*Log[1 + d])/(c - d)^3) + (2*(-1 + c*d)*(1 + 2*eps)*Pi*Log[-c + d])/(c - d)^3 + ((-1 + c*d)*eps*Pi*Log[1 - c]*Log[-c + d])/(c - d)^3 - (2*(-1 + c*d)*eps*Pi*Log[-c + d]^2)/(c - d)^3 + Log[-1 + d]*(-(((-1 + c*d)*(1 + 2*eps)*Pi)/(c - d)^3) - ((-1 + c*d)*eps*Pi*Log[1 + d])/(c - d)^3 + ((-1 + c*d)*eps*Pi*Log[-c + d])/(c - d)^3) + Log[1 + d]*(-(((-1 + c*d)*(1 + 2*eps)*Pi)/(c - d)^3) - ((-1 + c*d)*eps*Pi*Log[1 - c])/(c - d)^3 + (2*(-1 + c*d)*eps*Pi*Log[-c + d])/(c - d)^3) + ((-1 + c*d)*eps*Pi*PolyLog[2, (1 + c)/(-1 + c)])/(c - d)^3 + ((-1 + c*d)*eps*Pi*PolyLog[2, (-1 + c)/(c - d)])/(c - d)^3 - ((-1 + c*d)*eps*Pi*PolyLog[2, (-1 + c)/(-1 + d)])/(c - d)^3 - ((-1 + c*d)*eps*Pi*PolyLog[2, (1 + c)/(1 + d)])/(c - d)^3 + ((-1 + c*d)*eps*Pi*PolyLog[2, (-1 + d)/(1 + d)])/(c - d)^3 - ((-1 + c*d)*eps*Pi*PolyLog[2, ((1 + c)*(-1 + d))/((-1 + c)*(1 + d))])/(c - d)^3 - ((-1 + c*d)*eps*Pi*PolyLog[2, (-1 + d)/(-c + d)])/(c - d)^3]
+"COEFFICIENT LIMIT "-1" "InputForm[Pi/(-1 - d)^3 + (d*Pi)/(-1 - d)^3]
+"PASS ""coefficient endpoint finite"
+"COEFFICIENT LIMIT "0" "InputForm[Pi/(-1 - d)^3 + (2*d*Pi)/(-1 - d)^3 + (d^2*Pi)/(-1 - d)^3 + (Pi*Log[-1 + d])/(-1 - d)^3 + (d*Pi*Log[-1 + d])/(-1 - d)^3 - (Pi*Log[1 + d])/(-1 - d)^3 - (d*Pi*Log[1 + d])/(-1 - d)^3]
+"PASS ""coefficient endpoint finite"
+"COEFFICIENT LIMIT "1" "InputForm[Infinity*(2*ArcCoth[d] + Log[(-1 + d)/(1 + d)])]
+"GATE_FAILURE ""coefficient endpoint finite"

@@ -1,0 +1,74 @@
+{
+  "Channel": "Hgq",
+  "BigTMDChannel": "1A",
+  "BornFunctions": {
+    "Pg": "PgC",
+    "Ppp": "PppC"
+  },
+  "SourceSHA256": "aca02a4be190a04d697227601f08382e8b3b1a2e9e5dc40534f6117d4e8f88e4",
+  "source": "https://github.com/JeffersonLab/BigTMD",
+  "tree": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+  "sources": [
+    {
+      "path": "NLO/Pg/fchn1A.py",
+      "git_blob": "7c00672dc17fe8aa16d79d00dd079385ac981499",
+      "sha256": "d8ec2026eaa2d5583a93e2fd39bb62f326b1332e3569c5c71aa838665802db94"
+    },
+    {
+      "path": "NLO/Ppp/fchn1A.py",
+      "git_blob": "52f0bad8616ac45118ac83e95e64bb47a49a7544",
+      "sha256": "73b29445217f1e6565e8b1cc79f00957b311af00fd121834821c217808005af5"
+    },
+    {
+      "path": "LO.py",
+      "git_blob": "353f168c887557a47e6d69872683ed3a0928a910",
+      "sha256": "f8a95936521389172d28bf7e7c3b8016d56b0666f90d047501d33ed2fce72e11"
+    },
+    {
+      "path": "sidis.py",
+      "git_blob": "06057eed21d604895df0302bd9ff3438e2322782",
+      "sha256": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d"
+    },
+    {
+      "path": "docs/tutorial.rst",
+      "git_blob": "eacda73eded8e2a0ad2dd206d2b535f45bbbd1c1",
+      "sha256": "84f009ce8c8a691ac9dfd3758d90344c2418d376a3eb114ac4f1f23f35688d45"
+    }
+  ],
+  "rational_denominator_bound": 1000000,
+  "rounded_literal_reconstructions": {
+    "0.000144675925925926": "1/6912",
+    "0.000162760416666667": "1/6144",
+    "0.000217013888888889": "1/4608",
+    "0.000289351851851852": "1/3456",
+    "0.000325520833333333": "1/3072",
+    "0.000434027777777778": "1/2304",
+    "0.000651041666666667": "1/1536",
+    "0.000868055555555556": "1/1152",
+    "0.00115740740740741": "1/864",
+    "0.00130208333333333": "1/768",
+    "0.00231481481481481": "1/432",
+    "0.00260416666666667": "1/384",
+    "0.00347222222222222": "1/288",
+    "0.00520833333333333": "1/192",
+    "0.00694444444444444": "1/144",
+    "0.0104166666666667": "1/96",
+    "0.0208333333333333": "1/48",
+    "0.0416666666666667": "1/24",
+    "0.0833333333333333": "1/12",
+    "0.111111111111111": "1/9",
+    "0.166666666666667": "1/6",
+    "0.333333333333333": "1/3",
+    "0.666666666666667": "2/3",
+    "2.66666666666667": "8/3",
+    "2.71267361111111e-5": "1/36864",
+    "4.06901041666667e-5": "1/24576",
+    "5.42534722222222e-5": "1/18432"
+  },
+  "interpretation": "Published finite SU(3) coefficients; rational reconstruction assumes the stated denominator bound.",
+  "checks": {
+    "all_git_blob_hashes_match": true,
+    "all_long_decimal_reconstructions_unique_within_bound": true,
+    "numerical_polylog_code_not_executed": true
+  }
+}

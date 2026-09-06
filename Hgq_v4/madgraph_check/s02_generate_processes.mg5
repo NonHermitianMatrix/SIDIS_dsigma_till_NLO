@@ -1,0 +1,9 @@
+set automatic_html_opening False
+set auto_update 0
+set nb_core 1
+import model sm
+generate e- g > e- u u~ / z h QED=2 QCD=1
+output standalone /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/born
+generate e- g > e- u u~ g / z h QED=2 QCD=2
+output standalone /u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/madgraph_check/real
+quit

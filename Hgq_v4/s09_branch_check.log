@@ -1,0 +1,13 @@
+"TASK "InputForm[{"Pg", 30}]
+"BRANCH OBJECT COUNT "2
+"BEGIN BRANCH LIMIT "1
+"BRANCH LIMIT "1" "InputForm[0]
+"BEGIN BRANCH LIMIT "2
+"BRANCH LIMIT "2" "InputForm[0]
+"PASS ""one-sided branch corrections are evaluated integers"
+"REDUCED HEAD "SeriesData
+"PASS ""branch-refined series is Laurent"
+
+SeriesData::sdatc: Coefficient specification 1 in SeriesData[-1, -1, 1] is not a list.
+"SERIES RANGE "InputForm[SeriesData[-1, -1, 1]]
+"CHECK_DONE"

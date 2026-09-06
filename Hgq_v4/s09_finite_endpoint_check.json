@@ -1,0 +1,7 @@
+{
+  "wolfram_code": "$HistoryLength=0;\n$Assumptions=True;\ngate[name_,test_]:=If[TrueQ[test],Print[\"PASS \",name],Print[\"GATE_FAILURE \",name];Quit[1]];\nheld=ToExpression[ReadString[\"/u/scratch/r/rushil/AI_Assisted_SIDIS/Hgq_v4_20260906/s09_laurent_unreduced_179183.wl\"],InputForm,HoldComplete];\nfield[name_]:=ReleaseHold[First[Cases[held,HoldPattern[Rule[name,v_]]:>HoldComplete[v],Infinity]]];\nPrint[\"TASK \",InputForm[field[\"Task\"]]];\nexpression=field[\"Expression\"];assumptions=field[\"Assumptions\"]&&eps<0;\ngate[\"saved expression is symbolic and finite\",FreeQ[expression,_Real|_SeriesData|Indeterminate|_DirectedInfinity]];\nPrint[\"BEGIN EXACT ONE-SIDED LIMIT\"];\nendpoint=MemoryConstrained[TimeConstrained[\nLimit[expression,s23->0,Direction->\"FromAbove\",Assumptions->assumptions],180,$Failed],1024^3,$Failed];\nPrint[\"ENDPOINT \",InputForm[endpoint]];\ngate[\"one-sided endpoint is evaluated and finite\",FreeQ[endpoint,$Failed|s23|_Limit|_ConditionalExpression|Indeterminate|_DirectedInfinity|_Real]];\nPrint[\"CHECK_DONE\"];\nQuit[];\n",
+  "production_source": "s09_real_phase_space.wl",
+  "diagnostic_input": "s09_laurent_unreduced_179183.wl",
+  "job_id": "14687884",
+  "output": "\"TASK \"InputForm[{\"Pg\", 65}]\n\"PASS \"\"saved expression is symbolic and finite\"\n\"BEGIN EXACT ONE-SIDED LIMIT\"\n\"ENDPOINT \"InputForm[$Failed]\n\"GATE_FAILURE \"\"one-sided endpoint is evaluated and finite\"\n"
+}

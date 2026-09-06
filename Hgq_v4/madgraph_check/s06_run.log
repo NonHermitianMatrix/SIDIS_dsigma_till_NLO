@@ -1,0 +1,26 @@
+MONITOR_START job=14688021 host=n6048 kernel_pid=64078
+"PASS: ""s02_born_and_projectors.wl unchanged"
+"PASS: ""s02_result.wl unchanged"
+"PASS: ""s01_generate_amplitudes.wl unchanged"
+"PASS: ""s01_result.wl unchanged"
+"PASS: ""s03_contract_real.wl unchanged"
+"PASS: ""s03_result.wl unchanged"
+"PASS: ""s10_final_hats.wl unchanged"
+"PASS: ""s10_result.wl unchanged"
+"SCALAR_PRODUCT_DIAGNOSTIC "InputForm[{<|"Definition" -> {p, p, 0}, "Direct" -> 0., "Stored" -> 0, "Residual" -> 0.|>, <|"Definition" -> {p, q, (Q2 + s)/2}, "Direct" -> 2327.8037262302046, "Stored" -> 2327.8037262302046, "Residual" -> 0.|>, <|"Definition" -> {p, k1, (Q2 + s - s23 + t)/2}, "Direct" -> 648.7337940243135, "Stored" -> 648.7337940243099, "Residual" -> 2.8911724454617853*^-15|>, <|"Definition" -> {p, k2, (s23 - t + u3)/2}, "Direct" -> 1427.697242623601, "Stored" -> 1427.697242623602, "Residual" -> 2.7743996604226337*^-16|>, <|"Definition" -> {p, k3, -1/2*u3}, "Direct" -> 251.37268958229265, "Stored" -> 251.37268958229265, "Residual" -> 0.|>, <|"Definition" -> {q, q, -Q2}, "Direct" -> -3189.824290047236, "Stored" -> -3189.824290047236, "Residual" -> 0.|>, <|"Definition" -> {q, k1, (-Q2 - t)/2}, "Direct" -> -89.85199606152278, "Stored" -> -89.85199606152264, "Residual" -> 1.3907308051617052*^-16|>, <|"Definition" -> {q, k2, (a12 + t - u3)/2}, "Direct" -> -786.270855121965, "Stored" -> -786.2708551219637, "Residual" -> 4.0997682931861014*^-16|>, <|"Definition" -> {q, k3, (-a12 + s + u3)/2}, "Direct" -> 14.102287366458555, "Stored" -> 14.102287366454675, "Residual" -> 1.2676313005884777*^-14|>, <|"Definition" -> {k1, k1, 0}, "Direct" -> 2.220446049250313*^-14, "Stored" -> 0, "Residual" -> 7.011935177951655*^-17|>, <|"Definition" -> {k1, k2, a12/2}, "Direct" -> 467.41660425783823, "Stored" -> 467.41660425783914, "Residual" -> 8.819477271584047*^-16|>, <|"Definition" -> {k1, k3, (-a12 + s - s23)/2}, "Direct" -> 91.46519370495346, "Stored" -> 91.46519370494798, "Residual" -> 5.78352216071713*^-14|>, <|"Definition" -> {k2, k2, 0}, "Direct" -> 1.8474111129762605*^-12, "Stored" -> 0, "Residual" -> 5.501121391346759*^-16|>, <|"Definition" -> {k2, k3, s23/2}, "Direct" -> 174.00978324379832, "Stored" -> 174.00978324379935, "Residual" -> 3.3127037594214826*^-15|>, <|"Definition" -> {k3, k3, 0}, "Direct" -> 2.5757174171303632*^-14, "Stored" -> 0, "Residual" -> 9.067140540497582*^-16|>}]
+"PASS: ""stored scalar products equal defining four-vector products"
+"PASS: ""sample mass shell p"
+"PASS: ""sample mass shell k1"
+"PASS: ""sample mass shell k2"
+"PASS: ""sample mass shell k3"
+MONITOR_HEARTBEAT elapsed=31s rss=213.8MiB peak=213.8MiB
+MONITOR_HEARTBEAT elapsed=61s rss=253.4MiB peak=253.4MiB
+MONITOR_HEARTBEAT elapsed=91s rss=259.5MiB peak=259.5MiB
+MONITOR_HEARTBEAT elapsed=121s rss=269.8MiB peak=269.8MiB
+MONITOR_HEARTBEAT elapsed=151s rss=294.3MiB peak=294.4MiB
+MONITOR_HEARTBEAT elapsed=182s rss=295.9MiB peak=295.9MiB
+MONITOR_HEARTBEAT elapsed=212s rss=297.9MiB peak=297.9MiB
+MONITOR_HEARTBEAT elapsed=242s rss=299.1MiB peak=299.1MiB
+MONITOR_HEARTBEAT elapsed=272s rss=300.1MiB peak=300.1MiB
+"TIME LIMIT: ""outgoing gluon sum"
+MONITOR_WAKE {"stage": "s06", "source": "s06_validate_real_projection.wl", "source_sha256": "122a252339275ec54ba9fd23a3e029cca24b457f0c0566c9f1adaa0673aed207", "job_id": "14688021", "host": "n6048", "exit_code": 2, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 315424768, "elapsed_seconds": 296.98406340926886, "completed_utc": "2026-09-06T13:54:34.245746+00:00"}

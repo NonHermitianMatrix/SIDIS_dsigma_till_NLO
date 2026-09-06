@@ -1,0 +1,826 @@
+{
+  "Status": "Complete",
+  "Channel": "Hgq",
+  "DifferenceDirection": "MadGraph minus local",
+  "SourceSHA256": "702697f5dfde7a82f88c12c947ec80b118cdf79fb26b506c1ff39cf503aa5174",
+  "LocalSHA256": "a9430ee7247649f81d22c9a2b5f48d5587f60b9865fef57358fbfefdd245cbbc",
+  "ReferenceSHA256": "dafe7f763249e3a0658773bdbd859eb93de6e604d9872d6585637078f166c2c9",
+  "Summary": {
+    "PhysicalPoints": 16,
+    "ProjectionComparisons": 32,
+    "AllProjectorsWithinTolerance": false,
+    "AllAzimuthAveragesWithinTolerance": false,
+    "MaximumProjectorRelativeDifference": 1.9999999999999951,
+    "MaximumAzimuthAverageRelativeDifference": 1.9999999999999982,
+    "ByProcess": {
+      "born": {
+        "Count": 16,
+        "AllWithinTolerance": true,
+        "MaximumRelativeDifference": 6.291654908100499e-13
+      },
+      "real": {
+        "Count": 16,
+        "AllWithinTolerance": false,
+        "MaximumRelativeDifference": 1.9999999999999951
+      }
+    }
+  },
+  "Processes": {
+    "born": {
+      "Process": "e- g > e- u u~ QCD<=1 QED<=2 / z h @1",
+      "Incoming": [
+        "e-",
+        "g"
+      ],
+      "Outgoing": [
+        "e-",
+        "u",
+        "u~"
+      ],
+      "PDGs": [
+        -11,
+        21,
+        -11,
+        -2,
+        -2
+      ],
+      "DiagramCount": 2,
+      "IDEN": 32,
+      "InitialAverageDenominator": 32,
+      "FinalSymmetryDenominator": 1,
+      "QuarkTags": 1,
+      "TagWeight": "1",
+      "TaggedMadGraphFactor": 1.0,
+      "CouplingOrders": {
+        "QED": 2,
+        "QCD": 1
+      },
+      "Couplings": {
+        "e": 0.3079537672443688,
+        "gs": 1.2177157847767197,
+        "QuarkChargeAbs": 0.6666666666666667,
+        "ElectronChargeAbs": 1.0
+      },
+      "DirectBridgeRelativeDifference": 0.0,
+      "Files": {
+        "born/SubProcesses/P1_emg_emuux_no_zh/matrix.f": "3d38d2d78b99d7678824d2f405f8274133edb87703b37877b67b76e9da64c1e9",
+        "born/SubProcesses/P1_emg_emuux_no_zh/s03_bridge.f": "5b675295d3f361c491c97d73a93a19f9af5f07e0b37ec557a108e4a99987b2cd",
+        "born/SubProcesses/P1_emg_emuux_no_zh/s03_matrix.so": "0ecde33fc26fc184f172f847a44aa991b6c0072d81d7a6c78c6755ef94e7c045",
+        "born/Cards/param_card.dat": "55bb009a781370ab3fdfb523be00d0c8f68ffec442d12eb41b8d2da50307cf64"
+      }
+    },
+    "real": {
+      "Process": "e- g > e- u u~ g QCD<=2 QED<=2 / z h @1",
+      "Incoming": [
+        "e-",
+        "g"
+      ],
+      "Outgoing": [
+        "e-",
+        "u",
+        "u~",
+        "g"
+      ],
+      "PDGs": [
+        -11,
+        21,
+        -11,
+        -2,
+        -2,
+        21
+      ],
+      "DiagramCount": 8,
+      "IDEN": 32,
+      "InitialAverageDenominator": 32,
+      "FinalSymmetryDenominator": 1,
+      "QuarkTags": 1,
+      "TagWeight": "1",
+      "TaggedMadGraphFactor": 1.0,
+      "CouplingOrders": {
+        "QED": 2,
+        "QCD": 2
+      },
+      "Couplings": {
+        "e": 0.3079537672443688,
+        "gs": 1.2177157847767197,
+        "QuarkChargeAbs": 0.6666666666666667,
+        "ElectronChargeAbs": 1.0
+      },
+      "DirectBridgeRelativeDifference": 0.0,
+      "Files": {
+        "real/SubProcesses/P1_emg_emuuxg_no_zh/matrix.f": "eb9876d3893265143450770267230f196b0108031ffd81accec43cdd237a4a70",
+        "real/SubProcesses/P1_emg_emuuxg_no_zh/s03_bridge.f": "5b675295d3f361c491c97d73a93a19f9af5f07e0b37ec557a108e4a99987b2cd",
+        "real/SubProcesses/P1_emg_emuuxg_no_zh/s03_matrix.so": "b130f7ea1acb30d47b4907d1b35891b951b59b8c079ab72413f20594e583d855",
+        "real/Cards/param_card.dat": "55bb009a781370ab3fdfb523be00d0c8f68ffec442d12eb41b8d2da50307cf64"
+      }
+    }
+  },
+  "ProjectorRows": [
+    {
+      "ID": "born_01",
+      "Kind": "born",
+      "Projection": "Pg",
+      "Local": -2.655912055529987e-09,
+      "MadGraph": -2.655912055529997e-09,
+      "Difference": -9.926167350636332e-24,
+      "RelativeDifference": 3.737385554603964e-15,
+      "Tolerance": 2.6559120655299967e-17,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_01",
+      "Kind": "born",
+      "Projection": "Ppp",
+      "Local": 1.0498998926813439e-05,
+      "MadGraph": 1.049899892681341e-05,
+      "Difference": -2.879912020664621e-20,
+      "RelativeDifference": 2.7430348747913493e-15,
+      "Tolerance": 1.0498998926823439e-13,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_02",
+      "Kind": "born",
+      "Projection": "Pg",
+      "Local": -7.651793038408195e-10,
+      "MadGraph": -7.651793038408275e-10,
+      "Difference": -7.961613395822891e-24,
+      "RelativeDifference": 1.0404899029364058e-14,
+      "Tolerance": 7.651793138408276e-18,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_02",
+      "Kind": "born",
+      "Projection": "Ppp",
+      "Local": 1.6461303727352586e-07,
+      "MadGraph": 1.6461303727351522e-07,
+      "Difference": -1.0640851399882148e-20,
+      "RelativeDifference": 6.464160783450582e-14,
+      "Tolerance": 1.6461303728352585e-15,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_03",
+      "Kind": "born",
+      "Projection": "Pg",
+      "Local": -4.311903053613145e-08,
+      "MadGraph": -4.311903053613282e-08,
+      "Difference": -1.3698110943878138e-21,
+      "RelativeDifference": 3.176813294167042e-14,
+      "Tolerance": 4.3119030546132823e-16,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_03",
+      "Kind": "born",
+      "Projection": "Ppp",
+      "Local": 1.6989443059489203e-06,
+      "MadGraph": 1.698944305948376e-06,
+      "Difference": -5.44218668610888e-19,
+      "RelativeDifference": 3.2032755088279524e-13,
+      "Tolerance": 1.6989443059589204e-14,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_04",
+      "Kind": "born",
+      "Projection": "Pg",
+      "Local": -4.643262427115838e-09,
+      "MadGraph": -4.6432624271158315e-09,
+      "Difference": 6.617444900424222e-24,
+      "RelativeDifference": 1.4251714186515722e-15,
+      "Tolerance": 4.643262437115838e-17,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_04",
+      "Kind": "born",
+      "Projection": "Ppp",
+      "Local": 1.671075558043799e-08,
+      "MadGraph": 1.6710755580430146e-08,
+      "Difference": -7.844980929452914e-21,
+      "RelativeDifference": 4.694569848556959e-13,
+      "Tolerance": 1.671075559043799e-16,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_05",
+      "Kind": "born",
+      "Projection": "Pg",
+      "Local": -5.119562807860032e-09,
+      "MadGraph": -5.1195628078611e-09,
+      "Difference": -1.0687173514185118e-21,
+      "RelativeDifference": 2.0875168281508214e-13,
+      "Tolerance": 5.119562817861101e-17,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_05",
+      "Kind": "born",
+      "Projection": "Ppp",
+      "Local": 3.5230466009702054e-07,
+      "MadGraph": 3.523046600967989e-07,
+      "Difference": -2.216579343846097e-19,
+      "RelativeDifference": 6.291654908100499e-13,
+      "Tolerance": 3.5230466010702055e-15,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_06",
+      "Kind": "born",
+      "Projection": "Pg",
+      "Local": -1.2447276995616516e-10,
+      "MadGraph": -1.2447276995616575e-10,
+      "Difference": -5.945360652724886e-25,
+      "RelativeDifference": 4.776434761449111e-15,
+      "Tolerance": 1.2447277995616575e-18,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_06",
+      "Kind": "born",
+      "Projection": "Ppp",
+      "Local": 1.5210161922945485e-06,
+      "MadGraph": 1.5210161922945494e-06,
+      "Difference": 8.470329472543003e-22,
+      "RelativeDifference": 5.56886213010328e-16,
+      "Tolerance": 1.5210161923045494e-14,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_07",
+      "Kind": "born",
+      "Projection": "Pg",
+      "Local": -4.463208125452864e-10,
+      "MadGraph": -4.4632081254540246e-10,
+      "Difference": -1.160637796988467e-22,
+      "RelativeDifference": 2.600456363146632e-13,
+      "Tolerance": 4.463208225454024e-18,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_07",
+      "Kind": "born",
+      "Projection": "Ppp",
+      "Local": 9.628579382656628e-06,
+      "MadGraph": 9.628579382656518e-06,
+      "Difference": -1.1011428314305904e-19,
+      "RelativeDifference": 1.1436192066028056e-14,
+      "Tolerance": 9.628579382666628e-14,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_08",
+      "Kind": "born",
+      "Projection": "Pg",
+      "Local": -3.0783073374049438e-09,
+      "MadGraph": -3.078307337404929e-09,
+      "Difference": 1.4889251025954498e-23,
+      "RelativeDifference": 4.836830567576253e-15,
+      "Tolerance": 3.078307347404944e-17,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_08",
+      "Kind": "born",
+      "Projection": "Ppp",
+      "Local": 2.1206389178040408e-07,
+      "MadGraph": 2.1206389178040466e-07,
+      "Difference": 5.823351512373315e-22,
+      "RelativeDifference": 2.7460363305995925e-15,
+      "Tolerance": 2.1206389179040465e-15,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "real_01",
+      "Kind": "real",
+      "Projection": "Pg",
+      "Local": 2.766894563017626e-10,
+      "MadGraph": -2.7668945630168254e-10,
+      "Difference": -5.533789126034452e-10,
+      "RelativeDifference": 1.9999999999997107,
+      "Tolerance": 2.7668946630176264e-18,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_01",
+      "Kind": "real",
+      "Projection": "Ppp",
+      "Local": -3.882764714605045e-07,
+      "MadGraph": 3.8827647146050645e-07,
+      "Difference": 7.76552942921011e-07,
+      "RelativeDifference": 1.9999999999999951,
+      "Tolerance": 3.8827647147050646e-15,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_02",
+      "Kind": "real",
+      "Projection": "Pg",
+      "Local": 2.2903698548315026e-09,
+      "MadGraph": -2.290369854831356e-09,
+      "Difference": -4.580739709662859e-09,
+      "RelativeDifference": 1.999999999999936,
+      "Tolerance": 2.2903698648315025e-17,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_02",
+      "Kind": "real",
+      "Projection": "Ppp",
+      "Local": -1.125904250031003e-06,
+      "MadGraph": 1.125904250028291e-06,
+      "Difference": 2.251808500059294e-06,
+      "RelativeDifference": 1.9999999999975915,
+      "Tolerance": 1.125904250041003e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_03",
+      "Kind": "real",
+      "Projection": "Pg",
+      "Local": 5.176663717862924e-10,
+      "MadGraph": -5.176663717863082e-10,
+      "Difference": -1.0353327435726007e-09,
+      "RelativeDifference": 1.9999999999999696,
+      "Tolerance": 5.176663817863082e-18,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_03",
+      "Kind": "real",
+      "Projection": "Ppp",
+      "Local": -3.106932869204137e-06,
+      "MadGraph": 3.106932869204283e-06,
+      "Difference": 6.21386573840842e-06,
+      "RelativeDifference": 1.999999999999953,
+      "Tolerance": 3.1069328692142836e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_04",
+      "Kind": "real",
+      "Projection": "Pg",
+      "Local": 1.2816905199359776e-10,
+      "MadGraph": -1.2816905199361706e-10,
+      "Difference": -2.5633810398721485e-10,
+      "RelativeDifference": 1.9999999999998495,
+      "Tolerance": 1.2816906199361707e-18,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_04",
+      "Kind": "real",
+      "Projection": "Ppp",
+      "Local": -3.194650171491016e-08,
+      "MadGraph": 3.194650171492374e-08,
+      "Difference": 6.38930034298339e-08,
+      "RelativeDifference": 1.999999999999575,
+      "Tolerance": 3.194650172492374e-16,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_05",
+      "Kind": "real",
+      "Projection": "Pg",
+      "Local": 1.100101320557373e-10,
+      "MadGraph": -1.100101320557381e-10,
+      "Difference": -2.2002026411147539e-10,
+      "RelativeDifference": 1.9999999999999927,
+      "Tolerance": 1.100101420557381e-18,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_05",
+      "Kind": "real",
+      "Projection": "Ppp",
+      "Local": -7.528905779659762e-08,
+      "MadGraph": 7.528905779659635e-08,
+      "Difference": 1.5057811559319396e-07,
+      "RelativeDifference": 1.9999999999999831,
+      "Tolerance": 7.528905780659761e-16,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_06",
+      "Kind": "real",
+      "Projection": "Pg",
+      "Local": 9.166449383403842e-10,
+      "MadGraph": -9.16644938340298e-10,
+      "Difference": -1.8332898766806823e-09,
+      "RelativeDifference": 1.9999999999999059,
+      "Tolerance": 9.166449483403843e-18,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_06",
+      "Kind": "real",
+      "Projection": "Ppp",
+      "Local": -1.7753158754704934e-06,
+      "MadGraph": 1.77531587547029e-06,
+      "Difference": 3.550631750940783e-06,
+      "RelativeDifference": 1.9999999999998852,
+      "Tolerance": 1.7753158754804934e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_07",
+      "Kind": "real",
+      "Projection": "Pg",
+      "Local": 6.094077796064141e-10,
+      "MadGraph": -6.094077796064601e-10,
+      "Difference": -1.2188155592128742e-09,
+      "RelativeDifference": 1.9999999999999243,
+      "Tolerance": 6.094077896064601e-18,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_07",
+      "Kind": "real",
+      "Projection": "Ppp",
+      "Local": -2.4018759367172207e-06,
+      "MadGraph": 2.4018759367170818e-06,
+      "Difference": 4.8037518734343025e-06,
+      "RelativeDifference": 1.9999999999999423,
+      "Tolerance": 2.4018759367272206e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_08",
+      "Kind": "real",
+      "Projection": "Pg",
+      "Local": 1.2405972962229695e-09,
+      "MadGraph": -1.2405972962228073e-09,
+      "Difference": -2.4811945924457768e-09,
+      "RelativeDifference": 1.9999999999998692,
+      "Tolerance": 1.2405973062229696e-17,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_08",
+      "Kind": "real",
+      "Projection": "Ppp",
+      "Local": -1.7562946542233962e-06,
+      "MadGraph": 1.7562946542323377e-06,
+      "Difference": 3.512589308455734e-06,
+      "RelativeDifference": 1.999999999994909,
+      "Tolerance": 1.7562946542423377e-14,
+      "WithinTolerance": false
+    }
+  ],
+  "AzimuthAverageRows": [
+    {
+      "ID": "born_01",
+      "Kind": "born",
+      "Projection": "lepton_setting_1",
+      "Local": 2.9571190756521268e-05,
+      "MadGraph": 2.9571190756521268e-05,
+      "Difference": 0.0,
+      "RelativeDifference": 0.0,
+      "Tolerance": 2.957119075653127e-13,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_01",
+      "Kind": "born",
+      "Projection": "lepton_setting_2",
+      "Local": 0.00019170196747143962,
+      "MadGraph": 0.00019170196747143948,
+      "Difference": -1.3552527156068805e-19,
+      "RelativeDifference": 7.069581671397246e-16,
+      "Tolerance": 1.9170196747144963e-12,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_02",
+      "Kind": "born",
+      "Projection": "lepton_setting_1",
+      "Local": 7.496116987699623e-06,
+      "MadGraph": 7.496116987699658e-06,
+      "Difference": 3.4728350837426314e-20,
+      "RelativeDifference": 4.6328453643949125e-15,
+      "Tolerance": 7.496116987709658e-14,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_02",
+      "Kind": "born",
+      "Projection": "lepton_setting_2",
+      "Local": 4.191224637098333e-05,
+      "MadGraph": 4.191224637098323e-05,
+      "Difference": -1.0164395367051604e-19,
+      "RelativeDifference": 2.4251611992070685e-15,
+      "Tolerance": 4.191224637099333e-13,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_03",
+      "Kind": "born",
+      "Projection": "lepton_setting_1",
+      "Local": 0.00044831121876965263,
+      "MadGraph": 0.00044831121876966207,
+      "Difference": 9.432558900623889e-18,
+      "RelativeDifference": 2.104020266659944e-14,
+      "Tolerance": 4.483112187696721e-12,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_03",
+      "Kind": "born",
+      "Projection": "lepton_setting_2",
+      "Local": 0.002357499172816262,
+      "MadGraph": 0.002357499172816304,
+      "Difference": 4.206704429243757e-17,
+      "RelativeDifference": 1.784392748786573e-14,
+      "Tolerance": 2.3574991728163143e-11,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_04",
+      "Kind": "born",
+      "Projection": "lepton_setting_1",
+      "Local": 9.226121536053219e-05,
+      "MadGraph": 9.22612153605318e-05,
+      "Difference": -3.7947076036992655e-19,
+      "RelativeDifference": 4.1130041359964335e-15,
+      "Tolerance": 9.226121536054219e-13,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_04",
+      "Kind": "born",
+      "Projection": "lepton_setting_2",
+      "Local": 0.00047323411399941944,
+      "MadGraph": 0.00047323411399941717,
+      "Difference": -2.2768245622195593e-18,
+      "RelativeDifference": 4.811201252964516e-15,
+      "Tolerance": 4.732341139994294e-12,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_05",
+      "Kind": "born",
+      "Projection": "lepton_setting_1",
+      "Local": 0.00043640071300003633,
+      "MadGraph": 0.00043640071300003747,
+      "Difference": 1.1384122811097797e-18,
+      "RelativeDifference": 2.608639828481861e-15,
+      "Tolerance": 4.364007130000475e-12,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_05",
+      "Kind": "born",
+      "Projection": "lepton_setting_2",
+      "Local": 0.0019649051606925407,
+      "MadGraph": 0.0019649051606925403,
+      "Difference": -4.336808689942018e-19,
+      "RelativeDifference": 2.2071338488487085e-16,
+      "Tolerance": 1.9649051606925508e-11,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_06",
+      "Kind": "born",
+      "Projection": "lepton_setting_1",
+      "Local": 1.752506344820691e-05,
+      "MadGraph": 1.7525063448206926e-05,
+      "Difference": 1.6940658945086007e-20,
+      "RelativeDifference": 9.666532161296846e-16,
+      "Tolerance": 1.7525063448216926e-13,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_06",
+      "Kind": "born",
+      "Projection": "lepton_setting_2",
+      "Local": 0.00011233545257806616,
+      "MadGraph": 0.00011233545257806625,
+      "Difference": 9.486769009248164e-20,
+      "RelativeDifference": 8.445035642381412e-16,
+      "Tolerance": 1.1233545257807624e-12,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_07",
+      "Kind": "born",
+      "Projection": "lepton_setting_1",
+      "Local": 0.00012951221297760731,
+      "MadGraph": 0.00012951221297760734,
+      "Difference": 2.710505431213761e-20,
+      "RelativeDifference": 2.0928570123980565e-16,
+      "Tolerance": 1.2951221297761734e-12,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_07",
+      "Kind": "born",
+      "Projection": "lepton_setting_2",
+      "Local": 0.0006828680934320385,
+      "MadGraph": 0.0006828680934320381,
+      "Difference": -3.2526065174565133e-19,
+      "RelativeDifference": 4.76315491782488e-16,
+      "Tolerance": 6.828680934320485e-12,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_08",
+      "Kind": "born",
+      "Projection": "lepton_setting_1",
+      "Local": 5.97504966043494e-05,
+      "MadGraph": 5.975049660434915e-05,
+      "Difference": -2.507217523872729e-19,
+      "RelativeDifference": 4.19614508055858e-15,
+      "Tolerance": 5.975049660435939e-13,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "born_08",
+      "Kind": "born",
+      "Projection": "lepton_setting_2",
+      "Local": 0.00031276121653168337,
+      "MadGraph": 0.00031276121653168207,
+      "Difference": -1.3010426069826053e-18,
+      "RelativeDifference": 4.1598591456137494e-15,
+      "Tolerance": 3.127612165316934e-12,
+      "WithinTolerance": true
+    },
+    {
+      "ID": "real_01",
+      "Kind": "real",
+      "Projection": "lepton_setting_1",
+      "Local": -1.675059997705018e-05,
+      "MadGraph": 1.6750599977048726e-05,
+      "Difference": 3.350119995409891e-05,
+      "RelativeDifference": 1.9999999999999134,
+      "Tolerance": 1.675059997706018e-13,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_01",
+      "Kind": "real",
+      "Projection": "lepton_setting_2",
+      "Local": -8.854298366502493e-05,
+      "MadGraph": 8.854298366501776e-05,
+      "Difference": 0.00017708596733004268,
+      "RelativeDifference": 1.999999999999919,
+      "Tolerance": 8.854298366503493e-13,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_02",
+      "Kind": "real",
+      "Projection": "lepton_setting_1",
+      "Local": -3.530665221049209e-06,
+      "MadGraph": 3.5306652210487043e-06,
+      "Difference": 7.061330442097913e-06,
+      "RelativeDifference": 1.999999999999857,
+      "Tolerance": 3.530665221059209e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_02",
+      "Kind": "real",
+      "Projection": "lepton_setting_2",
+      "Local": -1.8695875348138476e-05,
+      "MadGraph": 1.869587534813414e-05,
+      "Difference": 3.7391750696272616e-05,
+      "RelativeDifference": 1.999999999999768,
+      "Tolerance": 1.8695875348148476e-13,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_03",
+      "Kind": "real",
+      "Projection": "lepton_setting_1",
+      "Local": -7.839458663868883e-06,
+      "MadGraph": 7.839458663869213e-06,
+      "Difference": 1.5678917327738098e-05,
+      "RelativeDifference": 1.999999999999958,
+      "Tolerance": 7.839458663879214e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_03",
+      "Kind": "real",
+      "Projection": "lepton_setting_2",
+      "Local": -4.418969672570775e-05,
+      "MadGraph": 4.418969672570963e-05,
+      "Difference": 8.837939345141739e-05,
+      "RelativeDifference": 1.9999999999999576,
+      "Tolerance": 4.418969672571963e-13,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_04",
+      "Kind": "real",
+      "Projection": "lepton_setting_1",
+      "Local": -2.689687921848493e-06,
+      "MadGraph": 2.68968792184908e-06,
+      "Difference": 5.379375843697573e-06,
+      "RelativeDifference": 1.9999999999997817,
+      "Tolerance": 2.6896879218590802e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_04",
+      "Kind": "real",
+      "Projection": "lepton_setting_2",
+      "Local": -1.3717058959945895e-05,
+      "MadGraph": 1.3717058959948964e-05,
+      "Difference": 2.743411791989486e-05,
+      "RelativeDifference": 1.9999999999997762,
+      "Tolerance": 1.3717058959958965e-13,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_05",
+      "Kind": "real",
+      "Projection": "lepton_setting_1",
+      "Local": -1.7672948426800922e-06,
+      "MadGraph": 1.7672948426800892e-06,
+      "Difference": 3.5345896853601815e-06,
+      "RelativeDifference": 1.9999999999999982,
+      "Tolerance": 1.7672948426900922e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_05",
+      "Kind": "real",
+      "Projection": "lepton_setting_2",
+      "Local": -9.268316222680274e-06,
+      "MadGraph": 9.268316222680252e-06,
+      "Difference": 1.8536632445360527e-05,
+      "RelativeDifference": 1.9999999999999978,
+      "Tolerance": 9.268316222690274e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_06",
+      "Kind": "real",
+      "Projection": "lepton_setting_1",
+      "Local": -1.778641292044707e-05,
+      "MadGraph": 1.7786412920445204e-05,
+      "Difference": 3.557282584089227e-05,
+      "RelativeDifference": 1.9999999999998948,
+      "Tolerance": 1.778641292045707e-13,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_06",
+      "Kind": "real",
+      "Projection": "lepton_setting_2",
+      "Local": -0.00012316245631101898,
+      "MadGraph": 0.00012316245631100576,
+      "Difference": 0.00024632491262202474,
+      "RelativeDifference": 1.9999999999998925,
+      "Tolerance": 1.2316245631102898e-12,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_07",
+      "Kind": "real",
+      "Projection": "lepton_setting_1",
+      "Local": -1.474810285694098e-06,
+      "MadGraph": 1.474810285694154e-06,
+      "Difference": 2.949620571388252e-06,
+      "RelativeDifference": 1.9999999999999618,
+      "Tolerance": 1.474810285704154e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_07",
+      "Kind": "real",
+      "Projection": "lepton_setting_2",
+      "Local": -9.505561709139916e-06,
+      "MadGraph": 9.5055617091401e-06,
+      "Difference": 1.9011123418280016e-05,
+      "RelativeDifference": 1.9999999999999807,
+      "Tolerance": 9.5055617091501e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_08",
+      "Kind": "real",
+      "Projection": "lepton_setting_1",
+      "Local": -1.7992373688983607e-06,
+      "MadGraph": 1.7992373688988153e-06,
+      "Difference": 3.5984747377971763e-06,
+      "RelativeDifference": 1.9999999999997475,
+      "Tolerance": 1.7992373689088154e-14,
+      "WithinTolerance": false
+    },
+    {
+      "ID": "real_08",
+      "Kind": "real",
+      "Projection": "lepton_setting_2",
+      "Local": -1.0031573308626143e-05,
+      "MadGraph": 1.003157330863351e-05,
+      "Difference": 2.0063146617259655e-05,
+      "RelativeDifference": 1.9999999999992657,
+      "Tolerance": 1.0031573308643511e-13,
+      "WithinTolerance": false
+    }
+  ]
+}

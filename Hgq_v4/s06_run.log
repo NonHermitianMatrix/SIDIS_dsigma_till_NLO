@@ -1,0 +1,55 @@
+MONITOR_START job=14687759 host=n6442 kernel_pid=6654
+"PASS: ""accepted angular basis exists"
+"PASS: ""S05 source identity"
+"PASS: ""previous angular source identity"
+"PASS: ""prior checkpoints exclude the corrected IBP branch"
+"Unchanged angular checkpoints eligible for reuse: "80
+"PASS: ""previous postprocessing source identity"
+"Required angular masters: "83
+"Hypergeometric Gamma factor "1"/"5
+"Hypergeometric Gamma factor "2"/"5
+"Hypergeometric Gamma factor "3"/"5
+"Hypergeometric Gamma factor "4"/"5
+"Hypergeometric Gamma factor "5"/"5
+"Hypergeometric series coefficients: "InputForm[{0, 0, n^(-2)}]
+"PASS: ""generated hypergeometric expansion satisfies its defining equation"
+"Parallel budget inputs: "InputForm[{8, 1, Infinity}]
+"PASS: ""angular workers share compute node and runtime"
+"Angular worker count = "8
+"From remote kernel:"
+"\"Angular master \"InputForm[{\"ML\", 2, -6}]\"; memory = \"38398664\n"
+"From remote kernel:"
+"\"PASS: \"\"azimuth integration leaves a polar polynomial\"\n"
+"From remote kernel:"
+"\"PASS: \"\"polar polynomial division reconstructs its numerator\"\n"
+"From remote kernel:"
+"\"Single massive polar integral, coefficient \"0\n"
+"From remote kernel:"
+"\"PASS: \"\"polar logarithm splits in its integration domain\"\n"
+MONITOR_HEARTBEAT elapsed=30s rss=1367.3MiB peak=1370.1MiB
+"From remote kernel:"
+"\"Single massive polar integral, coefficient \"1\n"
+"From remote kernel:"
+"\"PASS: \"\"polar logarithm splits in its integration domain\"\n"
+MONITOR_HEARTBEAT elapsed=60s rss=1381.0MiB peak=1381.0MiB
+"From remote kernel:"
+"\"PASS: \"\"log integral maps exactly to the linear template\"\n"
+"From remote kernel:"
+"\"PASS: \"\"linear template is used in its real domain\"\n"
+"From remote kernel:"
+"\"PASS: \"\"log integral maps exactly to the linear template\"\n"
+"From remote kernel:"
+"\"PASS: \"\"linear template is used in its real domain\"\n"
+"From remote kernel:"
+"\"PASS: \"\"single polar integral evaluated\"\n"
+"From remote kernel:"
+"\"PASS: \"\"angular coefficient factoring reconstructs its input\"\n"
+"From remote kernel:"
+"\"PASS: \"\"angular coefficient factoring reconstructs its input\"\n"
+"From remote kernel:"
+"\"PASS: \"\"angular integral fully evaluated\"\n"
+"From remote kernel:"
+"\"PASS: \"\"at most a single angular pole\"\n"
+"PASS: ""all requested angular masters completed"
+"S06_SUCCESS; peak memory = "255511072" bytes."
+MONITOR_WAKE {"stage": "s06", "source": "s06_angular_integrals.wl", "source_sha256": "362e2874c538ca3056c9ca44def30a47c26d0bcd41cd51f6eb9659b58b49bbf5", "job_id": "14687759", "host": "n6442", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 1456160768, "elapsed_seconds": 70.44479719176888, "completed_utc": "2026-09-06T10:07:41.577849+00:00"}

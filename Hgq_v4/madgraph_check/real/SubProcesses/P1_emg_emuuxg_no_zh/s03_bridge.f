@@ -1,0 +1,21 @@
+      SUBROUTINE HGQ_INIT(EEOUT,GSOUT,QUOUT,QEOUT)
+     & BIND(C,NAME='hgq_init')
+      USE ISO_C_BINDING
+      IMPLICIT NONE
+      INCLUDE 'coupl.inc'
+      INCLUDE 'input.inc'
+      REAL(C_DOUBLE), INTENT(OUT) :: EEOUT,GSOUT,QUOUT,QEOUT
+      CALL SETPARA('param_card.dat')
+      EEOUT=DBLE(MDL_EE)
+      GSOUT=G
+      QUOUT=ABS(GC_2/MDL_EE)
+      QEOUT=ABS(GC_3/MDL_EE)
+      END
+      SUBROUTINE HGQ_MATRIX(P,ANS) BIND(C,NAME='hgq_matrix')
+      USE ISO_C_BINDING
+      IMPLICIT NONE
+      INCLUDE 'nexternal.inc'
+      REAL(C_DOUBLE), INTENT(IN) :: P(0:3,NEXTERNAL)
+      REAL(C_DOUBLE), INTENT(OUT) :: ANS
+      CALL SMATRIX(P,ANS)
+      END

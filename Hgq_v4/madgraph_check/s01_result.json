@@ -1,0 +1,95 @@
+{
+  "Channel": "Hgq",
+  "Inputs": {
+    "s02_born_and_projectors.wl": {
+      "sha256": "4cdd00d8d5049eb190fb6b3e11a856b507083f9e7ab51713b912df3723f272e1",
+      "bytes": 8315
+    },
+    "s02_result.wl": {
+      "sha256": "81da52572b7ee1ae58a9002f54335ae22425859c69d090a284d0b3c7233973da",
+      "bytes": 2561
+    },
+    "s01_generate_amplitudes.wl": {
+      "sha256": "bd03ca4e615f35e19a470fcb3d317b6484f46fed71e1729cd393cecbd3655c6b",
+      "bytes": 6041
+    },
+    "s01_result.wl": {
+      "sha256": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+      "bytes": 559102
+    },
+    "s03_contract_real.wl": {
+      "sha256": "32aa8407bc8d87c63231bc295f09431ee9f168c428f08bc6c52683ddef097225",
+      "bytes": 6625
+    },
+    "s03_result.wl": {
+      "sha256": "286b9586de2bec744667421d4b16d1081a0df6e18fda0e328918c46b1dbd0649",
+      "bytes": 256966
+    },
+    "s10_final_hats.wl": {
+      "sha256": "809627572423ddd23376e625c19ca80d01023143ca3224891f9bd2db2fbdda62",
+      "bytes": 13720
+    },
+    "s10_result.wl": {
+      "sha256": "575ea96993eb9a86cfeddb6e10d61c0147e3bf74d35bc25eaf3dbb03fceb9bfe",
+      "bytes": 17601946
+    }
+  },
+  "Software": {
+    "Version": "version = 3.7.0\ndate = 2026-01-05\n",
+    "ExecutableSHA256": "d51e70db5c95fb72df985760819a0733c9bdb2401de3b27995d53788d2050a74",
+    "SixSHA256": "c51c91f703d3d4b3696c923cb5fec213e05e75d9215393befac7f2fa6a3904df",
+    "SourceKind": "Generic MadGraph software; no channel process reused"
+  },
+  "Particles": {
+    "e-": {
+      "spin": 2,
+      "mass": "ZERO",
+      "name": "e-",
+      "pdg_code": -11,
+      "color": 1,
+      "charge": 1.0,
+      "helicities": [
+        1,
+        -1
+      ]
+    },
+    "u": {
+      "spin": 2,
+      "mass": "ZERO",
+      "name": "u",
+      "pdg_code": -2,
+      "color": -3,
+      "charge": -0.6666666666666666,
+      "helicities": [
+        1,
+        -1
+      ]
+    },
+    "u~": {
+      "spin": 2,
+      "mass": "ZERO",
+      "name": "u~",
+      "pdg_code": -2,
+      "color": -3,
+      "charge": -0.6666666666666666,
+      "helicities": [
+        1,
+        -1
+      ]
+    },
+    "g": {
+      "spin": 3,
+      "mass": "ZERO",
+      "name": "g",
+      "pdg_code": 21,
+      "color": 8,
+      "charge": 0.0,
+      "helicities": [
+        -1,
+        1
+      ]
+    }
+  },
+  "SourceSHA256": "ea28500e0aecccc46740aae821430f969ea4bc847027f508174b12460af43804",
+  "GeneratorCommandsSHA256": "2ef64cfa9a8d02585a7f3f715ed9cc5bbd4dcbb41399be3c8283cc56507e5f76"
+}

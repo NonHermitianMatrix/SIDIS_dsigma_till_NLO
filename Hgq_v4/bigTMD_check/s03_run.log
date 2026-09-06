@@ -1,0 +1,115 @@
+MONITOR_START job=14688024 host=n7404 kernel_pid=69132
+PASS: completed Hgq export
+PASS: S02 source
+PASS: frozen s02_born_and_projectors.wl
+PASS: frozen s02_result.wl
+PASS: frozen s10_final_hats.wl
+PASS: frozen s10_result.wl
+PASS: pinned symbolic reference
+PASS: reference metadata
+PASS: pinned BigTMD commit
+PASS: published driver
+PASS: Hgq channel-1A Pg
+PASS: Hgq channel-1A Ppp
+PASS: complete Hgq interior inputs
+PASS: complete Hgq coefficient inputs
+EVALUATE published Hgq: interior_1
+PASS: strictly interior recoil
+PASS: Pg regular finite
+PASS: Pg regular real
+PASS: Pg plus1B finite
+PASS: Pg plus1B real
+PASS: Pg plus2B finite
+PASS: Pg plus2B real
+PASS: Pg density finite
+PASS: Pg density real
+PASS: Ppp regular finite
+PASS: Ppp regular real
+PASS: Ppp plus1B finite
+PASS: Ppp plus1B real
+PASS: Ppp plus2B finite
+PASS: Ppp plus2B real
+PASS: Ppp density finite
+PASS: Ppp density real
+PASS: interior_1 F1 finite
+PASS: interior_1 F1 real
+PASS: interior_1 F2 finite
+PASS: interior_1 F2 real
+EVALUATE published Hgq: interior_2
+PASS: strictly interior recoil
+PASS: Pg regular finite
+PASS: Pg regular real
+PASS: Pg plus1B finite
+PASS: Pg plus1B real
+PASS: Pg plus2B finite
+PASS: Pg plus2B real
+PASS: Pg density finite
+PASS: Pg density real
+PASS: Ppp regular finite
+PASS: Ppp regular real
+PASS: Ppp plus1B finite
+PASS: Ppp plus1B real
+PASS: Ppp plus2B finite
+PASS: Ppp plus2B real
+PASS: Ppp density finite
+PASS: Ppp density real
+PASS: interior_2 F1 finite
+PASS: interior_2 F1 real
+PASS: interior_2 F2 finite
+PASS: interior_2 F2 real
+EVALUATE published Hgq: interior_3
+PASS: strictly interior recoil
+PASS: Pg regular finite
+PASS: Pg regular real
+PASS: Pg plus1B finite
+PASS: Pg plus1B real
+PASS: Pg plus2B finite
+PASS: Pg plus2B real
+PASS: Pg density finite
+PASS: Pg density real
+PASS: Ppp regular finite
+PASS: Ppp regular real
+PASS: Ppp plus1B finite
+PASS: Ppp plus1B real
+PASS: Ppp plus2B finite
+PASS: Ppp plus2B real
+PASS: Ppp density finite
+PASS: Ppp density real
+PASS: interior_3 F1 finite
+PASS: interior_3 F1 real
+PASS: interior_3 F2 finite
+PASS: interior_3 F2 real
+PASS: direct comparison coverage
+PASS: coefficient comparison coverage
+PASS: all reported comparisons finite
+PASS: completed Hgq export
+PASS: S02 source
+PASS: frozen s02_born_and_projectors.wl
+PASS: frozen s02_result.wl
+PASS: frozen s10_final_hats.wl
+PASS: frozen s10_result.wl
+PASS: pinned symbolic reference
+PASS: reference metadata
+PASS: published Pg unchanged
+PASS: published Ppp unchanged
+PASS: new output s03_result.json
+PASS: new output bigtmd_minus_local.md
+{
+  "DirectInteriorCount": 6,
+  "CanonicalCoefficientCount": 30,
+  "AllDirectInteriorWithinTolerance": true,
+  "AllCanonicalCoefficientsWithinTolerance": true,
+  "CanonicalAgreementByPart": {
+    "Born": true,
+    "Delta": true,
+    "L0": true,
+    "L1": true,
+    "Regular": true
+  },
+  "PublishedPythonVsReconstructionWithinTolerance": true,
+  "MaximumDirectInteriorRelativeDifference": 2.5726226389472912e-14,
+  "MaximumCanonicalAbsoluteDifference": 0.0,
+  "MaximumCanonicalRelativeDifference": 0.0
+}
+HGQ_BIGTMD_S03_SUCCESS
+MONITOR_WAKE {"stage": "s03", "source": "s03_compare_bigtmd_fhat.py", "source_sha256": "74fd1d8757a9d2e72f20eb6c68de74a924a36b13df1c971465982a755fd2c937", "job_id": "14688024", "host": "n7404", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 112680960, "elapsed_seconds": 4.77239690348506, "completed_utc": "2026-09-06T13:55:05.599775+00:00"}

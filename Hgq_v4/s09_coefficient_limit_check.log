@@ -1,0 +1,17 @@
+"PASS ""saved branch identified"
+"PASS ""one mixed denominator is massive"
+"MASTER DATA "InputForm[{{"Pg", 65}, {"ML", 1, 2}, -1}]
+"MASSIVE ENDPOINT "InputForm[1 + (2*Q2)/omega]
+"PASS ""massive endpoint is finite and separated"
+"PASS ""mixed master with an angular endpoint"
+"PASS ""angular approach direction derived"
+"BEGIN ALGEBRAIC PREFACTOR SERIES"
+"PREFACTOR SERIES HEAD "SeriesData
+"PREFACTOR SERIES RANGE "InputForm[{0, 1, 1}]
+"COEFFICIENT START "-1" leaves "22
+"COEFFICIENT LIMIT "-1" "InputForm[Pi/(-1 - d)^3 + (d*Pi)/(-1 - d)^3]
+"COEFFICIENT START "0" leaves "115
+"COEFFICIENT LIMIT "0" "InputForm[Pi/(-1 - d)^3 + (2*d*Pi)/(-1 - d)^3 + (d^2*Pi)/(-1 - d)^3 - (2*Pi*Log[1 + d])/(-1 - d)^3 - (2*d*Pi*Log[1 + d])/(-1 - d)^3 + (Pi*Log[-1 + d^2])/(-1 - d)^3 + (d*Pi*Log[-1 + d^2])/(-1 - d)^3]
+"COEFFICIENT START "1" leaves "1009
+"COEFFICIENT LIMIT "1" "InputForm[Infinity*(2*ArcCoth[d] + Log[(-1 + d)/(1 + d)])]
+"CHECK_DONE"
