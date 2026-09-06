@@ -1,0 +1,122 @@
+PASS: completed Hqg export
+PASS: S01 source
+PASS: frozen s12_final_hats.wl
+PASS: frozen s12_result.wl
+PASS: frozen s12_poles.wl
+PASS: frozen s02_result.wl
+PASS: frozen s09_result.wl
+PASS: frozen s10_result.wl
+PASS: frozen s11_result.wl
+PASS: Hqg S13 map
+PASS: corrected author endpoints
+PASS: author metadata
+PASS: pinned BigTMD commit
+PASS: published driver
+PASS: Hqg channel-3A Pg
+PASS: Hqg channel-3A Ppp
+PASS: complete Hqg interior inputs
+PASS: complete Hqg coefficient inputs
+EVALUATE published Hqg: interior_1
+PASS: strictly interior recoil
+PASS: Pg regular finite
+PASS: Pg regular real
+PASS: Pg plus1B finite
+PASS: Pg plus1B real
+PASS: Pg plus2B finite
+PASS: Pg plus2B real
+PASS: Pg density finite
+PASS: Pg density real
+PASS: Ppp regular finite
+PASS: Ppp regular real
+PASS: Ppp plus1B finite
+PASS: Ppp plus1B real
+PASS: Ppp plus2B finite
+PASS: Ppp plus2B real
+PASS: Ppp density finite
+PASS: Ppp density real
+PASS: interior_1 F1 finite
+PASS: interior_1 F1 real
+PASS: interior_1 F2 finite
+PASS: interior_1 F2 real
+EVALUATE published Hqg: interior_2
+PASS: strictly interior recoil
+PASS: Pg regular finite
+PASS: Pg regular real
+PASS: Pg plus1B finite
+PASS: Pg plus1B real
+PASS: Pg plus2B finite
+PASS: Pg plus2B real
+PASS: Pg density finite
+PASS: Pg density real
+PASS: Ppp regular finite
+PASS: Ppp regular real
+PASS: Ppp plus1B finite
+PASS: Ppp plus1B real
+PASS: Ppp plus2B finite
+PASS: Ppp plus2B real
+PASS: Ppp density finite
+PASS: Ppp density real
+PASS: interior_2 F1 finite
+PASS: interior_2 F1 real
+PASS: interior_2 F2 finite
+PASS: interior_2 F2 real
+EVALUATE published Hqg: interior_3
+PASS: strictly interior recoil
+PASS: Pg regular finite
+PASS: Pg regular real
+PASS: Pg plus1B finite
+PASS: Pg plus1B real
+PASS: Pg plus2B finite
+PASS: Pg plus2B real
+PASS: Pg density finite
+PASS: Pg density real
+PASS: Ppp regular finite
+PASS: Ppp regular real
+PASS: Ppp plus1B finite
+PASS: Ppp plus1B real
+PASS: Ppp plus2B finite
+PASS: Ppp plus2B real
+PASS: Ppp density finite
+PASS: Ppp density real
+PASS: interior_3 F1 finite
+PASS: interior_3 F1 real
+PASS: interior_3 F2 finite
+PASS: interior_3 F2 real
+PASS: direct comparison coverage
+PASS: coefficient comparison coverage
+PASS: all reported comparisons finite
+PASS: completed Hqg export
+PASS: S01 source
+PASS: frozen s12_final_hats.wl
+PASS: frozen s12_result.wl
+PASS: frozen s12_poles.wl
+PASS: frozen s02_result.wl
+PASS: frozen s09_result.wl
+PASS: frozen s10_result.wl
+PASS: frozen s11_result.wl
+PASS: Hqg S13 map
+PASS: corrected author endpoints
+PASS: author metadata
+PASS: published Pg unchanged
+PASS: published Ppp unchanged
+PASS: new output bigtmd_fhat_benchmarks.json
+PASS: new output bigtmd_minus_local.json
+PASS: new output bigtmd_minus_local.md
+{
+  "DirectInteriorCount": 6,
+  "CanonicalCoefficientCount": 30,
+  "AllDirectInteriorWithinTolerance": true,
+  "AllCanonicalCoefficientsWithinTolerance": false,
+  "CanonicalAgreementByPart": {
+    "Born": true,
+    "Delta": false,
+    "L0": true,
+    "L1": true,
+    "Regular": true
+  },
+  "PublishedPythonVsReconstructionWithinTolerance": true,
+  "MaximumDirectInteriorRelativeDifference": 3.936281969040938e-15,
+  "MaximumCanonicalAbsoluteDifference": 1.2116352070662186e-05,
+  "MaximumCanonicalRelativeDifference": 0.21733497173147623
+}
+HQG_BIGTMD_S02_SUCCESS

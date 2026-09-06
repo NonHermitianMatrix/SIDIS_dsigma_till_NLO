@@ -1,0 +1,121 @@
+{
+  "Channel": "Hqg",
+  "AuthorTree": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+  "SourceHashes": {
+    "sidis.py": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+    "Pg": "ad094998332145c636303e1694bd69b3414ecce5405afd5031a6c4931aec7329",
+    "Ppp": "cc1519c415f0540207c86512581d35af005c1a861d233817163b3cf6f81fe1d9"
+  },
+  "RawProjectors": [
+    {
+      "Benchmark": "interior_1",
+      "Projector": "Pg",
+      "Regular": 0.0013799122601459689,
+      "Plus1B": 0.02863290302028589,
+      "Plus2B": -0.010744185879817693,
+      "OrdinaryDensityBeforeJacobian": 0.002637906586156668
+    },
+    {
+      "Benchmark": "interior_1",
+      "Projector": "Ppp",
+      "Regular": 0.0024198482417462307,
+      "Plus1B": -0.09720866986449234,
+      "Plus2B": 0.02750561151775205,
+      "OrdinaryDensityBeforeJacobian": -0.004412506195459435
+    },
+    {
+      "Benchmark": "interior_2",
+      "Projector": "Pg",
+      "Regular": 0.0012574456042306454,
+      "Plus1B": 0.025753792109678198,
+      "Plus2B": -0.008903196321004848,
+      "OrdinaryDensityBeforeJacobian": 0.0014741897141693566
+    },
+    {
+      "Benchmark": "interior_2",
+      "Projector": "Ppp",
+      "Regular": 0.0025070967881210236,
+      "Plus1B": -0.20789385037628333,
+      "Plus2B": 0.04728129163920133,
+      "OrdinaryDensityBeforeJacobian": -0.004068787820378467
+    },
+    {
+      "Benchmark": "interior_3",
+      "Projector": "Pg",
+      "Regular": 0.006674630774680692,
+      "Plus1B": 0.02497405382334856,
+      "Plus2B": -0.012380540642671984,
+      "OrdinaryDensityBeforeJacobian": 0.0060786214364836385
+    },
+    {
+      "Benchmark": "interior_3",
+      "Projector": "Ppp",
+      "Regular": 0.003772886689285902,
+      "Plus1B": -0.33672734010005095,
+      "Plus2B": 0.0737982013461105,
+      "OrdinaryDensityBeforeJacobian": -0.0035765174321598877
+    }
+  ],
+  "FHatInteriorRows": [
+    {
+      "Benchmark": "interior_1",
+      "Function": "F1",
+      "Local": -3.487164161625016e-05,
+      "BigTMD": -3.487164161625025e-05,
+      "Difference": -8.809142651444724e-20,
+      "RelativeDifference": 2.526162303566359e-15,
+      "Tolerance": 1.0348716416162503e-10,
+      "WithinTolerance": true
+    },
+    {
+      "Benchmark": "interior_1",
+      "Function": "F2",
+      "Local": -2.908352781751245e-05,
+      "BigTMD": -2.9083527817512505e-05,
+      "Difference": -5.421010862427522e-20,
+      "RelativeDifference": 1.863945425205015e-15,
+      "Tolerance": 1.0290835278175125e-10,
+      "WithinTolerance": true
+    },
+    {
+      "Benchmark": "interior_2",
+      "Function": "F1",
+      "Local": -7.777789041549978e-06,
+      "BigTMD": -7.777789041549951e-06,
+      "Difference": 2.710505431213761e-20,
+      "RelativeDifference": 3.4849305075438306e-15,
+      "Tolerance": 1.00777778904155e-10,
+      "WithinTolerance": true
+    },
+    {
+      "Benchmark": "interior_2",
+      "Function": "F2",
+      "Local": -4.3037208915228045e-06,
+      "BigTMD": -4.3037208915227875e-06,
+      "Difference": 1.6940658945086007e-20,
+      "RelativeDifference": 3.936281969040938e-15,
+      "Tolerance": 1.0043037208915229e-10,
+      "WithinTolerance": true
+    },
+    {
+      "Benchmark": "interior_3",
+      "Function": "F1",
+      "Local": -5.4547507886676195e-05,
+      "BigTMD": -5.4547507886676005e-05,
+      "Difference": 1.8973538018496328e-19,
+      "RelativeDifference": 3.478351028962556e-15,
+      "Tolerance": 1.0545475078866762e-10,
+      "WithinTolerance": true
+    },
+    {
+      "Benchmark": "interior_3",
+      "Function": "F2",
+      "Local": -4.386616270395513e-05,
+      "BigTMD": -4.3866162703955015e-05,
+      "Difference": 1.1519648082658485e-19,
+      "RelativeDifference": 2.6260897631740723e-15,
+      "Tolerance": 1.0438661627039552e-10,
+      "WithinTolerance": true
+    }
+  ]
+}

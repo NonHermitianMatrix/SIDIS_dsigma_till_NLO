@@ -1,0 +1,9 @@
+set automatic_html_opening False
+set auto_update 0
+set nb_core 1
+import model sm
+generate e- u > e- u g / z h QED=2 QCD=1
+output standalone /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg_v3/madgraph_check/born
+generate e- u > e- u g g / z h QED=2 QCD=2
+output standalone /home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg_v3/madgraph_check/real
+quit

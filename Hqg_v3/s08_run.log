@@ -1,0 +1,44 @@
+"PASS: ""accepted angular basis exists"
+"Required angular masters: "81
+"Hypergeometric Gamma factor "1"/"5
+"Hypergeometric Gamma factor "2"/"5
+"Hypergeometric Gamma factor "3"/"5
+"Hypergeometric Gamma factor "4"/"5
+"Hypergeometric Gamma factor "5"/"5
+"Hypergeometric series coefficients: "InputForm[{0, 0, n^(-2)}]
+"PASS: ""generated hypergeometric expansion satisfies its defining equation"
+"Angular master "InputForm[{"ML", 1, 2}]"; memory = "123006024
+"Deriving angular integration by parts for "1","1
+"PASS: ""polar integration-by-parts boundary terms vanish"
+"PASS: ""polar total derivative reduces to angular monomials"
+"PASS: ""integration-by-parts relation reconstructs its defining integrand"
+"PASS: ""integration-by-parts relation isolates the requested master"
+"PASS: ""azimuth integration leaves a polar polynomial"
+"PASS: ""azimuth integration leaves a polar polynomial"
+
+                                                                                             1
+Series::ztest1: Unable to decide whether numeric quantity EulerGamma + Log[4] + PolyGamma[0, -] is equal to zero. Assuming it is.
+                                                                                             2
+"PASS: ""angular integral fully evaluated"
+"PASS: ""at most a single angular pole"
+"Angular master "InputForm[{"ML", 2, 2}]"; memory = "182846112
+
+                                                                                                            1
+Series::ztest1: Unable to decide whether numeric quantity 2 EulerGamma Pi + 2 Pi Log[4] + 2 Pi PolyGamma[0, -] is equal to zero. Assuming it is.
+                                                                                                            2
+"PASS: ""angular integral fully evaluated"
+"PASS: ""at most a single angular pole"
+"Angular master "InputForm[{"ML", 2, -5}]"; memory = "253290944
+"PASS: ""azimuth integration leaves a polar polynomial"
+"Single massive polar integral, coefficient "0
+"PASS: ""polar logarithm splits in its integration domain"
+"Single massive polar integral, coefficient "1
+"PASS: ""polar logarithm splits in its integration domain"
+"PASS: ""log integral maps exactly to the linear template"
+"PASS: ""linear template is used in its real domain"
+"PASS: ""log integral maps exactly to the linear template"
+"PASS: ""linear template is used in its real domain"
+"PASS: ""single polar integral evaluated"
+"PASS: ""angular integral fully evaluated"
+"PASS: ""at most a single angular pole"
+"Wrote s08_result.wl; peak memory = "324170240" bytes."

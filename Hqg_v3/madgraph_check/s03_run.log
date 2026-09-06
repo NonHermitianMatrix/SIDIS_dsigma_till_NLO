@@ -1,0 +1,1030 @@
+/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqg_v3/madgraph_check/s03_sample_madgraph.py:27: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+  gamma = [np.array(mgamma(i)).astype(complex) for i in range(eta.shape[0])]
+PASS: unique lepton mass-shell map
+PASS: lepton map reconstructs defining constraints
+PASS: exact azimuth quadrature (2, 0)
+PASS: exact azimuth quadrature (1, 1)
+PASS: exact azimuth quadrature (1, 0)
+PASS: exact azimuth quadrature (0, 2)
+PASS: exact azimuth quadrature (0, 1)
+PASS: exact azimuth quadrature (0, 0)
+PASS: born single subprocess
+PASS: born leg ordering
+PASS: born final species
+PASS: born generated spin/color/symmetry denominator
+PASS: born tagged-gluon normalization
+PASS: born massless generated external states
+PASS: born runtime couplings
+PASS: born generated quark charge
+PASS: born generated electron charge
+PASS: born direct-driver precision format
+s03_direct_check.f:241:132:
+
+  241 |   101 Z(K)=Z(K-1)+PO2LOG-2.*LOG(DFLOAT(K-2))
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 101 at (1)
+s03_direct_check.f:243:132:
+
+  243 |   102 Z(K)=(Z(K)-LOG(DFLOAT(K-1)))
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 102 at (1)
+s03_direct_check.f:255:132:
+
+  255 |   105 XMT=XMT+ABS(XM(I))
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 105 at (1)
+s03_direct_check.f:273:132:
+
+  273 |   202 Q(1,I)=Q(4,I)*S*SIN(F)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 202 at (1)
+s03_direct_check.f:277:132:
+
+  277 |   203 R(I)=0.
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 203 at (1)
+s03_direct_check.f:279:132:
+
+  279 |       DO 204 K=1,4
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 204 at (1)
+s03_direct_check.f:280:132:
+
+  280 |   204 R(K)=R(K)+Q(K,I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 204 at (1)
+s03_direct_check.f:283:132:
+
+  283 |   205 B(K)=-R(K)/RMAS
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 205 at (1)
+s03_direct_check.f:292:132:
+
+  292 |   206 P(K,I)=X*(Q(K,I)+B(K)*(Q(4,I)+A*BQ))
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 206 at (1)
+s03_direct_check.f:293:132:
+
+  293 |   207 P(4,I)=X*(G*Q(4,I)+BQ)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 207 at (1)
+s03_direct_check.f:315:132:
+
+  315 |   301 P2(I)=P(4,I)**2
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 301 at (1)
+s03_direct_check.f:325:132:
+
+  325 |   303 G0=G0+P2(I)/E(I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 303 at (1)
+s03_direct_check.f:336:132:
+
+  336 |   306 P(K,I)=X*P(K,I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 306 at (1)
+s03_direct_check.f:337:132:
+
+  337 |   307 P(4,I)=E(I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 307 at (1)
+s03_direct_check.f:344:132:
+
+  344 |   308 WT3=WT3+V(I)**2/E(I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 308 at (1)
+PASS: born direct-driver momentum coverage
+PASS: born finite positive matrix element
+PASS: born direct/bridge equality
+PASS: born finite sampling budget
+PASS: born base conservation
+PASS: born base masslessness
+PASS: born base positive energies
+PASS: born transverse lepton norm
+PASS: born transverse basis
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born independent lepton settings
+SAMPLE born_01
+PASS: born finite sampling budget
+PASS: born base conservation
+PASS: born base masslessness
+PASS: born base positive energies
+PASS: born transverse lepton norm
+PASS: born transverse basis
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born independent lepton settings
+SAMPLE born_02
+PASS: born finite sampling budget
+PASS: born finite sampling budget
+PASS: born base conservation
+PASS: born base masslessness
+PASS: born base positive energies
+PASS: born transverse lepton norm
+PASS: born transverse basis
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born independent lepton settings
+SAMPLE born_03
+PASS: born finite sampling budget
+PASS: born base conservation
+PASS: born base masslessness
+PASS: born base positive energies
+PASS: born transverse lepton norm
+PASS: born transverse basis
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born independent lepton settings
+SAMPLE born_04
+PASS: born finite sampling budget
+PASS: born base conservation
+PASS: born base masslessness
+PASS: born base positive energies
+PASS: born transverse lepton norm
+PASS: born transverse basis
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born independent lepton settings
+SAMPLE born_05
+PASS: born finite sampling budget
+PASS: born base conservation
+PASS: born base masslessness
+PASS: born base positive energies
+PASS: born transverse lepton norm
+PASS: born transverse basis
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born independent lepton settings
+SAMPLE born_06
+PASS: born finite sampling budget
+PASS: born base conservation
+PASS: born base masslessness
+PASS: born base positive energies
+PASS: born transverse lepton norm
+PASS: born transverse basis
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born independent lepton settings
+SAMPLE born_07
+PASS: born finite sampling budget
+PASS: born finite sampling budget
+PASS: born base conservation
+PASS: born base masslessness
+PASS: born base positive energies
+PASS: born transverse lepton norm
+PASS: born transverse basis
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born alternative lepton kinematics
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born rotated conservation
+PASS: born rotated masslessness
+PASS: born rotated positive energies
+PASS: lepton trace is real
+PASS: born finite positive matrix element
+PASS: born averaged lepton projector decomposition
+PASS: born independent lepton settings
+SAMPLE born_08
+PASS: real single subprocess
+PASS: real leg ordering
+PASS: real final species
+PASS: real generated spin/color/symmetry denominator
+PASS: real tagged-gluon normalization
+PASS: real massless generated external states
+PASS: real runtime couplings
+PASS: real generated quark charge
+PASS: real generated electron charge
+PASS: real direct-driver precision format
+s03_direct_check.f:241:132:
+
+  241 |   101 Z(K)=Z(K-1)+PO2LOG-2.*LOG(DFLOAT(K-2))
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 101 at (1)
+s03_direct_check.f:243:132:
+
+  243 |   102 Z(K)=(Z(K)-LOG(DFLOAT(K-1)))
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 102 at (1)
+s03_direct_check.f:255:132:
+
+  255 |   105 XMT=XMT+ABS(XM(I))
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 105 at (1)
+s03_direct_check.f:273:132:
+
+  273 |   202 Q(1,I)=Q(4,I)*S*SIN(F)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 202 at (1)
+s03_direct_check.f:277:132:
+
+  277 |   203 R(I)=0.
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 203 at (1)
+s03_direct_check.f:279:132:
+
+  279 |       DO 204 K=1,4
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 204 at (1)
+s03_direct_check.f:280:132:
+
+  280 |   204 R(K)=R(K)+Q(K,I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 204 at (1)
+s03_direct_check.f:283:132:
+
+  283 |   205 B(K)=-R(K)/RMAS
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 205 at (1)
+s03_direct_check.f:292:132:
+
+  292 |   206 P(K,I)=X*(Q(K,I)+B(K)*(Q(4,I)+A*BQ))
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 206 at (1)
+s03_direct_check.f:293:132:
+
+  293 |   207 P(4,I)=X*(G*Q(4,I)+BQ)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 207 at (1)
+s03_direct_check.f:315:132:
+
+  315 |   301 P2(I)=P(4,I)**2
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 301 at (1)
+s03_direct_check.f:325:132:
+
+  325 |   303 G0=G0+P2(I)/E(I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 303 at (1)
+s03_direct_check.f:336:132:
+
+  336 |   306 P(K,I)=X*P(K,I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 306 at (1)
+s03_direct_check.f:337:132:
+
+  337 |   307 P(4,I)=E(I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 307 at (1)
+s03_direct_check.f:344:132:
+
+  344 |   308 WT3=WT3+V(I)**2/E(I)
+      |                                                                                                                                    1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 308 at (1)
+PASS: real direct-driver momentum coverage
+PASS: real finite positive matrix element
+PASS: real direct/bridge equality
+PASS: real finite sampling budget
+PASS: real base conservation
+PASS: real base masslessness
+PASS: real base positive energies
+PASS: real transverse lepton norm
+PASS: real transverse basis
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real independent lepton settings
+SAMPLE real_01
+PASS: real finite sampling budget
+PASS: real finite sampling budget
+PASS: real base conservation
+PASS: real base masslessness
+PASS: real base positive energies
+PASS: real transverse lepton norm
+PASS: real transverse basis
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real independent lepton settings
+SAMPLE real_02
+PASS: real finite sampling budget
+PASS: real finite sampling budget
+PASS: real base conservation
+PASS: real base masslessness
+PASS: real base positive energies
+PASS: real transverse lepton norm
+PASS: real transverse basis
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real independent lepton settings
+SAMPLE real_03
+PASS: real finite sampling budget
+PASS: real finite sampling budget
+PASS: real finite sampling budget
+PASS: real base conservation
+PASS: real base masslessness
+PASS: real base positive energies
+PASS: real transverse lepton norm
+PASS: real transverse basis
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real independent lepton settings
+SAMPLE real_04
+PASS: real finite sampling budget
+PASS: real base conservation
+PASS: real base masslessness
+PASS: real base positive energies
+PASS: real transverse lepton norm
+PASS: real transverse basis
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real independent lepton settings
+SAMPLE real_05
+PASS: real finite sampling budget
+PASS: real finite sampling budget
+PASS: real base conservation
+PASS: real base masslessness
+PASS: real base positive energies
+PASS: real transverse lepton norm
+PASS: real transverse basis
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real independent lepton settings
+SAMPLE real_06
+PASS: real finite sampling budget
+PASS: real finite sampling budget
+PASS: real base conservation
+PASS: real base masslessness
+PASS: real base positive energies
+PASS: real transverse lepton norm
+PASS: real transverse basis
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real independent lepton settings
+SAMPLE real_07
+PASS: real finite sampling budget
+PASS: real base conservation
+PASS: real base masslessness
+PASS: real base positive energies
+PASS: real transverse lepton norm
+PASS: real transverse basis
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real alternative lepton kinematics
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real rotated conservation
+PASS: real rotated masslessness
+PASS: real rotated positive energies
+PASS: lepton trace is real
+PASS: real finite positive matrix element
+PASS: real averaged lepton projector decomposition
+PASS: real independent lepton settings
+SAMPLE real_08
+PASS: complete deterministic sample
+PASS: new sample result
+PASS: sample reload
+HQG_MADGRAPH_S03_SUCCESS

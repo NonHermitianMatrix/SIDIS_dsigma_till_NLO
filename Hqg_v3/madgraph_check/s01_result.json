@@ -1,0 +1,63 @@
+{
+  "Channel": "Hqg",
+  "Inputs": {
+    "s02_born_and_projectors.wl": {
+      "sha256": "1f7e937150f381159a4e1275b7884636b56f8106d3ab4939f1c0e95101cd5f32",
+      "bytes": 3435
+    },
+    "s02_result.wl": {
+      "sha256": "e76d3cc57bd11a3a14170a81456f050d054c88b948d682e39c69d83eccb486fb",
+      "bytes": 1009
+    },
+    "s04_generate_amplitudes.wl": {
+      "sha256": "b7d5c8c14887afda5fdedba0bcdc3563834b1fe4a75822c43f5c3c8b94fff5d2",
+      "bytes": 3181
+    },
+    "s04_result.wl": {
+      "sha256": "8403c287ed130c5db601069eb71ad2d6a7b2b851662dea716441c472bc10eba9",
+      "bytes": 568255
+    },
+    "s05_contract_real.wl": {
+      "sha256": "58d7024296a43684ec66162dac1fd76b5843083d20d566f6b0db82c0d2ef1a94",
+      "bytes": 6580
+    },
+    "s05_result.wl": {
+      "sha256": "bc1dc43674b42c271d37d559b9ef4031118bd04302bfbe201beb2696ef36d362",
+      "bytes": 294796
+    }
+  },
+  "Software": {
+    "Version": "version = 3.7.0\ndate = 2026-01-05\n",
+    "ExecutableSHA256": "d51e70db5c95fb72df985760819a0733c9bdb2401de3b27995d53788d2050a74",
+    "SixSHA256": "c51c91f703d3d4b3696c923cb5fec213e05e75d9215393befac7f2fa6a3904df",
+    "CopiedFrom": "/home/physics/projects/AI_Assisted_SIDIS/scripts/Hqqbar/madgraph_check/software/MG5_aMC_v3_7_0"
+  },
+  "Particles": {
+    "e-": {
+      "name": "e-",
+      "pdg_code": 11,
+      "spin": 2,
+      "color": 1,
+      "charge": -1.0,
+      "mass": "ZERO"
+    },
+    "u": {
+      "name": "u",
+      "pdg_code": 2,
+      "spin": 2,
+      "color": 3,
+      "charge": 0.6666666666666666,
+      "mass": "ZERO"
+    },
+    "g": {
+      "name": "g",
+      "pdg_code": 21,
+      "spin": 3,
+      "color": 8,
+      "charge": 0.0,
+      "mass": "ZERO"
+    }
+  },
+  "SourceSHA256": "d3af12ef603b5850717f906c000e38078a0a24b7e49ef06b6dadf19c2ea3fab1",
+  "GeneratorCommandsSHA256": "3d27e0469f067c163d4c31450bee88312bf0b418863a97d4318e2eeeb67c728c"
+}

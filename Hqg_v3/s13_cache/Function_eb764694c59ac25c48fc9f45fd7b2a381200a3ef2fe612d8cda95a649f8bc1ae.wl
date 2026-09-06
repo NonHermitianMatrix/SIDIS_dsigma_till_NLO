@@ -1,0 +1,8 @@
+<|"InputHash" -> 
+  172211121500154154231929379499740302130220082635721826437100262235151637083\
+28, "Function" -> Log[(1 - omega/(omega - 2*Q^2))^2], 
+ "Assumptions" -> Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && 
+   -omega + Q^2 > 0 && (-omega - s)*s < 0 && B > 0 && -omega != 0 && 
+   Element[nf, Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+   omega > 0, "Value" -> (2*I)*Pi + 2*Log[2] + 4*Log[Q] - 
+   2*(I*Pi + Log[-omega + 2*Q^2])|>

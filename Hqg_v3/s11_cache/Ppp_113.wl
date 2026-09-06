@@ -1,0 +1,173 @@
+<|"InputHash" -> 
+  612679522417913843233210025857711063803105056063027082564104069122370821230\
+77, "Value" -> <|"Ordinary" -> 
+    -1/8*((-1 + SUNN)*(1 + SUNN)*(-(Q2^3*s*s23) - 2*Q2^2*s^2*s23 - 
+         Q2*s^3*s23 + Q2^3*s23^2 + 5*Q2^2*s*s23^2 + Q2*s^2*s23^2 - 
+         3*Q2^2*s23^3 - 2*Q2*s*s23^3 + 2*Q2*s23^4 + Q2^3*s*s23*SUNN^2 + 
+         2*Q2^2*s^2*s23*SUNN^2 + Q2*s^3*s23*SUNN^2 - 2*Q2^3*s23^2*SUNN^2 - 
+         3*Q2^2*s*s23^2*SUNN^2 - Q2*s^2*s23^2*SUNN^2 + 4*Q2^2*s23^3*SUNN^2 + 
+         2*Q2*s*s23^3*SUNN^2 - 2*Q2*s23^4*SUNN^2 - 3*Q2^2*s*s23*t + 
+         3*Q2*s^2*s23*t + 3*Q2^2*s23^2*t + 3*Q2*s*s23^2*t - 3*s^2*s23^2*t - 
+         6*Q2*s23^3*t + 3*s*s23^3*t - Q2^2*s*s23*SUNN^2*t - 
+         Q2*s^2*s23*SUNN^2*t - 5*Q2^2*s23^2*SUNN^2*t + 2*Q2*s*s23^2*SUNN^2*
+          t + 3*s^2*s23^2*SUNN^2*t + 5*Q2*s23^3*SUNN^2*t - 
+         3*s*s23^3*SUNN^2*t - 3*Q2*s^2*t^2 - Q2*s*s23*t^2 + 8*s^2*s23*t^2 + 
+         4*Q2*s23^2*t^2 - 8*s*s23^2*t^2 - 6*Q2*s*s23*SUNN^2*t^2 - 
+         4*s^2*s23*SUNN^2*t^2 - 3*Q2*s23^2*SUNN^2*t^2 + 
+         7*s*s23^2*SUNN^2*t^2 - 5*s^2*t^3 + 5*s*s23*t^3 - 
+         4*s*s23*SUNN^2*t^3))/(eps*Pi*(s - s23)^2*s23*SUNN^2*(Q2 + t)*
+        (Q2 + s - s23 + t)) + ((-1 + SUNN)*(1 + SUNN)*
+       ((EulerGamma*(Q2 + t)*(-(Q2^3*s*s23) - 2*Q2^2*s^2*s23 - Q2*s^3*s23 + 
+           Q2^3*s23^2 + 5*Q2^2*s*s23^2 + Q2*s^2*s23^2 - 3*Q2^2*s23^3 - 
+           2*Q2*s*s23^3 + 2*Q2*s23^4 + Q2^3*s*s23*SUNN^2 + 
+           2*Q2^2*s^2*s23*SUNN^2 + Q2*s^3*s23*SUNN^2 - 2*Q2^3*s23^2*SUNN^2 - 
+           3*Q2^2*s*s23^2*SUNN^2 - Q2*s^2*s23^2*SUNN^2 + 
+           4*Q2^2*s23^3*SUNN^2 + 2*Q2*s*s23^3*SUNN^2 - 2*Q2*s23^4*SUNN^2 - 
+           3*Q2^2*s*s23*t + 3*Q2*s^2*s23*t + 3*Q2^2*s23^2*t + 
+           3*Q2*s*s23^2*t - 3*s^2*s23^2*t - 6*Q2*s23^3*t + 3*s*s23^3*t - 
+           Q2^2*s*s23*SUNN^2*t - Q2*s^2*s23*SUNN^2*t - 5*Q2^2*s23^2*SUNN^2*
+            t + 2*Q2*s*s23^2*SUNN^2*t + 3*s^2*s23^2*SUNN^2*t + 
+           5*Q2*s23^3*SUNN^2*t - 3*s*s23^3*SUNN^2*t - 3*Q2*s^2*t^2 - 
+           Q2*s*s23*t^2 + 8*s^2*s23*t^2 + 4*Q2*s23^2*t^2 - 8*s*s23^2*t^2 - 
+           6*Q2*s*s23*SUNN^2*t^2 - 4*s^2*s23*SUNN^2*t^2 - 3*Q2*s23^2*SUNN^2*
+            t^2 + 7*s*s23^2*SUNN^2*t^2 - 5*s^2*t^3 + 5*s*s23*t^3 - 
+           4*s*s23*SUNN^2*t^3))/(8*Pi*s23) - (2*Q2^4*s*s23 + 3*Q2^3*s^2*s23 + 
+          Q2^2*s^3*s23 - 2*Q2^4*s23^2 - 7*Q2^3*s*s23^2 - 4*Q2^2*s^2*s23^2 - 
+          Q2*s^3*s23^2 + 4*Q2^3*s23^3 + 5*Q2^2*s*s23^3 + 2*Q2*s^2*s23^3 - 
+          2*Q2^2*s23^4 - Q2*s*s23^4 - Q2^4*s*s23*SUNN^2 - 
+          2*Q2^3*s^2*s23*SUNN^2 - Q2^2*s^3*s23*SUNN^2 + 3*Q2^4*s23^2*SUNN^2 + 
+          6*Q2^3*s*s23^2*SUNN^2 + 4*Q2^2*s^2*s23^2*SUNN^2 + 
+          Q2*s^3*s23^2*SUNN^2 - 6*Q2^3*s23^3*SUNN^2 - 6*Q2^2*s*s23^3*SUNN^2 - 
+          2*Q2*s^2*s23^3*SUNN^2 + 3*Q2^2*s23^4*SUNN^2 + Q2*s*s23^4*SUNN^2 + 
+          Q2^3*s^2*t + Q2^2*s^3*t + 7*Q2^3*s*s23*t + 4*Q2^2*s^2*s23*t + 
+          Q2*s^3*s23*t - 8*Q2^3*s23^2*t - 16*Q2^2*s*s23^2*t - 
+          6*Q2*s^2*s23^2*t - 2*s^3*s23^2*t + 11*Q2^2*s23^3*t + 
+          9*Q2*s*s23^3*t + 5*s^2*s23^3*t - 4*Q2*s23^4*t - 4*s*s23^4*t + 
+          s23^5*t - Q2^2*s^2*s23*SUNN^2*t - Q2*s^3*s23*SUNN^2*t + 
+          10*Q2^3*s23^2*SUNN^2*t + 9*Q2^2*s*s23^2*SUNN^2*t + 
+          5*Q2*s^2*s23^2*SUNN^2*t + 2*s^3*s23^2*SUNN^2*t - 
+          14*Q2^2*s23^3*SUNN^2*t - 9*Q2*s*s23^3*SUNN^2*t - 
+          5*s^2*s23^3*SUNN^2*t + 5*Q2*s23^4*SUNN^2*t + 4*s*s23^4*SUNN^2*t - 
+          s23^5*SUNN^2*t + 6*Q2^2*s^2*t^2 + 4*Q2*s^3*t^2 + 5*Q2^2*s*s23*t^2 - 
+          5*Q2*s^2*s23*t^2 + s^3*s23*t^2 - 11*Q2^2*s23^2*t^2 - 
+          9*Q2*s*s23^2*t^2 - 5*s^2*s23^2*t^2 + 10*Q2*s23^3*t^2 + 
+          7*s*s23^3*t^2 - 3*s23^4*t^2 + 6*Q2^2*s*s23*SUNN^2*t^2 + 
+          3*Q2*s^2*s23*SUNN^2*t^2 - s^3*s23*SUNN^2*t^2 + 12*Q2^2*s23^2*SUNN^2*
+           t^2 + 2*Q2*s*s23^2*SUNN^2*t^2 + 4*s^2*s23^2*SUNN^2*t^2 - 
+          11*Q2*s23^3*SUNN^2*t^2 - 6*s*s23^3*SUNN^2*t^2 + 
+          3*s23^4*SUNN^2*t^2 + 9*Q2*s^2*t^3 + 3*s^3*t^3 - 3*Q2*s*s23*t^3 - 
+          6*s^2*s23*t^3 - 6*Q2*s23^2*t^3 + 3*s23^3*t^3 + 8*Q2*s*s23*SUNN^2*
+           t^3 + 2*s^2*s23*SUNN^2*t^3 + 6*Q2*s23^2*SUNN^2*t^3 - 
+          s*s23^2*SUNN^2*t^3 - 3*s23^3*SUNN^2*t^3 + 4*s^2*t^4 - 3*s*s23*t^4 - 
+          s23^2*t^4 + 3*s*s23*SUNN^2*t^4 + s23^2*SUNN^2*t^4)/(8*Pi*s23) - 
+        (Q2 + t)*(-(Q2^3*s*s23) - 2*Q2^2*s^2*s23 - Q2*s^3*s23 + Q2^3*s23^2 + 
+          5*Q2^2*s*s23^2 + Q2*s^2*s23^2 - 3*Q2^2*s23^3 - 2*Q2*s*s23^3 + 
+          2*Q2*s23^4 + Q2^3*s*s23*SUNN^2 + 2*Q2^2*s^2*s23*SUNN^2 + 
+          Q2*s^3*s23*SUNN^2 - 2*Q2^3*s23^2*SUNN^2 - 3*Q2^2*s*s23^2*SUNN^2 - 
+          Q2*s^2*s23^2*SUNN^2 + 4*Q2^2*s23^3*SUNN^2 + 2*Q2*s*s23^3*SUNN^2 - 
+          2*Q2*s23^4*SUNN^2 - 3*Q2^2*s*s23*t + 3*Q2*s^2*s23*t + 
+          3*Q2^2*s23^2*t + 3*Q2*s*s23^2*t - 3*s^2*s23^2*t - 6*Q2*s23^3*t + 
+          3*s*s23^3*t - Q2^2*s*s23*SUNN^2*t - Q2*s^2*s23*SUNN^2*t - 
+          5*Q2^2*s23^2*SUNN^2*t + 2*Q2*s*s23^2*SUNN^2*t + 
+          3*s^2*s23^2*SUNN^2*t + 5*Q2*s23^3*SUNN^2*t - 3*s*s23^3*SUNN^2*t - 
+          3*Q2*s^2*t^2 - Q2*s*s23*t^2 + 8*s^2*s23*t^2 + 4*Q2*s23^2*t^2 - 
+          8*s*s23^2*t^2 - 6*Q2*s*s23*SUNN^2*t^2 - 4*s^2*s23*SUNN^2*t^2 - 
+          3*Q2*s23^2*SUNN^2*t^2 + 7*s*s23^2*SUNN^2*t^2 - 5*s^2*t^3 + 
+          5*s*s23*t^3 - 4*s*s23*SUNN^2*t^3)*
+         (((Log[2]/4 + Log[mu]/4)/Pi + Log[Pi]/(8*Pi))/s23 - 
+          Log[s23]/(8*Pi*s23))))/((s - s23)^2*SUNN^2*(Q2 + t)^2*
+       (Q2 + s - s23 + t)), "Soft" -> 
+    <|1 -> {{1, -1, -1/32*((omega - s)*(-20*omega^2 + 16*eps*omega^2 + 
+             4*eps^2*omega^2 + 20*eps*EulerGamma*omega^2 - 
+             16*eps^2*EulerGamma*omega^2 - 10*eps^2*EulerGamma^2*omega^2 + 
+             5*eps^2*omega^2*Pi^2 - 12*omega*Q2 + 20*eps*omega*Q2 + 
+             8*eps^2*omega*Q2 + 12*eps*EulerGamma*omega*Q2 - 
+             20*eps^2*EulerGamma*omega*Q2 - 6*eps^2*EulerGamma^2*omega*Q2 + 
+             3*eps^2*omega*Pi^2*Q2 + 4*eps*Q2^2 + 4*eps^2*Q2^2 - 
+             4*eps^2*EulerGamma*Q2^2 + 40*omega*s - 20*eps*omega*s - 
+             4*eps^2*omega*s - 40*eps*EulerGamma*omega*s + 
+             20*eps^2*EulerGamma*omega*s + 20*eps^2*EulerGamma^2*omega*s - 
+             10*eps^2*omega*Pi^2*s + 12*Q2*s - 16*eps*Q2*s - 4*eps^2*Q2*s - 
+             12*eps*EulerGamma*Q2*s + 16*eps^2*EulerGamma*Q2*s + 
+             6*eps^2*EulerGamma^2*Q2*s - 3*eps^2*Pi^2*Q2*s - 20*s^2 + 
+             4*eps*s^2 + 20*eps*EulerGamma*s^2 - 4*eps^2*EulerGamma*s^2 - 
+             10*eps^2*EulerGamma^2*s^2 + 5*eps^2*Pi^2*s^2)*(-1 + SUNN)*
+            (1 + SUNN))/(eps*Pi*(omega + Q2)*(omega + Q2 - s)*SUNN^2) + 
+         (eps*(5*omega + 3*Q2 - 5*s)*(omega - s)^2*(-1 + SUNN)*(1 + SUNN)*
+           Log[2]^2)/(4*Pi*(omega + Q2)*(omega + Q2 - s)*SUNN^2) + 
+         (eps*(5*omega + 3*Q2 - 5*s)*(omega - s)^2*(-1 + SUNN)*(1 + SUNN)*
+           Log[mu]^2)/(4*Pi*(omega + Q2)*(omega + Q2 - s)*SUNN^2) - 
+         ((omega - s)*(-5*omega^2 + 4*eps*omega^2 + 5*eps*EulerGamma*
+             omega^2 - 3*omega*Q2 + 5*eps*omega*Q2 + 3*eps*EulerGamma*omega*
+             Q2 + eps*Q2^2 + 10*omega*s - 5*eps*omega*s - 10*eps*EulerGamma*
+             omega*s + 3*Q2*s - 4*eps*Q2*s - 3*eps*EulerGamma*Q2*s - 5*s^2 + 
+            eps*s^2 + 5*eps*EulerGamma*s^2)*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/
+          (8*Pi*(omega + Q2)*(omega + Q2 - s)*SUNN^2) + 
+         (eps*(5*omega + 3*Q2 - 5*s)*(omega - s)^2*(-1 + SUNN)*(1 + SUNN)*
+           Log[Pi]^2)/(16*Pi*(omega + Q2)*(omega + Q2 - s)*SUNN^2) + 
+         Log[mu]*(-1/4*((omega - s)*(-5*omega^2 + 4*eps*omega^2 + 5*eps*
+                EulerGamma*omega^2 - 3*omega*Q2 + 5*eps*omega*Q2 + 3*eps*
+                EulerGamma*omega*Q2 + eps*Q2^2 + 10*omega*s - 5*eps*omega*
+                s - 10*eps*EulerGamma*omega*s + 3*Q2*s - 4*eps*Q2*s - 3*eps*
+                EulerGamma*Q2*s - 5*s^2 + eps*s^2 + 5*eps*EulerGamma*s^2)*
+              (-1 + SUNN)*(1 + SUNN))/(Pi*(omega + Q2)*(omega + Q2 - s)*
+              SUNN^2) + (eps*(5*omega + 3*Q2 - 5*s)*(omega - s)^2*(-1 + SUNN)*
+             (1 + SUNN)*Log[Pi])/(4*Pi*(omega + Q2)*(omega + Q2 - s)*
+             SUNN^2)) + Log[2]*(-1/4*((omega - s)*(-5*omega^2 + 4*eps*
+                omega^2 + 5*eps*EulerGamma*omega^2 - 3*omega*Q2 + 5*eps*omega*
+                Q2 + 3*eps*EulerGamma*omega*Q2 + eps*Q2^2 + 10*omega*s - 5*
+                eps*omega*s - 10*eps*EulerGamma*omega*s + 3*Q2*s - 4*eps*Q2*
+                s - 3*eps*EulerGamma*Q2*s - 5*s^2 + eps*s^2 + 5*eps*
+                EulerGamma*s^2)*(-1 + SUNN)*(1 + SUNN))/(Pi*(omega + Q2)*
+              (omega + Q2 - s)*SUNN^2) + (eps*(5*omega + 3*Q2 - 5*s)*
+             (omega - s)^2*(-1 + SUNN)*(1 + SUNN)*Log[mu])/(2*Pi*(omega + Q2)*
+             (omega + Q2 - s)*SUNN^2) + (eps*(5*omega + 3*Q2 - 5*s)*
+             (omega - s)^2*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/(4*Pi*(omega + Q2)*
+             (omega + Q2 - s)*SUNN^2))}}, 
+     -1 -> {{1, -1, ((omega + s)*(-20*omega^2 + 16*eps*omega^2 + 
+            4*eps^2*omega^2 + 20*eps*EulerGamma*omega^2 - 16*eps^2*EulerGamma*
+             omega^2 - 10*eps^2*EulerGamma^2*omega^2 + 5*eps^2*omega^2*Pi^2 + 
+            12*omega*Q2 - 20*eps*omega*Q2 - 8*eps^2*omega*Q2 - 
+            12*eps*EulerGamma*omega*Q2 + 20*eps^2*EulerGamma*omega*Q2 + 
+            6*eps^2*EulerGamma^2*omega*Q2 - 3*eps^2*omega*Pi^2*Q2 + 
+            4*eps*Q2^2 + 4*eps^2*Q2^2 - 4*eps^2*EulerGamma*Q2^2 - 
+            40*omega*s + 20*eps*omega*s + 4*eps^2*omega*s + 
+            40*eps*EulerGamma*omega*s - 20*eps^2*EulerGamma*omega*s - 
+            20*eps^2*EulerGamma^2*omega*s + 10*eps^2*omega*Pi^2*s + 12*Q2*s - 
+            16*eps*Q2*s - 4*eps^2*Q2*s - 12*eps*EulerGamma*Q2*s + 
+            16*eps^2*EulerGamma*Q2*s + 6*eps^2*EulerGamma^2*Q2*s - 
+            3*eps^2*Pi^2*Q2*s - 20*s^2 + 4*eps*s^2 + 20*eps*EulerGamma*s^2 - 
+            4*eps^2*EulerGamma*s^2 - 10*eps^2*EulerGamma^2*s^2 + 
+            5*eps^2*Pi^2*s^2)*(-1 + SUNN)*(1 + SUNN))/(32*eps*Pi*(omega - Q2)*
+           (omega - Q2 + s)*SUNN^2) - (eps*(omega + s)^2*(5*omega - 3*Q2 + 
+            5*s)*(-1 + SUNN)*(1 + SUNN)*Log[2]^2)/(4*Pi*(omega - Q2)*
+           (omega - Q2 + s)*SUNN^2) - (eps*(omega + s)^2*(5*omega - 3*Q2 + 
+            5*s)*(-1 + SUNN)*(1 + SUNN)*Log[mu]^2)/(4*Pi*(omega - Q2)*
+           (omega - Q2 + s)*SUNN^2) + ((omega + s)*(-5*omega^2 + 
+            4*eps*omega^2 + 5*eps*EulerGamma*omega^2 + 3*omega*Q2 - 
+            5*eps*omega*Q2 - 3*eps*EulerGamma*omega*Q2 + eps*Q2^2 - 
+            10*omega*s + 5*eps*omega*s + 10*eps*EulerGamma*omega*s + 3*Q2*s - 
+            4*eps*Q2*s - 3*eps*EulerGamma*Q2*s - 5*s^2 + eps*s^2 + 
+            5*eps*EulerGamma*s^2)*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/
+          (8*Pi*(omega - Q2)*(omega - Q2 + s)*SUNN^2) - 
+         (eps*(omega + s)^2*(5*omega - 3*Q2 + 5*s)*(-1 + SUNN)*(1 + SUNN)*
+           Log[Pi]^2)/(16*Pi*(omega - Q2)*(omega - Q2 + s)*SUNN^2) + 
+         Log[mu]*(((omega + s)*(-5*omega^2 + 4*eps*omega^2 + 
+              5*eps*EulerGamma*omega^2 + 3*omega*Q2 - 5*eps*omega*Q2 - 
+              3*eps*EulerGamma*omega*Q2 + eps*Q2^2 - 10*omega*s + 
+              5*eps*omega*s + 10*eps*EulerGamma*omega*s + 3*Q2*s - 
+              4*eps*Q2*s - 3*eps*EulerGamma*Q2*s - 5*s^2 + eps*s^2 + 
+              5*eps*EulerGamma*s^2)*(-1 + SUNN)*(1 + SUNN))/
+            (4*Pi*(omega - Q2)*(omega - Q2 + s)*SUNN^2) - 
+           (eps*(omega + s)^2*(5*omega - 3*Q2 + 5*s)*(-1 + SUNN)*(1 + SUNN)*
+             Log[Pi])/(4*Pi*(omega - Q2)*(omega - Q2 + s)*SUNN^2)) + 
+         Log[2]*(((omega + s)*(-5*omega^2 + 4*eps*omega^2 + 5*eps*EulerGamma*
+               omega^2 + 3*omega*Q2 - 5*eps*omega*Q2 - 3*eps*EulerGamma*omega*
+               Q2 + eps*Q2^2 - 10*omega*s + 5*eps*omega*s + 10*eps*EulerGamma*
+               omega*s + 3*Q2*s - 4*eps*Q2*s - 3*eps*EulerGamma*Q2*s - 
+              5*s^2 + eps*s^2 + 5*eps*EulerGamma*s^2)*(-1 + SUNN)*(1 + SUNN))/
+            (4*Pi*(omega - Q2)*(omega - Q2 + s)*SUNN^2) - 
+           (eps*(omega + s)^2*(5*omega - 3*Q2 + 5*s)*(-1 + SUNN)*(1 + SUNN)*
+             Log[mu])/(2*Pi*(omega - Q2)*(omega - Q2 + s)*SUNN^2) - 
+           (eps*(omega + s)^2*(5*omega - 3*Q2 + 5*s)*(-1 + SUNN)*(1 + SUNN)*
+             Log[Pi])/(4*Pi*(omega - Q2)*(omega - Q2 + s)*SUNN^2))}}|>|>|>
