@@ -1,0 +1,91 @@
+{
+  "repository": "https://github.com/JeffersonLab/BigTMD",
+  "commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+  "production_sha256": "ce6cada31c35bb582fc4f309538bf9058781164d489861d0b889ba4ddcf32edd",
+  "files": {
+    "sidis.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/sidis.py",
+      "sha256": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+      "bytes": 10049
+    },
+    "NLO/Pg/fchn5A.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Pg/fchn5A.py",
+      "sha256": "9314f660d6ba9e37c203cf010da2f9aee84e993958e5dd3ad7896fb33ac5b48b",
+      "bytes": 47499
+    },
+    "NLO/Pg/fchn5B.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Pg/fchn5B.py",
+      "sha256": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "bytes": 1059
+    },
+    "NLO/Pg/fchn5C.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Pg/fchn5C.py",
+      "sha256": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "bytes": 1059
+    },
+    "NLO/Ppp/fchn5A.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Ppp/fchn5A.py",
+      "sha256": "5c275d8ee0e01fa23e47e3ddef6d84150babc71ef01e391d75e3ed9f12f09a5e",
+      "bytes": 41021
+    },
+    "NLO/Ppp/fchn5B.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Ppp/fchn5B.py",
+      "sha256": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "bytes": 1059
+    },
+    "NLO/Ppp/fchn5C.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Ppp/fchn5C.py",
+      "sha256": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+      "bytes": 1059
+    }
+  },
+  "flavour_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      10,
+      9
+    ]
+  ],
+  "representative_flavour": "u -> ubar, indices 1 -> 2 in the driver",
+  "charge_weight": 1,
+  "driver_nlo_channels": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "driver_includes_channel": false,
+  "auxiliary_sha256": "ca3a1b5c1c7d1f7f8e4df659e042ea836ca4b85f49c79a5b1e5348efe583bba8"
+}
