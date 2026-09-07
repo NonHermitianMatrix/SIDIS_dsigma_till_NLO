@@ -1,0 +1,20 @@
+MONITOR_START job=14689400 host=n6439 kernel_pid=214492
+"PASS: ""complete evaluated angular masters exist"
+"PASS: ""S05 source identity"
+"PASS: ""S06 source identity"
+"PASS: ""eligible previous phase-space source identity"
+"PASS: ""regular-handler checkpoint source identity"
+"PASS: ""dilogarithm inversion follows from derivative and anchor"
+"PASS: ""regulated endpoint integral evaluated"
+"Parallel budget inputs: "InputForm[{5, 1, Infinity}]
+"PASS: ""angular workers share compute node and runtime"
+"Angular worker count = "5
+"PASS: ""RealQGG_Charge0__Pg all real phase-space terms completed"
+"PASS: ""RealQGG_Charge0__Ppp all real phase-space terms completed"
+"PASS: ""RealSame_Charge0__Pg all real phase-space terms completed"
+"RealSame_Charge0__Pg"" assembling distribution branch "1
+"RealSame_Charge0__Pg"" branch "1" soft group "{1, -2}
+"RealSame_Charge0__Pg"" branch "1" soft group "{1, -1}
+"Stronger-recoil residual ""RealSame_Charge0__Pg"" "1" "{1, -2}": "InputForm[(Q2*(-1 + SUNN^2)*(3 + 6*eps*Log[mu] + eps*(5 - 3*EulerGamma + Log[64] + 3*Log[Pi])))/(18*Pi*SUNN)]
+"FAIL: ""stronger recoil poles cancel"
+MONITOR_WAKE {"stage": "s09", "source": "s09_real_phase_space.wl", "source_sha256": "a9d526a066831dc48736cee7da8b60d1a0a093a4108a5052ec9b10bda0398b9e", "job_id": "14689400", "host": "n6439", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": "stage gate failure", "peak_rss_bytes": 902295552, "elapsed_seconds": 12.316719319671392, "completed_utc": "2026-09-06T18:43:47.211284+00:00"}

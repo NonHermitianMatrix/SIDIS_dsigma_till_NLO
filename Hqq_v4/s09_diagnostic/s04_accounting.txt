@@ -1,0 +1,62 @@
+==============================================================
+qname        pod_smp.q           
+hostname     n7441               
+group        saltzber            
+owner        rushil              
+project      campus_prj          
+department   defaultdepartment   
+jobname      Hqq4s09_S04         
+jobnumber    14689563            
+taskid       undefined
+pe_taskid    NONE                
+account      sge                 
+priority     0                   
+cwd          /u/scratch/r/rushil/AI_Assisted_SIDIS/Hqq_v4_20260906/s09_diagnostic
+submit_host  login1              
+submit_cmd   /u/systems/UGE8.6.4/bin/lx-amd64/qsub -clear -terse -wd /u/scratch/r/rushil/AI_Assisted_SIDIS/Hqq_v4_20260906/s09_diagnostic -N Hqq4s09_S04 -l h_data=8G,h_rt=02:00:00 -o /u/scratch/r/rushil/AI_Assisted_SIDIS/Hqq_v4_20260906/s09_diagnostic/s04_run.log -j y -m n -pe shared 4-8
+qsub_time    09/06/2026 12:25:40.080
+start_time   09/06/2026 12:26:08.285
+end_time     09/06/2026 12:30:29.160
+granted_pe   shared              
+slots        8                   
+failed       100 : assumedly after job
+deleted_by   rushil@login1
+exit_status  137                 
+ru_wallclock 260.875      
+ru_utime     1.375        
+ru_stime     0.805        
+ru_maxrss    10540               
+ru_ixrss     0                   
+ru_ismrss    0                   
+ru_idrss     0                   
+ru_isrss     0                   
+ru_minflt    4555                
+ru_majflt    34                  
+ru_nswap     0                   
+ru_inblock   9016                
+ru_oublock   136                 
+ru_msgsnd    0                   
+ru_msgrcv    0                   
+ru_nsignals  0                   
+ru_nvcsw     408                 
+ru_nivcsw    79                  
+wallclock    261.105      
+cpu          1570.050     
+mem          3367.839          
+io           0.225             
+iow          3.770             
+ioops        60450               
+maxvmem      21.555G
+maxrss       0.000
+maxpss       0.000
+arid         undefined
+jc_name      NONE
+bound_cores  NONE
+bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/usr/bin/bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/usr/bin/bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/bin/sh: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)
+/usr/bin/bash: warning: setlocale: LC_ALL: cannot change locale (C.UTF-8)

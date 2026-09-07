@@ -1,0 +1,110 @@
+<|"Index" -> 112, "Branch" -> -1, "MasterKey" -> {"ML", 0, 1}, 
+ "Term" -> {8, 5, 1, 0, ((-1 + SUNN)*(1 + SUNN)*(64*Q2^5 - 32*D*Q2^5 + 
+      128*Q2^4*s - 88*D*Q2^4*s - 4*D^2*Q2^4*s - 304*Q2^3*s^2 + 
+      116*D*Q2^3*s^2 - 50*D^2*Q2^3*s^2 + 2*D^3*Q2^3*s^2 - 912*Q2^2*s^3 + 
+      468*D*Q2^2*s^3 - 108*D^2*Q2^2*s^3 + 5*D^3*Q2^2*s^3 - 720*Q2*s^4 + 
+      396*D*Q2*s^4 - 82*D^2*Q2*s^4 + 4*D^3*Q2*s^4 - 176*s^5 + 100*D*s^5 - 
+      20*D^2*s^5 + D^3*s^5 - 192*Q2^4*s23 + 128*D*Q2^4*s23 - 8*D^2*Q2^4*s23 - 
+      32*Q2^3*s*s23 + 112*D*Q2^3*s*s23 + 24*D^2*Q2^3*s*s23 - 
+      2*D^3*Q2^3*s*s23 + 992*Q2^2*s^2*s23 - 440*D*Q2^2*s^2*s23 + 
+      130*D^2*Q2^2*s^2*s23 - 7*D^3*Q2^2*s^2*s23 + 1184*Q2*s^3*s23 - 
+      616*D*Q2*s^3*s23 + 138*D^2*Q2*s^3*s23 - 7*D^3*Q2*s^3*s23 + 
+      352*s^4*s23 - 192*D*s^4*s23 + 40*D^2*s^4*s23 - 2*D^3*s^4*s23 + 
+      128*Q2^3*s23^2 - 112*D*Q2^3*s23^2 + 8*D^2*Q2^3*s23^2 - 
+      160*Q2^2*s*s23^2 - 28*D^2*Q2^2*s*s23^2 + 2*D^3*Q2^2*s*s23^2 - 
+      464*Q2*s^2*s23^2 + 196*D*Q2*s^2*s23^2 - 56*D^2*Q2*s^2*s23^2 + 
+      3*D^3*Q2*s^2*s23^2 - 176*s^3*s23^2 + 84*D*s^3*s23^2 - 
+      20*D^2*s^3*s23^2 + D^3*s^3*s23^2 + 16*D*Q2^2*s23^3 + 24*D*Q2*s*s23^3 + 
+      8*D*s^2*s23^3 + 64*Q2^4*s23*SUNN - 32*D*Q2^4*s23*SUNN + 
+      112*Q2^3*s*s23*SUNN - 84*D*Q2^3*s*s23*SUNN + 40*Q2^2*s^2*s23*SUNN - 
+      86*D*Q2^2*s^2*s23*SUNN - 16*Q2*s^3*s23*SUNN - 42*D*Q2*s^3*s23*SUNN - 
+      8*s^4*s23*SUNN - 8*D*s^4*s23*SUNN + 48*D*Q2^3*s23^2*SUNN + 
+      160*Q2^2*s*s23^2*SUNN + 92*D*Q2^2*s*s23^2*SUNN + 
+      208*Q2*s^2*s23^2*SUNN + 66*D*Q2*s^2*s23^2*SUNN + 64*s^3*s23^2*SUNN + 
+      16*D*s^3*s23^2*SUNN - 160*Q2^2*s23^3*SUNN - 16*D*Q2^2*s23^3*SUNN - 
+      288*Q2*s*s23^3*SUNN - 24*D*Q2*s*s23^3*SUNN - 104*s^2*s23^3*SUNN - 
+      8*D*s^2*s23^3*SUNN + 96*Q2*s23^4*SUNN + 48*s*s23^4*SUNN + 192*Q2^4*t - 
+      96*D*Q2^4*t + 256*Q2^3*s*t - 180*D*Q2^3*s*t - 14*D^2*Q2^3*s*t - 
+      592*Q2^2*s^2*t + 232*D*Q2^2*s^2*t - 90*D^2*Q2^2*s^2*t + 
+      3*D^3*Q2^2*s^2*t - 1056*Q2*s^3*t + 532*D*Q2*s^3*t - 120*D^2*Q2*s^3*t + 
+      5*D^3*Q2*s^3*t - 400*s^4*t + 216*D*s^4*t - 44*D^2*s^4*t + 2*D^3*s^4*t - 
+      352*Q2^3*s23*t + 248*D*Q2^3*s23*t - 16*D^2*Q2^3*s23*t + 
+      8*Q2^2*s*s23*t + 124*D*Q2^2*s*s23*t + 48*D^2*Q2^2*s*s23*t - 
+      4*D^3*Q2^2*s*s23*t + 816*Q2*s^2*s23*t - 356*D*Q2*s^2*s23*t + 
+      120*D^2*Q2*s^2*s23*t - 7*D^3*Q2*s^2*s23*t + 456*s^3*s23*t - 
+      232*D*s^3*s23*t + 56*D^2*s^3*s23*t - 3*D^3*s^3*s23*t + 
+      32*Q2^2*s23^2*t - 32*D*Q2^2*s23^2*t - 16*D^2*Q2^2*s23^2*t + 
+      2*D^3*Q2^2*s23^2*t - 8*Q2*s*s23^2*t - 24*D*Q2*s*s23^2*t - 
+      28*D^2*Q2*s*s23^2*t + 3*D^3*Q2*s*s23^2*t - 40*s^2*s23^2*t + 
+      8*D*s^2*s23^2*t - 12*D^2*s^2*s23^2*t + D^3*s^2*s23^2*t - 
+      16*Q2*s23^3*t + 8*D*Q2*s23^3*t - 16*s*s23^3*t + 8*D*s*s23^3*t + 
+      224*Q2^3*s23*SUNN*t - 112*D*Q2^3*s23*SUNN*t + 312*Q2^2*s*s23*SUNN*t - 
+      220*D*Q2^2*s*s23*SUNN*t + 96*Q2*s^2*s23*SUNN*t - 
+      144*D*Q2*s^2*s23*SUNN*t - 8*s^3*s23*SUNN*t - 30*D*s^3*s23*SUNN*t - 
+      16*Q2^2*s23^2*SUNN*t + 120*D*Q2^2*s23^2*SUNN*t + 
+      192*Q2*s*s23^2*SUNN*t + 148*D*Q2*s*s23^2*SUNN*t + 
+      128*s^2*s23^2*SUNN*t + 42*D*s^2*s23^2*SUNN*t - 208*Q2*s23^3*SUNN*t - 
+      24*D*Q2*s23^3*SUNN*t - 152*s*s23^3*SUNN*t - 12*D*s*s23^3*SUNN*t + 
+      32*s23^4*SUNN*t + 208*Q2^3*t^2 - 104*D*Q2^3*t^2 + 192*Q2^2*s*t^2 - 
+      132*D*Q2^2*s*t^2 - 14*D^2*Q2^2*s*t^2 - 272*Q2*s^2*t^2 + 
+      96*D*Q2*s^2*t^2 - 42*D^2*Q2*s^2*t^2 + D^3*Q2*s^2*t^2 - 256*s^3*t^2 + 
+      124*D*s^3*t^2 - 28*D^2*s^3*t^2 + D^3*s^3*t^2 - 192*Q2^2*s23*t^2 + 
+      148*D*Q2^2*s23*t^2 - 10*D^2*Q2^2*s23*t^2 - 112*Q2*s*s23*t^2 + 
+      128*D*Q2*s*s23*t^2 + 6*D^2*Q2*s*s23*t^2 - D^3*Q2*s*s23*t^2 + 
+      80*s^2*s23*t^2 - 20*D*s^2*s23*t^2 + 16*D^2*s^2*s23*t^2 - 
+      D^3*s^2*s23*t^2 - 8*Q2*s23^2*t^2 + 12*D*Q2*s23^2*t^2 - 
+      10*D^2*Q2*s23^2*t^2 + D^3*Q2*s23^2*t^2 - 8*s*s23^2*t^2 + 
+      12*D*s*s23^2*t^2 - 10*D^2*s*s23^2*t^2 + D^3*s*s23^2*t^2 + 
+      288*Q2^2*s23*SUNN*t^2 - 144*D*Q2^2*s23*SUNN*t^2 + 
+      288*Q2*s*s23*SUNN*t^2 - 188*D*Q2*s*s23*SUNN*t^2 + 56*s^2*s23*SUNN*t^2 - 
+      58*D*s^2*s23*SUNN*t^2 - 32*Q2*s23^2*SUNN*t^2 + 96*D*Q2*s23^2*SUNN*t^2 + 
+      32*s*s23^2*SUNN*t^2 + 56*D*s*s23^2*SUNN*t^2 - 48*s23^3*SUNN*t^2 - 
+      8*D*s23^3*SUNN*t^2 + 96*Q2^2*t^3 - 48*D*Q2^2*t^3 + 80*Q2*s*t^3 - 
+      48*D*Q2*s*t^3 - 4*D^2*Q2*s*t^3 - 16*s^2*t^3 - 4*D^2*s^2*t^3 - 
+      32*Q2*s23*t^3 + 28*D*Q2*s23*t^3 - 2*D^2*Q2*s23*t^3 - 32*s*s23*t^3 + 
+      28*D*s*s23*t^3 - 2*D^2*s*s23*t^3 + 160*Q2*s23*SUNN*t^3 - 
+      80*D*Q2*s23*SUNN*t^3 + 88*s*s23*SUNN*t^3 - 52*D*s*s23*SUNN*t^3 - 
+      16*s23^2*SUNN*t^3 + 24*D*s23^2*SUNN*t^3 + 16*Q2*t^4 - 8*D*Q2*t^4 + 
+      16*s*t^4 - 8*D*s*t^4 + 32*s23*SUNN*t^4 - 16*D*s23*SUNN*t^4))/
+    (4*(Q2 + s)*s23*SUNN^2*t*(2*Q2 + s + t)*(Q2 + s - s23 + t))}, 
+ "Difference" -> 0, "SoftRows" -> 
+  {{1, -1, -1/8*((-4*omega^2 + 4*eps*omega^2 + 4*eps*EulerGamma*omega^2 - 
+         4*eps^2*EulerGamma*omega^2 - 2*eps^2*EulerGamma^2*omega^2 + 
+         eps^2*omega^2*Pi^2 + 12*omega*Q2 - 12*eps*omega*Q2 - 
+         12*eps*EulerGamma*omega*Q2 + 12*eps^2*EulerGamma*omega*Q2 + 
+         6*eps^2*EulerGamma^2*omega*Q2 - 3*eps^2*omega*Pi^2*Q2 - 8*Q2^2 + 
+         8*eps*Q2^2 + 8*eps*EulerGamma*Q2^2 - 8*eps^2*EulerGamma*Q2^2 - 
+         4*eps^2*EulerGamma^2*Q2^2 + 2*eps^2*Pi^2*Q2^2 + 4*omega*s + 
+         4*eps^2*omega*s - 4*eps*EulerGamma*omega*s + 2*eps^2*EulerGamma^2*
+          omega*s - eps^2*omega*Pi^2*s - 4*Q2*s - 2*eps*Q2*s - 2*eps^2*Q2*s + 
+         4*eps*EulerGamma*Q2*s + 2*eps^2*EulerGamma*Q2*s - 
+         2*eps^2*EulerGamma^2*Q2*s + eps^2*Pi^2*Q2*s + 2*eps*s^2 - 
+         4*eps^2*s^2 - 2*eps^2*EulerGamma*s^2)*(-1 + SUNN)*(1 + SUNN))/
+       (eps*Pi*s*(omega + s)*SUNN^2) + (eps*(omega - Q2)*(omega - 2*Q2 - s)*
+       (-1 + SUNN)*(1 + SUNN)*Log[2]^2)/(Pi*s*(omega + s)*SUNN^2) + 
+     (eps*(omega - Q2)*(omega - 2*Q2 - s)*(-1 + SUNN)*(1 + SUNN)*Log[mu]^2)/
+      (Pi*s*(omega + s)*SUNN^2) - 
+     ((-2*omega^2 + 2*eps*omega^2 + 2*eps*EulerGamma*omega^2 + 6*omega*Q2 - 
+        6*eps*omega*Q2 - 6*eps*EulerGamma*omega*Q2 - 4*Q2^2 + 4*eps*Q2^2 + 
+        4*eps*EulerGamma*Q2^2 + 2*omega*s - 2*eps*EulerGamma*omega*s - 
+        2*Q2*s - eps*Q2*s + 2*eps*EulerGamma*Q2*s + eps*s^2)*(-1 + SUNN)*
+       (1 + SUNN)*Log[Pi])/(4*Pi*s*(omega + s)*SUNN^2) + 
+     (eps*(omega - Q2)*(omega - 2*Q2 - s)*(-1 + SUNN)*(1 + SUNN)*Log[Pi]^2)/
+      (4*Pi*s*(omega + s)*SUNN^2) + 
+     Log[mu]*(-1/2*((-2*omega^2 + 2*eps*omega^2 + 2*eps*EulerGamma*omega^2 + 
+           6*omega*Q2 - 6*eps*omega*Q2 - 6*eps*EulerGamma*omega*Q2 - 4*Q2^2 + 
+           4*eps*Q2^2 + 4*eps*EulerGamma*Q2^2 + 2*omega*s - 
+           2*eps*EulerGamma*omega*s - 2*Q2*s - eps*Q2*s + 2*eps*EulerGamma*Q2*
+            s + eps*s^2)*(-1 + SUNN)*(1 + SUNN))/(Pi*s*(omega + s)*SUNN^2) + 
+       (eps*(omega - Q2)*(omega - 2*Q2 - s)*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/
+        (Pi*s*(omega + s)*SUNN^2)) + 
+     Log[2]*(-1/2*((-2*omega^2 + 2*eps*omega^2 + 2*eps*EulerGamma*omega^2 + 
+           6*omega*Q2 - 6*eps*omega*Q2 - 6*eps*EulerGamma*omega*Q2 - 4*Q2^2 + 
+           4*eps*Q2^2 + 4*eps*EulerGamma*Q2^2 + 2*omega*s - 
+           2*eps*EulerGamma*omega*s - 2*Q2*s - eps*Q2*s + 2*eps*EulerGamma*Q2*
+            s + eps*s^2)*(-1 + SUNN)*(1 + SUNN))/(Pi*s*(omega + s)*SUNN^2) + 
+       (2*eps*(omega - Q2)*(omega - 2*Q2 - s)*(-1 + SUNN)*(1 + SUNN)*Log[mu])/
+        (Pi*s*(omega + s)*SUNN^2) + (eps*(omega - Q2)*(omega - 2*Q2 - s)*
+         (-1 + SUNN)*(1 + SUNN)*Log[Pi])/(Pi*s*(omega + s)*SUNN^2))}}, 
+ "InputHash" -> 9632909550204461277332426711785949742815646826340911360005977\
+9577262459133423|>

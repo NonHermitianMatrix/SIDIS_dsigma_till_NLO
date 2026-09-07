@@ -1,0 +1,87 @@
+MONITOR_START job=14689458 host=n7404 kernel_pid=66325
+
+Explicit::shdw: Symbol Explicit appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+DiracGamma::shdw: Symbol DiracGamma appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+Pair::shdw: Symbol Pair appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+Polarization::shdw: Symbol Polarization appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+SP::shdw: Symbol SP appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+SPD::shdw: Symbol SPD appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+Spinor::shdw: Symbol Spinor appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+SUNTF::shdw: Symbol SUNTF appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+DiracTraceEvaluate::shdw: Symbol DiracTraceEvaluate appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+ExtraFactor::shdw: Symbol ExtraFactor appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+SUNNToCACF::shdw: Symbol SUNNToCACF appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+VirtualBoson::shdw: Symbol VirtualBoson appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+Contract::shdw: Symbol Contract appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+ExpandScalarProduct::shdw: Symbol ExpandScalarProduct appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+FCClearScalarProducts::shdw: Symbol FCClearScalarProducts appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+DiracSimplify::shdw: Symbol DiracSimplify appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+DiracTrace::shdw: Symbol DiracTrace appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+SUNSimplify::shdw: Symbol SUNSimplify appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+FeynAmpDenominatorExplicit::shdw: Symbol FeynAmpDenominatorExplicit appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+ComplexConjugate::shdw: Symbol ComplexConjugate appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+DoPolarizationSums::shdw: Symbol DoPolarizationSums appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+FermionSpinSum::shdw: Symbol FermionSpinSum appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+
+SMP::shdw: Symbol SMP appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+"PASS: ""S01 source identity"
+"PASS: ""S02 source identity"
+"PASS: ""S03 source identity"
+"PASS: ""S05 source identity"
+"PASS: ""S06 source identity"
+"PASS: ""selected primary tensor is an angular polynomial"
+"Direct angular moment "{2, 0}
+"PASS: ""defining angular moment evaluated"
+"Direct angular moment "{1, 1}
+"PASS: ""defining angular moment evaluated"
+"Direct angular moment "{1, 0}
+"PASS: ""defining angular moment evaluated"
+"Direct angular moment "{0, 2}
+"PASS: ""defining angular moment evaluated"
+"Direct angular moment "{0, 1}
+"PASS: ""defining angular moment evaluated"
+"Direct angular moment "{0, 0}
+"PASS: ""defining angular moment evaluated"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"Pg"" angular recipe difference = "InputForm[0]
+"Pg"" directly integrated leading recoil = "InputForm[0]
+"PASS: ""selected primary tensor is an angular polynomial"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"PASS: ""primary polynomial recipe uses massless angular directions"
+"Ppp"" angular recipe difference = "InputForm[0]
+"Ppp"" directly integrated leading recoil = "InputForm[0]
+"Full primary amplitude contraction ""Pg"
+"PASS: ""full primary contraction is scalar"
+"Pg"" full-amplitude minus pairwise = "InputForm[0]
+"Full primary amplitude contraction ""Ppp"
+"PASS: ""full primary contraction is scalar"
+"Ppp"" full-amplitude minus pairwise = "InputForm[0]
+"S01_SUCCESS: diagnostic completed; no F hats accepted; peak memory = "319722040
+MONITOR_WAKE {"stage": "s01", "source": "s01_check_primary_moments.wl", "source_sha256": "08463999cf6387beb6afd7d389fc3bfb30a37bad8c16c6a20f6a5e3eedbd43c2", "job_id": "14689458", "host": "n7404", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 392286208, "elapsed_seconds": 16.805054964497685, "completed_utc": "2026-09-06T18:56:09.449534+00:00"}

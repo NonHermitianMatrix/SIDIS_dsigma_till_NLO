@@ -1,0 +1,54 @@
+==============================================================
+qname        pod_smp.q           
+hostname     n7440               
+group        saltzber            
+owner        rushil              
+project      campus_prj          
+department   defaultdepartment   
+jobname      Hqq4bigTS02         
+jobnumber    14691664            
+taskid       undefined
+pe_taskid    NONE                
+account      sge                 
+priority     0                   
+cwd          /u/scratch/r/rushil/AI_Assisted_SIDIS/Hqq_v4_20260906/bigTMD_check
+submit_host  login1              
+submit_cmd   /u/systems/UGE8.6.4/bin/lx-amd64/qsub -clear -terse -wd /u/scratch/r/rushil/AI_Assisted_SIDIS/Hqq_v4_20260906/bigTMD_check -N Hqq4bigTS02 -l h_data=8G,h_rt=02:00:00 -o /u/scratch/r/rushil/AI_Assisted_SIDIS/Hqq_v4_20260906/bigTMD_check/s02_run.log -j y -m n -pe shared 4-8
+qsub_time    09/06/2026 19:37:45.268
+start_time   09/06/2026 19:38:17.214
+end_time     09/06/2026 19:44:17.560
+granted_pe   shared              
+slots        5                   
+failed       100 : assumedly after job
+deleted_by   rushil@login1
+exit_status  137                 
+ru_wallclock 360.346      
+ru_utime     5.699        
+ru_stime     2.325        
+ru_maxrss    11184               
+ru_ixrss     0                   
+ru_ismrss    0                   
+ru_idrss     0                   
+ru_isrss     0                   
+ru_minflt    6434                
+ru_majflt    18                  
+ru_nswap     0                   
+ru_inblock   5064                
+ru_oublock   216                 
+ru_msgsnd    0                   
+ru_msgrcv    0                   
+ru_nsignals  0                   
+ru_nvcsw     617                 
+ru_nivcsw    113                 
+wallclock    360.752      
+cpu          554.450      
+mem          905.912           
+io           2.149             
+iow          3.770             
+ioops        672593              
+maxvmem      11.974G
+maxrss       0.000
+maxpss       0.000
+arid         undefined
+jc_name      NONE
+bound_cores  NONE

@@ -1,0 +1,39 @@
+<|"InputHash" -> 
+  950281217396596741040845947104442413265538377401210120367472310985055252943\
+43, "Value" -> <|"Ordinary" -> -1/40*((-1 + SUNN)*(1 + SUNN)*(s23 - t)^2*
+       (Q2*s + s23*t)*(1 - (3*(Q2*s23 + s*t))/((s - s23)*(s23 - t))))/
+      (Pi*s*s23^2*t^2), "Soft" -> 
+    <|1 -> {{1, -2, ((-60 - 29*eps + 60*eps*EulerGamma)*Q2*(-1 + SUNN)*
+           (1 + SUNN))/(600*Pi) - (eps*Q2*(-1 + SUNN)*(1 + SUNN)*Log[2])/
+          (5*Pi) - (eps*Q2*(-1 + SUNN)*(1 + SUNN)*Log[mu])/(5*Pi) - 
+         (eps*Q2*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/(10*Pi)}, 
+       {1, -1, ((-60*omega^2 - 29*eps*omega^2 + 60*eps*EulerGamma*omega^2 - 
+            45*omega*Q2 - 33*eps*omega*Q2 + 45*eps*EulerGamma*omega*Q2 - 
+            45*Q2^2 - 33*eps*Q2^2 + 45*eps*EulerGamma*Q2^2 + 120*omega*s + 
+            58*eps*omega*s - 120*eps*EulerGamma*omega*s + 120*Q2*s + 
+            58*eps*Q2*s - 120*eps*EulerGamma*Q2*s - 60*s^2 - 29*eps*s^2 + 
+            60*eps*EulerGamma*s^2)*(-1 + SUNN)*(1 + SUNN))/
+          (600*Pi*(omega - s)*s) - (eps*(4*omega^2 + 3*omega*Q2 + 3*Q2^2 - 
+            8*omega*s - 8*Q2*s + 4*s^2)*(-1 + SUNN)*(1 + SUNN)*Log[2])/
+          (20*Pi*(omega - s)*s) - (eps*(4*omega^2 + 3*omega*Q2 + 3*Q2^2 - 
+            8*omega*s - 8*Q2*s + 4*s^2)*(-1 + SUNN)*(1 + SUNN)*Log[mu])/
+          (20*Pi*(omega - s)*s) - (eps*(4*omega^2 + 3*omega*Q2 + 3*Q2^2 - 
+            8*omega*s - 8*Q2*s + 4*s^2)*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/
+          (40*Pi*(omega - s)*s)}}, 
+     -1 -> {{1, -2, ((-60 - 29*eps + 60*eps*EulerGamma)*Q2*(-1 + SUNN)*
+           (1 + SUNN))/(600*Pi) - (eps*Q2*(-1 + SUNN)*(1 + SUNN)*Log[2])/
+          (5*Pi) - (eps*Q2*(-1 + SUNN)*(1 + SUNN)*Log[mu])/(5*Pi) - 
+         (eps*Q2*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/(10*Pi)}, 
+       {1, -1, -1/600*((-60*omega^2 - 29*eps*omega^2 + 60*eps*EulerGamma*
+              omega^2 + 45*omega*Q2 + 33*eps*omega*Q2 - 45*eps*EulerGamma*
+              omega*Q2 - 45*Q2^2 - 33*eps*Q2^2 + 45*eps*EulerGamma*Q2^2 - 
+             120*omega*s - 58*eps*omega*s + 120*eps*EulerGamma*omega*s + 
+             120*Q2*s + 58*eps*Q2*s - 120*eps*EulerGamma*Q2*s - 60*s^2 - 
+             29*eps*s^2 + 60*eps*EulerGamma*s^2)*(-1 + SUNN)*(1 + SUNN))/
+           (Pi*s*(omega + s)) + (eps*(4*omega^2 - 3*omega*Q2 + 3*Q2^2 + 
+            8*omega*s - 8*Q2*s + 4*s^2)*(-1 + SUNN)*(1 + SUNN)*Log[2])/
+          (20*Pi*s*(omega + s)) + (eps*(4*omega^2 - 3*omega*Q2 + 3*Q2^2 + 
+            8*omega*s - 8*Q2*s + 4*s^2)*(-1 + SUNN)*(1 + SUNN)*Log[mu])/
+          (20*Pi*s*(omega + s)) + (eps*(4*omega^2 - 3*omega*Q2 + 3*Q2^2 + 
+            8*omega*s - 8*Q2*s + 4*s^2)*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/
+          (40*Pi*s*(omega + s))}}|>|>|>

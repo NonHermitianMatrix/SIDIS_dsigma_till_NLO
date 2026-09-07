@@ -1,0 +1,17 @@
+MONITOR_START job=14691655 host=n7140 kernel_pid=51023
+Reference sidis.py 150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d
+Reference LO.py f8a95936521389172d28bf7e7c3b8016d56b0666f90d047501d33ed2fce72e11
+Reference NLO/Pg/fchn2A.py 9d24bb4b02ef7b69b125059b7b8fe4ba993c4fb1d3c3972dd826f221d3e64c23
+Reference NLO/Pg/fchn2B.py 48d5e92a0b33abee65d000327d4bc1c6edb30dab97b396d237541e53291f07b3
+Reference NLO/Pg/fchn2C.py c5da8f58bad64c6738b88f7d8acb0872bdbc5153444a1c7fc489af53872fd3c2
+Reference NLO/Ppp/fchn2A.py f1a04d5fb041b174e61f82e5290dc81a01c1583c741a754de8a76d17e0d75e72
+Reference NLO/Ppp/fchn2B.py 59746b925caa9e016f7548836c443aa158a5521d32a9df4d9e22b3f8d5ffe586
+Reference NLO/Ppp/fchn2C.py 38cf2594a02e35ee51d7d5c83e94167d24cf65fbc864aac6df8fa4742a71050e
+Parsed Pg A distinct numeric tokens 936
+Parsed Pg B distinct numeric tokens 37
+Parsed Pg C distinct numeric tokens 21
+Parsed Ppp A distinct numeric tokens 832
+Parsed Ppp B distinct numeric tokens 31
+Parsed Ppp C distinct numeric tokens 52
+S01_SUCCESS
+MONITOR_WAKE {"stage": "s01", "source": "s01_prepare_reference.py", "source_sha256": "199f6664a897cbceb00d060d59f6645db117bd6ea9b012479e2643fb426fa9f9", "job_id": "14691655", "host": "n7140", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 84525056, "elapsed_seconds": 6.250400140881538, "completed_utc": "2026-09-07T02:31:48.701955+00:00"}

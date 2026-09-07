@@ -1,0 +1,23 @@
+<|"InputHash" -> 
+  950281217396596741040845947104442413265538377401210120367472310985055252943\
+43, "Value" -> <|"Ordinary" -> 
+    (s23^2*(-1 + SUNN)*(1 + SUNN)*(Q2 + s - s23 + t)^3)/
+      (8*eps*Pi*s*(s - s23)^3*(s23 - t)*t) + 
+     ((-1 + SUNN)*(1 + SUNN)*(s23 - t)^2*
+       ((EulerGamma*(-1 - (Q2*s23 + s*t)/((s - s23)*(s23 - t)))^3)/
+         (8*Pi*s23) - (-11 - (51*(Q2*s23 + s*t))/((s - s23)*(s23 - t)) - 
+          (60*(Q2*s23 + s*t)^2)/((s - s23)^2*(s23 - t)^2) - 
+          (22*(Q2*s23 + s*t)^3)/((s - s23)^3*(s23 - t)^3))/(48*Pi*s23) - 
+        8*Pi*(-1 - (Q2*s23 + s*t)/((s - s23)*(s23 - t)))^3*
+         (((-1/32 + Log[2]/32 + Log[mu]/32)/Pi^2 + Log[Pi]/(64*Pi^2))/s23 - 
+          Log[s23]/(64*Pi^2*s23))))/(s*t), 
+   "Soft" -> <|1 -> {{1, -1, ((-6 - eps + 6*eps*EulerGamma)*(omega - s)*
+           (-1 + SUNN)*(1 + SUNN))/(144*Pi*s) - (eps*(omega - s)*(-1 + SUNN)*
+           (1 + SUNN)*Log[2])/(12*Pi*s) - (eps*(omega - s)*(-1 + SUNN)*
+           (1 + SUNN)*Log[mu])/(12*Pi*s) - (eps*(omega - s)*(-1 + SUNN)*
+           (1 + SUNN)*Log[Pi])/(24*Pi*s)}}, 
+     -1 -> {{1, -1, -1/144*((-6 - eps + 6*eps*EulerGamma)*(omega + s)*
+            (-1 + SUNN)*(1 + SUNN))/(Pi*s) + (eps*(omega + s)*(-1 + SUNN)*
+           (1 + SUNN)*Log[2])/(12*Pi*s) + (eps*(omega + s)*(-1 + SUNN)*
+           (1 + SUNN)*Log[mu])/(12*Pi*s) + (eps*(omega + s)*(-1 + SUNN)*
+           (1 + SUNN)*Log[Pi])/(24*Pi*s)}}|>|>|>

@@ -1,0 +1,35 @@
+MONITOR_START job=14691762 host=n7126 kernel_pid=11325
+Compared q1_positive
+Compared q1_negative
+Compared q2_positive
+Compared q2_negative
+Compared q3_positive
+Compared q3_negative
+{
+  "Coefficients": {
+    "Total": 120,
+    "Passed": 120,
+    "MaxAbsoluteDifference": 1.8399429847794523e-80,
+    "MaxRelativeDifference": 3.112551399251618e-78
+  },
+  "DirectReconstructed": {
+    "Total": 24,
+    "Passed": 24,
+    "MaxAbsoluteDifference": 0.0,
+    "MaxRelativeDifference": 0.0
+  },
+  "DirectPublishedDecimals": {
+    "Total": 24,
+    "Passed": 24,
+    "MaxAbsoluteDifference": 1.9216556972377208e-16,
+    "MaxRelativeDifference": 6.434401797943158e-14
+  },
+  "PublishedMinusReconstructed": {
+    "Total": 24,
+    "Passed": 24,
+    "MaxAbsoluteDifference": 1.9216556972377208e-16,
+    "MaxRelativeDifference": 6.434401797943158e-14
+  }
+}
+S03_SUCCESS; agreement=True
+MONITOR_WAKE {"stage": "s03", "source": "s03_report_comparison.py", "source_sha256": "aeb0bad68e19dac8861987755d8e545b8efa578a4b2fc2402c0af07a39c56873", "job_id": "14691762", "host": "n7126", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 91385856, "elapsed_seconds": 4.525806210003793, "completed_utc": "2026-09-07T03:00:15.071565+00:00"}

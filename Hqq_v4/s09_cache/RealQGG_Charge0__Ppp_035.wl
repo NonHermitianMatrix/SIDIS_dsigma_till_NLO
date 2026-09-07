@@ -1,0 +1,39 @@
+<|"InputHash" -> 
+  950281217396596741040845947104442413265538377401210120367472310985055252943\
+43, "Value" -> <|"Ordinary" -> ((-1 + SUNN)*(1 + SUNN)*(Q2 + s - s23 + t)^2*
+       (-s23 + s23*SUNN^2 - SUNN^2*t))/(16*eps*Pi*(s - s23)*SUNN^2*t^2) + 
+     ((-1 + SUNN)*(1 + SUNN)*
+       (-1/16*((-(Q2*s23^2) - s*s23^2 + s23^3 + Q2*s23^2*SUNN^2 + 
+            s*s23^2*SUNN^2 - s23^3*SUNN^2 + Q2*s23*t + s*s23*t - 2*s23^2*t - 
+            2*Q2*s23*SUNN^2*t - 2*s*s23*SUNN^2*t + 3*s23^2*SUNN^2*t + 
+            s23*t^2 + Q2*SUNN^2*t^2 + s*SUNN^2*t^2 - 3*s23*SUNN^2*t^2 + 
+            SUNN^2*t^3)*(-1 - (2*(Q2*s23 + s*t))/((s - s23)*(s23 - t))))/
+          (Pi*s23) + (EulerGamma*(-(Q2*s23^2) - s*s23^2 + s23^3 + 
+           Q2*s23^2*SUNN^2 + s*s23^2*SUNN^2 - s23^3*SUNN^2 + Q2*s23*t + 
+           s*s23*t - 2*s23^2*t - 2*Q2*s23*SUNN^2*t - 2*s*s23*SUNN^2*t + 
+           3*s23^2*SUNN^2*t + s23*t^2 + Q2*SUNN^2*t^2 + s*SUNN^2*t^2 - 
+           3*s23*SUNN^2*t^2 + SUNN^2*t^3)*(-1 - (Q2*s23 + s*t)/
+            ((s - s23)*(s23 - t))))/(16*Pi*s23) - 
+        2*Pi*(-1 - (Q2*s23 + s*t)/((s - s23)*(s23 - t)))*
+         ((2*Q2*s23^2 + 2*s*s23^2 - 2*s23^3 - 2*Q2*s23^2*SUNN^2 - 
+            2*s*s23^2*SUNN^2 + 2*s23^3*SUNN^2 - 2*Q2*s23*t - 2*s*s23*t + 
+            4*s23^2*t + 3*Q2*s23*SUNN^2*t + 3*s*s23*SUNN^2*t - 
+            5*s23^2*SUNN^2*t - 2*s23*t^2 - 2*Q2*SUNN^2*t^2 - 2*s*SUNN^2*t^2 + 
+            4*s23*SUNN^2*t^2 - SUNN^2*t^3)/(32*Pi^2*s23) + 
+          (-(Q2*s23^2) - s*s23^2 + s23^3 + Q2*s23^2*SUNN^2 + s*s23^2*SUNN^2 - 
+            s23^3*SUNN^2 + Q2*s23*t + s*s23*t - 2*s23^2*t - 
+            2*Q2*s23*SUNN^2*t - 2*s*s23*SUNN^2*t + 3*s23^2*SUNN^2*t + 
+            s23*t^2 + Q2*SUNN^2*t^2 + s*SUNN^2*t^2 - 3*s23*SUNN^2*t^2 + 
+            SUNN^2*t^3)*(((Log[2]/16 + Log[mu]/16)/Pi^2 + Log[Pi]/(32*Pi^2))/
+             s23 - Log[s23]/(32*Pi^2*s23)))))/(SUNN^2*t^2), 
+   "Soft" -> 
+    <|1 -> {{1, -1, ((-omega - eps*omega + eps*EulerGamma*omega - Q2 + 
+            eps*EulerGamma*Q2 + eps*s)*(-1 + SUNN)*(1 + SUNN))/(16*Pi) - 
+         (eps*(omega + Q2)*(-1 + SUNN)*(1 + SUNN)*Log[2])/(8*Pi) - 
+         (eps*(omega + Q2)*(-1 + SUNN)*(1 + SUNN)*Log[mu])/(8*Pi) - 
+         (eps*(omega + Q2)*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/(16*Pi)}}, 
+     -1 -> {{1, -1, -1/16*((-omega - eps*omega + eps*EulerGamma*omega + Q2 - 
+             eps*EulerGamma*Q2 - eps*s)*(-1 + SUNN)*(1 + SUNN))/Pi + 
+         (eps*(omega - Q2)*(-1 + SUNN)*(1 + SUNN)*Log[2])/(8*Pi) + 
+         (eps*(omega - Q2)*(-1 + SUNN)*(1 + SUNN)*Log[mu])/(8*Pi) + 
+         (eps*(omega - Q2)*(-1 + SUNN)*(1 + SUNN)*Log[Pi])/(16*Pi)}}|>|>|>
