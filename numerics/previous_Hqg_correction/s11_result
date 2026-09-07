@@ -1,0 +1,47 @@
+{
+  "stage": "s11",
+  "status": "Complete",
+  "producer_sha256": "940de1658d85fbbd78bff49a65a13dc010fd36583542d0b7cbb5b15f70dc3154",
+  "inputs": {
+    "s09_cache/q0_p0_result": "159803bf2c0d1d04f9ae4916a5a5b609cb5a71dab965d02bd2e22c4a60b52238",
+    "s09_cache/q0_p1_result": "33e0bb639241180dcf479d901cf5e3a4d51c8407be9eac43e2f452472612d87a",
+    "s09_cache/q0_p2_result": "aacf92b02ff9380c750472cd37c8fca16aa7addd3398273e3b20e5f97911fbd8",
+    "s09_cache/q0_p3_result": "655e07ee251e1aa3efdb1869188422f03a356fe80ea58a78b2e838f7d2ba3bd8",
+    "s09_cache/q0_p4_result": "5bd25b08f2e96f3ea4cf05fe39d8caf4a2ac0f8e1f32d46cc1434d314416ba1f",
+    "s09_cache/q0_p5_result": "ac55ae6fcba9e36a620c479f175a4ac1568a06fe5e08a8dd21d79765b0a1dba9",
+    "s09_cache/q1_p0_result": "3d71ee533c340905c8b5d7cc0b9a40fd3d4cb7d04dc6a043dc2f3d6d2fe2f852",
+    "s09_cache/q1_p1_result": "f90178d2e5f1b4d56f895b289ba9879cb2c8802b9ab269bbfd212d86b056363f",
+    "s09_cache/q1_p2_result": "8dbe02516f7bdc46d02859d7aaa2f8283960db4fffb6a05709814e903bcbfa68",
+    "s09_cache/q1_p3_result": "fcf97a05c281036c0a8ba9b4e9dcb4c1c6673f11c3933266ad77a7672911d3df",
+    "s09_cache/q1_p4_result": "ed11e3a0007de199d69500e51006ca4df177ea604d78c4c8e8a651ae717a87b8",
+    "s09_cache/q1_p5_result": "f8395745871ba5e892a6dbcb4ecf8c4f7523160b3b0dcaf122c06f5652cb2edf",
+    "s09_cache/q2_p0_result": "af597bcb9ba9bd0f34acc5d257eff1a950b9c2c06b770e8deddbfe1455620922",
+    "s09_cache/q2_p1_result": "7a284595a77375a370031aff96ce4b12b818ba61aeaa33d381af5906fffa4063",
+    "s09_cache/q2_p2_result": "b6d984082fb453091401bb0fdf4b635035daba657a3957b1bc5d5f21fab39ff6",
+    "s09_cache/q2_p3_result": "fd1ce9a8ca7ab6c7f3924e25d99d14b2f66627cd2205112d965fb03ddcf48297",
+    "s09_cache/q2_p4_result": "589dd86d777c5215c02ee294bd6bcc49a3eb5aa12276d5eae82f2c037dbaa628",
+    "s09_cache/s09_build_result": "617ffa9044fd551e11b48d1cd1a2f953ecc3a91f48f363575d567bee1b0c75af"
+  },
+  "checks": {
+    "complete_bin_coverage": true,
+    "current_full_channel_inputs": true,
+    "convergence_gates": true,
+    "component_sums": true,
+    "covariance_errors": true,
+    "distinct_bin_seeds": true
+  },
+  "output": "s09_result",
+  "output_sha256": "66c0df6a0a8001e4603d939602bb8c7aa378fe77c916437f1b9115b8363b36ad",
+  "FFs": [
+    "KKP",
+    "Kretzer"
+  ],
+  "total_sigma_pb": [
+    563.5889919494406,
+    412.69784271172824
+  ],
+  "total_sigma_error_pb": [
+    2.87117502586373,
+    2.3091817619842088
+  ]
+}

@@ -132,21 +132,21 @@ ids[4][0][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/script
 ids[4][4][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hgq_v4_Regular_0.dat");included[4][4]=false;
 ids[4][4][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hgq_v4_Regular_1.dat");included[4][4]=false;
 ids[4][4][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hgq_v4_Regular_m1.dat");included[4][4]=false;
-ids[5][1][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Delta_0.dat");included[5][1]=false;
-ids[5][1][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Delta_1.dat");included[5][1]=false;
-ids[5][1][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Delta_m1.dat");included[5][1]=false;
-ids[5][2][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L0_0.dat");included[5][2]=false;
-ids[5][2][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L0_1.dat");included[5][2]=false;
-ids[5][2][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L0_m1.dat");included[5][2]=false;
-ids[5][3][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L1_0.dat");included[5][3]=false;
-ids[5][3][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L1_1.dat");included[5][3]=false;
-ids[5][3][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L1_m1.dat");included[5][3]=false;
-ids[5][0][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_LODelta_0.dat");included[5][0]=false;
 ids[5][0][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_LODelta_1.dat");included[5][0]=false;
-ids[5][0][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_LODelta_m1.dat");included[5][0]=false;
-ids[5][4][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Regular_0.dat");included[5][4]=false;
+ids[5][1][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Delta_1.dat");included[5][1]=false;
+ids[5][2][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L0_1.dat");included[5][2]=false;
+ids[5][3][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L1_1.dat");included[5][3]=false;
 ids[5][4][1]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Regular_1.dat");included[5][4]=false;
+ids[5][0][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_LODelta_m1.dat");included[5][0]=false;
+ids[5][1][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Delta_m1.dat");included[5][1]=false;
+ids[5][2][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L0_m1.dat");included[5][2]=false;
+ids[5][3][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L1_m1.dat");included[5][3]=false;
 ids[5][4][0]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Regular_m1.dat");included[5][4]=false;
+ids[5][0][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_LODelta_0.dat");included[5][0]=false;
+ids[5][1][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Delta_0.dat");included[5][1]=false;
+ids[5][2][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L0_0.dat");included[5][2]=false;
+ids[5][3][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_L1_0.dat");included[5][3]=false;
+ids[5][4][2]=sidis_load_program("/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_pair_Hqg_v3_Regular_0.dat");included[5][4]=false;
  sidis_set_alpha(2.045,18.5,0.1085488995978293);initialized=true;return 0;
  }catch(...){return 1;}
 }

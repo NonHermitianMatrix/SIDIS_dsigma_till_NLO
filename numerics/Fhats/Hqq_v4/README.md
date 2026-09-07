@@ -144,3 +144,27 @@ Accepted direct-output SHA256: F1 2ee1cf825ccb2d40296645e2c6ca108d90bfb38588df2f
 BigTMD comparison consumer: bigTMD_check/README.md defines the isolated three-stage numerical comparison. It consumes accepted S10/S02 at frozen SHA256 identities and imports only the authors Hqq channel. Its reference reconstruction and numerical outcomes do not modify or replace production results.
 
 Accepted BigTMD check: bigTMD_check/s03_result.md and s03_result.json report 120/120 reconstructed-reference coefficients and 24/24 independently evaluated published-decimal direct hats passing, both signs of s+t and up/down charges, nf=4, SU(3), mu=Q. Maximum published-decimal relative difference 6.434401797943158e-14. S03 source SHA256 aeb0bad68e19dac8861987755d8e545b8efa578a4b2fc2402c0af07a39c56873, JSON SHA256 c79e40bb3fe890f5f4d88e844fffb315901e0fd2e472f4084dc0f954ebb74040. The check ledger records normalization/distribution transport, endpoint reconstruction, precise source identities, resource evidence and required serialization-resume snapshot. No authors coefficient entered production and no symbolic production result changed.
+
+## Current six-input numerical consumer contract
+
+The user selected this channel for the numerical generation in ../numerics/.
+That consumer imports the accepted terminal payload byte-for-byte and records its
+identity in numerics/s01_result. Its S03 recovers this payload's own charge,
+flavor, distribution and partonic-variable contracts; S05 exports these
+coefficients and checks direct Wolfram values. The numerical consumer applies the
+S04 fragmentation Jacobian to these partonic hats once and retains the source
+normalization. It does not alter any symbolic production coefficient.
+Current charge moments, positive-rho definitions and bounded-plus conventions
+must come from this channel's own payload. S07/S10 gate native evaluation before
+S09 convolves with the unchanged MRST02 and KKP/Kretzer inputs. The numerical
+README documents stage interfaces; only ../progress.md records execution status.
+
+Accepted current numerical coefficient interface: ../numerics/s03_cache/Hqq_v4_consumer_contract, SHA256 cb7f93f2890a22bd35a84637c4ad8122b5b764949963cf37cbceb08403387335; ../numerics/s05_cache/Hqq_v4_result, SHA256 cf6a4b20d84af8e9909cca9badd37bcf1f63f03331b52328fe73150d7319cf67. The current ../numerics/s07_result (SHA256 15fdc7e47c5494bdea7d7750089ec7f942a2920367ae64a9b5cd115fb16620e8) binds 15 paired programs for this channel and their exact operation-table/source identities. All associated Wolfram/native checks passed. These numerical interface identities supersede earlier numerical-export references for the active six-input generation; symbolic production identities and comparison caveats above remain unchanged. Convolution uses the established partonic coefficient and charge conventions; final integrated-bin acceptance is recorded separately in the numerical ledger.
+
+Accepted numerical consumer output: ../numerics/s09_result, SHA256 66c0df6a0a8001e4603d939602bb8c7aa378fe77c916437f1b9115b8363b36ad, and ../numerics/s11_result, SHA256 9f7ccd91726edc6735f905ae36dc5c3b4076c97290613866e340dd5a9240fd62. All 17 current full-channel bins pass the original numerical gates; the S09 component arrays retain this channel's signed LO/NLO contributions with complete within-bin covariance. Both comparison figures are bound by ../numerics/dsigmapibydpt/s03_result, SHA256 f82e5fd31e63c1b2c5c5a110e9a872b20324c8e64e49202a9f52ba66e4b6cc6e. No symbolic channel payload changed.
+
+## Source-bound six-channel analytical comparison
+
+The separate [analytical report](../bigTMD_comparison/Hqq_v4/s04_result.md) compares this channel's unchanged current F hats with pinned BigTMD commit `6e97635d21a63b7975b2e7f5891edc0c35c4dc0c`. Both F hats agree in the stated comparison. Channel and all coefficient classes included. The exact-algebra claims are conditional on the declared reconstruction of printed decimal constants and the report's color, charge, scale, branch and distribution conventions.
+
+Input SHA256: `c91b1d3880071228abc21435fbc72fef326f4d568e33cee68e4c6099eb97a1d7`. Comparison SHA256: `9cbd84ade57c35073608ba05258a536538bb5e5bc0f3c4d2ac136f91e9cc3c28`. Report SHA256: `521c32cbfd8b17c48453bd83030746c58418a225c15ffcad3aaffcafeffec948`. The comparison-directory README and receipts bind the source, result, proof-cache and validation identities. No production expression or existing independent-validation caveat is superseded by this comparison.

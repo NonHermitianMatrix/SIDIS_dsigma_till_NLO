@@ -2,7 +2,7 @@
   "schema": "SIDISNumericsInputReadiness-v1",
   "stage": "s02",
   "producer_sha256": "d1dc69095110121dbb255565e375ff066332d9c403626ac61067a015a1a1501f",
-  "s01_result_sha256": "397ceeaa480555e17edff537cd6edf0e073b2cf7593bceb38f20746f8c4df1d3",
+  "s01_result_sha256": "3ed06427558fcbb9df4c89029509cbca76d226eb3139190b116221830fd4c40d",
   "status": "InputIntegrityChecked",
   "frozen_integrity": [
     {
@@ -17,7 +17,7 @@
     },
     {
       "copy": "Fhats/Hqq_v4/README.md",
-      "sha256": "d8297aaa441019e50724ba03a11a0a83003365cf8edb3015708a37f9c0c4133a",
+      "sha256": "638904d34a58fd024e3983c12772e9bb786345c0ce0f825a74ef1303468e7e6e",
       "matches_s01": true
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "copy": "Fhats/Hgg_v2/README.md",
-      "sha256": "884e924a84b5375709cef3a58eafac3f1c9a2bdc8c7ffc732e0d09be2ac69d2d",
+      "sha256": "66912c864119c367e5929f16b3a3a7d99835b4917ec1aafa310dcc7a5352d34e",
       "matches_s01": true
     },
     {
@@ -67,7 +67,7 @@
     },
     {
       "copy": "Fhats/Hqqbar_v2/README.md",
-      "sha256": "6467633047bec01d5b9ce07dc4d6b455a0eb448cf123f3f42d3f436a9227a134",
+      "sha256": "a794c096823f54a1d0f429036436c5f16c328f87b72737373af061715256632b",
       "matches_s01": true
     },
     {
@@ -92,7 +92,7 @@
     },
     {
       "copy": "Fhats/Hqqprime_v2/README.md",
-      "sha256": "bf296ccb489d1a5c91d200476c574ba848c7020967be1c243a2942c4e9b29954",
+      "sha256": "fbd306a4ac607285c19c521b8283fbdc0e978daf381c4084235353d65683db9e",
       "matches_s01": true
     },
     {
@@ -112,7 +112,7 @@
     },
     {
       "copy": "Fhats/Hgq_v4/README.md",
-      "sha256": "b63d7b9d59b399855be24a8badd1cea10f5e0d2445256ddce949fc092f369df9",
+      "sha256": "5653740e8f1e54c11717240ecbac961f18abbf17a93320a3b1089a660b5f2321",
       "matches_s01": true
     },
     {
@@ -122,22 +122,22 @@
     },
     {
       "copy": "Fhats/Hqg_v3/s12_result.wl",
-      "sha256": "0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c",
+      "sha256": "4ed44edf3d2c0274249792e21a8b1c7a9bff0ca9ec7c10f07cb072e54a1e45bd",
       "matches_s01": true
     },
     {
       "copy": "Fhats/Hqg_v3/s12_poles.wl",
-      "sha256": "4a4a1a0ffe3da5a947e5db6782eb91c46c724e10491812cc6b09db9dc4472756",
+      "sha256": "6c70a5d9106090223a72041d5986b3447a147b9ad6fb794b36f223a64fa6b06c",
       "matches_s01": true
     },
     {
       "copy": "Fhats/Hqg_v3/README.md",
-      "sha256": "6f082cb555cb4455b09373226dc11227bb0c3ef2945131255d93ec45e783c543",
+      "sha256": "d01248ae2f923b27c806bb9ac788a6eb34c471832f3c5103d2455fc13866acb2",
       "matches_s01": true
     },
     {
       "copy": "Fhats/Hqg_v3/s12_final_hats.wl",
-      "sha256": "da103a802e0aac384fe75c1c44096324659755781a6be98cae459f440057e5b0",
+      "sha256": "875c95d4c77eeef9f9f2f4bbf83fbdc77067e3def04152e9cab98448190d0e6e",
       "matches_s01": true
     }
   ],
@@ -147,7 +147,7 @@
       "code": "HGQ_V4_REAL_TREE_COMPARISON_UNRESOLVED",
       "channel": "Hgq_v4",
       "ledger": "Fhats/Hgq_v4/README.md",
-      "ledger_sha256": "b63d7b9d59b399855be24a8badd1cea10f5e0d2445256ddce949fc092f369df9",
+      "ledger_sha256": "5653740e8f1e54c11717240ecbac961f18abbf17a93320a3b1089a660b5f2321",
       "line": 510,
       "evidence": "\n`madgraph_check/s05_result.json` (SHA256 `8757ed8318c39b21bcbdc397058f33f375a1178e9a73675f295478dff98894d3`) and `madgraph_check/madgraph_minus_local.md` report Born agreement and an unresolved real-emission sign discrepancy. The supplemental direct-square attempt timed out before a result after passing its momentum-map checks. This tree-validation limitation remains attached to the frozen S03/S10 artifacts; authors agreement does not clear it. No production source, result or cache was changed by these comparisons. The comparison-folder READMEs record source/result/log identities and execution limits.",
       "effect": "Retained comparison limitation of the supplied accepted S10 input requested by the user; no reference-derived production correction."

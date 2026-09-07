@@ -96,7 +96,7 @@ def main():
         handles, labels = axs[0].get_legend_handles_labels()
         figure.legend(handles, labels, loc='upper center', ncol=2, frameon=False, fontsize=9,
                       bbox_to_anchor=(.5, .976))
-        figure.subplots_adjust(top=.86, bottom=.14, hspace=.12, left=.13, right=.98)
+        figure.tight_layout(rect=(0, .13, 1, .88), h_pad=1.0)
     fig.suptitle(r'Neutral-pion SIDIS: supplied six-channel LO + NLO, $\mu^2=(Q^2+p_T^2)/2$', y=.995, fontsize=12)
     ratios_fig.suptitle('Neutral-pion SIDIS: theory-to-data comparison', y=.995, fontsize=12)
     fig.text(.13, .035, 'MRST2002 NLO; H1 forward-pion cuts. Error bars on this calculation: integration only.\n'

@@ -45,9 +45,9 @@ CHANNELS = {
     },
     "Hqg_v3": {
         "producer": "s12_final_hats.wl",
-        "payloads": {"s12_result.wl": "0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c"},
-        "acceptance_files": {"s12_poles.wl": "4a4a1a0ffe3da5a947e5db6782eb91c46c724e10491812cc6b09db9dc4472756"},
-        "ledger_status": "Independent LO+NLO S12 accepted in channel README; finite Delta comparison discrepancy documented separately.",
+        "payloads": {"s12_result.wl": "4ed44edf3d2c0274249792e21a8b1c7a9bff0ca9ec7c10f07cb072e54a1e45bd"},
+        "acceptance_files": {"s12_poles.wl": "6c70a5d9106090223a72041d5986b3447a147b9ad6fb794b36f223a64fa6b06c"},
+        "ledger_status": "Corrected independent LO+NLO S12 accepted after the S08 polar-integration correction; all 18 analytical BigTMD comparisons agree under their documented conventions.",
     },
 }
 

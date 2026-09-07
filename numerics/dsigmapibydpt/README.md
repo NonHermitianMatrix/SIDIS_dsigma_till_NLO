@@ -31,11 +31,19 @@ MRST02 PDFs, both KKP/Kretzer FFs, scales, cuts, experimental tables and origina
 
 The superseded figure receipts and plots are retained in ../previous_six_input_replacement/dsigmapibydpt/; earlier artifacts remain in ../previous_Hgq_v3/. They are historical outputs.
 
-## Accepted six-input figures
+## Accepted corrected-Hqg figures
 
-The current 17 accepted bins appear in both three-panel figure sets. All data, theory and ratio values are recorded in s03_result, SHA256 f82e5fd31e63c1b2c5c5a110e9a872b20324c8e64e49202a9f52ba66e4b6cc6e. Its numerical input is ../s09_result, SHA256 66c0df6a0a8001e4603d939602bb8c7aa378fe77c916437f1b9115b8363b36ad. Every recorded input/output hash passed final verification. Both PNGs were visually inspected: all three Q-squared panels, legends, units, curves, bin averages, errors and ratio conventions are legible. The source and original paper/data inputs are unchanged.
+Both three-Q2 figure sets contain all 17 accepted bins from the corrected six-channel numerical generation. Their source ../s09_result has SHA256 1b28305aa93b15129d5157b6e38ad6e82b443a86f69d65ddf534a02010b50592; the plot receipt s03_result has SHA256 ce7fae106d12c4e3ca6347793eb5a1e29c3a5760bb0b3303c25b0bbf8407b152. All six source payload identities and every plotted input/output hash passed final verification. The data, original paper curves and ratio definitions remain those documented above. Our errors are numerical integration uncertainty only.
 
-- s03_cross_section.pdf: SHA256 db692d4c90d1cdbd5677a75488203bd01f56cc3a6730134358f9d051b2a2f79f.
-- s03_cross_section.png: SHA256 184c2b53612d33b637f93b07fd2dd7796b31360647e6b01656a2ad29996a92af.
-- s03_ratios.pdf: SHA256 0142b94d4ed3f1d597b5a8b5300667ff08c63f5453e2bfa46c205b61bbf7c65c.
-- s03_ratios.png: SHA256 89f74f8f2fc86cd32e8500baa7ae4d115ddf33eae6b18571fb7d29d9c4f6d0dd.
+| Figure | SHA256 |
+| --- | --- |
+| s03_cross_section.pdf | 216cc3fc1b135c898f3e69087460e683ff671033ba91b7bb356ba283586d0499 |
+| s03_cross_section.png | 33c9f6344363f3e98097e394c0972372120d4ea72512ce69e6cc49748610a3b5 |
+| s03_ratios.pdf | e683cd0cda46b7366ed5f582e2ea162a6ffd6ba59e7c08f1ffe2be561c1d3d0c |
+| s03_ratios.png | da9c9f5b3fbb04fab2b16cd187c07adab4b63062bee7239c931f1912bf66a589 |
+
+The previous figures are preserved in ../previous_Hqg_correction/dsigmapibydpt/. s03_plot_comparison.py remains the direct regeneration entry point. It consumes the current accepted ../s09_result together with the existing s01_result/s02_result experimental and paper inputs.
+
+S03 layout-only correction contract: reserve an explicit rectangle for the subplot layout so x-axis labels and the three-line figure footer are separated. Reuse the same accepted s09_result and paper/data inputs; require every saved panel/ratio value and input hash to match the preceding figure receipt exactly. The preceding source and figures are preserved in s03_previous_layout/.
+
+Final layout acceptance: both regenerated figures were visually inspected, with the ratio PNG inspected at original resolution. All three panels, title, legend, axis labels, data/theory marks and footer are legible. The ratio PDF text also contains the complete labels. The layout-only rerender preserved every plotted value and input identity exactly. Current producer SHA256: e1b416782137d1e4d9d4fce73939267b613757dae5381f2c53cbe84fb080abd8.

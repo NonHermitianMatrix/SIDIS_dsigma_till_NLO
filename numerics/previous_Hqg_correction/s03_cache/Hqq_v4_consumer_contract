@@ -1,0 +1,96 @@
+{
+	"Status":"Complete",
+	"InputSHA256":"c91b1d3880071228abc21435fbc72fef326f4d568e33cee68e4c6099eb97a1d7",
+	"Checks":{
+		"source_hash":true,
+		"regulator_cancellation":true,
+		"pole_acceptance":true,
+		"pole_input_identity":true,
+		"all_pole_residues_zero":true,
+		"odd_moment_absent":true,
+		"charge_conjugation":true,
+		"flavor_count_reduction":true
+	},
+	"PlusDefinition":"\"Ln=[Log[s23\/B]^n\/s23]_+ on [0,B]\"",
+	"PlusLogArgument":"ss\/B",
+	"NormalizedPlusLogarithm":true,
+	"BranchCoordinates":"<|1 -> omega -> s + t, -1 -> omega -> -s - t|>",
+	"BranchDomains":"<|1 -> s + t > 0, -1 -> s + t < 0|>",
+	"CoordinateBoundaryPresent":true,
+	"ChargeDegree":null,
+	"LOAlphaDegree":1,
+	"NLOAlphaDegree":2,
+	"FlavorMomentDefinitions":"<|1 -> Inactive[Sum][flavorCharge[flavor]*(1 - KroneckerDelta[1, flavor]), {flavor, 1, Nf}], 2 -> Inactive[Sum][flavorCharge[flavor]^2*(1 - KroneckerDelta[1, flavor]), {flavor, 1, Nf}]|>",
+	"FlavorDomain":"Element[Nf, Integers] && Nf >= 1",
+	"FlavorMoments":{
+		"4":[
+			{
+				"ObservedIndex":0,
+				"Moments":{
+					"1":"charge2 + charge3 + charge4",
+					"2":"charge2**2 + charge3**2 + charge4**2"
+				}
+			},
+			{
+				"ObservedIndex":1,
+				"Moments":{
+					"1":"charge1 + charge3 + charge4",
+					"2":"charge1**2 + charge3**2 + charge4**2"
+				}
+			},
+			{
+				"ObservedIndex":2,
+				"Moments":{
+					"1":"charge1 + charge2 + charge4",
+					"2":"charge1**2 + charge2**2 + charge4**2"
+				}
+			},
+			{
+				"ObservedIndex":3,
+				"Moments":{
+					"1":"charge1 + charge2 + charge3",
+					"2":"charge1**2 + charge2**2 + charge3**2"
+				}
+			}
+		],
+		"5":[
+			{
+				"ObservedIndex":0,
+				"Moments":{
+					"1":"charge2 + charge3 + charge4 + charge5",
+					"2":"charge2**2 + charge3**2 + charge4**2 + charge5**2"
+				}
+			},
+			{
+				"ObservedIndex":1,
+				"Moments":{
+					"1":"charge1 + charge3 + charge4 + charge5",
+					"2":"charge1**2 + charge3**2 + charge4**2 + charge5**2"
+				}
+			},
+			{
+				"ObservedIndex":2,
+				"Moments":{
+					"1":"charge1 + charge2 + charge4 + charge5",
+					"2":"charge1**2 + charge2**2 + charge4**2 + charge5**2"
+				}
+			},
+			{
+				"ObservedIndex":3,
+				"Moments":{
+					"1":"charge1 + charge2 + charge3 + charge5",
+					"2":"charge1**2 + charge2**2 + charge3**2 + charge5**2"
+				}
+			},
+			{
+				"ObservedIndex":4,
+				"Moments":{
+					"1":"charge1 + charge2 + charge3 + charge4",
+					"2":"charge1**2 + charge2**2 + charge3**2 + charge4**2"
+				}
+			}
+		]
+	},
+	"JacobianAlreadyIncluded":false,
+	"PartonicVariableGate":true
+}

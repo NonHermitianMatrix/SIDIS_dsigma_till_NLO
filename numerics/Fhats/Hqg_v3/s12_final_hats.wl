@@ -1,7 +1,7 @@
 (* Finite independent Hqg hats, gated by complete distributional IR cancellation. *)
 $HistoryLength = 0;
 root = DirectoryName[$InputFileName];
-ClearAll[gate, bounded, reduce, zero, assemble, boundarySide, regularSeries];
+ClearAll[gate, bounded, reduce, zero, assemble, boundarySide, regularSeries, boundaryEqual];
 gate[name_, test_] := If[TrueQ[test], Print["PASS: ", name], Print["FAIL: ", name]; Quit[1]];
 SetAttributes[bounded, HoldFirst];
 bounded[work_, label_] := MemoryConstrained[TimeConstrained[work, 900,
@@ -20,6 +20,16 @@ If[!DirectoryQ[cache], CreateDirectory[cache]];
 priorSources = FileNames["s12_source_*.wl", cache];
 acceptedInputHashes = DeleteDuplicates[Prepend[
   (Hash[{FileHash[#, "SHA256"], hashes}, "SHA256"] &) /@ priorSources, inputHash]];
+boundaryProofFile=FileNameJoin[{cache,"s12_boundary_proofs.wl"}];
+boundaryProofs=<||>;
+If[FileExistsQ[boundaryProofFile],
+  boundaryProofReceipt=Get[boundaryProofFile];
+  gate["boundary proof receipt completed and source bound",
+    boundaryProofReceipt["Completed"]===True&&
+    FileHash[boundaryProofReceipt["ProofBuilder"],"SHA256","HexString"]===boundaryProofReceipt["ProofBuilderSHA256"]];
+  gate["all prior exact-boundary proof inputs unchanged",And@@KeyValueMap[
+    FileHash[#1,"SHA256","HexString"]===#2&,boundaryProofReceipt["InputHashes"]]];
+  boundaryProofs=boundaryProofReceipt["Proofs"]];
 reduce[value_, assumptions_] := Module[{expression, functions},
   expression = Refine[value /. a_ArcTanh :> ComplexExpand[a], assumptions];
   expression = PowerExpand[expression /. Log[arg_] :> Log[Factor[arg]], Assumptions -> assumptions];
@@ -28,6 +38,11 @@ reduce[value_, assumptions_] := Module[{expression, functions},
     Collect[Expand[expression, Alternatives @@ functions], functions, Factor]]];
 zero[value_, assumptions_] := Module[{a = reduce[value, assumptions]},
   If[a === 0, True, FullSimplify[a, assumptions] === 0]];
+boundaryEqual[right_,left_,assumptions_]:=Module[{key},
+  key=IntegerString[Hash[{right,left,assumptions},"SHA256"],16,64];
+  If[KeyExistsQ[boundaryProofs,key]&&TrueQ[boundaryProofs[key]["Equality"]],
+    Print["Reused prior exact boundary equality for identical expressions and assumptions"];True,
+    bounded[zero[right-left,assumptions],"boundary gate"]]];
 Do[
   branch = real["Real"][mode]["Branches"][sign];
   reconstructionAssumptions = branch["Assumptions"] &&
@@ -180,7 +195,7 @@ boundary = Association@Table[name -> Association@Table[distribution -> Module[{r
     (If[distribution === "Regular", real["PhysicalRegion"] /. t -> -s, True]);
   right = boundarySide[name, distribution, 1, assumptions];
   left = boundarySide[name, distribution, -1, assumptions];
-  gate["soft-coordinate boundary limits agree", bounded[zero[right - left, assumptions], "boundary gate"]];
+  gate["soft-coordinate boundary limits agree", boundaryEqual[right,left,assumptions]];
   gate["boundary limit is evaluated and finite", FreeQ[right, _Limit | Indeterminate | _DirectedInfinity]];
   right], {distribution, {"Delta", "L0", "L1", "Regular"}}], {name, {"F1", "F2"}}];
 distributionBasis = <|"Delta" -> DiracDelta[s23],
@@ -198,7 +213,8 @@ Put[<|"StructureFunctions" -> structureFunctions, "Hats" -> hats,
   "PlusDefinition" -> real["PlusDefinition"], "PhysicalRegion" -> real["PhysicalRegion"],
   "RegulatorCancellationPassed" -> True, "AuthorsCoefficientsUsed" -> False,
   "InputHashes" -> hashes, "InputHash" -> inputHash,
-  "AcceptedCacheInputHashes" -> acceptedInputHashes, "PriorSources" -> priorSources|>,
+  "AcceptedCacheInputHashes" -> acceptedInputHashes, "PriorSources" -> priorSources,
+  "BoundaryEqualityProofReceipt"->If[FileExistsQ[boundaryProofFile],FileHash[boundaryProofFile,"SHA256","HexString"],None]|>,
   FileNameJoin[{root, "s12_result.wl"}]];
 Print["Wrote s12_result.wl: finite independent hats; peak memory = ", MaxMemoryUsed[], " bytes."];
 Quit[];

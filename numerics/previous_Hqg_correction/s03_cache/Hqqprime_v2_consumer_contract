@@ -1,0 +1,21 @@
+{
+	"Status":"Complete",
+	"Channel":"Hqqprime_v2",
+	"InputSHA256":"4aee27e2d6b9decefce735ecb94536a71f4be0f09352cf5a538fd3b27d504cf6",
+	"Checks":{
+		"pole_residues_zero":true,
+		"regular_only":true,
+		"positive_rho_branch":true,
+		"partonic_variables":true,
+		"finite_coefficients":true
+	},
+	"JacobianAlreadyIncluded":false,
+	"NLOAlphaDegree":2,
+	"RhoSquared":"(s^2 + 2*s*t + t^2 + 4*Q2*w)\/4",
+	"HatVariableRules":"{s -> Q2*(-1 + xh^(-1)), t -> -Q2 + (Q2 - qT2)*zh, w -> (Q2 - Q2*xh - Q2*zh + Q2*xh*zh - qT2*xh*zh)\/xh}",
+	"ChargeMonomials":{
+		"eq2":"eq**2",
+		"eq_eqp":"eq*eqp",
+		"eqp2":"eqp**2"
+	}
+}

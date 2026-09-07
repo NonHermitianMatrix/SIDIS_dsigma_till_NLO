@@ -82,3 +82,27 @@ stage was introduced. Peak sampled job RSS across the recorded monitors
 was 523.4 MiB; no memory guard or OOM occurred. Numeric substitutions
 are confined to the checks. Production and reference caches retain
 reproduction and checkpoint value; no disposable test cache was created.
+
+## Current six-input numerical consumer contract
+
+The user selected this channel for the numerical generation in ../numerics/.
+That consumer imports the accepted terminal payload byte-for-byte and records its
+identity in numerics/s01_result. Its S03 recovers this payload's own charge,
+flavor, distribution and partonic-variable contracts; S05 exports these
+coefficients and checks direct Wolfram values. The numerical consumer applies the
+S04 fragmentation Jacobian to these partonic hats once and retains the source
+normalization. It does not alter any symbolic production coefficient.
+Current charge moments, positive-rho definitions and bounded-plus conventions
+must come from this channel's own payload. S07/S10 gate native evaluation before
+S09 convolves with the unchanged MRST02 and KKP/Kretzer inputs. The numerical
+README documents stage interfaces; only ../progress.md records execution status.
+
+Accepted current numerical coefficient interface: ../numerics/s03_cache/Hqqprime_v2_consumer_contract, SHA256 5278b5df0ec982cf4226effd7e68172c3847866bb1998718d287eaa4b5f32985; ../numerics/s05_cache/Hqqprime_v2_result, SHA256 8a36a37c4349f09fbd3e817ea3a1012c3df6769568505318a44121d4d4f43fc2. The current ../numerics/s07_result (SHA256 15fdc7e47c5494bdea7d7750089ec7f942a2920367ae64a9b5cd115fb16620e8) binds 6 paired programs for this channel and their exact operation-table/source identities. All associated Wolfram/native checks passed. These numerical interface identities supersede earlier numerical-export references for the active six-input generation; symbolic production identities and comparison caveats above remain unchanged. Convolution uses the established partonic coefficient and charge conventions; final integrated-bin acceptance is recorded separately in the numerical ledger.
+
+Accepted numerical consumer output: ../numerics/s09_result, SHA256 66c0df6a0a8001e4603d939602bb8c7aa378fe77c916437f1b9115b8363b36ad, and ../numerics/s11_result, SHA256 9f7ccd91726edc6735f905ae36dc5c3b4076c97290613866e340dd5a9240fd62. All 17 current full-channel bins pass the original numerical gates; the S09 component arrays retain this channel's signed LO/NLO contributions with complete within-bin covariance. Both comparison figures are bound by ../numerics/dsigmapibydpt/s03_result, SHA256 f82e5fd31e63c1b2c5c5a110e9a872b20324c8e64e49202a9f52ba66e4b6cc6e. No symbolic channel payload changed.
+
+## Source-bound six-channel analytical comparison
+
+The separate [analytical report](../bigTMD_comparison/Hqqprime_v2/s04_result.md) compares this channel's unchanged current F hats with pinned BigTMD commit `6e97635d21a63b7975b2e7f5891edc0c35c4dc0c`. Both F hats agree in the stated comparison. Nonzero ordinary remainders of plus functions omitted. The exact-algebra claims are conditional on the declared reconstruction of printed decimal constants and the report's color, charge, scale, branch and distribution conventions.
+
+Input SHA256: `4aee27e2d6b9decefce735ecb94536a71f4be0f09352cf5a538fd3b27d504cf6`. Comparison SHA256: `6ab2f678ce52f715d40766aff281dc0f73e1159ea6ef426dbe43dbf40a6a24e1`. Report SHA256: `b90f197a32e1233e5858675d17c15af16f47b17e64689d55c94ec3506e1b8e76`. The comparison-directory README and receipts bind the source, result, proof-cache and validation identities. No production expression or existing independent-validation caveat is superseded by this comparison.

@@ -11,8 +11,8 @@
 			"Endpoint":true,
 			"ChargeCase":"A",
 			"JacobianAlreadyIncluded":false,
-			"ProducerSHA256":"ac35710bdc931fba5f3231cf7d16aa75b8398122b950229a2f5b202c2051fcfe",
-			"FhatInputSHA256":"0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c",
+			"ProducerSHA256":"06f11738beb6dd1822055d76f3a1d32c880545fb6d8727a2410255ba4e674721",
+			"FhatInputSHA256":"4ed44edf3d2c0274249792e21a8b1c7a9bff0ca9ec7c10f07cb072e54a1e45bd",
 			"CFormExactRationals":true,
 			"RationalCoefficientReconstruction":false,
 			"PreparationMethod":"ExactUncollected",
@@ -186,8 +186,8 @@
 			"Endpoint":true,
 			"ChargeCase":"A",
 			"JacobianAlreadyIncluded":false,
-			"ProducerSHA256":"ac35710bdc931fba5f3231cf7d16aa75b8398122b950229a2f5b202c2051fcfe",
-			"FhatInputSHA256":"0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c",
+			"ProducerSHA256":"06f11738beb6dd1822055d76f3a1d32c880545fb6d8727a2410255ba4e674721",
+			"FhatInputSHA256":"4ed44edf3d2c0274249792e21a8b1c7a9bff0ca9ec7c10f07cb072e54a1e45bd",
 			"CFormExactRationals":true,
 			"RationalCoefficientReconstruction":false,
 			"PreparationMethod":"ExactUncollected",
@@ -216,7 +216,7 @@
 			"Assignments":[
 				[
 					"w15",
-					"Power(Q2,6)"
+					"Power(Q2,5)"
 				],
 				[
 					"w17",
@@ -224,11 +224,11 @@
 				],
 				[
 					"w19",
-					"Power(Q2,5)"
+					"Power(Q2,4)"
 				],
 				[
 					"w22",
-					"Power(Q2,4)"
+					"Power(Q2,3)"
 				],
 				[
 					"w23",
@@ -236,7 +236,7 @@
 				],
 				[
 					"w26",
-					"Power(Q2,3)"
+					"Power(Q2,2)"
 				],
 				[
 					"w27",
@@ -244,51 +244,55 @@
 				],
 				[
 					"w30",
-					"Power(Q2,2)"
-				],
-				[
-					"w31",
 					"Power(s,4)"
 				],
 				[
-					"w34",
+					"w33",
 					"Power(s,5)"
 				],
 				[
-					"w37",
-					"Power(s,6)"
+					"w5",
+					"Power(as,2)"
+				],
+				[
+					"w6",
+					"Power(cq,2)"
+				],
+				[
+					"w7",
+					"Power(Pi,-3)"
+				],
+				[
+					"w8",
+					"1\/Q2"
+				],
+				[
+					"w12",
+					"1\/s"
+				],
+				[
+					"w13",
+					"Q2 + s"
+				],
+				[
+					"w14",
+					"Power(w13,-2)"
+				],
+				[
+					"w38",
+					"4*s*w22"
+				],
+				[
+					"w39",
+					"8*w23*w26"
 				],
 				[
 					"w40",
-					"Log(B)"
+					"4*Q2*w27"
 				],
 				[
-					"w48",
-					"Power(w40,2)"
-				],
-				[
-					"w56",
-					"Power(mu2,rational(1,2))"
-				],
-				[
-					"w57",
-					"Log(w56)"
-				],
-				[
-					"w72",
-					"Log(Q2)"
-				],
-				[
-					"w87",
-					"Power(w72,2)"
-				],
-				[
-					"w95",
-					"Log(s)"
-				],
-				[
-					"w121",
-					"Power(w95,2)"
+					"w41",
+					"w19 + w30 + w38 + w39 + w40"
 				],
 				[
 					"w9",
@@ -299,19 +303,31 @@
 					"Q2 + w9"
 				],
 				[
-					"w12",
-					"1\/s"
+					"w45",
+					"Power(mu2,rational(1,2))"
 				],
 				[
-					"w129",
-					"Power(w10,2)"
+					"w46",
+					"Log(w45)"
 				],
 				[
-					"w13",
-					"Q2 + s"
+					"w66",
+					"Log(s)"
+				],
+				[
+					"w42",
+					"Log(B)"
+				],
+				[
+					"w54",
+					"Log(Q2)"
+				],
+				[
+					"w57",
+					"Power(w10,-2)"
 				]
 			],
-			"ReturnC":"(Power(as,2)*Power(cq,2)*w12*rational(1,54)*(-156*w15 + 222*w121*w15 + 6*w15*w17 - 216*s*w19 + 444*s*w121*w19 + 12*s*w17*w19 - 96*w22*w23 + 204*w121*w22*w23 - 4*w17*w22*w23 + 1152*w26*w27 - 1752*w121*w26*w27 - 32*w17*w26*w27 - 348*w30*w31 + 222*w121*w30*w31 + 6*w17*w30*w31 - 288*Q2*w34 + 444*Q2*w121*w34 + 4*Q2*w17*w34 - 48*w37 + 216*w121*w37 + 8*w17*w37 - 72*w15*w40 - 144*s*w19*w40 - 72*w22*w23*w40 + 576*w26*w27*w40 - 72*w30*w31*w40 - 144*Q2*w34*w40 - 72*w37*w40 + 264*w15*w48 + 528*s*w19*w48 + 264*w22*w23*w48 - 2112*w26*w27*w48 + 264*w30*w31*w48 + 528*Q2*w34*w48 + 264*w37*w48 - 144*w15*w57 - 288*s*w19*w57 - 144*w22*w23*w57 + 1152*w26*w27*w57 - 144*w30*w31*w57 - 288*Q2*w34*w57 - 144*w37*w57 - 624*w15*w40*w57 - 1248*s*w19*w40*w57 - 624*w22*w23*w40*w57 + 4992*w26*w27*w40*w57 - 624*w30*w31*w40*w57 - 1248*Q2*w34*w40*w57 - 624*w37*w40*w57 + 144*w15*w72 + 288*s*w19*w72 - 36*w22*w23*w72 - 924*w26*w27*w72 + 12*w30*w31*w72 + 300*Q2*w34*w72 + 144*w37*w72 + 216*w15*w40*w72 + 432*s*w19*w40*w72 + 216*w22*w23*w40*w72 - 1728*w26*w27*w40*w72 + 216*w30*w31*w40*w72 + 432*Q2*w34*w40*w72 + 216*w37*w40*w72 + 54*w15*w87 + 108*s*w19*w87 + 36*w22*w23*w87 - 408*w26*w27*w87 + 54*w30*w31*w87 + 108*Q2*w34*w87 + 48*w37*w87 + 180*w22*w23*w95 - 228*w26*w27*w95 + 132*w30*w31*w95 - 12*Q2*w34*w95 - 432*w15*w40*w95 - 864*s*w19*w40*w95 - 432*w22*w23*w40*w95 + 3456*w26*w27*w40*w95 - 432*w30*w31*w40*w95 - 864*Q2*w34*w40*w95 - 432*w37*w40*w95 + 624*w15*w57*w95 + 1248*s*w19*w57*w95 + 624*w22*w23*w57*w95 - 4992*w26*w27*w57*w95 + 624*w30*w31*w57*w95 + 1248*Q2*w34*w57*w95 + 624*w37*w57*w95 - 324*w15*w72*w95 - 648*s*w19*w72*w95 - 288*w22*w23*w72*w95 + 2544*w26*w27*w72*w95 - 324*w30*w31*w72*w95 - 648*Q2*w34*w72*w95 - 312*w37*w72*w95 - 12*w129*(w22 + 4*s*w26 + 6*Q2*w27 + 10*w23*w30 + 3*w31)*PolyLog(2,1 - Q2*w12) + 12*w129*(8*w22 + 32*s*w26 + 32*Q2*w27 + 65*w23*w30 + 7*w31)*Re(PolyLog(2,w12*w13))))\/(Power(Pi,3)*Q2*Power(w10,2)*Power(w13,2))",
+			"ReturnC":"w12*w14*w41*w46*w5*w6*w7*w8*rational(-8,3) + w42*(4*w12*w14*w41*w5*w54*w6*w7*w8 - 8*w12*w14*w41*w5*w6*w66*w7*w8 + w12*w14*w41*w46*w5*w6*w7*w8*rational(-104,9) + w12*w14*w41*w5*w6*w7*w8*rational(-4,3)) + w12*w14*(w19 + 10*w23*w26 + 6*Q2*w27 + 3*w30 + w38)*w5*w6*w7*w8*PolyLog(2,1 - Q2*w12)*rational(-2,9) + w12*w14*(9*w19 + 36*s*w22 + 69*w23*w26 + 34*Q2*w27 + 8*w30)*w5*Power(w54,2)*w6*w7*w8*rational(1,9) + w12*w14*(37*w19 + 148*s*w22 + 293*w23*w26 + 146*Q2*w27 + 36*w30)*w5*w6*Power(w66,2)*w7*w8*rational(1,9) + w54*(w12*w14*(27*w19 + 108*s*w22 + 213*w23*w26 + 106*Q2*w27 + 26*w30)*w5*w6*w66*w7*w8*rational(-2,9) + w12*w14*(24*Power(Q2,6) + 24*Power(s,6) + 48*s*w15 - 6*w19*w23 - 154*w22*w27 + 2*w26*w30 + 50*Q2*w33)*w5*w57*w6*w7*w8*rational(1,9)) + (w12*w14*(-156*w15 + 6*w15*w17 - 372*s*w19 + 18*s*w17*w19 - 468*w22*w23 + 14*w17*w22*w23 + 684*w26*w27 - 18*w17*w26*w27 + 336*Q2*w30 - 12*Q2*w17*w30 + 48*w33 - 8*w17*w33)*w5*w6*w7*w8*rational(1,54))\/w10 + w12*w14*w41*Power(w42,2)*w5*w6*w7*w8*rational(44,9) + w66*(s*w14*(30*w22 + 22*Q2*w23 - 38*s*w26 - 2*w27)*w5*w57*w6*w7*rational(1,9) + w12*w14*w41*w46*w5*w6*w7*w8*rational(104,9)) + w12*w14*(8*w19 + 32*s*w22 + 65*w23*w26 + 32*Q2*w27 + 7*w30)*w5*w6*w7*w8*rational(2,9)*Re(PolyLog(2,w12*w13))",
 			"Checks":[
 				{
 					"Arguments":[
@@ -426,8 +442,8 @@
 					"InvariantReconstruction":true
 				}
 			],
-			"InputLeafCount":1929,
-			"OptimizedLeafCount":703,
+			"InputLeafCount":1370,
+			"OptimizedLeafCount":559,
 			"PaxPositiveDirectionImagSign":1,
 			"SpecialCForms":{
 				"ArcCoth":"-0.5*Log(1 - 1\/aa) + Log(1 + 1\/aa)\/2."
@@ -441,8 +457,8 @@
 			"Endpoint":true,
 			"ChargeCase":"A",
 			"JacobianAlreadyIncluded":false,
-			"ProducerSHA256":"ac35710bdc931fba5f3231cf7d16aa75b8398122b950229a2f5b202c2051fcfe",
-			"FhatInputSHA256":"0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c",
+			"ProducerSHA256":"06f11738beb6dd1822055d76f3a1d32c880545fb6d8727a2410255ba4e674721",
+			"FhatInputSHA256":"4ed44edf3d2c0274249792e21a8b1c7a9bff0ca9ec7c10f07cb072e54a1e45bd",
 			"CFormExactRationals":true,
 			"RationalCoefficientReconstruction":false,
 			"PreparationMethod":"ExactUncollected",
@@ -780,8 +796,8 @@
 			"Endpoint":true,
 			"ChargeCase":"A",
 			"JacobianAlreadyIncluded":false,
-			"ProducerSHA256":"ac35710bdc931fba5f3231cf7d16aa75b8398122b950229a2f5b202c2051fcfe",
-			"FhatInputSHA256":"0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c",
+			"ProducerSHA256":"06f11738beb6dd1822055d76f3a1d32c880545fb6d8727a2410255ba4e674721",
+			"FhatInputSHA256":"4ed44edf3d2c0274249792e21a8b1c7a9bff0ca9ec7c10f07cb072e54a1e45bd",
 			"CFormExactRationals":true,
 			"RationalCoefficientReconstruction":false,
 			"PreparationMethod":"ExactUncollected",
@@ -1071,8 +1087,8 @@
 			"Endpoint":false,
 			"ChargeCase":"A",
 			"JacobianAlreadyIncluded":false,
-			"ProducerSHA256":"ac35710bdc931fba5f3231cf7d16aa75b8398122b950229a2f5b202c2051fcfe",
-			"FhatInputSHA256":"0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c",
+			"ProducerSHA256":"06f11738beb6dd1822055d76f3a1d32c880545fb6d8727a2410255ba4e674721",
+			"FhatInputSHA256":"4ed44edf3d2c0274249792e21a8b1c7a9bff0ca9ec7c10f07cb072e54a1e45bd",
 			"CFormExactRationals":true,
 			"RationalCoefficientReconstruction":false,
 			"PreparationMethod":"ExactUncollected",
