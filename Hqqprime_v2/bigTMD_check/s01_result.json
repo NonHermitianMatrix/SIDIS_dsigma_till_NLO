@@ -1,0 +1,99 @@
+{
+  "repository": "https://github.com/JeffersonLab/BigTMD",
+  "commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+  "production_sha256": "4aee27e2d6b9decefce735ecb94536a71f4be0f09352cf5a538fd3b27d504cf6",
+  "files": {
+    "sidis.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/sidis.py",
+      "sha256": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+      "bytes": 10049
+    },
+    "NLO/Pg/fchn6A.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Pg/fchn6A.py",
+      "sha256": "502dbfb704a85356d004dcc290604a85cbe6379d664d47e27968aea795e1f3dd",
+      "bytes": 11771
+    },
+    "NLO/Pg/fchn6B.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Pg/fchn6B.py",
+      "sha256": "ce3bd5d92a0be6da8559f8c4daf629741dd52277cb0c1166b6b3286484a72fb9",
+      "bytes": 19515
+    },
+    "NLO/Pg/fchn6C.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Pg/fchn6C.py",
+      "sha256": "81fe1c6c909148aef8cdfafff86552645a5df68049d088b1ff6a931eafae2326",
+      "bytes": 11614
+    },
+    "NLO/Ppp/fchn6A.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Ppp/fchn6A.py",
+      "sha256": "2a3c88860a52be0946cd824cbb31fbc959d4384706cd9ac790a44f752d54dbd4",
+      "bytes": 8710
+    },
+    "NLO/Ppp/fchn6B.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Ppp/fchn6B.py",
+      "sha256": "bd522acf18af68129a125ce69405ab8283d4a7f718d1ee1be6e068cc6ae9e761",
+      "bytes": 11971
+    },
+    "NLO/Ppp/fchn6C.py": {
+      "url": "https://raw.githubusercontent.com/JeffersonLab/BigTMD/6e97635d21a63b7975b2e7f5891edc0c35c4dc0c/NLO/Ppp/fchn6C.py",
+      "sha256": "48bbba2e8c407665ed98824867a9e0f6429746803aaa8f9f59b8a4ab24ac6245",
+      "bytes": 9532
+    }
+  },
+  "representative_flavour": {
+    "incoming_pdg": 2,
+    "observed_pdg": 1,
+    "driver_indices": [
+      1,
+      3
+    ]
+  },
+  "charge_samples": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      -1
+    ]
+  ],
+  "luminosity_samples": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1
+    ]
+  ],
+  "driver_nlo_channels": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "driver_includes_channel": true,
+  "auxiliary_sha256": "b04ad0e9245ea5fb3507931a4a74fb78c4d3e01cc8bbe373a3c8bdcdfbfac106"
+}

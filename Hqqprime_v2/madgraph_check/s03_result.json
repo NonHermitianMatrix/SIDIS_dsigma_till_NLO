@@ -1,0 +1,771 @@
+{
+  "all_pass": true,
+  "process": "a u > d u d~ QCD=2 QED=1",
+  "version": "version = 3.7.0\ndate = 2026-01-05",
+  "diagrams": 4,
+  "points": 24,
+  "comparisons": [
+    {
+      "point": 1,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "g",
+      "local": -0.23090418311556687,
+      "madgraph": -0.23090418311556699,
+      "relative_difference": 4.808154662444952e-16,
+      "absolute_difference": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "point": 1,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "pp",
+      "local": 23.53342601853662,
+      "madgraph": 23.53342601853663,
+      "relative_difference": 4.528937277558473e-16,
+      "absolute_difference": 1.0658141036401503e-14,
+      "pass": true
+    },
+    {
+      "point": 2,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "g",
+      "local": -0.4686520319921602,
+      "madgraph": -0.46865203199216027,
+      "relative_difference": 1.184485448516874e-16,
+      "absolute_difference": 5.551115123125783e-17,
+      "pass": true
+    },
+    {
+      "point": 2,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "pp",
+      "local": 18.027859002180982,
+      "madgraph": 18.027859002180982,
+      "relative_difference": 0.0,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "point": 3,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "g",
+      "local": -1.0871204369671479,
+      "madgraph": -1.0871204369671483,
+      "relative_difference": 4.0850047037013117e-16,
+      "absolute_difference": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "point": 3,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "pp",
+      "local": 78.75816951861971,
+      "madgraph": 78.75816951861971,
+      "relative_difference": 0.0,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "point": 4,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "g",
+      "local": -0.31199199324830634,
+      "madgraph": -0.31199199324830656,
+      "relative_difference": 7.116996901529829e-16,
+      "absolute_difference": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "point": 4,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "pp",
+      "local": 4.364400522815503,
+      "madgraph": 4.364400522815504,
+      "relative_difference": 2.035052500468393e-16,
+      "absolute_difference": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "point": 5,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "g",
+      "local": -0.4807566327572458,
+      "madgraph": -0.48075663275724534,
+      "relative_difference": 9.237297617780386e-16,
+      "absolute_difference": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "point": 5,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "pp",
+      "local": 17.76096735944712,
+      "madgraph": 17.760967359447104,
+      "relative_difference": 8.00117157337334e-16,
+      "absolute_difference": 1.4210854715202004e-14,
+      "pass": true
+    },
+    {
+      "point": 6,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "g",
+      "local": -0.15184581991764728,
+      "madgraph": -0.15184581991764734,
+      "relative_difference": 3.6557576139642145e-16,
+      "absolute_difference": 5.551115123125783e-17,
+      "pass": true
+    },
+    {
+      "point": 6,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "pp",
+      "local": 4.202707805707161,
+      "madgraph": 4.2027078057071625,
+      "relative_difference": 4.226696029136278e-16,
+      "absolute_difference": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "point": 7,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "g",
+      "local": -0.8577328212068276,
+      "madgraph": -0.8577328212068271,
+      "relative_difference": 5.177477168534025e-16,
+      "absolute_difference": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "point": 7,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "pp",
+      "local": 24.94405857068058,
+      "madgraph": 24.944058570680568,
+      "relative_difference": 4.2728175153217273e-16,
+      "absolute_difference": 1.0658141036401503e-14,
+      "pass": true
+    },
+    {
+      "point": 8,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "g",
+      "local": -0.4074720841429586,
+      "madgraph": -0.4074720841429583,
+      "relative_difference": 6.811650833457114e-16,
+      "absolute_difference": 2.7755575615628914e-16,
+      "pass": true
+    },
+    {
+      "point": 8,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "pp",
+      "local": 18.983291759627978,
+      "madgraph": 18.983291759627974,
+      "relative_difference": 1.8714950619660731e-16,
+      "absolute_difference": 3.552713678800501e-15,
+      "pass": true
+    },
+    {
+      "point": 9,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "g",
+      "local": -0.15643522732132625,
+      "madgraph": -0.1564352273213263,
+      "relative_difference": 3.548507083844674e-16,
+      "absolute_difference": 5.551115123125783e-17,
+      "pass": true
+    },
+    {
+      "point": 9,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "pp",
+      "local": 3.253911233876505,
+      "madgraph": 3.253911233876506,
+      "relative_difference": 4.0943576323777203e-16,
+      "absolute_difference": 1.3322676295501878e-15,
+      "pass": true
+    },
+    {
+      "point": 10,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "g",
+      "local": -0.6935342194961502,
+      "madgraph": -0.6935342194961525,
+      "relative_difference": 3.20163877546439e-15,
+      "absolute_difference": 2.220446049250313e-15,
+      "pass": true
+    },
+    {
+      "point": 10,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "pp",
+      "local": 469.6135160178883,
+      "madgraph": 469.61351601788834,
+      "relative_difference": 1.2104297879416817e-16,
+      "absolute_difference": 5.684341886080802e-14,
+      "pass": true
+    },
+    {
+      "point": 11,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "g",
+      "local": -0.8283254586366562,
+      "madgraph": -0.828325458636656,
+      "relative_difference": 2.680644456956512e-16,
+      "absolute_difference": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "point": 11,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "pp",
+      "local": 532.6882410986079,
+      "madgraph": 532.6882410986079,
+      "relative_difference": 0.0,
+      "absolute_difference": 0.0,
+      "pass": true
+    },
+    {
+      "point": 12,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "g",
+      "local": -0.8716134349982968,
+      "madgraph": -0.8716134349982976,
+      "relative_difference": 8.91629346258445e-16,
+      "absolute_difference": 7.771561172376096e-16,
+      "pass": true
+    },
+    {
+      "point": 12,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "pp",
+      "local": 413.0466134049217,
+      "madgraph": 413.04661340492163,
+      "relative_difference": 1.3761986423813806e-16,
+      "absolute_difference": 5.684341886080802e-14,
+      "pass": true
+    },
+    {
+      "point": 13,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "g",
+      "local": -0.20741686285223754,
+      "madgraph": -0.20741686285223757,
+      "relative_difference": 1.3381542481144268e-16,
+      "absolute_difference": 2.7755575615628914e-17,
+      "pass": true
+    },
+    {
+      "point": 13,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "pp",
+      "local": 3.5393554008905603,
+      "madgraph": 3.539355400890562,
+      "relative_difference": 5.018871060400684e-16,
+      "absolute_difference": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "point": 14,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "g",
+      "local": -1.7723742741801827,
+      "madgraph": -1.7723742741801833,
+      "relative_difference": 3.758426335110376e-16,
+      "absolute_difference": 6.661338147750939e-16,
+      "pass": true
+    },
+    {
+      "point": 14,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "pp",
+      "local": 33.25321653327499,
+      "madgraph": 33.25321653327501,
+      "relative_difference": 6.410291783795638e-16,
+      "absolute_difference": 2.1316282072803006e-14,
+      "pass": true
+    },
+    {
+      "point": 15,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "g",
+      "local": -1.5638871229899616,
+      "madgraph": -1.563887122989962,
+      "relative_difference": 2.8396500189925345e-16,
+      "absolute_difference": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "point": 15,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "pp",
+      "local": 23.40136874932431,
+      "madgraph": 23.401368749324316,
+      "relative_difference": 3.03632981203553e-16,
+      "absolute_difference": 7.105427357601002e-15,
+      "pass": true
+    },
+    {
+      "point": 16,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "g",
+      "local": -2.395695151074879,
+      "madgraph": -2.39569515107488,
+      "relative_difference": 3.707393318810304e-16,
+      "absolute_difference": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "point": 16,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "pp",
+      "local": 50.18377511900679,
+      "madgraph": 50.18377511900681,
+      "relative_difference": 4.247644188236765e-16,
+      "absolute_difference": 2.1316282072803006e-14,
+      "pass": true
+    },
+    {
+      "point": 17,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "g",
+      "local": -0.27130717460476905,
+      "madgraph": -0.27130717460476894,
+      "relative_difference": 4.0921255629988084e-16,
+      "absolute_difference": 1.1102230246251565e-16,
+      "pass": true
+    },
+    {
+      "point": 17,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "pp",
+      "local": 2.809263182446421,
+      "madgraph": 2.8092631824464216,
+      "relative_difference": 1.5808031537413007e-16,
+      "absolute_difference": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "point": 18,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "g",
+      "local": -4.2100857032220045,
+      "madgraph": -4.210085703222003,
+      "relative_difference": 4.219289023120821e-16,
+      "absolute_difference": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "point": 18,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "pp",
+      "local": 66.44463478249409,
+      "madgraph": 66.44463478249415,
+      "relative_difference": 8.555005087601788e-16,
+      "absolute_difference": 5.684341886080802e-14,
+      "pass": true
+    },
+    {
+      "point": 19,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "g",
+      "local": -3.276318414066107,
+      "madgraph": -3.2763184140661066,
+      "relative_difference": 1.3554519241581326e-16,
+      "absolute_difference": 4.440892098500626e-16,
+      "pass": true
+    },
+    {
+      "point": 19,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "pp",
+      "local": 47.03493919800734,
+      "madgraph": 47.03493919800737,
+      "relative_difference": 6.042680168194645e-16,
+      "absolute_difference": 2.842170943040401e-14,
+      "pass": true
+    },
+    {
+      "point": 20,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "g",
+      "local": -5.6864673415874405,
+      "madgraph": -5.686467341587439,
+      "relative_difference": 3.12383195522646e-16,
+      "absolute_difference": 1.7763568394002505e-15,
+      "pass": true
+    },
+    {
+      "point": 20,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "pp",
+      "local": 91.47285673187369,
+      "madgraph": 91.47285673187373,
+      "relative_difference": 4.660679207884702e-16,
+      "absolute_difference": 4.263256414560601e-14,
+      "pass": true
+    },
+    {
+      "point": 21,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "g",
+      "local": -0.09224641819857955,
+      "madgraph": -0.09224641819857954,
+      "relative_difference": 1.5044256545484117e-16,
+      "absolute_difference": 1.3877787807814457e-17,
+      "pass": true
+    },
+    {
+      "point": 21,
+      "charges": [
+        1,
+        0
+      ],
+      "projection": "pp",
+      "local": 0.6122477949769465,
+      "madgraph": 0.6122477949769467,
+      "relative_difference": 3.626711386251576e-16,
+      "absolute_difference": 2.220446049250313e-16,
+      "pass": true
+    },
+    {
+      "point": 22,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "g",
+      "local": -4.732248293068853,
+      "madgraph": -4.732248293068854,
+      "relative_difference": 1.876863521723927e-16,
+      "absolute_difference": 8.881784197001252e-16,
+      "pass": true
+    },
+    {
+      "point": 22,
+      "charges": [
+        0,
+        1
+      ],
+      "projection": "pp",
+      "local": 736.4282780573602,
+      "madgraph": 736.4282780573603,
+      "relative_difference": 1.54375980810396e-16,
+      "absolute_difference": 1.1368683772161603e-13,
+      "pass": true
+    },
+    {
+      "point": 23,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "g",
+      "local": -5.694284876749658,
+      "madgraph": -5.694284876749661,
+      "relative_difference": 4.679314991738368e-16,
+      "absolute_difference": 2.6645352591003757e-15,
+      "pass": true
+    },
+    {
+      "point": 23,
+      "charges": [
+        1,
+        1
+      ],
+      "projection": "pp",
+      "local": 741.9513208860028,
+      "madgraph": 741.9513208860027,
+      "relative_difference": 1.5322681491537293e-16,
+      "absolute_difference": 1.1368683772161603e-13,
+      "pass": true
+    },
+    {
+      "point": 24,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "g",
+      "local": -3.954704545785206,
+      "madgraph": -3.9547045457852086,
+      "relative_difference": 6.73763419808478e-16,
+      "absolute_difference": 2.6645352591003757e-15,
+      "pass": true
+    },
+    {
+      "point": 24,
+      "charges": [
+        1,
+        -1
+      ],
+      "projection": "pp",
+      "local": 732.1297308186715,
+      "madgraph": 732.1297308186715,
+      "relative_difference": 0.0,
+      "absolute_difference": 0.0,
+      "pass": true
+    }
+  ],
+  "ward_checks": [
+    {
+      "point": 1,
+      "normalized_squared_residual": 1.4961533746132995e-33,
+      "pass": true
+    },
+    {
+      "point": 2,
+      "normalized_squared_residual": 1.2549500299908644e-33,
+      "pass": true
+    },
+    {
+      "point": 3,
+      "normalized_squared_residual": 5.070622135281448e-33,
+      "pass": true
+    },
+    {
+      "point": 4,
+      "normalized_squared_residual": 1.8981592386167235e-33,
+      "pass": true
+    },
+    {
+      "point": 5,
+      "normalized_squared_residual": 2.4578840787974007e-32,
+      "pass": true
+    },
+    {
+      "point": 6,
+      "normalized_squared_residual": 8.464803552082769e-33,
+      "pass": true
+    },
+    {
+      "point": 7,
+      "normalized_squared_residual": 2.393901296530588e-32,
+      "pass": true
+    },
+    {
+      "point": 8,
+      "normalized_squared_residual": 2.610811370455856e-32,
+      "pass": true
+    },
+    {
+      "point": 9,
+      "normalized_squared_residual": 1.7910381857590912e-32,
+      "pass": true
+    },
+    {
+      "point": 10,
+      "normalized_squared_residual": 1.5465085316611823e-34,
+      "pass": true
+    },
+    {
+      "point": 11,
+      "normalized_squared_residual": 1.4263104921746572e-33,
+      "pass": true
+    },
+    {
+      "point": 12,
+      "normalized_squared_residual": 3.948366365140056e-34,
+      "pass": true
+    },
+    {
+      "point": 13,
+      "normalized_squared_residual": 5.000661084488203e-32,
+      "pass": true
+    },
+    {
+      "point": 14,
+      "normalized_squared_residual": 1.4823016589891417e-33,
+      "pass": true
+    },
+    {
+      "point": 15,
+      "normalized_squared_residual": 3.8427234508309e-34,
+      "pass": true
+    },
+    {
+      "point": 16,
+      "normalized_squared_residual": 6.278187135931204e-33,
+      "pass": true
+    },
+    {
+      "point": 17,
+      "normalized_squared_residual": 1.1960340019541202e-32,
+      "pass": true
+    },
+    {
+      "point": 18,
+      "normalized_squared_residual": 4.7423930130790625e-33,
+      "pass": true
+    },
+    {
+      "point": 19,
+      "normalized_squared_residual": 1.503666621430359e-32,
+      "pass": true
+    },
+    {
+      "point": 20,
+      "normalized_squared_residual": 2.5576583815387183e-33,
+      "pass": true
+    },
+    {
+      "point": 21,
+      "normalized_squared_residual": 7.064542263650397e-33,
+      "pass": true
+    },
+    {
+      "point": 22,
+      "normalized_squared_residual": 1.5556107344937381e-32,
+      "pass": true
+    },
+    {
+      "point": 23,
+      "normalized_squared_residual": 1.2906786300147143e-32,
+      "pass": true
+    },
+    {
+      "point": 24,
+      "normalized_squared_residual": 2.2492556639266034e-32,
+      "pass": true
+    }
+  ],
+  "relative_tolerance": 2e-09,
+  "absolute_tolerance": 1e-12,
+  "zero_policy": "Near-zero contractions use the absolute tolerance; relative difference is null.",
+  "ward_squared_tolerance": 1e-20,
+  "max_relative_difference": 3.20163877546439e-15,
+  "max_ward_squared_residual": 5.000661084488203e-32,
+  "generated_initial_denominator": 12,
+  "photon_helicity_multiplicity": 2,
+  "incoming_quark_average_denominator": 6.0,
+  "removed_final_symmetry_weight": 1,
+  "coupling_norm": 0.20852339405296066,
+  "strong_coupling": 1.2177157847767197,
+  "photon_quark_coupling_magnitude": 0.30795376724436885,
+  "production_tensor_sha256": "eac5dbc2bfc4d6eb4789345b23d72f194b07bfdcf417427b939cbf135723be4f",
+  "production_hats_sha256": "4aee27e2d6b9decefce735ecb94536a71f4be0f09352cf5a538fd3b27d504cf6",
+  "patched_matrix_sha256": "511de34e65ec4673268921cfa136a1200498c71e5cddd7b3a3a06ebb9d1ca0a7"
+}
