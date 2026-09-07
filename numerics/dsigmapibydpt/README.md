@@ -33,17 +33,38 @@ The superseded figure receipts and plots are retained in ../previous_six_input_r
 
 ## Accepted corrected-Hqg figures
 
-Both three-Q2 figure sets contain all 17 accepted bins from the corrected six-channel numerical generation. Their source ../s09_result has SHA256 1b28305aa93b15129d5157b6e38ad6e82b443a86f69d65ddf534a02010b50592; the plot receipt s03_result has SHA256 ce7fae106d12c4e3ca6347793eb5a1e29c3a5760bb0b3303c25b0bbf8407b152. All six source payload identities and every plotted input/output hash passed final verification. The data, original paper curves and ratio definitions remain those documented above. Our errors are numerical integration uncertainty only.
+Both three-Q2 figure sets contain all 17 accepted bins from the corrected six-channel numerical generation. Their source ../s09_result has SHA256 1b28305aa93b15129d5157b6e38ad6e82b443a86f69d65ddf534a02010b50592; the plot receipt s03_result has SHA256 4f95f09300c8195c10eec7b96dce177a5a9f2b5cf91c0aa9ce9c71f5f2ef8ad0. All six source payload identities and every plotted input/output hash passed final verification. The data, original paper curves and ratio definitions remain those documented above. Our errors are numerical integration uncertainty only.
 
 | Figure | SHA256 |
 | --- | --- |
-| s03_cross_section.pdf | 216cc3fc1b135c898f3e69087460e683ff671033ba91b7bb356ba283586d0499 |
-| s03_cross_section.png | 33c9f6344363f3e98097e394c0972372120d4ea72512ce69e6cc49748610a3b5 |
-| s03_ratios.pdf | e683cd0cda46b7366ed5f582e2ea162a6ffd6ba59e7c08f1ffe2be561c1d3d0c |
-| s03_ratios.png | da9c9f5b3fbb04fab2b16cd187c07adab4b63062bee7239c931f1912bf66a589 |
+| s03_cross_section.pdf | 910446ac66ff305a3a83e5c22fbc648b18925565c33856558812802cce4513a0 |
+| s03_cross_section.png | d38d4c63cced35d8bc34f1f053710d92f3fe10a15010c46187b94fa3e78e24ea |
+| s03_ratios.pdf | 53e5e1ae172a9d6b2def9d554d196a050631c0a06c864fc199fcaa036c133245 |
+| s03_ratios.png | 2400604ef5138069764e37bc71199763d18e882008ed16bf1823b892f5c0c2a4 |
 
 The previous figures are preserved in ../previous_Hqg_correction/dsigmapibydpt/. s03_plot_comparison.py remains the direct regeneration entry point. It consumes the current accepted ../s09_result together with the existing s01_result/s02_result experimental and paper inputs.
 
 S03 layout-only correction contract: reserve an explicit rectangle for the subplot layout so x-axis labels and the three-line figure footer are separated. Reuse the same accepted s09_result and paper/data inputs; require every saved panel/ratio value and input hash to match the preceding figure receipt exactly. The preceding source and figures are preserved in s03_previous_layout/.
 
-Final layout acceptance: both regenerated figures were visually inspected, with the ratio PNG inspected at original resolution. All three panels, title, legend, axis labels, data/theory marks and footer are legible. The ratio PDF text also contains the complete labels. The layout-only rerender preserved every plotted value and input identity exactly. Current producer SHA256: e1b416782137d1e4d9d4fce73939267b613757dae5381f2c53cbe84fb080abd8.
+Final layout acceptance: both regenerated figures were visually inspected, with the ratio PNG inspected at original resolution. All three panels, title, legend, axis labels, data/theory marks and footer are legible. The ratio PDF text also contains the complete labels. The layout-only rerender preserved every plotted value and input identity exactly. Current producer SHA256: 525f67fc0ed2258e6610822539ede462932fb13f5103e1c1047280c66a80a96a.
+
+## Accepted BigTMD reference overlays
+
+Both BigTMD variants are plotted for KKP and Kretzer across all three Q-squared ranges, in the cross-section and theory/data figure sets. The new variant follows every coefficient omission in pinned sidis.py: omit Hqqbar (channel5); retain only regular functions in Hgg and Hqqprime (channels4 and6); retain the called Born/regular/delta/plus terms in the other channels. The exact source-derived charge-case selection is embedded in the reference input and plot receipt. The complete BigTMD variant retains the complete source formulas.
+
+Both variants use the same accepted MRST2002 NLO PDF, FFs, scales, cuts and observable as the own calculation. The reference representation is the documented rational reconstruction of the printed BigTMD coefficients at pinned commit 6e97635d21a63b7975b2e7f5891edc0c35c4dc0c. This reproduces the coefficient omissions only; no other public-driver PDF/FF, auxiliary cut or numerical-approximation choice is imported.
+
+All17 selected-variant bins passed the unchanged integration gates with no refinement. The full-reference curves, own curves, experimental data and original paper values were preserved exactly. Channel covariance is retained within each reference variant; the full and selected reference integrations use independent random seeds. Errors describe numerical integration only.
+
+| Variant | FF | Total over published bins (pb) | Integration error (pb) |
+| --- | --- | ---: | ---: |
+| BigTMD full | KKP | 581.854064713 | 2.98802310063 |
+| BigTMD full | Kretzer | 426.962283803 | 2.4253851281 |
+| BigTMD sidis.py selection | KKP | 575.584217785 | 3.06326646309 |
+| BigTMD sidis.py selection | Kretzer | 417.549729923 | 2.25029032865 |
+
+Current portable input s04_bigtmd_result SHA256 a0c59eaa3734fe45e75ab0ad6b516fd5a58ebb2bfd5a81eb5f7a99ee8c500b96. Current plot receipt s03_result SHA256 4f95f09300c8195c10eec7b96dce177a5a9f2b5cf91c0aa9ce9c71f5f2ef8ad0. The receipt records requested_bigtmd_variants_complete=true. Plot producer SHA256 525f67fc0ed2258e6610822539ede462932fb13f5103e1c1047280c66a80a96a. Both PDF/PNG sets were visually accepted and every current input/output hash was verified.
+
+The plotting entry point remains s03_plot_comparison.py. The portable reference input is sufficient to regenerate these figures with the other numerics inputs. Reference selection, coefficient export, compilation, integration and assembly are the S05-S09 stages under ../../bigTMD_comparison/numerics/; their source/result identities are documented there and embedded in the imported receipt. The own S09 and S11 results are unchanged.
+
+The preceding complete-only input, source and figures are preserved in s03_before_driver_selection/. Earlier own-only figures remain in s03_before_bigtmd/. These are historical artifacts; the current imported reference contains both requested variants.

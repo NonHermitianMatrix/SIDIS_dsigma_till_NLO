@@ -133,7 +133,7 @@ def main():
     ratios_fig.suptitle('Neutral-pion SIDIS: theory-to-data comparison', y=.995, fontsize=12)
     fig.text(.13, .035, 'MRST2002 NLO; shared FFs, scales and H1 forward-pion cuts. Theory errors: integration only.\n'
              'Hgq_v4 input; unresolved MadGraph real comparison retained; uniform azimuth.\n'
-             'BigTMD: complete formulas and the labelled sidis.py coefficient selection.\n'
+             'BigTMD curves use complete coefficient formulas with the labelled channel selections.\n'
              'Paper curves: original EPS vertices, hep-ph/0411212 Fig. 4 / 1808.04396 Fig. 3.', fontsize=8)
     ratios_fig.text(.13, .035, 'Our calculation and BigTMD use bin averages; paper values are interpolated at bin centres.\n'
                     'Paper-centre ratios are curve-to-bin comparisons, not paper bin-integrated predictions.\n'
@@ -146,7 +146,6 @@ def main():
         inputs={str(p.relative_to(ROOT.parent)): sha(p) for p in inputs}, panels=ratio_results,
         bigtmd_policy=reference['omission_policy'], bigtmd_reference_policy=reference['reference_policy'],
         requested_bigtmd_variants_complete=reference['requested_variants_complete'],
-        bigtmd_driver_selection=reference.get('driver_selection'),
         bigtmd_variants={k:{name:v[name] for name in ['label', 'excluded_channels']} for k,v in reference['variants'].items()},
         paper_ratio_policy='Original log-axis EPS curves evaluated at bin centers inside their support; no extrapolation. These are curve-to-bin ratios, not bin-integrated paper predictions.',
         artifacts={p.name: sha(p) for p in paths}, caveats=theory['caveats'])

@@ -54,7 +54,7 @@ These totals sum the published bins. Errors are numerical integration uncertaint
 | s09_result | 1b28305aa93b15129d5157b6e38ad6e82b443a86f69d65ddf534a02010b50592 |
 | s10_result | e02db3cfdaecb057429d12b907ef8224e8ba07564865e4ed59cf574677990e20 |
 | s11_result | 7991a63c16f3836d11a21f2804a19432be66078d79a2426ac791bb7f2337aea5 |
-| dsigmapibydpt/s03_result | ce7fae106d12c4e3ca6347793eb5a1e29c3a5760bb0b3303c25b0bbf8407b152 |
+| dsigmapibydpt/s03_result | 4f95f09300c8195c10eec7b96dce177a5a9f2b5cf91c0aa9ce9c71f5f2ef8ad0 |
 
 The S11 receipt binds all accepted bin files and the aggregation source. The plot receipt binds all experimental/paper inputs, displayed values and PDF/PNG outputs. The previous generation is preserved under previous_Hqg_correction/.
 
@@ -78,3 +78,24 @@ Import the corrected Hqg_v3 s12_result.wl and its accepted pole/source bindings;
 | Hqg_v3 | Hqg_v3/s12_result.wl | 4ed44edf3d2c0274249792e21a8b1c7a9bff0ca9ec7c10f07cb072e54a1e45bd |
 
 The in-channel corrected benchmark is ../Hqg_v3/bigTMD_check/, a relative alias of bigTMD/. All canonical coefficients and direct interior benchmark values pass. Archived Hgq_v3 is not an active input; Hgq_v4 is the explicitly selected producer.
+
+## Accepted BigTMD reference overlays
+
+Both BigTMD variants are plotted for KKP and Kretzer across all three Q-squared ranges, in the cross-section and theory/data figure sets. The new variant follows every coefficient omission in pinned sidis.py: omit Hqqbar (channel5); retain only regular functions in Hgg and Hqqprime (channels4 and6); retain the called Born/regular/delta/plus terms in the other channels. The exact source-derived charge-case selection is embedded in the reference input and plot receipt. The complete BigTMD variant retains the complete source formulas.
+
+Both variants use the same accepted MRST2002 NLO PDF, FFs, scales, cuts and observable as the own calculation. The reference representation is the documented rational reconstruction of the printed BigTMD coefficients at pinned commit 6e97635d21a63b7975b2e7f5891edc0c35c4dc0c. This reproduces the coefficient omissions only; no other public-driver PDF/FF, auxiliary cut or numerical-approximation choice is imported.
+
+All17 selected-variant bins passed the unchanged integration gates with no refinement. The full-reference curves, own curves, experimental data and original paper values were preserved exactly. Channel covariance is retained within each reference variant; the full and selected reference integrations use independent random seeds. Errors describe numerical integration only.
+
+| Variant | FF | Total over published bins (pb) | Integration error (pb) |
+| --- | --- | ---: | ---: |
+| BigTMD full | KKP | 581.854064713 | 2.98802310063 |
+| BigTMD full | Kretzer | 426.962283803 | 2.4253851281 |
+| BigTMD sidis.py selection | KKP | 575.584217785 | 3.06326646309 |
+| BigTMD sidis.py selection | Kretzer | 417.549729923 | 2.25029032865 |
+
+Current portable input dsigmapibydpt/s04_bigtmd_result SHA256 a0c59eaa3734fe45e75ab0ad6b516fd5a58ebb2bfd5a81eb5f7a99ee8c500b96. Current plot receipt dsigmapibydpt/s03_result SHA256 4f95f09300c8195c10eec7b96dce177a5a9f2b5cf91c0aa9ce9c71f5f2ef8ad0. The receipt records requested_bigtmd_variants_complete=true. Plot producer SHA256 525f67fc0ed2258e6610822539ede462932fb13f5103e1c1047280c66a80a96a. Both PDF/PNG sets were visually accepted and every current input/output hash was verified.
+
+The plotting entry point remains dsigmapibydpt/s03_plot_comparison.py. The portable reference input is sufficient to regenerate these figures with the other numerics inputs. Reference selection, coefficient export, compilation, integration and assembly are the S05-S09 stages under ../bigTMD_comparison/numerics/; their source/result identities are documented there and embedded in the imported receipt. The own S09 and S11 results are unchanged.
+
+The preceding complete-only input, source and figures are preserved in dsigmapibydpt/s03_before_driver_selection/. Earlier own-only figures remain in dsigmapibydpt/s03_before_bigtmd/. These are historical artifacts; the current imported reference contains both requested variants.
