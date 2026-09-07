@@ -1,0 +1,308 @@
+{
+  "schema": "SIDISNumericsImport-v2",
+  "stage": "s01",
+  "status": "Complete",
+  "operation": "Byte-preserving import, not a physics validation",
+  "producer_sha256": "d20652dab703d6d4f061e86bc197aa4789921baf7ab5a31e04bc407c1c09c0db",
+  "channels": [
+    {
+      "channel": "Hqq_v2",
+      "ledger_status": "Accepted in channel README; BigTMD benchmark mismatch remains documented.",
+      "files": [
+        {
+          "source": "Hqq_v2/s08_result.wl",
+          "copy": "Fhats/Hqq_v2/s08_result.wl",
+          "sha256": "0b69a0db7740127ab16c53d181317b7defbd17af846e55582213ca28d1d35741",
+          "bytes": 75324899,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqq_v2/README.md",
+          "copy": "Fhats/Hqq_v2/README.md",
+          "sha256": "0a2a13591aa5fab70eef9a7a991022e2b9211adfa9af278497efd0c0999e0b04",
+          "bytes": 13724,
+          "role": "convention_ledger_snapshot",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqq_v2/s08_extract_hqq_fhats.wl",
+          "copy": "Fhats/Hqq_v2/s08_extract_hqq_fhats.wl",
+          "sha256": "f426373c24143950cb8cdb09a6410e7ec76e0d4f960293f6380021cf54c211b7",
+          "bytes": 23631,
+          "role": "producer_provenance_only",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        }
+      ],
+      "snapshot_reused_from": {
+        "path": "previous_Hgq_v3/s01_result",
+        "sha256": "6007cbbc1634537663e8d309d94d16513ff4e81b0fdf4ceda094fd69e2ed49ed"
+      }
+    },
+    {
+      "channel": "Hgg",
+      "ledger_status": "Corrected S13-v2 accepted in channel README; physical flavor-charge sum remains symbolic.",
+      "files": [
+        {
+          "source": "Hgg/s13_result",
+          "copy": "Fhats/Hgg/s13_result",
+          "sha256": "9977c411c111d58f9e7fb4b768c165e10c0e1bfd92470afd3423f5a75dfb9e8f",
+          "bytes": 18035375,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hgg/README.md",
+          "copy": "Fhats/Hgg/README.md",
+          "sha256": "24a7c61fa4d8d1383f9265a3e9523d287d20121546d0cb99f91a637b2ff7b6c6",
+          "bytes": 16309,
+          "role": "convention_ledger_snapshot",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hgg/s13_extract_fhat_hgg.wl",
+          "copy": "Fhats/Hgg/s13_extract_fhat_hgg.wl",
+          "sha256": "c2ccab6b17835e30148c507180601f0586434d90836723ddbde3953e212d2331",
+          "bytes": 13171,
+          "role": "producer_provenance_only",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        }
+      ],
+      "snapshot_reused_from": {
+        "path": "previous_Hgq_v3/s01_result",
+        "sha256": "6007cbbc1634537663e8d309d94d16513ff4e81b0fdf4ceda094fd69e2ed49ed"
+      }
+    },
+    {
+      "channel": "Hqqbar",
+      "ledger_status": "Charge-stripped S13 accepted in channel README; physical luminosity remains deferred.",
+      "files": [
+        {
+          "source": "Hqqbar/s13_result",
+          "copy": "Fhats/Hqqbar/s13_result",
+          "sha256": "4224b46a064087ed3b20e36a049dd1929019f66583263fcb2c28c9b69614c64f",
+          "bytes": 14891953,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqbar/README.md",
+          "copy": "Fhats/Hqqbar/README.md",
+          "sha256": "6a600e52a441128cef8b584834b6e29f40c050faa83fa9fe7c2310a19f8e8c48",
+          "bytes": 73070,
+          "role": "convention_ledger_snapshot",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqbar/s13_extract_fhat_hqqbar.wl",
+          "copy": "Fhats/Hqqbar/s13_extract_fhat_hqqbar.wl",
+          "sha256": "760cad942ee628c0e3de3b76362cbbb103bf6c8d9c920983b84f717b5adf1f13",
+          "bytes": 26072,
+          "role": "producer_provenance_only",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        }
+      ],
+      "snapshot_reused_from": {
+        "path": "previous_Hgq_v3/s01_result",
+        "sha256": "6007cbbc1634537663e8d309d94d16513ff4e81b0fdf4ceda094fd69e2ed49ed"
+      }
+    },
+    {
+      "channel": "Hqqprime",
+      "ledger_status": "S13 and all six charge-resolved caches accepted in channel README.",
+      "files": [
+        {
+          "source": "Hqqprime/s13_result",
+          "copy": "Fhats/Hqqprime/s13_result",
+          "sha256": "351f1cbb6995d479cac0087e1cfefb92885c1e1f7dfb362386ba7dfe5c7d4365",
+          "bytes": 17344,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqprime/s13_cache_hqqprime_incoming_charge_squared_f1hat",
+          "copy": "Fhats/Hqqprime/s13_cache_hqqprime_incoming_charge_squared_f1hat",
+          "sha256": "59cbf25b48e596d74b0541a1887f74a4256076002322cb4b110f078e3463adf0",
+          "bytes": 5374397,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqprime/s13_cache_hqqprime_prime_charge_squared_f1hat",
+          "copy": "Fhats/Hqqprime/s13_cache_hqqprime_prime_charge_squared_f1hat",
+          "sha256": "a755f32e6319c798fd24bdfdd2265b1d7adf88c7e203ca0d6c88995ae27f0d07",
+          "bytes": 8150711,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqprime/s13_cache_hqqprime_mixed_incoming_prime_charge_f1hat",
+          "copy": "Fhats/Hqqprime/s13_cache_hqqprime_mixed_incoming_prime_charge_f1hat",
+          "sha256": "24caef792f819725d9d607e21d0528a77164a2d64dd04337fcedf493f2ac1682",
+          "bytes": 10471688,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqprime/s13_cache_hqqprime_incoming_charge_squared_f2hat",
+          "copy": "Fhats/Hqqprime/s13_cache_hqqprime_incoming_charge_squared_f2hat",
+          "sha256": "6e07c2d9f20fbca5e038e127c932ba8e0f0c32e6c113ddadb430b22bb7a847d7",
+          "bytes": 5469108,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqprime/s13_cache_hqqprime_prime_charge_squared_f2hat",
+          "copy": "Fhats/Hqqprime/s13_cache_hqqprime_prime_charge_squared_f2hat",
+          "sha256": "716be770e25f9bec27127c1815c0ee4653b40b46b74c74753c95ef8a95445891",
+          "bytes": 8326903,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqprime/s13_cache_hqqprime_mixed_incoming_prime_charge_f2hat",
+          "copy": "Fhats/Hqqprime/s13_cache_hqqprime_mixed_incoming_prime_charge_f2hat",
+          "sha256": "babc7fbc0692727e7f57a9d0cfd437ae5ed4cbb1f7e495a30321be4060a08f1d",
+          "bytes": 10471727,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqprime/README.md",
+          "copy": "Fhats/Hqqprime/README.md",
+          "sha256": "0dc84c4d86c9861c73069d4d216bdfef0f15e99b36188e9848cd66fcbf21bd61",
+          "bytes": 142253,
+          "role": "convention_ledger_snapshot",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqqprime/s13_extract_fhat_hqqprime.wl",
+          "copy": "Fhats/Hqqprime/s13_extract_fhat_hqqprime.wl",
+          "sha256": "80141cec99769c0e32324fffcfc1322b5751554bc5f73172d7801bfa6041789e",
+          "bytes": 48399,
+          "role": "producer_provenance_only",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        }
+      ],
+      "snapshot_reused_from": {
+        "path": "previous_Hgq_v3/s01_result",
+        "sha256": "6007cbbc1634537663e8d309d94d16513ff4e81b0fdf4ceda094fd69e2ed49ed"
+      }
+    },
+    {
+      "channel": "Hgq_v4",
+      "ledger_status": "Independent S10 accepted; BigTMD positive-branch comparisons agree; unresolved MadGraph real-emission comparison remains documented.",
+      "files": [
+        {
+          "source": "Hgq_v4/s10_result.wl",
+          "copy": "Fhats/Hgq_v4/s10_result.wl",
+          "sha256": "575ea96993eb9a86cfeddb6e10d61c0147e3bf74d35bc25eaf3dbb03fceb9bfe",
+          "bytes": 17601946,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hgq_v4/s10_poles.wl",
+          "copy": "Fhats/Hgq_v4/s10_poles.wl",
+          "sha256": "43edde6d88a5ba15567a8fc09a626867596a46e6e78f22f981a2914592cca1ed",
+          "bytes": 643,
+          "role": "acceptance_provenance",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hgq_v4/README.md",
+          "copy": "Fhats/Hgq_v4/README.md",
+          "sha256": "0a83e30990bf40ba1cee60a09275c1416542a889191e02143eead64119df4fba",
+          "bytes": 30669,
+          "role": "convention_ledger_snapshot",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hgq_v4/s10_final_hats.wl",
+          "copy": "Fhats/Hgq_v4/s10_final_hats.wl",
+          "sha256": "809627572423ddd23376e625c19ca80d01023143ca3224891f9bd2db2fbdda62",
+          "bytes": 13720,
+          "role": "producer_provenance_only",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        }
+      ]
+    },
+    {
+      "channel": "Hqg_v3",
+      "ledger_status": "Independent LO+NLO S12 accepted in channel README; finite Delta comparison discrepancy documented separately.",
+      "files": [
+        {
+          "source": "Hqg_v3/s12_result.wl",
+          "copy": "Fhats/Hqg_v3/s12_result.wl",
+          "sha256": "0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c",
+          "bytes": 29357951,
+          "role": "terminal_fhat_payload",
+          "prior_accepted_sha256_checked": true,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqg_v3/README.md",
+          "copy": "Fhats/Hqg_v3/README.md",
+          "sha256": "4334a2904c7d085e0c85db10fbc6bda72d2fa16aaeaec137e6276e8b9b927524",
+          "bytes": 31688,
+          "role": "convention_ledger_snapshot",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        },
+        {
+          "source": "Hqg_v3/s12_final_hats.wl",
+          "copy": "Fhats/Hqg_v3/s12_final_hats.wl",
+          "sha256": "da103a802e0aac384fe75c1c44096324659755781a6be98cae459f440057e5b0",
+          "bytes": 13360,
+          "role": "producer_provenance_only",
+          "prior_accepted_sha256_checked": false,
+          "source_copy_equal": true
+        }
+      ],
+      "snapshot_reused_from": {
+        "path": "previous_Hgq_v3/s01_result",
+        "sha256": "6007cbbc1634537663e8d309d94d16513ff4e81b0fdf4ceda094fd69e2ed49ed"
+      }
+    }
+  ],
+  "reused_channels": [
+    "Hqq_v2",
+    "Hgg",
+    "Hqqbar",
+    "Hqqprime",
+    "Hqg_v3"
+  ],
+  "reuse_manifest": {
+    "path": "previous_Hgq_v3/s01_result",
+    "sha256": "6007cbbc1634537663e8d309d94d16513ff4e81b0fdf4ceda094fd69e2ed49ed"
+  },
+  "checks": {
+    "all_requested_channels_imported": true,
+    "all_copies_match_recorded_source_snapshots": true,
+    "all_documented_accepted_payload_hashes_checked": true,
+    "mathematical_payloads_modified": false,
+    "numerical_convolution_performed": false
+  }
+}

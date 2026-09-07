@@ -1,0 +1,68 @@
+S09_BIN_START q0_p0 seed 730001 neval 512 nitn 4
+S09_BIN_STARTS09_BIN_START  q1_p0q2_p0  seedseed  730007730013  nevalneval  512512  nitnnitn  44
+
+S09_WARMUP q1_p0 [-3.7(2.0)e+15 1.7(1.4)e+15]
+S09_WARMUP q2_p0 [2.6(2.7)e+10 2.8(2.9)e+10]
+S09_WARMUP q0_p0 [1.6(1.7)e+09 1.9(2.0)e+09]
+S09_EVALUATIONS 1100556 456 accepted 188
+S09_EVALUATIONS 1100555 536 accepted 188
+S09_EVALUATIONS 1100554 508 accepted 189
+S09_EVALUATIONS 1100555 826 accepted 373
+S09_EVALUATIONS 1100554 942 accepted 373
+S09_EVALUATIONS 1100556 750 accepted 373
+S09_EVALUATIONS 1100554 1186 accepted 555
+S09_EVALUATIONS 1100556 978 accepted 556
+S09_EVALUATIONS 1100555 1029 accepted 556
+S09_EVALUATIONS 1100554 1407 accepted 739
+S09_EVALUATIONS 1100555 1243 accepted 742
+S09_EVALUATIONS 1100556 1207 accepted 743
+S09_EVALUATIONS 1100555 1451 accepted 926
+S09_EVALUATIONS 1100554 1693 accepted 926
+S09_EVALUATIONS 1100556 1414 accepted 930
+S09_EVALUATIONS 1100554 1896 accepted 1105
+S09_EVALUATIONS 1100555 1642 accepted 1107
+S09_EVALUATIONS 1100556 1606 accepted 1112
+S09_EVALUATIONS 1100555 1843 accepted 1295
+S09_EVALUATIONS 1100556 1809 accepted 1300
+S09_EVALUATIONS 1100554 2100 accepted 1293
+S09_BIN_DONE q0_p0 [-9468266274659.992, -5000751456114.905] errors [2508720057019.6113, 1328321662827.5315] Q 0.0014069141699259542
+S09_EVALUATIONS 1100555 2045 accepted 1481
+S09_EVALUATIONS 1100556 2009 accepted 1487
+S09_EVALUATIONS 1100555 2244 accepted 1668
+S09_EVALUATIONS 1100556 2207 accepted 1674
+S09_BIN_DONE q2_p0 [-3.9132442150707086e+45, -4.248961796658529e+45] errors [4.1511609768694805e+45, 4.507288012606825e+45] Q 1.78290786390192e-07
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/physics/miniforge3/lib/python3.13/concurrent/futures/process.py", line 254, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s09_convolve_channels.py", line 368, in integrate_bin
+    write_json(destination, record_value)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s09_convolve_channels.py", line 30, in write_json
+    temporary.write_text(json.dumps(value, indent=2, allow_nan=False)+'\n')
+                         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/physics/miniforge3/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/home/physics/miniforge3/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/home/physics/miniforge3/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant: nan
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s09_convolve_channels.py", line 410, in <module>
+    main()
+    ~~~~^^
+  File "/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s09_convolve_channels.py", line 395, in main
+    result = future.result(); results.append(result)
+  File "/home/physics/miniforge3/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/home/physics/miniforge3/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+ValueError: Out of range float values are not JSON compliant: nan

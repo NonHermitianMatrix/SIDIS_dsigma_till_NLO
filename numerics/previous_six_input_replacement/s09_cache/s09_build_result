@@ -1,0 +1,181 @@
+{
+  "stage": "s09",
+  "status": "IntegrandBuilt",
+  "producer_sha256": "690a7fc990debb372bf981074058dad20e9120efac725a4b73252f80af7ed600",
+  "input_hashes": {
+    "s02_result": "9792c34803b21620ac31c0e9667a818b09da196c497298736154a2f4e29398ca",
+    "s04_result": "21fa5978d6ae2f7daf8ab600585c63e67622a68682b2a30e48575c2e31620358",
+    "s06_result": "dc886e96521d95d0c29ecac780425ec5a7406f3d5833d176a2529441a1c7fcc9",
+    "s07_result": "ef847837c5e69a5e3244e37ba4ad019f43592965b3e17e5fb94e82d990fe1fa7",
+    "s08_result": "c544f7b035061326310df8a84bcc506091614ceaf2322865328bd55d0cf82b88",
+    "s10_result": "ffad798a0c6f66099fdefa7217683ac2e63fa128810fc6cd5c2bf9eab6e4a99f",
+    "s10_cache/s10_consumer_contract_result": "d06aca98dfce83aee7ff1a4a56a3107a89e9b65df89b6c95117f826bff0d5cbe",
+    "dsigmapibydpt/s01_result": "4f3406d3dc88bb71292cdbc1132f6309cce6442cb4b64509f0d3c218fe84c421"
+  },
+  "native_source_sha256": "3f74628ab3a9f966f51d375d6196c19aaf479f3f19fb02c1f9ed9ac7d2bf9cc7",
+  "native_library_sha256": "43addfbaec34e884f70bfb424decec6e8fd2345280841ad877e733f50eff6619",
+  "pdf_map": {
+    "f0": "r7/xi",
+    "f1": "(r0 + r2)/xi",
+    "f2": "r2/xi",
+    "f3": "(r1 + r3)/xi",
+    "f4": "r3/xi",
+    "f5": "r4/xi",
+    "f6": "r4/xi",
+    "f7": "r5/xi",
+    "f8": "r5/xi",
+    "f9": "r6/xi",
+    "f10": "r6/xi"
+  },
+  "neutral_sum": "Dsum/2",
+  "transforms": {
+    "linear": {
+      "expression": "coordinate*(-lower + upper) + lower",
+      "jacobian": "-lower + upper"
+    },
+    "logarithmic": {
+      "expression": "lower*exp(coordinate*log(upper/lower))",
+      "jacobian": "lower*exp(coordinate*log(upper/lower))*log(upper/lower)"
+    }
+  },
+  "channels": [
+    "Hqq_v2",
+    "Hgg",
+    "Hqqbar",
+    "Hqqprime",
+    "Hgq_v4",
+    "Hqg_v3"
+  ],
+  "FFs": [
+    "KKP",
+    "Kretzer"
+  ],
+  "numerical_zero_policy": "Only exact cut rejection and absent LO/interference sectors return zero; native failures raise.",
+  "components": [
+    {
+      "FF": "KKP",
+      "channel": "Hqq_v2",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqq_v2",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hgg",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hgg",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqqbar",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqqbar",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqqprime",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqqprime",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hgq_v4",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hgq_v4",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqg_v3",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqg_v3",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqq_v2",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqq_v2",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hgg",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hgg",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqqbar",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqqbar",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqqprime",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqqprime",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hgq_v4",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hgq_v4",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqg_v3",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqg_v3",
+      "order": "NLO_correction"
+    }
+  ],
+  "caveats": [
+    "uniform, as the authoritative F1/F2 calculation omits azimuth-dependent terms",
+    "Hgq_v4 retains its documented unresolved MadGraph real-emission comparison; supplied coefficients are unchanged.",
+    "Central common scale only; errors are integration errors, not theoretical uncertainty."
+  ]
+}

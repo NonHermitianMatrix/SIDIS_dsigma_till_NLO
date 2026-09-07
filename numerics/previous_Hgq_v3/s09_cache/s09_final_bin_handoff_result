@@ -1,0 +1,40 @@
+{
+  "status": "Complete",
+  "source_sha256": "86922f5701629c5cef22263a10a21d89552a5bb5e470025f08addbc663b19dba",
+  "build_sha256": "146b3f2791cae7e56f65bdd18d4516cd25ed5e92d48749ce861b1f5e41f25569",
+  "isolation_contract_sha256": "000b9a1b5cc3a7077346b225629ed06fd99a50132276b3997aa571bea063df67",
+  "writer_shutdown_sha256": "0ab4c8cc572d6773d481e8be7d3079cc917569e6fb789d7934e72a22e1053991",
+  "archived_partial_files": {
+    "q2_p4_vegas.pkl": "dfb475582e1cad6eee8f3af18214249d5e9685f18dc3aebe1d208313877964a9"
+  },
+  "promoted_files": {
+    "q2_p4_level0_result": "c893c94c760f4261d6ff2cff3996d2a7f109cae6c922a0215d2355c4b4aac08a",
+    "q2_p4_result": "c893c94c760f4261d6ff2cff3996d2a7f109cae6c922a0215d2355c4b4aac08a",
+    "q2_p4_vegas.pkl": "5d5dd1288fa8a3283689f49a826f9ca55845d24bc29c03755b23262caf83b18f"
+  },
+  "accepted_bins": [
+    "q0_p0",
+    "q0_p1",
+    "q0_p2",
+    "q0_p3",
+    "q0_p4",
+    "q0_p5",
+    "q1_p0",
+    "q1_p1",
+    "q1_p2",
+    "q1_p3",
+    "q1_p4",
+    "q1_p5",
+    "q2_p0",
+    "q2_p1",
+    "q2_p2",
+    "q2_p3",
+    "q2_p4"
+  ],
+  "checks": {
+    "all_writers_stopped": true,
+    "unchanged_source_and_inputs": true,
+    "byte_identical_promotion": true,
+    "all_seventeen_bins_accepted": true
+  }
+}

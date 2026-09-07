@@ -1,0 +1,80 @@
+S07_COMPILE Hqg_v3_F1_LODelta_1
+S07_COMPILE Hqg_v3_F1_Delta_1
+S07_COMPILE Hqg_v3_F1_L0_1
+S07_COMPILE Hqg_v3_F1_L1_1
+S07_COMPILE Hqg_v3_F1_Regular_1
+S07_COMPILE Hqg_v3_F1_LODelta_m1
+S07_COMPILE Hqg_v3_F1_Delta_m1
+S07_COMPILE Hqg_v3_F1_L0_m1
+Traceback (most recent call last):
+  File "/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_compile_hard_functions.py", line 137, in <module>
+    try:main()
+        ~~~~^^
+  File "/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_compile_hard_functions.py", line 98, in main
+    compiled=list(pool.map(lambda s:compile_one(s,cache),specs))
+  File "/home/physics/miniforge3/lib/python3.13/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/physics/miniforge3/lib/python3.13/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/home/physics/miniforge3/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/home/physics/miniforge3/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/physics/miniforge3/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_compile_hard_functions.py", line 98, in <lambda>
+    compiled=list(pool.map(lambda s:compile_one(s,cache),specs))
+                                    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_compile_hard_functions.py", line 78, in compile_one
+    if run.returncode:raise RuntimeError(name+': '+run.stderr[:3500])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Hqg_v3_F1_Delta_1: /home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp: In function ‘void Hqg_v3_F1_Delta_1(const double*, double*)’:
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:69:21: error: too many arguments to function ‘Z ArcTan(Z)’
+   69 |  const Z w164=ArcTan(Q2,0.0L);
+      |               ~~~~~~^~~~~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:14:10: note: declared here
+   14 | static Z ArcTan(Z a){return std::atan(a);}
+      |          ^~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:75:21: error: too many arguments to function ‘Z ArcTan(Z)’
+   75 |  const Z w209=ArcTan(w208,0.0L);
+      |               ~~~~~~^~~~~~~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:14:10: note: declared here
+   14 | static Z ArcTan(Z a){return std::atan(a);}
+      |          ^~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:77:21: error: too many arguments to function ‘Z ArcTan(Z)’
+   77 |  const Z w251=ArcTan(w12,0.0L);
+      |               ~~~~~~^~~~~~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:14:10: note: declared here
+   14 | static Z ArcTan(Z a){return std::atan(a);}
+      |          ^~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:82:21: error: too many arguments to function ‘Z ArcTan(Z)’
+   82 |  const Z w285=ArcTan(w284,0.0L);
+      |               ~~~~~~^~~~~~~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:14:10: note: declared here
+   14 | static Z ArcTan(Z a){return std::atan(a);}
+      |          ^~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:86:21: error: too many arguments to function ‘Z ArcTan(Z)’
+   86 |  const Z w331=ArcTan(w330,0.0L);
+      |               ~~~~~~^~~~~~~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:14:10: note: declared here
+   14 | static Z ArcTan(Z a){return std::atan(a);}
+      |          ^~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:90:21: error: too many arguments to function ‘Z ArcTan(Z)’
+   90 |  const Z w353=ArcTan(w352,0.0L);
+      |               ~~~~~~^~~~~~~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:14:10: note: declared here
+   14 | static Z ArcTan(Z a){return std::atan(a);}
+      |          ^~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:94:21: error: too many arguments to function ‘Z ArcTan(Z)’
+   94 |  const Z w377=ArcTan(w376,0.0L);
+      |               ~~~~~~^~~~~~~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:14:10: note: declared here
+   14 | static Z ArcTan(Z a){return std::atan(a);}
+      |          ^~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:216:22: error: too many arguments to function ‘Z ArcTan(Z)’
+  216 |  const Z w3587=ArcTan(s,0.0L);
+      |                ~~~~~~^~~~~~~~
+/home/physics/projects/AI_Assisted_SIDIS/scripts/numerics/s07_cache/s07_Hqg_v3_F1_Delta_1.cpp:14:10: note: d

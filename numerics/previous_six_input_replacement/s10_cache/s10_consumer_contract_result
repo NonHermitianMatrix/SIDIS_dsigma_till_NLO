@@ -1,0 +1,29 @@
+{
+  "stage": "s10_consumer_contract",
+  "status": "Complete",
+  "producer_sha256": "0a7cb9cb6c5606f2ebc084063466f2775e2942ca4ea034f229e45897fe95e687",
+  "channel": "Hqq_v2",
+  "jacobian_already_included": false,
+  "checks": {
+    "JacobianAgreesWithNumericsS04": true,
+    "PartonicMeasuresIndependentOfHadronicVariables": true,
+    "FragmentationJacobianDependsOnHadronicVariables": true,
+    "SoftBornRatioIndependentOfHadronicVariables": true,
+    "JacobianAlreadyIncludedClaimFails": true
+  },
+  "source_trace": {
+    "Hqq_v2/s04_integrate_hqq_phase_space.wl": "ea8a4a56d9aca1e7c7f09ca86b8bafe2fc1633e7533ac8857f792d193e61e793",
+    "Hqq_v2/s05_expand_hqq_endpoints.wl": "cd8e471d24fec0e751463c36f08bdeb72c0a791379d350cbc99e24b541d4fdac",
+    "Hqq_v2/s06_evaluate_hqq_virtual.wl": "4b78bd25d05d52913ad668973fc6c404b1b883e6b94e6ede0562ac98d892e8d3",
+    "Hqq_v2/s07_factorize_hqq_msbar.wl": "db2012e21e8abe0fe4c007f3811ed57fd4cd5f2635301fb107a0aa0bf45a7c00",
+    "Hqq_v2/s07_combine_hqq_from_cache.wl": "2871fb493112d7d030e7a10cdc4aa3071ee9ded1db785405d8ad2d434f2641f9",
+    "Hqq_v2/s08_extract_hqq_fhats.wl": "f426373c24143950cb8cdb09a6410e7ec76e0d4f960293f6380021cf54c211b7",
+    "numerics/s05_cache/Hqq_v2_F1Hat_LODelta_1.json": "7f971c136667dde277a37443659670035f97a02d48b7c66fd08c1e2998f8a31f",
+    "numerics/s05_cache/Hqq_v2_F1Hat_L1_1.json": "2e308e8a17abfed2e3b45b4601bd2cbe9b12da6f64e99b2427defecd09c7d7d6",
+    "numerics/s10_cache/s10_check_hqq_measures.wl": "8e262264a7e270d0977c69af6968c5eb9d417050ae49393427c4535e8b7560c7"
+  },
+  "measure_result_sha256": "6cd46f6c5cb690226d3741587181ea91942a0aec6c63a45c32f4e8cd6fbf8cbb",
+  "soft_over_born": "7*aS/(3*pi)",
+  "consumer": "Apply numerics S04 d(zeta)/d(s23) once to every Hqq_v2 perturbative/distribution component.",
+  "conflict": "The older Hqq_v2/bigTMD_check README claims the local fragmentation Jacobian is included. The source-bound partonic measure and current-channel soft/Born checks contradict that claim. Its comparison convention must not be used to omit the Jacobian here."
+}

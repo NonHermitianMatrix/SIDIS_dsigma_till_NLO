@@ -1,0 +1,473 @@
+{
+  "stage": "s03",
+  "status": "Complete",
+  "producer_sha256": "fc080c16bfb862b543e6c92fdccb483d7d3d45db503e83789eeb3456d426450f",
+  "inputs": {
+    "s09_result": "66c0df6a0a8001e4603d939602bb8c7aa378fe77c916437f1b9115b8363b36ad",
+    "dsigmapibydpt/s01_result": "4f3406d3dc88bb71292cdbc1132f6309cce6442cb4b64509f0d3c218fe84c421",
+    "dsigmapibydpt/s02_result": "e6a60d2263fe5a728179866c48dcf717a19d732cb1aa34264a6b665024c57e2b"
+  },
+  "panels": [
+    {
+      "Q2_range_GeV2": [
+        "2",
+        "4.5"
+      ],
+      "bins": [
+        {
+          "pt_low_GeV": 2.5,
+          "pt_high_GeV": 2.8,
+          "pt_center_GeV": 2.65,
+          "experimental_value": 215.0,
+          "experimental_total_error": 36.0,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 196.82301876426865,
+              "integration_error": 3.050839975577618,
+              "calculation_over_data": 0.9154559012291565,
+              "integration_ratio_error": 0.014189953374779619,
+              "paper_curve_at_bin_center": 176.981945726394,
+              "paper_center_over_data": 0.8231718405878791
+            },
+            "Kretzer": {
+              "calculation_bin_average": 139.27133354294435,
+              "integration_error": 2.3898887138642118,
+              "calculation_over_data": 0.6477736443857877,
+              "integration_ratio_error": 0.011115761459833543,
+              "paper_curve_at_bin_center": 117.82874594690877,
+              "paper_center_over_data": 0.5480406788228315
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 2.8,
+          "pt_high_GeV": 3.3,
+          "pt_center_GeV": 3.05,
+          "experimental_value": 146.0,
+          "experimental_total_error": 27.0,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 120.46400792124814,
+              "integration_error": 1.8434930251590373,
+              "calculation_over_data": 0.8250959446660832,
+              "integration_ratio_error": 0.012626664555883817,
+              "paper_curve_at_bin_center": 106.94966568579629,
+              "paper_center_over_data": 0.7325319567520294
+            },
+            "Kretzer": {
+              "calculation_bin_average": 87.16707351038607,
+              "integration_error": 1.423944536640669,
+              "calculation_over_data": 0.5970347500711375,
+              "integration_ratio_error": 0.00975304477151143,
+              "paper_curve_at_bin_center": 71.2035622361178,
+              "paper_center_over_data": 0.48769563175423153
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 3.3,
+          "pt_high_GeV": 4.0,
+          "pt_center_GeV": 3.65,
+          "experimental_value": 60.0,
+          "experimental_total_error": 14.0,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 64.71208385091298,
+              "integration_error": 1.056790178823583,
+              "calculation_over_data": 1.0785347308485496,
+              "integration_ratio_error": 0.017613169647059716,
+              "paper_curve_at_bin_center": 53.8354605774647,
+              "paper_center_over_data": 0.8972576762910783
+            },
+            "Kretzer": {
+              "calculation_bin_average": 46.7167098085419,
+              "integration_error": 0.7662120326554894,
+              "calculation_over_data": 0.778611830142365,
+              "integration_ratio_error": 0.012770200544258157,
+              "paper_curve_at_bin_center": 35.647115431397204,
+              "paper_center_over_data": 0.5941185905232867
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 4.0,
+          "pt_high_GeV": 5.2,
+          "pt_center_GeV": 4.6,
+          "experimental_value": 21.7,
+          "experimental_total_error": 4.7,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 23.664228558341506,
+              "integration_error": 0.269901439400053,
+              "calculation_over_data": 1.090517445084862,
+              "integration_ratio_error": 0.012437854350232858,
+              "paper_curve_at_bin_center": 18.34240571344821,
+              "paper_center_over_data": 0.8452721526934659
+            },
+            "Kretzer": {
+              "calculation_bin_average": 16.44038471864705,
+              "integration_error": 0.255256868407019,
+              "calculation_over_data": 0.7576214156058548,
+              "integration_ratio_error": 0.011762989327512397,
+              "paper_curve_at_bin_center": 11.799213628673378,
+              "paper_center_over_data": 0.5437425635333354
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 5.2,
+          "pt_high_GeV": 8.0,
+          "pt_center_GeV": 6.6,
+          "experimental_value": 4.37,
+          "experimental_total_error": 0.83,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 4.751289283585602,
+              "integration_error": 0.07590275201109133,
+              "calculation_over_data": 1.087251552307918,
+              "integration_ratio_error": 0.01736905080345339,
+              "paper_curve_at_bin_center": 2.692292639212806,
+              "paper_center_over_data": 0.6160852721310769
+            },
+            "Kretzer": {
+              "calculation_bin_average": 3.312649004983369,
+              "integration_error": 0.05270866292902342,
+              "calculation_over_data": 0.7580432505682766,
+              "integration_ratio_error": 0.01206147893112664,
+              "paper_curve_at_bin_center": 1.625705606873674,
+              "paper_center_over_data": 0.3720150130145707
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 8.0,
+          "pt_high_GeV": 15.0,
+          "pt_center_GeV": 11.5,
+          "experimental_value": 0.29,
+          "experimental_total_error": 0.26,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 0.3635983912895706,
+              "integration_error": 0.006500222705942223,
+              "calculation_over_data": 1.2537875561709333,
+              "integration_ratio_error": 0.022414561054973185,
+              "paper_curve_at_bin_center": 0.06516622819194944,
+              "paper_center_over_data": 0.22471113169637738
+            },
+            "Kretzer": {
+              "calculation_bin_average": 0.2647235548255226,
+              "integration_error": 0.004502733673192829,
+              "calculation_over_data": 0.9128398442259401,
+              "integration_ratio_error": 0.015526667838595963,
+              "paper_curve_at_bin_center": 0.035702964097165446,
+              "paper_center_over_data": 0.12311366930057051
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Q2_range_GeV2": [
+        "4.5",
+        "15"
+      ],
+      "bins": [
+        {
+          "pt_low_GeV": 2.5,
+          "pt_high_GeV": 2.8,
+          "pt_center_GeV": 2.65,
+          "experimental_value": 200.0,
+          "experimental_total_error": 34.0,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 185.64816717516237,
+              "integration_error": 4.152508948911486,
+              "calculation_over_data": 0.9282408358758119,
+              "integration_ratio_error": 0.02076254474455743,
+              "paper_curve_at_bin_center": 156.16612190820922,
+              "paper_center_over_data": 0.7808306095410461
+            },
+            "Kretzer": {
+              "calculation_bin_average": 138.58984280998234,
+              "integration_error": 3.366303370734766,
+              "calculation_over_data": 0.6929492140499117,
+              "integration_ratio_error": 0.01683151685367383,
+              "paper_curve_at_bin_center": 111.65754189825195,
+              "paper_center_over_data": 0.5582877094912597
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 2.8,
+          "pt_high_GeV": 3.4,
+          "pt_center_GeV": 3.0999999999999996,
+          "experimental_value": 122.0,
+          "experimental_total_error": 21.0,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 117.68503469393771,
+              "integration_error": 1.9870061273339372,
+              "calculation_over_data": 0.9646314319175222,
+              "integration_ratio_error": 0.016286935469950307,
+              "paper_curve_at_bin_center": 98.42759700434077,
+              "paper_center_over_data": 0.8067835820027932
+            },
+            "Kretzer": {
+              "calculation_bin_average": 86.9625543403785,
+              "integration_error": 1.6163347173214682,
+              "calculation_over_data": 0.7128078224621188,
+              "integration_ratio_error": 0.01324864522394646,
+              "paper_curve_at_bin_center": 68.27670429572439,
+              "paper_center_over_data": 0.5596451171780688
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 3.4,
+          "pt_high_GeV": 4.1,
+          "pt_center_GeV": 3.75,
+          "experimental_value": 58.0,
+          "experimental_total_error": 11.0,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 61.12002567231953,
+              "integration_error": 0.9407796456694727,
+              "calculation_over_data": 1.0537935460744747,
+              "integration_ratio_error": 0.016220338718439184,
+              "paper_curve_at_bin_center": 50.61843705664219,
+              "paper_center_over_data": 0.8727316733903826
+            },
+            "Kretzer": {
+              "calculation_bin_average": 43.75480436415564,
+              "integration_error": 0.7002333084847596,
+              "calculation_over_data": 0.7543931786923386,
+              "integration_ratio_error": 0.012072988077323443,
+              "paper_curve_at_bin_center": 34.30004160495664,
+              "paper_center_over_data": 0.5913800276716662
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 4.1,
+          "pt_high_GeV": 5.2,
+          "pt_center_GeV": 4.65,
+          "experimental_value": 23.0,
+          "experimental_total_error": 4.9,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 25.22738343055829,
+              "integration_error": 0.3684278461990795,
+              "calculation_over_data": 1.0968427578503606,
+              "integration_ratio_error": 0.016018602008655628,
+              "paper_curve_at_bin_center": 19.198109063287294,
+              "paper_center_over_data": 0.8347003940559693
+            },
+            "Kretzer": {
+              "calculation_bin_average": 17.944957081114588,
+              "integration_error": 0.2636804124888631,
+              "calculation_over_data": 0.7802155252658516,
+              "integration_ratio_error": 0.011464365760385353,
+              "paper_curve_at_bin_center": 13.044018039247991,
+              "paper_center_over_data": 0.5671312190977388
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 5.2,
+          "pt_high_GeV": 8.0,
+          "pt_center_GeV": 6.6,
+          "experimental_value": 5.8,
+          "experimental_total_error": 1.2,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 5.988710518811114,
+              "integration_error": 0.15110281045126037,
+              "calculation_over_data": 1.032536296346744,
+              "integration_ratio_error": 0.026052208698493166,
+              "paper_curve_at_bin_center": 3.4055992598063054,
+              "paper_center_over_data": 0.5871722861735009
+            },
+            "Kretzer": {
+              "calculation_bin_average": 4.262332057936984,
+              "integration_error": 0.09414091050618557,
+              "calculation_over_data": 0.7348848375753421,
+              "integration_ratio_error": 0.01623119146658372,
+              "paper_curve_at_bin_center": 2.201999811990596,
+              "paper_center_over_data": 0.37965513999837863
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 8.0,
+          "pt_high_GeV": 15.0,
+          "pt_center_GeV": 11.5,
+          "experimental_value": 0.31,
+          "experimental_total_error": 0.12,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 0.46376745380541,
+              "integration_error": 0.009950081114522502,
+              "calculation_over_data": 1.4960240445335806,
+              "integration_ratio_error": 0.03209703585329839,
+              "paper_curve_at_bin_center": 0.11815352382930774,
+              "paper_center_over_data": 0.38114039944937983
+            },
+            "Kretzer": {
+              "calculation_bin_average": 0.34187593447013975,
+              "integration_error": 0.008385599098062703,
+              "calculation_over_data": 1.102825595064967,
+              "integration_ratio_error": 0.027050319671170008,
+              "paper_curve_at_bin_center": 0.07501604558008942,
+              "paper_center_over_data": 0.24198724380674008
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Q2_range_GeV2": [
+        "15",
+        "70"
+      ],
+      "bins": [
+        {
+          "pt_low_GeV": 2.5,
+          "pt_high_GeV": 2.9,
+          "pt_center_GeV": 2.7,
+          "experimental_value": 118.0,
+          "experimental_total_error": 18.0,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 97.81554651974233,
+              "integration_error": 2.9283317747493944,
+              "calculation_over_data": 0.8289453094893418,
+              "integration_ratio_error": 0.024816370972452494,
+              "paper_curve_at_bin_center": 76.42922200175666,
+              "paper_center_over_data": 0.6477052712013276
+            },
+            "Kretzer": {
+              "calculation_bin_average": 74.78228832276466,
+              "integration_error": 2.5991144883307573,
+              "calculation_over_data": 0.6337482061251242,
+              "integration_ratio_error": 0.022026393968904722,
+              "paper_curve_at_bin_center": 56.673690518995805,
+              "paper_center_over_data": 0.4802855128728458
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 2.9,
+          "pt_high_GeV": 3.5,
+          "pt_center_GeV": 3.2,
+          "experimental_value": 69.1,
+          "experimental_total_error": 8.8,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 63.83143714320816,
+              "integration_error": 0.9203037079061865,
+              "calculation_over_data": 0.9237545172678462,
+              "integration_ratio_error": 0.013318432820639459,
+              "paper_curve_at_bin_center": 49.78537055389481,
+              "paper_center_over_data": 0.7204829313154097
+            },
+            "Kretzer": {
+              "calculation_bin_average": 49.0985942883386,
+              "integration_error": 0.757822382845855,
+              "calculation_over_data": 0.710544056271181,
+              "integration_ratio_error": 0.010967038825555065,
+              "paper_curve_at_bin_center": 36.375131211567606,
+              "paper_center_over_data": 0.5264128974177656
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 3.5,
+          "pt_high_GeV": 4.7,
+          "pt_center_GeV": 4.1,
+          "experimental_value": 27.7,
+          "experimental_total_error": 4.7,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 30.627041248325565,
+              "integration_error": 0.480321885070301,
+              "calculation_over_data": 1.1056693591453273,
+              "integration_ratio_error": 0.017340140255245523,
+              "paper_curve_at_bin_center": 22.20991406041316,
+              "paper_center_over_data": 0.8018019516394642
+            },
+            "Kretzer": {
+              "calculation_bin_average": 23.388095150888383,
+              "integration_error": 0.3804922705051303,
+              "calculation_over_data": 0.8443355650140211,
+              "integration_ratio_error": 0.013736183050726726,
+              "paper_curve_at_bin_center": 16.25066150783589,
+              "paper_center_over_data": 0.5866664804272884
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 4.7,
+          "pt_high_GeV": 8.0,
+          "pt_center_GeV": 6.35,
+          "experimental_value": 5.41,
+          "experimental_total_error": 0.96,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 6.215450513551256,
+              "integration_error": 0.09119266519585825,
+              "calculation_over_data": 1.1488817954808237,
+              "integration_ratio_error": 0.016856315193319454,
+              "paper_curve_at_bin_center": 3.605817239410457,
+              "paper_center_over_data": 0.6665096560832637
+            },
+            "Kretzer": {
+              "calculation_bin_average": 4.690500515132063,
+              "integration_error": 0.06917507572141664,
+              "calculation_over_data": 0.8670056405050024,
+              "integration_ratio_error": 0.012786520466065921,
+              "paper_curve_at_bin_center": 2.5813562582340843,
+              "paper_center_over_data": 0.47714533423920225
+            }
+          }
+        },
+        {
+          "pt_low_GeV": 8.0,
+          "pt_high_GeV": 15.0,
+          "pt_center_GeV": 11.5,
+          "experimental_value": 0.21,
+          "experimental_total_error": 0.06,
+          "FFs": {
+            "KKP": {
+              "calculation_bin_average": 0.4604087474043751,
+              "integration_error": 0.006747653146717735,
+              "calculation_over_data": 2.1924226066875003,
+              "integration_ratio_error": 0.03213168165103684,
+              "paper_curve_at_bin_center": 0.15875355620762674,
+              "paper_center_over_data": 0.755969315274413
+            },
+            "Kretzer": {
+              "calculation_bin_average": 0.34398069851168517,
+              "integration_error": 0.004951087846280814,
+              "calculation_over_data": 1.63800332624612,
+              "integration_ratio_error": 0.023576608791813402,
+              "paper_curve_at_bin_center": 0.11340778927601868,
+              "paper_center_over_data": 0.5400370917905651
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "paper_ratio_policy": "Original log-axis EPS curves evaluated at bin centers inside their support; no extrapolation. These are curve-to-bin ratios, not bin-integrated paper predictions.",
+  "artifacts": {
+    "s03_cross_section.pdf": "db692d4c90d1cdbd5677a75488203bd01f56cc3a6730134358f9d051b2a2f79f",
+    "s03_cross_section.png": "184c2b53612d33b637f93b07fd2dd7796b31360647e6b01656a2ad29996a92af",
+    "s03_ratios.pdf": "0142b94d4ed3f1d597b5a8b5300667ff08c63f5453e2bfa46c205b61bbf7c65c",
+    "s03_ratios.png": "89f74f8f2fc86cd32e8500baa7ae4d115ddf33eae6b18571fb7d29d9c4f6d0dd"
+  },
+  "caveats": [
+    "uniform, as the authoritative F1/F2 calculation omits azimuth-dependent terms",
+    "Hgq_v4 retains its documented unresolved MadGraph real-emission comparison; supplied coefficients are unchanged.",
+    "Central common scale only; errors are integration errors, not theoretical uncertainty."
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "schema": "SIDISNumericsInputReadiness-v1",
+  "stage": "s02",
+  "producer_sha256": "2098b5a4cb553ecac84a35d5636bd940f24d6373128654e382497eb81cf9b5a3",
+  "s01_result_sha256": "6007cbbc1634537663e8d309d94d16513ff4e81b0fdf4ceda094fd69e2ed49ed",
+  "status": "InputIntegrityCheckedWithUserOverride",
+  "frozen_integrity": [
+    {
+      "copy": "Fhats/Hqq_v2/s08_result.wl",
+      "sha256": "0b69a0db7740127ab16c53d181317b7defbd17af846e55582213ca28d1d35741",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqq_v2/README.md",
+      "sha256": "0a2a13591aa5fab70eef9a7a991022e2b9211adfa9af278497efd0c0999e0b04",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqq_v2/s08_extract_hqq_fhats.wl",
+      "sha256": "f426373c24143950cb8cdb09a6410e7ec76e0d4f960293f6380021cf54c211b7",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgg/s13_result",
+      "sha256": "9977c411c111d58f9e7fb4b768c165e10c0e1bfd92470afd3423f5a75dfb9e8f",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgg/README.md",
+      "sha256": "24a7c61fa4d8d1383f9265a3e9523d287d20121546d0cb99f91a637b2ff7b6c6",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgg/s13_extract_fhat_hgg.wl",
+      "sha256": "c2ccab6b17835e30148c507180601f0586434d90836723ddbde3953e212d2331",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqbar/s13_result",
+      "sha256": "4224b46a064087ed3b20e36a049dd1929019f66583263fcb2c28c9b69614c64f",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqbar/README.md",
+      "sha256": "6a600e52a441128cef8b584834b6e29f40c050faa83fa9fe7c2310a19f8e8c48",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqbar/s13_extract_fhat_hqqbar.wl",
+      "sha256": "760cad942ee628c0e3de3b76362cbbb103bf6c8d9c920983b84f717b5adf1f13",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/s13_result",
+      "sha256": "351f1cbb6995d479cac0087e1cfefb92885c1e1f7dfb362386ba7dfe5c7d4365",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/s13_cache_hqqprime_incoming_charge_squared_f1hat",
+      "sha256": "59cbf25b48e596d74b0541a1887f74a4256076002322cb4b110f078e3463adf0",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/s13_cache_hqqprime_prime_charge_squared_f1hat",
+      "sha256": "a755f32e6319c798fd24bdfdd2265b1d7adf88c7e203ca0d6c88995ae27f0d07",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/s13_cache_hqqprime_mixed_incoming_prime_charge_f1hat",
+      "sha256": "24caef792f819725d9d607e21d0528a77164a2d64dd04337fcedf493f2ac1682",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/s13_cache_hqqprime_incoming_charge_squared_f2hat",
+      "sha256": "6e07c2d9f20fbca5e038e127c932ba8e0f0c32e6c113ddadb430b22bb7a847d7",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/s13_cache_hqqprime_prime_charge_squared_f2hat",
+      "sha256": "716be770e25f9bec27127c1815c0ee4653b40b46b74c74753c95ef8a95445891",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/s13_cache_hqqprime_mixed_incoming_prime_charge_f2hat",
+      "sha256": "babc7fbc0692727e7f57a9d0cfd437ae5ed4cbb1f7e495a30321be4060a08f1d",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/README.md",
+      "sha256": "0dc84c4d86c9861c73069d4d216bdfef0f15e99b36188e9848cd66fcbf21bd61",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqqprime/s13_extract_fhat_hqqprime.wl",
+      "sha256": "80141cec99769c0e32324fffcfc1322b5751554bc5f73172d7801bfa6041789e",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_fhats/F1hat_del.m",
+      "sha256": "2416c37a67b43715bc4534e492293b192bac2bcc4e07a137dbd0d18d29c40126",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_fhats/F1hat_p1.m",
+      "sha256": "bf392d6a369b06b4bc86788e037a430a850ee4c2958adf399c5cd1277b8abef2",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_fhats/F1hat_p2.m",
+      "sha256": "6bea49b4aebe1cb08b22fc12bacfddbaa9836f0beda7dd27ba09eba3844e8a85",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_fhats/F1hat_reg.m",
+      "sha256": "249975d69789f00013e726223c3fda9c01f17941029333c21bc4ea2890f99fb4",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_fhats/F2hat_del.m",
+      "sha256": "206f56954b32ba3866891e9c8c8c8d8f5c226ae3c362e6024c772ae36887ddb3",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_fhats/F2hat_p1.m",
+      "sha256": "e597fc0e387d19cdee3baf2ab586cdb50dfecea3cb180b128c122d45cb3b4c02",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_fhats/F2hat_p2.m",
+      "sha256": "0b54c21fb9a108f83208ea8a66e245090d7dad58fd16a35308fb23c872fa974a",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_fhats/F2hat_reg.m",
+      "sha256": "36968477fcd13d6f7b517bd1b63484b5385bc0535c0139c082e0700b7239fa79",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/README.md",
+      "sha256": "f34d181849f07349521bb0224cffaeed62908f8d43bcb0c6a1bd6738b50bc201",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hgq_v3/s09_extract_fhats.wls",
+      "sha256": "cb11dc6bd71c33cd6c7119d7936caa1eb8a8d1d230f1373f55a3e1046278b610",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqg_v3/s12_result.wl",
+      "sha256": "0c31db0e92387801fe41300d055bcf793ddbf231ff94624fd88f6153d12c958c",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqg_v3/README.md",
+      "sha256": "4334a2904c7d085e0c85db10fbc6bda72d2fa16aaeaec137e6276e8b9b927524",
+      "matches_s01": true
+    },
+    {
+      "copy": "Fhats/Hqg_v3/s12_final_hats.wl",
+      "sha256": "da103a802e0aac384fe75c1c44096324659755781a6be98cae459f440057e5b0",
+      "matches_s01": true
+    }
+  ],
+  "blockers": [],
+  "overridden_restrictions": [
+    {
+      "code": "HGQ_FINITE_DELTA_PRODUCTION_PROHIBITED",
+      "channel": "Hgq_v3",
+      "originating_assembly_artifact": "Hgq_v3/s08_result.m",
+      "consumer_exporter": "Fhats/Hgq_v3/s09_extract_fhats.wls",
+      "exporter_sha256": "cb11dc6bd71c33cd6c7119d7936caa1eb8a8d1d230f1373f55a3e1046278b610",
+      "line": 7,
+      "evidence": "     del         : poles cancel, but a scheme residue remains (t25/t26) - NOT\n                   yet MSbar-clean.  Do not use del for a final number.       *)",
+      "affected_inputs": [
+        "Fhats/Hgq_v3/s09_fhats/F1hat_del.m",
+        "Fhats/Hgq_v3/s09_fhats/F2hat_del.m"
+      ],
+      "required_resolution": "Identify a corrected, accepted upstream artifact or resolve the originating finite-delta scheme issue before numerical consumption.",
+      "effect": "The full six-channel NLO cross section and its requested theory/data plots cannot be produced from this input set."
+    }
+  ],
+  "user_override": {
+    "instruction": "ignore that warning, and proceed. DO EVERYTHING AUTOMATICALLY. NEVER ASK ME FOR PERMISSION",
+    "scope": "Use the supplied Hgq_v3 delta components without empirical alteration; retain the producer caveat as provenance."
+  },
+  "scope": "Input transport and explicit producer restrictions only; no independent mathematical acceptance.",
+  "convolution_authorized_by_this_gate": true,
+  "cross_section_evaluated": false,
+  "remaining_consumer_requirements": [
+    "Resolve every integrity blocker before consuming a dependent coefficient; the documented producer restriction is explicitly overridden by the user.",
+    "Use the original Fig. 3 MRST02 NLO PDF and both KKP/Kretzer NLO fragmentation choices with the documented common scale prescription.",
+    "Derive and check each channel's order coverage, flavor/charge weights, normalized distribution action and observable maps inside the calculation tool.",
+    "Include required Born contributions for the complete NLO observable.",
+    "Implement the documented H1 cuts and bin integration; verify numerical convergence before final plots."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+	"Status":"Complete",
+	"Channel":"Hgg_v2",
+	"InputSHA256":"85a5cd93f6fda886884f1de799a71081fe96933a5172894613f69e6f0e1c5d58",
+	"Checks":{
+		"pole_residues_zero":true,
+		"regular_only":true,
+		"positive_rho_branch":true,
+		"partonic_variables":true,
+		"finite_coefficients":true
+	},
+	"JacobianAlreadyIncluded":false,
+	"NLOAlphaDegree":2,
+	"RhoSquared":"(s^2 + 2*s*t + t^2 + 4*Q2*w)\/4",
+	"HatVariableRules":"{s -> Q2*(-1 + xh^(-1)), t -> -Q2 + (Q2 - qT2)*zh, w -> (Q2 - Q2*xh - Q2*zh + Q2*xh*zh - qT2*xh*zh)\/xh}",
+	"ChargeParameter":"chargeSum",
+	"ChargeParameterDegree":1
+}

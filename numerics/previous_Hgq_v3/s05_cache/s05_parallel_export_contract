@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "calculation_body_unchanged": true
+  },
+  "workers": [
+    {
+      "script": "s05_cache/s05_export_Hgq_F2_1.wl",
+      "source_sha256": "e8c87ac0ce86e85fa12225853596168d380aae94195902b680416e388e276e5b",
+      "base_sha256": "f2bc099db772795e02e8f3ea3ab2bdd0e2efe073ece309dcc8b3cbd73989d5c2",
+      "changes_only_root_output_and_iteration_selection": true,
+      "channel": "Hgq_v3",
+      "hat": "F2hat",
+      "branch": 1,
+      "result_directory": "s05_cache/s05_worker_Hgq_F2_1"
+    },
+    {
+      "script": "s05_cache/s05_export_Hgq_F2_m1.wl",
+      "source_sha256": "3cec6e4e005f7f758e5786172a7a99164a6dd4be8981067ddc839691795a3cc3",
+      "base_sha256": "f2bc099db772795e02e8f3ea3ab2bdd0e2efe073ece309dcc8b3cbd73989d5c2",
+      "changes_only_root_output_and_iteration_selection": true,
+      "channel": "Hgq_v3",
+      "hat": "F2hat",
+      "branch": -1,
+      "result_directory": "s05_cache/s05_worker_Hgq_F2_m1"
+    }
+  ]
+}

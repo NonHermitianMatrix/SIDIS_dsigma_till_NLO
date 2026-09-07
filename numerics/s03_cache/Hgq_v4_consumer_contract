@@ -1,0 +1,22 @@
+{
+	"Status":"Complete",
+	"InputSHA256":"575ea96993eb9a86cfeddb6e10d61c0147e3bf74d35bc25eaf3dbb03fceb9bfe",
+	"Checks":{
+		"source_hash":true,
+		"regulator_cancellation":true,
+		"pole_acceptance":true,
+		"pole_input_identity":true,
+		"all_pole_residues_zero":true
+	},
+	"PlusDefinition":"\"Ln=[Log[s23\/B]^n\/s23]_+ on [0,B]\"",
+	"PlusLogArgument":"ss\/B",
+	"NormalizedPlusLogarithm":true,
+	"BranchCoordinates":"<|1 -> omega -> s + t, -1 -> omega -> -s - t|>",
+	"BranchDomains":"<|1 -> s + t > 0, -1 -> s + t < 0|>",
+	"CoordinateBoundaryPresent":true,
+	"ChargeDegree":2,
+	"LOAlphaDegree":1,
+	"NLOAlphaDegree":2,
+	"JacobianAlreadyIncluded":false,
+	"PartonicVariableGate":true
+}

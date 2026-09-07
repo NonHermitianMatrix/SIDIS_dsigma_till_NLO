@@ -1,0 +1,66 @@
+{
+  "stage": "s05_json_serialization",
+  "checks": {
+    "numeric_values_unchanged": true,
+    "quoted_expressions_unchanged": true
+  },
+  "files": [
+    {
+      "path": "s05_cache/Hgq_v3_F1hat_Delta_1.json",
+      "before_sha256": "bb00dee9890751daf3d4ce82d6f809a0a96295897e32c440a6f1de4afea45329",
+      "after_sha256": "00ddfea9e0e2b298843877adab4e5f333e3f40cb067657a8f76f07357a813d8f",
+      "archive": "s05_cache/pre_json_serialization/bb00dee9890751daf3d4ce82d6f809a0a96295897e32c440a6f1de4afea45329_Hgq_v3_F1hat_Delta_1.json",
+      "changes": [
+        {
+          "original": "0.e-101",
+          "standard_json": "0.0e-101",
+          "numeric_equality": true
+        },
+        {
+          "original": "0.e-101",
+          "standard_json": "0.0e-101",
+          "numeric_equality": true
+        }
+      ],
+      "quoted_expressions_unchanged": true
+    },
+    {
+      "path": "s05_cache/s05_worker_Hgq_F2_1/Hgq_v3_F2hat_Delta_1.json",
+      "before_sha256": "80a6d37ea955817985bdc7bb6b1b5b29011fa1cd3c31f7f9de2123404e4d27ea",
+      "after_sha256": "174f3d3eb74e4210aeb9dd220f0a7406c6815f986fddaa2e06a90378e9959f15",
+      "archive": "s05_cache/pre_json_serialization/80a6d37ea955817985bdc7bb6b1b5b29011fa1cd3c31f7f9de2123404e4d27ea_Hgq_v3_F2hat_Delta_1.json",
+      "changes": [
+        {
+          "original": "0.e-104",
+          "standard_json": "0.0e-104",
+          "numeric_equality": true
+        },
+        {
+          "original": "0.e-104",
+          "standard_json": "0.0e-104",
+          "numeric_equality": true
+        }
+      ],
+      "quoted_expressions_unchanged": true
+    },
+    {
+      "path": "s05_cache/s05_worker_Hgq_F2_1/Hgq_v3_result",
+      "before_sha256": "602ff25aea3b1b7c9f2798e5da61bc0aa44ce938e1aefba3134f36e18f817c87",
+      "after_sha256": "1b3d43be349a0f17c54a2eb27e4eb9e56c016d937a03a49af222a74ab9bfeabc",
+      "archive": "s05_cache/pre_json_serialization/602ff25aea3b1b7c9f2798e5da61bc0aa44ce938e1aefba3134f36e18f817c87_Hgq_v3_result",
+      "changes": [
+        {
+          "original": "0.e-104",
+          "standard_json": "0.0e-104",
+          "numeric_equality": true
+        },
+        {
+          "original": "0.e-104",
+          "standard_json": "0.0e-104",
+          "numeric_equality": true
+        }
+      ],
+      "quoted_expressions_unchanged": true
+    }
+  ]
+}

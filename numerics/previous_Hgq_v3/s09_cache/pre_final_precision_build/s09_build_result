@@ -1,0 +1,179 @@
+{
+  "stage": "s09",
+  "status": "IntegrandBuilt",
+  "producer_sha256": "10edec975eddbe4524582cc9f01c6b53847a8dd539bbb9d485dfd71c8ffbcc62",
+  "input_hashes": {
+    "s02_result": "02ee49c802a3369ecbbef039e3e6733547b45d7ed8e53386824949038e002c6a",
+    "s04_result": "21fa5978d6ae2f7daf8ab600585c63e67622a68682b2a30e48575c2e31620358",
+    "s06_result": "dc886e96521d95d0c29ecac780425ec5a7406f3d5833d176a2529441a1c7fcc9",
+    "s07_result": "b089b2e3f21221f87ac3835a3df93ed0c0b79e112d31e0fa87a2fee398b58dc0",
+    "s08_result": "929a3ebea2c41f0b81258b6bb99563d554224e67ce71bb2c2dc7fbb9d89e3cf0",
+    "dsigmapibydpt/s01_result": "4f3406d3dc88bb71292cdbc1132f6309cce6442cb4b64509f0d3c218fe84c421"
+  },
+  "native_source_sha256": "ebce03dcb2c1b72729af086a2859290f2d98c0fbee8b35eb07d95ce7a64eb13d",
+  "native_library_sha256": "dd487f0cdb073328f3ab163317df054ca9960aab032f4ebb86b782f19b25fb31",
+  "pdf_map": {
+    "f0": "r7/xi",
+    "f1": "(r0 + r2)/xi",
+    "f2": "r2/xi",
+    "f3": "(r1 + r3)/xi",
+    "f4": "r3/xi",
+    "f5": "r4/xi",
+    "f6": "r4/xi",
+    "f7": "r5/xi",
+    "f8": "r5/xi",
+    "f9": "r6/xi",
+    "f10": "r6/xi"
+  },
+  "neutral_sum": "Dsum/2",
+  "transforms": {
+    "linear": {
+      "expression": "coordinate*(-lower + upper) + lower",
+      "jacobian": "-lower + upper"
+    },
+    "logarithmic": {
+      "expression": "lower*exp(coordinate*log(upper/lower))",
+      "jacobian": "lower*exp(coordinate*log(upper/lower))*log(upper/lower)"
+    }
+  },
+  "channels": [
+    "Hqq_v2",
+    "Hgg",
+    "Hqqbar",
+    "Hqqprime",
+    "Hgq_v3",
+    "Hqg_v3"
+  ],
+  "FFs": [
+    "KKP",
+    "Kretzer"
+  ],
+  "numerical_zero_policy": "Only exact cut rejection and absent LO/interference sectors return zero; native failures raise.",
+  "components": [
+    {
+      "FF": "KKP",
+      "channel": "Hqq_v2",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqq_v2",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hgg",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hgg",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqqbar",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqqbar",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqqprime",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqqprime",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hgq_v3",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hgq_v3",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqg_v3",
+      "order": "LO"
+    },
+    {
+      "FF": "KKP",
+      "channel": "Hqg_v3",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqq_v2",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqq_v2",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hgg",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hgg",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqqbar",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqqbar",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqqprime",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqqprime",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hgq_v3",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hgq_v3",
+      "order": "NLO_correction"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqg_v3",
+      "order": "LO"
+    },
+    {
+      "FF": "Kretzer",
+      "channel": "Hqg_v3",
+      "order": "NLO_correction"
+    }
+  ],
+  "caveats": [
+    "uniform, as the authoritative F1/F2 calculation omits azimuth-dependent terms",
+    "Supplied Hgq_v3 finite-delta residue retained under the explicit user override.",
+    "Central common scale only; errors are integration errors, not theoretical uncertainty."
+  ]
+}

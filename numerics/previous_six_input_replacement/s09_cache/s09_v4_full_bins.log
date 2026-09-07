@@ -1,0 +1,121 @@
+V4_FINAL_STAGE ['/home/physics/miniforge3/bin/python', '-u', 'scripts/numerics/s09_convolve_channels.py', '--mode', 'integrate', '--bins', 'q0_p3', 'q1_p2', '--neval', '1000', '--nitn', '8', '--workers', '2', '--refinements', '3']
+S09_BIN_START q1_p2 seed 108541502 neval 1000 nitn 8
+S09_BIN_START q0_p3 seed 2362081159 neval 1000 nitn 8
+S09_EVALUATIONS 1666534 608 accepted 207
+S09_EVALUATIONS 1666533 577 accepted 209
+S09_EVALUATIONS 1666534 977 accepted 415
+S09_EVALUATIONS 1666533 918 accepted 416
+S09_EVALUATIONS 1666534 1234 accepted 615
+S09_EVALUATIONS 1666533 1231 accepted 617
+S09_WARMUP q0_p3 0 [25.1(1.6) 16.8(1.0)]
+S09_WARMUP q1_p2 0 [34.9(2.1) 25.9(1.5)]
+S09_EVALUATIONS 1666534 1489 accepted 812
+S09_EVALUATIONS 1666533 1524 accepted 816
+S09_EVALUATIONS 1666534 1791 accepted 1007
+S09_EVALUATIONS 1666533 1826 accepted 1009
+S09_EVALUATIONS 1666534 2044 accepted 1194
+S09_EVALUATIONS 1666533 2091 accepted 1198
+S09_EVALUATIONS 1666534 2296 accepted 1389
+S09_EVALUATIONS 1666533 2348 accepted 1391
+S09_EVALUATIONS 1666534 2553 accepted 1584
+S09_EVALUATIONS 1666533 2630 accepted 1588
+S09_EVALUATIONS 1666534 2815 accepted 1777
+S09_EVALUATIONS 1666533 2908 accepted 1780
+S09_EVALUATIONS 1666534 3105 accepted 1973
+S09_EVALUATIONS 1666533 3163 accepted 1973
+S09_EVALUATIONS 1666534 3377 accepted 2172
+S09_EVALUATIONS 1666533 3431 accepted 2174
+S09_EVALUATIONS 1666534 3641 accepted 2371
+S09_EVALUATIONS 1666533 3719 accepted 2373
+S09_EVALUATIONS 1666534 3958 accepted 2576
+S09_EVALUATIONS 1666533 3993 accepted 2580
+S09_EVALUATIONS 1666534 4221 accepted 2764
+S09_EVALUATIONS 1666533 4254 accepted 2772
+S09_EVALUATIONS 1666534 4479 accepted 2954
+S09_EVALUATIONS 1666533 4513 accepted 2962
+S09_EVALUATIONS 1666534 4773 accepted 3159
+S09_EVALUATIONS 1666533 4848 accepted 3168
+S09_EVALUATIONS 1666534 5060 accepted 3359
+S09_EVALUATIONS 1666533 5119 accepted 3371
+S09_EVALUATIONS 1666534 5312 accepted 3555
+S09_EVALUATIONS 1666533 5376 accepted 3565
+S09_EVALUATIONS 1666534 5570 accepted 3754
+S09_EVALUATIONS 1666533 5705 accepted 3766
+S09_EVALUATIONS 1666534 5862 accepted 3955
+S09_EVALUATIONS 1666533 5975 accepted 3970
+S09_EVALUATIONS 1666534 6160 accepted 4156
+S09_EVALUATIONS 1666533 6257 accepted 4170
+S09_EVALUATIONS 1666534 6426 accepted 4343
+S09_EVALUATIONS 1666533 6548 accepted 4360
+S09_EVALUATIONS 1666534 6667 accepted 4527
+S09_EVALUATIONS 1666533 6801 accepted 4544
+S09_EVALUATIONS 1666534 6949 accepted 4713
+S09_EVALUATIONS 1666533 7062 accepted 4732
+S09_EVALUATIONS 1666534 7218 accepted 4896
+S09_EVALUATIONS 1666533 7310 accepted 4919
+S09_EVALUATIONS 1666534 7490 accepted 5086
+S09_EVALUATIONS 1666533 7608 accepted 5111
+S09_EVALUATIONS 1666534 7761 accepted 5284
+S09_EVALUATIONS 1666533 7881 accepted 5309
+S09_EVALUATIONS 1666534 8056 accepted 5479
+S09_EVALUATIONS 1666533 8150 accepted 5505
+S09_BIN_LEVEL q0_p3 0 [23.612347450638612, 16.132701185997888] errors [0.5138098187413968, 0.46692006937635405] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q0_p3 [23.612347450638612, 16.132701185997888] errors [0.5138098187413968, 0.46692006937635405]
+S09_BIN_LEVEL q1_p2 0 [58.84219867263491, 41.56496577035365] errors [1.8782251683241138, 1.8538318241992513] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q1_p2 [58.84219867263491, 41.56496577035365] errors [1.8782251683241138, 1.8538318241992513]
+V4_FINAL_STAGE_COMPLETE scripts/numerics/s09_convolve_channels.py
+V4_FINAL_STAGE ['/home/physics/miniforge3/bin/python', '-u', 'scripts/numerics/s11_aggregate_replacement.py']
+{
+  "stage": "s11",
+  "status": "Complete",
+  "producer_sha256": "2a9e5bcb305b819fb8dc7c6fcf4c13ef241ea2da92afdcd4802007487fb41f1f",
+  "inputs": {
+    "s09_cache/q0_p0_result": "0592f2ec60f3ffa099bb95dc4c53229d4722f1d3df206296f704a0ae1006e400",
+    "s09_cache/q0_p1_result": "357088b5718620751e3d9ad0cae75ec9d20a57a5fd39661a103ed47641cf6728",
+    "s09_cache/q0_p2_result": "379e7a79239ed230d725c12715249f7987d4905e2874f38a27a99f46607bf3a7",
+    "s09_cache/q0_p3_result": "b97969791cd783b1db94dcfd8e21e98f98ad950f9a856b5c42d89e5cfc0a8a1c",
+    "s09_cache/q0_p4_result": "b47ac0f6732d650811cf8d010d9e8bdd4e677bf17e7421164a27050592182ea8",
+    "s09_cache/q0_p5_result": "0efb91c39d2c23cd90a7ec7d6bc716c377fcf2dec404a989195c79df18c2e409",
+    "s09_cache/q1_p0_result": "559bce3012642a2a990c637e0310d4989691776642bcc96aba25ea1eb918e71c",
+    "s09_cache/q1_p1_result": "0682c216ec87e8acc8a93cdba358d2c25132ca2aee83e3cd864aafe2cdf5ff99",
+    "s09_cache/q1_p2_result": "76e29b2644b8e4678748668f6e5222f25b05e21f47e5bc43dc60d83bf046f800",
+    "s09_cache/q1_p3_result": "6ca968cda84e99e183f2a9c7af312db534c446d4ca9323122a100e1f07f4dd15",
+    "s09_cache/q1_p4_result": "2c8cd1ed0cdc15791e3532eaa62f9fe1913b1fec8f43b48555cf6a3229c33ca4",
+    "s09_cache/q1_p5_result": "fcce0d9acf76b0708070a33d389f804b46ae504b23f955b4f54aeeaff718caa8",
+    "s09_cache/q2_p0_result": "49a4f506f5a0341e9c64ff277dca8343d4c376949aa4f9e4c4c4d7eeee51c7cb",
+    "s09_cache/q2_p1_result": "ef20656d9693c87bd2fa99e7038f30a595db3facde86af39c3fc4cd044e30a09",
+    "s09_cache/q2_p2_result": "573e4524b6e584d48589baded355191439b76730ac5990f4a2c742d37c422cd9",
+    "s09_cache/q2_p3_result": "2c4c9bf23f5911a9775b7ccde7e80722dc1e517d972f9363a393571784204cc9",
+    "s09_cache/q2_p4_result": "4408ea728242ba47a2932ed982832dd658e4ff0572ed4eea52099c5e26985b3d",
+    "s09_cache/s09_build_result": "f5f9f3d903579fa082eb3b69745b282beee917b1f27ce4edc431795e81c1e251",
+    "s09_cache/s09_preserved_bins_receipt": "416b7366a5e66c29d7c77b5ac2b1ea5cf75f361afec4eb3aab07fce200c84b66",
+    "s09_cache/s09_reuse_result": "31f19da2322242862edd9f6a0c845153d59d1b070cd456a3380ef0c758dfed81"
+  },
+  "checks": {
+    "complete_bin_coverage": true,
+    "preserved_bin_identity": true,
+    "full_bin_fallbacks": true,
+    "convergence_gates": true,
+    "component_sums": true,
+    "covariance_errors": true,
+    "distinct_bin_seeds": true
+  },
+  "output": "s09_result",
+  "output_sha256": "872f98c70e9b860387ed72bf61fad3013e986a599c5234ae6d154f5896cb2c17",
+  "FFs": [
+    "KKP",
+    "Kretzer"
+  ],
+  "total_sigma_pb": [
+    561.6893737712982,
+    410.77121829578795
+  ],
+  "total_sigma_error_pb": [
+    2.965470900777951,
+    2.438470634180597
+  ]
+}
+V4_FINAL_STAGE_COMPLETE scripts/numerics/s11_aggregate_replacement.py
+V4_FINAL_STAGE ['/home/physics/miniforge3/bin/python', '-u', 'scripts/numerics/dsigmapibydpt/s03_plot_comparison.py']
+V4_FINAL_STAGE_COMPLETE scripts/numerics/dsigmapibydpt/s03_plot_comparison.py
+V4_FINAL_PIPELINE_COMPLETE

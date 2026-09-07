@@ -1,0 +1,19 @@
+[
+  {
+    "expressions": {
+      "PHT2": "(BB - sh)**2*(Q2*s23 + sh*th)*(-Q2 + s23 - sh - th)/((Q2 + sh)**2*(s23 - sh)**2)",
+      "zH": "-(BB - sh)*(-Q2 + s23 - sh - th)/((Q2 + sh)*(s23 - sh))",
+      "xh": "Q2/(Q2 + sh)"
+    },
+    "wolfram": {
+      "PHT2": "(B - s)^2*(Q2*ss + s*t)*(-Q2 - s + ss - t)/((Q2 + s)^2*(-s + ss)^2)",
+      "zH": "-(B - s)*(-Q2 - s + ss - t)/((Q2 + s)*(-s + ss))",
+      "xh": "Q2/(Q2 + s)"
+    },
+    "checks": {
+      "s": true,
+      "t": true,
+      "B": true
+    }
+  }
+]

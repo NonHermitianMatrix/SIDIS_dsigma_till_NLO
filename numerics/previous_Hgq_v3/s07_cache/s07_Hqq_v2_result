@@ -1,0 +1,5495 @@
+{
+  "stage": "s07",
+  "status": "Complete",
+  "producer_sha256": "ddb3dc219653612187bd26a682cc040c0ce6973657ba267a1e630f65b776d4b9",
+  "channels": [
+    "Hqq_v2"
+  ],
+  "library": "s07_cache/s07_evaluator.so",
+  "library_sha256": "71e2534daba51eea619fb0fe27e583648bb17f868b2f2d759d651b69b2d50aad",
+  "functions": [
+    {
+      "Name": "Hqq_v2_F1Hat_LODelta_1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_LODelta",
+      "Branch": 1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 0,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_LODelta_1.dat",
+      "ProgramSHA256": "6b722bcb5e230038ae948aeebdec122af6de68dd77f86d40be68c03c5a1a2bcf",
+      "OperationCount": 89,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_Delta_1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_Delta",
+      "Branch": 1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 1,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_Delta_1.dat",
+      "ProgramSHA256": "412b3c91843885c1cf61e0d7c908807853259924306febf914e645c190c19433",
+      "OperationCount": 1769,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_L0_1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_L0",
+      "Branch": 1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 2,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_L0_1.dat",
+      "ProgramSHA256": "fcf18e1f3dfb4b46552b419b035606687eef4f4c8af06e09e6bab55269dc3728",
+      "OperationCount": 177,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_L1_1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_L1",
+      "Branch": 1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 3,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_L1_1.dat",
+      "ProgramSHA256": "7fd8e52502f4bda4ddc3386ce88f1121712d84e846a5574da4d5ed18431c54e2",
+      "OperationCount": 92,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_Regular_1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_Regular",
+      "Branch": 1,
+      "Endpoint": false,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 4,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_Regular_1.dat",
+      "ProgramSHA256": "f6b58e4d40aa9ed55e5e452042b3b4aa3d7dd9f1bada125f5826df52a3f4a5ca",
+      "OperationCount": 425910,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_LODelta_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_LODelta",
+      "Branch": -1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 5,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_LODelta_m1.dat",
+      "ProgramSHA256": "6b722bcb5e230038ae948aeebdec122af6de68dd77f86d40be68c03c5a1a2bcf",
+      "OperationCount": 89,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_Delta_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_Delta",
+      "Branch": -1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 6,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_Delta_m1.dat",
+      "ProgramSHA256": "7368d3fd7b48bf67b80492a12d1b4de4de2c6ab243fd3c1b8e9fc8392c1e7652",
+      "OperationCount": 1771,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_L0_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_L0",
+      "Branch": -1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 7,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_L0_m1.dat",
+      "ProgramSHA256": "fcf18e1f3dfb4b46552b419b035606687eef4f4c8af06e09e6bab55269dc3728",
+      "OperationCount": 177,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_L1_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_L1",
+      "Branch": -1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 8,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_L1_m1.dat",
+      "ProgramSHA256": "7fd8e52502f4bda4ddc3386ce88f1121712d84e846a5574da4d5ed18431c54e2",
+      "OperationCount": 92,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F1Hat_Regular_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F1Hat_Regular",
+      "Branch": -1,
+      "Endpoint": false,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 9,
+      "Program": "s07_cache/s07_Hqq_v2_F1Hat_Regular_m1.dat",
+      "ProgramSHA256": "0b4c14cdc5471003371263a840bdad6c2860ea18ebbd02b84e87b35c2f9f40d8",
+      "OperationCount": 425911,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_LODelta_1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_LODelta",
+      "Branch": 1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 10,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_LODelta_1.dat",
+      "ProgramSHA256": "c5f041e632ce3d2291efa6befb2a0faf9923551ed7281baa89f57f887494d197",
+      "OperationCount": 98,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_Delta_1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_Delta",
+      "Branch": 1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 11,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_Delta_1.dat",
+      "ProgramSHA256": "2d4d781b1235fd39d19d4eed9f5f7d9804b6340f82470dd3594ea738d79acc2a",
+      "OperationCount": 1827,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_L0_1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_L0",
+      "Branch": 1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 12,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_L0_1.dat",
+      "ProgramSHA256": "3067a8659c01fa5173cadda653d50d970deaae7ff8e1dbc17987e60cf8add10e",
+      "OperationCount": 188,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_L1_1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_L1",
+      "Branch": 1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 13,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_L1_1.dat",
+      "ProgramSHA256": "2509066433901be4a402f954c7e27237b5bc1197b40e5c424e662855daba3479",
+      "OperationCount": 100,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_Regular_1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_Regular",
+      "Branch": 1,
+      "Endpoint": false,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 14,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_Regular_1.dat",
+      "ProgramSHA256": "3e540669c76a0f2c6d8f7b969e6dfa0109788261cbffdfcad51bb7d55d69d76a",
+      "OperationCount": 425911,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_LODelta_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_LODelta",
+      "Branch": -1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 15,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_LODelta_m1.dat",
+      "ProgramSHA256": "c5f041e632ce3d2291efa6befb2a0faf9923551ed7281baa89f57f887494d197",
+      "OperationCount": 98,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_Delta_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_Delta",
+      "Branch": -1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 16,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_Delta_m1.dat",
+      "ProgramSHA256": "4b2c7a405ca2e7b37498a08f6a1a9246d91a1851248138d7024637bb6e129b1e",
+      "OperationCount": 1828,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_L0_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_L0",
+      "Branch": -1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 17,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_L0_m1.dat",
+      "ProgramSHA256": "3067a8659c01fa5173cadda653d50d970deaae7ff8e1dbc17987e60cf8add10e",
+      "OperationCount": 188,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_L1_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_L1",
+      "Branch": -1,
+      "Endpoint": true,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 18,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_L1_m1.dat",
+      "ProgramSHA256": "2509066433901be4a402f954c7e27237b5bc1197b40e5c424e662855daba3479",
+      "OperationCount": 100,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    },
+    {
+      "Name": "Hqq_v2_F2Hat_Regular_m1",
+      "Channel": "Hqq_v2",
+      "Label": "F2Hat_Regular",
+      "Branch": -1,
+      "Endpoint": false,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Arguments": [
+        "Q2",
+        "s",
+        "t",
+        "ss",
+        "B",
+        "mu2",
+        "xh",
+        "zH",
+        "PHT2",
+        "xB",
+        "xi",
+        "as",
+        "cq",
+        "co",
+        "ns",
+        "no",
+        "nf",
+        "csum",
+        "omega"
+      ],
+      "Index": 19,
+      "Program": "s07_cache/s07_Hqq_v2_F2Hat_Regular_m1.dat",
+      "ProgramSHA256": "61f48fff3985394d3d525b78a15dd5f667453991b11de09d364a7a76c71c2de1",
+      "OperationCount": 425913,
+      "S05ProducerSHA256": "e0dafdbdd6df10051fdf5915f3e7aadb455a50c7de16c089348b2b966d4dcfaa"
+    }
+  ],
+  "bundles": [
+    {
+      "Name": "Hqq_v2_LODelta_1",
+      "Channel": "Hqq_v2",
+      "Label": "LODelta",
+      "Branch": 1,
+      "Index": 20,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_LODelta_1.dat",
+      "ProgramSHA256": "ee52185c13e2e913a215efb4cd074ecd16894de2c15d3665b66c930b6569075f",
+      "OperationCount": 110
+    },
+    {
+      "Name": "Hqq_v2_Delta_1",
+      "Channel": "Hqq_v2",
+      "Label": "Delta",
+      "Branch": 1,
+      "Index": 21,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_Delta_1.dat",
+      "ProgramSHA256": "dcf5e66b53cf1906ec72ec24eec04fb0b348776cb8573748a9be6caa2022e925",
+      "OperationCount": 2838
+    },
+    {
+      "Name": "Hqq_v2_L0_1",
+      "Channel": "Hqq_v2",
+      "Label": "L0",
+      "Branch": 1,
+      "Index": 22,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_L0_1.dat",
+      "ProgramSHA256": "fa57aee11513571305a381d93c3e5eb7b6903909c448c099fee3f3f1bc411232",
+      "OperationCount": 262
+    },
+    {
+      "Name": "Hqq_v2_L1_1",
+      "Channel": "Hqq_v2",
+      "Label": "L1",
+      "Branch": 1,
+      "Index": 23,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_L1_1.dat",
+      "ProgramSHA256": "385c39800ca53b804d46158d2f572be13e9abc9a6727fde215203486050a8f7d",
+      "OperationCount": 113
+    },
+    {
+      "Name": "Hqq_v2_Regular_1",
+      "Channel": "Hqq_v2",
+      "Label": "Regular",
+      "Branch": 1,
+      "Index": 24,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_Regular_1.dat",
+      "ProgramSHA256": "2279f4ed9bed98c7eb72cd1e13d978fd5e8b893f4bb8e643b5f5f65745dd639c",
+      "OperationCount": 426401
+    },
+    {
+      "Name": "Hqq_v2_LODelta_m1",
+      "Channel": "Hqq_v2",
+      "Label": "LODelta",
+      "Branch": -1,
+      "Index": 25,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_LODelta_m1.dat",
+      "ProgramSHA256": "ee52185c13e2e913a215efb4cd074ecd16894de2c15d3665b66c930b6569075f",
+      "OperationCount": 110
+    },
+    {
+      "Name": "Hqq_v2_Delta_m1",
+      "Channel": "Hqq_v2",
+      "Label": "Delta",
+      "Branch": -1,
+      "Index": 26,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_Delta_m1.dat",
+      "ProgramSHA256": "7f982da2348d20d73a03ef935c7926930d9bcd722a01dc5c193256865b1a3412",
+      "OperationCount": 2841
+    },
+    {
+      "Name": "Hqq_v2_L0_m1",
+      "Channel": "Hqq_v2",
+      "Label": "L0",
+      "Branch": -1,
+      "Index": 27,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_L0_m1.dat",
+      "ProgramSHA256": "fa57aee11513571305a381d93c3e5eb7b6903909c448c099fee3f3f1bc411232",
+      "OperationCount": 262
+    },
+    {
+      "Name": "Hqq_v2_L1_m1",
+      "Channel": "Hqq_v2",
+      "Label": "L1",
+      "Branch": -1,
+      "Index": 28,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_L1_m1.dat",
+      "ProgramSHA256": "385c39800ca53b804d46158d2f572be13e9abc9a6727fde215203486050a8f7d",
+      "OperationCount": 113
+    },
+    {
+      "Name": "Hqq_v2_Regular_m1",
+      "Channel": "Hqq_v2",
+      "Label": "Regular",
+      "Branch": -1,
+      "Index": 29,
+      "ChargeCase": "A",
+      "JacobianAlreadyIncluded": false,
+      "Program": "s07_cache/s07_pair_Hqq_v2_Regular_m1.dat",
+      "ProgramSHA256": "c27967693e3374831f63b0f70b1f8e45d3ab6b2bd5d4337ba86a34f0fed80cdd",
+      "OperationCount": 426402
+    }
+  ],
+  "checks": [
+    {
+      "name": "Hqq_v2_F1Hat_LODelta_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.21703476659170035,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.21703476659170037,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_LODelta_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.21703476659170035,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.21703476659170037,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_LODelta_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -4482.781206110112,
+        0.0,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.006792404255397114
+      ],
+      "native": [
+        0.02402558558227275,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.02402558558227275,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_LODelta_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -5383.398599199585,
+        0.0,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        182.30187807139936
+      ],
+      "native": [
+        0.024031310069294595,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.024031310069294595,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_LODelta_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2226.513628523414,
+        0.0,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1652.3752154480392
+      ],
+      "native": [
+        0.02783490970892197,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.02783490970892197,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Delta_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.0820163442698316,
+        -0.03677708968376353,
+        0.0
+      ],
+      "wolfram": [
+        0.0820163442698316,
+        -0.03677708968376353
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Delta_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.0820163442698316,
+        -0.03677708968376353,
+        0.0
+      ],
+      "wolfram": [
+        0.0820163442698316,
+        -0.03677708968376353
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Delta_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -4482.781206110112,
+        0.0,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.006792404255397114
+      ],
+      "native": [
+        -0.013794527672516576,
+        -0.005876851266095163,
+        0.0
+      ],
+      "wolfram": [
+        -0.013794527672516575,
+        -0.005876851266095164
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Delta_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -5383.398599199585,
+        0.0,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        182.30187807139936
+      ],
+      "native": [
+        -0.0036239485145971944,
+        0.005091697187239321,
+        0.0
+      ],
+      "wolfram": [
+        -0.0036239485145971896,
+        0.00509169718723932
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Delta_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2226.513628523414,
+        0.0,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1652.3752154480392
+      ],
+      "native": [
+        0.014974832680600535,
+        0.004189386615689367,
+        0.0
+      ],
+      "wolfram": [
+        0.014974832680600542,
+        0.0041893866156893665
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.03557915846967612,
+        -0.06511042997751011,
+        0.0
+      ],
+      "wolfram": [
+        0.03557915846967611,
+        -0.06511042997751011
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -6.32550052279381,
+        4.136945652173913,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        21.76145599894532
+      ],
+      "native": [
+        0.026332041675656663,
+        -0.045866201834627446,
+        0.0
+      ],
+      "wolfram": [
+        0.02633204167565666,
+        -0.045866201834627446
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.03557915846967612,
+        -0.06511042997751011,
+        0.0
+      ],
+      "wolfram": [
+        0.03557915846967611,
+        -0.06511042997751011
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -8.906866945490032,
+        9.92866956521739,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        19.1800895762491
+      ],
+      "native": [
+        0.019541535852506987,
+        -0.032397061299378103,
+        0.0
+      ],
+      "wolfram": [
+        0.019541535852506987,
+        -0.032397061299378103
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -4482.781206110112,
+        0.0,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.006792404255397114
+      ],
+      "native": [
+        0.0038909759399811767,
+        -0.007207675674681825,
+        0.0
+      ],
+      "wolfram": [
+        0.003890975939981174,
+        -0.007207675674681825
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -3439.0920285247566,
+        1058.034980114846,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1043.6959699896106
+      ],
+      "native": [
+        0.0023743200790933543,
+        -0.007514404542311022,
+        0.0
+      ],
+      "wolfram": [
+        0.0023743200790933543,
+        -0.007514404542311022
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -846.0233871696115,
+        15.072528964739888,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        14.952536566039035
+      ],
+      "native": [
+        0.009966465158175378,
+        -0.007208967432039886,
+        0.0
+      ],
+      "wolfram": [
+        0.009966465158175378,
+        -0.007208967432039886
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -5383.398599199585,
+        0.0,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        182.30187807139936
+      ],
+      "native": [
+        0.01148203723949618,
+        -0.0072093930207883785,
+        0.0
+      ],
+      "wolfram": [
+        0.01148203723949618,
+        -0.0072093930207883785
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -2471.3923347105274,
+        3012.749609972603,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        3094.308142560457
+      ],
+      "native": [
+        0.013013981111731458,
+        -0.009721672690999947,
+        0.0
+      ],
+      "wolfram": [
+        0.013013981111731458,
+        -0.009721672690999947
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2226.513628523414,
+        0.0,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1652.3752154480392
+      ],
+      "native": [
+        0.011800297637220906,
+        -0.008350472912676592,
+        0.0
+      ],
+      "wolfram": [
+        0.011800297637220906,
+        -0.008350472912676592
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2175.48179653855,
+        89.02387797728204,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1703.4070474329028
+      ],
+      "native": [
+        0.011909780378991293,
+        -0.008450599821814913,
+        0.0
+      ],
+      "wolfram": [
+        0.011909780378991293,
+        -0.008450599821814913
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.0322393455308072,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.0322393455308072,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -6.32550052279381,
+        4.136945652173913,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        21.76145599894532
+      ],
+      "native": [
+        0.02271059075547583,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.02271059075547583,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.0322393455308072,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.0322393455308072,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -8.906866945490032,
+        9.92866956521739,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        19.1800895762491
+      ],
+      "native": [
+        0.01604136316983563,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.01604136316983563,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -4482.781206110112,
+        0.0,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.006792404255397114
+      ],
+      "native": [
+        0.0035688713256896753,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.0035688713256896753,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -3439.0920285247566,
+        1058.034980114846,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1043.6959699896106
+      ],
+      "native": [
+        0.0037207477293808595,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.0037207477293808595,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -846.0233871696115,
+        15.072528964739888,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        14.952536566039035
+      ],
+      "native": [
+        0.0035695109376815306,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.0035695109376815306,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -5383.398599199585,
+        0.0,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        182.30187807139936
+      ],
+      "native": [
+        0.003569721667402121,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.003569721667402121,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -2471.3923347105274,
+        3012.749609972603,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        3094.308142560457
+      ],
+      "native": [
+        0.004813673709892848,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.004813673709892848,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2226.513628523414,
+        0.0,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1652.3752154480392
+      ],
+      "native": [
+        0.0041347259059787535,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.0041347259059787535,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2175.48179653855,
+        89.02387797728204,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1703.4070474329028
+      ],
+      "native": [
+        0.004184303616059259,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.004184303616059259,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Regular_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -6.32550052279381,
+        4.136945652173913,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        21.76145599894532
+      ],
+      "native": [
+        -0.009202929717444098,
+        0.011086972295738363,
+        0.0
+      ],
+      "wolfram": [
+        -0.009202929717444096,
+        0.011086972295738361
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Regular_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -8.906866945490032,
+        9.92866956521739,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        19.1800895762491
+      ],
+      "native": [
+        -0.0014719879017575537,
+        0.0032629811161077518,
+        0.0
+      ],
+      "wolfram": [
+        -0.0014719879017575533,
+        0.0032629811161077513
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Regular_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -3439.0920285247566,
+        1058.034980114846,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1043.6959699896106
+      ],
+      "native": [
+        0.0019383754253283177,
+        7.102226942908221e-06,
+        0.0
+      ],
+      "wolfram": [
+        0.0019383754253283188,
+        7.10222694290822e-06
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Regular_1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -846.0233871696115,
+        15.072528964739888,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        14.952536566039035
+      ],
+      "native": [
+        0.39053923059159995,
+        0.0004782851934737876,
+        0.0
+      ],
+      "wolfram": [
+        0.39053923059160084,
+        0.00047828519347378767
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Regular_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -2471.3923347105274,
+        3012.749609972603,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        3094.308142560457
+      ],
+      "native": [
+        0.0004525724214518288,
+        3.2268438966251672e-06,
+        0.0
+      ],
+      "wolfram": [
+        0.0004525724214518288,
+        3.226843896625167e-06
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Regular_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2175.48179653855,
+        89.02387797728204,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1703.4070474329028
+      ],
+      "native": [
+        -0.00010290366153230485,
+        9.492509216427773e-05,
+        0.0
+      ],
+      "wolfram": [
+        -0.00010290366153230486,
+        9.492509216427773e-05
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_LODelta_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        0.08057239954318096,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.08057239954318098,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_LODelta_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        0.08057239954318096,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.08057239954318098,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_LODelta_m1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -860.979440931386,
+        0.0,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.00351719573541607
+      ],
+      "native": [
+        0.024019721145104995,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.024019721145105,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Delta_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        -0.058608818343726526,
+        0.07163867174776292,
+        0.0
+      ],
+      "wolfram": [
+        -0.058608818343726526,
+        0.07163867174776292
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Delta_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        -0.058608818343726526,
+        0.07163867174776292,
+        0.0
+      ],
+      "wolfram": [
+        -0.058608818343726526,
+        0.07163867174776292
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Delta_m1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -860.979440931386,
+        0.0,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.00351719573541607
+      ],
+      "native": [
+        -0.10416018254597777,
+        0.031098139025249636,
+        0.0
+      ],
+      "wolfram": [
+        -0.10416018254597778,
+        0.031098139025249636
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        -0.003912574950411082,
+        -0.024171719862954293,
+        0.0
+      ],
+      "wolfram": [
+        -0.003912574950411082,
+        -0.024171719862954293
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.21845876048462,
+        0.29375,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.218458760484623
+      ],
+      "native": [
+        -0.0038920135351601386,
+        -0.024104614317890887,
+        0.0
+      ],
+      "wolfram": [
+        -0.003892013535160139,
+        -0.024104614317890887
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        -0.003912574950411082,
+        -0.024171719862954293,
+        0.0
+      ],
+      "wolfram": [
+        -0.003912574950411082,
+        -0.024171719862954293
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.4081780055918,
+        0.705,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.4081780055918
+      ],
+      "native": [
+        -0.0038634015475218966,
+        -0.024011280637943836,
+        0.0
+      ],
+      "wolfram": [
+        -0.003863401547521897,
+        -0.024011280637943836
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L0_m1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -860.979440931386,
+        0.0,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.00351719573541607
+      ],
+      "native": [
+        0.0105716282630978,
+        -0.007205916343531499,
+        0.0
+      ],
+      "wolfram": [
+        0.0105716282630978,
+        -0.007205916343531499
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        0.01196859595313426,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.01196859595313426,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.21845876048462,
+        0.29375,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.218458760484623
+      ],
+      "native": [
+        0.011935368728938698,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.011935368728938698,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        0.01196859595313426,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.01196859595313426,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.4081780055918,
+        0.705,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.4081780055918
+      ],
+      "native": [
+        0.01188915467754149,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.011889154677541492,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_L1_m1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -860.979440931386,
+        0.0,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.00351719573541607
+      ],
+      "native": [
+        0.003568000195136889,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.003568000195136889,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Regular_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.21845876048462,
+        0.29375,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.218458760484623
+      ],
+      "native": [
+        -0.0021156046873176764,
+        0.08205826150771366,
+        0.0
+      ],
+      "wolfram": [
+        -0.0021156046873176764,
+        0.08205826150771366
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F1Hat_Regular_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.4081780055918,
+        0.705,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.4081780055918
+      ],
+      "native": [
+        -0.0008351616283597674,
+        0.03405855409637423,
+        0.0
+      ],
+      "wolfram": [
+        -0.0008351616283597674,
+        0.03405855409637423
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_LODelta_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.1759655343190733,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.1759655343190733,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_LODelta_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.1759655343190733,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.1759655343190733,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_LODelta_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -4482.781206110112,
+        0.0,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.006792404255397114
+      ],
+      "native": [
+        0.0006429648879804921,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.0006429648879804921,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_LODelta_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -5383.398599199585,
+        0.0,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        182.30187807139936
+      ],
+      "native": [
+        3.287681846820989e-05,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        3.2876818468209895e-05,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_LODelta_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2226.513628523414,
+        0.0,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1652.3752154480392
+      ],
+      "native": [
+        4.28863987435232e-05,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        4.288639874352321e-05,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Delta_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.0678680872459651,
+        -0.03240825006806438,
+        0.0
+      ],
+      "wolfram": [
+        0.06786808724596509,
+        -0.03240825006806438
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Delta_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.0678680872459651,
+        -0.03240825006806438,
+        0.0
+      ],
+      "wolfram": [
+        0.06786808724596509,
+        -0.03240825006806438
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Delta_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -4482.781206110112,
+        0.0,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.006792404255397114
+      ],
+      "native": [
+        -0.0003691292522353721,
+        -0.00015730454053483291,
+        0.0
+      ],
+      "wolfram": [
+        -0.000369129252235372,
+        -0.00015730454053483291
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Delta_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -5383.398599199585,
+        0.0,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        182.30187807139936
+      ],
+      "native": [
+        -4.957963675030116e-06,
+        6.965682823463665e-06,
+        0.0
+      ],
+      "wolfram": [
+        -4.957963675030109e-06,
+        6.965682823463663e-06
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Delta_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2226.513628523414,
+        0.0,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1652.3752154480392
+      ],
+      "native": [
+        2.3067321217345862e-05,
+        6.448917141549712e-06,
+        0.0
+      ],
+      "wolfram": [
+        2.306732121734587e-05,
+        6.448917141549711e-06
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.02884655637922554,
+        -0.05278966029572199,
+        0.0
+      ],
+      "wolfram": [
+        0.028846556379225535,
+        -0.05278966029572199
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -6.32550052279381,
+        4.136945652173913,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        21.76145599894532
+      ],
+      "native": [
+        0.02187919846430733,
+        -0.038110061692311424,
+        0.0
+      ],
+      "wolfram": [
+        0.02187919846430733,
+        -0.038110061692311424
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.02884655637922554,
+        -0.05278966029572199,
+        0.0
+      ],
+      "wolfram": [
+        0.028846556379225535,
+        -0.05278966029572199
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -8.906866945490032,
+        9.92866956521739,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        19.1800895762491
+      ],
+      "native": [
+        0.016719435549334093,
+        -0.027718424102949325,
+        0.0
+      ],
+      "wolfram": [
+        0.01671943554933409,
+        -0.02771842410294932
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -4482.781206110112,
+        0.0,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.006792404255397114
+      ],
+      "native": [
+        0.00010412902948058459,
+        -0.00019288946639414766,
+        0.0
+      ],
+      "wolfram": [
+        0.00010412902948058452,
+        -0.00019288946639414763
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -3439.0920285247566,
+        1058.034980114846,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1043.6959699896106
+      ],
+      "native": [
+        6.39141118541536e-05,
+        -0.0002022795901292392,
+        0.0
+      ],
+      "wolfram": [
+        6.39141118541536e-05,
+        -0.0002022795901292392
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -846.0233871696115,
+        15.072528964739888,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        14.952536566039035
+      ],
+      "native": [
+        0.0001529920780418338,
+        -0.00011066259606185206,
+        0.0
+      ],
+      "wolfram": [
+        0.0001529920780418338,
+        -0.00011066259606185206
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -5383.398599199585,
+        0.0,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        182.30187807139936
+      ],
+      "native": [
+        1.5708375984481755e-05,
+        -9.863045540462969e-06,
+        0.0
+      ],
+      "wolfram": [
+        1.5708375984481755e-05,
+        -9.863045540462969e-06
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -2471.3923347105274,
+        3012.749609972603,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        3094.308142560457
+      ],
+      "native": [
+        1.7813429353420686e-05,
+        -1.330694490728105e-05,
+        0.0
+      ],
+      "wolfram": [
+        1.7813429353420686e-05,
+        -1.330694490728105e-05
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2226.513628523414,
+        0.0,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1652.3752154480392
+      ],
+      "native": [
+        1.8181207521571312e-05,
+        -1.2865919623056962e-05,
+        0.0
+      ],
+      "wolfram": [
+        1.8181207521571315e-05,
+        -1.2865919623056962e-05
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2175.48179653855,
+        89.02387797728204,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1703.4070474329028
+      ],
+      "native": [
+        1.8350085537064426e-05,
+        -1.3020326541314336e-05,
+        0.0
+      ],
+      "wolfram": [
+        1.8350085537064426e-05,
+        -1.3020326541314337e-05
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.026138732293974596,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.026138732293974596,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -6.32550052279381,
+        4.136945652173913,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        21.76145599894532
+      ],
+      "native": [
+        0.018870147955146275,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.018870147955146275,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -4.48166736372508,
+        0.0,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        23.60528915801405
+      ],
+      "native": [
+        0.026138732293974596,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.026138732293974596,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -8.906866945490032,
+        9.92866956521739,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        19.1800895762491
+      ],
+      "native": [
+        0.013724741988850417,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.013724741988850417,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -4482.781206110112,
+        0.0,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.006792404255397114
+      ],
+      "native": [
+        9.550897081284729e-05,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        9.550897081284727e-05,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -3439.0920285247566,
+        1058.034980114846,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1043.6959699896106
+      ],
+      "native": [
+        0.00010015847848430972,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.00010015847848430971,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -846.0233871696115,
+        15.072528964739888,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        14.952536566039035
+      ],
+      "native": [
+        5.479444188905701e-05,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        5.4794441889057e-05,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -5383.398599199585,
+        0.0,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        182.30187807139936
+      ],
+      "native": [
+        4.883674294193818e-06,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        4.883674294193818e-06,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -2471.3923347105274,
+        3012.749609972603,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        3094.308142560457
+      ],
+      "native": [
+        6.5889166293853845e-06,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        6.5889166293853845e-06,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2226.513628523414,
+        0.0,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1652.3752154480392
+      ],
+      "native": [
+        6.3705435280123165e-06,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        6.3705435280123165e-06,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2175.48179653855,
+        89.02387797728204,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1703.4070474329028
+      ],
+      "native": [
+        6.446997914686863e-06,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        6.446997914686864e-06,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Regular_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -6.32550052279381,
+        4.136945652173913,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        21.76145599894532
+      ],
+      "native": [
+        -0.007558698352755493,
+        0.009212125296421302,
+        0.0
+      ],
+      "wolfram": [
+        -0.007558698352755492,
+        0.009212125296421302
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Regular_1",
+      "arguments": [
+        17.0,
+        28.08695652173913,
+        -8.906866945490032,
+        9.92866956521739,
+        16.547782608695652,
+        8.712195,
+        0.3770491803278688,
+        0.37,
+        0.42439,
+        0.23,
+        0.61,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        19.1800895762491
+      ],
+      "native": [
+        -0.0011354170365903346,
+        0.0027917561281376397,
+        0.0
+      ],
+      "wolfram": [
+        -0.0011354170365903342,
+        0.0027917561281376392
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Regular_1",
+      "arguments": [
+        60.77493279095266,
+        4482.787998514367,
+        -3439.0920285247566,
+        1058.034980114846,
+        2834.032370528024,
+        34.389326066456164,
+        0.013376051726324969,
+        0.004920220492316577,
+        8.003719341959663,
+        0.0011331585500682316,
+        0.08471547308972344,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1043.6959699896106
+      ],
+      "native": [
+        5.7407229879825605e-05,
+        1.911842178481495e-07,
+        0.0
+      ],
+      "wolfram": [
+        5.7407229879825625e-05,
+        1.9118421784814946e-07
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Regular_1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -846.0233871696115,
+        15.072528964739888,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        14.952536566039035
+      ],
+      "native": [
+        0.009226901976379605,
+        7.342005865155875e-06,
+        0.0
+      ],
+      "wolfram": [
+        0.009226901976379626,
+        7.342005865155875e-06
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Regular_1",
+      "arguments": [
+        3.8096010185421347,
+        5565.700477270984,
+        -2471.3923347105274,
+        3012.749609972603,
+        4454.881906428346,
+        5.485205440301701,
+        0.0006840100771865586,
+        0.0066692879311965195,
+        7.160809862061269,
+        8.863406940394677e-05,
+        0.1295800637448394,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        3094.308142560457
+      ],
+      "native": [
+        6.275448689620538e-07,
+        4.416877148779071e-09,
+        0.0
+      ],
+      "wolfram": [
+        6.275448689620537e-07,
+        4.416877148779071e-09
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Regular_1",
+      "arguments": [
+        2.9887914675848135,
+        3878.888843971453,
+        -2175.48179653855,
+        89.02387797728204,
+        3548.348515334248,
+        4.939058906554177,
+        0.0007699344874498558,
+        0.03633864981047212,
+        6.88932634552354,
+        0.00015457092785613056,
+        0.20075854553300218,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        1703.4070474329028
+      ],
+      "native": [
+        -1.5723644791717312e-07,
+        1.4625656438643334e-07,
+        0.0
+      ],
+      "wolfram": [
+        -1.5723644791717315e-07,
+        1.4625656438643336e-07
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_LODelta_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        0.13556781191854472,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.13556781191854472,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_LODelta_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        0.13556781191854472,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.13556781191854472,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_LODelta_m1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -860.979440931386,
+        0.0,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.00351719573541607
+      ],
+      "native": [
+        0.00036862177748968057,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.00036862177748968057,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Delta_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        -0.10084287554137067,
+        0.11526812387239717,
+        0.0
+      ],
+      "wolfram": [
+        -0.10084287554137067,
+        0.11526812387239717
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Delta_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        -0.10084287554137067,
+        0.11526812387239717,
+        0.0
+      ],
+      "wolfram": [
+        -0.10084287554137067,
+        0.11526812387239717
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Delta_m1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -860.979440931386,
+        0.0,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.00351719573541607
+      ],
+      "native": [
+        -0.0015984896289176493,
+        0.0004772457081442235,
+        0.0
+      ],
+      "wolfram": [
+        -0.0015984896289176493,
+        0.0004772457081442235
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        -0.006583137997649837,
+        -0.040670343575563414,
+        0.0
+      ],
+      "wolfram": [
+        -0.006583137997649837,
+        -0.040670343575563414
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.21845876048462,
+        0.29375,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.218458760484623
+      ],
+      "native": [
+        -0.006548011165770127,
+        -0.04055414563033828,
+        0.0
+      ],
+      "wolfram": [
+        -0.006548011165770127,
+        -0.04055414563033828
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        -0.006583137997649837,
+        -0.040670343575563414,
+        0.0
+      ],
+      "wolfram": [
+        -0.006583137997649837,
+        -0.040670343575563414
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.4081780055918,
+        0.705,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.4081780055918
+      ],
+      "native": [
+        -0.0064991057121733375,
+        -0.040392345768654116,
+        0.0
+      ],
+      "wolfram": [
+        -0.006499105712173338,
+        -0.040392345768654116
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L0_m1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -860.979440931386,
+        0.0,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.00351719573541607
+      ],
+      "native": [
+        0.00016223886937577605,
+        -0.00011058653324690418,
+        0.0
+      ],
+      "wolfram": [
+        0.00016223886937577605,
+        -0.00011058653324690418
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        0.020137868231589504,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.020137868231589504,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.21845876048462,
+        0.29375,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.218458760484623
+      ],
+      "native": [
+        0.020080332968692657,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.020080332968692657,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.0829450139795,
+        0.0,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.082945013979497
+      ],
+      "native": [
+        0.020137868231589504,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.020137868231589504,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.4081780055918,
+        0.705,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.4081780055918
+      ],
+      "native": [
+        0.020000217975603616,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        0.020000217975603616,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_L1_m1",
+      "arguments": [
+        6.656836336807312,
+        860.9759237356506,
+        -860.979440931386,
+        0.0,
+        17.45435477291628,
+        6.472766381539904,
+        0.007672412388222161,
+        0.0075128998418448455,
+        6.288696426272495,
+        0.0001679013990237349,
+        0.021883781857382767,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        0.00351719573541607
+      ],
+      "native": [
+        5.475677948421653e-05,
+        0.0,
+        0.0
+      ],
+      "wolfram": [
+        5.475677948421652e-05,
+        0.0
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Regular_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.21845876048462,
+        0.29375,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.218458760484623
+      ],
+      "native": [
+        -0.0035774057056544217,
+        0.1380566659756197,
+        0.0
+      ],
+      "wolfram": [
+        -0.0035774057056544217,
+        0.1380566659756197
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "Hqq_v2_F2Hat_Regular_m1",
+      "arguments": [
+        70.0,
+        28.0,
+        -57.4081780055918,
+        0.705,
+        1.175,
+        38.125,
+        0.7142857142857143,
+        0.4,
+        6.25,
+        0.001,
+        0.0014,
+        0.2,
+        0.6666666666666666,
+        -0.3333333333333333,
+        2.0,
+        2.0,
+        4.0,
+        1.1111111111111112,
+        29.4081780055918
+      ],
+      "native": [
+        -0.0014499860424168369,
+        0.057294107473268255,
+        0.0
+      ],
+      "wolfram": [
+        -0.0014499860424168369,
+        0.05729410747326825
+      ],
+      "native_status": 0,
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_LODelta_1",
+      "native": [
+        0.21703476659170035,
+        0.1759655343190733,
+        0.0
+      ],
+      "wolfram": [
+        0.21703476659170037,
+        0.1759655343190733
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_LODelta_1",
+      "native": [
+        0.21703476659170035,
+        0.1759655343190733,
+        0.0
+      ],
+      "wolfram": [
+        0.21703476659170037,
+        0.1759655343190733
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_LODelta_1",
+      "native": [
+        0.02402558558227275,
+        0.0006429648879804921,
+        0.0
+      ],
+      "wolfram": [
+        0.02402558558227275,
+        0.0006429648879804921
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_LODelta_1",
+      "native": [
+        0.024031310069294595,
+        3.287681846820989e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.024031310069294595,
+        3.2876818468209895e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_LODelta_1",
+      "native": [
+        0.02783490970892197,
+        4.28863987435232e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.02783490970892197,
+        4.288639874352321e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Delta_1",
+      "native": [
+        0.0820163442698316,
+        0.0678680872459651,
+        0.0
+      ],
+      "wolfram": [
+        0.0820163442698316,
+        0.06786808724596509
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Delta_1",
+      "native": [
+        0.0820163442698316,
+        0.0678680872459651,
+        0.0
+      ],
+      "wolfram": [
+        0.0820163442698316,
+        0.06786808724596509
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Delta_1",
+      "native": [
+        -0.013794527672516576,
+        -0.0003691292522353721,
+        0.0
+      ],
+      "wolfram": [
+        -0.013794527672516575,
+        -0.000369129252235372
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Delta_1",
+      "native": [
+        -0.0036239485145971944,
+        -4.957963675030116e-06,
+        0.0
+      ],
+      "wolfram": [
+        -0.0036239485145971896,
+        -4.957963675030109e-06
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Delta_1",
+      "native": [
+        0.014974832680600535,
+        2.3067321217345862e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.014974832680600542,
+        2.306732121734587e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.03557915846967612,
+        0.02884655637922554,
+        0.0
+      ],
+      "wolfram": [
+        0.03557915846967611,
+        0.028846556379225535
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.026332041675656663,
+        0.02187919846430733,
+        0.0
+      ],
+      "wolfram": [
+        0.02633204167565666,
+        0.02187919846430733
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.03557915846967612,
+        0.02884655637922554,
+        0.0
+      ],
+      "wolfram": [
+        0.03557915846967611,
+        0.028846556379225535
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.019541535852506987,
+        0.016719435549334093,
+        0.0
+      ],
+      "wolfram": [
+        0.019541535852506987,
+        0.01671943554933409
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.0038909759399811767,
+        0.00010412902948058459,
+        0.0
+      ],
+      "wolfram": [
+        0.003890975939981174,
+        0.00010412902948058452
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.0023743200790933543,
+        6.39141118541536e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.0023743200790933543,
+        6.39141118541536e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.009966465158175378,
+        0.0001529920780418338,
+        0.0
+      ],
+      "wolfram": [
+        0.009966465158175378,
+        0.0001529920780418338
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.01148203723949618,
+        1.5708375984481755e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.01148203723949618,
+        1.5708375984481755e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.013013981111731458,
+        1.7813429353420686e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.013013981111731458,
+        1.7813429353420686e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.011800297637220906,
+        1.8181207521571312e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.011800297637220906,
+        1.8181207521571315e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_1",
+      "native": [
+        0.011909780378991293,
+        1.8350085537064426e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.011909780378991293,
+        1.8350085537064426e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.0322393455308072,
+        0.026138732293974596,
+        0.0
+      ],
+      "wolfram": [
+        0.0322393455308072,
+        0.026138732293974596
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.02271059075547583,
+        0.018870147955146275,
+        0.0
+      ],
+      "wolfram": [
+        0.02271059075547583,
+        0.018870147955146275
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.0322393455308072,
+        0.026138732293974596,
+        0.0
+      ],
+      "wolfram": [
+        0.0322393455308072,
+        0.026138732293974596
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.01604136316983563,
+        0.013724741988850417,
+        0.0
+      ],
+      "wolfram": [
+        0.01604136316983563,
+        0.013724741988850417
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.0035688713256896753,
+        9.550897081284729e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.0035688713256896753,
+        9.550897081284727e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.0037207477293808595,
+        0.00010015847848430972,
+        0.0
+      ],
+      "wolfram": [
+        0.0037207477293808595,
+        0.00010015847848430971
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.0035695109376815306,
+        5.479444188905701e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.0035695109376815306,
+        5.4794441889057e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.003569721667402121,
+        4.883674294193818e-06,
+        0.0
+      ],
+      "wolfram": [
+        0.003569721667402121,
+        4.883674294193818e-06
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.004813673709892848,
+        6.5889166293853845e-06,
+        0.0
+      ],
+      "wolfram": [
+        0.004813673709892848,
+        6.5889166293853845e-06
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.0041347259059787535,
+        6.3705435280123165e-06,
+        0.0
+      ],
+      "wolfram": [
+        0.0041347259059787535,
+        6.3705435280123165e-06
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_1",
+      "native": [
+        0.004184303616059259,
+        6.446997914686863e-06,
+        0.0
+      ],
+      "wolfram": [
+        0.004184303616059259,
+        6.446997914686864e-06
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Regular_1",
+      "native": [
+        -0.009202929717444098,
+        -0.007558698352755493,
+        0.0
+      ],
+      "wolfram": [
+        -0.009202929717444096,
+        -0.007558698352755492
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Regular_1",
+      "native": [
+        -0.0014719879017575537,
+        -0.0011354170365903346,
+        0.0
+      ],
+      "wolfram": [
+        -0.0014719879017575533,
+        -0.0011354170365903342
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Regular_1",
+      "native": [
+        0.0019383754253283177,
+        5.7407229879825605e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.0019383754253283188,
+        5.7407229879825625e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Regular_1",
+      "native": [
+        0.39053923059159995,
+        0.009226901976379605,
+        0.0
+      ],
+      "wolfram": [
+        0.39053923059160084,
+        0.009226901976379626
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Regular_1",
+      "native": [
+        0.0004525724214518288,
+        6.275448689620538e-07,
+        0.0
+      ],
+      "wolfram": [
+        0.0004525724214518288,
+        6.275448689620537e-07
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Regular_1",
+      "native": [
+        -0.00010290366153230485,
+        -1.5723644791717312e-07,
+        0.0
+      ],
+      "wolfram": [
+        -0.00010290366153230486,
+        -1.5723644791717315e-07
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_LODelta_m1",
+      "native": [
+        0.08057239954318096,
+        0.13556781191854472,
+        0.0
+      ],
+      "wolfram": [
+        0.08057239954318098,
+        0.13556781191854472
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_LODelta_m1",
+      "native": [
+        0.08057239954318096,
+        0.13556781191854472,
+        0.0
+      ],
+      "wolfram": [
+        0.08057239954318098,
+        0.13556781191854472
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_LODelta_m1",
+      "native": [
+        0.024019721145104995,
+        0.00036862177748968057,
+        0.0
+      ],
+      "wolfram": [
+        0.024019721145105,
+        0.00036862177748968057
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Delta_m1",
+      "native": [
+        -0.058608818343726526,
+        -0.10084287554137067,
+        0.0
+      ],
+      "wolfram": [
+        -0.058608818343726526,
+        -0.10084287554137067
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Delta_m1",
+      "native": [
+        -0.058608818343726526,
+        -0.10084287554137067,
+        0.0
+      ],
+      "wolfram": [
+        -0.058608818343726526,
+        -0.10084287554137067
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Delta_m1",
+      "native": [
+        -0.10416018254597777,
+        -0.0015984896289176493,
+        0.0
+      ],
+      "wolfram": [
+        -0.10416018254597778,
+        -0.0015984896289176493
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_m1",
+      "native": [
+        -0.003912574950411082,
+        -0.006583137997649837,
+        0.0
+      ],
+      "wolfram": [
+        -0.003912574950411082,
+        -0.006583137997649837
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_m1",
+      "native": [
+        -0.0038920135351601386,
+        -0.006548011165770127,
+        0.0
+      ],
+      "wolfram": [
+        -0.003892013535160139,
+        -0.006548011165770127
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_m1",
+      "native": [
+        -0.003912574950411082,
+        -0.006583137997649837,
+        0.0
+      ],
+      "wolfram": [
+        -0.003912574950411082,
+        -0.006583137997649837
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_m1",
+      "native": [
+        -0.0038634015475218966,
+        -0.0064991057121733375,
+        0.0
+      ],
+      "wolfram": [
+        -0.003863401547521897,
+        -0.006499105712173338
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L0_m1",
+      "native": [
+        0.0105716282630978,
+        0.00016223886937577605,
+        0.0
+      ],
+      "wolfram": [
+        0.0105716282630978,
+        0.00016223886937577605
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_m1",
+      "native": [
+        0.01196859595313426,
+        0.020137868231589504,
+        0.0
+      ],
+      "wolfram": [
+        0.01196859595313426,
+        0.020137868231589504
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_m1",
+      "native": [
+        0.011935368728938698,
+        0.020080332968692657,
+        0.0
+      ],
+      "wolfram": [
+        0.011935368728938698,
+        0.020080332968692657
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_m1",
+      "native": [
+        0.01196859595313426,
+        0.020137868231589504,
+        0.0
+      ],
+      "wolfram": [
+        0.01196859595313426,
+        0.020137868231589504
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_m1",
+      "native": [
+        0.01188915467754149,
+        0.020000217975603616,
+        0.0
+      ],
+      "wolfram": [
+        0.011889154677541492,
+        0.020000217975603616
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_L1_m1",
+      "native": [
+        0.003568000195136889,
+        5.475677948421653e-05,
+        0.0
+      ],
+      "wolfram": [
+        0.003568000195136889,
+        5.475677948421652e-05
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Regular_m1",
+      "native": [
+        -0.0021156046873176764,
+        -0.0035774057056544217,
+        0.0
+      ],
+      "wolfram": [
+        -0.0021156046873176764,
+        -0.0035774057056544217
+      ],
+      "passed": true
+    },
+    {
+      "name": "pair_Hqq_v2_Regular_m1",
+      "native": [
+        -0.0008351616283597674,
+        -0.0014499860424168369,
+        0.0
+      ],
+      "wolfram": [
+        -0.0008351616283597674,
+        -0.0014499860424168369
+      ],
+      "passed": true
+    }
+  ],
+  "representation": "Exact-rational Wolfram CSE operation tables; Boost complex 100 decimal digits; 115-digit mpmath dilogarithms; exact canonical kinematics",
+  "decimal_precision": 100,
+  "canonical_inputs": {
+    "PHT2": "-Power(-B + s, 2)*(Q2*ss + s*t)*(Q2 + s - ss + t)/(Power(Q2 + s, 2)*Power(s - ss, 2))",
+    "zH": "(-B + s)*(Q2 + s - ss + t)/((Q2 + s)*(s - ss))",
+    "xh": "Q2/(Q2 + s)",
+    "xB": "xi*xh",
+    "omega": "Abs(s+t)"
+  },
+  "invariant_contract_sha256": "1b0e7302cf7c93b76d2f9922e6baa1a7f0e1a08b5f5be0521e23b4e4f136a1c1",
+  "singular_logs": "Formal polynomial tracking through every operation; residual coefficients checked at every point"
+}

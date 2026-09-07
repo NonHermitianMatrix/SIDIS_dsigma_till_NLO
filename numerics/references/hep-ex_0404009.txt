@@ -1,0 +1,1330 @@
+                                    DESY 04–051                                                                     ISSN 0418–9833
+                                    April 2004
+
+
+
+
+arXiv:hep-ex/0404009v1 7 Apr 2004
+                                     Forward π ◦ Production and Associated Transverse Energy
+                                           Flow in Deep-Inelastic Scattering at HERA
+
+
+
+
+                                                                      H1 Collaboration
+
+
+
+
+                                                                               Abstract
+
+                                            Deep-inelastic positron-proton interactions at low values of Bjorken-x down to x ≈
+                                        4 · 10−5 which give rise to high transverse momentum π ◦ -mesons are studied with the
+                                        H1 experiment at HERA. The inclusive cross section for π ◦ -mesons produced at small
+                                        angles with respect to the proton remnant (the forward region) is presented as a function
+                                        of the transverse momentum and energy of the π ◦ and of the four-momentum transfer Q2
+                                        and Bjorken-x. Measurements are also presented of the transverse energy flow in events
+                                        containing a forward π ◦ -meson. Hadronic final state calculations based on QCD models
+                                        implementing different parton evolution schemes are confronted with the data.
+
+
+
+
+                                                                  To be submitted to Eur. Phys. J. C
+A. Aktas10 , V. Andreev24 , T. Anthonis4, A. Asmone31 , A. Astvatsatourov35, A. Babaev23 ,
+S. Backovic35 , J. Bähr35 , P. Baranov24 , E. Barrelet28 , W. Bartel10 , S. Baumgartner36 ,
+J. Becker37 , M. Beckingham21 , A. Beglarian34 , O. Behnke13 , O. Behrendt7 , A. Belousov24 ,
+Ch. Berger1 , T. Berndt14 , J.C. Bizot26 , J. Böhme10 , M.-O. Boenig7 , V. Boudry27 , J. Bracinik25 ,
+W. Braunschweig1 , V. Brisson26 , H.-B. Bröker2 , D.P. Brown10 , D. Bruncko16 , F.W. Büsser11 ,
+A. Bunyatyan12,34 , A. Burrage18 , G. Buschhorn25 , L. Bystritskaya23 , A.J. Campbell10 ,
+S. Caron1 , F. Cassol-Brunner22 , V. Chekelian25 , D. Clarke5 , C. Collard4 , J.G. Contreras7,41 ,
+Y.R. Coppens3 , J.A. Coughlan5 , M.-C. Cousinou22, B.E. Cox21 , G. Cozzika9 , J. Cvach29 ,
+J.B. Dainton18 , W.D. Dau15 , K. Daum33,39 , M. Davidsson20 , B. Delcourt26 , N. Delerue22 ,
+R. Demirchyan34, A. De Roeck10,43 , E.A. De Wolf4 , C. Diaconu22 , J. Dingfelder13 , P. Dixon19 ,
+V. Dodonov12 , J.D. Dowell3, A. Dubak25 , C. Duprel2 , G. Eckerlin10 , V. Efremenko23 , S. Egli32 ,
+R. Eichler32 , F. Eisele13 , M. Ellerbrock13 , E. Elsen10 , M. Erdmann10,40,e , W. Erdmann36 ,
+P.J.W. Faulkner3 , L. Favart4 , A. Fedotov23 , R. Felst10 , J. Ferencei10 , S. Ferron27 ,
+M. Fleischer10 , P. Fleischmann10 , Y.H. Fleming3 , G. Flucke10 , G. Flügge2 , A. Fomenko24,
+I. Foresti37 , J. Formánek30 , G. Franke10 , G. Frising1, E. Gabathuler18 , K. Gabathuler32 ,
+                                                           †
+J. Garvey3 , J. Gassner32 , J. Gayler10 , R. Gerhards10 , C. Gerlich13 , S. Ghazaryan34 ,
+L. Goerlich6 , N. Gogitidze24, S. Gorbounov35 , C. Grab36 , V. Grabski34 , H. Grässler2 ,
+T. Greenshaw18 , G. Grindhammer25, D. Haidt10 , L. Hajduk6, J. Haller13 , B. Heinemann18 ,
+G. Heinzelmann11 , R.C.W. Henderson17 , H. Henschel35 , O. Henshaw3 , R. Heremans4 ,
+G. Herrera7,44 , I. Herynek29 , M. Hildebrandt37, M. Hilgers36 , K.H. Hiller35 , J. Hladký29 ,
+P. Höting2, D. Hoffmann22 , R. Horisberger32 , A. Hovhannisyan34, M. Ibbotson21 ,
+M. Jacquet26 , L. Janauschek25 , X. Janssen4 , V. Jemanov11 , L. Jönsson20 , C. Johnson3,
+D.P. Johnson4, M.A.S. Jones18 , H. Jung20,10 , D. Kant19 , M. Kapichine8 , M. Karlsson20 ,
+J. Katzy10 , F. Keil14 , N. Keller37 , J. Kennedy18 , I.R. Kenyon3, C. Kiesling25, M. Klein35 ,
+C. Kleinwort10 , T. Kluge1 , G. Knies10 , B. Koblitz25, S.D. Kolya21 , V. Korbel10 , P. Kostka35,
+R. Koutouev12, A. Koutov8, A. Kropivnitskaya23, J. Kroseberg37 , J. Kueckens10 , T. Kuhr10 ,
+M.P.J. Landon19 , W. Lange35 , T. Laštovička35,30 , P. Laycock18 , A. Lebedev24 , B. Leißner1 ,
+R. Lemrani10 , V. Lendermann14 , S. Levonian10 , B. List36, E. Lobodzinska10,6,
+N. Loktionova24, R. Lopez-Fernandez10 , V. Lubimov23, H. Lueders11 , S. Lüders37 ,
+D. Lüke7,10 , L. Lytkin12, A. Makankine8, N. Malden21 , E. Malinovski24, S. Mangano36,
+P. Marage4 , J. Marks13 , R. Marshall21 , H.-U. Martyn1, J. Martyniak6, S.J. Maxfield18 ,
+D. Meer36 , A. Mehta18 , K. Meier14 , A.B. Meyer11 , H. Meyer33 , J. Meyer10 , S. Michine24 ,
+S. Mikocki6, I. Milcewicz-Mika6, D. Milstead18 , F. Moreau27 , A. Morozov8, J.V. Morris5 ,
+K. Müller37 , P. Murı́n16,42 , V. Nagovizin23, B. Naroska11 , J. Naumann7 , Th. Naumann35 ,
+P.R. Newman3 , F. Niebergall11 , C. Niebuhr10 , D. Nikitin8, G. Nowak6, M. Nozicka30 ,
+B. Olivier10, J.E. Olsson10 , D. Ozerov23 , V. Panassik8, C. Pascaud26 , G.D. Patel18 , M. Peez22 ,
+E. Perez9 , A. Petrukhin35 , J.P. Phillips18 , D. Pitzl10 , R. Pöschl26 , B. Povh12 , N. Raicevic35 ,
+J. Rauschenberger11 , P. Reimer29 , B. Reisert25 , C. Risler25 , E. Rizvi3 , P. Robmann37 ,
+R. Roosen4 , A. Rostovtsev23, S. Rusakov24 , K. Rybicki6† , D.P.C. Sankey5 , E. Sauvan22 ,
+S. Schätzel13 , J. Scheins10 , F.-P. Schilling10, P. Schleper10 , D. Schmidt33 , S. Schmidt25 ,
+S. Schmitt37 , M. Schneider22 , L. Schoeffel9 , A. Schöning36 , V. Schröder10 ,
+H.-C. Schultz-Coulon14 , C. Schwanenberger10 , K. Sedlák29 , F. Sefkow10 , I. Sheviakov24,
+L.N. Shtarkov24 , Y. Sirois27 , T. Sloan17 , P. Smirnov24, Y. Soloviev24, D. South21 , V. Spaskov8 ,
+A. Specka27 , H. Spitzer11 , R. Stamen10 , B. Stella31 , J. Stiewe14 , I. Strauch10 , U. Straumann37 ,
+G. Thompson19, P.D. Thompson3, F. Tomasz14 , D. Traynor19 , P. Truöl37, G. Tsipolitis10,38,
+I. Tsurin35, J. Turnau6, J.E. Turney19, E. Tzamariudaki25 , A. Uraev23 , M. Urban37 , A. Usik24 ,
+
+                                                  1
+S. Valkár30 , A. Valkárová30 , C. Vallée22 , P. Van Mechelen4 , A. Vargas Trevino7, S. Vassiliev8,
+Y. Vazdik24 , C. Veelken18 , A. Vest1 , A. Vichnevski8, V. Volchinski34, K. Wacker7 , J. Wagner10 ,
+B. Waugh21 , G. Weber11 , R. Weber36 , D. Wegener7 , C. Werner13 , N. Werner37 , M. Wessels1 ,
+B. Wessling11, M. Winde35 , G.-G. Winter10 , Ch. Wissing7, E.-E. Woehrling3 , E. Wünsch10 ,
+J. Žáček30 , J. Zálešák30 , Z. Zhang26 , A. Zhokin23 , F. Zomer26 , and M. zur Nedden25
+
+1
+  I. Physikalisches Institut der RWTH, Aachen, Germanya
+2
+  III. Physikalisches Institut der RWTH, Aachen, Germanya
+3
+  School of Physics and Astronomy, University of Birmingham, Birmingham, UKb
+4
+  Inter-University Institute for High Energies ULB-VUB, Brussels; Universiteit Antwerpen,
+Antwerpen; Belgiumc
+5
+  Rutherford Appleton Laboratory, Chilton, Didcot, UKb
+6
+  Institute for Nuclear Physics, Cracow, Polandd
+7
+  Institut für Physik, Universität Dortmund, Dortmund, Germanya
+8
+  Joint Institute for Nuclear Research, Dubna, Russia
+9
+  CEA, DSM/DAPNIA, CE-Saclay, Gif-sur-Yvette, France
+10
+   DESY, Hamburg, Germany
+11
+   Institut für Experimentalphysik, Universität Hamburg, Hamburg, Germanya
+12
+   Max-Planck-Institut für Kernphysik, Heidelberg, Germany
+13
+   Physikalisches Institut, Universität Heidelberg, Heidelberg, Germanya
+14
+   Kirchhoff-Institut für Physik, Universität Heidelberg, Heidelberg, Germanya
+15
+   Institut für experimentelle und Angewandte Physik, Universität Kiel, Kiel, Germany
+16
+   Institute of Experimental Physics, Slovak Academy of Sciences, Košice, Slovak Republice,f
+17
+   Department of Physics, University of Lancaster, Lancaster, UKb
+18
+   Department of Physics, University of Liverpool, Liverpool, UKb
+19
+   Queen Mary and Westfield College, London, UKb
+20
+   Physics Department, University of Lund, Lund, Swedeng
+21
+   Physics Department, University of Manchester, Manchester, UKb
+22
+   CPPM, CNRS/IN2P3 - Univ Mediterranee, Marseille - France
+23
+   Institute for Theoretical and Experimental Physics, Moscow, Russial
+24
+   Lebedev Physical Institute, Moscow, Russiae
+25
+   Max-Planck-Institut für Physik, München, Germany
+26
+   LAL, Université de Paris-Sud, IN2P3-CNRS, Orsay, France
+27
+   LLR, Ecole Polytechnique, IN2P3-CNRS, Palaiseau, France
+28
+   LPNHE, Universités Paris VI and VII, IN2P3-CNRS, Paris, France
+29
+   Institute of Physics, Academy of Sciences of the Czech Republic, Praha, Czech Republice,i
+30
+   Faculty of Mathematics and Physics, Charles University, Praha, Czech Republice,i
+31
+   Dipartimento di Fisica Università di Roma Tre and INFN Roma 3, Roma, Italy
+32
+   Paul Scherrer Institut, Villigen, Switzerland
+33
+   Fachbereich Physik, Bergische Universität Gesamthochschule Wuppertal, Wuppertal,
+Germany
+34
+   Yerevan Physics Institute, Yerevan, Armenia
+35
+   DESY, Zeuthen, Germany
+36
+   Institut für Teilchenphysik, ETH, Zürich, Switzerlandj
+37
+   Physik-Institut der Universität Zürich, Zürich, Switzerlandj
+
+
+                                                  2
+38
+   Also at Physics Department, National Technical University, Zografou Campus, GR-15773
+Athens, Greece
+39
+   Also at Rechenzentrum, Bergische Universität Gesamthochschule Wuppertal, Germany
+40
+   Also at Institut für Experimentelle Kernphysik, Universität Karlsruhe, Karlsruhe, Germany
+41
+   Also at Dept. Fis. Ap. CINVESTAV, Mérida, Yucatán, Méxicok
+42
+   Also at University of P.J. Šafárik, Košice, Slovak Republic
+43
+   Also at CERN, Geneva, Switzerland
+44
+   Also at Dept. Fis. CINVESTAV, México City, Méxicok
+†
+  Deceased
+a
+  Supported by the Bundesministerium für Bildung und Forschung, FRG, under contract
+numbers 05 H1 1GUA /1, 05 H1 1PAA /1, 05 H1 1PAB /9, 05 H1 1PEA /6, 05 H1 1VHA /7 and
+05 H1 1VHB /5
+b
+  Supported by the UK Particle Physics and Astronomy Research Council, and formerly by the
+UK Science and Engineering Research Council
+c
+  Supported by FNRS-FWO-Vlaanderen, IISN-IIKW and IWT and by Inter-University
+Attraction Poles Programme, Belgian Science Policy
+d
+  Partially Supported by the Polish State Committee for Scientific Research,
+SPUB/DESY/P003/DZ-118/2003/2005
+e
+  Supported by the Deutsche Forschungsgemeinschaft
+f
+  Supported by VEGA SR grant no. 2/1169/2001
+g
+  Supported by the Swedish Natural Science Research Council
+i
+  Supported by the Ministry of Education of the Czech Republic under the projects
+INGO-LA116/2000 and LN00A006, by GAUK grant no 173/2000
+j
+  Supported by the Swiss National Science Foundation
+k
+  Supported by CONACyT
+l
+  Partially Supported by Russian Foundation for Basic Research, grant no. 00-15-96584
+
+
+
+
+                       Dedicated to the memory of Krzysztof Rybicki.
+
+
+
+
+                                              3
+1 Introduction
+Measurements of the hadronic final state in deep-inelastic positron-proton scattering (DIS) at
+HERA have allowed precision tests of the theory of the strong force, Quantum Chromodynam-
+ics (QCD). In particular, properties of the hadronic final state in the region near to the proton
+remnant system (hereafter referred to as the ‘forward region’) have been shown to be sensitive
+to the QCD radiation pattern formed from the cascade initiated by a parton from the proton be-
+fore it undergoes a hard scatter [1–4]. This paper presents studies made by the H1 experiment
+of DIS interactions at values of Bjorken-x down to x ≈ 4 · 10−5 containing at least one high
+transverse momentum, forward going π ◦ -meson.
+    A generic diagram for parton evolution in a DIS process at low x in which a gluon from
+the proton undergoes a QCD cascade is shown in Fig. 1 (a). The gluon eventually inter-
+acts with the virtual photon via a hard photon-gluon fusion process which can be calculated
+within perturbative QCD using an exact matrix element. Several perturbative QCD-based
+prescriptions are available to describe the dynamics of the parton evolution process. The
+Dokshitzer-Gribov-Lipatov-Altarelli-Parisi (DGLAP) evolution equations [5] resum leading
+log(Q2 ) terms and ignore log(1/x) terms. In an axial gauge this corresponds to the resum-
+mation of diagrams in which the parton cascades follow a strong ordering in transverse mo-
+menta kT2 n ≫ kT2 n−1 ≫ · · · ≫ kT2 1 . At sufficiently small values of x the Balitsky-Fadin-
+Kuraev-Lipatov (BFKL) equation [6] should be applicable since the log(1/x) terms should
+dominate the evolution. In this scheme the cascade is ordered strongly in fractional momenta
+xn ≪ xn−1 ≪ · · · ≪ x1 , while the transverse momenta perform a ‘random walk’ with kT i
+being close to kT i−1 , though it can be both larger or smaller. The Ciafaloni-Catani-Fiorani-
+Marchesini (CCFM) equation [7] interpolates between the DGLAP and BFKL approximations
+with parton emissions ordered in angle.
+   A parton chain without a requirement of kT ordering throughout the complete cascade is
+provided in a picture of low x DIS in which the virtual photon is ascribed a partonic structure.
+This process is illustrated in Fig. 1 (b) in which kT -ordered DGLAP cascades are initiated both
+from the proton and photon, leading to the hard interaction at the centre of the QCD ‘ladder’.
+    Hadronic final state observables are sensitive to the dynamics of QCD processes and are thus
+expected to be able to discriminate between different evolution approximations. As illustrated
+in Fig. 1, the selection of leading particles or jets in the forward region can tag individual
+parton emissions at high transverse momentum. An advantage of using single particles rather
+than jets is that ambiguities due to the choice of jet algorithm are removed. On the other hand,
+uncertainties due to hadronisation are typically larger for single particle studies. As was pointed
+out in [8], the selection of particles or jets with values of transverse momentum squared of
+similar magnitude to Q2 suppresses the contribution of kT -ordered cascades with respect to kT -
+unordered processes. In addition, the phase space for BFKL effects is enhanced if the fraction
+of the proton’s energy of the particle or jet is required to be greater than Bjorken-x.
+    A recent H1 study of forward going π ◦ -mesons [9] found that a model which implemented
+a DGLAP parton cascade from the proton significantly underestimated the cross section at low
+values of Bjorken-x. Leading order BFKL calculations with kinematic constraints which mimic
+higher orders and a model implementing virtual photon structure gave a better description of
+the data.
+                                                4
+    The pseudorapidity dependence of the mean transverse energy produced in an event (the so-
+called transverse energy flow) provides a complementary means of studying the hadronic final
+state. Compared with studies of jets and high transverse momentum particles, measurements
+of transverse energy flow typically cover a wider range of pseudorapidity and are sensitive to
+parton emissions of lower transverse momentum. Previous measurements of transverse energy
+flow at HERA were indeed found to be sensitive to the modelling of both the perturbative QCD
+evolution and the soft hadronisation process [1,10,11]. Measurements of transverse energy flow
+in events containing particles with high transverse momentum also reveal the range over which
+transverse momentum is compensated following the emission of QCD radiation [12].
+    This paper presents a study of low x DIS interactions in which high transverse momentum
+ ◦
+π -mesons are produced in the forward region. The results are based on a data sample which is
+more than three times larger than that used for earlier studies [9]. Consequently, the inclusive
+π ◦ cross section is measured with greater precision and more differentially as a function of x,
+Q2 and the transverse momentum and energy of the π ◦ -meson. Furthermore, for the first time,
+measurements are presented of transverse energy flow for ep interactions containing forward
+going π ◦ -mesons. This allows a more complete investigation of hadronic final states containing
+a hard forward π ◦ than was previously possible.
+
+
+
+2 QCD-based Models
+
+Calculations of the expected production rate of π ◦ -mesons and the associated transverse energy
+flow in DIS are available in the form of Monte Carlo event generators. These use first-order
+QCD matrix elements and adopt various approaches to modelling the parton cascade. These
+models are used to provide comparisons of theory predictions with the measurements presented
+here. In addition they are used, together with a simulation of the H1 detector, to correct the
+measurements for the finite acceptance and resolution of the detector. Unless otherwise stated
+the proton and virtual photon parton densities used in these models are CTEQ6M [13] and
+SAS-1D [14], respectively.
+    L EPTO 6.51 [15] matches first-order QCD matrix elements to DGLAP-based leading-log
+parton showers. The factorisation and renormalisation scales are set to Q2 . L EPTO also al-
+lows for non-perturbative rearrangement of the event colour topology via so-called soft color
+interactions in the final state [16].
+    R APGAP 2.08/20 [17] also matches first-order QCD matrix elements for direct photon pro-
+cesses to DGLAP-based leading-log parton showers. In addition to the direct photon processes,
+R APGAP simulates resolved photon interactions in which the virtual photon is assumed to have
+partonic structure. For the predictions presented here, the renormalisation and factorisation
+scales are set to 4p2T + Q2 , where pT is the transverse momentum of the partons emerging from
+the hard scattering process. The hadronic final state predictions of R APGAP, when only direct
+photon interactions are considered, are very similar to those of L EPTO.
+    A RIADNE 4.10 [18] is an implementation of the Colour Dipole Model (CDM) [19] of a chain
+of independently radiating dipoles formed by emitted gluons. Since all radiation is assumed to
+come from the dipole formed by the struck quark and the remnant, photon-gluon fusion events
+
+                                               5
+have to be added and are taken from the QCD matrix elements. The parameters in A RIADNE
+have been optimised in order to describe a range of hadronic final state measurements [20].
+    In order to study the effects of initial and final state QED radiation, the above models are
+interfaced with H ERACLES [21] within the D JANGO [22] model.
+    C ASCADE 1.0 [23] uses off-shell QCD matrix elements, supplemented with parton emis-
+sions based on the CCFM equation within a backward evolution approach. An unintegrated
+gluon density, obtained using CCFM evolution and fitted to describe the inclusive DIS cross
+section [24], is used as an input to this model. In the present analysis an updated version [25]
+of C ASCADE with an improved treatment of the soft region and a new parameterisation of the
+unintegrated gluon density is used. These modifications provide an improved description of
+forward jet production [26].
+    To perform the hadronisation step, all of the above models use the L UND string fragmenta-
+tion [27] scheme, as implemented in J ETSET [28] in case of L EPTO, R APGAP and A RIADNE
+and in P YTHIA [28] for C ASCADE.
+    Predictions of the π ◦ cross sections are also available from an analytical calculation at the
+parton level [29] based on a modified BFKL evolution equation at lowest order. These calcula-
+tions are then convoluted with a π ◦ fragmentation function [30]. The proton parton densities are
+taken from [31]. The modified evolution equation imposes a “consistency constraint” [32, 33]
+which, it is argued, mimics much of the contribution from non-leading log(1/x) terms to the
+BFKL equation. However, these predictions are very sensitive to the choice of scale for the
+strong coupling constant αs and to the infra-red cut-off. In the present analysis, the scale for
+αs is taken to be the squared transverse momentum of the emitted partons, kT2 , and the infrared
+cut-off in the modified BFKL equation is set at 0.5 GeV2 .
+
+
+    Recently, calculations of the cross section for the production of high transverse momen-
+tum hadrons in DIS interactions have been made [34], which describe earlier measurements of
+forward π ◦ production [9]. These comprise next-to-leading order (NLO) matrix elements, con-
+voluted with NLO fragmentation functions [30]. The proton parton densities MRST99 (higher
+gluon) [35] are used. For comparison with the H1 data, the renormalisation, factorisation and
+fragmentation scales are each set to (Q2 + p∗2                  ∗
+                                                T,π )/2, where pT,π is the transverse momentum, in
+the photon-proton centre of mass system , of the parton which fragments into the forward π ◦ .
+                                            1
+
+In these calculations, a large part of the cross section is generated by higher order contributions
+which correspond to lowest order BFKL and resolved photon processes [34].
+
+
+
+3 Experimental Apparatus
+
+A detailed description of the H1 detector can be found elsewhere [36]. The following section
+briefly describes the components of the detector which are most relevant for this analysis.
+   A liquid argon (LAr) calorimeter is used to measure the hadronic energy flow and the can-
+didate π ◦ -meson properties. The LAr calorimeter provides measurements over the laboratory
+   1
+       All quantities presented in the hadronic centre-of-mass system are denoted by the superscript *.
+
+                                                          6
+polar angle range 4◦ < θ < 154◦, where θ is defined with respect to the direction of the proton
+beam, and offers full azimuthal coverage. It consists of an electromagnetic section with lead
+absorbers and a hadronic section with steel absorbers. Both sections are highly segmented in
+the transverse and longitudinal directions. The total depth of both sections varies between 4.5
+and 8 interaction lengths in the region 4◦ < θ < 128◦ , and between 20 and 30 radiation lengths
+in the region 4◦ < θ < 154◦ increasing towards the forward direction. The fine granularity of
+the electromagnetic section in the forward direction is characterized by four-fold longitudinal
+segmentation and a typical lateral cell size of 3.5 x 3.5 cm2 . Test beam pmeasurements of the
+LAr calorimeter modules showed anp    energy resolution of σE /E ≈ 0.50/ E[GeV] ⊕ 0.02 for
+charged pions and of σE /E ≈ 0.12/ E[GeV] ⊕ 0.01 for electrons [36]. The hadronic energy
+measurement is made by applying a weighting technique to the electromagnetic and hadronic
+components of the energy deposition, in order to account for the non-compensating nature of
+the calorimeter. The absolute scales of hadronic and forward-reconstructed electromagnetic
+energies are known to 4% [37] and 3% [38], respectively.
+    The SPACAL is a lead/scintillating fibre calorimeter covering the region 153◦ < θ < 177.5◦
+with an electromagnetic and a hadronic section. It is used to measure the scattered positron en-
+ergy and the backward
+                  p hadronic energy flow. The energy resolutions
+                                                             p         for electrons and hadrons
+are σE /E ≈ 0.07/ E[GeV] ⊕ 0.01 [39] and σE /E ≈ 0.3/ E [GeV] [40], respectively. The
+energy scale uncertainties are 1% for electrons and 7% for hadrons [41].
+    The calorimeters are surrounded by a superconducting solenoid which provides a uniform
+magnetic field of 1.15 T in a direction parallel to the proton beam in the tracking region.
+Charged particle tracks are measured in the central tracker (CT) and forward tracker (FT) sys-
+tems which cover the polar angle ranges of 25◦ < θ < 155◦ and 5◦ < θ < 25◦ , respectively.
+Information from the CT is used in this work to trigger events, to locate the event vertex and
+also contributes to the measurement of transverse energy.
+    A backward drift chamber (BDC) in front of the SPACAL with an angular acceptance of
+151◦ < θ < 177.5◦ serves to identify electron candidates and to precisely measure their di-
+rection. Using information from the BDC, the SPACAL and the reconstructed event vertex
+position, the polar angle of the scattered electron is known to about 0.5 mrad [41].
+   The luminosity is measured using the Bethe-Heitler process ep → epγ with two TlCl/TlBr
+crystal calorimeters installed in the HERA tunnel.
+
+
+4 Data Analysis
+The data used for this analysis were collected in 1996 and 1997 when positrons and protons
+with energies of 27.6 GeV and 820 GeV, respectively, were collided. The data-set used in this
+work corresponds to an integrated luminosity of 21.2 pb−1 .
+
+
+4.1 DIS Event Selection
+
+DIS events are selected by triggers based on electromagnetic energy deposits in the SPACAL
+calorimeter and the presence of charged particle tracks in the CT. For the π ◦ -enriched event
+                                               7
+sample, the trigger efficiency lies between 60% and 80%, determined using independently trig-
+gered data. The inefficiency is mainly due to the suppression by the trigger of events with less
+than 3 charged particles measured in the CT. The data are corrected for the trigger inefficiency
+by applying a weight to every selected DIS event.
+     The event kinematics are calculated from the polar angle and the energy of the scattered
+positron. In order to maintain optimal efficiency and acceptance, scattered positron candidates
+in the SPACAL are required to have an energy Ee′ > 10 GeV and to lie in the region of
+polar angle of 156◦ < θe′ < 177◦ . The data-set is further restricted to the kinematic range in
+inelasticity y and virtuality Q2 of 0.1 < y < 0.6 and 2 < Q2 < 70 GeV2 , respectively. The
+resulting values of Bjorken-x extend over two orders of magnitude in the range 4 · 10−5 < x <
+6 · 10−3 .
+    To further reject background from photoproduction interactions in which a particle from
+the hadronic final state is misidentified as a scattered positron in the SPACAL, the condition
+35 < Σj (Ej − pz,j ) < 70 GeV is applied. Here Ej and pz,j are the energy and longitudinal
+momentum, respectively, of a particle, and the sum extends over all particles in the event except
+those detected in the luminosity system.
+
+
+4.2 Forward π ◦ Selection
+
+The selection of forward π ◦ -mesons closely follows that of earlier work [3, 9, 42]. The π ◦ can-
+didates are identified via the dominant decay channel π ◦ → 2γ using calorimetric information
+only. Criteria are placed on the kinematic properties of the candidate to ensure high acceptance
+and efficient background rejection. The energy Eπ of the π ◦ scaled with the energy Ep of the
+proton beam, xπ = Eπ /Ep , is required to be greater than 0.01. As a consequence of this cut, the
+decay photons are not resolved individually but are merged into a single electromagnetic cluster
+in the detector. The candidates are also required to lie in the polar angle region 5◦ < θπ < 25◦ .
+This polar angle region, referred to as ‘forward’ in the laboratory frame, corresponds to the
+central region in the hadronic centre of mass frame, −1.25 ∼    < ηπ∗ < 2.0. Furthermore, the π ◦
+                                                                      ∼
+transverse momentum in the photon-proton centre of mass system, p∗T,π must be greater than
+2.5 GeV. The Lorentz boost to this frame is calculated using the kinematics of the scattered
+electron. In this frame the proton direction is chosen to define the negative z ∗ axis.
+    Electromagnetic and hadronic showers are discriminated by an analysis of the longitudinal
+and transverse shapes of the energy depositions. A π ◦ candidate is required to have more than
+90% of its energy deposited in the electromagnetic part of the LAr calorimeter. A “hot” core
+of the most energetic group of contiguous cells within a cluster, which must include the hottest
+cell, is required to account for over 50% of the cluster energy. The lateral spread of the shower,
+defined as in [43], is required to be less than 4 cm. Electromagnetic clusters with a small
+longitudinal extent are selected by requiring that the difference in the amounts of energy found
+in the second and fourth longitudinal layers of the electromagnetic calorimeter must be more
+than 40% of the total cluster energy.
+    Following this selection approximately 5500 (2000) π ◦ candidates remain after the trans-
+verse momentum cut p∗T,π > 2.5 (3.5) GeV. Using simulated events generated with the L EPTO
+
+                                                8
+and A RIADNE models the efficiency of the selection is estimated to be approximately 45%, and
+the contribution of non-π ◦ background is about 20%.
+    The contamination of the sample from sources of high energy single photons other than π ◦
+decays, such as prompt photon production, is expected to be negligible since the rate of such
+processes is low [44]. Using the L EPTO and A RIADNE models the total contamination due to
+the misidentification of electrons, and of η-mesons decaying to two photons, is found to be less
+than 4%. The measurements are corrected for this using the QCD-based models following the
+procedure outlined in section 4.3. The contribution of the background from photoproduction
+processes was studied using the P HOJET [45] model and found to be negligible.
+
+
+4.3 Correction Procedure and Systematic Uncertainties
+
+The results shown in this paper consist of two sets of spectra. First, the dependence of the
+ep cross section for inclusive forward π ◦ -meson production on Bjorken-x, Q2 , p∗T,π and xπ is
+studied. Measurements are then presented of the transverse energy flow in π ◦ -tagged events.
+The transverse energy is evaluated from energy deposits measured in the LAr and SPACAL
+calorimeters, supplemented with tracking information from the CT, according to the prescrip-
+tion in [46].
+    The data are corrected using a bin-by-bin unfolding procedure using event samples gen-
+erated with the L EPTO and A RIADNE models. The correction factors are obtained by taking
+the average of the correction factors estimated by these two models. The typical values of the
+correction factors obtained are approximately equal to 1.5.
+   The following sources of systematic uncertainty are considered. The uncertainties from
+each source are added quadratically to form the total point-to-point systematic uncertainties on
+each of the measured distributions presented here:
+
+   • The model dependence of the bin-by-bin acceptance corrections leads to systematic un-
+     certainties of between 4% and 11% on both the π ◦ cross section and transverse energy
+     spectra. This source of uncertainty is calculated as half the difference of the correction
+     factors derived from L EPTO and A RIADNE. The uncertainty resulting from the model
+     dependence is largest at the lowest values of x and for the highest values of p∗T,π and xπ .
+
+   • The systematic uncertainty due to the correction for QED radiative effects, calculated
+     using H ERACLES, is typically 3% for both the π 0 cross section and the transverse energy
+     flow measurements.
+
+   • Variation of the π ◦ selection and identification cuts within the resolution of the recon-
+     structed quantities gives rise to an uncertainty of 5% to 10% in the measurements of both
+     the cross section and the transverse energy flow.
+
+   • The uncertainty on the electromagnetic energy scale of the SPACAL (1%) affects the
+     reconstructed kinematics of the scattered positron. This results in uncertainties on the
+     π ◦ cross section and the transverse energy flow measurements of typically 9% and 2%,
+     respectively.
+                                               9
+   • The uncertainty on the electromagnetic energy scale of the LAr (3%) leads to an uncer-
+     tainty on the π ◦ cross section of 5% to 10%, but has a negligible impact on the transverse
+     energy spectra.
+
+   • The hadronic energy scale uncertainty on the LAr (4%) gives rise to an uncertainty on the
+     transverse energy flow measurements of 4%, but has negligible impact on the π ◦ cross
+     sections.
+
+   • The uncertainty on the hadronic energy scale of the SPACAL (7%) results in uncertainties
+     on the π ◦ cross section and the transverse energy flow measurements of typically 2% and
+     5%, respectively.
+
+   • The uncertainty on the polar angle measurement of the scattered electron (0.5 mrad) has a
+     small influence (below 2%) on the π ◦ cross section and the transverse energy flow spectra.
+
+   • The uncertainty on the determination of the trigger efficiency leads to a 5% uncertainty
+     on the π ◦ cross section measurements, but has a negligible effect on the transverse energy
+     flow spectra.
+
+   • The uncertainty on the luminosity measurement leads to a 1.5% uncertainty on the π ◦
+     cross section measurement, but has no effect on the transverse energy distributions.
+
+
+
+5 Results
+
+5.1 Inclusive Forward π ◦ Cross Sections
+
+The inclusive π ◦ cross section is measured differentially as a function of Q2 and x, and as a
+function of p∗T,π and xπ , for π ◦ -mesons produced in the range p∗T,π > 2.5 GeV, 5◦ < θπ < 25◦
+and xπ > 0.01. The DIS phase space is restricted to the kinematic range 2 < Q2 < 70 GeV2
+and 0.1 < y < 0.6. The cross section data presented in this section are also given in Tables 1
+and 2.
+    The inclusive cross section dσπ /dx for p∗T,π > 2.5 GeV as a function of Bjorken x is shown
+in Fig. 2 for three intervals of Q2 : 2 < Q2 ≤ 4.5 GeV2 ; 4.5 < Q2 ≤ 15 GeV2 and 15 < Q2 <
+70 GeV2 . The distributions rise with falling x except at values of x of around 10−4 in the lowest
+Q2 region. This turnover is due to the limitations in the phase space imposed by the π ◦ and DIS
+event selection cuts.
+    The predictions of five QCD-based models are compared with the data. Calculations from
+R APGAP which implement DGLAP evolution for proton structure only, labelled DIR, fall sub-
+stantially below the data. The disagreement becomes more pronounced at lower values of
+Bjorken-x. Calculations which assume virtual photon structure, marked DIR+RES, describe
+the data well, although it is necessary to use rather large renormalisation and factorisation scales,
+µ2 = Q2 + 4p2T , in order to get a sufficiently large resolved photon component. Using the same
+scale in R APGAP a reasonable description of the azimuthal jet separation in a measurement
+of inclusive dijet production at low x in DIS [47] is obtained. Forward jet data are also well
+
+                                                 10
+described by DGLAP-based calculations which include virtual photon structure although dif-
+ferent measurements tend to prefer different choices of scales [3, 4, 26], µ2 = Q2 + 4p2T or
+µ2 = Q2 + p2T . Using the latter value would result in a reduction of about 30% in the normal-
+isation of the predicted forward π ◦ distributions measured in this paper, with little change to
+the shape. Predictions based on the CCFM equation, labelled CCFM (CASCADE), agree at
+the highest values of Q2 . However, they fall below the data at low values of x and Q2 . The
+rate of forward jet events predicted by C ASCADE agrees with the data [26]. This observation
+is not in contradiction with the forward π ◦ data since the discrepancies observed here arise at
+the lowest values of x, which are not covered by the forward jet measurement. Differences
+between R APGAP and C ASCADE in the overall description of forward jet and particle produc-
+tion may be related to differences in the modelling of the partonic structure of forward jets.
+C ASCADE mostly produces gluon-induced jets, while R APGAP has a substantial contribution
+of quark-induced jets in the forward region. Fewer high momentum particles are produced in
+gluon-induced jets than in quark-induced jets [48]. Predictions of the CDM give a reasonable
+description of the data. Analytical calculations using a modified BFKL equation, labelled mod.
+LO BFKL, describe the data well in the lower Q2 region although they have a tendency to
+exceed the data at the lowest values of Bjorken-x in the highest Q2 intervals.
+    Fig. 3 shows the differential cross section dσπ /dx for transverse momenta p∗T,π > 3.5 GeV,
+in three intervals of Q2 : 2 < Q2 ≤ 8 GeV2 ; 8 < Q2 ≤ 20 GeV2 and 20 < Q2 < 70 GeV2 .
+Compared with the spectra in Fig. 2, the measured differential cross sections are lower by factors
+of between two and four. The QCD-based models provide a similar quality of description to
+that given in Fig. 2. Calculations based on the modified BFKL equation clearly exceed the data
+in the two highest Q2 intervals. The prediction of the NLO calculation [34] is also shown and
+describes the data well. Predictions of the CDM (not shown) overestimate the data at the lowest
+values of Q2 and x.
+    The cross section dσπ /dp∗T,π is shown as a function of p∗T,π in Fig. 4 in the same Q2 intervals
+as in Fig. 2. The data fall steeply with increasing p∗T,π and the shapes of the distributions
+vary only slightly with increasing Q2 . The calculations implementing resolved virtual photons
+describe the data well. The predictions of the model including only direct processes fall below
+the data everywhere although they come nearer to the data as Q2 increases. The CCFM-based
+calculations fail in the lowest Q2 interval but give a reasonable description of the highest Q2
+interval. The CDM predicts spectra which are somewhat harder than the data.
+    In Fig. 5 the cross section dσπ /dxπ is shown as a function of xπ in the same three intervals
+of Q2 as used in Fig. 2. In Fig. 6 the differential cross section is presented in three intervals of
+Bjorken-x: 4.2 · 10−5 < x ≤ 2 · 10−4 ; 2 · 10−4 < x ≤ 10−3 and 10−3 < x < 6.3 · 10−3. The cross
+section falls as xπ increases. There is no strong dependence of the shapes of the distributions on
+Bjorken-x or Q2 . The resolved photon approach, the CDM, and the BFKL calculations describe
+the spectra well. The CCFM implementation describes the data only in the highest intervals of
+Q2 and x. The direct photon calculations fall below the data in all of the spectra but approach
+them as Q2 increases.
+
+
+
+
+                                                11
+5.2 Transverse Energy Flow
+The transverse energy flow, defined as the mean transverse energy per event per unit of pseu-
+dorapidity difference in the hadronic centre of mass system, N1 dET∗ /d(η ∗ − ηπ∗ ), in events con-
+taining at least one forward π ◦ is presented in Fig. 7. Here N is the total number of events and
+ET∗ is the sum of the transverse energies of each particle i: ET∗ = Σi ET∗ i . The transverse energy
+ET∗ i of a particle i with energy Ei∗ and polar angle θi∗ is defined as ET∗ i = Ei∗ sin θi∗ . The pseu-
+dorapidity η ∗ is defined as − ln tan(θ∗ /2). The energy flow, which includes the contribution
+from the forward π ◦ , is plotted as a function of the difference in pseudorapidity η ∗ − ηπ∗ from
+the selected forward π ◦ . In events containing more than one forward π ◦ , the candidate with the
+largest transverse momentum is chosen. The spectra are presented in three intervals of the π ◦
+pseudorapidity ranging from close (Fig. 7a) to far (Fig. 7c) from the proton direction.
+    The spectra show a large increase of transverse energy production in the region associated
+with the π ◦ . This can be understood as being due to the energy associated with the jet which
+contains the leading π ◦ . A broad distribution of lower transverse energy flow in the current
+region reveals the range over which the transverse momentum of the jet is compensated.
+    The QCD-based models all describe the transverse energy flow in the vicinity of the π ◦ but
+give different predictions in the current region. Calculations with resolved photon processes
+tend to agree best with the data. The CCFM approach provides a reasonable description of the
+data. This model predicts a strong compensation of the π ◦ transverse momentum in the rapidity
+region between the forward particle and the proton remnant system which is, however, not
+covered in the measurements presented here. The direct photon model shows a peak at larger
+values of pseudorapidity difference η ∗ − ηπ∗ than is observed in the data. This effect becomes
+less pronounced with increasing π ◦ pseudorapidity as the forward π ◦ may enter the current jet
+region. The differences between the models can be qualitatively understood as a consequence
+of the ordering or otherwise of the kT in the parton cascades. The kT ordering in the direct
+photon model forces the compensation of the transverse energy in the current region while
+models without this requirement allow compensation close to the π ◦ -meson. The CDM (not
+shown) predicts too much transverse energy in the vicinity of the π ◦ . This is a consequence of
+the overly hard π ◦ transverse momentum distribution predicted by the CDM and shown earlier
+in Fig. 4.
+    Transverse energy flow in the region away from the forward π ◦ and into the current region is
+further studied as shown in Fig. 8. The mean transverse energy over the region 1.0 < η ∗ − ηπ∗ <
+3.0 is plotted as a function of Bjorken-x for the same three intervals of the π ◦ pseudorapidity as
+in the previous figure. The data show no significant dependence on Bjorken-x although there is
+a tendency for the mean transverse energy to fall as pseudorapidity of π ◦ approaches the current
+region. With the exception of the direct photon model, all of the QCD-based models give a
+reasonable description of the data. The direct photon prescription is only able to describe the
+data in the pseudorapidity region closest to the proton remnant.
+
+
+6 Summary
+Measurements are presented of ep interactions containing high transverse momentum forward
+going π ◦ -mesons in the deep-inelastic scattering regime of 0.1 < y < 0.6, 2 < Q2 < 70 GeV2
+                                                  12
+and 4 · 10−5 < x < 6 · 10−3 . The inclusive π ◦ cross section is measured differentially as a
+function of Q2 , Bjorken-x and π ◦ transverse momentum and energy for particles with p∗T,π > 2.5
+GeV, 5◦ < θπ < 25◦ and xπ = Eπ   Ep
+                                     > 0.01. The transverse energy flow relative to the direction
+of the forward π and the mean transverse energy in the vicinity of the forward π ◦ are also
+                  ◦
+
+measured.
+    The measurements presented are sensitive to the dynamics of parton evolution. Several
+different QCD-based approaches are confronted with the data. An approach implementing
+DGLAP evolution of proton structure underestimates the π ◦ cross section at low values of
+Bjorken-x and Q2 and overestimates the range at which the π ◦ transverse momentum is compen-
+sated. Calculations implementing virtual photon structure provide the best description, albeit
+with a preferred choice of renormalisation and factorisation scale which is inconsistent with that
+required by other measurements of the hadronic final state in the forward region. Predictions
+based on CCFM evolution fail to describe the π ◦ cross section at the lowest values of Bjorken-x
+but give a fair description of the transverse energy distributions. The Colour Dipole Model gives
+a reasonable description of the π ◦ cross section but predicts a transverse momentum distribution
+of π ◦ -mesons which is significantly harder than is observed in the data. Calculations using next-
+to-leading order QCD matrix elements convoluted with π ◦ fragmentation functions describe the
+Bjorken-x dependence of the forward π ◦ cross section well. Predictions made using a modified
+BFKL equation describe the forward π ◦ cross section at the lowest Q2 values but exceed the
+data at the highest Q2 values.
+
+
+
+Acknowledgements
+
+We would like to thank Alan Martin, John Outhwaite and the late Jan Kwieciński for making
+available the program to calculate forward jet and particle cross sections using the modified
+LO BFKL model. We are grateful to Patrik Aurenche, Michel Fontannaz, Rohini Godbole
+and Rahul Basu for providing their NLO calculations. We also thank Gunnar Ingelman for
+useful discussions. We are grateful to the HERA machine group whose outstanding efforts
+have made this experiment possible. We thank the engineers and technicians for their work in
+constructing and now maintaining the H1 detector, our funding agencies for financial support,
+the DESY technical staff for continual assistance and the DESY directorate for support and for
+the hospitality which they extend to the non-DESY members of the collaboration.
+
+
+
+References
+ [1] I. Abt et al. [H1 Collaboration], Z. Phys. C 63 (1994) 377.
+
+ [2] S. Aid et al. [H1 Collaboration], Phys. Lett. B 356 (1995) 118 [hep-ex/9506012].
+
+ [3] C. Adloff et al. [H1 Collaboration], Nucl. Phys. B 538 (1999) 3 [hep-ex/9809028].
+
+ [4] J. Breitweg et al. [ZEUS Collaboration], Eur. Phys. J. C 6 (1999) 239 [hep-ex/9805016];
+     J. Breitweg et al. [ZEUS Collaboration], Phys. Lett. B 474 (2000) 223 [hep-ex/9910043].
+
+                                                13
+ [5] V. N. Gribov and L. N. Lipatov, Sov. J. Nucl. Phys. 15 (1972) 438 and 675;
+     L. N. Lipatov, Sov. J. Nucl. Phys. 20 (1975) 94;
+     G. Altarelli and G. Parisi, Nucl. Phys. B 126 (1977) 298;
+     Y. L. Dokshitzer, Sov. Phys. JETP 46 (1977) 641.
+
+ [6] E. A. Kuraev, L. N. Lipatov and V. S. Fadin, Sov. Phys. JETP 45 (1977) 199;
+     I. I. Balitsky and L. N. Lipatov, Sov. J. Nucl. Phys. 28 (1978) 822.
+
+ [7] M. Ciafaloni, Nucl. Phys. B 296 (1988) 49;
+     S. Catani, F. Fiorani and G. Marchesini, Phys. Lett. B 234 (1990) 339;
+     S. Catani, F. Fiorani and G. Marchesini, Nucl. Phys. B 336 (1990) 18;
+     G. Marchesini, Nucl. Phys. B 445 (1995) 49 [hep-ph/9412327].
+
+ [8] A. H. Mueller, Nucl. Phys. Proc. Suppl. 18 C (1991) 125;
+     A. H. Mueller, J. Phys. G 17 (1991) 1443.
+
+ [9] C. Adloff et al. [H1 Collaboration], Phys. Lett. B 462 (1999) 440 [hep-ex/9907030].
+
+[10] C. Adloff et al. [H1 Collaboration], Eur. Phys. J. C 12 (2000) 595 [hep-ex/9907027].
+
+[11] M. Derrick et al. [ZEUS Collaboration], Phys. Lett. B 356 (1995) 118 [hep-ex/9506012].
+
+[12] M. Arneodo et al. [European Muon Collaboration], Phys. Lett. B 149 (1984) 415.
+
+[13] J. Pumplin et al., JHEP 0207 (2002) 12 [hep-ph/0201195].
+
+[14] G. A. Schuler and T. Sjöstrand, Phys. Lett. B 376 (1996) 193 [hep-ph/9601282].
+
+[15] G. Ingelman, A. Edin and J. Rathsman, Comp. Phys. Comm. 101 (1997) 108 [hep-
+     ph/9605286].
+
+[16] G. Ingelman, A. Edin and J. Rathsman, Phys. Lett. B 336 (1996) 371 [hep-ph/9508386].
+
+[17] H. Jung, Comp. Phys. Comm. 86 (1995) 147
+     (for an update see http://www-h1.desy.de/˜jung/rapgap/rapgap.html).
+
+[18] L. Lönnblad, Comp. Phys. Comm. 71 (1992) 15.
+
+[19] B. Andersson, G. Gustafson and L. Lönnblad, Nucl. Phys. B 339 (1990) 393.
+
+[20] N. H. Brook et al. in Monte Carlo Generators for HERA Physics (Hamburg, Germany,
+     1999), A. T. Doyle, G. Grindhammer, G. Ingelman, H. Jung, Eds., DESY-PROC-1999-02,
+     p.10 [hep-ex/9912053];
+     G. Grindhammer, D. Krucker and G. Nellen, ibid. p.36.
+
+[21] A. Kwiatkowski, H. Spiesberger and H. J. Mohring, Comp. Phys. Comm. 69 (1992) 155.
+
+[22] K. Charchula, G. A. Schuler and H. Spiesberger, Comp. Phys. Comm. 81 (1994) 381.
+
+[23] H. Jung, Comp. Phys. Comm. 143 (2002) 100 [hep-ph/0109102].
+
+[24] H. Jung and G. P. Salam, Eur. Phys. J. C 19 (2001) 351 [hep-ph/0012143].
+
+                                             14
+[25] M. Hansson, H. Jung, “The status of CCFM: Unintegrated gluon densities”, to appear in
+     Proc. of the XI Int. Workshop on Deep Inelastic Scattering (DIS 2003), St. Petersburg,
+     Russia, April 2003 [hep-ph/0309009].
+
+[26] J. Andersen et al. [Small x Collaboration], “Small x phenomenology: Summary and Status
+     2002” [hep-ph/0312333].
+
+[27] B. Andersson, G. Gustafson, G. Ingelman and T. Sjöstrand, Phys. Rep. 97 (1983) 31.
+
+[28] T. Sjöstrand, Comp. Phys. Comm. 82 (1994) 74;
+     T. Sjöstrand et al. Comp. Phys. Comm. 135 (2001) 238 [hep-ph/0010017].
+
+[29] J. Kwieciński, A. D. Martin and J. J. Outhwaite, Eur. Phys. J. C 9 (1999) 611 [hep-
+     ph/9903439].
+
+[30] B. A. Kniehl, G. Kramer and B. Pötter, Nucl. Phys. B 597 (2001) 337 [hep-ph/0011155].
+
+[31] A. D. Martin, R. G. Roberts, W. J. Stirling and R. S. Thorne, Eur. Phys. J. C 4 (1998) 463
+     [hep-ph/9803445].
+
+[32] J. Kwieciński, A. D. Martin and P. J. Sutton, Z. Phys. C 71 (1996) 585 [hep-ph/9602320].
+
+[33] J. Kwieciński, A. D. Martin and A. M. Staśto, Phys. Rev. D 56 (1997) 3991 [hep-
+     ph/9703445].
+
+[34] P. Aurenche, R. Basu, M. Fontannaz and R. M. Godbole, “An NLO calculation of the
+     electroproduction of large-ET hadrons” [hep-ph/0312359];
+     M. Fontannaz, private communication.
+
+[35] A. D. Martin, R. G. Roberts, W. J. Stirling and R. S. Thorne, Eur. Phys. J. C 23 (2002)
+     347.
+
+[36] I. Abt et al. [H1 Collaboration], Nucl. Instrum. Meth. A 386 (1997) 310;
+     I. Abt et al. [H1 Collaboration], Nucl. Instrum. Meth. A 386 (1997) 348.
+
+[37] B. Andrieu et al. [H1 Collaboration Calorimeter Group], Nucl. Instrum. Meth. A 336
+     (1993) 499.
+
+[38] B. Andrieu et al. [H1 Collaboration Calorimeter Group], Nucl. Instrum. Meth. A 350
+     (1994) 57.
+
+[39] T. Nicholls et al. [H1 Collaboration SPACAL Group ], Nucl. Instrum. Meth. A 374 (1996)
+     149.
+
+[40] R. D. Appuhn et al. [H1 Collaboration SPACAL Group], Nucl. Instrum. Meth. A 382
+     (1996) 395.
+
+[41] A. A. Glazov, “Measurement of the proton structure functions F2 (x, Q2 ) and FL (x, Q2 )
+     with the H1 detector at HERA”, Ph.D. Thesis, Berlin University, 1998, DESY-THESIS-
+     1998-005.
+
+                                              15
+[42] T. Wengler, “Measurement
+                      √       of π ◦ -meson cross sections at low Bjorken-x in deep-inelastic
+     e p collisions at s = 300 GeV,” Ph.D. Thesis, Heidelberg University, 1999, DESY-
+     THESIS-1999-011.
+
+[43] B. Andrieu et al. [H1 Calorimeter Group Collaboration], Nucl. Instrum. Meth. A 344
+     (1994) 492.
+
+[44] J. Kwieciński, S. C. Lang and A. D. Martin, Phys. Rev. D 55 (1997) 1273 [hep-
+     ph/9608355].
+
+[45] R. Engel and J. Ranft, Phys. Rev. D 54 (1996) 4244 [hep-ph/9509373].
+
+[46] C. Adloff et al. [H1 Collaboration], Z. Phys. C 74 (1997) 221 [hep-ex/9702003].
+
+[47] A. Aktas et al. [H1 Collaboration], Eur. Phys. J. C 33 (2004) 477 [hep-ex/0310019].
+
+[48] K. Konishi, A. Ukawa and G. Veneziano, Phys. Lett. B 78 (1978) 243.
+
+
+
+
+                                             16
+                                         π ±stat                                                π ±stat
+                x · 104              ( dσ )
+                                        dx ±tot
+                                                 (nb)                x · 104                ( dσ )
+                                                                                               dx ±tot
+                                                                                                        (nb)
+       2 < Q2 < 4.5 GeV2             p∗T,π > 2.5 GeV         2 < Q2 < 8 GeV2            p∗T,π > 3.5 GeV
+           0.42—0.60                       990±70
+                                              ±180              0.42—0.79                    410±40
+                                                                                                 ±110
+           0.60—0.90                      1550±80
+                                              ±250               0.79—1.1                     459±36
+                                                                                                 ±80
+           0.90—1.4                       1010±50
+                                              ±160               1.1—1.7                      375±24
+                                                                                                 ±82
+                                              ±40
+            1.4—1.9                        770±120               1.7—2.5                      284±20
+                                                                                                 ±54
+            1.9—2.7                        503±28
+                                              ±88                2.5—4.2                      110±8
+                                                                                                 ±32
+            2.7—4.2                        141±10
+                                              ±40
+
+      4.5 < Q2 < 15 GeV2             p∗T,π > 2.5 GeV        8 < Q2 < 20 GeV2            p∗T,π > 3.5 GeV
+            1.1—1.8                        421±23
+                                              ±71               1.1—2.0                       22±5
+                                                                                                ±11
+            1.8—2.5                        432±24
+                                              ±67               2.0—2.9                       55±7
+                                                                                                ±14
+            2.5—3.5                        365±19
+                                              ±55               2.9—3.9                       70±8
+                                                                                                ±17
+            3.5—4.8                        291±15
+                                              ±43               3.9—5.5                       70±7
+                                                                                                ±16
+            4.8—6.8                        185±10
+                                              ±32               5.5—11.0                     29.5±2.1
+                                                                                                 ±6.4
+                                              ±4
+           6.8—11.0                         70±12
+       15 < Q2 < 70 GeV2             p∗T,π > 2.5 GeV        20 < Q2 < 70 GeV2           p∗T,π > 3.5 GeV
+            3.9—7.3                        79±5
+                                              ±13                3.9—7.9                     16.6±1.9
+                                                                                                 ±3.7
+            7.3—12.0                       78±5
+                                              ±12                7.9—13.0                    14.5±2.4
+                                                                                                 ±3.2
+           12.0—18.0                      50.3±2.8
+                                               ±6.5             13.0—19.0                    12.4±1.3
+                                                                                                 ±2.7
+           18.0—28.0                      27.1±1.5
+                                               ±4.2             19.0—63.0                        ±0.27
+                                                                                             3.60±0.65
+           28.0—63.0                       5.1±0.4
+                                              ±1.1
+
+
+
+Table 1: The inclusive π ◦ -meson cross sections as shown in Figs. 2 and 3, presented together
+with the statistical and total uncertainties.
+                                  pb                                       pb                                       pb
+    p∗T,π       ( dpdσ∗π )±stat
+                          ±tot ( GeV )     p∗T,π                  ±stat
+                                                        ( dpdσ∗π )±tot  ( GeV )     p∗T,π         ( dpdσ∗π )±stat
+                                                                                                            ±tot ( GeV )
+                   T,π                                      T,π                                      T,π
+            2                 2                         2               2
+     2 < Q < 4.5 GeV                        4.5 < Q < 15 GeV                          15 < Q < 70 GeV2
+                                                                                                 2
+
+ 2.5—2.8       215±9
+                   ±36                   2.5—2.8       200±8
+                                                          ±34                     2.5—2.9       118±5
+                                                                                                    ±18
+ 2.8—3.3       146±6
+                   ±27                   2.8—3.4       122±5
+                                                          ±21                     2.9—3.5       69.1±3.3
+                                                                                                    ±8.8
+ 3.3—4.0       60.0±3
+                    ±14                  3.4—4.1        58±3
+                                                          ±11                     3.5—4.7       27.7±2.0
+                                                                                                    ±4.7
+                   ±1.4
+ 4.0—5.2       21.7±4.7                  4.1—5.2      23.0±1.5
+                                                           ±4.9                   4.7—8.0           ±0.38
+                                                                                               5.41±0.96
+ 5.2—8.0      4.37±0.38
+                   ±0.83                 5.2—8.0          ±0.4
+                                                       5.8±1.2                    8.0—15.0     0.21±0.04
+                                                                                                    ±0.06
+ 8.0—15.0     0.29±0.06
+                   ±0.26                 8.0—15.0     0.31±0.06
+                                                          ±0.12
+
+
+
+Table 2: The inclusive π ◦ -meson cross sections as shown in Fig. 4, presented together with the
+statistical and total uncertainties.
+
+
+
+                                               17
+                                                   π ±stat
+         xπ                                    ( dσ )
+                                                 dxπ ±tot
+                                                           (nb)
+                                p∗T,π > 2.5 GeV
+               0.000042 < x < 0.0002 0.0002 < x < 0.001               0.001 < x < 0.0063
+   0.01—0.035          7.2±0.2
+                          ±1.0                9.1±0.2
+                                                 ±1.5                      3.44±0.12
+                                                                               ±0.48
+   0.035—0.04         2.60±0.23
+                          ±0.88              3.87 ±0.27
+                                                  ±0.81                    1.07±0.13
+                                                                               ±0.41
+                          ±0.07
+   0.04—0.055         0.85±0.23              1.10±0.08
+                                                  ±0.30                    0.44±0.05
+                                                                               ±0.10
+   0.055—0.075        0.22±0.03
+                          ±0.06              0.28 ±0.03
+                                                  ±0.09                    0.08±0.01
+                                                                               ±0.03
+
+                                    p∗T,π > 2.5 GeV
+                     2 < Q2 < 4.5 GeV2     4.5 < Q2 < 15 GeV2        15 < Q2 < 70 GeV2
+   0.01—0.035              7.5±0.2
+                              ±1.2                7.3±0.2
+                                                     ±1.1                 5.01±0.16
+                                                                              ±0.74
+   0.035—0.04             3.32±0.28
+                              ±0.92              2.78 ±0.23
+                                                      ±0.78               1.51±0.14
+                                                                              ±0.39
+                              ±0.07
+   0.04—0.055             0.91±0.21              0.89±0.07
+                                                      ±0.22               0.59±0.05
+                                                                              ±0.12
+                              ±0.03
+   0.055—0.075            0.22±0.08              0.25±0.03
+                                                      ±0.07               0.12±0.02
+                                                                              ±0.03
+
+
+
+Table 3: The inclusive π ◦ -meson cross sections as shown in Figs. 5 and 6, presented together
+with the statistical and total uncertainties.
+
+
+
+
+                                       18
+Figure 1: Generic diagrams for DIS processes at small x. The gluon longitudinal momentum
+fractions and transverse momenta are labelled xi and kT i , respectively. (a) A gluon ladder
+evolves between the quark box, attached to the virtual photon, and the proton. (b) The partonic
+structure of the photon is “resolved”.
+
+
+
+
+                                        19
+                                                            2 < Q < 4.5 GeV
+                                                                     2           2
+
+
+
+
+          dσπ/dx [nb]
+                   1500
+                                                     ●
+                                                           H1 data
+                   1000                                    DIR + RES
+                                                           CCFM (CASCADE)
+                                                           DIR
+                        500
+                                                           CDM
+                                                           mod. LO BFKL
+                         0
+                                                            4.5 < Q < 15 GeV
+                                                                         2           2
+
+
+                        400
+
+                        200
+
+                          0
+                                                             15 < Q < 70 GeV
+                                                                             2           2
+                        100
+                        75
+                              pT,π > 2.5 GeV
+                               *
+                        50
+                        25
+                         0
+                                        -4                      -3
+                                   10                      10                                x
+
+
+Figure 2: The inclusive ep cross section for forward π ◦ mesons produced in the range p∗T,π > 2.5
+GeV, 5◦ < θπ < 25◦ and xπ = Eπ /Ep >0.01 as a function of Bjorken-x in three intervals of
+Q2 . The DIS kinematic region is further specified by 0.1 < y < 0.6. The inner error bars
+denote the statistical uncertainties and the outer error bars show the statistical and systematic
+uncertainties added quadratically. The predictions of five QCD-based models discussed in the
+text are shown.
+
+
+
+
+                                             20
+                     600
+
+
+            dσπ/dx [nb]
+                                                       ●
+                                                            H1 data
+                                                            DIR + RES
+                     400                                    CCFM (CASCADE)
+                                                            DIR
+                                                            NLO (Aurenche et al.)
+                     200                                    mod. LO BFKL
+                                                           2 < Q < 8 GeV
+                                                                  2            2
+
+                          0
+                                                           8 < Q < 20 GeV
+                                                                   2                2
+                          80
+                          60
+                          40
+                          20
+                          0
+
+                          20
+                               20 < Q < 70 GeV
+                                    2              2
+
+
+                               pT,π > 3.5 GeV
+                                *
+                          10
+
+                          0
+                                         -4                       -3
+                                    10                      10                          x
+
+
+Figure 3: The inclusive ep cross section for forward π ◦ mesons produced in the range p∗T,π > 3.5
+GeV, 5◦ < θπ < 25◦ and xπ = Eπ /Ep >0.01 as a function of Bjorken-x in three intervals of
+Q2 . The DIS kinematic region is further specified by 0.1 < y < 0.6. The inner error bars
+denote the statistical uncertainties and the outer error bars show the statistical and systematic
+uncertainties added quadratically. The predictions of five QCD-based models discussed in the
+text are shown.
+
+
+
+
+                                              21
+                                                                        ●       H1 data
+                            10 2                                                DIR+RES
+
+
+                  *
+
+
+                      [pb/GeV]
+                                                                                CCFM (CASCADE)
+                                                                                DIR
+
+
+
+
+            dσπ/dpT,π
+                                                                                CDM
+                            10
+
+                                     2 < Q < 4.5 GeV
+                                           2            2
+                                 1
+
+
+                            10 2
+
+                            10
+
+                                     4.5 < Q < 15 GeV
+                                               2            2
+                                 1
+
+
+                                                                                   pT,π > 2.5 GeV
+                                                                                    *
+                            10 2
+
+                            10
+
+                                     15 < Q < 70 GeV
+                                               2        2
+                                 1
+
+
+                                       3           4            5   6       7     8 9 10 *          15
+                                                                                          pT,π [GeV]
+
+Figure 4: The inclusive ep cross section for forward π ◦ mesons produced in the range p∗T,π > 2.5
+GeV, 5◦ < θπ < 25◦ and xπ = Eπ /Ep >0.01 as a function of pT,π in three intervals of Q2 . The
+DIS kinematic region is further specified by 0.1 < y < 0.6. The inner error bars denote the
+statistical uncertainties and the outer error bars show the statistical and systematic uncertainties
+added quadratically. The predictions of four QCD-based models discussed in the text are shown.
+
+
+
+
+                                                       22
+             dσπ/dxπ [nb]
+                                                                   2 < Q < 4.5 GeV
+                     10                                                2              2
+
+
+
+                            1      ●       H1 DATA
+                                           DIR + RES
+                            -1             CCFM (CASCADE)
+                                           DIR
+                   10                      mod. BFKL
+                                           CDM
+
+
+                                                                   4.5 < Q < 15 GeV
+                     10                                                    2              2
+
+
+
+                            1
+                            -1
+                   10
+
+                                                                   15 < Q < 70 GeV
+                     10                                                    2          2
+
+
+
+                            1
+                                   pT,π > 2.5 GeV
+                                       *
+                            -1
+                   10
+
+                            0.01           0.02      0.03   0.04    0.05       0.06   0.07
+                                                                                              xπ
+
+Figure 5: The inclusive ep cross section for forward π ◦ mesons produced in the range p∗T,π > 2.5
+GeV, 5◦ < θπ < 25◦ as a function of xπ in three intervals of Q2 . The DIS kinematic region is
+further specified by 0.1 < y < 0.6. The inner error bars denote the statistical uncertainties and
+the outer error bars show the statistical and systematic uncertainties added quadratically. The
+predictions of five QCD-based models discussed in the text are shown.
+
+
+
+
+                                                       23
+             dσπ/dxπ [nb]
+                     10                                            0.000042 < x < 0.0002
+
+                            1      ●       H1 DATA
+                                           DIR + RES
+                            -1             CCFM (CASCADE)
+                                           DIR
+                   10                      mod. BFKL
+                                           CDM
+
+
+                     10                                            0.0002 < x < 0.001
+
+                            1
+                            -1
+                   10
+
+                     10                                            0.001 < x < 0.0063
+
+                            1
+                                   pT,π > 2.5 GeV
+                                       *
+                            -1
+                   10
+
+                            0.01           0.02      0.03   0.04    0.05    0.06    0.07
+                                                                                        xπ
+
+Figure 6: The inclusive ep cross section for forward π ◦ mesons produced in the range p∗T,π > 2.5
+GeV and 5◦ < θπ < 25◦ as a function of xπ in three intervals of Bjorken-x. The DIS kinematic
+region is further specified by 2 < Q2 < 70 GeV2 and 0.1 < y < 0.6. The inner error bars
+denote the statistical uncertainties and the outer error bars show the statistical and systematic
+uncertainties added quadratically. The predictions of five QCD-based models discussed in the
+text are shown.
+
+
+
+
+                                                       24
+             1/NdE T /d(η - ηπ ) [GeV]
+                                             a)       -1.25 < ηπ* < - 0.25       b)       - 0.25 < η*π< 0.25
+                                     12
+                                                      < E*T,π > ≈ 4.0 GeV
+                                                                                               γ
+                                                                                                *
+                                                                                                       p
+             *                       10
+                                                                                              →←
+            ∗                            8
+                                         6
+             *
+                                         4
+                                         2
+                                         0
+                                             c)         0.25 < ηπ < 2.0
+                                                                  *                   0            2        4
+                                                                                                           η -ηπ
+                                                                                                            *   *
+                                     12
+                                     10                                           ●       H1 data
+                                                                                          DIR+RES
+                                         8                                                CCFM (CASCADE)
+                                         6                                                DIR
+                                                                                          2 < Q < 70 GeV
+                                                                                                   2            2
+                                         4
+                                                                                          p T,π > 2.5 GeV
+                                                                                           *
+                                         2
+                                         0
+                                                  0          2          4
+                                                                       η -ηπ
+                                                                        *    *
+
+
+
+
+Figure 7: Distributions of transverse energy flow in events containing a forward π ◦ produced in
+the range p∗T,π > 2.5 GeV, 5◦ < θπ < 25◦ and xπ = Eπ /Ep > 0.01. The transverse energy flow
+is presented as a function of the distance in pseudorapidity from the selected forward π ◦ for
+various ranges in the π ◦ pseudorapidity. The DIS kinematic region is specified by 2 < Q2 < 70
+GeV2 and 0.1 < y < 0.6. The inner error bars denote the statistical uncertainties and the outer
+error bars show the statistical and systematic uncertainties added quadratically. The predictions
+of three QCD-based models discussed in the text are shown.
+
+
+
+
+                                                                 25
+                           6
+                                          -1.25 < η π< - 0.25                 - 0.25 < η π< 0.25
+                                                   *                                   *
+
+
+
+
+          < E*T > [GeV]
+                          5.5
+
+                           5
+
+                          4.5
+
+                           4
+
+                          3.5
+
+                           3
+                                          0.25 < η*π < 2.0               -4           x-3
+                                                                    10          10
+                          5.5
+                                                                    ●     H1 data
+                           5                                              DIR + RES
+                                                                          CCFM (CASCADE)
+                          4.5
+                                                                          DIR
+                           4                                              CDM
+                                                                    2 < Q < 70 GeV
+                                                                              2             2
+                          3.5                                                       ∗ *
+                                                                    < ET> for 1 < η -η π < 3
+                                                                        *
+
+                                                                    p T,π > 2.5 GeV
+                                                                     *
+                           3
+                          2.5
+                                10
+                                     -4
+                                                10
+                                                       -3       x
+
+
+Figure 8: The mean transverse energy in events containing a forward π ◦ produced in the range
+p∗T,π > 2.5 GeV, 5◦ < θπ < 25◦ and xπ = Eπ /Ep > 0.01. The transverse energy is measured
+over the region 1.0 < η ∗ − ηπ∗ < 3.0 as a function of Bjorken-x for three intervals of π ◦
+pseduorapidity. The DIS kinematic region is further specified by 2 < Q2 < 70 GeV2 and
+0.1 < y < 0.6. The inner error bars denote the statistical uncertainties and the outer error bars
+show the statistical and systematic uncertainties added quadratically. The predictions of four
+QCD-based models discussed in the text are shown.
+
+
+
+
+                                                   26
+

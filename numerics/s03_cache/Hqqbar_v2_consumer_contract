@@ -1,0 +1,18 @@
+{
+	"Status":"Complete",
+	"Channel":"Hqqbar_v2",
+	"InputSHA256":"ce6cada31c35bb582fc4f309538bf9058781164d489861d0b889ba4ddcf32edd",
+	"Checks":{
+		"pole_residues_zero":true,
+		"regular_only":true,
+		"positive_rho_branch":true,
+		"partonic_variables":true,
+		"finite_coefficients":true
+	},
+	"JacobianAlreadyIncluded":false,
+	"NLOAlphaDegree":2,
+	"RhoSquared":"(s^2 + 2*s*t + t^2 + 4*Q2*w)\/4",
+	"HatVariableRules":"{s -> Q2*(-1 + xh^(-1)), t -> -Q2 + (Q2 - qT2)*zh, w -> (Q2 - Q2*xh - Q2*zh + Q2*xh*zh - qT2*xh*zh)\/xh}",
+	"ChargeParameter":"eq2",
+	"ChargeParameterDegree":1
+}

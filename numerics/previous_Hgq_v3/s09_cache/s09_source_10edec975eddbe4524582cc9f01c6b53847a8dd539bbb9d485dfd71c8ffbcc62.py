@@ -1,0 +1,413 @@
+#!/usr/bin/env python3
+"""Execute the supplied six-channel hats in the H1 neutral-pion bins."""
+from pathlib import Path
+import sys
+ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT/'python_deps'))
+import argparse, ctypes as C, hashlib, json, os, pickle, subprocess, time
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from datetime import datetime, timezone
+import numpy as np
+import sympy as S
+import vegas, gvar
+
+CHANNELS = ['Hqq_v2', 'Hgg', 'Hqqbar', 'Hqqprime', 'Hgq_v3', 'Hqg_v3']
+FFS = ['KKP', 'Kretzer']
+CACHE = ROOT/'s09_cache'
+
+
+def record(message):
+    with (ROOT.parent/'progress.md').open('a') as f:
+        f.write('\nNumerics S09 '+datetime.now(timezone.utc).isoformat()+': '+message+'\n')
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write_json(path, value):
+    temporary = path.with_name(path.name+'.tmp')
+    temporary.write_text(json.dumps(value, indent=2, allow_nan=False)+'\n')
+    temporary.replace(path)
+
+
+def load(name):
+    return json.loads((ROOT/name).read_text())
+
+
+def derive_and_build():
+    CACHE.mkdir(exist_ok=True)
+    maps, inputs, kernels, actions = [load('s%02d_result'%n) for n in [4, 6, 7, 8]]
+    for obj, source in zip([maps, inputs, kernels, actions], [
+            's04_derive_convolution_maps.py', 's06_prepare_pdf_ff.py',
+            's07_compile_hard_functions.py', 's08_derive_consumer_actions.py']):
+        assert obj['status'] == 'Complete' and obj['producer_sha256'] == sha(ROOT/source)
+        checks = obj['checks']
+        assert all(checks.values()) if isinstance(checks, dict) else all(c['passed'] for c in checks)
+    for obj in [inputs, kernels]:
+        assert sha(ROOT/obj['library']) == obj['library_sha256']
+    for bundle in kernels['bundles']:
+        assert sha(ROOT/bundle['Program']) == bundle['ProgramSHA256']
+    assert load('s02_result')['convolution_authorized_by_this_gate']
+
+    # MRST's returned valence and sea definitions are solved for this flavor order.
+    flavors = inputs['flavor_order']; raw_names = inputs['raw_pdf_order']
+    f = S.symbols('f0:'+str(len(flavors))); raw = S.symbols('r0:'+str(len(raw_names)))
+    xi = S.Symbol('xi', positive=True)
+    index = {name: i for i, name in enumerate(flavors)}
+    equations = []
+    for name, value in zip(raw_names, raw):
+        name = name.removeprefix('x_')
+        if name in ['uv', 'dv']:
+            q = name.removesuffix('v')
+            equations.append(S.Eq(value, xi*(f[index[q]]-f[index[q+'bar']])))
+        else:
+            equations.append(S.Eq(value, xi*f[index[name]]))
+    for name in ['s', 'c', 'b']:
+        equations.append(S.Eq(f[index[name]], f[index[name+'bar']]))
+    solved = S.solve(equations, f, dict=True)
+    assert len(solved) == 1 and all(S.simplify((eq.lhs-eq.rhs).subs(solved[0])) == 0 for eq in equations)
+    pdf_code = '\n'.join(' f[%d]=%s;'%(i, S.ccode(solved[0][v])) for i, v in enumerate(f))
+    raw_code = ','.join('r%d=raw[%d]'%(i, i) for i in range(len(raw)))
+    Dplus, Dminus, Dsum = S.symbols('Dplus Dminus Dsum')
+    neutral = S.sympify(maps['expressions']['neutral_pion_FF'])
+    neutral_sum = S.simplify(neutral.subs(Dminus, S.solve(S.Eq(Dsum, Dplus+Dminus), Dminus)[0]))
+    neutral_factor = S.diff(neutral_sum, Dsum)
+    assert S.simplify(neutral_sum-neutral_factor*Dsum) == 0
+
+    u, low, high = S.symbols('coordinate lower upper', positive=True)
+    linear = low+(high-low)*u
+    logarithmic = low*S.exp(u*S.log(high/low))
+    transforms = {}
+    for name, value in [('linear', linear), ('logarithmic', logarithmic)]:
+        jacobian = S.diff(value, u)
+        assert S.simplify(value.subs(u, 0)-low) == 0 and S.simplify(value.subs(u, 1)-high) == 0
+        transforms[name] = dict(expression=str(value), jacobian=str(jacobian))
+    c_maps = maps['c_expressions']
+    map_functions = []
+    for name in ['s', 't', 'u', 'xHat', 'xB', 'zeta', 'B', 'xi_min', 'jacobian',
+                 'z_lower', 'z_upper', 'sigma_weight_F1', 'sigma_weight_F2', 'mu2']:
+        map_functions.append('static double map_%s(double Q2,double y,double pt,double zH,double xi,double s23){return %s;}'%
+                             (name, c_maps[name].replace('xB', '('+c_maps['xB']+')')))
+    lum_code = []
+    lum_labels = ['Hqq_group0', 'Hqq_group1', 'Hgg', 'Hqqbar',
+                  'Hqqprime_IncomingChargeSquared', 'Hqqprime_PrimeChargeSquared',
+                  'Hqqprime_MixedIncomingPrimeCharge', 'Hgq_v3', 'Hqg_v3']
+    for nf, data in actions['luminosities'].items():
+        statements = []
+        exprs = [g['c_expression'] for g in data['hqq_charge_groups']]
+        exprs += [data['c_expressions'][name] for name in lum_labels[2:]]
+        for i, expression in enumerate(exprs):
+            statements.append(' v[%d]=%s;'%(i, expression))
+        for i, group in enumerate(data['hqq_charge_groups']):
+            statements.append(' charges[%d][0]=%s;charges[%d][1]=%s;charges[%d][2]=%d;charges[%d][3]=%d;'%(
+                i, S.ccode(S.sympify(group['charge'])), i, S.ccode(S.sympify(group['other_charge'])),
+                i, group['same_charge_flavor_count'], i, group['other_charge_flavor_count']))
+        lum_code.append('if(nf==%s){%s}else '%(nf, '\n'.join(statements)))
+    bundle_code = []
+    label_ids = {'LODelta': 0, 'Delta': 1, 'L0': 2, 'L1': 3, 'Regular': 4,
+                 'IncomingChargeSquared_Regular': 5, 'PrimeChargeSquared_Regular': 6,
+                 'MixedIncomingPrimeCharge_Regular': 7}
+    for b in kernels['bundles']:
+        bundle_code.append('ids[%d][%d][%d]=sidis_load_program(%s);included[%d][%d]=%s;'%(
+            CHANNELS.index(b['Channel']), label_ids[b['Label']], int(b['Branch'] > 0),
+            json.dumps(str(ROOT/b['Program'])), CHANNELS.index(b['Channel']), label_ids[b['Label']],
+            str(b['JacobianAlreadyIncluded']).lower()))
+    alpha = inputs['alpha']; physical = maps['defining_physics_inputs']
+    accepted = actions['azimuthal_acceptance']
+    theta = [S.pi*S.Rational(v)/S.Integer(180) for v in physical['lab_theta_degrees']]
+    substitutions = {
+        '@@MAP_FUNCTIONS@@': '\n'.join(map_functions), '@@PDF_MAP@@': pdf_code,
+        '@@RAW_DECLARATIONS@@': raw_code,
+        '@@LUMINOSITY_DECLARATIONS@@': ','.join('%s%d=%s[%d]'%(v, i, v, i) for v in ['f', 'd'] for i in range(len(flavors))),
+        '@@LUMINOSITIES@@': ''.join(lum_code)+'{throw std::runtime_error("unsupported active flavors");}',
+        '@@PROGRAMS@@': '\n'.join(bundle_code),
+        '@@NEUTRAL_FACTOR@@': S.ccode(neutral_factor),
+        '@@ENERGY_BOUND@@': accepted['c_energy_cosine_bound'],
+        '@@THETA_BOUND@@': accepted['c_theta_cosine_bound'], '@@AZIMUTH_FRACTION@@': accepted['c_fraction'],
+        '@@THETA_MIN@@': S.ccode(theta[0]), '@@THETA_MAX@@': S.ccode(theta[1]),
+        '@@E_FRAC@@': physical['lab_Epi_over_Ep_min'],
+        '@@EE@@': physical['Ee_GeV'], '@@EP@@': physical['Ep_GeV'],
+        '@@ALPHA_EM@@': repr(inputs['alpha_EM']), '@@PB@@': repr(inputs['GeV_minus2_to_pb']),
+        '@@MC2@@': repr(alpha['mc2_GeV2']), '@@MB2@@': repr(alpha['mb2_GeV2']),
+        '@@LAMBDA2@@': repr(alpha['lambda4_squared_GeV2']),
+        '@@LOG_MAP@@': S.ccode(logarithmic), '@@LOG_JAC@@': S.ccode(S.diff(logarithmic, u)),
+        '@@LIN_MAP@@': S.ccode(linear), '@@LIN_JAC@@': S.ccode(S.diff(linear, u)),
+    }
+    source = NATIVE
+    for key, value in substitutions.items():
+        source = source.replace(key, value)
+    assert '@@' not in source
+    path = CACHE/'s09_integrand.cpp'; path.write_text(source)
+    libpath = CACHE/'s09_integrand.so'
+    build = subprocess.run(['g++', '-std=c++20', '-O3', '-shared', '-fPIC', str(path),
+        str(ROOT/kernels['library']), str(ROOT/inputs['library']), '-o', str(libpath)], capture_output=True, text=True, timeout=60)
+    (CACHE/'s09_build.log').write_text(build.stdout+build.stderr)
+    assert build.returncode == 0, build.stderr
+    contract = dict(stage='s09', status='IntegrandBuilt', producer_sha256=sha(Path(__file__)),
+        input_hashes={name: sha(ROOT/name) for name in ['s02_result', 's04_result', 's06_result', 's07_result', 's08_result', 'dsigmapibydpt/s01_result']},
+        native_source_sha256=sha(path), native_library_sha256=sha(libpath),
+        pdf_map={str(v): str(solved[0][v]) for v in f}, neutral_sum=str(neutral_sum), transforms=transforms,
+        channels=CHANNELS, FFs=FFS, numerical_zero_policy='Only exact cut rejection and absent LO/interference sectors return zero; native failures raise.',
+        components=[dict(FF=ff, channel=ch, order=order) for ff in FFS for ch in CHANNELS for order in ['LO', 'NLO_correction']],
+        caveats=[physical['azimuth'], 'Supplied Hgq_v3 finite-delta residue retained under the explicit user override.',
+                 'Central common scale only; errors are integration errors, not theoretical uncertainty.'])
+    write_json(CACHE/'s09_build_result', contract)
+    return contract
+
+
+NATIVE = r'''
+#include <cmath>
+#include <algorithm>
+#include <string>
+#include <sstream>
+#include <stdexcept>
+#include <cstring>
+extern "C" int sidis_load_program(const char*);
+extern "C" int sidis_eval(int,const double*,double*);
+extern "C" void sidis_pdf(double,double,double*);
+extern "C" void sidis_kkp(double,double,int,double*);
+extern "C" void sidis_kretzer(double,double,int,double*);
+extern "C" void sidis_set_alpha(double,double,double);
+extern "C" double sidis_alpha(double);
+static constexpr double Ee=@@EE@@,Ep=@@EP@@,alphaEM=@@ALPHA_EM@@,pb=@@PB@@;
+static int ids[6][8][2];static bool included[6][8];
+static std::string failure;
+@@MAP_FUNCTIONS@@
+static double linmap(double coordinate,double lower,double upper,double& jac){jac=@@LIN_JAC@@;return @@LIN_MAP@@;}
+static double logmap(double coordinate,double lower,double upper,double& jac){jac=@@LOG_JAC@@;return @@LOG_MAP@@;}
+static void luminosity(int nf,const double*f,const double*d,double*v,double charges[2][4]){
+ const double @@LUMINOSITY_DECLARATIONS@@;
+ @@LUMINOSITIES@@
+}
+static void pdf(double xi,double mu2,double*f){
+ if(!(xi>=1e-5 && xi<=1 && mu2>=1.25 && mu2<=1e7))throw std::runtime_error("MRST grid range");
+ double raw[8];sidis_pdf(xi,sqrt(mu2),raw);const double @@RAW_DECLARATIONS@@;
+ @@PDF_MAP@@
+}
+static void ff(double z,double mu2,int set,double*d){
+ if(!(z>=0.01 && z<=1 && mu2>=1 && mu2<=1e6))throw std::runtime_error("FF grid range");
+ if(set==0)sidis_kkp(z,sqrt(mu2),5,d);
+ else {sidis_kretzer(z,mu2,3,d);for(int i=0;i<11;i++)d[i]*=@@NEUTRAL_FACTOR@@;}
+ for(int i=1;i<11;i+=2)if(std::abs(d[i]-d[i+1])>1e-12*std::max(1.,std::abs(d[i])))throw std::runtime_error("neutral FF conjugation");
+}
+static double acceptance(double Q2,double y,double pt,double zH){
+ double Emin=@@E_FRAC@@*Ep;
+ double lo=std::max(-1.,@@ENERGY_BOUND@@);
+ double ctheta=cos(@@THETA_MAX@@);
+ lo=std::max(lo,@@THETA_BOUND@@);
+ ctheta=cos(@@THETA_MIN@@);
+ double hi=std::min(1.,@@THETA_BOUND@@);
+ if(lo>=hi)return 0.;
+ return @@AZIMUTH_FRACTION@@;
+}
+extern "C" int sidis_init(){
+ try{std::fill(&ids[0][0][0],&ids[0][0][0]+6*8*2,-1);
+ @@PROGRAMS@@
+ sidis_set_alpha(@@MC2@@,@@MB2@@,@@LAMBDA2@@);return 0;
+ }catch(...){return 1;}
+}
+extern "C" const char* sidis_error(){return failure.c_str();}
+struct Point{
+ double Q2,y,pt,zH,xi,ss,B,mu2,zeta,J,s,t,w1,w2,args[19];int nf,branch;
+ Point(double Q,double yy,double pp,double z,double xx,double recoil):Q2(Q),y(yy),pt(pp),zH(z),xi(xx),ss(recoil){
+  B=map_B(Q2,y,pt,zH,xi,ss);mu2=map_mu2(Q2,y,pt,zH,xi,ss);
+  zeta=map_zeta(Q2,y,pt,zH,xi,ss);J=map_jacobian(Q2,y,pt,zH,xi,ss);
+  s=map_s(Q2,y,pt,zH,xi,ss);t=map_t(Q2,y,pt,zH,xi,ss);
+  nf=mu2<@@MB2@@?4:5;branch=s+t>0;
+  if(!(s>0 && t<0 && B>0 && zeta>0 && zeta<1 && J>0 && mu2>@@MC2@@))throw std::runtime_error("partonic map domain");
+  w1=map_sigma_weight_F1(Q2,y,pt,zH,xi,ss)/xi;
+  w2=map_sigma_weight_F2(Q2,y,pt,zH,xi,ss);
+  const double a[]={Q2,s,t,ss,B,mu2,map_xHat(Q2,y,pt,zH,xi,ss),zH,pt*pt,map_xB(Q2,y,pt,zH,xi,ss),xi,sidis_alpha(mu2),1,1,0,0,double(nf),1,std::abs(s+t)};
+  std::copy(a,a+19,args);
+ }
+ double coefficient(int ch,int label,const double*charge=nullptr){
+  int id=ids[ch][label][branch];if(id<0)throw std::runtime_error("missing hard function");
+  if(charge)std::copy(charge,charge+4,args+12);else {args[12]=args[13]=1;args[14]=args[15]=0;}
+  double out[3];int status=sidis_eval(id,args,out);
+  if(status){std::ostringstream os;os<<"hard function status="<<status<<" channel="<<ch<<" label="<<label<<" branch="<<branch<<" output="<<out[0]<<","<<out[1]<<","<<out[2]<<" args=";os.precision(17);for(auto v:args)os<<v<<",";throw std::runtime_error(os.str());}
+  return (out[0]*w1+out[1]*w2)*(included[ch][label]?1.:J)/(zeta*zeta);
+ }
+};
+extern "C" int sidis_integrand(const double*unit,const double*bounds,double*out,double*diagnostics){
+ try{
+  std::fill(out,out+24,0.);std::fill(diagnostics,diagnostics+10,0.);
+  double jq,jy,jp,jz,jxi,jss;
+  double Q2=logmap(unit[0],bounds[0],bounds[1],jq),y=linmap(unit[1],bounds[2],bounds[3],jy),pt=logmap(unit[2],bounds[4],bounds[5],jp);
+  double zl=map_z_lower(Q2,y,pt,0,0,0),zh=map_z_upper(Q2,y,pt,0,0,0);
+  if(!(std::isfinite(zl)&&zl>0&&zh>zl&&zh<1))throw std::runtime_error("hadron z bounds");
+  double zH=logmap(unit[3],zl,zh,jz);
+  double acc=acceptance(Q2,y,pt,zH);diagnostics[0]=acc;
+  if(acc==0)return 0;
+  double xmin=map_xi_min(Q2,y,pt,zH,0,0);
+  double xi=logmap(unit[4],xmin,1.,jxi),B=map_B(Q2,y,pt,zH,xi,0);
+  double ss=linmap(unit[5],0.,B,jss);
+  Point end(Q2,y,pt,zH,xi,0),cur(Q2,y,pt,zH,xi,ss);
+  double weight=jq*jy*jp*jz*jxi*acc*pb;
+  diagnostics[1]=xi;diagnostics[2]=end.zeta;diagnostics[3]=cur.zeta;
+  diagnostics[4]=Q2;diagnostics[5]=y;diagnostics[6]=pt;diagnostics[7]=zH;diagnostics[8]=ss;diagnostics[9]=B;
+  double f[11],d[11],lum[2][2][9],charges[2][4];pdf(xi,end.mu2,f);
+  for(int set=0;set<2;set++)for(int pos=0;pos<2;pos++){
+   ff(pos?cur.zeta:end.zeta,end.mu2,set,d);luminosity(end.nf,f,d,lum[set][pos],charges);
+   if(std::abs(lum[set][pos][6])>1e-10*std::max(1.,std::abs(lum[set][pos][4])))throw std::runtime_error("prime interference identity");
+  }
+  for(int ch=0;ch<6;ch++){
+   if(ch==1||ch==2||ch==3){
+    if(ch==3){for(int basis=0;basis<2;basis++){
+     double h=cur.coefficient(ch,5+basis);
+     for(int set=0;set<2;set++)out[set*12+ch*2+1]+=h*lum[set][1][4+basis]*jss*weight;
+    }}else {
+     double h=cur.coefficient(ch,4);int which=ch+1;
+     for(int set=0;set<2;set++)out[set*12+ch*2+1]=h*lum[set][1][which]*jss*weight;
+    }
+    continue;
+   }
+   for(int group=0;group<(ch==0?2:1);group++){
+    const double*charge=ch==0?charges[group]:nullptr;
+    int which=ch==0?group:ch+3;
+    double born=end.coefficient(ch,0,charge),delta=end.coefficient(ch,1,charge),reg=cur.coefficient(ch,4,charge);
+    double p0=end.coefficient(ch,2,charge),p1=cur.coefficient(ch,2,charge);
+    double l0=end.coefficient(ch,3,charge),l1=cur.coefficient(ch,3,charge);
+    double logarithm=log(ch==5?ss/B:ss);
+    for(int set=0;set<2;set++){
+     double e=lum[set][0][which],c=lum[set][1][which];
+     out[set*12+ch*2]+=born*e*weight;
+     out[set*12+ch*2+1]+=(delta*e+(reg*c+(p1*c-p0*e)/ss+(l1*c-l0*e)*logarithm/ss)*jss)*weight;
+    }
+   }
+  }
+  for(int i=0;i<24;i++)if(!std::isfinite(out[i]))throw std::runtime_error("nonfinite convolution");
+  return 0;
+ }catch(const std::exception&e){failure=e.what();return 1;}
+}
+'''
+
+
+class Evaluator:
+    def __init__(self, bounds):
+        self.bounds = np.ascontiguousarray(bounds, dtype=float)
+        self.lib = C.CDLL(str(CACHE/'s09_integrand.so'))
+        self.lib.sidis_init.restype = C.c_int
+        assert self.lib.sidis_init() == 0
+        arr = np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags='C_CONTIGUOUS')
+        self.lib.sidis_integrand.argtypes = [arr, arr, arr, arr]
+        self.lib.sidis_integrand.restype = C.c_int
+        self.lib.sidis_error.restype = C.c_char_p
+        self.calls = self.accepted = 0; self.last_print = time.monotonic()
+
+    def evaluate(self, unit):
+        unit = np.ascontiguousarray(unit, dtype=float)
+        out = np.empty(24); diagnostics = np.empty(10)
+        status = self.lib.sidis_integrand(unit, self.bounds, out, diagnostics)
+        if status:
+            details = dict(unit=unit.tolist(), bounds=self.bounds.tolist(), diagnostics=diagnostics.tolist(),
+                           error=self.lib.sidis_error().decode(), pid=os.getpid())
+            write_json(CACHE/('s09_failure_%d.json'%os.getpid()), details)
+            raise RuntimeError(details)
+        self.calls += 1; self.accepted += int(diagnostics[0] > 0)
+        if time.monotonic()-self.last_print > 30:
+            print('S09_EVALUATIONS', os.getpid(), self.calls, 'accepted', self.accepted, flush=True)
+            self.last_print = time.monotonic()
+        return out, diagnostics
+
+    def __call__(self, unit):
+        out, _ = self.evaluate(unit)
+        # The first component controls adaptation and bounds every signed component.
+        return np.r_[np.sum(np.abs(out)), out.reshape(2, 12).sum(axis=1), out]
+
+
+def bins():
+    result = []
+    for panel, table in enumerate(load('dsigmapibydpt/s01_result')['tables']):
+        for number, b in enumerate(table['bins']):
+            result.append(dict(id='q%d_p%d'%(panel, number), panel=panel, bin=number,
+                bounds=list(map(float, table['Q2_range_GeV2']+table['y_range']+[b['pt_low_GeV'], b['pt_high_GeV']]))))
+    return result
+
+
+def smoke(count):
+    rng = np.random.default_rng(904731)
+    evaluator = Evaluator(bins()[0]['bounds']); rows = []; start = time.monotonic()
+    for i in range(count):
+        unit = rng.uniform(1e-5, 1-1e-5, 6); out, diag = evaluator.evaluate(unit)
+        rows.append(dict(unit=unit.tolist(), diagnostics=diag.tolist(), components=out.tolist()))
+        print('S09_SMOKE', i, 'acceptance', diag[0], 'totals', out.reshape(2, 12).sum(axis=1).tolist(), flush=True)
+    result = dict(status='SmokePassed', points=rows, calls=evaluator.calls, accepted=evaluator.accepted,
+                  wall_seconds=time.monotonic()-start, source_sha256=sha(Path(__file__)))
+    write_json(CACHE/'s09_smoke_result', result)
+    record('S09 smoke completed at '+str(count)+' sampled points; '+str(evaluator.accepted)+
+           ' pass laboratory cuts. Results and timing saved; no integrated prediction yet. Next run convergence-gated bin integrations.')
+    return result
+
+
+def integrate_bin(task):
+    spec, neval, nitn, seed, build_hash = task
+    destination = CACHE/(spec['id']+'_result')
+    if destination.exists():
+        old = json.loads(destination.read_text())
+        if old['build_sha256'] == build_hash and old['neval'] == neval and old['nitn'] == nitn:
+            print('S09_RESUME', spec['id'], flush=True); return old
+        destination.unlink()
+    gvar.ranseed(seed)
+    evaluator = Evaluator(spec['bounds'])
+    integrator = vegas.Integrator([[0., 1.]]*6)
+    print('S09_BIN_START', spec['id'], 'seed', seed, 'neval', neval, 'nitn', nitn, flush=True)
+    warm = integrator(evaluator, nitn=2, neval=max(100, neval//4))
+    print('S09_WARMUP', spec['id'], str(warm[1:3]), flush=True)
+    result = integrator(evaluator, nitn=nitn, neval=neval, saveall=str(CACHE/(spec['id']+'_vegas.pkl')))
+    means = np.asarray(gvar.mean(result)); cov = np.asarray(gvar.evalcov(result))
+    width = np.diff(spec['bounds'][-2:]).item()
+    totals = means[1:3]; errors = np.sqrt(np.diag(cov)[1:3])
+    record_value = dict(**spec, status='Integrated', neval=neval, nitn=nitn, seed=seed,
+        build_sha256=build_hash, calls=evaluator.calls, accepted=evaluator.accepted,
+        sigma_pb=totals.tolist(), sigma_error_pb=errors.tolist(),
+        dsigma_dpt_pb_per_GeV=(totals/width).tolist(), dsigma_error_pb_per_GeV=(errors/width).tolist(),
+        component_sigma_pb=means[3:].reshape(2, 6, 2).tolist(),
+        full_mean=means.tolist(), full_covariance=cov.tolist(), Q=float(result.Q), chi2=float(result.chi2), dof=int(result.dof),
+        iteration_summary=result.summary(), relative_error=(errors/np.maximum(np.abs(totals), 1e-100)).tolist())
+    write_json(destination, record_value)
+    print('S09_BIN_DONE', spec['id'], record_value['dsigma_dpt_pb_per_GeV'], 'errors', record_value['dsigma_error_pb_per_GeV'], 'Q', result.Q, flush=True)
+    return record_value
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--mode', choices=['build', 'smoke', 'integrate'], default='smoke')
+    parser.add_argument('--points', type=int, default=16)
+    parser.add_argument('--neval', type=int, default=1000)
+    parser.add_argument('--nitn', type=int, default=6)
+    parser.add_argument('--workers', type=int, default=8)
+    parser.add_argument('--bins', nargs='*')
+    options = parser.parse_args()
+    record('Starting S09 '+options.mode+' with exact frozen inputs and generated transformations. Next inspect numerical gates and retain all signed channel contributions.')
+    if options.mode == 'build':
+        derive_and_build(); record('Native integrand built and input hashes gated. Next execute phase-space smoke checks.'); return
+    contract = load('s09_cache/s09_build_result')
+    assert contract['producer_sha256'] == sha(Path(__file__)), 'Rebuild S09 after a source change'
+    if options.mode == 'smoke':
+        print(json.dumps({k: v for k, v in smoke(options.points).items() if k != 'points'}, indent=2)); return
+    selected = [b for b in bins() if not options.bins or b['id'] in options.bins]
+    tasks = [(b, options.neval, options.nitn, 730001+bins().index(b), sha(CACHE/'s09_build_result')) for b in selected]
+    results = []
+    with ProcessPoolExecutor(max_workers=min(options.workers, len(tasks))) as pool:
+        futures = [pool.submit(integrate_bin, task) for task in tasks]
+        for future in as_completed(futures):
+            result = future.result(); results.append(result)
+            record('Bin '+result['id']+' integrated; values and covariance saved. Next complete remaining bins and check convergence.')
+    results.sort(key=lambda r: (r['panel'], r['bin']))
+    complete = len(results) == len(bins())
+    result = dict(contract, status='IntegratedAllBins' if complete else 'IntegratedSelectedBins', bins=results,
+                  neval=options.neval, nitn=options.nitn,
+                  total_sigma_pb=np.sum([r['sigma_pb'] for r in results], axis=0).tolist(),
+                  total_sigma_error_pb=np.sqrt(np.sum(np.square([r['sigma_error_pb'] for r in results]), axis=0)).tolist())
+    path = ROOT/'s09_result' if complete else CACHE/'s09_selected_result'
+    write_json(path, result)
+    record('S09 integrated '+str(len(results))+' bins; raw results saved in '+str(path.relative_to(ROOT))+'. Next assess integration precision and stability before accepting a final prediction.')
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception as exc:
+        record('S09 failed: '+repr(exc)[:1500]+'. No failed coefficient is replaced by zero. Next diagnose the originating failure and rerun dependent results.')
+        raise

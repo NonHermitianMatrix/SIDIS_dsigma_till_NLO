@@ -1,0 +1,13 @@
+{
+	"Checks":{
+		"JacobianAgreesWithNumericsS04":true,
+		"PartonicMeasuresIndependentOfHadronicVariables":true,
+		"FragmentationJacobianDependsOnHadronicVariables":true
+	},
+	"Measures":{
+		"BornInvariant":"2*Pi",
+		"RealAngular":"(2^(-8 + 2*epsilon)*Pi^(-6 + epsilon)*Gamma[1 - epsilon])\/(s23^epsilon*Gamma[1 - 2*epsilon])"
+	},
+	"FragmentationJacobian":"-((xB*(-((PHT2*xB)\/xi) - Q2*zH^2 + (Q2*xB*zH^2)\/xi))\/((-Q2 + (Q2*xB)\/xi + (s23*xB)\/xi)^2*xi*zH))",
+	"InputSHA256":"8c6a83d9c92cf36f99b46a81a0b42159375a900915aa13ffed030984e557b68c"
+}
