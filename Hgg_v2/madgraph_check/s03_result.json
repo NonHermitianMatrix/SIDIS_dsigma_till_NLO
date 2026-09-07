@@ -1,0 +1,150 @@
+{
+  "all_pass": true,
+  "process": "a g > g u u~ QCD=2 QED=1",
+  "version": "version = 3.7.0\ndate = 2026-01-05",
+  "diagrams": 8,
+  "points": 6,
+  "comparisons": [
+    {
+      "point": 1,
+      "projection": "g",
+      "local": -34.67448874763581,
+      "madgraph": -34.67448874763583,
+      "relative_difference": 4.098360272484458e-16,
+      "pass": true
+    },
+    {
+      "point": 1,
+      "projection": "pp",
+      "local": 2656.7078252814804,
+      "madgraph": 2656.7078252814817,
+      "relative_difference": 5.135085008886324e-16,
+      "pass": true
+    },
+    {
+      "point": 2,
+      "projection": "g",
+      "local": -6.3859730403557675,
+      "madgraph": -6.38597304035577,
+      "relative_difference": 4.1724812213612654e-16,
+      "pass": true
+    },
+    {
+      "point": 2,
+      "projection": "pp",
+      "local": 545.5176805098888,
+      "madgraph": 545.5176805098889,
+      "relative_difference": 2.0840174715392228e-16,
+      "pass": true
+    },
+    {
+      "point": 3,
+      "projection": "g",
+      "local": -8.422448910967606,
+      "madgraph": -8.422448910967606,
+      "relative_difference": 0.0,
+      "pass": true
+    },
+    {
+      "point": 3,
+      "projection": "pp",
+      "local": 1796.6611538169188,
+      "madgraph": 1796.6611538169195,
+      "relative_difference": 3.7966036326914685e-16,
+      "pass": true
+    },
+    {
+      "point": 4,
+      "projection": "g",
+      "local": -1.3042653630345948,
+      "madgraph": -1.3042653630345957,
+      "relative_difference": 6.809798411219222e-16,
+      "pass": true
+    },
+    {
+      "point": 4,
+      "projection": "pp",
+      "local": 48.86120810126984,
+      "madgraph": 48.86120810126988,
+      "relative_difference": 8.725237422956394e-16,
+      "pass": true
+    },
+    {
+      "point": 5,
+      "projection": "g",
+      "local": -1.3245408048831424,
+      "madgraph": -1.3245408048831424,
+      "relative_difference": 0.0,
+      "pass": true
+    },
+    {
+      "point": 5,
+      "projection": "pp",
+      "local": 38.837227924722434,
+      "madgraph": 38.83722792472244,
+      "relative_difference": 1.8295402986467866e-16,
+      "pass": true
+    },
+    {
+      "point": 6,
+      "projection": "g",
+      "local": -2.098585664687299,
+      "madgraph": -2.098585664687299,
+      "relative_difference": 0.0,
+      "pass": true
+    },
+    {
+      "point": 6,
+      "projection": "pp",
+      "local": 110.69686494839696,
+      "madgraph": 110.696864948397,
+      "relative_difference": 3.8512892090918577e-16,
+      "pass": true
+    }
+  ],
+  "ward_checks": [
+    {
+      "point": 1,
+      "normalized_squared_residual": 8.770940944027572e-33,
+      "pass": true
+    },
+    {
+      "point": 2,
+      "normalized_squared_residual": 8.173905785726884e-33,
+      "pass": true
+    },
+    {
+      "point": 3,
+      "normalized_squared_residual": 9.820791469628044e-34,
+      "pass": true
+    },
+    {
+      "point": 4,
+      "normalized_squared_residual": 1.511315062183669e-32,
+      "pass": true
+    },
+    {
+      "point": 5,
+      "normalized_squared_residual": 7.349965217237155e-33,
+      "pass": true
+    },
+    {
+      "point": 6,
+      "normalized_squared_residual": 4.4465600476628664e-33,
+      "pass": true
+    }
+  ],
+  "relative_tolerance": 2e-09,
+  "ward_squared_tolerance": 1e-20,
+  "max_relative_difference": 8.725237422956394e-16,
+  "max_ward_squared_residual": 1.511315062183669e-32,
+  "generated_initial_denominator": 32,
+  "photon_helicity_multiplicity": 2,
+  "incoming_gluon_average_denominator": 16.0,
+  "coupling_norm": 0.09267706402353806,
+  "strong_coupling": 1.2177157847767197,
+  "photon_quark_coupling_magnitude": 0.20530251149624587,
+  "production_tensor_sha256": "8fd5a266c5a15fa3d2cbed9992e26ef005ec3e2400838a0363db1dcc407ed4e7",
+  "production_hats_sha256": "85a5cd93f6fda886884f1de799a71081fe96933a5172894613f69e6f0e1c5d58",
+  "patched_matrix_sha256": "a3cb38c306f57171cf6c9708f1f1486e5f9b5d812e80d7d5fd314fa476380bc5"
+}

@@ -1,0 +1,139 @@
+<|"g" -> {0, (8*eq^2*gs^4*(2*Q2*rho*s^4 + 2*rho*s^5 + 2*rho*s^4*t - 
+       4*Q2*rho*s^2*t^2 - 4*rho*s^3*t^2 - 4*rho*s^2*t^3 + 2*Q2*rho*t^4 + 
+       2*rho*s*t^4 + 2*rho*t^5 - 2*rho*s^4*w + 16*Q2^2*rho*s*t*w + 
+       16*Q2*rho*s^2*t*w + 4*rho*s^3*t*w + 16*Q2*rho*s*t^2*w + 
+       12*rho*s^2*t^2*w + 4*rho*s*t^3*w - 2*rho*t^4*w + 16*Q2^3*rho*w^2 + 
+       16*Q2^2*rho*s*w^2 + 4*Q2*rho*s^2*w^2 + 16*Q2^2*rho*t*w^2 + 
+       8*Q2*rho*s*t*w^2 + 4*Q2*rho*t^2*w^2 + 3*Q2^2*s^4*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 
+       2*Q2*s^5*ArcCoth[(2*Q2 + s + t)/(2*rho)] - 
+       s^6*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 20*Q2^2*s^3*t*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 22*Q2*s^4*t*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 
+       2*s^5*t*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 34*Q2^2*s^2*t^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 56*Q2*s^3*t^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 
+       s^4*t^2*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 20*Q2^2*s*t^3*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 56*Q2*s^2*t^3*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 4*s^3*t^3*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 3*Q2^2*t^4*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 22*Q2*s*t^4*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 
+       s^2*t^4*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 
+       2*Q2*t^5*ArcCoth[(2*Q2 + s + t)/(2*rho)] - 
+       2*s*t^5*ArcCoth[(2*Q2 + s + t)/(2*rho)] - 
+       t^6*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 40*Q2^3*s^2*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 40*Q2^2*s^3*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 3*Q2*s^4*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 
+       s^5*w*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 64*Q2^3*s*t*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 96*Q2^2*s^2*t*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 28*Q2*s^3*t*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 
+       s^4*t*w*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 40*Q2^3*t^2*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 96*Q2^2*s*t^2*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 50*Q2*s^2*t^2*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 2*s^3*t^2*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 40*Q2^2*t^3*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 28*Q2*s*t^3*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 2*s^2*t^3*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 3*Q2*t^4*w*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 
+       s*t^4*w*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 
+       t^5*w*ArcCoth[(2*Q2 + s + t)/(2*rho)] + 64*Q2^4*w^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 56*Q2^3*s*w^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 48*Q2^2*s^2*w^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 56*Q2^3*t*w^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 80*Q2^2*s*t*w^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 8*Q2*s^2*t*w^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 48*Q2^2*t^2*w^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 8*Q2*s*t^2*w^2*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] - 64*Q2^3*w^3*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 8*Q2^2*s*w^3*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)] + 8*Q2^2*t*w^3*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)]))/(Nc*rho*(Q2 + s + t - w)^2*
+      (s^2 + 2*s*t + t^2 + 4*Q2*w)^2) - 
+    (24*eq^2*gs^4*Q2*Log[(2*Q2 + 2*rho + s + t)/(2*Q2 - 2*rho + s + t)])/
+     (Nc*rho*(Q2 + s + t - w)) - 
+    (8*eq^2*gs^4*Log[((Q2 + s + t - w)*w)/((s - w)*(-t + w))])/
+     (Nc*(Q2 + s + t - w))}, 
+ "pp" -> {0, (2*eq^2*gs^4*(t - w)*(2*Q2^2 + 4*Q2*s + 2*s^2 - Q2*t - s*t + 
+       t^2 + Q2*w + s*w - 2*t*w + w^2)*((s*t + t^2 + 2*Q2*w + s*w - t*w)/
+        (2*rho*(t - w)) + ArcCoth[(2*Q2 + s + t)/(2*rho)] - 
+       ((2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - t*w)*
+         ArcCoth[(2*Q2 + s + t)/(2*rho)])/(4*rho^2*(t - w))))/
+     (Nc*rho*(Q2 + s + t - w)^2) - (eq^2*gs^4*(Q2 + s)*(t - w)*
+      (Q2 + s - t + w)^2*(2 - ((2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - 
+          t*w))/(2*rho^2*(t - w)) + ((-1 + (2*Q2 + s + t)^2/(4*rho^2))*
+         (s*t + t^2 + 2*Q2*w + s*w - t*w)*ArcCoth[(2*Q2 + s + t)/(2*rho)])/
+        (rho*(t - w))))/(Nc*rho^2*(-1 + (2*Q2 + s + t)^2/(4*rho^2))*
+      (Q2 + s + t - w)^2) + (eq^2*gs^4*(t - w)^2*(5*Q2 + 5*s - 3*t + 3*w)*
+      ((2*Q2 + s + t)/(2*rho) + ((s*t + t^2 + 2*Q2*w + s*w - t*w)*
+         (4 - (3*(2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - t*w))/
+           (4*rho^2*(t - w))))/(2*rho*(t - w)) + 
+       (3 - (2*Q2 + s + t)^2/(4*rho^2) - ((2*Q2 + s + t)*
+           (s*t + t^2 + 2*Q2*w + s*w - t*w))/(rho^2*(t - w)) + 
+         ((-1 + (3*(2*Q2 + s + t)^2)/(4*rho^2))*(s*t + t^2 + 2*Q2*w + s*w - 
+             t*w)^2)/(4*rho^2*(t - w)^2))*ArcCoth[(2*Q2 + s + t)/(2*rho)]))/
+     (2*Nc*rho*(Q2 + s + t - w)^2) + 
+    (eq^2*gs^4*(t - w)^3*((3*(2*Q2 + s + t))/(2*rho) + 
+       ((s*t + t^2 + 2*Q2*w + s*w - t*w)*(8 - (3*(2*Q2 + s + t)^2)/
+           (4*rho^2) - (9*(2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - t*w))/
+           (4*rho^2*(t - w)) + ((-4/3 + (5*(2*Q2 + s + t)^2)/(4*rho^2))*
+            (s*t + t^2 + 2*Q2*w + s*w - t*w)^2)/(4*rho^2*(t - w)^2)))/
+        (2*rho*(t - w)) - (-1 + ((2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - 
+            t*w))/(4*rho^2*(t - w)))*(5 - (3*(2*Q2 + s + t)^2)/(4*rho^2) - 
+         ((2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - t*w))/(rho^2*(t - w)) + 
+         ((-3 + (5*(2*Q2 + s + t)^2)/(4*rho^2))*(s*t + t^2 + 2*Q2*w + s*w - 
+             t*w)^2)/(4*rho^2*(t - w)^2))*ArcCoth[(2*Q2 + s + t)/(2*rho)]))/
+     (Nc*rho*(Q2 + s + t - w)^2) - 
+    (eq^2*gs^4*(t - w)^4*((9*(2*Q2 + s + t)^3*(s*t + t^2 + 2*Q2*w + s*w - 
+          t*w)*(3 - (5*(s*t + t^2 + 2*Q2*w + s*w - t*w)^2)/
+           (4*rho^2*(t - w)^2)))/(4*rho^4*(t - w)) + 
+       (3*(2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - t*w)*
+         (-11 + (13*(s*t + t^2 + 2*Q2*w + s*w - t*w)^2)/(4*rho^2*(t - w)^2)))/
+        (rho^2*(t - w)) + ((2*Q2 + s + t)^2*
+         (-51 + (111*(s*t + t^2 + 2*Q2*w + s*w - t*w)^2)/
+           (2*rho^2*(t - w)^2) - (115*(s*t + t^2 + 2*Q2*w + s*w - t*w)^4)/
+           (16*rho^4*(t - w)^4)))/(4*rho^2) + 
+       16*(3 - (3*(s*t + t^2 + 2*Q2*w + s*w - t*w)^2)/(2*rho^2*(t - w)^2) + 
+         (s*t + t^2 + 2*Q2*w + s*w - t*w)^4/(16*rho^4*(t - w)^4)) + 
+       (3*(2*Q2 + s + t)^4*(3 - (15*(s*t + t^2 + 2*Q2*w + s*w - t*w)^2)/
+           (2*rho^2*(t - w)^2) + (35*(s*t + t^2 + 2*Q2*w + s*w - t*w)^4)/
+           (16*rho^4*(t - w)^4)))/(16*rho^4) - 
+       3*(-1 + (2*Q2 + s + t)^2/(4*rho^2))*
+        ((3*(2*Q2 + s + t)*(-5 + (2*Q2 + s + t)^2/(4*rho^2)))/(2*rho) + 
+         (2*(-5 + (9*(2*Q2 + s + t)^2)/(4*rho^2))*(s*t + t^2 + 2*Q2*w + s*w - 
+            t*w))/(rho*(t - w)) + (3*(2*Q2 + s + t)*
+           (9 - (5*(2*Q2 + s + t)^2)/(4*rho^2))*(s*t + t^2 + 2*Q2*w + s*w - 
+             t*w)^2)/(4*rho^3*(t - w)^2) + 
+         ((12 - (15*(2*Q2 + s + t)^2)/rho^2)*(s*t + t^2 + 2*Q2*w + s*w - t*w)^
+            3)/(8*rho^3*(t - w)^3) + (5*(2*Q2 + s + t)*
+           (-3 + (7*(2*Q2 + s + t)^2)/(4*rho^2))*(s*t + t^2 + 2*Q2*w + s*w - 
+             t*w)^4)/(32*rho^5*(t - w)^4))*ArcCoth[(2*Q2 + s + t)/(2*rho)]))/
+     (6*Nc*rho^2*(-1 + (2*Q2 + s + t)^2/(4*rho^2))*(Q2 + s + t - w)^2) + 
+    (eq^2*gs^4*(t - w)^2*(5*Q2^2 + 10*Q2*s + 5*s^2 - 6*Q2*t - 6*s*t + t^2 + 
+       6*Q2*w + 6*s*w - 2*t*w + w^2)*(-2 + (2*Q2 + s + t)^2/(4*rho^2) + 
+       ((2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - t*w))/(2*rho^2*(t - w)) + 
+       ((2 - (3*(2*Q2 + s + t)^2)/(4*rho^2))*(s*t + t^2 + 2*Q2*w + s*w - t*w)^
+          2)/(4*rho^2*(t - w)^2) + (-1 + (2*Q2 + s + t)^2/(4*rho^2))*
+        (-1/2*(2*Q2 + s + t)/rho + ((s*t + t^2 + 2*Q2*w + s*w - t*w)*
+           (-2 + (3*(2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - t*w))/
+             (4*rho^2*(t - w))))/(2*rho*(t - w)))*
+        ArcCoth[(2*Q2 + s + t)/(2*rho)]))/
+     (Nc*rho^2*(-1 + (2*Q2 + s + t)^2/(4*rho^2))*(Q2 + s + t - w)^2) - 
+    (eq^2*gs^4*(t - w)^3*(2*Q2 + 2*s - t + w)*
+      (8 - (3*(2*Q2 + s + t)^2)/(2*rho^2) + 
+       (3*(2*Q2 + s + t)*(-5 + (3*(2*Q2 + s + t)^2)/(4*rho^2))*
+         (s*t + t^2 + 2*Q2*w + s*w - t*w))/(4*rho^2*(t - w)) + 
+       (3*(-2 + (3*(2*Q2 + s + t)^2)/(4*rho^2))*(s*t + t^2 + 2*Q2*w + s*w - 
+           t*w)^2)/(2*rho^2*(t - w)^2) + 
+       ((2*Q2 + s + t)*(13 - (15*(2*Q2 + s + t)^2)/(4*rho^2))*
+         (s*t + t^2 + 2*Q2*w + s*w - t*w)^3)/(16*rho^4*(t - w)^3) + 
+       3*(-1 + (2*Q2 + s + t)^2/(4*rho^2))*((2*Q2 + s + t)/rho + 
+         ((s*t + t^2 + 2*Q2*w + s*w - t*w)*(3 - (3*(2*Q2 + s + t)^2)/
+             (4*rho^2) - (3*(2*Q2 + s + t)*(s*t + t^2 + 2*Q2*w + s*w - t*w))/
+             (2*rho^2*(t - w)) + ((-1 + (5*(2*Q2 + s + t)^2)/(4*rho^2))*
+              (s*t + t^2 + 2*Q2*w + s*w - t*w)^2)/(4*rho^2*(t - w)^2)))/
+          (2*rho*(t - w)))*ArcCoth[(2*Q2 + s + t)/(2*rho)]))/
+     (Nc*rho^2*(-1 + (2*Q2 + s + t)^2/(4*rho^2))*(Q2 + s + t - w)^2)}|>

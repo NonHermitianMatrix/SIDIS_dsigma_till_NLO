@@ -1,0 +1,86 @@
+# Hgg at order alpha_s squared
+
+This calculation follows Wang, Gonzalez-Hernandez, Rogers, and Sato,
+arXiv:1903.01529, using the supplied PDF. The supplied stand-alone QCD
+reference informed the FeynArts/FeynCalc amplitude and interference method.
+No other channel's calculation code is an input.
+
+The channel is gamma*(q) + g(p) -> g(k1) + q(k2) + qbar(k3).
+k1 is observed. The quark and antiquark are integrated once, with no
+identical-particle factor and no second copy of the spectator pair.
+The final charge factor `chargeSum` denotes the sum of squared charges of
+the massless quark flavours. `Nc` remains symbolic.
+
+The stages run directly with Wolfram Engine 15:
+
+- `s01_amplitudes.wls`: FeynArts diagrams for the real process and the two
+  Born processes needed in Eq. 46. Photon charge remains symbolic.
+- `s02_square.wls`: D-dimensional FeynCalc spin/color sums, physical gluon
+  polarization sums, and the photon Ward identity. Each interference is
+  checkpointed separately. The electromagnetic coupling is removed for the
+  current tensor. The incoming quark average is 1/(2 Nc); the incoming
+  gluon average is 1/((D-2)(Nc^2-1)).
+- `s03_partial_fractions.wls`: Appendix D affine partial fractions. Every
+  checkpoint is required to reconstruct its original rational expression.
+- `s04_angular_integrals.wls`: Appendix B angular integrals, with the pole
+  masters checked against F24 and F28. The recoil endpoint is checked at
+  symbolic epsilon before writing the full integrated result.
+- `s05_factorize.wls`: Eq. 46 MSbar subtractions, exact cancellation of
+  both collinear pole residues, and extraction of F1hat and F2hat using
+  the tensor decomposition. No virtual contribution occurs in this channel
+  (Table I).
+
+The main result is `s05_result/Fhats.wl`, with a plain-text version in
+the same directory. Its `Fhats` association contains `F1hat` and `F2hat`.
+It includes alpha_s squared and `chargeSum`, with the current-tensor and
+phase-space normalization of Eqs. 19 and 38, including 1/(2 pi)^4.
+`mu2` is the common squared MSbar renormalization and factorization scale.
+The incoming/outgoing quark and antiquark terms in the factorization sum
+follow Table II; they do not duplicate the real spectator pair.
+
+The Mandelstam variables are the paper's `s`, `t`, and `w = s23`;
+`u` has been eliminated using momentum conservation. The program records
+the positive auxiliary square root as `rho_squared` and `rho_branch`.
+Replace `rho` by `Sqrt[result["rho_squared"]]` when evaluating a hat.
+The physical region and the substitution rules to xhat, zhat, Q2, qT2
+are stored in the result. There are no fitted numerical parameters in the
+production calculation.
+
+Each stage saves its results in its numbered result directory. The trace
+stage and integration stages can resume from their own checkpoints. Run
+stages in order; the later stages must not be treated as complete until
+their full result files and checks exist. The external BigTMD comparison
+is performed only after the production result has been saved and hashed.
+
+The execution monitor uses a 9 GiB address-space limit, stops a process
+group above 6 GiB RSS or below 2 GiB system-available RAM, and records peak
+RSS and exit status in `sNN_resources.json`. FeynCalc interference algebra
+also uses a 4 GiB Wolfram memory constraint. No extra runner files are
+required.
+
+The executed result passed the Born and real photon Ward identities,
+all interference partial-fraction identities, the F24/F28 master checks,
+the recoil-endpoint test at symbolic epsilon, and both collinear pole
+cancellations. The accepted hats file SHA256 is
+`85a5cd93f6fda886884f1de799a71081fe96933a5172894613f69e6f0e1c5d58`.
+The maximum monitored process RSS was 1,353 MiB; no OOM occurred.
+
+`bigTMD_check/bigtmd_minus_local.md` records the independent comparison.
+All 36 comparisons agree with the complete published coefficient functions
+to a maximum relative difference of 8.140229468365256e-13. The public
+driver omits finite Hgg contributions contained in its own plus-function
+files. That driver discrepancy is retained in the report. The production
+result was not changed after the reference comparison.
+
+`madgraph_check/madgraph_minus_local.md` records the independent MadGraph
+3.7.0 check of the unintegrated current tensor. A fresh eight-diagram
+subprocess agrees for both contractions at six deterministic spacelike
+photon points: 12/12 pass, with maximum relative difference
+8.725237422956394e-16. All six photon Ward checks pass; the maximum
+normalized squared residual is 1.511315062183669e-32. The standalone
+generated sources and explicit-current driver are included. This check
+leaves the production tensor and final hats unchanged.
+
+Checkpoint reuse assumes the same source and input conventions. If a
+calculation stage or an input is changed, remove its dependent result
+directories before regenerating; do not reuse stale checkpoints.

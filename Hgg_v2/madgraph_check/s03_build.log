@@ -1,0 +1,30 @@
+make: Entering directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/other_pipelines/.repo_sync/SIDIS_dsigma_till_NLO/Hgg_v2/madgraph_check/standalone/Source'
+cd DHELAS; make; cd ..
+cd MODEL; make
+make[1]: Entering directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/other_pipelines/.repo_sync/SIDIS_dsigma_till_NLO/Hgg_v2/madgraph_check/standalone/Source/DHELAS'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: Entering directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/other_pipelines/.repo_sync/SIDIS_dsigma_till_NLO/Hgg_v2/madgraph_check/standalone/Source/MODEL'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC   -c -o aloha_functions.o aloha_functions.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o couplings.o couplings.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o lha_read.o lha_read.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o printout.o printout.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o rw_para.o rw_para.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o model_functions.o model_functions.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC   -c -o FFV1_0.o FFV1_0.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC   -c -o FFV1_1.o FFV1_1.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC   -c -o FFV1_2.o FFV1_2.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o alfas_functions.o alfas_functions.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC   -c -o VVV1P0_1.o VVV1P0_1.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o couplings1.o couplings1.f
+ar cru  ../../lib/libdhelas.a  aloha_functions.o FFV1_0.o FFV1_1.o FFV1_2.o VVV1P0_1.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib  ../../lib/libdhelas.a
+make[1]: Leaving directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/other_pipelines/.repo_sync/SIDIS_dsigma_till_NLO/Hgg_v2/madgraph_check/standalone/Source/DHELAS'
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o couplings2.o couplings2.f
+gfortran -w -fPIC  -ffixed-line-length-132 -fPIC  -c -o couplings3.o couplings3.f
+ar cru  ../../lib/libmodel.a  couplings.o lha_read.o printout.o rw_para.o model_functions.o alfas_functions.o couplings1.o couplings2.o couplings3.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib  ../../lib/libmodel.a
+make[1]: Leaving directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/other_pipelines/.repo_sync/SIDIS_dsigma_till_NLO/Hgg_v2/madgraph_check/standalone/Source/MODEL'
+make: Leaving directory '/home/physics/projects/AI_Assisted_SIDIS/scripts/other_pipelines/.repo_sync/SIDIS_dsigma_till_NLO/Hgg_v2/madgraph_check/standalone/Source'
