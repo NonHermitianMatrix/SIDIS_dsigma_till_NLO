@@ -1,0 +1,81 @@
+{
+  "CNickelIndex": "e12|e3|e3|e|:000|01|02|0|",
+  "MassScales": 4,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "0",
+  "References": [],
+  "Records": [],
+  "Names": [
+    "Box_13"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 1,
+  "NumPropagators": 4,
+  "Results": [
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T112140Z",
+      "byEpsOrder": null,
+      "singularities": [],
+      "singularitiesTeX": [],
+      "singularitiesVerified": [],
+      "groundTruthAvailable": false,
+      "provenance": {
+        "engine": "eulerDiscriminant",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 0,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 3.4
+      },
+      "timestamp": "2026-06-14T11:21:40Z",
+      "contributor": "oddletters-v1a"
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T112140Z",
+      "byEpsOrder": null,
+      "evens": [],
+      "evensTeX": [],
+      "evensVerified": [],
+      "groundTruthAvailable": false,
+      "oddLetters": [],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "eulerDiscriminant",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 0,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 3.4
+      },
+      "timestamp": "2026-06-14T11:21:40Z",
+      "contributor": "oddletters-v1a"
+    }
+  ],
+  "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{2, 4}, m[1]}, {{3, 4}, m[2]}}",
+  "nodes": "{{1, 0}, {2, 0}, {3, 0}, {4, 0}}",
+  "CanonicalName": "2-mass box, 2 massive propagators (a)",
+  "MassConfig": {
+    "numEdges": 4,
+    "numMassiveEdges": 2,
+    "numMasslessEdges": 2,
+    "distinctInternalMasses": 2,
+    "internalMassLabels": [
+      "m[1]",
+      "m[2]"
+    ],
+    "edgeMassPattern": "0012",
+    "numExtLegs": 4,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 4,
+    "extLegSignature": "0000"
+  }
+}

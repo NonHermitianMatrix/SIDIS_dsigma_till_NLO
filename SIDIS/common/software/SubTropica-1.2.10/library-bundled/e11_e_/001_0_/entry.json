@@ -1,0 +1,125 @@
+{
+  "CNickelIndex": "e11|e|:001|0|",
+  "MassScales": 1,
+  "FunctionClass": "hypergeometric",
+  "EpsilonOrder": "",
+  "References": [
+    "arXiv:2204.12983"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:2204.12983",
+      "authors": "",
+      "description": "One-loop bubble with one massive propagator. Used to demonstrate IBP reduction via matrix factorial recurrence from Pfaffian system. Master integrals I(4,1,1) and I(4,2,0). Result for I(4,1,2) decomposition verified against LiteRed.",
+      "epsOrders": "",
+      "familyName": "one-loop bubble (one mass)",
+      "method": "IBP, DE",
+      "tools": [
+        "Risa/Asir",
+        "LiteRed"
+      ],
+      "ancillaryFiles": true,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 2,
+      "dimScheme": "",
+      "computationLevel": "full",
+      "location": "Section 6.3, eq. (6.10)-(6.11)",
+      "recordId": "bx_3901b15b3b5a",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Names": [
+    "one-loop bubble (one mass)"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 1,
+  "NumPropagators": 2,
+  "Results": [
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T042819Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "mm"
+      ],
+      "singularitiesTeX": [
+        "\\text{mm}"
+      ],
+      "singularitiesVerified": [
+        false
+      ],
+      "groundTruthAvailable": false,
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 1,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 0.14,
+        "chiEngine": "eulerDiscriminant"
+      },
+      "timestamp": "2026-06-14T04:28:19Z",
+      "contributor": "oddletters-v1a",
+      "singularitiesChiDrop": [
+        0
+      ]
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T042819Z",
+      "byEpsOrder": null,
+      "evens": [
+        "mm"
+      ],
+      "evensTeX": [
+        "\\text{mm}"
+      ],
+      "evensVerified": [
+        false
+      ],
+      "groundTruthAvailable": false,
+      "oddLetters": [],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 1,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 0.14,
+        "chiEngine": "eulerDiscriminant"
+      },
+      "timestamp": "2026-06-14T04:28:19Z",
+      "contributor": "oddletters-v1a",
+      "evensChiDrop": [
+        0
+      ]
+    }
+  ],
+  "edges": "{{{1, 2}, 0}, {{1, 2}, m}}",
+  "nodes": "{{1, 0}, {2, 0}}",
+  "CanonicalName": "Bubble, 1 massive propagator (a)",
+  "MassConfig": {
+    "numEdges": 2,
+    "numMassiveEdges": 1,
+    "numMasslessEdges": 1,
+    "distinctInternalMasses": 1,
+    "internalMassLabels": [
+      "m"
+    ],
+    "edgeMassPattern": "01",
+    "numExtLegs": 2,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 2,
+    "extLegSignature": "00"
+  }
+}

@@ -1,0 +1,2339 @@
+<|"Completed" -> True, "AllEqual" -> True, 
+ "Channels" -> <|"Hqq" -> <|"Completed" -> True, "AllEqual" -> True, 
+     "Results" -> {<|"Completed" -> True, "Channel" -> "Hqq", 
+        "Label" -> "F1_Born", "InputHash" -> 52473185160025202932015074851563\
+305849361999566049829999441908389751776940183, "Difference" -> 0, 
+        "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.03193808449996754100990038730795385508918717576231204559093369\
+17130899547698949388354868517375961980917490633717494`88.86587643672054, 0.03\
+19380844999675410099003873079538550891871757623120455909336917130899547698949\
+388354868517375961980917490633717495`88.58343690418815}, "Difference" -> 
+            0``89.89675112188569, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04036336732282876422162063828805510519781432855053918887496779\
+1382493119978758038075224408315930118799482462419358`88.8229170365557, 0.0403\
+63367322828764221620638288055105197814328550539188874967791382493119978758038\
+0752244083159301187994824624193583`88.53508355471072}, "Difference" -> 
+            0``89.74856136375001, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < t && t < 0 && mu > 0 && B > 0 && 
+          Q > 0 && s + t > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 52544460851923185285857359223829791795280719\
+599153620037154208043890946441498|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "F2_Born", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02105113553463629160069387671043970161877706300078290268563837\
+69258806132824334617495244567023343343847715896305015`88.72984743005485, 0.02\
+10511355346362916006938767104397016187770630007829026856383769258806132824334\
+617495244567023343343840431203905532`88.62517128038111}, "Difference" -> 
+            0``90.05005773062219, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.03738911115529652082860854519662272536268729384083484849170891\
+36225211431352947156067071018774389248315940456641609`88.71199754901578, 0.03\
+73891111552965208286085451966227253626872938408348484917089136225211431352947\
+156067071018774389248308661732583614`88.5892255248526}, "Difference" -> 
+            0``89.77251242028316, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < t && t < 0 && mu > 0 && B > 0 && 
+          Q > 0 && s + t > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 10003889434877236603305871329901212166602981\
+512874468537968446102824802602404|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Pg_1_Delta", "InputHash" -> 524731851\
+60025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0284999664783699716283317746907951181221872444669647704119932\
+765353959002507633911464865544927446955665326486246143`86.0233951066005, 
+             -0.0284999664783699716283317746907951181221872444669647704119932\
+765353959002507633911464865545010563078255104290390172`88.03514152187962}, 
+           "Difference" -> 0``87.5643441412066, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0352236729151767034349851116027705443157785361132082356430636\
+119691523703730209592604971518564237293238173774464882`85.24611549247321, 
+             -0.0352236729151767034349851116027705443157785361132082356430636\
+119691523703730209592604971518564237310916022627993032`87.55393897417707}, 
+           "Difference" -> 0``86.69714832783636, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+          omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 1114945053952391636181\
+26604762707478180834570662678280818741052812041521588223, 
+        "S03Proof" -> <|"Completed" -> True, "Channel" -> "Hqq", 
+          "Label" -> "Pg_1_Delta", "InputHash" -> 976622290348703037279689212\
+05680814911655253539248916654596097947491380605095, "S02Difference" -> 
+           (-8*alphaS^2*eq^2*(7*omega^2 + 14*omega*Q^2 + 16*Q^4 - 16*omega*
+                s + 2*Q^2*s + 17*s^2)*Log[Q]^2)/(9*Pi^3*(omega - s)*s) + 
+            (8*alphaS^2*eq^2*(7*omega^2 + 14*omega*Q^2 + 16*Q^4 - 16*omega*
+                s + 2*Q^2*s + 17*s^2)*Log[Q]*Log[-omega + s])/
+             (9*Pi^3*(omega - s)*s) - (2*alphaS^2*eq^2*(7*omega^2 + 14*omega*
+                Q^2 + 16*Q^4 - 16*omega*s + 2*Q^2*s + 17*s^2)*
+              Log[-omega + s]^2)/(9*Pi^3*(omega - s)*s) - 
+            (4*alphaS^2*eq^2*(7*omega^2 + 14*omega*Q^2 + 16*Q^4 - 16*omega*
+                s + 2*Q^2*s + 17*s^2)*PolyLog[2, (omega + Q^2 - s)/Q^2])/
+             (9*Pi^3*(omega - s)*s) - (4*alphaS^2*eq^2*(7*omega^2 + 14*omega*
+                Q^2 + 16*Q^4 - 16*omega*s + 2*Q^2*s + 17*s^2)*
+              PolyLog[2, (omega + Q^2 - s)/(omega - s)])/(9*Pi^3*(omega - s)*
+              s), "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < 
+             omega - s && omega - s < 0 && mu > 0 && B > 0 && Q > 0 && 
+            omega > 0 && Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+            Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+          "SelectedArgument" -> (omega + Q^2 - s)/Q^2, "Coverage" -> True, 
+          "Regions" -> {<|"Region" -> (omega + Q^2 - s)/Q^2 < 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+               omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega + Q^2 - s)/Q^2 < 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega + Q^2 - s)/Q^2 == 0, 
+             "Domain" -> Q^2 > 0 && omega + Q^2 > 0 && -omega - 2*Q^2 < 
+                -Q^2 && -Q^2 < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+             "Map" -> {s -> omega + Q^2}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega + Q^2 - s)/Q^2 > 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+               omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega + Q^2 - s)/Q^2 > 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.17913642574996, 
+             "OriginalDifference" -> 0``87.5643441412066, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.00019047137857, 
+             "OriginalDifference" -> 0``86.69714832783636, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hqq", "Label" -> "Pg_1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.020130604484741217249887047601889121447342538785900\
+2181467767818215014117436473463667538324635920126128215218107754`88.430679259\
+64671, 0.02013060448474121724988704760188912144734253878590021814677678182150\
+1411743647346366753832463597`83.91465134996842}, "Difference" -> 
+            0``85.61078129803819, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02531349591187530148953364577446334091804646938307221319828675\
+42473392658424196054340270111342987260237345758091165`88.41861619298064, 0.02\
+53134959118753014895336457744633409180464693830722131982867542473392658424196\
+05434027011134301`83.79545754145794}, "Difference" -> 0``85.39209507168376, 
+           "Equal" -> True|>}, "Assumptions" -> Q^2 > 0 && s > 0 && 
+          -Q^2 - s < omega - s && omega - s < 0 && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 53099566204276442602101119725162208567511253\
+934188461951422397468479692220301|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Pg_1_L1", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0087603838715012757892215599247992144862058018800809586319272\
+07553142789547735005289987988667943657086006942983636`89.05012205090352, 
+             -0.0087603838715012757892215599247992144862058018800809586319272\
+075531427895477350052899879886679436570846813682574166`87.97625007437902}, 
+           "Difference" -> 0``89.99855411350582, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0107671460140114662273633765365320662208852983514795945176345\
+147132235756149480579723664589227610672216589859182359`89.03914852064194, 
+             -0.0107671460140114662273633765365320662208852983514795945176345\
+147132235756149480579723664589227610672232131080110446`88.02572746657341}, 
+           "Difference" -> 0``89.95343727987718, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+          omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 1576502658183706481245\
+8949964747637427172719521618860633603880351879551009357|>, 
+       <|"Completed" -> True, "Channel" -> "Hqq", "Label" -> "Pg_1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00166427865493832949251171537941133908742569463364\
+7532400097010839973053791853851371067535454691`81.64693430039323, 
+             -0.0016642786549383294925117153794113390874256946336475324000970\
+10839973053791853851371067535454721`81.94457539875344}, "Difference" -> 
+            0``84.24848442489103, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0017957739815105838253104958879089369023882182896079927191989\
+33565273554579800882126271655242377`82.09101672694347, -0.0017957739815105838\
+25310495887908936902388218289607992719198933565273554579800882126271655242376`\
+81.77899574967115}, "Difference" -> 0``84.35228565747352, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (-omega^2 + radius^2)/(4*Q^2) && 
+          (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          -Q^2 + (-omega^2 + radius^2)/(4*Q^2) - s < omega - s && 
+          omega - s < -1/4*(-omega^2 + radius^2)/s && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals] && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 37321961456182210343176190233973792548120705\
+788552190903571529338892141384052|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Pg_-1_Delta", "InputHash" -> 52473185\
+160025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0257870877843152547301608772398617525586299583233143446570258\
+393781786620512247725816015442263527569759785570014556`86.10778099295537, 
+             -0.0257870877843152547301608772398617525586299583233143446570258\
+39378178662051224772581601544226352742938895593847847`88.11897909621918}, 
+           "Difference" -> 0``87.6921667893996, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0311412455635040805053697176981316654016267952646865646475480\
+407042357726967805074043272370930293655293873538376212`85.52702046877744, 
+             -0.0311412455635040805053697176981316654016267952646865646475480\
+407042357726967805074043272370752806778689978569431018`87.82395246076563}, 
+           "Difference" -> 0``87.03149794377681, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && 
+          -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 3082869159595526734713\
+992808123362395613385050883849729545856106628301841192, 
+        "S03Proof" -> <|"Completed" -> True, "Channel" -> "Hqq", 
+          "Label" -> "Pg_-1_Delta", "InputHash" -> 97662229034870303727968921\
+205680814911655253539248916654596097947491380605095, "S02Difference" -> 
+           (8*alphaS^2*eq^2*(7*omega^2 - 14*omega*Q^2 + 16*Q^4 + 16*omega*
+                s + 2*Q^2*s + 17*s^2)*Log[Q]^2)/(9*Pi^3*s*(omega + s)) - 
+            (8*alphaS^2*eq^2*(7*omega^2 - 14*omega*Q^2 + 16*Q^4 + 16*omega*
+                s + 2*Q^2*s + 17*s^2)*Log[Q]*Log[omega + s])/
+             (9*Pi^3*s*(omega + s)) + (2*alphaS^2*eq^2*(7*omega^2 - 14*omega*
+                Q^2 + 16*Q^4 + 16*omega*s + 2*Q^2*s + 17*s^2)*
+              Log[omega + s]^2)/(9*Pi^3*s*(omega + s)) + 
+            (4*alphaS^2*eq^2*(7*omega^2 - 14*omega*Q^2 + 16*Q^4 + 16*omega*
+                s + 2*Q^2*s + 17*s^2)*PolyLog[2, (-omega + Q^2 - s)/Q^2])/
+             (9*Pi^3*s*(omega + s)) + (4*alphaS^2*eq^2*(7*omega^2 - 14*omega*
+                Q^2 + 16*Q^4 + 16*omega*s + 2*Q^2*s + 17*s^2)*
+              PolyLog[2, (omega - Q^2 + s)/(omega + s)])/
+             (9*Pi^3*s*(omega + s)), "Assumptions" -> Q^2 > 0 && s > 0 && 
+            -Q^2 - s < -omega - s && -omega - s < 0 && mu > 0 && B > 0 && 
+            Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+            alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+              otherChargeMoment[2], Reals], "SelectedArgument" -> 
+           (omega - Q^2 + s)/(omega + s), "Coverage" -> True, 
+          "Regions" -> {<|"Region" -> (omega - Q^2 + s)/(omega + s) < 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && 
+               -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega - Q^2 + s)/(omega + s) < 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega - Q^2 + s)/(omega + s) == 0, 
+             "Domain" -> Q^2 > 0 && -omega + Q^2 > 0 && omega - 2*Q^2 < 
+                -Q^2 && -Q^2 < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+             "Map" -> {s -> -omega + Q^2}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega - Q^2 + s)/
+                (omega + s) > 0, "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < 
+                -omega - s && -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && 
+               omega > 0 && Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+               Element[eq | otherChargeMoment[1] | otherChargeMoment[2], 
+                Reals] && (omega - Q^2 + s)/(omega + s) > 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.14573721162313, 
+             "OriginalDifference" -> 0``87.6921667893996, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.17680626242225, 
+             "OriginalDifference" -> 0``87.03149794377681, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hqq", "Label" -> "Pg_-1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.017451498935327347562435292569307248975430729064573\
+9198616239026795090528550247605575291087169889435316423271190201`88.442123054\
+27777, 0.01745149893532734756243529256930724897543072906457391986162390267950\
+9052855024760557529108716989`83.54159106561485}, "Difference" -> 
+            0``85.2997528697994, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02115964042867101812314319922935754722610877307392109805519326\
+57863757430373707764198065944976642526428142807016539`88.42479741880379, 0.02\
+11596404286710181231431992293575472261087730739210980551932657863757430373707\
+76419806594497664`83.49445157707416}, "Difference" -> 0``85.16893819530489, 
+           "Equal" -> True|>}, "Assumptions" -> Q^2 > 0 && s > 0 && 
+          -Q^2 - s < -omega - s && -omega - s < 0 && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 91870230119822592142814322297321893117824855\
+977675270678410138333587758889441|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Pg_-1_L1", "InputHash" -> 52473185160\
+025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0079459672713534813308241627454472513130743698665481340120935\
+798661784660439143096110339428271558057896525336400318`89.07445639140934, 
+             -0.0079459672713534813308241627454472513130743698665481340120935\
+798661784660439143096110339428271558057878449317406416`87.78209011718253}, 
+           "Difference" -> 0``89.86033754527064, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0092959708944967003528468393751584424800405765836708526988421\
+319556873584891303632337249137258511544263639079778536`89.05733765680641, 
+             -0.0092959708944967003528468393751584424800405765836708526988421\
+319556873584891303632337249137258511544266737825891778`87.89953726989805}, 
+           "Difference" -> 0``89.90204776344362, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && 
+          -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 1932054083994956719218\
+0218799718613589855834563208594679673719293550631214773|>, 
+       <|"Completed" -> True, "Channel" -> "Hqq", "Label" -> "Pg_-1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00086565561226561291999891942370720663151013196193\
+5969783186296757993920942521341615825549489483`80.82926539869932, 
+             -0.0008656556122656129199989194237072066315101319619359697831862\
+9675799392094252134161582554948949`81.34883354407489}, "Difference" -> 
+            0``83.77721066979413, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0008479907094378153449077081588726489035282545506186800601580\
+26608882931355391795801233646235748`81.4094419820393, -0.00084799070943781534\
+4907708158872648903528254550618680060158026608882931355391795801233646235753`\
+81.22983107384351}, "Difference" -> 0``84.08099566866446, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (-omega^2 + radius^2)/(4*Q^2) && 
+          (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          -Q^2 + (-omega^2 + radius^2)/(4*Q^2) - s < -omega - s && 
+          -omega - s < -1/4*(-omega^2 + radius^2)/s && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals] && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 10781398376319212373457562773524722200336848\
+3355790989268878923668437809178311|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Ppp_1_Delta", "InputHash" -> 52473185\
+160025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02543385877808220903111439111736425942759100973896212367000125\
+41438735734537821217345297104804999891260874204505308`86.67818146495834, 0.02\
+54338587780822090311143911173642594275910097389621236700012541438735734537821\
+21734529710488212168939459157323057`86.25554309702744}, "Difference" -> 
+            0``87.71091732643944, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.03768852845700225767444648959677779712539145752619331371297744\
+58938394118131961160399892946679258370851400467366224`86.65266293511961, 0.03\
+76885284570022576744464895967777971253914575261933137129774458938394118131961\
+160399892946679227888910266317386112`86.2619026976479}, "Difference" -> 
+            0``87.53750197755073, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 49986196539504204672278863480326442610048738\
+950506344393964830500153545805999, "S03Proof" -> <|"Completed" -> True, 
+          "Channel" -> "Hqq", "Label" -> "Ppp_1_Delta", "InputHash" -> 976622\
+29034870303727968921205680814911655253539248916654596097947491380605095, 
+          "S02Difference" -> (-32*alphaS^2*eq^2*(omega + Q^2)*Log[Q]^2)/
+             (9*Pi^3) + (32*alphaS^2*eq^2*(omega + Q^2)*Log[Q]*
+              Log[-omega + s])/(9*Pi^3) - (8*alphaS^2*eq^2*(omega + Q^2)*
+              Log[-omega + s]^2)/(9*Pi^3) - (16*alphaS^2*eq^2*(omega + Q^2)*
+              PolyLog[2, (omega + Q^2 - s)/Q^2])/(9*Pi^3) - 
+            (16*alphaS^2*eq^2*(omega + Q^2)*PolyLog[2, (omega + Q^2 - s)/
+                (omega - s)])/(9*Pi^3), "Assumptions" -> Q^2 > 0 && s > 0 && 
+            -Q^2 - s < omega - s && omega - s < 0 && mu > 0 && B > 0 && 
+            Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+            alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+              otherChargeMoment[2], Reals], "SelectedArgument" -> 
+           (omega + Q^2 - s)/Q^2, "Coverage" -> True, "Regions" -> 
+           {<|"Region" -> (omega + Q^2 - s)/Q^2 < 0, "Domain" -> 
+              Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+               mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, 
+                Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega + Q^2 - s)/Q^2 < 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega + Q^2 - s)/Q^2 == 0, 
+             "Domain" -> Q^2 > 0 && omega + Q^2 > 0 && -omega - 2*Q^2 < 
+                -Q^2 && -Q^2 < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+             "Map" -> {s -> omega + Q^2}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega + Q^2 - s)/Q^2 > 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+               omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega + Q^2 - s)/Q^2 > 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.31195915461254, 
+             "OriginalDifference" -> 0``87.71091732643944, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.05451868716511, 
+             "OriginalDifference" -> 0``87.53750197755073, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hqq", "Label" -> "Ppp_1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.02049495931704422570689857787522648111154783360555\
+45207376686692752842427254328186991837660828425467385687518058753`88.83157880\
+001204, -0.020494959317044225706898577875226481111547833605554520737668669275\
+28424272543281869918376608284`83.20127500702915}, "Difference" -> 
+            0``84.88962692908757, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0304041529360306198286621332127700505274281109479146233076522\
+911116224039800806121411921302625493211632848850341006`88.83255576531793, 
+             -0.0304041529360306198286621332127700505274281109479146233076522\
+91111622403980080612141192130262552`83.3332253328828}, "Difference" -> 
+            0``84.85029104899425, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 46145797196242033817847768062508750189547176\
+672452776798476981197214060402884|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Ppp_1_L1", "InputHash" -> 52473185160\
+025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.00891894285560084639174140716325711882079776209510504838092136\
+51559146047431691230327932011325218228251201908204439`89.23657200643706, 0.00\
+89189428556008463917414071632571188207977620951050483809213651559146047431691\
+230327932011325218228251201908204436`87.62565905972512}, "Difference" -> 
+            0``89.66483560540438, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.01293246714062122726802504038672282229015675503790232015233597\
+94760761768775952283975501416421566430964242766896437`89.23194907652066, 0.01\
+29324671406212272680250403867228222901567550379023201523359794760761768775952\
+283975501416421566430964242766896431`87.83533914117604}, "Difference" -> 
+            0``89.70657318620826, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 17010064996309153417324837436995940091000229\
+275899782791743337025827226912245|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Ppp_1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.002974827711454988476831710378777882969730859388622\
+556732049730944701505499252623662626399328504`77.29268283975516, 0.0029748277\
+11454988476831710378777882969730859388622556732049730944701505499252623662626\
+399027687`81.47489725318697}, "Difference" -> 0``79.81919247465012, 
+           "Equal" -> True|>, <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00078770950559859335333895943177153241012257709119\
+8307582967038170468542153032923915594508677266`77.44333646701516, 
+             -0.0007877095055985933533389594317715324101225770911983075829670\
+38170468542153032923915594508658263`80.87913543485811}, "Difference" -> 
+            0``80.54681119439111, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > (-omega^2 + radius^2)/(4*Q^2) && 
+          (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          -Q^2 + (-omega^2 + radius^2)/(4*Q^2) - s < omega - s && 
+          omega - s < -1/4*(-omega^2 + radius^2)/s && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals] && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 36837450509118362326689331564956089891277715\
+342841659619347834226234464106368|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Ppp_-1_Delta", "InputHash" -> 5247318\
+5160025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.01488378406389068239931333544207519382380568735469312452169671\
+44338736092083992400875088679240993368457683935320184`86.4176584475718, 0.014\
+88378406389068239931333544207519382380568735469312452169671443387360920839924\
+0087508867924091742102789563841713`86.15101284177607}, "Difference" -> 
+            0``87.79044167256656, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02720075399770865179843840166005946492344646075119331744990471\
+17157392572325512959443200564462850792976860833746996`86.48251740495957, 0.02\
+72007539977086517984384016600594649234464607511933174499047117157392572325512\
+95944320056430071479674087115712932`86.33706574303486}, "Difference" -> 
+            0``87.66811964384772, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && -omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 65108983255985489076943652659096039062954683\
+188468532430743226194496992117528, "S03Proof" -> <|"Completed" -> True, 
+          "Channel" -> "Hqq", "Label" -> "Ppp_-1_Delta", "InputHash" -> 97662\
+229034870303727968921205680814911655253539248916654596097947491380605095, 
+          "S02Difference" -> (32*alphaS^2*eq^2*(omega - Q^2)*Log[Q]^2)/
+             (9*Pi^3) - (32*alphaS^2*eq^2*(omega - Q^2)*Log[Q]*
+              Log[omega + s])/(9*Pi^3) + (8*alphaS^2*eq^2*(omega - Q^2)*
+              Log[omega + s]^2)/(9*Pi^3) + (16*alphaS^2*eq^2*(omega - Q^2)*
+              PolyLog[2, (-omega + Q^2 - s)/Q^2])/(9*Pi^3) + 
+            (16*alphaS^2*eq^2*(omega - Q^2)*PolyLog[2, (omega - Q^2 + s)/
+                (omega + s)])/(9*Pi^3), "Assumptions" -> Q^2 > 0 && s > 0 && 
+            -Q^2 - s < -omega - s && -omega - s < 0 && mu > 0 && B > 0 && 
+            Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+            alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+              otherChargeMoment[2], Reals], "SelectedArgument" -> 
+           (omega - Q^2 + s)/(omega + s), "Coverage" -> True, 
+          "Regions" -> {<|"Region" -> (omega - Q^2 + s)/(omega + s) < 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && 
+               -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega - Q^2 + s)/(omega + s) < 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega - Q^2 + s)/(omega + s) == 0, 
+             "Domain" -> Q^2 > 0 && -omega + Q^2 > 0 && omega - 2*Q^2 < 
+                -Q^2 && -Q^2 < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+             "Map" -> {s -> -omega + Q^2}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega - Q^2 + s)/
+                (omega + s) > 0, "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < 
+                -omega - s && -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && 
+               omega > 0 && Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+               Element[eq | otherChargeMoment[1] | otherChargeMoment[2], 
+                Reals] && (omega - Q^2 + s)/(omega + s) > 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.39814139487859, 
+             "OriginalDifference" -> 0``87.79044167256656, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.30803608154665, 
+             "OriginalDifference" -> 0``87.66811964384772, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hqq", "Label" -> "Ppp_-1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.01175305030338372386857887050585998400386151141083\
+54970496650773147714029431799407836420528094007170634873496281115`88.66781463\
+791553, -0.011753050303383723868578870505859984003861511410835497049665077314\
+771402943179940783642052809398`82.57356675121733}, "Difference" -> 
+            0``84.50341580669685, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0213165152159747282444224990055891557314920478851974428728724\
+134175874253887163076885099142126491162403783166994733`88.73034924698266, 
+             -0.0213165152159747282444224990055891557314920478851974428728724\
+13417587425388716307688509914212647`82.87417859084545}, "Difference" -> 
+            0``84.54546177753544, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && -omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 10099484637754641915580416251650191979657855\
+4356714756914284620272714028085224|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Ppp_-1_L1", "InputHash" -> 5247318516\
+0025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.00535136571336050783504484429795427129247865725706302902855281\
+90935487628459014738196759206795130936950721144922664`89.15490195998574, 0.00\
+53513657133605078350448442979542712924786572570630290285528190935487628459014\
+738196759206795130936950721144922664`87.17227183552673}, "Difference" -> 
+            0``89.43931040094225, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.00936488999838088871132847752141997476183765019986030079996743\
+34137103349803275791844328611891479139663762003614661`89.18234020833268, 0.00\
+93648899983808887113284775214199747618376501998603007999674334137103349803275\
+791844328611891479139663762003614657`87.55733184536872}, "Difference" -> 
+            0``89.57565082759058, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && -omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 32507784193094752917998003044914954507028832\
+784370277953405271573861361166496|>, <|"Completed" -> True, 
+        "Channel" -> "Hqq", "Label" -> "Ppp_-1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.008372479675793718108567045814452561174787251688592\
+934207005341067019916341719634025002183079935`77.00760229738712, 0.0083724796\
+75793718108567045814452561174787251688592934207005341067019916341719634025002\
+184039159`81.53397412409521}, "Difference" -> 0``79.0847352711544, 
+           "Equal" -> True|>, <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.002822094081107208707487057749310668081164552209539\
+91938619964829612394675987725542493857106828`77.4431857993828, 0.002822094081\
+10720870748705774931066808116455220953991938619964829612394675987725542493857\
+1036163`81.12755331201267}, "Difference" -> 0``79.99252449174122, 
+           "Equal" -> True|>}, "Assumptions" -> Q^2 > 0 && 
+          s > (-omega^2 + radius^2)/(4*Q^2) && (-omega^2 + radius^2)/
+            (4*Q^2) > 0 && -Q^2 + (-omega^2 + radius^2)/(4*Q^2) - s < 
+           -omega - s && -omega - s < -1/4*(-omega^2 + radius^2)/s && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals] && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 59699165944400938276850471684936744115708527\
+228967990605575156974176011817146|>}, "CoefficientChecks" -> 18, 
+     "NumericalChecks" -> 36, "AllNumericalEqual" -> True, 
+     "ProductionSHA256" -> 
+      "fd138ee9d65de4c3cabaf60303de72c637295549ba9913a90f58563b59af71b2"|>, 
+   "Hqg" -> <|"Completed" -> True, "AllEqual" -> True, 
+     "Results" -> {<|"Completed" -> True, "Channel" -> "Hqg", 
+        "Label" -> "F1_-1_Delta", "InputHash" -> 5247318516002520293201507485\
+1563305849361999566049829999441908389751776940183, "Difference" -> 0, 
+        "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.09420024673439514448761640340642070645454592878789893046014692\
+75010838000542651802088837775065110520210609522847807`85.71777827074062, 0.09\
+42002467343951444876164034064207064545459287878989304601469275010838000542651\
+802088837775087122167160408713741461`85.76785340457934}, "Difference" -> 
+            0``86.46701247912013, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.06525673936805730826610256706688008274784766245526782053271034\
+2359949956227691428957735621728391`85.18196665840779, 0.065256739368057308266\
+10256706688008274784766245526782053271034235994995622769142895773562172783667\
+14646078319535315`85.55467600306376}, "Difference" -> 0``86.21385368918394, 
+           "Equal" -> True|>}, "Assumptions" -> Q > 0 && mu > 0 && s > 0 && 
+          -omega - s < 0 && -omega + Q^2 > 0 && (-omega - s)*s < 0 && 
+          B > 0 && -omega != 0 && Element[nf, Integers] && nf >= 0 && 
+          alphaS > 0 && Element[eq, Reals] && omega > 0, 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 9312257651630517456674\
+4195042512376066834023266103061651014323537211194023419, 
+        "S03Proof" -> <|"Completed" -> True, "Channel" -> "Hqg", 
+          "Label" -> "F1_-1_Delta", "InputHash" -> 97662229034870303727968921\
+205680814911655253539248916654596097947491380605095, "S02Difference" -> 
+           (-4*alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*omega^2*Q^2*s + 6*omega*
+                Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 2*omega*Q^2*s^2 + 10*Q^4*
+                s^2 + 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*Log[Q]^2)/
+             (9*Pi^3*(omega - Q^2)*s*(Q^2 + s)^2) + 
+            (4*alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*omega^2*Q^2*s + 6*omega*
+                Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 2*omega*Q^2*s^2 + 10*Q^4*
+                s^2 + 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*Log[Q]*Log[omega + s])/
+             (9*Pi^3*(omega - Q^2)*s*(Q^2 + s)^2) - 
+            (alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*omega^2*Q^2*s + 6*omega*
+                Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 2*omega*Q^2*s^2 + 10*Q^4*
+                s^2 + 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*Log[omega + s]^2)/
+             (9*Pi^3*(omega - Q^2)*s*(Q^2 + s)^2) - 
+            (2*alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*omega^2*Q^2*s + 6*omega*
+                Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 2*omega*Q^2*s^2 + 10*Q^4*
+                s^2 + 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*PolyLog[2, 
+               (-omega + Q^2 - s)/Q^2])/(9*Pi^3*(omega - Q^2)*s*
+              (Q^2 + s)^2) - (2*alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*
+                omega^2*Q^2*s + 6*omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 2*
+                omega*Q^2*s^2 + 10*Q^4*s^2 + 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*
+              PolyLog[2, (omega - Q^2 + s)/(omega + s)])/
+             (9*Pi^3*(omega - Q^2)*s*(Q^2 + s)^2), "Assumptions" -> 
+           Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && -omega + Q^2 > 0 && 
+            (-omega - s)*s < 0 && B > 0 && -omega != 0 && 
+            Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+            Element[eq, Reals] && omega > 0, "SelectedArgument" -> 
+           (omega - Q^2 + s)/(omega + s), "Coverage" -> True, 
+          "Regions" -> {<|"Region" -> (omega - Q^2 + s)/(omega + s) < 0, 
+             "Domain" -> Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && 
+               -omega + Q^2 > 0 && (-omega - s)*s < 0 && B > 0 && -omega != 
+                0 && Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+               Element[eq, Reals] && omega > 0 && (omega - Q^2 + s)/
+                 (omega + s) < 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega - Q^2 + s)/
+                (omega + s) == 0, "Domain" -> Q > 0 && mu > 0 && -omega + 
+                 Q^2 > 0 && -Q^2 < 0 && -omega + Q^2 > 0 && 
+               -(Q^2*(-omega + Q^2)) < 0 && B > 0 && -omega != 0 && Element[
+                nf, Integers] && nf >= 0 && alphaS > 0 && Element[eq, 
+                Reals] && omega > 0, "Map" -> {s -> -omega + Q^2}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega - Q^2 + s)/(omega + s) > 0, 
+             "Domain" -> Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && 
+               -omega + Q^2 > 0 && (-omega - s)*s < 0 && B > 0 && -omega != 
+                0 && Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+               Element[eq, Reals] && omega > 0 && (omega - Q^2 + s)/
+                 (omega + s) > 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.44716770399286, 
+             "OriginalDifference" -> 0``86.46701247912013, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.6740498629274, 
+             "OriginalDifference" -> 0``86.21385368918394, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hqg", "Label" -> "F1_1_Delta", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.048000956543961200827396797638084835968414082315721\
+3350725234621782233207427758932972150245423492641675690332953477`85.585661668\
+62992, 0.04800095654396120082739679763808483596841408231572133507252346217822\
+33207427758932972150245407616646444159818930662`85.59380184366489}, 
+           "Difference" -> 0``86.60743279698708, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04161627152612464408421947503940285764284410246925491871388093\
+5433984078633459664172781857988354`84.86759141793837, 0.041616271526124644084\
+21947503940285764284410246925491871388093543398407863345966417278185798184518\
+12317049739984546`85.46595443991531}, "Difference" -> 0``86.15067632068812, 
+           "Equal" -> True|>}, "Assumptions" -> Q > 0 && mu > 0 && s > 0 && 
+          omega - s < 0 && omega + Q^2 > 0 && (omega - s)*s < 0 && B > 0 && 
+          omega != 0 && Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0, "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 12392517469984842762687564530573964865728576\
+936772697033059573108215213091816, "S03Proof" -> <|"Completed" -> True, 
+          "Channel" -> "Hqg", "Label" -> "F1_1_Delta", "InputHash" -> 9766222\
+9034870303727968921205680814911655253539248916654596097947491380605095, 
+          "S02Difference" -> (4*alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*
+                omega^2*Q^2*s - 6*omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 2*
+                omega*Q^2*s^2 + 10*Q^4*s^2 - 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*
+              Log[Q]^2)/(9*Pi^3*(omega + Q^2)*s*(Q^2 + s)^2) - 
+            (4*alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*omega^2*Q^2*s - 6*omega*
+                Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 2*omega*Q^2*s^2 + 10*Q^4*
+                s^2 - 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*Log[Q]*
+              Log[-omega + s])/(9*Pi^3*(omega + Q^2)*s*(Q^2 + s)^2) + 
+            (alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*omega^2*Q^2*s - 6*omega*
+                Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 2*omega*Q^2*s^2 + 10*Q^4*
+                s^2 - 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*Log[-omega + s]^2)/
+             (9*Pi^3*(omega + Q^2)*s*(Q^2 + s)^2) + 
+            (2*alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*omega^2*Q^2*s - 6*omega*
+                Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 2*omega*Q^2*s^2 + 10*Q^4*
+                s^2 - 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*PolyLog[2, 
+               (omega + Q^2 - s)/Q^2])/(9*Pi^3*(omega + Q^2)*s*(Q^2 + s)^2) + 
+            (2*alphaS^2*eq^2*(3*omega^2*Q^4 + Q^8 + 2*omega^2*Q^2*s - 6*omega*
+                Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 2*omega*Q^2*s^2 + 10*Q^4*
+                s^2 - 4*omega*s^3 + 6*Q^2*s^3 + 3*s^4)*PolyLog[2, 
+               (omega + Q^2 - s)/(omega - s)])/(9*Pi^3*(omega + Q^2)*s*
+              (Q^2 + s)^2), "Assumptions" -> Q > 0 && mu > 0 && s > 0 && 
+            omega - s < 0 && omega + Q^2 > 0 && (omega - s)*s < 0 && B > 0 && 
+            omega != 0 && Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+            Element[eq, Reals] && omega > 0, "SelectedArgument" -> 
+           (omega + Q^2 - s)/Q^2, "Coverage" -> True, "Regions" -> 
+           {<|"Region" -> (omega + Q^2 - s)/Q^2 < 0, "Domain" -> 
+              Q > 0 && mu > 0 && s > 0 && omega - s < 0 && omega + Q^2 > 0 && 
+               (omega - s)*s < 0 && B > 0 && omega != 0 && Element[nf, 
+                Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+               omega > 0 && (omega + Q^2 - s)/Q^2 < 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega + Q^2 - s)/Q^2 == 0, "Domain" -> 
+              Q > 0 && mu > 0 && omega + Q^2 > 0 && -Q^2 < 0 && omega + Q^2 > 
+                0 && -(Q^2*(omega + Q^2)) < 0 && B > 0 && omega != 0 && 
+               Element[nf, Integers] && nf >= 0 && alphaS > 0 && Element[eq, 
+                Reals] && omega > 0, "Map" -> {s -> omega + Q^2}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega + Q^2 - s)/Q^2 > 0, "Domain" -> 
+              Q > 0 && mu > 0 && s > 0 && omega - s < 0 && omega + Q^2 > 0 && 
+               (omega - s)*s < 0 && B > 0 && omega != 0 && Element[nf, 
+                Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+               omega > 0 && (omega + Q^2 - s)/Q^2 > 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.82538394764195, 
+             "OriginalDifference" -> 0``86.60743279698708, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.81937140768274, 
+             "OriginalDifference" -> 0``86.15067632068812, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hqg", "Label" -> "F1_-1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.08712097921954297846579509864353179324694620248531\
+79440331691200344780982234123698975145308260677796903063234440455`88.44544086\
+315356, -0.087120979219542978465795098643531793246946202485317944033169120034\
+478098223412369897514530826063`83.80608837179058}, "Difference" -> 
+            0``84.86595565980433, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0620146561858074843451288517613862238403273542317820393558157\
+933583319204954270233924674260760652319962264035786594`88.44713295028421, 
+             -0.0620146561858074843451288517613862238403273542317820393558157\
+93358331920495427023392467426076061`83.89812914000927}, "Difference" -> 
+            0``85.10562253171315, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && -omega + Q^2 > 0 && 
+          (-omega - s)*s < 0 && B > 0 && -omega != 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0, "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 62010858651670013514529335322660705631890640\
+038813520601796936435920568048959|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F1_1_L0", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0464604294673731687551973231244542413290602158383624528517337\
+154531653565172750368270264040999613438729522589206982`88.472036936531, 
+             -0.0464604294673731687551973231244542413290602158383624528517337\
+15453165356517275036827026404099958`84.16549736544205}, "Difference" -> 
+            0``85.49839270500499, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0405519445355840811756271283816712279188303513856210564261973\
+440888429903994944465763076291204592951034733105282208`88.45030530452729, 
+             -0.0405519445355840811756271283816712279188303513856210564261973\
+44088842990399494446576307629120457`84.18168730254172}, "Difference" -> 
+            0``85.57365222162657, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && omega - s < 0 && omega + Q^2 > 0 && 
+          (omega - s)*s < 0 && B > 0 && omega != 0 && Element[nf, 
+           Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+          omega > 0, "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 232689051\
+99653290888103695385363470676838827165563383258430815519333569924925|>, 
+       <|"Completed" -> True, "Channel" -> "Hqg", "Label" -> "F1_-1_L1", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.039331064504098224187301086601414084757541711384062\
+2741876331361470328670895756977340780997503079940417700485857966`88.978615657\
+40145, 0.03933106450409822418730108660141408475754171138406227418763313614703\
+28670895756977340780997503079940427645477294381`87.53718373142739}, 
+           "Difference" -> 0``88.92700935015696, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.03122379976179104358838444235979666510646629949283895880956328\
+17416358690904484818759022777057922608552659991009224`88.98781242050049, 0.03\
+12237997617910435883844423597966651064662994928389588095632817416358690904484\
+818759022777057922608555498643341889`87.78698951551551}, "Difference" -> 
+            0``89.26598018345355, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && -omega + Q^2 > 0 && 
+          (-omega - s)*s < 0 && B > 0 && -omega != 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0, "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 68728093639094455380531626231810054924099442\
+484227882835186264926423382354389|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F1_1_L1", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02414781675817406534559808204623617782098347795419427011551008\
+35310562113679603803852066044796858486060140362363986`89.02665117374534, 0.02\
+41478167581740653455980820462361778209834779541942701155100835310562113679603\
+803852066044796858486066102035329913`87.80121577291135}, "Difference" -> 
+            0``89.3932342650805, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02288487075925290435351134251053219659879047177173839696843890\
+66345674561583000037649946047582400146130731377611159`89.01474023157975, 0.02\
+28848707592529043535113425105321965987904717717383969684389066345674561583000\
+037649946047582400146132788751891657`87.95191850786932}, "Difference" -> 
+            0``89.55632740005456, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && omega - s < 0 && omega + Q^2 > 0 && 
+          (omega - s)*s < 0 && B > 0 && omega != 0 && Element[nf, 
+           Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+          omega > 0, "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 304344625\
+64859729386542494525864589035137973478017309545695083419609581399020|>, 
+       <|"Completed" -> True, "Channel" -> "Hqg", "Label" -> "F1_-1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.06175300761283007373184887752277823718205391064179\
+2670507160460750831659339501218481332943677204`81.78709058731074, 
+             -0.0617530076128300737318488775227782371820539106417926705071604\
+60750831659339501218481332943677222`82.76583182012578}, "Difference" -> 
+            0``82.9530635934837, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0246893971907193300963315881334261276897362862793329770333429\
+40018042361274383734205253114248896`82.00868931107301, -0.0246893971907193300\
+96331588133426127689736286279332977033342940018042361274383734205253114248913`\
+82.62946112532146}, "Difference" -> 0``83.52294723477134, "Equal" -> True|>}, 
+        "Assumptions" -> Q > 0 && mu > 0 && Inequality[s, Greater, 
+           (-omega^2 + radius^2)/(4*Q^2), GreaterEqual, 0] && 
+          -omega - s < 0 && -omega + Q^2 - (-omega^2 + radius^2)/(4*Q^2) > 
+           0 && (-omega^2 + radius^2)/4 + (-omega - s)*s < 0 && B > 0 && 
+          -omega != 0 && (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0 && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 77815445807371189947180619939716045797746693\
+4016578174514860966989533328910|>, <|"Completed" -> True, "Channel" -> "Hqg", 
+        "Label" -> "F1_1_Regular", "InputHash" -> 524731851600252029320150748\
+51563305849361999566049829999441908389751776940183, "Difference" -> 0, 
+        "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0184083078083143503221030097449403855775977776289564234845914\
+5161720276361950339383291640051084`81.87039288903641, -0.01840830780831435032\
+2103009744940385577597777628956423484591451617202763619503393832916400510866`\
+82.8738649777934}, "Difference" -> 0``83.56430083612952, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0114307739106200865336839183783856055914723738587209201938417\
+25938195774472193494939639559291342`82.16788446109793, -0.0114307739106200865\
+33683918378385605591472373858720920193841725938195774472193494939639559291361`\
+82.76306910586688}, "Difference" -> 0``84.01151500875213, "Equal" -> True|>}, 
+        "Assumptions" -> Q > 0 && mu > 0 && Inequality[s, Greater, 
+           (-omega^2 + radius^2)/(4*Q^2), GreaterEqual, 0] && 
+          omega - s < 0 && omega + Q^2 - (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          (-omega^2 + radius^2)/4 + (omega - s)*s < 0 && B > 0 && 
+          omega != 0 && (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0 && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 28607135689547910031985712624885191411766480\
+538120286762152074579930177728105|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F1_Born", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.05172450254162191393123555435838576681397783941302943395157488\
+68246934032599592736938875388776822253586844708305672`88.65199312199277, 0.05\
+17245025416219139312355543583857668139778394130294339515748868246934032599592\
+736938875388776822253581108013041125`88.58355408692766}, "Difference" -> 
+            0``89.60170054367482, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04901927853792327144736484409326673063279554743790194198744007\
+32514332802085185636055069820972015990257248104960665`88.69971169073715, 0.04\
+90192785379232714473648440932667306327955474379019419874400732514332802085185\
+636055069820972015990242565161602454`88.63600557676021}, "Difference" -> 
+            0``89.67529464756807, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && t < 0 && Q^2 + s + t > 0 && s*t < 0 && 
+          B > 0 && s + t != 0 && Element[nf, Integers] && nf >= 0 && 
+          alphaS > 0 && Element[eq, Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 36842147239528153951481951244661895175213592\
+862625575989845172738009613614394|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F2_-1_Delta", "InputHash" -> 52473185\
+160025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.06086646696197501530981785458235502041771033798420667584553709\
+50720011046991548063964205658285124314697036903125635`85.77054168295174, 0.06\
+08664669619750153098178545823550204177103379842066758455370950720011046991548\
+063964205658322855817681979392264353`85.51773888428978}, "Difference" -> 
+            0``86.54059161336518, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.05947213501753058983006049354147297813926378584789041163293916\
+06045542011944645210235824921065663507125497710563722`85.25521470197933, 0.05\
+94721350175305898300604935414729781392637858478904116329391606045542011944645\
+210235824920995524098376573870099604`85.27560842861183}, "Difference" -> 
+            0``86.1899483440934, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && -omega + Q^2 > 0 && 
+          (-omega - s)*s < 0 && B > 0 && -omega != 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0, "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 93949307906326000333188005404820489268458365\
+680147190368399815093777079063985, "S03Proof" -> <|"Completed" -> True, 
+          "Channel" -> "Hqg", "Label" -> "F2_-1_Delta", "InputHash" -> 976622\
+29034870303727968921205680814911655253539248916654596097947491380605095, 
+          "S02Difference" -> (-8*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*
+                omega^2*Q^2*s + 10*omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 10*
+                omega*Q^2*s^2 + 14*Q^4*s^2 + 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*
+              Log[Q]^2)/(9*Pi^3*(omega - Q^2)*s*(Q^2 + s)^3) + 
+            (8*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*omega^2*Q^2*s + 10*
+                omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 10*omega*Q^2*s^2 + 14*
+                Q^4*s^2 + 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*Log[Q]*
+              Log[omega + s])/(9*Pi^3*(omega - Q^2)*s*(Q^2 + s)^3) - 
+            (2*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*omega^2*Q^2*s + 10*
+                omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 10*omega*Q^2*s^2 + 14*
+                Q^4*s^2 + 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*Log[omega + s]^2)/
+             (9*Pi^3*(omega - Q^2)*s*(Q^2 + s)^3) - 
+            (4*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*omega^2*Q^2*s + 10*
+                omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 10*omega*Q^2*s^2 + 14*
+                Q^4*s^2 + 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*PolyLog[2, 
+               (-omega + Q^2 - s)/Q^2])/(9*Pi^3*(omega - Q^2)*s*
+              (Q^2 + s)^3) - (4*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*
+                omega^2*Q^2*s + 10*omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 - 10*
+                omega*Q^2*s^2 + 14*Q^4*s^2 + 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*
+              PolyLog[2, (omega - Q^2 + s)/(omega + s)])/
+             (9*Pi^3*(omega - Q^2)*s*(Q^2 + s)^3), "Assumptions" -> 
+           Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && -omega + Q^2 > 0 && 
+            (-omega - s)*s < 0 && B > 0 && -omega != 0 && 
+            Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+            Element[eq, Reals] && omega > 0, "SelectedArgument" -> 
+           (omega - Q^2 + s)/(omega + s), "Coverage" -> True, 
+          "Regions" -> {<|"Region" -> (omega - Q^2 + s)/(omega + s) < 0, 
+             "Domain" -> Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && 
+               -omega + Q^2 > 0 && (-omega - s)*s < 0 && B > 0 && -omega != 
+                0 && Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+               Element[eq, Reals] && omega > 0 && (omega - Q^2 + s)/
+                 (omega + s) < 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega - Q^2 + s)/
+                (omega + s) == 0, "Domain" -> Q > 0 && mu > 0 && -omega + 
+                 Q^2 > 0 && -Q^2 < 0 && -omega + Q^2 > 0 && 
+               -(Q^2*(-omega + Q^2)) < 0 && B > 0 && -omega != 0 && Element[
+                nf, Integers] && nf >= 0 && alphaS > 0 && Element[eq, 
+                Reals] && omega > 0, "Map" -> {s -> -omega + Q^2}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega - Q^2 + s)/(omega + s) > 0, 
+             "Domain" -> Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && 
+               -omega + Q^2 > 0 && (-omega - s)*s < 0 && B > 0 && -omega != 
+                0 && Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+               Element[eq, Reals] && omega > 0 && (omega - Q^2 + s)/
+                 (omega + s) > 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.70434961659636, 
+             "OriginalDifference" -> 0``86.54059161336518, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.75618397009845, 
+             "OriginalDifference" -> 0``86.1899483440934, "Equal" -> True|>}, 
+          "Equal" -> True, "Difference" -> 0|>|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F2_1_Delta", "InputHash" -> 524731851\
+60025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.03205120581979906664763862265807092976064369151174352932160855\
+05129875225784820085076200938376199422925894803415882`85.65269539257301, 0.03\
+20512058197990666476386226580709297606436915117435293216085505129875225784820\
+085076200938364819651700420139190779`85.33161820689334}, "Difference" -> 
+            0``86.65626268420235, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.03843641591880021492824880590944399222141734303216130347795345\
+9332385395180465574384841752605881`84.94666261103775, 0.038436415918800214928\
+248805909443992221417343032161303477953459332385395180465574384841752590887`8\
+5.17371898585405}, "Difference" -> 0``86.1597452932302, "Equal" -> True|>}, 
+        "Assumptions" -> Q > 0 && mu > 0 && s > 0 && omega - s < 0 && 
+          omega + Q^2 > 0 && (omega - s)*s < 0 && B > 0 && omega != 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0, "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 64299649145119337454131687130054314000007895\
+877710528213073269235138620017642, "S03Proof" -> <|"Completed" -> True, 
+          "Channel" -> "Hqg", "Label" -> "F2_1_Delta", "InputHash" -> 9766222\
+9034870303727968921205680814911655253539248916654596097947491380605095, 
+          "S02Difference" -> (8*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*
+                omega^2*Q^2*s - 10*omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 10*
+                omega*Q^2*s^2 + 14*Q^4*s^2 - 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*
+              Log[Q]^2)/(9*Pi^3*(omega + Q^2)*s*(Q^2 + s)^3) - 
+            (8*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*omega^2*Q^2*s - 10*
+                omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 10*omega*Q^2*s^2 + 14*
+                Q^4*s^2 - 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*Log[Q]*
+              Log[-omega + s])/(9*Pi^3*(omega + Q^2)*s*(Q^2 + s)^3) + 
+            (2*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*omega^2*Q^2*s - 10*
+                omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 10*omega*Q^2*s^2 + 14*
+                Q^4*s^2 - 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*Log[-omega + s]^2)/
+             (9*Pi^3*(omega + Q^2)*s*(Q^2 + s)^3) + 
+            (4*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*omega^2*Q^2*s - 10*
+                omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 10*omega*Q^2*s^2 + 14*
+                Q^4*s^2 - 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*PolyLog[2, 
+               (omega + Q^2 - s)/Q^2])/(9*Pi^3*(omega + Q^2)*s*(Q^2 + s)^3) + 
+            (4*alphaS^2*eq^2*Q^2*(3*omega^2*Q^4 + Q^8 - 6*omega^2*Q^2*s - 10*
+                omega*Q^4*s + 4*Q^6*s + 3*omega^2*s^2 + 10*omega*Q^2*s^2 + 14*
+                Q^4*s^2 - 4*omega*s^3 + 2*Q^2*s^3 + 3*s^4)*PolyLog[2, 
+               (omega + Q^2 - s)/(omega - s)])/(9*Pi^3*(omega + Q^2)*s*
+              (Q^2 + s)^3), "Assumptions" -> Q > 0 && mu > 0 && s > 0 && 
+            omega - s < 0 && omega + Q^2 > 0 && (omega - s)*s < 0 && B > 0 && 
+            omega != 0 && Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+            Element[eq, Reals] && omega > 0, "SelectedArgument" -> 
+           (omega + Q^2 - s)/Q^2, "Coverage" -> True, "Regions" -> 
+           {<|"Region" -> (omega + Q^2 - s)/Q^2 < 0, "Domain" -> 
+              Q > 0 && mu > 0 && s > 0 && omega - s < 0 && omega + Q^2 > 0 && 
+               (omega - s)*s < 0 && B > 0 && omega != 0 && Element[nf, 
+                Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+               omega > 0 && (omega + Q^2 - s)/Q^2 < 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega + Q^2 - s)/Q^2 == 0, "Domain" -> 
+              Q > 0 && mu > 0 && omega + Q^2 > 0 && -Q^2 < 0 && omega + Q^2 > 
+                0 && -(Q^2*(omega + Q^2)) < 0 && B > 0 && omega != 0 && 
+               Element[nf, Integers] && nf >= 0 && alphaS > 0 && Element[eq, 
+                Reals] && omega > 0, "Map" -> {s -> omega + Q^2}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega + Q^2 - s)/Q^2 > 0, "Domain" -> 
+              Q > 0 && mu > 0 && s > 0 && omega - s < 0 && omega + Q^2 > 0 && 
+               (omega - s)*s < 0 && B > 0 && omega != 0 && Element[nf, 
+                Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+               omega > 0 && (omega + Q^2 - s)/Q^2 > 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``91.04095140380484, 
+             "OriginalDifference" -> 0``86.65626268420235, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.88569992445241, 
+             "OriginalDifference" -> 0``86.1597452932302, "Equal" -> True|>}, 
+          "Equal" -> True, "Difference" -> 0|>|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F2_-1_L0", "InputHash" -> 52473185160\
+025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0561553850901604614698560420285190869134227354385839588279899\
+91736426076194149193058291838988219943282564068525988`88.43575498018451, 
+             -0.0561553850901604614698560420285190869134227354385839588279899\
+91736426076194149193058291838988218`83.71305481467057}, "Difference" -> 
+            0``84.96365518092726, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0566234658724495564603602969602203095915118012063807895431963\
+129151519494003152539209739401337969805061362615262695`88.44640809032725, 
+             -0.0566234658724495564603602969602203095915118012063807895431963\
+12915151949400315253920973940133792`83.82014952160827}, "Difference" -> 
+            0``85.06714280416149, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && -omega + Q^2 > 0 && 
+          (-omega - s)*s < 0 && B > 0 && -omega != 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0, "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 84912047899985470302839914205472476048817629\
+417855843614178828695891986111451|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F2_1_L0", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0310771851043283969965454661535045277923883984920356502593692\
+565143534891396027415318193699745135428451063365847256`88.46366462194135, 
+             -0.0310771851043283969965454661535045277923883984920356502593692\
+56514353489139602741531819369974512`84.10029836313326}, "Difference" -> 
+            0``85.60783787769864, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0377050430340869772516873251903983158149501849870823918069347\
+096162020026464230159654634709026622685874847756484171`88.44916606599773, 
+             -0.0377050430340869772516873251903983158149501849870823918069347\
+09616202002646423015965463470902662`84.12561080061319}, "Difference" -> 
+            0``85.5491907431328, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && omega - s < 0 && omega + Q^2 > 0 && 
+          (omega - s)*s < 0 && B > 0 && omega != 0 && Element[nf, 
+           Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+          omega > 0, "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 236021531\
+16082834344563280763471838462570175128668230849632439179582088210043|>, 
+       <|"Completed" -> True, "Channel" -> "Hqg", "Label" -> "F2_-1_L1", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.025351540960849670566739540409981856352425245724857\
+4717416152303084004013161216268920242431547053175437091207098479`88.863770099\
+35238, 0.02535154096084967056673954040998185635242524572485747174161523030840\
+04013161216268920242431547053175437050052832951`87.4613243028087}, 
+           "Difference" -> 0``89.04045903888162, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02850938582845184993226044672531748984704819511442736051622268\
+51401882456902989290173531760732018624030515379183283`88.86684341219495, 0.02\
+85093858284518499322604467253174898470481951144273605162226851401882456902989\
+290173531760732018624018967776139915`87.72119434205297}, "Difference" -> 
+            0``89.23621130970277, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && -omega - s < 0 && -omega + Q^2 > 0 && 
+          (-omega - s)*s < 0 && B > 0 && -omega != 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0, "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 15314936568986500692792915765812418412799142\
+608207794202360672671538204346562|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F2_1_L1", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.01615237267202145519698789010665378861109820650421203550713519\
+84870456541283271962690883938291107085507146274286299`88.89458651268177, 0.01\
+61523726720214551969878901066537886110982065042120355071351984870456541283271\
+96269088393829110708550720311139507`87.75079892971955}, "Difference" -> 
+            0``89.51244295693387, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.02127826536283560837766517573873418236636100537708894093752194\
+77934071098254378443381015603527952170042151731307517`88.88249483035479, 0.02\
+12782653628356083776651757387341823663610053770889409375219477934071098254378\
+443381015603527952170033852511828839`87.90400459542059}, "Difference" -> 
+            0``89.53267563500305, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && omega - s < 0 && omega + Q^2 > 0 && 
+          (omega - s)*s < 0 && B > 0 && omega != 0 && Element[nf, 
+           Integers] && nf >= 0 && alphaS > 0 && Element[eq, Reals] && 
+          omega > 0, "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 816582463\
+36924307034772138548273667257312320327005919518504676314854895398282|>, 
+       <|"Completed" -> True, "Channel" -> "Hqg", "Label" -> "F2_-1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.03705076999431933167787702120831855820973040629608\
+8404202647615051755609472919250840980492234204`81.33931104276549, 
+             -0.0370507699943193316778770212083185582097304062960884042026476\
+15051755609472919250840980492234216`82.64091987108947}, "Difference" -> 
+            0``82.74935205169061, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0213928501422471600625798353384432071406726120655766887836130\
+62630683239239690658523426479344331`81.59348888317278, -0.0213928501422471600\
+62579835338443207140672612065576688783613062630683239239690658523426479344356`\
+82.52839258042908}, "Difference" -> 0``83.21548964793587, "Equal" -> True|>}, 
+        "Assumptions" -> Q > 0 && mu > 0 && Inequality[s, Greater, 
+           (-omega^2 + radius^2)/(4*Q^2), GreaterEqual, 0] && 
+          -omega - s < 0 && -omega + Q^2 - (-omega^2 + radius^2)/(4*Q^2) > 
+           0 && (-omega^2 + radius^2)/4 + (-omega - s)*s < 0 && B > 0 && 
+          -omega != 0 && (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0 && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 11082911310670657635846661345443357010242504\
+7111634733374678307162371244754161|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F2_1_Regular", "InputHash" -> 5247318\
+5160025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0120100997607140236363601480683363810873469771724359175282408\
+57645645922940700853799145186421324`81.46217592179684, -0.0120100997607140236\
+36360148068336381087346977172435917528240857645645922940700853799145186421332`\
+82.79692447444847}, "Difference" -> 0``83.3629876590417, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0108556036268259138267852249746258659034918320357705486657177\
+43107694894783511121043862814787442`81.79627635419543, -0.0108556036268259138\
+26785224974625865903491832035770548665717743107694894783511121043862814787447`\
+82.71575495634544}, "Difference" -> 0``83.71126056842049, "Equal" -> True|>}, 
+        "Assumptions" -> Q > 0 && mu > 0 && Inequality[s, Greater, 
+           (-omega^2 + radius^2)/(4*Q^2), GreaterEqual, 0] && 
+          omega - s < 0 && omega + Q^2 - (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          (-omega^2 + radius^2)/4 + (omega - s)*s < 0 && B > 0 && 
+          omega != 0 && (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          Element[nf, Integers] && nf >= 0 && alphaS > 0 && 
+          Element[eq, Reals] && omega > 0 && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 74063500207882853424502971678970735454015272\
+383984936053509252558800072372945|>, <|"Completed" -> True, 
+        "Channel" -> "Hqg", "Label" -> "F2_Born", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.03459830135759123351748603933825936443005066942476222591294578\
+80329459522936078790291504253499212697726426553935801`88.58371769529084, 0.03\
+45983013575912335174860393382593644300506694247622259129457880329459522936078\
+79029150425349921269756252097494848`88.52628144374881}, "Difference" -> 
+            0``89.71396598152039, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04557793782614897970223123118134469358630027585227629781296813\
+77203130585024812112531967148357958561552073419779214`88.62366107902812, 0.04\
+55779378261489797022312311813446935863002758522762978129681377203130585024812\
+112531967148357958561613064107574731`88.57966150591123}, "Difference" -> 
+            0``89.64131964853655, "Equal" -> True|>}, "Assumptions" -> 
+         Q > 0 && mu > 0 && s > 0 && t < 0 && Q^2 + s + t > 0 && s*t < 0 && 
+          B > 0 && s + t != 0 && Element[nf, Integers] && nf >= 0 && 
+          alphaS > 0 && Element[eq, Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 22439277453702287442767871903357370255650385\
+40931210489643517861975372878821|>}, "CoefficientChecks" -> 18, 
+     "NumericalChecks" -> 36, "AllNumericalEqual" -> True, 
+     "ProductionSHA256" -> 
+      "6f45a83b0c2f2dce2d568431f7eb2fc5e9ba43e0fc612882092b312671ed590b"|>, 
+   "Hgq" -> <|"Completed" -> True, "AllEqual" -> True, 
+     "Results" -> {<|"Completed" -> True, "Channel" -> "Hgq", 
+        "Label" -> "F1_Born", "InputHash" -> 52473185160025202932015074851563\
+305849361999566049829999441908389751776940183, "Difference" -> 0, 
+        "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.00627787993986487900062454965798342679752076338306849868785895\
+01444734325792474022922000969120153495399262776411977`88.56078460269208, 0.00\
+62778799398648790006245496579834267975207633830684986878589501444734325792474\
+022922000969120153495353847272234264`88.00695297076479}, "Difference" -> 
+            0``90.1021462914717, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.00485428266856276440540624532313831866667087554095500486536960\
+67577663586910130321769756400018478955283818551136808`88.57188261322925, 0.00\
+48542826685627644054062453231383186666708755409550048653696067577663586910130\
+321769756400018478955318384646959249`88.0070504614512}, "Difference" -> 
+            0``90.21631014254453, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < t && t < 0 && mu > 0 && B > 0 && 
+          Q > 0 && s + t > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 10099554606079496929286286690918293689299946\
+3696813036467102987269706005342359|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "F2_Born", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.00778856226761933310719736860626106337887416578094602848643380\
+11458714915947387606465551532281421029460773109837975`88.44085416873116, 0.00\
+77885622676193331071973686062610633788741657809460284864338011458714915947387\
+606465551532281421029462138989662885`88.27699087495878}, "Difference" -> 
+            0``90.15875225178739, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.01029306399893956375129695566041497014705119347384823782555258\
+58296752091499504164333458430715067234706971788902059`88.49403899352717, 0.01\
+02930639989395637512969556604149701470511934738482378255525858296752091499504\
+164333458430715067234706265878163706`88.337619980087}, "Difference" -> 
+            0``90.09525041304144, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < t && t < 0 && mu > 0 && B > 0 && 
+          Q > 0 && s + t > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 63747964489275426864298854200437652226080983\
+153234404029223362610281439918365|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Pg_1_Delta", "InputHash" -> 524731851\
+60025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0051495449476937455868596681035838716256560816201311523485688\
+002172272445308954368392881982485604683076874250590152`84.88382862873148, 
+             -0.0051495449476937455868596681035838716256560816201311523485688\
+002172272445308954368392881982489121292615547744516766`85.2264866204359}, 
+           "Difference" -> 0``87.00940599896131, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0016677640890160127157309948322098898885221820697065789656781\
+831494302140780357219904199843885070852987241061051933`83.74789667660116, 
+             -0.0016677640890160127157309948322098898885221820697065789656781\
+831494302140780357219904199843885077373021042499004987`84.59046766656309}, 
+           "Difference" -> 0``86.46745342486328, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+          omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 8649583791362437046621\
+0829047884406731071940180470120551973408315144585754654, 
+        "S03Proof" -> <|"Completed" -> True, "Channel" -> "Hgq", 
+          "Label" -> "Pg_1_Delta", "InputHash" -> 976622290348703037279689212\
+05680814911655253539248916654596097947491380605095, "S02Difference" -> 
+           -1/3*(alphaS^2*eq^2*(17*omega^2 + 16*omega*Q^2 + 8*Q^4 - 
+                16*omega*s - 16*Q^2*s + 7*s^2)*Log[Q]^2)/(Pi^3*(omega + Q^2)*(
+                omega - s)) + (alphaS^2*eq^2*(17*omega^2 + 16*omega*Q^2 + 8*
+                Q^4 - 16*omega*s - 16*Q^2*s + 7*s^2)*Log[Q]*Log[-omega + s])/
+             (3*Pi^3*(omega + Q^2)*(omega - s)) - 
+            (alphaS^2*eq^2*(17*omega^2 + 16*omega*Q^2 + 8*Q^4 - 16*omega*s - 
+               16*Q^2*s + 7*s^2)*Log[-omega + s]^2)/(12*Pi^3*(omega + Q^2)*
+              (omega - s)) - (alphaS^2*eq^2*(17*omega^2 + 16*omega*Q^2 + 8*
+                Q^4 - 16*omega*s - 16*Q^2*s + 7*s^2)*PolyLog[2, (omega + 
+                 Q^2 - s)/Q^2])/(6*Pi^3*(omega + Q^2)*(omega - s)) - 
+            (alphaS^2*eq^2*(17*omega^2 + 16*omega*Q^2 + 8*Q^4 - 16*omega*s - 
+               16*Q^2*s + 7*s^2)*PolyLog[2, (omega + Q^2 - s)/(omega - s)])/
+             (6*Pi^3*(omega + Q^2)*(omega - s)), "Assumptions" -> 
+           Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+            mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+            nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+              otherChargeMoment[2], Reals], "SelectedArgument" -> 
+           (omega + Q^2 - s)/Q^2, "Coverage" -> True, "Regions" -> 
+           {<|"Region" -> (omega + Q^2 - s)/Q^2 < 0, "Domain" -> 
+              Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+               mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, 
+                Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega + Q^2 - s)/Q^2 < 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega + Q^2 - s)/Q^2 == 0, 
+             "Domain" -> Q^2 > 0 && omega + Q^2 > 0 && -omega - 2*Q^2 < 
+                -Q^2 && -Q^2 < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+             "Map" -> {s -> omega + Q^2}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega + Q^2 - s)/Q^2 > 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+               omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega + Q^2 - s)/Q^2 > 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``91.00229295201282, 
+             "OriginalDifference" -> 0``87.00940599896131, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``91.05781307964307, 
+             "OriginalDifference" -> 0``86.46745342486328, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hgq", "Label" -> "Pg_1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.004674072707716085235961447744760945027734823824036\
+9061667384277367677962193221830220183548772348109764193539486938`87.832663420\
+88308, 0.00467407270771608523596144774476094502773482382403690616673842773676\
+7796219322183022018354877237`83.35081440406347}, "Difference" -> 
+            0``85.68110462076109, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.00097771565666059171526538917201691175705382441968196182212843\
+24292490855520380686944326604771618938329391069648083`87.2291803349818, 0.000\
+97771565666059171526538917201691175705382441968196182212843242924908555203806\
+869443266047716`82.74719554000714}, "Difference" -> 0``85.75696865515394, 
+           "Equal" -> True|>}, "Assumptions" -> Q^2 > 0 && s > 0 && 
+          -Q^2 - s < omega - s && omega - s < 0 && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 10674552838491911822963386646015727857530381\
+4736849104372061450673679454717908|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Pg_1_L1", "InputHash" -> 524731851600\
+25202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0024293501492398495886076594749443199835696761516190893685176\
+28985325311387187018273694148118001182217127975785378`88.53726933683629, 
+             -0.0024293501492398495886076594749443199835696761516190893685176\
+289853253113871870182736941481180011822171776848376114`87.01910280154416}, 
+           "Difference" -> 0``89.62063748719812, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0005517589032590507188979597945413989352603541657357679766029\
+760792267368369440011662733725002754674465293976833501`87.99138280074985, 
+             -0.0005517589032590507188979597945413989352603541657357679766029\
+760792267368369440011662733725002754674465530405143764`86.59290064309127}, 
+           "Difference" -> 0``89.83413879343989, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+          omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 7004666334978444981489\
+6913316325092836662353449225342245082058050748425682726|>, 
+       <|"Completed" -> True, "Channel" -> "Hgq", "Label" -> "Pg_1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.003625043745215845628516741933262778238006671771069\
+777678096945518786479635691887254772444776101`82.63347044540158, 0.0036250437\
+45215845628516741933262778238006671771069777678096945518786479635691887254772\
+444776077`82.35386479400728}, "Difference" -> 0``84.61120076697794, 
+           "Equal" -> True|>, <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.000833774039960530436696392231678830283066697457181\
+721355949496309935526052848844320134153293123`82.40839365263118, 0.0008337740\
+39960530436696392231678830283066697457181721355949496309935526052848844320134\
+153293138`81.81113155535476}, "Difference" -> 0``84.79220934477436, 
+           "Equal" -> True|>}, "Assumptions" -> Q^2 > 0 && 
+          s > (-omega^2 + radius^2)/(4*Q^2) && (-omega^2 + radius^2)/
+            (4*Q^2) > 0 && -Q^2 + (-omega^2 + radius^2)/(4*Q^2) - s < 
+           omega - s && omega - s < -1/4*(-omega^2 + radius^2)/s && mu > 0 && 
+          B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals] && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 78413044426391008187883754252856504310067971\
+062476563045376892687206085520328|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Pg_-1_Delta", "InputHash" -> 52473185\
+160025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0148291937258212954073284236118409262045901718947998418395531\
+711477433605170896996369796456441061788615934023868251`85.21733279950689, 
+             -0.0148291937258212954073284236118409262045901718947998418395531\
+711477433605170896996369796456441063355863683276409028`85.4516171007198}, 
+           "Difference" -> 0``86.84671698270692, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0039006910826327215689601399882476101485188936571306552845877\
+015589148386666386302264694530274311491812214318833309`84.26676795818555, 
+             -0.0039006910826327215689601399882476101485188936571306552845877\
+015589148386666386302264694530269830416120482580472803`84.86132662533404}, 
+           "Difference" -> 0``86.57720572174868, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && 
+          -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 1099838822532789933220\
+06445278993092889495032574655508424279017151839939409813, 
+        "S03Proof" -> <|"Completed" -> True, "Channel" -> "Hgq", 
+          "Label" -> "Pg_-1_Delta", "InputHash" -> 97662229034870303727968921\
+205680814911655253539248916654596097947491380605095, "S02Difference" -> 
+           -1/3*(alphaS^2*eq^2*(17*omega^2 - 16*omega*Q^2 + 8*Q^4 + 
+                16*omega*s - 16*Q^2*s + 7*s^2)*Log[Q]^2)/(Pi^3*(omega - Q^2)*(
+                omega + s)) + (alphaS^2*eq^2*(17*omega^2 - 16*omega*Q^2 + 8*
+                Q^4 + 16*omega*s - 16*Q^2*s + 7*s^2)*Log[Q]*Log[omega + s])/
+             (3*Pi^3*(omega - Q^2)*(omega + s)) - 
+            (alphaS^2*eq^2*(17*omega^2 - 16*omega*Q^2 + 8*Q^4 + 16*omega*s - 
+               16*Q^2*s + 7*s^2)*Log[omega + s]^2)/(12*Pi^3*(omega - Q^2)*
+              (omega + s)) - (alphaS^2*eq^2*(17*omega^2 - 16*omega*Q^2 + 8*
+                Q^4 + 16*omega*s - 16*Q^2*s + 7*s^2)*PolyLog[2, (-omega + 
+                 Q^2 - s)/Q^2])/(6*Pi^3*(omega - Q^2)*(omega + s)) - 
+            (alphaS^2*eq^2*(17*omega^2 - 16*omega*Q^2 + 8*Q^4 + 16*omega*s - 
+               16*Q^2*s + 7*s^2)*PolyLog[2, (omega - Q^2 + s)/(omega + s)])/
+             (6*Pi^3*(omega - Q^2)*(omega + s)), "Assumptions" -> 
+           Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && -omega - s < 0 && 
+            mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+            nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+              otherChargeMoment[2], Reals], "SelectedArgument" -> 
+           (omega - Q^2 + s)/(omega + s), "Coverage" -> True, 
+          "Regions" -> {<|"Region" -> (omega - Q^2 + s)/(omega + s) < 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && 
+               -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega - Q^2 + s)/(omega + s) < 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega - Q^2 + s)/(omega + s) == 0, 
+             "Domain" -> Q^2 > 0 && -omega + Q^2 > 0 && omega - 2*Q^2 < 
+                -Q^2 && -Q^2 < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+             "Map" -> {s -> -omega + Q^2}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega - Q^2 + s)/
+                (omega + s) > 0, "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < 
+                -omega - s && -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && 
+               omega > 0 && Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+               Element[eq | otherChargeMoment[1] | otherChargeMoment[2], 
+                Reals] && (omega - Q^2 + s)/(omega + s) > 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.62131156389428, 
+             "OriginalDifference" -> 0``86.84671698270692, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.91954276438533, 
+             "OriginalDifference" -> 0``86.57720572174868, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hgq", "Label" -> "Pg_-1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.014111474424681137040707535392883621738781912243749\
+8763397431536598426968156272515436547826126688773944525278037981`88.080201082\
+01347, 0.01411147442468113704070753539288362173878191224374987633974315365984\
+2696815627251543654782612672`83.24602303171217}, "Difference" -> 
+            0``85.09644427658182, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.00340727547550379979848648607226456925622791879045183341913682\
+04321898859359311797316947651844914265523857261483167`87.66678327175761, 0.00\
+34072754755037997984864860722645692562279187904518334191368204321898859359311\
+79731694765184496`82.8728017634855}, "Difference" -> 0``85.3403875370375, 
+           "Equal" -> True|>}, "Assumptions" -> Q^2 > 0 && s > 0 && 
+          -Q^2 - s < -omega - s && -omega - s < 0 && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 10550523889106272668254602756043756382777151\
+5282473860009636722963776900314147|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Pg_-1_L1", "InputHash" -> 52473185160\
+025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0063706734682863188512438622594693705862841157822178917006581\
+179685104319594065164519951436660870163036572791574599`88.71130373940974, 
+             -0.0063706734682863188512438622594693705862841157822178917006581\
+1796851043195940651645199514366608701630365727915746`86.99566715984771}, 
+           "Difference" -> 0``89.18320236524234, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0017155313553885301477992400512999662221636511784972465508200\
+789100917377490687547874301208300820036760562816016874`88.37608119979477, 
+             -0.0017155313553885301477992400512999662221636511784972465508200\
+789100917377490687547874301208300820036760562816016871`86.81113294503461}, 
+           "Difference" -> 0``89.56506648165103, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && 
+          -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 9985010015947782281627\
+9343555641802431935487228160293897445864458385540520390|>, 
+       <|"Completed" -> True, "Channel" -> "Hgq", "Label" -> "Pg_-1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.016797621530310344524262608270048094642435917007526\
+363716425122475140047858170614126442799499617`82.91683121645168, 0.0167976215\
+30310344524262608270048094642435917007526363716425122475140047858170614126442\
+799499597`82.43343027968284}, "Difference" -> 0``84.08480517963753, 
+           "Equal" -> True|>, <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.003990109739283095987662528591561372535705202498365\
+727279347121142282808440966056678417581103703`82.81544186976049, 0.0039901097\
+39283095987662528591561372535705202498365727279347121142282808440966056678417\
+581103684`82.07416232097664}, "Difference" -> 0``84.40076774300195, 
+           "Equal" -> True|>}, "Assumptions" -> Q^2 > 0 && 
+          s > (-omega^2 + radius^2)/(4*Q^2) && (-omega^2 + radius^2)/
+            (4*Q^2) > 0 && -Q^2 + (-omega^2 + radius^2)/(4*Q^2) - s < 
+           -omega - s && -omega - s < -1/4*(-omega^2 + radius^2)/s && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals] && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 47087299529381724444010051477701553697824917\
+543320742258699648425986317817377|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Ppp_1_Delta", "InputHash" -> 52473185\
+160025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.05673089660286966091420130534053851279269617907894802477918976\
+88988275184732825969996557241282257839381844409400566`85.55848706511456, 0.05\
+67308966028696609142013053405385127926961790789480247791897688988275184732825\
+969996557241390050698915179407205877`85.2788953892543}, "Difference" -> 
+            0``86.3417201535829, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04790658096376888095036943955136652059445087556311855305061027\
+8955488547146623886888597293962904`84.8164068136151, 0.0479065809637688809503\
+69439551366520594450875563118553050610278955488547146623886888597293933493`85\
+.09009718096682}, "Difference" -> 0``85.95061462109825, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+          omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+          Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+          Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+        "AlgebraicMap" -> {}, "FreshDifferenceHash" -> 3558731566876077472886\
+2875608535740629960219736058703545492508603935366486030, 
+        "S03Proof" -> <|"Completed" -> True, "Channel" -> "Hgq", 
+          "Label" -> "Ppp_1_Delta", "InputHash" -> 97662229034870303727968921\
+205680814911655253539248916654596097947491380605095, "S02Difference" -> 
+           (-17*alphaS^2*eq^2*s*Log[Q]^2)/(6*Pi^3) + 
+            (17*alphaS^2*eq^2*s*Log[Q]*Log[-omega + s])/(6*Pi^3) - 
+            (17*alphaS^2*eq^2*s*Log[-omega + s]^2)/(24*Pi^3) - 
+            (17*alphaS^2*eq^2*s*PolyLog[2, (omega + Q^2 - s)/Q^2])/
+             (12*Pi^3) - (17*alphaS^2*eq^2*s*PolyLog[2, (omega + Q^2 - s)/
+                (omega - s)])/(12*Pi^3), "Assumptions" -> Q^2 > 0 && s > 0 && 
+            -Q^2 - s < omega - s && omega - s < 0 && mu > 0 && B > 0 && 
+            Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+            alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+              otherChargeMoment[2], Reals], "SelectedArgument" -> 
+           (omega + Q^2 - s)/Q^2, "Coverage" -> True, "Regions" -> 
+           {<|"Region" -> (omega + Q^2 - s)/Q^2 < 0, "Domain" -> 
+              Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+               mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, 
+                Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega + Q^2 - s)/Q^2 < 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega + Q^2 - s)/Q^2 == 0, 
+             "Domain" -> Q^2 > 0 && omega + Q^2 > 0 && -omega - 2*Q^2 < 
+                -Q^2 && -Q^2 < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+             "Map" -> {s -> omega + Q^2}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega + Q^2 - s)/Q^2 > 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && 
+               omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega + Q^2 - s)/Q^2 > 0, "Map" -> {}, "Empty" -> False, 
+             "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.13989063261069, 
+             "OriginalDifference" -> 0``86.3417201535829, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.04215975596576, 
+             "OriginalDifference" -> 0``85.95061462109825, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hgq", "Label" -> "Ppp_1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.08089741224893224446856351865932404855694887387756\
+18375012420185209810884113454753810869113367563435684930293952453`88.95730502\
+923547, -0.080897412248932244468563518659324048556948873877561837501242018520\
+981088411345475381086911336759`83.89956993344896}, "Difference" -> 
+            0``84.99163150154314, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0745062150039166241413917004077121076178242842443772366643856\
+537325580522866966216779341268727749758446363085237239`88.93691060731639, 
+             -0.0745062150039166241413917004077121076178242842443772366643856\
+53732558052286696621677934126872771`83.97954725654077}, "Difference" -> 
+            0``85.1073499642948, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 89712955895237883413239434483902137698461752\
+266658597551698201580829498591065|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Ppp_1_L1", "InputHash" -> 52473185160\
+025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04204644489068970441820949091249784586947516416263808522434357\
+85921688509320830085831679481961743076041380424392355`89.30102999566397, 0.04\
+20464448906897044182094909124978458694751641626380852243435785921688509320830\
+085831679481961743076041380424392015`87.61888090642367}, "Difference" -> 
+            0``88.98621529116585, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04204644489068970441820949091249784586947516416263808522434357\
+85921688509320830085831679481961743076041380424392355`89.30102999566397, 0.04\
+20464448906897044182094909124978458694751641626380852243435785921688509320830\
+085831679481961743076041380424392154`87.83008074946494}, "Difference" -> 
+            0``89.19191055687399, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < omega - s && omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 70615086893816625112039105622037497468384116\
+677994678487181398007125087721729|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Ppp_1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00885063894596102811262528025248822719062370528262\
+2124993324204449340686249231252805811032141091`80.28805417613657, 
+             -0.0088506389459610281126252802524882271906237052826221249933242\
+04449340686249231252805811032141072`82.05027781834627}, "Difference" -> 
+            0``82.33363509302599, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0066801622223136817378809786765377311566286854901484658696154\
+95682771232955812677450002021913564`80.75818807357442, -0.0066801622223136817\
+37880978676537731156628685490148465869615495682771232955812677450002021913563`\
+82.06451578481305}, "Difference" -> 0``82.91246257756629, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (-omega^2 + radius^2)/(4*Q^2) && 
+          (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          -Q^2 + (-omega^2 + radius^2)/(4*Q^2) - s < omega - s && 
+          omega - s < -1/4*(-omega^2 + radius^2)/s && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals] && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 29847227190076518640704296141968713126998728\
+374467029629495367020655734869259|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Ppp_-1_Delta", "InputHash" -> 5247318\
+5160025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.07698522712294477538496352867081625146374408696665586247021703\
+12423050364519702320521170425420357974143155728946301`85.57493035170934, 0.07\
+69852271229447753849635286708162514637440869666558624702170312423050364519702\
+32052117042559733`85.18698641542129}, "Difference" -> 0``86.15157140941447, 
+           "Equal" -> True|>, <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {0.062589216503819161245569921906580449676186164938070\
+524815087751971286760794694933912542253997686`85.09445796848588, 0.0625892165\
+03819161245569921906580449676186164938070524815087751971286760794694933912542\
+253947936`85.03360130128095}, "Difference" -> 0``85.96543503238915, 
+           "Equal" -> True|>}, "Assumptions" -> Q^2 > 0 && s > 0 && 
+          -Q^2 - s < -omega - s && -omega - s < 0 && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 49108102402943605153757418885078123785795642\
+363881068664902226545589880047646, "S03Proof" -> <|"Completed" -> True, 
+          "Channel" -> "Hgq", "Label" -> "Ppp_-1_Delta", "InputHash" -> 97662\
+229034870303727968921205680814911655253539248916654596097947491380605095, 
+          "S02Difference" -> (-17*alphaS^2*eq^2*s*Log[Q]^2)/(6*Pi^3) + 
+            (17*alphaS^2*eq^2*s*Log[Q]*Log[omega + s])/(6*Pi^3) - 
+            (17*alphaS^2*eq^2*s*Log[omega + s]^2)/(24*Pi^3) - 
+            (17*alphaS^2*eq^2*s*PolyLog[2, (-omega + Q^2 - s)/Q^2])/
+             (12*Pi^3) - (17*alphaS^2*eq^2*s*PolyLog[2, (omega - Q^2 + s)/
+                (omega + s)])/(12*Pi^3), "Assumptions" -> Q^2 > 0 && s > 0 && 
+            -Q^2 - s < -omega - s && -omega - s < 0 && mu > 0 && B > 0 && 
+            Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+            alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+              otherChargeMoment[2], Reals], "SelectedArgument" -> 
+           (omega - Q^2 + s)/(omega + s), "Coverage" -> True, 
+          "Regions" -> {<|"Region" -> (omega - Q^2 + s)/(omega + s) < 0, 
+             "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && 
+               -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+               (omega - Q^2 + s)/(omega + s) < 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>, 
+            <|"Region" -> (omega - Q^2 + s)/(omega + s) == 0, 
+             "Domain" -> Q^2 > 0 && -omega + Q^2 > 0 && omega - 2*Q^2 < 
+                -Q^2 && -Q^2 < 0 && mu > 0 && B > 0 && Q > 0 && omega > 0 && 
+               Element[nf, Integers] && nf >= 1 && alphaS > 0 && Element[
+                eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+             "Map" -> {s -> -omega + Q^2}, "Empty" -> False, 
+             "Difference" -> 0|>, <|"Region" -> (omega - Q^2 + s)/
+                (omega + s) > 0, "Domain" -> Q^2 > 0 && s > 0 && -Q^2 - s < 
+                -omega - s && -omega - s < 0 && mu > 0 && B > 0 && Q > 0 && 
+               omega > 0 && Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+               Element[eq | otherChargeMoment[1] | otherChargeMoment[2], 
+                Reals] && (omega - Q^2 + s)/(omega + s) > 0, "Map" -> {}, 
+             "Empty" -> False, "Difference" -> 0|>}, "NumericalChecks" -> 
+           {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 
+                2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.04005341135803, 
+             "OriginalDifference" -> 0``86.15157140941447, "Equal" -> True|>, 
+            <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+               B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 
+                4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+               otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+             "NormalizedDifference" -> 0``90.20900772116715, 
+             "OriginalDifference" -> 0``85.96543503238915, 
+             "Equal" -> True|>}, "Equal" -> True, "Difference" -> 0|>|>, 
+       <|"Completed" -> True, "Channel" -> "Hgq", "Label" -> "Ppp_-1_L0", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.09313573120289550446866973359303190347596062080874\
+91838423048141549617989831398601881215652436145906194921165086354`88.99498434\
+392225, -0.093135731202895504468669733593031903475960620808749183842304814154\
+961798983139860188121565243615`83.35673107264603}, "Difference" -> 
+            0``84.38761374519211, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0835098816807827855119764756173066841579468690285807448085523\
+097969086102069074289677974278639278015656056608198312`88.97568188580476, 
+             -0.0835098816807827855119764756173066841579468690285807448085523\
+09796908610206907428967797427863927`83.5854103745996}, "Difference" -> 
+            0``84.66367073811482, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && -omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 10138690849460604526561123087350376998125944\
+0048693110603645256774235033658792|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Ppp_-1_L1", "InputHash" -> 5247318516\
+0025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04204644489068970441820949091249784586947516416263808522434357\
+85921688509320830085831679481961743076041380424392355`89.30102999566397, 0.04\
+20464448906897044182094909124978458694751641626380852243435785921688509320830\
+085831679481961743076041380424392361`87.17342133358582}, "Difference" -> 
+            0``88.54646681239444, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {0.04204644489068970441820949091249784586947516416263808522434357\
+85921688509320830085831679481961743076041380424392355`89.30102999566397, 0.04\
+20464448906897044182094909124978458694751641626380852243435785921688509320830\
+08583167948196174307604138042439228`87.55943001949251}, "Difference" -> 
+            0``88.92789746426605, "Equal" -> True|>}, "Assumptions" -> 
+         Q^2 > 0 && s > 0 && -Q^2 - s < -omega - s && -omega - s < 0 && 
+          mu > 0 && B > 0 && Q > 0 && omega > 0 && Element[nf, Integers] && 
+          nf >= 1 && alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals], "AlgebraicMap" -> {}, 
+        "FreshDifferenceHash" -> 63462421177916366848861989932008925055396948\
+004499913783373584008863470354742|>, <|"Completed" -> True, 
+        "Channel" -> "Hgq", "Label" -> "Ppp_-1_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00858562077931085803864892960520680006276578165739\
+4243180611143537594937052989595677630650233162`79.74328406766116, 
+             -0.0085856207793108580386489296052068000627657816573942431806111\
+43537594937052989595677630650233144`81.43138276868109}, "Difference" -> 
+            0``81.80069639426262, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0060129550055078308905989134273875143000930021793974720611901\
+63461332672189202108167189305827875`80.29622294370701, -0.0060129550055078308\
+90598913427387514300093002179397472061190163461332672189202108167189305827877`\
+81.57481833865064}, "Difference" -> 0``82.49485068326194, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (-omega^2 + radius^2)/(4*Q^2) && 
+          (-omega^2 + radius^2)/(4*Q^2) > 0 && 
+          -Q^2 + (-omega^2 + radius^2)/(4*Q^2) - s < -omega - s && 
+          -omega - s < -1/4*(-omega^2 + radius^2)/s && mu > 0 && B > 0 && 
+          Q > 0 && omega > 0 && Element[nf, Integers] && nf >= 1 && 
+          alphaS > 0 && Element[eq | otherChargeMoment[1] | 
+            otherChargeMoment[2], Reals] && radius > 0, 
+        "AlgebraicMap" -> {s23 -> (-omega^2 + radius^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 33331151024347076648356514850394621599902518\
+998050583966998670164587609320753|>}, "CoefficientChecks" -> 18, 
+     "NumericalChecks" -> 36, "AllNumericalEqual" -> True, 
+     "ProductionSHA256" -> 
+      "7bff33cc4332bc639d13fbcd86ccd964973ca1a0b0fec06c6598e691c07def7f"|>, 
+   "Hgg" -> <|"Completed" -> True, "AllEqual" -> True, 
+     "Results" -> {<|"Completed" -> True, "Channel" -> "Hgg", 
+        "Label" -> "F1_Regular", "InputHash" -> 52473185160025202932015074851\
+563305849361999566049829999441908389751776940183, "Difference" -> 0, 
+        "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0012697346742571865102109849864656408116609008046539706744967\
+76608943959403895312471344137058837`80.0255166596966, -0.00126973467425718651\
+02109849864656408116609008046539706744967766089439594038953124713441370588356\
+12282162490587459`84.41233066106538}, "Difference" -> 0``82.92178585791072, 
+           "Equal" -> True|>, <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00165285357043664287685057254568157874238780722377\
+3845854746409183308010516799191031165646185159`80.96224895268622, 
+             -0.0016528535704366428768505725456815787423878072237738458547464\
+091833080105167991910311656461851607892091122488852946`84.92876803740901}, 
+           "Difference" -> 0``83.74396766497236, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (radius^2 - s^2 - 2*s*t - t^2)/
+            (4*Q^2) > 0 && -Q^2 - s + (radius^2 - s^2 - 2*s*t - t^2)/
+             (4*Q^2) < t < -1/4*(radius^2 - s^2 - 2*s*t - t^2)/s && mu > 0 && 
+          mu^2 > 0 && B > 0 && Q > 0 && alphaS > 0 && Element[nf, 
+           Integers] && nf >= 1 && Element[eq | eqp | eq2 | chargeSum | 
+            otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+          radius > 0, "AlgebraicMap" -> 
+         {s23 -> (radius^2 - s^2 - 2*s*t - t^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 47248322742643647530542419498418081117690604\
+46711865759580488532889002161356|>, <|"Completed" -> True, 
+        "Channel" -> "Hgg", "Label" -> "F2_Regular", "InputHash" -> 524731851\
+60025202932015074851563305849361999566049829999441908389751776940183, 
+        "Difference" -> 0, "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0009620452840858443403560091126684352791324033488131078419585\
+70709965535054636180327496062667306`79.67095404857479, -0.0009620452840858443\
+40356009112668435279132403348813107841958570709965535054636180327496062667283\
+8783174121926477956`84.07107557889803}, "Difference" -> 0``82.687741249144, 
+           "Equal" -> True|>, <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00192107002441993538396080793630867371867009291166\
+7158217764857146438843765978479905957055900466`80.66444359784326, 
+             -0.0019210700244199353839608079363086737186700929116671582177648\
+571464388437659784799059570559003855585513602055638277`84.64639250708272}, 
+           "Difference" -> 0``83.38085513210187, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (radius^2 - s^2 - 2*s*t - t^2)/
+            (4*Q^2) > 0 && -Q^2 - s + (radius^2 - s^2 - 2*s*t - t^2)/
+             (4*Q^2) < t < -1/4*(radius^2 - s^2 - 2*s*t - t^2)/s && mu > 0 && 
+          mu^2 > 0 && B > 0 && Q > 0 && alphaS > 0 && Element[nf, 
+           Integers] && nf >= 1 && Element[eq | eqp | eq2 | chargeSum | 
+            otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+          radius > 0, "AlgebraicMap" -> 
+         {s23 -> (radius^2 - s^2 - 2*s*t - t^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 95052303850783699478873590859264258208479862\
+613584044450949980313859778225837|>}, "CoefficientChecks" -> 2, 
+     "NumericalChecks" -> 4, "AllNumericalEqual" -> True, 
+     "ProductionSHA256" -> 
+      "85cc9a0e52f453fe65441e17a3f6b43aa7c81e457359477bc992bdd5ed453e43"|>, 
+   "Hqqbar" -> <|"Completed" -> True, "AllEqual" -> True, 
+     "Results" -> {<|"Completed" -> True, "Channel" -> "Hqqbar", 
+        "Label" -> "F1_Regular", "InputHash" -> 52473185160025202932015074851\
+563305849361999566049829999441908389751776940183, "Difference" -> 0, 
+        "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0004910980943985788481384832075865798568923788274853746068655\
+529375746344009361760137068040310956400946854891236356`84.433167370232, 
+             -0.0004910980943985788481384832075865798568923788274853746068655\
+52937574634400936176013706804031095647484352392168659`86.5044864328759}, 
+           "Difference" -> 0``87.73832943352892, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0004528783309400696327226414945977224187361653363430402644148\
+857948092120836442164667001483490979808980123432863756`84.75184286671531, 
+             -0.0004528783309400696327226414945977224187361653363430402644148\
+857948092120836442164667001483490979809056272059765483`86.45138742488385}, 
+           "Difference" -> 0``88.08727241210258, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (radius^2 - s^2 - 2*s*t - t^2)/
+            (4*Q^2) > 0 && -Q^2 - s + (radius^2 - s^2 - 2*s*t - t^2)/
+             (4*Q^2) < t < -1/4*(radius^2 - s^2 - 2*s*t - t^2)/s && mu > 0 && 
+          mu^2 > 0 && B > 0 && Q > 0 && alphaS > 0 && Element[nf, 
+           Integers] && nf >= 1 && Element[eq | eqp | eq2 | chargeSum | 
+            otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+          radius > 0, "AlgebraicMap" -> 
+         {s23 -> (radius^2 - s^2 - 2*s*t - t^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 10711474198953775509961341938799435591192274\
+1771805914955046151193729885249548|>, <|"Completed" -> True, 
+        "Channel" -> "Hqqbar", "Label" -> "F2_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00034487499301813212403127679172157047365745073732\
+77556369055903410425243483901660924235219711550551297624948154008`84.04986360\
+550916, -0.000344874993018132124031276791721570473657450737327755636905590341\
+0425243483901660924235219711550676911457935624468`86.40371048249192}, 
+           "Difference" -> 0``87.51028333016656, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0004595830992909097481721161508942344742733072280555235865782\
+72213204614779221849470725256869401841982541485400114`84.40240704085221, 
+             -0.0004595830992909097481721161508942344742733072280555235865782\
+722132046147792218494707252568694018419749476828016779`86.38473427232147}, 
+           "Difference" -> 0``87.73554306732767, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (radius^2 - s^2 - 2*s*t - t^2)/
+            (4*Q^2) > 0 && -Q^2 - s + (radius^2 - s^2 - 2*s*t - t^2)/
+             (4*Q^2) < t < -1/4*(radius^2 - s^2 - 2*s*t - t^2)/s && mu > 0 && 
+          mu^2 > 0 && B > 0 && Q > 0 && alphaS > 0 && Element[nf, 
+           Integers] && nf >= 1 && Element[eq | eqp | eq2 | chargeSum | 
+            otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+          radius > 0, "AlgebraicMap" -> 
+         {s23 -> (radius^2 - s^2 - 2*s*t - t^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 15925558202238019542099719748372169552658840\
+632049871632337751218085343013729|>}, "CoefficientChecks" -> 2, 
+     "NumericalChecks" -> 4, "AllNumericalEqual" -> True, 
+     "ProductionSHA256" -> 
+      "28cf4119f7db84a58a76f88aee9e14ace618f5146af6d9c1a1c602c6179bd21e"|>, 
+   "Hqqprime" -> <|"Completed" -> True, "AllEqual" -> True, 
+     "Results" -> {<|"Completed" -> True, "Channel" -> "Hqqprime", 
+        "Label" -> "F1_Regular", "InputHash" -> 52473185160025202932015074851\
+563305849361999566049829999441908389751776940183, "Difference" -> 0, 
+        "Equal" -> True, "NumericalChecks" -> 
+         {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0004441872281381008609846625949555935442253643284123558189136\
+822502057504443948663033285499511364251341535170056848`84.50505829058174, 
+             -0.0004441872281381008609846625949555935442253643284123558189136\
+822502057504443948663033285499743475928026491167166574`86.67880537313295}, 
+           "Difference" -> 0``87.85459096932291, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0004189883041621346693796122614415894926409850240851751201461\
+063881756378097767365498072626601537233995879073730855`84.79957450853394, 
+             -0.0004189883041621346693796122614415894926409850240851751201461\
+063881756378097767365498072626573602624768108114201706`86.65664738481718}, 
+           "Difference" -> 0``88.17137868732196, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (radius^2 - s^2 - 2*s*t - t^2)/
+            (4*Q^2) > 0 && -Q^2 - s + (radius^2 - s^2 - 2*s*t - t^2)/
+             (4*Q^2) < t < -1/4*(radius^2 - s^2 - 2*s*t - t^2)/s && mu > 0 && 
+          mu^2 > 0 && B > 0 && Q > 0 && alphaS > 0 && Element[nf, 
+           Integers] && nf >= 1 && Element[eq | eqp | eq2 | chargeSum | 
+            otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+          radius > 0, "AlgebraicMap" -> 
+         {s23 -> (radius^2 - s^2 - 2*s*t - t^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 73751303212010845781398960680033052913769785\
+267749742068577329159159892108913|>, <|"Completed" -> True, 
+        "Channel" -> "Hqqprime", "Label" -> "F2_Regular", 
+        "InputHash" -> 524731851600252029320150748515633058493619995660498299\
+99441908389751776940183, "Difference" -> 0, "Equal" -> True, 
+        "NumericalChecks" -> {<|"Point" -> {Q -> 2, s -> 10, t -> -9, 
+             omega -> 1, mu -> 3, B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, 
+             eqp -> -1/3, eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 
+              0, otherChargeMoment[2] -> 2/9, s23 -> 1/7}, 
+           "Values" -> {-0.00030495500799899184183246062144597842840409980190\
+74678485285723722400947872168065301850023237089796520320311917463`84.13662737\
+585645, -0.000304955007998991841832460621445978428404099801907467848528572372\
+2400947872168065301850023369725184548579367900409`86.58756387262588}, 
+           "Difference" -> 0``87.65085670589562, "Equal" -> True|>, 
+          <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, 
+             B -> 2, nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, 
+             eq2 -> 4/9, chargeSum -> 1, otherChargeMoment[1] -> 0, 
+             otherChargeMoment[2] -> 2/9, s23 -> 1/7}, "Values" -> 
+            {-0.0004029814596221629276204512971749857170566663918638722271810\
+236334092133791830915646176981192909543314043018153592`84.45627378606804, 
+             -0.0004029814596221629276204512971749857170566663918638722271810\
+236334092133791830915646176981171421382364230410195902`86.59996654309819}, 
+           "Difference" -> 0``87.84788032386864, "Equal" -> True|>}, 
+        "Assumptions" -> Q^2 > 0 && s > (radius^2 - s^2 - 2*s*t - t^2)/
+            (4*Q^2) > 0 && -Q^2 - s + (radius^2 - s^2 - 2*s*t - t^2)/
+             (4*Q^2) < t < -1/4*(radius^2 - s^2 - 2*s*t - t^2)/s && mu > 0 && 
+          mu^2 > 0 && B > 0 && Q > 0 && alphaS > 0 && Element[nf, 
+           Integers] && nf >= 1 && Element[eq | eqp | eq2 | chargeSum | 
+            otherChargeMoment[1] | otherChargeMoment[2], Reals] && 
+          radius > 0, "AlgebraicMap" -> 
+         {s23 -> (radius^2 - s^2 - 2*s*t - t^2)/(4*Q^2)}, 
+        "FreshDifferenceHash" -> 42440062712845958146814865653739760726939002\
+641754209275793253464201791254946|>}, "CoefficientChecks" -> 2, 
+     "NumericalChecks" -> 4, "AllNumericalEqual" -> True, 
+     "ProductionSHA256" -> 
+      "26e5c071f4a005d2682b8b3e3a0af3b25d0e0dbc904863a3621da37c8f3d291b"|>|>, 
+ "InputHash" -> 9766222903487030372796892120568081491165525353924891665459609\
+7947491380605095, "SourceSHA256" -> 
+  "25a425d3ee5d0fb89fc44b018d84c9d4b961e092b7e698f88ea3608bd7fb17dc", 
+ "S02ResultSHA256" -> 
+  "125dbada51898548586e9183f485a31126aa8ffe643aa1355826e79c98e46765", 
+ "Direction" -> "new SIDIS minus reconstructed BigTMD", 
+ "ReferenceInterpretation" -> "Same explicitly labelled rational \
+reconstruction of printed decimals as the previous comparison; literal \
+expressions retained."|>

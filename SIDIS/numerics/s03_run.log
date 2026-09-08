@@ -1,0 +1,18 @@
+MONITOR_START job=14693739 host=n6129 kernel_pid=62079
+"S03_CHANNEL_START ""Hqq"
+"S03_CHANNEL_DONE ""Hqq"" memory="139459368
+"S03_CHANNEL_START ""Hgg"
+"S03_CHANNEL_DONE ""Hgg"" memory="127812456
+"S03_CHANNEL_START ""Hqqbar"
+"S03_CHANNEL_DONE ""Hqqbar"" memory="127368736
+"S03_CHANNEL_START ""Hqqprime"
+MONITOR_HEARTBEAT elapsed=30s rss=283.9MiB peak=290.4MiB
+MONITOR_HEARTBEAT elapsed=60s rss=350.9MiB peak=366.4MiB
+MONITOR_HEARTBEAT elapsed=90s rss=407.7MiB peak=439.7MiB
+"S03_CHANNEL_DONE ""Hqqprime"" memory="297927832
+"S03_CHANNEL_START ""Hgq"
+"S03_CHANNEL_DONE ""Hgq"" memory="135314480
+"S03_CHANNEL_START ""Hqg"
+"S03_CHANNEL_DONE ""Hqg"" memory="134555472
+"S03_SUCCESS"
+MONITOR_WAKE {"stage": "s03", "source": "s03_inspect_fhat_schemas.wl", "source_sha256": "18bb9d1bed604791dfc2ef1e415f292d54a81d77e664bffcdcfcf5f14faeeb6b", "job_id": "14693739", "host": "n6129", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 461029376, "elapsed_seconds": 98.43268233700655, "completed_utc": "2026-09-07T16:18:32.676290+00:00"}

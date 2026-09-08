@@ -1,0 +1,28 @@
+{
+  "stage": "s05",
+  "source": "s05_prepare_hard_functions.wl",
+  "source_sha256": "52465f9ce4da3c27b4b1b5d5f1cb095c480581d408f1352690cd39f2e0b99e6e",
+  "job_id": "14693765",
+  "host": "n6138",
+  "exit_code": 0,
+  "success_marker": true,
+  "result_checks": {
+    "s05_cache/Hqq_result": true,
+    "s05_cache/Hgg_result": true,
+    "s05_cache/Hqqbar_result": true,
+    "s05_cache/Hqqprime_result": true,
+    "s05_cache/Hgq_result": true,
+    "s05_cache/Hqg_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "-c",
+    "import concurrent.futures,hashlib,json,os,subprocess\nfrom pathlib import Path\nroot=Path.cwd()\nsource=root/'s05_prepare_hard_functions.wl'\ndigest=hashlib.sha256(source.read_bytes()).hexdigest()\nsnapshot=root/'s05_cache'/('s05_source_'+digest+'.wl')\nsnapshot.write_bytes(source.read_bytes())\nchannels=['Hqq','Hgg','Hqqbar','Hqqprime','Hgq','Hqg']\ndef run(channel):\n    env=os.environ.copy();env.update(SIDIS_S05_MODE='export',SIDIS_CHANNEL=channel)\n    path=root/'s05_cache'/(channel+'_run.log')\n    with path.open('w') as log:\n        p=subprocess.Popen([env['WOLFRAM_KERNEL'],'-noprompt','-script',str(source)],env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)\n        for line in p.stdout:\n            log.write(line);log.flush()\n            print(channel+' '+line.rstrip(),flush=True)\n        status=p.wait()\n    assert status==0,(channel,status)\n    value=json.loads((root/'s05_cache'/(channel+'_result')).read_text())\n    assert value['Status']=='ExportComplete'\n    assert all(f['ProducerSHA256']==digest and f['PaxABIFieldUnused'] for f in value['Functions'])\n    return channel\nwith concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:\n    completed=list(pool.map(run,channels))\nassert completed==channels\nprint('S05_SUCCESS all channels',flush=True)\n"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 880869376,
+  "elapsed_seconds": 180.0880629569292,
+  "completed_utc": "2026-09-07T16:36:00.747051+00:00"
+}

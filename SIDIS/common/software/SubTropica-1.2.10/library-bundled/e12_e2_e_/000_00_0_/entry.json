@@ -1,0 +1,54 @@
+{
+  "CNickelIndex": "e12|e2|e|:000|00|0|",
+  "MassScales": 0,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "",
+  "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{2, 3}, 0}}",
+  "nodes": "{{1, 0}, {2, 0}, {3, 0}}",
+  "References": [
+    "arXiv:2405.18178",
+    "arXiv:2201.03593"
+  ],
+  "Records": [],
+  "Results": [],
+  "Names": [
+    "one-external-mass triangle",
+    "one-loop massive triangle",
+    "A1",
+    "massless_triangle_three_offshell_legs",
+    "one-loop massless triangle with off-shell external legs",
+    "Massless 1-loop triangle (3 massless legs)",
+    "OneExternalMassOneLoopTriangle",
+    "Massless 1-loop triangle (2 massless legs)",
+    "Massless 1-loop form-factor triangle"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 1,
+  "NumPropagators": 3,
+  "CanonicalName": "Massless triangle",
+  "numericallyVerified": true,
+  "numericallyVerifiedAt": "2026-04-12",
+  "MassConfig": {
+    "numEdges": 3,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 3,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "000",
+    "numExtLegs": 3,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 3,
+    "extLegSignature": "000"
+  },
+  "commonNames": [
+    "C₀"
+  ],
+  "Subsectors": [],
+  "ParentSectors": [
+    "1123|e|e3|e|:0000|0|00|0|",
+    "112|e3|e3|e|:000|00|00|0|",
+    "112|e3|e3|e|:010|00|00|0|"
+  ]
+}

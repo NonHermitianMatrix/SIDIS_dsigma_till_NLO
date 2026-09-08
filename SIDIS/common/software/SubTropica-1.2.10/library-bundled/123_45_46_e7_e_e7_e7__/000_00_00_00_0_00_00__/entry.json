@@ -1,0 +1,87 @@
+{
+  "CNickelIndex": "123|45|46|e7|e|e7|e7||:000|00|00|00|0|00|00||",
+  "MassScales": 2,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "8",
+  "References": [
+    "arXiv:2111.13595",
+    "arXiv:2002.09492 (JHEP 04 (167), 2020)"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:2002.09492 (JHEP 04 (167), 2020)",
+      "authors": "Henn, Johannes, Mistlberger, Bernhard, Smirnov, Vladimir A., Wasser, Pascal",
+      "description": "Three-loop non-planar family I. Non-planar topology with a crossed propagator $(k_3-k_2+p_3)^2$ instead of $(k_3-p_3)^2$.",
+      "epsOrders": "8",
+      "familyName": "HMSW_I",
+      "method": "",
+      "tools": [],
+      "ancillaryFiles": true,
+      "doi": "10.1007/JHEP04(2020)167",
+      "texkey": "Henn:2020lye",
+      "masterCount": 113,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "eq. 7.1, Table 1, ancillary FamilyDefinition.m (row 9)",
+      "recordId": "bx_f41ae97a68f4",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2111.13595",
+      "authors": "Piotr Bargiela, Fabrizio Caola, Andreas von Manteuffel, Lorenzo Tancredi",
+      "description": "Three-loop massless four-point top sector, family I of arXiv:2002.09492 (Fig. 1). Recomputed in arXiv:2111.13595 with top-sector integrals and all kinematic crossings; analytic master integrals through weight 6 (HPLs). Reference and ancillary files only; no result imported yet.",
+      "recordId": "ax_f70e5df32d60",
+      "ancillaryFiles": true,
+      "ancillaryPaths": [
+        "anc/integralfamilies_3L.yaml",
+        "anc/integralfamilies_2L.yaml",
+        "anc/kinematics.yaml",
+        "anc/2L_canbasis.m",
+        "anc/3L_masters_w6.m",
+        "anc/2L_masters_w6.m",
+        "anc/3Lx12_masters_w6.m",
+        "anc/3Lx123_masters_w6.m",
+        "anc/3Lx124_masters_w6.m",
+        "anc/3Lx1234_masters_w6.m",
+        "anc/3Lx1243_masters_w6.m",
+        "anc/m2i.c.m",
+        "anc/i2m.c.m",
+        "anc/mcross.c.m",
+        "anc/README.txt"
+      ],
+      "sourceFamily": "I",
+      "masterCount": 113,
+      "epsOrders": "-6,-5,-4,-3,-2,-1,0",
+      "texkey": "Bargiela:2021wuy",
+      "doi": "10.1007/JHEP02(2022)153",
+      "verified": false
+    }
+  ],
+  "Names": [
+    "HMSW_I"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 3,
+  "NumPropagators": 10,
+  "Results": [],
+  "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 5}, 0}, {{2, 6}, 0}, {{3, 5}, 0}, {{3, 7}, 0}, {{4, 8}, 0}, {{6, 8}, 0}, {{7, 8}, 0}}",
+  "nodes": "{{4, 0}, {5, 0}, {6, 0}, {7, 0}}",
+  "CanonicalName": "Massless hexagonal core (c)",
+  "MassConfig": {
+    "numEdges": 10,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 10,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "0000000000",
+    "numExtLegs": 4,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 4,
+    "extLegSignature": "0000"
+  },
+  "Subsectors": [],
+  "ParentSectors": []
+}

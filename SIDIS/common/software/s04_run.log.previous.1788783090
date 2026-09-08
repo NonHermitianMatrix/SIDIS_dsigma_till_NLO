@@ -1,0 +1,105 @@
+MONITOR_START job=14692925 host=n6382 kernel_pid=15681
+Configure pinned SCIP 6.0.2 shared runtime
+-- Build shared libraries: ON
+-- Build type: Release
+CMake Warning (dev) at /u/local/apps/cmake/3.19.5/gcc-4.8.5/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake:426 (message):
+  The package name passed to `find_package_handle_standard_args` (CRITERION)
+  does not match the name of the calling package (Criterion).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/Modules/FindCriterion.cmake:27 (find_package_handle_standard_args)
+  CMakeLists.txt:447 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find CRITERION (missing: CRITERION_LIBRARY CRITERION_INCLUDE_DIR) 
+CMake Warning at doc/CMakeLists.txt:19 (message):
+  Could not find all of doxygen, python, php, and bash in system path, which
+  are required for generation of documentation
+
+
+CMake Warning (dev) at /u/local/apps/cmake/3.19.5/gcc-4.8.5/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake:426 (message):
+  The package name passed to `find_package_handle_standard_args` (CRITERION)
+  does not match the name of the calling package (Criterion).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/Modules/FindCriterion.cmake:27 (find_package_handle_standard_args)
+  applications/Ringpacking/tests/CMakeLists.txt:32 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find CRITERION (missing: CRITERION_LIBRARY CRITERION_INCLUDE_DIR) 
+-- The following REQUIRED packages have been found:
+
+ * SCIP
+
+-- The following OPTIONAL packages have not been found:
+
+ * Criterion
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build
+Compile with two threads; optional SCIP LP/NLP solvers are not used by the Newton-polytope calculation
+-- Git hash: e639a0059d28e97a67f62f7764f49626d4054e9c
+[  0%] Built target scip_update_githash
+[  0%] Building C object src/CMakeFiles/libscip.dir/scip/scipgithash.c.o
+[  0%] Building C object src/CMakeFiles/libscip.dir/scip/scipshell.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/sepa.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/sepastore.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/set.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/sol.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/solve.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/stat.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/syncstore.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/table.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/tree.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/var.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/visual.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/rbtree.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/tclique/tclique_branch.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/tclique/tclique_coloring.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/tclique/tclique_graph.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/dijkstra/dijkstra.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/xml/xmlparse.c.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objbenders.cpp.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objbenderscut.cpp.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objbranchrule.cpp.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objconshdlr.cpp.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objdialog.cpp.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objdisp.cpp.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objeventhdlr.cpp.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objheur.cpp.o
+[  7%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objmessagehdlr.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objnodesel.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objpresol.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objpricer.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objprobdata.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objprop.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objreader.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objrelax.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objsepa.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objtable.cpp.o
+[ 12%] Building CXX object src/CMakeFiles/libscip.dir/objscip/objvardata.cpp.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/nlpi/nlpi.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/nlpi/nlpi_all.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/nlpi/nlpioracle.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/nlpi/expr.c.o
+[ 12%] Building CXX object src/CMakeFiles/libscip.dir/nlpi/intervalarithext.cpp.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/nlpi/nlpi_ipopt_dummy.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/nlpi/nlpi_worhp_dummy.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/nlpi/nlpi_filtersqp_dummy.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/nlpi/exprinterpret_none.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/lpi/lpi_none.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/tpi/tpi_none.c.o
+[ 15%] Building CXX object src/CMakeFiles/libscip.dir/symmetry/compute_symmetry_none.cpp.o
+[ 15%] Linking CXX shared library ../lib/libscip.so
+[100%] Built target libscip
+ polymake:  ERROR: "/usr/local/share/polymake/perllib/Polymake/Core/CPlusPlus.pm", line 1785: Can't load shared module /usr/local/lib/polymake/lib/polytope.so: libppl.so.14: cannot open shared object file: No such file or directory
+
+
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_build_scip.py", line 49, in <module>
+    assert result['accepted'], 'Polymake module test failed'
+AssertionError: Polymake module test failed
+MONITOR_WAKE {"stage": "s04", "source": "s04_build_scip.py", "source_sha256": "feeb557dfd237274342a87bc42d9dd358e4b87db53eea9ceafe7eee5231674d9", "job_id": "14692925", "host": "n6382", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 152129536, "elapsed_seconds": 25.99951523542404, "completed_utc": "2026-09-07T12:06:40.513830+00:00"}

@@ -1,0 +1,10 @@
+MONITOR_START job=14693761 host=n6132 kernel_pid=30380
+PROGRESS SIDIS numerics S08 2026-09-07T16:30:01.794672+00:00: Starting tool-derived flavor luminosities, uniform-azimuth H1 acceptance and bounded-distribution actions. Next save s08_result only after reconstruction and numerical acceptance checks.
+PROGRESS SIDIS numerics S08 2026-09-07T16:30:01.857545+00:00: Stage failed: NameError("name 'sha' is not defined"). Next correct S08 before production integration.
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s08_derive_consumer_actions.py", line 172, in <module>
+    try:main()
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s08_derive_consumer_actions.py", line 34, in main
+    assert c['InputSHA256']==sha(ROOT/payload['copy'])
+NameError: name 'sha' is not defined
+MONITOR_WAKE {"stage": "s08", "source": "s08_derive_consumer_actions.py", "source_sha256": "cea446ea1bc2c69ecfabbe0e08f4123563d8a688f92a1233291334535a28a99e", "job_id": "14693761", "host": "n6132", "exit_code": 1, "success_marker": false, "result_checks": {"s08_result": false}, "command": ["/u/local/apps/anaconda3/2023.03/bin/python", "-u", "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s08_derive_consumer_actions.py"], "accepted_execution": false, "guard": null, "peak_rss_bytes": 54194176, "elapsed_seconds": 4.741968902060762, "completed_utc": "2026-09-07T16:30:01.937246+00:00"}

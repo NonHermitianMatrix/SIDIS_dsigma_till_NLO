@@ -1,0 +1,65 @@
+MONITOR_START job=14692935 host=n6136 kernel_pid=61334
+"SOFT_MASTER "InputForm[CutIntegral["R01", {1, 1, 0, 0}]]" depth "0" parameters "InputForm[<||>]
+"SOFT_MASTER "InputForm[CutIntegral["R01", {1, 1, 1, 1}]]" depth "0" parameters "InputForm[<|zp -> Infinity|>]
+"SOFT_MASTER "InputForm[CutIntegral["R02", {1, 1, 1, 1}]]" depth "0" parameters "InputForm[<|zp -> 1|>]
+"SOFT_MASTER "InputForm[CutIntegral["R03", {1, 1, 0, 1}]]" depth "0" parameters "InputForm[<|zz -> -1 + (2*(2*Q2 + s + t))/(2*Q2 + s + t + Abs[s + t])|>]
+"SOFT_MASTER "InputForm[CutIntegral["R03", {1, 1, 1, 1}]]" depth "0" parameters "InputForm[<|zm -> Piecewise[{{1, s + t >= 0}}, (Q2 + s + t)/Q2], zp -> (2*Q2 + s + t + Abs[s + t])/(2*Q2)|>]
+"SOFT_MASTER "InputForm[CutIntegral["R04", {1, 1, 1, 1}]]" depth "0" parameters "InputForm[<|zm -> Piecewise[{{1, s + t < 0}}, Q2/(Q2 + s + t)], zp -> Piecewise[{{1, s + t >= 0}}, Q2/(Q2 + s + t)]|>]
+"SOFT_MASTER "InputForm[CutIntegral["R09", {1, 1, 1, 1}]]" depth "0" parameters "InputForm[<|zm -> Piecewise[{{1, s + t >= 0}}, (Q2 + s + t)/Q2], zp -> (2*Q2 + s + t + Abs[s + t])/(2*Q2)|>]
+"SOFT_MASTER "InputForm[CutIntegral["R10", {1, 1, 1, 1}]]" depth "0" parameters "InputForm[<|zm -> Piecewise[{{1, s + t < 0}}, Q2/(Q2 + s + t)], zp -> Piecewise[{{1, s + t >= 0}}, Q2/(Q2 + s + t)]|>]
+"[SubTropica] FF/SPQR auto-detect aborted; falling back to PolynomialQuotient[]."
+"                                @@@@@@@\n             ^^              @@@@@@@@@@@@@                 [×] polymake\n        ^^        ^^       @@@@@@@@@@@@@@@@@\n                          @@@@@@@@@@@@@@@@@@@           ^^\n                         @@@@@@@@@@@@@@@@@@@@@\n ~~~~ ~~~ ~~~~ ~~~~~ ~~  &&&&&&&&&&&&&&&&&&&&& ~~~~~~~ ~~~~~~~ ~~~ ~~~~\n ~        ~~   ~  ~      ~~~~~~~~~~~~~~~~~~~~~ ~       ~~    ~~ ~  ~~~~\n  ~ ~~     ~~~    ~  ~~   ~~    ~~~~~   ~~  ~~~    ~    ~~~    ~~  ~~\n          [-] pySecDec  [-] FIESTA  [-] AMFlow  [-] feyntrop\n     [-] FiniteFlow  [-] SPQR  [-] LiteRed  [-] FIRE  [-] HyperInt\n         [-] maple  [-] ginsh  [-] python3  [\[Checkmark]] curl  [-] make\n        [-] HyperFLINT  [-] HyperFORM  [-] IterInt  [-] msolve\n                       [-] SOFIA  [-] Effortless\n       [-] Kira  [-] FireFly  [-] Fermat  [-] NeatIBP  [-] SpaSM\n   [-] Singular  [-] FORM  [-] PolyLogTools  [-] Libra  [-] DiffExp\n ~  ~       ~ ~      ~           ~~ ~~~~~~  ~      ~~  ~             ~~\n       ~             ~        ~      ~      ~~   ~             ~\n\nWelcome to SubTropica v1.2.10!\n\nby Mathieu Giroux, Sebastian Mizera, Giulio Salvatori\n\nNew install \[LongDash] run STBenchmark[] to verify your setup."
+"  \[WarningSign] ""polymake"" is REQUIRED: ""brew install polymake  |  apt install polymake  |  conda install -c conda-forge polymake""\n    ""If not on $PATH: ConfigureSubTropica[PolymakePath -> \"/absolute/path/to/polymake\"]"
+polymake: used package cdd
+  cddlib
+  Implementation of the double description method of Motzkin et al.
+  Copyright by Komei Fukuda.
+  http://www-oldurls.inf.ethz.ch/personal/fukudak/cdd_home/
+
+polymake: used package ppl
+  The Parma Polyhedra Library ([[wiki:external_software#PPL]]): A C++ library for convex polyhedra
+  and other numerical abstractions.
+  http://www.cs.unipr.it/ppl/
+
+"polymake exit status:"0
+MONITOR_HEARTBEAT elapsed=30s rss=828.5MiB peak=828.5MiB
+"From remote kernel:"
+"[SubTropica] FF/SPQR auto-detect aborted; falling back to\\\n \n>   PolynomialQuotient[].\n"
+"From remote kernel:"
+"                                @@@@@@@\n             ^^              @@@@@@@@@@@@@                 [×] polymake\n        ^^        ^^       @@@@@@@@@@@@@@@@@\n                          @@@@@@@@@@@@@@@@@@@           ^^\n                         @@@@@@@@@@@@@@@@@@@@@\n ~~~~ ~~~ ~~~~ ~~~~~ ~~  &&&&&&&&&&&&&&&&&&&&& ~~~~~~~ ~~~~~~~ ~~~ ~~~~\n ~        ~~   ~  ~      ~~~~~~~~~~~~~~~~~~~~~ ~       ~~    ~~ ~  ~~~~\n  ~ ~~     ~~~    ~  ~~   ~~    ~~~~~   ~~  ~~~    ~    ~~~    ~~  ~~\n          [-] pySecDec  [-] FIESTA  [-] AMFlow  [-] feyntrop\n     [-] FiniteFlow  [-] SPQR  [-] LiteRed  [-] FIRE  [-] HyperInt\n         [-] maple  [-] ginsh  [-] python3  [\[Checkmark]] curl  [-] make\n        [-] HyperFLINT  [-] HyperFORM  [-] IterInt  [-] msolve\n                       [-] SOFIA  [-] Effortless\n       [-] Kira  [-] FireFly  [-] Fermat  [-] NeatIBP  [-] SpaSM\n   [-] Singular  [-] FORM  [-] PolyLogTools  [-] Libra  [-] DiffExp\n ~  ~       ~ ~      ~           ~~ ~~~~~~  ~      ~~  ~             ~~\n       ~             ~        ~      ~      ~~   ~             ~\n\nWelcome to SubTropica v1.2.10!\n\nby Mathieu Giroux, Sebastian Mizera, Giulio Salvatori\n\nNew install \[LongDash] run STBenchmark[] to verify your setup.\n"
+"From remote kernel:"
+"  \[WarningSign] polymake is REQUIRED: brew install polymake  |  apt install polymake  | \\\n \n>    conda install -c conda-forge polymake\n                                              \n \n>   If not on $PATH: ConfigureSubTropica[PolymakePath ->\\\n \n>    \"/absolute/path/to/polymake\"]\n"
+"From remote kernel:"
+"SUBTROPICA_SOFT_REGION region_2de21a1690a6990f1b36b15c94f2c80c82fab018d3b877c\\\n \n>    b1317f18cbaae2cf kernel 1\n"
+"From remote kernel:"
+"DistributeDefinitions::subnopar: \n   Parallel programming is not available in subkernels of another parallel\n    computation."
+"From remote kernel:"
+">> Problem ID: region_2de21a1690a6990f1b36b15c94f2c80c82fab018d3b877cb1317f18\\\n \n>    cbaae2cf\n"
+"From remote kernel:"
+"Dynamic[Module[{SubTropica`Private`dt = \n \n                                            9\n>      AbsoluteTime[] - 3.997747254276075 10 }, \n \n>    Which[SubTropica`Private`dt < 60, Time elapsed: SubTropica`Private`dts, \n \n>     SubTropica`Private`dt < 3600, \n \n                          SubTropica`Private`dt\n>     Time elapsed: Floor[---------------------]m \n                                   60\n \n>      Mod[Round[SubTropica`Private`dt], 60]s, True, \n \n                          SubTropica`Private`dt\n>     Time elapsed: Floor[---------------------]h \n                                  3600\n \n             Mod[SubTropica`Private`dt, 3600]\n>      Floor[--------------------------------]m]], UpdateInterval -> 1]\n                            60\n"
+"From remote kernel:"
+"                              eps\n                             u\n>> Parametric integrand: {1, -----, {u}, {}}\n                             1 + u\n"
+"From remote kernel:"
+">> Time taken to set up the integrands and directories: 0.4s\n"
+"From remote kernel:"
+"All integrands saved to: s15_integrands.wl\n"
+"From remote kernel:"
+"stDispatchFubini2::nocarrymma: \n   Carry -> True has no effect on the HyperIntica/Mathematica LR engines (no\n    carry tier); proceeding with strict FindRoots semantics."
+"From remote kernel:"
+">> Time taken to find the linear orderings: 0.0s\n"
+"From remote kernel:"
+"ParallelEvaluate::subnopar: \n   Parallel programming is not available in subkernels of another parallel\n    computation."
+"From remote kernel:"
+">> Time taken to set up the kernels: < 0.01s\n"
+"From remote kernel:"
+"DistributeDefinitions::subnopar: \n   Parallel programming is not available in subkernels of another parallel\n    computation."
+"From remote kernel:"
+"ParallelMap::subpar: \n   Parallel computations cannot be nested; proceeding with sequential\n    evaluation."
+"From remote kernel:"
+">> Time taken to integrate: 0.2s\n"
+"From remote kernel:"
+"ParallelEvaluate::subnopar: \n   Parallel programming is not available in subkernels of another parallel\n    computation."
+"From remote kernel:"
+">> Overall timing: 1.0s\n"
+"S15_SUCCESS: regulated cut-master regions and fixed-recoil master series evaluated."
+MONITOR_WAKE {"stage": "s15", "source": "s15_cut_soft_regions.wl", "source_sha256": "1597b12ecf01f9df4f526a7ae73a7e98a51be7d64936573b3b635b720cdde066", "job_id": "14692935", "host": "n6136", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 985305088, "elapsed_seconds": 41.28522086143494, "completed_utc": "2026-09-07T12:20:55.410149+00:00"}

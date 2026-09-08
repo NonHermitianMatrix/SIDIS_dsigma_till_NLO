@@ -1,0 +1,23 @@
+{
+  "stage": "s10_invariant",
+  "source": "s10_validate_precision.py",
+  "source_sha256": "ca3ddf9fd7857529389a45eec493a97e6a3af2bdbe27509ae777ef1cfa8102b9",
+  "job_id": "14693762",
+  "host": "n6133",
+  "exit_code": 1,
+  "success_marker": false,
+  "result_checks": {
+    "s10_cache/s10_invariant_contract_result": false
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s10_validate_precision.py",
+    "--invariant-contract"
+  ],
+  "accepted_execution": false,
+  "guard": null,
+  "peak_rss_bytes": 66031616,
+  "elapsed_seconds": 9.242415537009947,
+  "completed_utc": "2026-09-07T16:30:06.874139+00:00"
+}

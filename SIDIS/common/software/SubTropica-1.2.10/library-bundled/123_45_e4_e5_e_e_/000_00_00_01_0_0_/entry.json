@@ -1,0 +1,142 @@
+{
+    "CNickelIndex": "123|45|e4|e5|e|e|:000|00|00|01|0|0|",
+    "MassScales": 3,
+    "FunctionClass": "unknown",
+    "EpsilonOrder": "",
+    "References": [
+        "arXiv:1705.05610 (Comput.Phys.Commun. 230 (99), 2018)",
+        "arXiv:1802.02419",
+        "arXiv:2412.07522"
+    ],
+    "Records": [
+        {
+            "reference": "arXiv:1705.05610 (Comput.Phys.Commun. 230 (99), 2018)",
+            "authors": "Maierhöfer, Philipp, Usovitsch, Johann, Uwer, Peter",
+            "description": "Planar double box with one massive internal propagator ($m_2$) and one massive external leg ($q_1^2=m_1^2$); benchmark for NNLO t-channel single top-quark production.",
+            "epsOrders": "",
+            "familyName": "topo7",
+            "method": "IBP",
+            "tools": [
+                "Kira",
+                "Reduze",
+                "FIRE",
+                "GiNaC"
+            ],
+            "ancillaryFiles": false,
+            "doi": "10.1016/j.cpc.2018.04.012",
+            "texkey": "Maierhofer:2017gsa",
+            "masterCount": 0,
+            "dimScheme": "d=4-2*eps",
+            "computationLevel": "IBP_only",
+            "location": "Eqs. (5)-(6), Section 4",
+            "recordId": "bx_004b492bb16c",
+            "verified": false,
+            "verifiedAt": ""
+        },
+        {
+            "reference": "arXiv:1802.02419",
+            "authors": [
+                {
+                    "full_name": "Meyer, Christoph",
+                    "inspire_id": 1591111
+                },
+                {
+                    "full_name": "Uwer, Peter",
+                    "inspire_id": null
+                },
+                {
+                    "full_name": "Kreimer, Dirk",
+                    "inspire_id": null
+                },
+                {
+                    "full_name": "Weinzierl, Stefan",
+                    "inspire_id": null
+                }
+            ],
+            "description": "Two-loop planar double-box topology with a single massive internal propagator $P_3$, four massless external legs ($p_i^2=0$); contributes to mixed EW+QCD Drell-Yan corrections; previously computed in Bonciani et al. Called DYOM in the paper. 25 master integrals; canonical basis constructed with CANONICA in about one minute in variables $x=s/m^2$, $y=t/m^2$ with the stated 6-letter alphabet.",
+            "epsOrders": "",
+            "familyName": "2-loop 4-point planar double box with one internal mass (Drell-Yan)",
+            "method": "IBP, DE",
+            "tools": [
+                "Reduze",
+                "Canonica"
+            ],
+            "ancillaryFiles": false,
+            "doi": "",
+            "texkey": "",
+            "masterCount": 25,
+            "dimScheme": "d=4-2*eps",
+            "computationLevel": "basis",
+            "location": "Section 5.5",
+            "recordId": "bx_0272b4271620",
+            "verified": false,
+            "verifiedAt": ""
+        },
+        {
+            "reference": "arXiv:2412.07522",
+            "authors": [
+                {
+                    "full_name": "Schwanemann, Niklas",
+                    "inspire_id": 1887879
+                },
+                {
+                    "full_name": "Weinzierl, Stefan",
+                    "inspire_id": 983857
+                }
+            ],
+            "description": "Planar 2-loop double-box with single heavy gauge boson on one far leg; 21 masters; GPLs. Called topology D in the paper.",
+            "epsOrders": "all_orders",
+            "familyName": "Planar 2-loop double-box with single heavy boson on one far leg (Moller, topology D)",
+            "method": "IBP, DE",
+            "tools": [
+                "Kira"
+            ],
+            "ancillaryFiles": false,
+            "doi": "",
+            "texkey": "",
+            "masterCount": 21,
+            "dimScheme": "d=4-2*eps",
+            "computationLevel": "full",
+            "location": "Sec. 2.2, Table 1",
+            "recordId": "bx_891812252289",
+            "verified": false,
+            "verifiedAt": ""
+        }
+    ],
+    "Names": [
+        "topo7",
+        "2-loop 4-point planar double box with one internal mass (Drell-Yan)",
+        "1-mass 2-loop planar double box with internal W propagator (7 propagators)",
+        "Planar two-loop double box for gb -> tW with one massive (top-quark) propagator"
+    ],
+    "Source": [
+        "arXiv"
+    ],
+    "Loops": 2,
+    "NumPropagators": 7,
+    "Results": [],
+    "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 5}, 0}, {{2, 6}, 0}, {{3, 5}, 0}, {{4, 6}, m}}",
+    "nodes": "{{3, 0}, {4, 0}, {6, 0}, {5, 0}}",
+    "CanonicalName": "Double box, 1 massive propagator (a)",
+    "MassConfig": {
+        "numEdges": 7,
+        "numMassiveEdges": 1,
+        "numMasslessEdges": 6,
+        "distinctInternalMasses": 1,
+        "internalMassLabels": [
+            "m"
+        ],
+        "edgeMassPattern": "0000001",
+        "numExtLegs": 4,
+        "numOnshellMassiveExtLegs": 0,
+        "numMasslessExtLegs": 4,
+        "extLegSignature": "0000"
+    },
+    "commonNames": [
+        "L2"
+    ],
+    "Subsectors": [
+        "123|24|e|e4|e|:000|00|1|00|0|"
+    ],
+    "ParentSectors": []
+}

@@ -1,0 +1,194 @@
+{
+    "CNickelIndex": "e12|e3|e3|e|:000|10|10|0|",
+    "MassScales": 3,
+    "FunctionClass": "MPL",
+    "EpsilonOrder": "0",
+    "References": [
+        "arXiv:0712.1851 (JHEP 02 (002), 2008)",
+        "arXiv:hep-ph/0106243",
+        "arXiv:1104.2787, JHEP 06 (100), 2011",
+        "arXiv:2302.01956 (JHEP 05 (059), 2023)"
+    ],
+    "Records": [
+        {
+            "reference": "arXiv:hep-ph/0106243",
+            "authors": [
+                {
+                    "full_name": "Binoth, T.",
+                    "inspire_id": 1016306
+                },
+                {
+                    "full_name": "Guillet, J.P.",
+                    "inspire_id": 1007287
+                },
+                {
+                    "full_name": "Heinrich, G.",
+                    "inspire_id": 1006298
+                },
+                {
+                    "full_name": "Schubert, C.",
+                    "inspire_id": 989669
+                }
+            ],
+            "description": "One-loop massless scalar box with two off-shell legs at opposite corners. Pole part plus finite remainder $F_{2B}$ in dilogarithms.",
+            "epsOrders": "0",
+            "familyName": "massless 1-loop box with two opposite off-shell legs",
+            "method": "direct_integration",
+            "tools": [],
+            "ancillaryFiles": false,
+            "doi": "",
+            "texkey": "",
+            "masterCount": 0,
+            "dimScheme": "d=4-2*eps",
+            "computationLevel": "full",
+            "location": "Appendix Eq. (op)",
+            "recordId": "bx_3a5921c14a94",
+            "verified": false,
+            "verifiedAt": ""
+        },
+        {
+            "reference": "arXiv:0712.1851 (JHEP 02 (002), 2008)",
+            "authors": "Ellis, R.Keith, Zanderighi, Giulia",
+            "description": "Divergent one-loop box I_4^D(0,p_2^2,0,p_4^2;s12,s23;0,0,0,0) with all massless internal lines and two opposite off-shell external legs. Contains double 1/eps^2 poles. Result from Bern-Dixon-Kosower.",
+            "epsOrders": "0",
+            "familyName": "Box_3",
+            "method": "direct_integration",
+            "tools": [],
+            "ancillaryFiles": false,
+            "doi": "10.1088/1126-6708/2008/02/002",
+            "texkey": "Ellis:2007qk",
+            "masterCount": 1,
+            "dimScheme": "d=4-2*eps",
+            "computationLevel": "full",
+            "location": "Sec. 3.2.1, Sec. 4.4.3",
+            "recordId": "bx_30deb353631c",
+            "verified": false,
+            "verifiedAt": ""
+        },
+        {
+            "dimScheme": "d=2m-2*eps",
+            "recordId": "bf_80968fc71e8f",
+            "familyName": "I_box_6d",
+            "verified": true,
+            "verifiedAt": "auto-loopedia",
+            "authors": "Dixon, Lance J., Drummond, James M., Henn, Johannes M.",
+            "texkey": "Dixon:2011ng",
+            "computationLevel": "full",
+            "masterCount": 1,
+            "location": "Appendix B",
+            "transcendentalWeight": 2,
+            "method": [],
+            "reference": "arXiv:1104.2787, JHEP 06 (100), 2011",
+            "ancillaryFiles": [],
+            "description": "Scalar box integral in $D=6$ dimensions with two-mass-easy configuration. Result in terms of $\\operatorname{Li}_2$ functions.",
+            "epsOrders": "all orders",
+            "tools": [],
+            "doi": "10.1007/JHEP06(2011)100"
+        },
+        {
+            "reference": "arXiv:2302.01956 (JHEP 05 (059), 2023)",
+            "authors": "Haug, Juliane, Wunder, Fabian",
+            "description": "One-loop scalar box integral with four massless propagators and two non-adjacent off-shell external legs ($p_1^2=p_3^2=0, p_2^2$ and $p_4^2$ nonzero). Closed-form result as four Gauss $_2F_1$ functions, and equivalently in single-valued polylogarithms allowing all-order epsilon expansion with explicit real and imaginary parts.",
+            "epsOrders": "all_orders",
+            "familyName": "massless 1-loop 4-point non-adjacent double off-shell box",
+            "method": "direct_integration",
+            "tools": [],
+            "ancillaryFiles": false,
+            "doi": "10.1007/JHEP05(2023)059",
+            "texkey": "Haug:2023eqg",
+            "masterCount": 1,
+            "dimScheme": "d=4-2*eps",
+            "computationLevel": "full",
+            "location": "Eq. (2.1), Eq. (2.36), Eq. (3.8)",
+            "recordId": "bx_5926ba0b2aec",
+            "verified": true,
+            "verifiedAt": "auto-loopedia"
+        }
+    ],
+    "Names": [
+        "Box_3",
+        "massless 1-loop box with two opposite off-shell legs"
+    ],
+    "Source": [
+        "arXiv"
+    ],
+    "Loops": 1,
+    "NumPropagators": 4,
+    "Results": [
+        {
+            "dimension": "4 - 2*eps",
+            "epsOrder": "0",
+            "epsOrders": "0",
+            "propExponents": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "propagators": [],
+            "numerators": [],
+            "internalMasses": [],
+            "externalMasses": [],
+            "substitutions": "",
+            "normalization": "Automatic",
+            "stVersion": "SubTropica v1.0.282",
+            "stCommand": "",
+            "contributor": "Sebastian Mizera",
+            "timestamp": "2026-04-14T17:12:06",
+            "verifiedAt": "2026-04-14T17:12:06",
+            "verified": true,
+            "method": "direct_integration",
+            "tools": [
+                "SubTropica"
+            ],
+            "methodLR": "Lungo",
+            "byteCount": 7552,
+            "alphabet": [
+                "M^2",
+                "s_{12}",
+                "s_{23}",
+                "M^2-s_{12}",
+                "M^2-s_{23}",
+                "M^4-s_{12} s_{23}"
+            ],
+            "symbolWeight": 2,
+            "symbolTerms": 13,
+            "normalizedAlphabet": [
+                "W_1",
+                "W_2",
+                "W_3",
+                "W_4",
+                "W_5"
+            ],
+            "symbolScale": "M^2",
+            "normalizedSymbolTerms": 8,
+            "legOrder": [],
+            "resultDataId": "f929a2c609398303",
+            "resultTeXPreview": "\\frac{\\log \\left(s_{12} M^{-2}\\right)-\\log \\left(\\frac{M^2}{s_{12}}\\right)+\\log \\left(s_{23} M^{-2}\\right)-\\log \\left(\\frac{M^2}{s_{23}}\\right)}{\\varepsilon \\left(M^4-s_{12} s_{23}\\right)}+\\frac{2 H\\left(-\\frac{s_{12}}{M^2-s_{12}},\\frac{M^2}{M^2-s_{23}}\\,;1\\right)+2 H\\left(-\\frac{s_{23}}{M^2-s_{23}},\\frac{M^2}{M^2-s_{12}}\\,;1\\right)-2 H\\left(0,-\\frac{s_{12}}{M^2-s_{12}}\\,;1\\right)+2 H\\left(0,\\frac{M^2}{M^2-s_{12}}\\,;1\\right)-2 H\\left(0,-\\frac{s_{23}}{M^2-s_{23}}\\,;1\\right)+2 H\\left(0,\\frac{M^2}{M^2-s_{23}}\\,;1\\right)-\\log ^2\\left(\\frac{M^2}{s_{12}}\\right)+2 \\log \\left(-M^2\\right) \\log \\left(\\frac{M^2}{s_{12}}\\right)-2 \\log \\left(-M^2\\right) \\log \\left(s_{12} M^{-2}\\right)-\\log ^2\\left(\\frac{M^2}{s_{23}}\\right)-2 \\log \\left(-M^2\\right) \\log \\left(s_{23} M^{-2}\\right)+2 \\log \\left(-M^2\\right) \\log \\left(\\frac{M^2}{s_{23}}\\right)}{2 \\left(M^4-s_{12} s_{23}\\right)}+O\\left(\\varepsilon^1\\right)"
+        }
+    ],
+    "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{2, 4}, 0}, {{3, 4}, 0}}",
+    "nodes": "{{1, 0}, {2, M}, {4, 0}, {3, M}}",
+    "CanonicalName": "2-mass easy box (a)",
+    "MassConfig": {
+        "numEdges": 4,
+        "numMassiveEdges": 0,
+        "numMasslessEdges": 4,
+        "distinctInternalMasses": 0,
+        "internalMassLabels": [],
+        "edgeMassPattern": "0000",
+        "numExtLegs": 4,
+        "numOnshellMassiveExtLegs": 2,
+        "numMasslessExtLegs": 2,
+        "extLegSignature": "0M0M"
+    },
+    "commonNames": [
+        "D₀"
+    ],
+    "Subsectors": [
+        "e12|e2|e|:000|10|2|"
+    ],
+    "ParentSectors": [
+        "1123|e|e4|e4|e|:0000|1|00|00|1|"
+    ]
+}

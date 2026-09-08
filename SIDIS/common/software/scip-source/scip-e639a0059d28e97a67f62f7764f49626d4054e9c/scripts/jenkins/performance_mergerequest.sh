@@ -1,0 +1,187 @@
+#!/bin/bash -ex
+# the -x is for writing each command to standard error (preceded by a '+') before it is executed.
+# other flags for debugging: -Canvu, please also consult 'man sh'.
+
+# NOTES:
+#  - We use associative arrays, this requires bash4.
+
+###################
+### Description ###
+###################
+
+# This script is used by cijenkins.zib.de.
+
+# Usage: from scip root execute
+#        TESTMODE=short GITBRANCH=master ./scripts/jenkins/performance_mergerequest.sh
+
+# Arguments | defaultvalue                             | possibilities
+# ----------|------------------------------------------|--------------
+# GITBRANCH | master                                   | master, v60-bugfix, consexpr
+# TESTMODE  | ""                                       | mip, minlp, short
+
+echo "This is performance_mergerequest.sh running."
+: ${TESTMODE:="all"}
+: ${GITBRANCH:=${gitlabTargetBranch}}
+
+if [ "${TESTMODE}" == "short" ]; then
+  echo "Testing short"
+elif [ "${TESTMODE}" == "mip" ]; then
+  echo "Testing mip"
+elif [ "${TESTMODE}" == "minlp" ]; then
+  echo "Testing minlp"
+# elif [ "${TESTMODE}" == "sap" ]; then
+#   echo "Testing sap"
+else
+  echo "Nothing to do, exiting."
+  exit 0
+fi
+
+######################################
+### evaluate commandline arguments ###
+######################################
+
+if [ "${GITBRANCH}" != "master" ]; then
+  if [ "${GITBRANCH}" != "consexpr" ]; then
+    if [[ ${GITBRANCH} =~ "bugfix" ]]; then
+      GITBRANCH=bugfix
+    else
+      echo "Branch is neither 'master', 'bugfix' nor 'consexpr'. Something is wrong. Exiting."
+      exit 1
+    fi
+  fi
+fi
+
+export FULLGITHASH=$(git show -s --pretty=%H)
+export MODE=performance
+
+####################################
+### jobs configuration variables ###
+####################################
+# NOTES:
+#  - If you change the configuration, you have to make sure that you update the number of jobs in the N_JOBS array.
+#  - Jobs indices start at 1 and not at zero.
+#  - For all jobs the calls to 'make' and 'make testcluster' the flags are concatenated from
+#      the given flags and the SCIP_FLAGS.
+#  - To add settings please visit the section 'setup testruns'. This can only happen after compilation.
+#  - Only 10 runs will be executed. If you need more you should overthink you overall concept.
+#  - The check/jenkins_*_cmake.sh evaluation scripts don't work yet if you use a global seed shift.
+# FORMAT:
+#    JOBS[x,y]="EXCLUSIVE=true EXECUTABLE=scipoptspx/bin/scip BINID=scipoptspx-${GITBRANCH} MEM=100 QUEUE=opt TEST=short TIME=10 PERMUTE=2 SETTINGS=default PERFORMANCE=mergerequest"
+
+RANDOMSEED=$(date +%Y%m%d%H%M)
+
+# for descriptions on the testsets see scip/check/testsets/README.md
+# jobs running
+
+if [ "${TESTMODE}" == "short" ]; then
+  JOB="EXECUTABLE=scipoptspx_${GITBRANCH}_${RANDOMSEED}/bin/scip BINID=scipoptspx_${GITBRANCH}_${RANDOMSEED} EXCLUSIVE=false MEM=5000 QUEUE=opt TEST=short TIME=60 SETTINGS=default PERFORMANCE=mergerequest SEEDS=0"
+elif [ "${TESTMODE}" == "mip" ]; then
+  JOB="EXECUTABLE=scipoptspx_${GITBRANCH}_${RANDOMSEED}/bin/scip BINID=scipoptspx_${GITBRANCH}_${RANDOMSEED} SLURMACCOUNT=scip EXCLUSIVE=true MEM=50000 QUEUE=M620v3 TEST=mipdev12merged-solvable TIME=7200 SETTINGS=default PERFORMANCE=mergerequest SEEDS=4"
+elif [ "${TESTMODE}" == "minlp" ]; then
+  JOB="EXECUTABLE=scipoptspx_${GITBRANCH}_${RANDOMSEED}/bin/scip BINID=scipoptspx_${GITBRANCH}_${RANDOMSEED} SLURMACCOUNT=scip EXCLUSIVE=true MEM=50000 QUEUE=M640 TEST=minlpdev-solvable TIME=3600 SETTINGS=minlp_default PERFORMANCE=mergerequest PERMUTE=4"
+#elif [ "${TESTMODE}" == "sap" ]; then
+#  JOB="EXECUTABLE=scipoptspx_${GITBRANCH}_${RANDOMSEED}/bin/scip BINID=scipoptspx_${GITBRANCH}_${RANDOMSEED} SLURMACCOUNT=scip EXCLUSIVE=true MEM=50000 QUEUE=M630v2 TEST=sapdev-solvable TIME=3600 SETTINGS=${SAPSETTINGS} PERFORMANCE=mergerequest SEEDS=2"
+fi
+
+SAPSETTINGS=sap-next-release-pure-diff
+if [ "${GITBRANCH}" != "master" ]; then
+  SAPSETTINGS=sap-600-pure-diff
+fi
+
+# create required directory
+mkdir -p settings
+
+# symlink to SAP settings for the next release settings
+ln -fs ~/sap-next-release-pure-diff.set settings/.
+ln -fs ~/sap-600-pure-diff.set settings/.
+
+JOB="${JOB} OUTPUTDIR=results${RANDOMSEED}"
+FLAGS=${JOB}
+export ${FLAGS}
+export PERFORMANCE=mergerequest
+
+# from check/jenkins_failcheck.sh
+SCIP_BUILDDIR=$(echo ${EXECUTABLE}| cut -d '/' -f 1|cut -d '_' -f 1)
+
+# get the comparison db for githash
+if [ "${TESTMODE}" == "short" ]; then
+  COMPARERBDB="/nfs/OPTI/adm_timo/databases/rbdb/${GITBRANCH}_${MODE}_${TEST}_${SETTINGS}_${SCIP_BUILDDIR}_rbdb.txt"
+elif [ "${TESTMODE}" == "mip" ]; then
+  COMPARERBDB="/nfs/OPTI/adm_timo/databases/rbdb/${GITBRANCH}_${MODE}_${TEST}_${SETTINGS}_${SCIP_BUILDDIR}_rbdb.txt"
+elif [ "${TESTMODE}" == "minlp" ]; then
+  COMPARERBDB="/nfs/OPTI/adm_timo/databases/rbdb/${GITBRANCH}_${MODE}_${TEST}_${SETTINGS}_${SCIP_BUILDDIR}_rbdb.txt"
+# elif [ "${testmode}" == "sap" ]; then
+fi
+
+# get comparison run
+GITHASH_HISTORY=$(grep fullgh=.* -o ${COMPARERBDB} | uniq | cut -d ' ' -f 1 | cut -d '=' -f 2 |sort -r)
+GITLOG=$(git log --pretty=format:'%H')
+export COMPAREHASH=$(echo "${GITLOG}" | grep -F "${GITHASH_HISTORY}" | head -n 1)
+if [ "${COMPAREGITHASH}" == "" ]; then
+  export SOPLEX_HASH=$(grep ${COMPAREHASH} ${COMPARERBDB} | head -n 1 | grep -o "soplexhash=.*" | cut -d "=" -f 2)
+fi
+export COMPARERBIDS=$(grep "${COMPAREHASH}" ${COMPARERBDB} | cut -d ' ' -f 2)
+
+export CRITERION_DIR=""
+export BLISS_DIR=/nfs/OPTI/bzfgleix/software/bliss-0.73p-Ubuntu18.04
+export IPOPT_DIR=/nfs/optimi/usr/sw/Ipopt-3.12.11~ub18.04
+export ZIMPL_DIR=/nfs/OPTI/jenkins/workspace/ZIMPL_monthly/build-gnu-Release/
+
+###################
+### Compilation ###
+###################
+
+make solchecker
+
+# build with soplex
+BUILD_DIR=scipoptspx_${GITBRANCH}_${RANDOMSEED}
+mkdir -p ${BUILD_DIR}
+cd ${BUILD_DIR}
+
+git clone git@git.zib.de:integer/soplex.git
+cd soplex
+if [ "${SOPLEX_HASH}" != "" ]; then
+  git checkout ${SOPLEX_HASH}
+else
+  if [ "${GITBRANCH}" == "bugfix" ]; then
+    git checkout ${SOPLEX_BUGFIX}
+  fi
+fi
+mkdir build
+cd build
+cmake ..
+make -j4
+cd ../../
+
+cmake .. -DCMAKE_BUILD_TYPE=Release -DLPS=spx -DSOPLEX_DIR=soplex/
+make -j4
+cd ..
+
+######################
+### Setup testruns ###
+######################
+
+SCIP_BINARY=${BUILD_DIR}/bin/scip
+
+# NOTES:
+#  - When building a default setting with random seed, use a capital D. No setting name should be a prefix of another!
+
+# MIP settings
+
+# MINLP settings
+${SCIP_BINARY} -c "set numerics checkfeastolfac 1000.0 set limits gap 1e-4 set diffsave settings/minlp_default.set q"
+
+# create more required symlinks
+ln -fs /nfs/optimi/kombadon/IP check/
+ln -fs /nfs/optimi/kombadon/MINLP check/
+
+# get testset files to the correct place
+cp check/IP/instancedata/testsets/*.test check/testset/
+
+#######################
+### Submit Testrun ###
+#######################
+
+echo "Submitting job with configuration:\n '\n- make testcluster: ${FLAGS}"
+make testcluster ${FLAGS} | check/jenkins_check_results_cmake.sh
+

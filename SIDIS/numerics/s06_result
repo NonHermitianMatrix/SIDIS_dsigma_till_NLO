@@ -1,0 +1,187 @@
+{
+  "stage": "s06",
+  "status": "Complete",
+  "producer_sha256": "bde2bd9d9a0ec4ba531898775badfdbab3f74ec9773665509b9735e6512ccbfe",
+  "input_hashes": {
+    "numerics/references/ephox_1.1.tar.gz": "5b7610eda5311a200fd18cb998721cbb854dd33930f31bf69ec055e310d4098b",
+    "numerics/vendor/model/parameters.py": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc",
+    "numerics/vendor/ephox/alfab.f": "00dcc4db8beff23968a8d57c7933da7373c8b498cb22f99cf1ab93269e2950d2",
+    "numerics/vendor/ephox/fragfun_all.f": "dd5609e0d61406672fa258d6bfe9ef7563ea631df2afbd22b9f861c5e4ee2778",
+    "numerics/vendor/ephox/kkp.f": "8376fbb73e227f01fd1e1f74c7f5324e4bbe25cc3987500ca7d66c92b972fb27",
+    "numerics/vendor/ephox/pkhff.f": "89bf35f4778d31eb1cfaacb73b7c303101ffe38d0f9984ea7c4715ead336c471",
+    "numerics/vendor/ephox/pnlo.grid": "15bb09f51a493a416cf3979a89b2f2b0f77fb81edb281abd1ee4ac2574d3ddb5",
+    "numerics/vendor/mrst2002/jeppe02.f": "a63dd5af2ee9bac8b3761cfc2ab03435f83cc042f57e71657ac015107847585e",
+    "numerics/vendor/mrst2002/mrst2002.f": "89c164fc653eb2786c7c046b91dbcd5cb57854060f43fe4f6d85e2e132fdf9e1",
+    "numerics/vendor/mrst2002/mrst2002nlo.dat": "bec81dcb0093a68b44e6b15472bbe67c2b883fb59833529307d80a7f16688d4f"
+  },
+  "library": "s06_cache/s06_pdf_ff.so",
+  "library_sha256": "25dae77b176d34b61b8b22a1cd8461b3273e233ad87e7aff37aad7ebeb7dd454",
+  "PDF": "MRST2002 mode=1 NLO original interpolation; x*f output",
+  "FFs": [
+    "KKP ih=5 iset=1 (pi0)",
+    "Kretzer iset=2, (pi+ + pi-)/2"
+  ],
+  "flavor_order": [
+    "g",
+    "u",
+    "ubar",
+    "d",
+    "dbar",
+    "s",
+    "sbar",
+    "c",
+    "cbar",
+    "b",
+    "bbar"
+  ],
+  "raw_pdf_order": [
+    "x_uv",
+    "x_dv",
+    "x_ubar",
+    "x_dbar",
+    "x_s",
+    "x_c",
+    "x_b",
+    "x_g"
+  ],
+  "alpha": {
+    "prescription": "original EPHOX implicit two-loop running with continuous bottom threshold, calibrated to MRST alpha_s(MZ)",
+    "alpha_MZ": 0.1197,
+    "MZ_GeV": 91.188,
+    "mc2_GeV2": 2.045,
+    "mb2_GeV2": 18.5,
+    "lambda4_squared_GeV2": 0.1085488995978293,
+    "samples": {
+      "2.5": 0.2795743812185707,
+      "5.0": 0.2180778205400959,
+      "10.0": 0.1818585483803501,
+      "91.188": 0.11969999999999997
+    }
+  },
+  "alpha_EM": 0.0072973525643,
+  "GeV_minus2_to_pb": 389379372.17185944,
+  "unchanged_constants_source_sha256": "dc886e96521d95d0c29ecac780425ec5a7406f3d5833d176a2529441a1c7fcc9",
+  "checks": {
+    "alpha_at_MZ": true,
+    "valence_number_sum_rules": true,
+    "momentum_sum_rule": true,
+    "KKP_pi0_identity_0.1": true,
+    "Kretzer_charge_sum_0.1": true,
+    "finite_FFs_0.1": true,
+    "KKP_pi0_identity_0.3": true,
+    "Kretzer_charge_sum_0.3": true,
+    "finite_FFs_0.3": true,
+    "KKP_pi0_identity_0.7": true,
+    "Kretzer_charge_sum_0.7": true,
+    "finite_FFs_0.7": true
+  },
+  "validation": {
+    "valence_above_grid_xmin": [
+      1.9488111475446825,
+      0.9882566690579228
+    ],
+    "small_x_tail_estimate": [
+      0.03993478907400128,
+      0.006639437481414827
+    ],
+    "tail_policy": "log-power extrapolation used only for this sum-rule diagnostic, never for production PDFs",
+    "momentum": 0.9990053454580333,
+    "FF_probes": [
+      {
+        "z": 0.1,
+        "Q_GeV": 3.0,
+        "KKP_pi0": [
+          10.203099447686169,
+          7.813613838161091,
+          7.813613838161091,
+          7.813613838161091,
+          7.813613838161091,
+          2.9112774353410122,
+          2.9112774353410122,
+          5.889496352845783,
+          5.889496352845783,
+          0.0,
+          0.0
+        ],
+        "Kretzer_charged_sum": [
+          15.90968667239998,
+          14.03946911228447,
+          14.03946911228447,
+          14.03946911228447,
+          14.03946911228447,
+          13.425482512527573,
+          13.425482512527573,
+          12.220346440537918,
+          12.220346440537918,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "z": 0.3,
+        "Q_GeV": 5.0,
+        "KKP_pi0": [
+          1.2959813938256517,
+          0.8996799790494076,
+          0.8996799790494076,
+          0.8996799790494076,
+          0.8996799790494076,
+          0.6393181789380773,
+          0.6393181789380773,
+          0.7391004282999487,
+          0.7391004282999487,
+          0.0,
+          0.0
+        ],
+        "Kretzer_charged_sum": [
+          1.9553333333333331,
+          1.8953333333333333,
+          1.8953333333333333,
+          1.8953333333333333,
+          1.8953333333333333,
+          1.5360000000000003,
+          1.5360000000000003,
+          1.6166666666666667,
+          1.6166666666666667,
+          0.824,
+          0.824
+        ]
+      },
+      {
+        "z": 0.7,
+        "Q_GeV": 10.0,
+        "KKP_pi0": [
+          0.01803415126876136,
+          0.06020550512582432,
+          0.06020550512582432,
+          0.06020550512582432,
+          0.06020550512582432,
+          0.0029361176597114905,
+          0.0029361176597114905,
+          0.0026363229661817388,
+          0.0026363229661817388,
+          0.0036986208009606616,
+          0.0036986208009606616
+        ],
+        "Kretzer_charged_sum": [
+          0.00286,
+          0.10041428571428572,
+          0.10041428571428572,
+          0.10041428571428572,
+          0.10041428571428572,
+          0.03682857142857143,
+          0.03682857142857143,
+          0.00784,
+          0.00784,
+          0.0005185714285714286,
+          0.0005185714285714286
+        ]
+      }
+    ]
+  },
+  "sources": [
+    "https://lapth.cnrs.fr/PHOX_FAMILY/src/ephox_1.1.tar.gz",
+    "https://arxiv.org/abs/hep-ph/0211080",
+    "https://arxiv.org/abs/hep-ph/0411212"
+  ]
+}

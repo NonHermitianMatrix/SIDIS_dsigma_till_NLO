@@ -1,0 +1,24 @@
+MONITOR_START job=14692852 host=n7440 kernel_pid=137761
+
+Global`$FeynCalcStartupMessages::shdw: Symbol $FeynCalcStartupMessages appears in multiple contexts {Global`, FeynCalc`}; definitions in context Global` may shadow or be shadowed by other definitions.
+"VIRTUAL_WORKERS "4
+"BORN_NORMALIZATION_ACCEPTED ""Hqq"" virtual diagrams "15
+"From remote kernel:"
+"\"VIRTUAL \"\"Hqq\"\" \"\"Pg\"\" diagram \"1\" kernel \"1\n"
+"From remote kernel:"
+"\"VIRTUAL \"\"Hqq\"\" \"\"Pg\"\" diagram \"2\" kernel \"2\n"
+"From remote kernel:"
+"\"VIRTUAL \"\"Hqq\"\" \"\"Pg\"\" diagram \"3\" kernel \"3\n"
+"From remote kernel:"
+"\"VIRTUAL \"\"Hqq\"\" \"\"Pg\"\" diagram \"4\" kernel \"4\n"
+"From remote kernel:"
+"\"VIRTUAL \"\"Hqq\"\" \"\"Pg\"\" diagram \"5\" kernel \"3\n"
+"From remote kernel:"
+"\"VIRTUAL \"\"Hqq\"\" \"\"Pg\"\" diagram \"6\" kernel \"4\n"
+"From remote kernel:"
+"\"VIRTUAL \"\"Hqq\"\" \"\"Pg\"\" diagram \"7\" kernel \"2\n"
+"From remote kernel:"
+"\"VIRTUAL \"\"Hqq\"\" \"\"Pg\"\" diagram \"8\" kernel \"1\n"
+"From remote kernel:"
+"\"FAIL: \"\"VHqqPg05 exact original-integrand reconstruction\"\n"
+MONITOR_WAKE {"stage": "s05", "source": "s05_virtual_families.wl", "source_sha256": "a3323abe6db5b420731bf7bc82e89c90e7d673ebfef97ffd8563bcbd8e5a1330", "job_id": "14692852", "host": "n7440", "exit_code": -9, "success_marker": false, "accepted_execution": false, "guard": "stage gate failure", "peak_rss_bytes": 969437184, "elapsed_seconds": 38.4932507276535, "completed_utc": "2026-09-07T10:00:00.697034+00:00"}

@@ -1,0 +1,240 @@
+{
+  "CNickelIndex": "e123|e45|e4|e5|e|e|:0000|000|00|00|0|0|",
+  "MassScales": 9,
+  "FunctionClass": "hypergeometric",
+  "EpsilonOrder": "all orders",
+  "References": [
+    "arXiv:2007.08360, Phys.Rev.D 102, 2020",
+    "arXiv:1712.02785 (Phys.Rev.Lett. 120 (), 2018)",
+    "arXiv:1805.09326",
+    "arXiv:2106.14902 (Phys.Rev.Lett. 127 (25), 2021)",
+    "arXiv:2403.19742 (JHEP 08 (027), 2024)",
+    "arXiv:2602.02783",
+    "arXiv:2512.13794"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:2403.19742 (JHEP 08 (027), 2024)",
+      "authors": "Henn, Johannes M., Matijašić, Antonela, Miczajka, Julian, Peraro, Tiziano, Xu, Yingxuan, Zhang, Yang",
+      "description": "Two-loop six-point massless planar double-box integral family. 7 propagators from 13-denominator hexagon basis $(D_1,D_2,D_3,D_{10},D_{11},D_{12},D_{13})$. 66 master integrals (7 top-sector + 59 subsector). Solved analytically via canonical DEs to weight 4 / $\\mathcal{O}(\\varepsilon^4)$ in Euclidean region. Part of 223-letter alphabet closed under dihedral group.",
+      "epsOrders": "4",
+      "familyName": "double-box",
+      "method": "IBP, DE, series_expansion",
+      "tools": [
+        "LiteRed",
+        "AMFlow",
+        "PolyLogTools"
+      ],
+      "ancillaryFiles": true,
+      "doi": "10.1007/JHEP08(2024)027",
+      "texkey": "Henn:2024ngj",
+      "masterCount": 66,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Section 3.3, Figure 1a, Section 4.1",
+      "recordId": "bx_3f62405389c0",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2602.02783",
+      "authors": [
+        {
+          "full_name": "Carrôlo, Sérgio",
+          "inspire_id": 2107182
+        },
+        {
+          "full_name": "Chicherin, Dmitry",
+          "inspire_id": 1259630
+        },
+        {
+          "full_name": "Henn, Johannes",
+          "inspire_id": 1040053
+        },
+        {
+          "full_name": "Yang, Qinglin",
+          "inspire_id": 1849879
+        },
+        {
+          "full_name": "Zhang, Yang",
+          "inspire_id": 1062340
+        }
+      ],
+      "description": "Prescriptive-unitarity double-box integral for two-loop six-gluon planar massless QCD amplitudes: standard planar double-box scalar topology with seven massless propagators, six external gluons distributed so that two of the outer corner vertices carry two adjacent external legs each while the other four carry one leg each, and composite-leading-singularity numerator $n_{db}=\\tfrac{1}{2}[[k,b,c,d,e,j]]$ (Eq. (eq:Idb)). Called $I_{n,jkl}^{db}$ in the paper. Up to dihedral symmetry, four distinct double-box prescriptive integrals are needed for the pure-YM six-gluon hard function, in contrast to $\\mathcal{N}=4$ sYM where they do not contribute. A worked example is $I_{6,361}^{db}$ reduced in Eq. (eq:prescriptive_IBP_reduction) to a linear combination of 28 UT integrals of the Henn:2025xrc double-pentagon family, yielding a finite uniform-weight-four result. Matches Table II of Bourjaily:2019gqu.",
+      "epsOrders": "0",
+      "familyName": "massless 2-loop 6-point double-box (prescriptive, two legs on each outer vertex) / massless 2-loop 6-point double-pentagon (C=empty, double-box topology with pentagonal numerator)",
+      "method": "unitarity, IBP, DE",
+      "tools": [
+        "FIRE",
+        "Kira",
+        "FiniteFlow"
+      ],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Section 7, Eq. (eq:Idb); Fig. fig:six-points; IBP reduction in Appendix sec: IBP reduction, Eq. (eq:prescriptive_IBP_reduction)",
+      "recordId": "bx_99cf02c513d1",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2007.08360, Phys.Rev.D 102, 2020",
+      "authors": "Ananthanarayan, B., Banik, Sumit, Friot, Samuel, Ghosh, Shayan",
+      "description": "Off-shell massless six-point double box conformal Feynman integral with generic propagator powers $a,b,c,d,e,f,\\ell$ in $D$ dimensions. Written in dual position space with two integration points. Result: 44-term linear combination of generalized Horn-type multiple hypergeometric series from 9-fold MB representation.",
+      "epsOrders": "all orders",
+      "familyName": "I_3,3 (double box)",
+      "method": "Mellin-Barnes + series_expansion",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "10.1103/PhysRevD.102.091901",
+      "texkey": "Ananthanarayan:2020ncn",
+      "dimScheme": "d=D",
+      "computationLevel": "full",
+      "location": "Eq. (11), Appendix A",
+      "recordId": "bf_aeb20f4290d1",
+      "verified": true,
+      "verifiedAt": "2026-04-10"
+    },
+    {
+      "reference": "arXiv:1712.02785 (Phys.Rev.Lett. 120 (), 2018)",
+      "authors": "Bourjaily, Jacob L., McLeod, Andrew J., Spradlin, Marcus, von Hippel, Matt, Wilhelm, Matthias",
+      "description": "Ten-particle two-loop planar double-box integral in massless phi^4 theory, finite in d=4, expressed as elliptic integral over weight-3 polylogarithms. Dual-conformally invariant. Depends on 7 cross-ratios. First example of elliptic integrals in massless scattering amplitudes.",
+      "epsOrders": "",
+      "familyName": "elliptic double-box",
+      "method": "direct_integration",
+      "tools": [
+        "HyperInt",
+        "GiNaC"
+      ],
+      "ancillaryFiles": false,
+      "doi": "10.1103/PhysRevLett.120.121603",
+      "texkey": "Bourjaily:2017bsb",
+      "masterCount": 0,
+      "dimScheme": "d=4",
+      "computationLevel": "full",
+      "location": "eq. (22)-(30)",
+      "recordId": "bx_638857801e91",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1805.09326",
+      "authors": "",
+      "description": "2-loop traintrack: the elliptic double-box. 2-loop double-box with 7 massless propagators, 10 massless external legs grouped into 6 momenta. Finite and dual-conformally invariant in d=4. Involves weight-3 hyperlogarithms integrated over an elliptic curve. Feynman parametric representation given explicitly in Eqs. (5)-(9).",
+      "epsOrders": "",
+      "familyName": "traintrack_2L_elliptic_double_box",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 0,
+      "dimScheme": "d=4",
+      "computationLevel": "full",
+      "location": "Eq. (1), Sec. Introduction, Sec. Feynman Parameterization",
+      "recordId": "bx_445ec5768b0c",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2106.14902 (Phys.Rev.Lett. 127 (25), 2021)",
+      "authors": "Kristensson, Alexander, Wilhelm, Matthias, Zhang, Chi",
+      "description": "10-point 2-loop massless planar elliptic double box in d=4 (N=4 SYM). 7 massless propagators with dual-conformal numerator. Weight 4, expressed in elliptic MPLs. Full symbol computed with 36 rational + 24 algebraic + 20 elliptic letters.",
+      "epsOrders": "",
+      "familyName": "10pt-2L-elliptic-double-box",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": true,
+      "doi": "10.1103/PhysRevLett.127.251603",
+      "texkey": "Kristensson:2021ani",
+      "masterCount": 0,
+      "dimScheme": "d=4",
+      "computationLevel": "full",
+      "location": "Eq. (1)-(3), Fig. 1",
+      "recordId": "bx_9b2a51cd4a61",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2602.02783",
+      "authors": "",
+      "description": "Prescriptive-unitarity 'double-pentagon' integral for two-loop six-gluon planar massless QCD amplitudes, defined as the special case C=empty of the general double-pentagon A integrals of Table IV of Bourjaily:2019gqu. In this special case the scalar denominator structure is the planar double-box (seven massless propagators, six external gluons) but with a pentagon-pentagon numerator n_dp=-[[k,b,c,f,e,j]] (Eq. (eq:Idp)) that distinguishes it from the ordinary double-box. Called 'I_{n,jk}^{dp}' in the paper. Computed through weight four by IBP reduction to the Henn:2025xrc planar two-loop six-point UT basis with FIRE7/KIRA3 and FiniteFlow; contributes to the IR-finite part of the hard function via the double-pentagon cut.",
+      "epsOrders": "0",
+      "familyName": "massless 2-loop 6-point double-pentagon (C=empty, double-box topology with pentagonal numerator)",
+      "method": "unitarity, IBP, DE",
+      "tools": [
+        "FIRE",
+        "Kira",
+        "FiniteFlow"
+      ],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Section 5, Eq. (eq:Idp); Fig. fig:doublepentagoncut (cut diagram in Fig. 2)",
+      "recordId": "bx_691dec50604c",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2512.13794",
+      "authors": "Bargiela, Piotr, Frellesvig, Hjalte, Marzucca, Robin, Morales, Roger, Seefeld, Florian, Wilhelm, Matthias, Yang, Tong-Zhi",
+      "description": "$I_{3,1,3}$ two-loop topology with three internal paths of lengths a=3, b=1, c=3 (both v_L and v_R carry external legs); 6-point integral, planar (b=1). Geometry: 2 ISPs; at least elliptic; refer to special-case discussions in §4",
+      "epsOrders": "",
+      "familyName": "I_{3,1,3}",
+      "method": "maximal_cut, Baikov",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "Bargiela:2025vwl",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "topology",
+      "location": "§3.4 'Integrals with two ISPs' + §4 special cases",
+      "recordId": "bx_94f3a51f6d0f",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Names": [
+    "Six-point massless double box",
+    "elliptic double-box",
+    "traintrack_2L_elliptic_double_box",
+    "10pt-2L-elliptic-double-box",
+    "double-box",
+    "massless 2-loop 6-point double-box (prescriptive, two legs on each outer vertex)",
+    "$I_{3,1,3}$"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 2,
+  "NumPropagators": 7,
+  "Results": [],
+  "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 5}, 0}, {{2, 6}, 0}, {{3, 5}, 0}, {{4, 6}, 0}}",
+  "nodes": "{{1, 0}, {4, 0}, {6, 0}, {2, 0}, {5, 0}, {3, 0}}",
+  "CanonicalName": "Massless double box",
+  "MassConfig": {
+    "numEdges": 7,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 7,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "0000000",
+    "numExtLegs": 6,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 6,
+    "extLegSignature": "000000"
+  },
+  "Subsectors": [
+    "e123|e24|e|e4|e|:0000|100|0|00|0|"
+  ],
+  "ParentSectors": [
+    "123|e45|e4|e6|e|e6|e|:000|000|00|00|0|00|0|"
+  ]
+}

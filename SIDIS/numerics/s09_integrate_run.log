@@ -1,0 +1,241 @@
+MONITOR_START job=14693812 host=n6106 kernel_pid=8310
+PROGRESS SIDIS numerics S09 2026-09-07T16:55:46.213614+00:00: Starting S09 integrate with exact frozen inputs and generated transformations. Next inspect numerical gates and retain all signed channel contributions.
+S09_BIN_START q0_p1 seed 277669953 neval 1000 nitn 8S09_BIN_START
+ q0_p5 seed 1440062811 neval 1000 nitn 8
+S09_BIN_START S09_BIN_STARTq1_p1 seed  q0_p3661789539  seedneval  19117970241000  nevalnitn  10008 
+nitn 8
+S09_BIN_START q1_p0 seed 1931326383 neval 1000 nitn 8
+S09_BIN_STARTS09_BIN_START q0_p0  seedS09_BIN_START q0_p4 3828160242seed  neval  3256168369q0_p21000   nevalseednitn   100035213593508  nitn
+neval  81000
+ nitn 8
+MONITOR_HEARTBEAT elapsed=31s rss=952.1MiB peak=952.1MiB
+S09_WARMUP q0_p4 0 [11.12(76) 7.56(52)]
+S09_WARMUP q0_p3 0 [28.1(1.7) 19.8(1.2)]
+S09_EVALUATIONS 8326 1259 accepted 622
+S09_EVALUATIONS 8319 1300 accepted 671
+S09_EVALUATIONS 8322 1379 accepted 692
+S09_EVALUATIONS 8320 1298 accepted 655
+S09_EVALUATIONS 8324 1337 accepted 713
+S09_EVALUATIONS 8325 1281 accepted 616
+S09_EVALUATIONS 8321 1305 accepted 696
+S09_EVALUATIONS 8323 1390 accepted 712
+S09_WARMUP q0_p5 0 [2.48(14) 1.729(91)]
+S09_WARMUP q0_p0 0 [47.8(4.0) 33.2(2.8)]
+S09_WARMUP q0_p1 0 [51.6(3.6) 36.7(2.4)]
+S09_WARMUP q0_p2 0 [33.5(2.6) 24.7(1.8)]
+S09_WARMUP q1_p0 0 [42.2(3.2) 31.0(2.3)]
+S09_WARMUP q1_p1 0 [72.0(5.4) 52.1(4.0)]
+MONITOR_HEARTBEAT elapsed=62s rss=958.5MiB peak=958.5MiB
+S09_EVALUATIONS 8319 2316 accepted 1363
+S09_EVALUATIONS 8324 2394 accepted 1441
+S09_EVALUATIONS 8322 2383 accepted 1399
+S09_EVALUATIONS 8325 2224 accepted 1260
+S09_EVALUATIONS 8326 2229 accepted 1279
+S09_EVALUATIONS 8321 2278 accepted 1409
+S09_EVALUATIONS 8320 2307 accepted 1339
+S09_EVALUATIONS 8323 2445 accepted 1437
+MONITOR_HEARTBEAT elapsed=92s rss=973.1MiB peak=973.1MiB
+S09_EVALUATIONS 8324 3434 accepted 2171
+S09_EVALUATIONS 8326 3184 accepted 1928
+S09_EVALUATIONS 8325 3136 accepted 1893
+S09_EVALUATIONS 8322 3365 accepted 2108
+S09_EVALUATIONS 8319 3282 accepted 2053
+S09_EVALUATIONS 8321 3284 accepted 2120
+S09_EVALUATIONS 8320 3350 accepted 2021
+S09_EVALUATIONS 8323 3481 accepted 2168
+MONITOR_HEARTBEAT elapsed=122s rss=973.8MiB peak=973.8MiB
+S09_EVALUATIONS 8324 4519 accepted 2901
+S09_EVALUATIONS 8326 4139 accepted 2574
+S09_EVALUATIONS 8325 4050 accepted 2525
+S09_EVALUATIONS 8322 4385 accepted 2820
+S09_EVALUATIONS 8321 4247 accepted 2836
+S09_EVALUATIONS 8320 4403 accepted 2715
+S09_EVALUATIONS 8319 4282 accepted 2752
+S09_EVALUATIONS 8323 4522 accepted 2895
+MONITOR_HEARTBEAT elapsed=152s rss=975.2MiB peak=975.2MiB
+S09_EVALUATIONS 8324 5581 accepted 3633
+S09_EVALUATIONS 8326 5060 accepted 3224
+S09_EVALUATIONS 8322 5350 accepted 3528
+S09_EVALUATIONS 8325 4951 accepted 3160
+S09_EVALUATIONS 8319 5284 accepted 3447
+S09_EVALUATIONS 8321 5186 accepted 3553
+S09_EVALUATIONS 8320 5432 accepted 3395
+S09_EVALUATIONS 8323 5563 accepted 3625
+MONITOR_HEARTBEAT elapsed=182s rss=977.0MiB peak=977.0MiB
+S09_EVALUATIONS 8326 5989 accepted 3872
+S09_EVALUATIONS 8324 6660 accepted 4360
+S09_EVALUATIONS 8319 6265 accepted 4136
+S09_EVALUATIONS 8325 5900 accepted 3793
+S09_EVALUATIONS 8320 6441 accepted 4088
+S09_EVALUATIONS 8322 6362 accepted 4235
+S09_EVALUATIONS 8321 6123 accepted 4267
+S09_EVALUATIONS 8323 6577 accepted 4352
+MONITOR_HEARTBEAT elapsed=212s rss=978.3MiB peak=978.3MiB
+S09_EVALUATIONS 8326 6972 accepted 4533
+S09_EVALUATIONS 8324 7727 accepted 5090
+S09_EVALUATIONS 8319 7260 accepted 4830
+S09_EVALUATIONS 8322 7374 accepted 4947
+S09_EVALUATIONS 8320 7502 accepted 4778
+S09_EVALUATIONS 8325 6835 accepted 4432
+S09_EVALUATIONS 8321 7070 accepted 4980
+S09_EVALUATIONS 8323 7590 accepted 5077
+S09_BIN_LEVEL q0_p5 0 [0.405787613245074, 0.2893587634548876] errors [0.006331735913027399, 0.004649324056037059] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q0_p5 [0.405787613245074, 0.2893587634548876] errors [0.006331735913027399, 0.004649324056037059]
+PROGRESS SIDIS numerics S09 2026-09-07T16:59:30.506520+00:00: Bin q0_p5 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q1_p2 seed 2605880752 neval 1000 nitn 8
+S09_BIN_LEVEL q0_p4 0 [5.264499168951296, 3.6651693219445716] errors [0.07670783600840858, 0.05260606550114917] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q0_p4 [5.264499168951296, 3.6651693219445716] errors [0.07670783600840858, 0.05260606550114917]
+PROGRESS SIDIS numerics S09 2026-09-07T16:59:36.748839+00:00: Bin q0_p4 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q1_p3 seed 434240619 neval 1000 nitn 8
+S09_BIN_LEVEL q0_p0 0 [199.92802040028442, 142.58828701622394] errors [3.4671069038931637, 2.705788055794759] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q0_p0 [199.92802040028442, 142.58828701622394] errors [3.4671069038931637, 2.705788055794759]
+PROGRESS SIDIS numerics S09 2026-09-07T16:59:39.354823+00:00: Bin q0_p0 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q1_p4 seed 536188203 neval 1000 nitn 8
+MONITOR_HEARTBEAT elapsed=242s rss=990.8MiB peak=996.5MiB
+S09_BIN_LEVEL q0_p3 0 [24.31359047015091, 16.94019477458005] errors [0.33986961407707306, 0.2537469016385247] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q0_p3 [24.31359047015091, 16.94019477458005] errors [0.33986961407707306, 0.2537469016385247]
+PROGRESS SIDIS numerics S09 2026-09-07T16:59:43.588799+00:00: Bin q0_p3 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q1_p5 seed 2642740093 neval 1000 nitn 8
+S09_EVALUATIONS 8319 8237 accepted 5525
+S09_EVALUATIONS 8326 7891 accepted 5181
+S09_EVALUATIONS 8325 7728 accepted 5070
+S09_EVALUATIONS 8321 8049 accepted 5692
+S09_BIN_LEVEL q0_p1 0 [130.06007865054798, 95.75309949771707] errors [3.1927230228815664, 3.0810732308056754] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q0_p1 [130.06007865054798, 95.75309949771707] errors [3.1927230228815664, 3.0810732308056754]
+PROGRESS SIDIS numerics S09 2026-09-07T16:59:47.994363+00:00: Bin q0_p1 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q2_p0 seed 3215819618 neval 1000 nitn 8
+S09_BIN_LEVEL q0_p2 0 [64.89542563354483, 47.286788242586276] errors [1.3233469037012382, 1.0317579042009475] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q0_p2 [64.89542563354483, 47.286788242586276] errors [1.3233469037012382, 1.0317579042009475]
+PROGRESS SIDIS numerics S09 2026-09-07T16:59:54.022608+00:00: Bin q0_p2 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q2_p1 seed 2637504588 neval 1000 nitn 8
+S09_BIN_LEVEL q1_p1 0 [120.91213415392473, 88.54309348707903] errors [1.808620195869329, 1.419603802002181] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q1_p1 [120.91213415392473, 88.54309348707903] errors [1.808620195869329, 1.419603802002181]
+PROGRESS SIDIS numerics S09 2026-09-07T16:59:58.802277+00:00: Bin q1_p1 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q2_p2 seed 1023285468 neval 1000 nitn 8
+S09_EVALUATIONS 8324 1316 accepted 638
+S09_WARMUP q1_p2 0 [35.4(2.1) 24.4(1.6)]
+S09_BIN_LEVEL q1_p0 0 [187.68551386123104, 139.3276448238963] errors [3.1775768464672884, 2.546318359655037] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q1_p0 [187.68551386123104, 139.3276448238963] errors [3.1775768464672884, 2.546318359655037]
+PROGRESS SIDIS numerics S09 2026-09-07T17:00:04.696093+00:00: Bin q1_p0 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q2_p3 seed 3326318745 neval 1000 nitn 8
+S09_EVALUATIONS 8323 1346 accepted 682
+S09_WARMUP q1_p3 0 [25.0(1.4) 18.1(1.0)]
+S09_EVALUATIONS 8320 1360 accepted 690
+S09_WARMUP q1_p4 0 [16.69(91) 11.58(63)]
+MONITOR_HEARTBEAT elapsed=272s rss=1033.5MiB peak=1039.5MiB
+S09_WARMUP q1_p5 0 [2.84(16) 2.02(11)]
+S09_EVALUATIONS 8322 1379 accepted 703
+S09_EVALUATIONS 8319 1183 accepted 579
+S09_WARMUP q2_p0 0 [30.3(1.7) 23.3(1.4)]
+S09_EVALUATIONS 8321 1208 accepted 586
+S09_WARMUP q2_p1 0 [33.3(1.8) 25.8(1.5)]
+S09_EVALUATIONS 8326 1254 accepted 605
+S09_EVALUATIONS 8324 2280 accepted 1291
+S09_WARMUP q2_p2 0 [35.0(1.9) 26.5(1.4)]
+S09_EVALUATIONS 8325 1264 accepted 621
+S09_EVALUATIONS 8323 2311 accepted 1372
+S09_WARMUP q2_p3 0 [16.57(80) 12.38(60)]
+S09_EVALUATIONS 8320 2327 accepted 1385
+MONITOR_HEARTBEAT elapsed=303s rss=1045.9MiB peak=1045.9MiB
+S09_EVALUATIONS 8322 2324 accepted 1412
+S09_EVALUATIONS 8319 2053 accepted 1175
+S09_EVALUATIONS 8321 2096 accepted 1192
+S09_EVALUATIONS 8326 2118 accepted 1221
+S09_EVALUATIONS 8324 3259 accepted 1940
+S09_EVALUATIONS 8325 2129 accepted 1241
+S09_EVALUATIONS 8323 3268 accepted 2059
+S09_EVALUATIONS 8320 3362 accepted 2081
+MONITOR_HEARTBEAT elapsed=333s rss=1045.9MiB peak=1045.9MiB
+S09_EVALUATIONS 8322 3322 accepted 2114
+S09_EVALUATIONS 8319 2968 accepted 1772
+S09_EVALUATIONS 8321 2999 accepted 1799
+S09_EVALUATIONS 8326 3003 accepted 1837
+S09_EVALUATIONS 8324 4241 accepted 2596
+S09_EVALUATIONS 8325 3071 accepted 1861
+S09_EVALUATIONS 8323 4228 accepted 2752
+S09_EVALUATIONS 8320 4396 accepted 2780
+MONITOR_HEARTBEAT elapsed=363s rss=1046.5MiB peak=1046.5MiB
+S09_EVALUATIONS 8322 4288 accepted 2823
+S09_EVALUATIONS 8319 3845 accepted 2371
+S09_EVALUATIONS 8321 3870 accepted 2400
+S09_EVALUATIONS 8326 3968 accepted 2455
+S09_EVALUATIONS 8324 5268 accepted 3262
+S09_EVALUATIONS 8325 3977 accepted 2486
+S09_EVALUATIONS 8323 5188 accepted 3447
+S09_EVALUATIONS 8320 5362 accepted 3473
+MONITOR_HEARTBEAT elapsed=393s rss=1046.5MiB peak=1046.5MiB
+S09_EVALUATIONS 8322 5306 accepted 3529
+S09_EVALUATIONS 8319 4739 accepted 2968
+S09_EVALUATIONS 8321 4756 accepted 2999
+S09_EVALUATIONS 8326 4855 accepted 3064
+S09_EVALUATIONS 8324 6218 accepted 3908
+S09_EVALUATIONS 8325 4869 accepted 3101
+S09_EVALUATIONS 8323 6165 accepted 4139
+S09_EVALUATIONS 8320 6407 accepted 4167
+MONITOR_HEARTBEAT elapsed=423s rss=1047.2MiB peak=1047.2MiB
+S09_EVALUATIONS 8322 6259 accepted 4236
+S09_EVALUATIONS 8319 5638 accepted 3552
+S09_EVALUATIONS 8321 5642 accepted 3606
+S09_EVALUATIONS 8326 5742 accepted 3676
+S09_EVALUATIONS 8324 7233 accepted 4560
+S09_EVALUATIONS 8325 5758 accepted 3723
+S09_EVALUATIONS 8323 7146 accepted 4831
+S09_EVALUATIONS 8320 7421 accepted 4866
+MONITOR_HEARTBEAT elapsed=453s rss=1047.2MiB peak=1047.2MiB
+S09_EVALUATIONS 8322 7265 accepted 4945
+S09_EVALUATIONS 8319 6552 accepted 4151
+S09_EVALUATIONS 8321 6555 accepted 4210
+S09_EVALUATIONS 8326 6638 accepted 4288
+S09_EVALUATIONS 8324 8244 accepted 5224
+S09_BIN_LEVEL q1_p2 0 [64.04067289363782, 45.90590291213377] errors [1.0558581575249981, 0.8012293795838785] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q1_p2 [64.04067289363782, 45.90590291213377] errors [1.0558581575249981, 0.8012293795838785]
+PROGRESS SIDIS numerics S09 2026-09-07T17:03:31.487436+00:00: Bin q1_p2 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_START q2_p4 seed 1453757877 neval 1000 nitn 8
+S09_EVALUATIONS 8325 6643 accepted 4340
+S09_BIN_LEVEL q1_p4 0 [6.188693890380655, 4.408960846428981] errors [0.10789931469294398, 0.08592850180798685] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q1_p4 [6.188693890380655, 4.408960846428981] errors [0.10789931469294398, 0.08592850180798685]
+PROGRESS SIDIS numerics S09 2026-09-07T17:03:35.636569+00:00: Bin q1_p4 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_EVALUATIONS 8323 8133 accepted 5524
+S09_BIN_LEVEL q1_p3 0 [26.312773575439596, 18.697694562593796] errors [0.4406744158278991, 0.33759808489941273] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q1_p3 [26.312773575439596, 18.697694562593796] errors [0.4406744158278991, 0.33759808489941273]
+PROGRESS SIDIS numerics S09 2026-09-07T17:03:40.704782+00:00: Bin q1_p3 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+MONITOR_HEARTBEAT elapsed=484s rss=1048.4MiB peak=1056.0MiB
+S09_BIN_LEVEL q1_p5 0 [0.5180526917035766, 0.37134103151533415] errors [0.008491161453842825, 0.006083755359037857] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q1_p5 [0.5180526917035766, 0.37134103151533415] errors [0.008491161453842825, 0.006083755359037857]
+PROGRESS SIDIS numerics S09 2026-09-07T17:03:43.654987+00:00: Bin q1_p5 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_EVALUATIONS 8319 7451 accepted 4747
+S09_EVALUATIONS 8321 7418 accepted 4817
+S09_EVALUATIONS 8326 7532 accepted 4906
+S09_WARMUP q2_p4 0 [3.24(15) 2.35(11)]
+S09_EVALUATIONS 8324 1386 accepted 674
+S09_EVALUATIONS 8325 7550 accepted 4956
+MONITOR_HEARTBEAT elapsed=514s rss=1049.0MiB peak=1056.0MiB
+S09_BIN_LEVEL q2_p0 0 [100.32108293738648, 77.83003510885392] errors [2.597975405006802, 2.4115852967009923] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q2_p0 [100.32108293738648, 77.83003510885392] errors [2.597975405006802, 2.4115852967009923]
+PROGRESS SIDIS numerics S09 2026-09-07T17:04:14.443928+00:00: Bin q2_p0 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_LEVEL q2_p2 0 [30.69340840072427, 23.65195489498639] errors [0.4235036437488735, 0.3388138941315185] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q2_p2 [30.69340840072427, 23.65195489498639] errors [0.4235036437488735, 0.3388138941315185]
+PROGRESS SIDIS numerics S09 2026-09-07T17:04:21.278636+00:00: Bin q2_p2 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_LEVEL q2_p1 0 [67.78122673408325, 52.852618156248] errors [1.3222215249597014, 1.226109722283426] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q2_p1 [67.78122673408325, 52.852618156248] errors [1.3222215249597014, 1.226109722283426]
+PROGRESS SIDIS numerics S09 2026-09-07T17:04:23.105736+00:00: Bin q2_p1 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_BIN_LEVEL q2_p3 0 [6.816689301955287, 5.124736720796095] errors [0.12241541691337532, 0.09615486454503008] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q2_p3 [6.816689301955287, 5.124736720796095] errors [0.12241541691337532, 0.09615486454503008]
+PROGRESS SIDIS numerics S09 2026-09-07T17:04:27.192999+00:00: Bin q2_p3 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+S09_EVALUATIONS 8324 2405 accepted 1360
+MONITOR_HEARTBEAT elapsed=545s rss=1050.1MiB peak=1056.0MiB
+S09_EVALUATIONS 8324 3475 accepted 2070
+MONITOR_HEARTBEAT elapsed=575s rss=1050.1MiB peak=1056.0MiB
+S09_EVALUATIONS 8324 4489 accepted 2767
+MONITOR_HEARTBEAT elapsed=606s rss=1050.1MiB peak=1056.0MiB
+S09_EVALUATIONS 8324 5543 accepted 3469
+MONITOR_HEARTBEAT elapsed=636s rss=1050.1MiB peak=1056.0MiB
+S09_EVALUATIONS 8324 6583 accepted 4170
+MONITOR_HEARTBEAT elapsed=666s rss=1050.1MiB peak=1056.0MiB
+S09_EVALUATIONS 8324 7595 accepted 4861
+MONITOR_HEARTBEAT elapsed=696s rss=1050.1MiB peak=1056.0MiB
+S09_BIN_LEVEL q2_p4 0 [0.4822962989083145, 0.3536122891654837] errors [0.006179640024300085, 0.004541904400683026] checks {'finite_statistics': True, 'requested_precision': True, 'independent_iteration_groups': True, 'iteration_consistency': True, 'channel_sum': True}
+S09_BIN_DONE q2_p4 [0.4822962989083145, 0.3536122891654837] errors [0.006179640024300085, 0.004541904400683026]
+PROGRESS SIDIS numerics S09 2026-09-07T17:07:20.803755+00:00: Bin q2_p4 integrated; values and covariance saved. Next complete remaining bins and check convergence.
+PROGRESS SIDIS numerics S09 2026-09-07T17:07:21.110868+00:00: S09 integrated 17 bins with every precision and stability gate passing; results saved in s09_result. Next generate the requested cross-section and ratio plots when all 17 bins are present.
+MONITOR_WAKE {"stage": "s09_integrate", "source": "s09_convolve_channels.py", "source_sha256": "f8e58cc34e24a4f5759d79056b23825157df31ea3ac7943166ba4bbe45ec87cc", "job_id": "14693812", "host": "n6106", "exit_code": 0, "success_marker": false, "result_checks": {"s09_result": true}, "command": ["/u/local/apps/anaconda3/2023.03/bin/python", "-u", "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s09_convolve_channels.py", "--mode", "integrate", "--workers", "8", "--neval", "1000", "--nitn", "8", "--refinements", "3"], "accepted_execution": true, "guard": null, "peak_rss_bytes": 1107259392, "elapsed_seconds": 702.2744455486536, "completed_utc": "2026-09-07T17:07:21.411647+00:00"}

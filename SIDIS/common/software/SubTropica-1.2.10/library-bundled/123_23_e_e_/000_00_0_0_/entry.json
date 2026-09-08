@@ -1,0 +1,35 @@
+{
+    "CNickelIndex": "123|23|e|e|:000|00|0|0|",
+    "MassScales": 0,
+    "FunctionClass": "MPL",
+    "EpsilonOrder": "1",
+    "References": [],
+    "Records": [],
+    "Names": [
+        "two-loop massless propagator (5-prop benz)",
+        "Massless two-loop two-point master self-energy (5 propagators)",
+        "two-loop massless propagator-type self-energy (5 propagators)",
+        "$I^{**}_{2,1,2}$"
+    ],
+    "Source": [
+        "arXiv"
+    ],
+    "Loops": 2,
+    "NumPropagators": 5,
+    "Results": [],
+    "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 3}, 0}, {{2, 4}, 0}}",
+    "nodes": "{{3, 0}, {4, 0}}",
+    "CanonicalName": "Massless kite (a)",
+    "MassConfig": {
+        "numEdges": 5,
+        "numMassiveEdges": 0,
+        "numMasslessEdges": 5,
+        "distinctInternalMasses": 0,
+        "internalMassLabels": [],
+        "edgeMassPattern": "00000",
+        "numExtLegs": 2,
+        "numOnshellMassiveExtLegs": 2,
+        "numMasslessExtLegs": 0,
+        "extLegSignature": "MM"
+    }
+}

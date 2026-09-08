@@ -1,0 +1,27 @@
+MONITOR_START job=14693763 host=n6044 kernel_pid=45271
+PROGRESS SIDIS numerics S08 2026-09-07T16:31:55.700645+00:00: Starting tool-derived flavor luminosities, uniform-azimuth H1 acceptance and bounded-distribution actions. Next save s08_result only after reconstruction and numerical acceptance checks.
+PROGRESS SIDIS numerics S08 2026-09-07T16:32:00.946462+00:00: Flavor sums, pion interference identity, azimuthal acceptance and polynomial plus-distribution checks completed; all gates passed and exact generated definitions saved in s08_result. No cross section integrated yet. Next execute the six-channel PDF/FF convolution in the published H1 bins.
+{
+  "status": "Complete",
+  "checks": {
+    "hqq_moment_sum_nf4_flavor0": true,
+    "hqq_moment_sum_nf4_flavor1": true,
+    "hqq_moment_sum_nf4_flavor2": true,
+    "hqq_moment_sum_nf4_flavor3": true,
+    "neutral_interference_cancellation_nf4": true,
+    "unique_ordered_flavor_pairs_nf4": true,
+    "hqq_moment_sum_nf5_flavor0": true,
+    "hqq_moment_sum_nf5_flavor1": true,
+    "hqq_moment_sum_nf5_flavor2": true,
+    "hqq_moment_sum_nf5_flavor3": true,
+    "hqq_moment_sum_nf5_flavor4": true,
+    "neutral_interference_cancellation_nf5": true,
+    "unique_ordered_flavor_pairs_nf5": true,
+    "azimuthal_acceptance": true,
+    "constant_annihilation_Hqq": true,
+    "constant_annihilation_Hqg": true,
+    "constant_annihilation_Hgq": true,
+    "v4_boundary_coordinates": true
+  }
+}
+MONITOR_WAKE {"stage": "s08", "source": "s08_derive_consumer_actions.py", "source_sha256": "bff03cec10c43e23da0bd2329dacb18d5823b552d747c5a941b9ac217c980df2", "job_id": "14693763", "host": "n6044", "exit_code": 0, "success_marker": false, "result_checks": {"s08_result": true}, "command": ["/u/local/apps/anaconda3/2023.03/bin/python", "-u", "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s08_derive_consumer_actions.py"], "accepted_execution": true, "guard": null, "peak_rss_bytes": 69607424, "elapsed_seconds": 8.449865229427814, "completed_utc": "2026-09-07T16:32:01.055287+00:00"}

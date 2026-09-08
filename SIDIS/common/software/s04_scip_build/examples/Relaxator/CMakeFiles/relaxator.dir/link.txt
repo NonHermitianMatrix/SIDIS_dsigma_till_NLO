@@ -1,0 +1,1 @@
+/bin/cc -O1 -DNDEBUG -rdynamic CMakeFiles/relaxator.dir/src/cmain.c.o CMakeFiles/relaxator.dir/src/relax_lp.c.o CMakeFiles/relaxator.dir/src/relax_nlp.c.o -o ../../bin/examples/relaxator  -Wl,-rpath,/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build/lib ../../lib/libscip.so.6.0.2.0 

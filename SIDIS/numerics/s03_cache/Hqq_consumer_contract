@@ -1,0 +1,97 @@
+{
+	"Status":"Complete",
+	"Channel":"Hqq",
+	"InputSHA256":"fd138ee9d65de4c3cabaf60303de72c637295549ba9913a90f58563b59af71b2",
+	"JacobianAlreadyIncluded":false,
+	"Checks":{
+		"producer_acceptance":true,
+		"source_identity":true,
+		"pole_input_identity":true,
+		"pole_acceptance":true,
+		"all_pole_residues_zero":true,
+		"partonic_variables":true,
+		"finite_coefficients":true,
+		"odd_moment_absent":true,
+		"charge_conjugation":true,
+		"active_flavor_domains":true
+	},
+	"PhysicalConditions":"Q2 > 0 && s > w > 0 && -Q2 - s + w < t < -((Q2*w)\/s) && mu > 0 && mu2 > 0 && B > 0 && SUNN > 1 && Nc > 1",
+	"LOAlphaDegree":1,
+	"NLOAlphaDegree":2,
+	"NormalizedPlusLogarithm":true,
+	"PlusDefinition":"Ln=[Log[w\/B]^n\/w]_+ on [0,B]",
+	"PlusLogArgument":"ss\/B",
+	"CoordinateBoundaryPresent":true,
+	"BranchConvention":"sign=+1\/-1 with t=sign omega-s, omega>0; sign=0 means t=-s",
+	"FlavorMoments":{
+		"4":[
+			{
+				"ObservedIndex":0,
+				"Moments":{
+					"1":"charge2 + charge3 + charge4",
+					"2":"charge2**2 + charge3**2 + charge4**2"
+				}
+			},
+			{
+				"ObservedIndex":1,
+				"Moments":{
+					"1":"charge1 + charge3 + charge4",
+					"2":"charge1**2 + charge3**2 + charge4**2"
+				}
+			},
+			{
+				"ObservedIndex":2,
+				"Moments":{
+					"1":"charge1 + charge2 + charge4",
+					"2":"charge1**2 + charge2**2 + charge4**2"
+				}
+			},
+			{
+				"ObservedIndex":3,
+				"Moments":{
+					"1":"charge1 + charge2 + charge3",
+					"2":"charge1**2 + charge2**2 + charge3**2"
+				}
+			}
+		],
+		"5":[
+			{
+				"ObservedIndex":0,
+				"Moments":{
+					"1":"charge2 + charge3 + charge4 + charge5",
+					"2":"charge2**2 + charge3**2 + charge4**2 + charge5**2"
+				}
+			},
+			{
+				"ObservedIndex":1,
+				"Moments":{
+					"1":"charge1 + charge3 + charge4 + charge5",
+					"2":"charge1**2 + charge3**2 + charge4**2 + charge5**2"
+				}
+			},
+			{
+				"ObservedIndex":2,
+				"Moments":{
+					"1":"charge1 + charge2 + charge4 + charge5",
+					"2":"charge1**2 + charge2**2 + charge4**2 + charge5**2"
+				}
+			},
+			{
+				"ObservedIndex":3,
+				"Moments":{
+					"1":"charge1 + charge2 + charge3 + charge5",
+					"2":"charge1**2 + charge2**2 + charge3**2 + charge5**2"
+				}
+			},
+			{
+				"ObservedIndex":4,
+				"Moments":{
+					"1":"charge1 + charge2 + charge3 + charge4",
+					"2":"charge1**2 + charge2**2 + charge3**2 + charge4**2"
+				}
+			}
+		]
+	},
+	"FlavorDomain":"Element[Nf, Integers] && Nf >= 1",
+	"FlavorMomentDefinitions":"<|1 -> Inactive[Sum][flavorCharge[flavor]*(1 - KroneckerDelta[1, flavor]), {flavor, 1, Nf}], 2 -> Inactive[Sum][flavorCharge[flavor]^2*(1 - KroneckerDelta[1, flavor]), {flavor, 1, Nf}]|>"
+}

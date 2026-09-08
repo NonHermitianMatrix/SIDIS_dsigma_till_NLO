@@ -1,0 +1,18 @@
+# the upstream source ball contains only EMPTY ChangeLog files
+libsingular4m1: no-upstream-changelog
+
+# the upstream source contains C++ code, and has no clearly defined and versioned ABI
+libsingular4m1: package-name-doesnt-match-sonames
+
+# An isolated mathematically impossible computation in factory/NTLconvert.cc
+# is managed with exit(3); this sounds as a clumsy DEBUG policy rather than a
+# design issue, but still an issue that has to be fixed by the upstream team
+# itself.
+# Singular comes with its own memory library omalloc that hooks `out of memory'
+# events (OM_OUT_OF_MEMORY_HOOK in omalloc/omAllocSystem.c) before to implement
+# an unreachable exit(3); this looks as a clumsy emergency exit policy rather
+# than a design issue that may be revisited only to please lintian.
+libsingular4m1: shlib-calls-exit
+
+# the upstream source contains C++ code, and has no clearly defined and versioned ABI
+libsingular4m1: no-symbols-control-file

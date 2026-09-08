@@ -1,0 +1,815 @@
+                                                                                                                                                      JLAB-THY-18-2782
+
+                                              Challenges with Large Transverse Momentum in Semi-Inclusive Deeply Inelastic
+                                                                               Scattering
+                                                             J. O. Gonzalez-Hernandez,1, 2, 3, ∗ T. C. Rogers,1, 4, † N. Sato,4, ‡ and B. Wang1, 4, 5, §
+                                                                    1
+                                                                     Department of Physics, Old Dominion University, Norfolk, VA 23529, USA
+                                                                2
+                                                                 Dipartimento di Fisica, Università di Torino, Via P. Giuria 1, 10125 Torino, Italy
+                                                                             3
+                                                                               INFN-Sezione Torino, Via P. Giuria 1, 10125 Torino, Italy
+                                                                      4
+                                                                        Jefferson Lab, 12000 Jefferson Avenue, Newport News, VA 23606, USA
+                                                                5
+                                                                  Zhejiang Institute of Modern Physics, Department of Physics, Zhejiang University,
+                                                                                              Hangzhou 310027, China
+                                                                                             (Dated: 12 December 2018)
+                                                           We survey the current phenomenological status of semi-inclusive deeply inelastic scattering at
+                                                        moderate hard scales and in the limit of very large transverse momentum. As the transverse mo-
+                                                        mentum becomes comparable to or larger than the overall hard scale, the differential cross sections
+
+
+
+
+arXiv:1808.04396v2 [hep-ph] 12 Dec 2018
+                                                        should be calculable with fixed order perturbative (pQCD) methods, while small transverse momen-
+                                                        tum (TMD factorization) approximations should eventually break down. We find large disagreement
+                                                        between HERMES and COMPASS data and fixed order calculations done with modern parton den-
+                                                        sities, even in regions of kinematics where such calculations should be expected to be very accurate.
+                                                        Possible interpretations are suggested.
+
+
+
+
+                                                                                             I.   INTRODUCTION
+
+                                            Transverse momentum spectra are of theoretical interest for many reasons, and processes with an electromagnetic
+                                          hard scale like Drell-Yan scattering (DY) and semi-inclusive deeply inelastic scattering (SIDIS) are ideal clean probes
+                                          of the underlying hadronic correlation functions. In many efforts dedicated specifically to probing the details of
+                                          hadronic structure, the hard scales involved are relatively low or moderate, making a distinction between the different
+                                          regions delicate.
+                                            In this article, we will focus on SIDIS,
+
+                                                                                  l(l) + Proton(P ) → l0 (l0 ) + Hadron(PH ) + X,
+
+                                          wherein a single identified hadron with momentum PH is observed
+                                                                                                        p     in the final state. The virtuality of the space-like
+                                          momentum q ≡ l0 − l is used to define a hard scale Q ≡ −q 2 for the process. For us, the phrase “transverse
+                                          momentum” is qT , the transverse momentum of the virtual photon in a frame where P and PH are back- to-back.
+                                          (See Sec. II for a detailed overview of our notation.) When the SIDIS cross section is differential in both qT and
+                                          z, it displays the relative contributions from different underlying physical mechanisms for transverse momentum
+                                          generation. For the purposes of this article, we are interested in cases where z is large enough to be in the current
+                                          fragmentation region, wherein it can be associated with a fragmentation function (FF). Then there are a further three
+                                          transverse momentum subregions, each with its own physical interpretation:
+                                             1. When the transverse momentum is very small (between 0 and a scale of order a hadron mass), it is usually
+                                                understood to have been generated by non-perturbative processes intrinsic to the incoming proton or outgoing
+                                                measured hadron. This is the transverse momentum dependent (TMD) factorization region, and it has attracted
+                                                major attention in recent years due to its connection to intrinsic non- perturbative properties of partons inside
+                                                hadrons. (See Refs. [1–4] for the Collins-Soper-Sterman (CSS) formalism, and Refs [5] for the updated version
+                                                of TMD factorization by Collins. See a recent review, Ref. [6], by one of us, which contains more references.
+                                                For approaches rooted in soft-collinear effective theory, see especially Refs. [7–13].) TMD factorization theorems
+                                                                                                                                       2
+                                                apply to the limit of qT  Q since neglected terms are suppressed by powers of qT        /Q2 .
+                                             2. At still small but somewhat larger transverse momenta, there is a regime where Λ2QCD  qT
+                                                                                                                                        2
+                                                                                                                                           Q2 . The ratio
+                                                 2   2
+                                                qT /Q continues to be small, so the same TMD factorization methods of region 1 continue to apply. However,
+
+
+                                          ∗ joseosvaldo.gonzalez@to.infn.it
+                                          † trogers@jlab.org
+                                          ‡ nsato@jlab.org
+                                          § 0617626@zju.edu.cn
+                                                                                                                       2
+
+     Λ2QCD /qT
+             2
+                is also small, so the transverse momentum in this region may be described largely by perturbative or
+     semi-perturbative techniques, often in the form of resummed logarithms of transverse momentum. The general
+     concepts of TMD parton distribution functions (PDFs) and TMD FFs remains valid, and the transition between
+     regions 1 and 2 happens naturally as part of a general TMD factorization formalism. Therefore, it is reasonable
+     in many contexts to just treat them as a single region, as is usually done.
+                                                                           2
+   3. However, at even larger transverse momenta where qT & Q the qT         /Q2 -suppressed terms that are neglected in
+      TMD factorization are not necessarily negligible. (Indeed, the logarithms induced by the small qT /Q approxima-
+      tions can create large errors in the very large qT regions.) In this region, the transverse momentum is probably
+      best understood not as an intrinsic property of the hadrons, but instead as something produced directly in a
+      process-dependent hard collision. Fortunately, in this situation there are two valid and comparable hard scales,
+      Q and qT , so fixed order calculations with pure collinear factorization should be very reliable. This most direct
+      pQCD approach begins to fail if qT is too small to play the role of a hard scale comparable to Q, and this shows
+      up in fixed order calculations as terms that diverge as qT /Q → 0. In that limit, one must return to the methods
+      of regions 1 or 2.
+
+Since regions 2 and 3 both deal with the limit of qT  ΛQCD , they both might reasonably be referred to as “large
+transverse momentum” regions. However, it is important to keep the distinction between them clear, particularly for
+this paper. The former uses the qT /Q  1 approximations of TMD factorization while the latter does not. In this
+paper, “large transverse momentum” will always refer specifically to region 3. See [14] for more details on the matching
+between different types of behavior at large and small transverse momentum and [15] for an early phenomenological
+perspective.
+   SIDIS is fully understood only after each of these three subregions is understood on its own and only after it is
+clear how they match onto one another for the full range of kinematical scales from small to large Q. Most especially,
+identifying properties of transverse momentum dependence that are truly intrinsic to specific hadrons requires that
+they be disentangled from those that are generated in process-specific hard collisions. This can be delicate, especially
+at the smaller values of Q typical of SIDIS experiments, because the three regions enumerated above begin to be
+squeezed into an increasingly small range of qT (see [16, 17]).
+   Of course, the above classification of transverse momentum regions is not specific to SIDIS. In fact, the more
+common introduction to the subject of transverse momentum dependence in pQCD and its physical origins usually
+begins by considering processes like DY scattering. In the standard introduction, region 3 styles of calculation appear
+to be the more manageable scenario, given that all scales are both large and comparable so that asymptotic freedom
+applies and there are none of the diverging logarithms associated with qT → 0 limit. (See, for example, chapter 5.6
+of [18] and chapter 9.1 of [19].) As long as both the l+ l− mass Q and the center-of-mass transverse momentum qT
+are comparably large, one expects these calculations to be at least very roughly consistent with measurements.
+   Away from very large hard scales (such as weak boson mass scales, Q & 80 GeV) the number of more recent
+phenomenological studies designed specifically to test region 3 calculations on their own merits is surprisingly small.
+But understanding the transition to the qT ∼ Q region is important for clarifying the general nature of transverse
+momentum dependence in processes like SIDIS, especially for more moderate values of Q where the transition between
+regions is not obvious. Furthermore, these are highly constrained calculations since the only input objects that involve
+prior fitting – the PDFs and FFs – are those taken from collinear factorization. Thus, they yield highly unambiguous
+predictions with no fitting parameters.
+   However, as we will show, region 3 calculations that use modern PDF and FF sets do not in general produce even
+roughly successful predictions in SIDIS, even for values of x, z, Q2 and transverse momentum where the expectation
+is that fixed order calculations should be very reliable.
+   We will discuss further the delineation between different regions in Sec. II, where we will also explain our notation.
+In Sec. III, we will show examples of large transverse momentum behavior compared with existing data and find that
+for moderate x, moderate z, Q of a few GeVs, and qT & Q, existing data are poorly described by both leading order
+or next-to-leading order calculations. In Sec. IV, we comment on our observations.
+
+
+                   II.   FACTORIZATION AND REGIONS OF PARTONIC KINEMATICS
+
+  We will express quantities in terms of the conventional kinematical variables z ≡ PH · P/(P · q) and x ≡ Q2 /2P · q.
+PH,T is the Breit frame transverse momentum of the produced hadron, and P and q are the four-momenta of the
+incoming target hadron and the virtual photon respectively. We assume that x and 1/Q are small enough that both
+the proton, final state hadron, and lepton masses can be dropped in phase space factors. (A word of caution is
+warranted here, since the values of Q for the experiments we examine here can be quite low. In the future, target and
+                                                                                                                             3
+
+                                                          q
+                                                                       k1
+
+
+
+
+                                                                                   
+                                                      p                            
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                       N
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+                                                                                   
+
+
+                                                                      (a)
+                                    q                                          q
+                                               k1                                                k1
+
+                                                                                                           k2
+
+
+                                    p                k2                       p
+                                                                                                      k3
+
+
+                                              (b)                                          (c)
+
+FIG. 1. Momentum labeling in amplitudes for 2 → N partonic scattering kinematics. The dashed lines represent partons of
+unspecified type and flavor. The dot on the end of k1 is to indicate this is the parent parton of the detected hadron. The
+other momenta are integrated in SIDIS. All final state lines are meant to represent energetic but mutually highly non-collinear
+massless partons. If two lines become nearly collinear, it should be understood that they merge into a single line. If a line
+becomes soft, it is simply to be removed. In both cases 2 → N kinematics reduce to 2 → N − 1 kinematics. (a) is a general
+2 → N amplitude. For perturbatively large PHT , N ≥ 1 and the lowest order contribution is O (αs ), corresponding       to the
+2 → 2 kinematics in (b). We will consider in addition the 2 → 3 kinematics in (c), which appear at O αs2 .
+                                                                                                          
+
+
+
+                                                              q
+
+
+                                                                                    k1
+
+
+                                                                  k
+
+                                                 p
+
+
+
+
+FIG. 2. Figure 1(a) reduces to this handbag structure when |k2 | ∼ Λ2QCD . The k line becomes part of the target parton, and
+the lower blob is part of a PDF in the square-modulus amplitude integrated over final states.
+
+
+
+hadron mass effects should be examined in greater detail using methods such as those discussed in Refs. [20, 21].) As
+mentioned in the introduction, it is useful to express transverse momentum in terms of
+                                                                           PH,T
+                                                                  qT = −        .                                          (1)
+                                                                            z
+In a frame where the incoming and outgoing hadrons are back-to-back, qT is the transverse momentum of the virtual
+photon.
+   The factorization theorem that relates the hadronic and partonic differential cross sections in SIDIS at large PH,T
+is
+                                 Z 1     Z                            
+                         dσ           dξ 1 dζ                dσ̂ij
+             4PH0 E 0 3 0 3    =               2
+                                                  4k1
+                                                     0 0
+                                                      E    3 l0 d3 k
+                                                                         fi/P (ξ; µ)dH/j (ζ; µ) + O(Λ2QCD /qT
+                                                                                                            2
+                                                                                                              ).   (2)
+                     d l d PH      x   ξ  z  ζ           d           1
+
+The 1/ξ is from the partonic flux factor, and the 1/ζ 2 is from the conversion between k1 and PH . The indices i and
+j denote, respectively, the flavors of the initial parton in the proton and of the outgoing fragmenting parton, and a
+sum over j and i are implied. The incoming and outgoing parton momenta p and k1 satisfy p = ξP and k1 = PH /ζ.
+(Indices i and j for incoming and outgoing partons pi and k1,j will not be shown explicitly on the momenta but are
+understood). fi/P (ξ; µ) and dH/j (ζ; µ) are the collinear parton distribution and fragmentation functions respectively,
+                                                                                                                       4
+
+with a renormalization group scale µ. It is also useful to define partonic variables
+
+                                        Q2     x              k1 · p  z                PH,T
+                                x̂ ≡          = ,      ẑ ≡          = ,       k1T ≡        .                        (3)
+                                       2p · q  ξ              p·q     ζ                 ζ
+
+Note that at large transverse momentum, the cross section starts at order O (αs ) which is finite and well-behaved
+for qT > 0. The possible kinematical scenarios at qT ∼ Q for the partonic sub cross section in the integrand on the
+right-hand side of Eq. (2) are sketched in Fig. 1. The dashed lines represent generic parton momenta in that all are
+assumed to be massless and highly non-collinear, but the exact identities of the partons are left unspecified.
+                                                                                            2
+   The large qT factorized cross section in Eq. (2) has power corrections suppressed by 1/qT  , or 1/Q2 when qT = O (Q).
+Those corrections are not negligible in the small qT limit. In that limit, the cross section is best described in terms
+                                                                2
+of TMD factorization, wherein the power corrections are O(qT      /Q2 ). The first term in Eq. (2) contains contributions
+that would be counted as power suppressed in the qT /Q → 0 limit, so Eq. (2) cannot generally be inferred from the
+high transverse momentum behavior of TMD factorization results.
+   Since transverse momentum is frame dependent, characterizing its size requires some clarification. In light of the
+outline of regions in Sec. I, we must ask what criteria generally need to be satisfied for a transverse momentum to be
+considered large or small. For this, define
+
+                                                       k ≡ k1 − q .                                                  (4)
+
+The k momentum would be the target parton momentum in the small transverse momentum limit where k 2 ≈ 0 and
+the parton model 2 → 1 subprocess γ ∗ q → q applies. (See Fig. 2.) Note that in Fig. 1(a), however, all the final state
+particles are at wide angles relative to one another, so internal propagators are off shell by order Q2 . It will also be
+useful to define
+
+                                                    kX ≡ p + q − k1 .                                                (5)
+                        2
+Note that in Fig. 1(b) kX = 0.
+  Within the blob in Fig. 1(a), two basic forms of propagator denominators may arise:
+                                                              1
+                                                                         ,                                         (6)
+                                                     k2 + O       Λ2QCD
+                                                          1
+                                                                     .                                               (7)
+                                                     k 2 + O (Q2 )
+                           
+In Eq. (6), the O Λ2QCD terms are very small mass scales associated with non-perturbative physics. Equation (7)
+involves either the virtual photon vertex or emissions corresponding to (the wide-angle) kX . Note that k · q ∼ q · p =
+O Q2 . These propagator denominators illustrate the sort of power counting arguments necessary to justify the
+relevant factorization approximations in each region of partonic kinematics outlined in the introduction. For instance,
+when |k 2 | ≈ Λ2QCD , the k-line is nearly on-shell and collinear to the target proton. So it should then be considered
+part of the proton blob, and the relevant physical picture becomes the handbag topology in Fig. 2 with k now playing
+                                       2
+the role of the target parton. The qT    /Q2  1 approximations
+                                                                  that lead to TMD factorization apply here. Namely,
+the k in Eq. (7) can be neglected relative to the O Q2 terms, although no small k 2 approximations are appropriate
+      2
+
+for Eq. (6).
+                                   
+   When |k 2 | ≈ Q2 , the O Λ2QCD terms can be neglected in Eq. (6) and all of the blob in Fig. 1(a) can be calculated
+in pQCD with both Q2 and k 2 acting as hard scales. Of course, it is then no longer appropriate to neglect k 2 relative
+to Q2 terms in Eq. (7), so this is the large transverse momentum region 3.
+                                                                                                                  
+   Explicit diagrammatic calculations, keeping small masses, easily confirm that the coefficients of the O Q2 and
+O Λ2QCD terms in Eqs. (6)–(7) are simple numerical factors not radically different from 1. Moreover, this generalizes
+to entire diagrams including propagator numerators. Thus, the ratio |k 2 |/Q2 is the relevant Lorentz invariant measure
+of the size of transverse momentum, in the sense that it should be much less than 1 for the small transverse momentum
+                                                                 2
+approximations to be accurate. Calculating it in terms of ẑ, qT    and Q2 ,
+
+                                                    k2                2
+                                                                     qT
+                                                       = 1 − ẑ + ẑ    .                                            (8)
+                                                    Q2               Q2
+
+For current fragmentation, z is fixed at some value not too much smaller than 1. (In practice it is often assumed to
+                                                                                                                           5
+
+be between approximately 0.2 and 0.8.) In the integral over ζ, z < ẑ < 1 so
+                                                                       
+                                         qT2
+                                                 k2                   2
+                                                                     qT
+                                             <       <  1 − z   1 −       ,                                              (9)
+                                         Q2      Q2                 Q2
+                                                              2
+assuming qT < Q. So, for any z in the current region, qT        /Q2  1 signals the onset of the TMD factorization region
+        2   2
+while qT /Q ∼ 1 signals the onset of the large transverse momentum region where fixed order pQCD is optimal. That
+     2
+is, qT /Q2  1 implies region 1 or 2 of the introduction, while qT    2
+                                                                        /Q2 & 1 implies region 3. This establishes that it is
+the magnitude of qT specifically, defined in Eq. (1), that is most useful for assessing the transition between different
+regions.
+   Another way to estimate the boundary between large and small transverse momentum is to recall that the region
+1 and 2 methods of calculating are the result of a small qT approximation. Thus, one may examine the effect of that
+                                                                                           2
+approximation in specific fixed order calculations. For SIDIS at O (αs ) in the small qT     /Q2 → 0 limit, the cross section
+is proportional to
+                   Z 1                               Z 1                                          2          
+                       dξ                                dζ                                          Q        3
+           d(z; µ)        f (ξ; µ)P (x/ξ) + f (x; µ)        d(ζ; µ)P (z/ζ) + 2CF f (x; µ)d(z; µ) ln    2   −      .      (10)
+                    x ξ                               z   ζ                                          qT       2
+
+where the functions P are lowest order splitting functions and sums over flavors are implied. (See, for example,
+Eq. (36) of [22].) The appearance of the logarithm is a consequence of approximations specific to the small qT limit.
+The actual fixed order calculation of the cross section from which this is obtained is positive everywhere. Therefore,
+the qT 2
+         /Q2 → 0 approximation is surely inappropriate once qT    2
+                                                                     is so large that the cross section as calculated in
+Eq. (10) becomes significantly negative. If the first two terms of Eq. (10) are of order unity or less, then this happens
+when qT & Q. One can use Eq. (10) to estimate where region 3 methods are definitely needed. Specific calculations
+in [16] show values of qT above which the cross section goes negative in typical calculations. For example, Fig. 1 of
+[16] suggests that the change of sign occurs before qT ∼ Q/2 in typical SIDIS kinematics. (This further establishes
+  2
+qT  /Q2 as the relevant transverse momentum ratio.)
+    Another question is whether, for a particular combination of x and z, the large qT calculation should be expected
+to be well-described by the O (αs ) calculation or whether higher orders are needed. For the leading O (αs ) large
+transverse momentum cross section, the partonic process is 2 → 2 with all partons massless and on-shell (Fig. 1(b)),
+       2 (α )
+i.e., kX s = 0. For the O (αs ) calculation to be a good approximation, therefore, the ratio kX   2
+                                                                                                    /Q2 (Fig. 1(a)) must
+be small enough that it does not affect the k 2 terms in Eq. (6) and Eq. (7). Considering k 2 /Q2 but now in terms of
+  2
+kX   instead of ẑ,
+                                                             2                   
+                                    k2             1          qT        2
+                                                                       kX        2
+                                                                                qT
+                                        =              2 /Q2 Q2  +  x̂      1 −       .                              (11)
+                                   Q2     1 − x̂ + x̂qT                Q2       Q2
+
+So the k 2 terms in Eq. (6) and Eq. (7) are nearly independent of kX if kX
+                                                                         2
+                                                                           /Q2  1. Otherwise, higher orders in αs
+                                        2                           2
+are necessary to generate the non-zero kX . In terms of x̂, ẑ and Q ,
+                                                2                          2
+                                               kX   (1 − x̂)(1 − ẑ)      qT
+                                                  =                  − ẑ    .                                          (12)
+                                               Q2          x̂             Q2
+In practice, typical x̂ and ẑ are largely determined by the distributions in longitudinal momentum fraction in PDFs
+and FFs for a particular kinematical scenario. If it turns out that they are mostly dominated by moderate values
+                         2
+of x̂ and ẑ, then the kX  /Q2  1 criterion is not difficult to satisfy for large qT ∼ Q. Then, the leading order in αs
+can reasonably be expected to dominate at large transverse momentum. If, however, the typical x̂ and ẑ are much
+                                                     2
+smaller than 1, then they force a large average kX     . This can create the situation that higher order corrections are
+larger relative to O (αs ) for certain regions of transverse momentum. (If there is large sensitivity to the kinematical
+                2
+threshold at kX   ≈ 0, then this can also induce large higher order corrections.)
+   Note that the shape of the transverse momentum dependence can be significantly affected by the PDFs and FFs
+because of the correlation between ζ and ξ:
+                                                                  2
+                                                                          
+                                                        ξ − x + xqT  /Q2
+                                                ζ=z                2 /Q2     .                                      (13)
+                                                        ξ − x − xkX
+                                                                                            2
+Inclusive quantities are sensitive to the peak in the cross section at small qT (and small kX ) and thus are mainly
+                                                  2             2
+sensitive to the region where ζ ≈ z. Both large qT and large kX , however, push ζ to values significantly higher than
+                                                                                                                         6
+
+z.
+
+
+                            III.   EXISTING MEASUREMENTS AND CALCULATIONS
+
+   Given the discussion above, we should expect to find reasonable agreement between fixed order calculations and
+SIDIS measurements where qT /Q ratios easily exceed 1 and typical x and z are not such that higher orders are
+extremely large. This at first appears promising when considering H1 [23] kinematics 1 , where the fixed order large-qT
+prediction from Fig. 4 of [24] (copied here in Fig. 3) gives a satisfactory description of π 0 production data if O αs2
+corrections are included. An obvious concern is that the order-of-magnitude higher order corrections needed might be
+signaling a breakdown of perturbative convergence. But as explained in [24], this behavior is most likely due simply
+to the particular kinematics of the H1 data. Indeed 5 × 10−5 . x . 5 × 10−3 for the data in Fig. 3. Also, the cross
+section is integrated over z with
+
+                                                 P · Pπ   2xEp2
+                                            z=          =       (Eπ0 /Ep )(1 − cos(θ))                                (14)
+                                                  P ·q     Q2
+
+where Ep , Eπ0 are the energies of the proton and final state π 0 and θ is the polar scattering angle relative to the
+incoming proton direction, all defined in the H1 laboratory frame. The data are constrained to Eπ0 /Ep > 0.01 and
+5◦ < θ < 25◦ . Using H1 kinematics, we find that the z values included in Fig. 3 can be as small as ∼ 0.001. See
+section IV of [24] for more on the role of H1 cuts in producing Fig. 3. A calculation similar to [24] was performed
+in [25] with similar results. The small values of z are cause for caution. This is a region where a description of
+non-perturbative properties in terms of fracture functions (see, e.g., [26, 27] and also applications to SIDIS in [28, 29])
+is more appropriate.
+   One consequence of the small z values is that qT = PH,T /z is very large for each PH,T point in Fig. 3, so even the
+smallest transverse momenta in the plots correspond to very large transverse momenta by the criterion of Eq. (9).
+So it is maybe reasonable to expect that the full range of transverse momentum observable in Fig. 3 corresponds to
+region 3 large transverse momentum. Also, for most of the range of the integrals over ζ and ξ in Eq. (2), x̂ and ẑ
+are close to zero, but with a large contribution at x̂ ≈ 1. Given Eqs. (11)–(12), therefore, it is perhaps not surprising
+that O αs2 calculations actually dominate since they are needed to produce the large kX      2
+                                                                                               /Q2 .
+   The question then, however, is whether fixed order SIDIS calculations continue to be in reasonable agreement with
+measurements at more moderate x and     z and at large qT , where the expectation is that agreement should improve,
+at least with the inclusion of O αs2 corrections. Figure 4, shows that this is not the case, however. The order
+O (αs ) and O αs2 curves are obtained with an analogous computer calculation as that used in Ref. [24] to generate
+Fig. 3, but modified to be consistent with the kinematics of the corresponding experimental data. (We have verified
+that the curves in Fig. 3 are reproduced.) The data are from recent COMPASS measurements for charged hadron
+production [30]. Neither leading order nor next-to-leading order calculations give reasonable agreement with the
+measurements, even for moderate x, z and qT > Q, as both systematically undershoot the data, most significantly
+at the more moderate values of x close to the valence region. At smaller x the disagreement lessens, as might be
+expected given the trend in Fig. 3. To highlight the valence region (x & 0.1) at the larger values of Q, we have plotted
+the ratio between data and theory in Fig. 5 for three particular kinematic bins from Fig. 4. Even including the O αs2
+correction, the deviation is typically well above a factor of 2, even for qT significantly larger than Q. In this context
+it is also worth considering Fig. 8 of [25], which is for similar kinematics to Fig. 3 but for charged hadrons measured
+at ZEUS [33]. The next-to-leading order K factor is & 1.5 for large transverse momentum. At least one other set
+of SIDIS data at somewhat different kinematics exhibits the same trend. This is the set of HERMES measurements
+of π + multiplicities [34] shown in Fig. 6. Note that the kinematics very much correspond to the valence region for
+the target. Figure 7 shows that the failure to match the data is even more pronounced than in the COMPASS case.
+Even for Q > 3 GeV and qT > Q, the difference is nearly an order of magnitude.
+
+
+                                                       IV.    DISCUSSION
+
+   We have argued that there is tension between existing fixed order pQCD calculations and at least two sets of
+large transverse momentum measurements where those calculations should be reasonably accurate, and that this
+
+
+
+1 H1 is the experimental collaboration that produced the data in [23].
+                                                                                                                                                                                       8
+                                                                                                                                                                                           7
+
+
+
+
+                                                                  dsp/dpT (pb/GeV)
+                                                                                                                        2                  2
+                                                                                     10
+                                                                                         2                         2 £ Q £ 4.5 GeV
+                                                                                                                                        KKP NLO
+                                                                                     10                                                 KKP LO
+                                                                                                                                        K NLO
+                                                                                     1                                                  K LO
+
+
+
+                                                                                          2                                 2                  2
+                                                                                     10                            4.5 £ Q £ 15 GeV
+                                                                                     10
+                                                                                     1
+
+                                                                                          2                                 2              2
+                                                                                     10                            15 £ Q £70 GeV
+                                                                                     10
+
+                                                                                     1
+
+                                                                                                 3     4     5    6    7 8 9 10                    15
+                                                                                                                                        pT (GeV)
+
+
+                                             FIG. 4: Cross section as a function of pT , data and cuts as in Figure 3.
+FIG. 3. Fig. 4 from [24]. The differential cross section was integrated over x, z and bins of Q with H1 cuts, calculated with
+both leading order and next-to-leading order, and compared      with π 0 production data from [23]. Here pT corresponds to our
+                                                         2
+                                                           
+PH,T – see Eq. (1).the
+          however    Note  the large
+                       dierence     correction
+                                 between          NLOO αs
+                                          LO andfrom        . as pT increases.
+                                                      decreases
+                 The uncertainty due to the choice of a fragmentation functions set is also quite noticeable, this fact driven by the
+              dierent gluon content of the two sets considered here. Low Q2 bins seem to prefer KKP set, which have a larger
+              gluon-fragmentation content, whereas for larger Q2 both sets agree with the data within errors. LO estimates show
+              a much smaller sensitivity on the choice of fragmentation functions, since gluon fragmentation does not contribute
+              signicantly to the cross section at this order.
+
+
+                                  COMPASS 17 h+700                                                                                                       100
+
+
+                                                   dsp/dxB (nb)
+                                                                                                                                2              2
+                                                                                                                      2 £ Q £ 8 GeV                     10−1
+                    20.0               dσ           dσ 525    −2
+                                  dxbjdQ2dzdPT2 / dxbjdQ2 (GeV ) vs. qT (GeV)                                                                           10−2
+                                                                      350                                                                               10−3
+
+                                                                      175                                         100
+                                                                                                                 10−1
+                    8.3                                                         0
+                                       DDS (LO)                                                                  10−2     2        2
+                                                                                                                     8 £ Q £ 20 GeV
+                                                                           75                                    10−3
+
+
+
+
+        Q2 (GeV2)
+                                       DDS (NLO)                                                                                                                           2   4   6
+                                                  10050
+                                       qT > Q    10−1
+                    3.5                                                    25
+                                                       10−2
+                                                       10−3 0                                                                       2              2
+                                                                                                                      20 £ Q £ 70 GeV
+                                                                                                                                                               2   4   6
+                            100                                            20
+                           10−1
+                    1.8
+                           10−2                                            10
+                           10−3                                                               pT ³ 3.5 GeV
+
+                                                                     -4
+                                                                                0           -3         2 4 6              0.24 < z < 0.30
+                      100                                         10                     10
+                                                                                                        xB                0.30 < z < 0.40
+                     10−1
+                    1.3
+                     10−2                                                                                                 0.40 < zand< 0.50
+              FIG. 5:10NLO
+                       −3    cross sections as a function of xB . The central (solid) line corresponds to setting the factorization    renormal-
+              ization scales to (Q2 + p2T )/2 and the upper and lower (dashed) ones to (Q 2 + p2T )/4 and Q2 + p2T respectively.
+                                                                                                                          0.65   <  z < 0.70
+                             2 4 6          2 4 6          2 4 6         2 4 6           2 4 6
+                    As mentioned,  the dependence
+                               0.007        0.010 of the 0.016
+                                                         cross section 0.03
+                                                                       in the choice 0.04
+                                                                                      for the renormalization
+                                                                                                   0.07       and
+                                                                                                               0.15factorization
+                                                                                                                              0.27scale is
+                                                                                                                      xbj
+FIG. 4. Calculation of O(αs ) and O(αs2 ) transversely differential multiplicity using code from [24], shown as the curves labeled
+DDS (for Daleo-de Florian-Sassot). The bar at the bottom marks the region where qT > Q. The PDF set used is CJNLO [31] and
+                                                                                      1/2
+the FFs are from [32]. Scale dependence is estimated using µ = (ζQ Q)2 + (ζqT qT )2        where the band is constructed point-by-
+point in qT by taking the min and max of the cross section evaluated across the grid ζQ × ζqT = [1/2, 1, 3/2, 2] × [0, 1/2, 1, 3/2, 2]
+except ζQ = ζqT = 0. The red band is generated with ζQ = 1 and ζqT = 0. A lower bound of 1 GeV is place on µ when Q/2
+would be less than 1 GeV.
+                                                                                                                                                                                 8
+
+                                                            xbj = 0.13 Q2 = 5.3 GeV2                   xbj = 0.15 Q2 = 9.8 GeV2                xbj = 0.29 Q2 = 22.1 GeV2
+
+                                                      18
+
+
+
+
+                                   data/theory(LO)
+                                                      14
+
+                                                      10
+
+                                                       6
+
+                                                       2
+
+
+
+
+                                   data/theory(NLO)
+                                                      18                                                            0.24 < z < 0.30
+                                                                                                                    0.30 < z < 0.40
+                                                      14                                                            0.40 < z < 0.50
+                                                                                                                    0.65 < z < 0.70
+                                                      10
+                                                                                                                       qT > Q
+                                                       6
+
+                                                       2
+                                                        0            20             40             0          20              40         0                20       40
+                                                                   qT2 (GeV2)                                qT2 (GeV2)                              qT2 (GeV2)
+
+FIG. 5. Ratio of data to theory for several near-valence region panels in Fig. 4. The grey bar at the bottom is at 1 on the
+vertical axis and marks the region where qT > Q.
+
+
+                                                      xbj = 0.04 Q2 = 1.2 (GeV2 )        xbj = 0.06 Q2 = 1.5 (GeV2 )        xbj = 0.10 Q2 = 1.8 (GeV2 )
+
+                                   101
+
+                                   100
+
+
+               dσ
+
+                       / dσ
+                                  10−1                                                                                                                            < z >= 0.1
+                                                                                                                                                                  < z >= 0.2
+                                  10−2                                                                                                                            < z >= 0.3
+
+
+
+
+          dxbjdQ2dzdPT2 dxbjdQ2
+                                                                                                                                                                  < z >= 0.5
+                                                      xbj = 0.15 Q2 = 2.9 (GeV2 )        xbj = 0.25 Q2 = 5.2 (GeV2 )        xbj = 0.41 Q2 = 9.2 (GeV2 )
+                                                                                                                                                                  < z >= 0.9
+                                   101
+
+                                   100                                                                                                                               DDS (LO)
+                                                                                                                                                                     DDS (NLO)
+                                  10−1                                                                                                                               qT > Q
+
+                                  10−2
+                                                                                                                                                               HERMES π +
+                                               0            2        4       6      0          2         4      6       0          2       4        6
+                                                             qT(GeV)                            qT(GeV)                            qT(GeV)
+
+                                   FIG. 6. Calculation analogous to Fig. 4 but for π + production measurements from [34].
+
+
+
+disagreement is too large to be attributable to qT being too small. Thus, it appears to us to be a genuine mystery
+that needs attention, especially for TMD phenomenology. The TMD formalism relies on approximations that apply
+only in the qT /Q → 0 limit, so it is critical to have an alternative approach to describe the transition to very large
+transverse momentum. If standard fixed order collinear pQCD is not adequate for this, then something new is needed.
+   It is worth pointing out that one encounters similar problems in Drell-Yan scattering, where a lowest order calcu-
+lation with current PDF sets is easily found to undershoot the lowest available Q data by very large factors. It is less
+clear how to interpret the disagreement here, however, since most of the existing data for lower Q regions are close to
+the threshold region and including threshold resummation introduces extra subtleties.
+   The observations of this article have focused on unpolarized cross sections, but the implications extend to spin and
+azimuthally dependent cross sections, since the key issue is the relevance of different types of transverse momentum
+                                                                                                                                       9
+
+                                              xbj = 0.15 Q2 = 2.9 GeV2       xbj = 0.25 Q2 = 5.2 GeV2       xbj = 0.41 Q2 = 9.2 GeV2
+
+
+
+
+                      data/theory(LO)
+                                         30
+
+                                         20
+
+                                         10
+
+
+
+
+                      data/theory(NLO)
+                                                  < z >= 0.1
+                                                                                         qT > Q
+                                         30       < z >= 0.2
+                                                  < z >= 0.3
+                                         20       < z >= 0.5
+                                                  < z >= 0.9
+                                         10
+
+
+                                          0          20           40     0          20            40    0          20           40
+                                                   qT2 (GeV2)                     qT2 (GeV2)                     qT2 (GeV2)
+
+
+                FIG. 7. Ratio calculation analogous to Fig. 5 but for π + production measurements from [34].
+
+
+dependence.
+   There are a number of possible resolutions that deserve further investigation. An interesting one is that the
+hadronization mechanism is different in high-transverse- momentum SIDIS from the usual picture in terms of universal
+FFs. Models used in Monte Carlo event generators might be a source of ideas regarding this possibility. In the context
+of this possibility, it is noteworthy that much of the data for SIDIS transverse momentum dependence is describable
+in a Gaussian model of TMDs [35, 36]. In pQCD, there are also arguments that certain higher twist correlation
+functions actually dominate over leading twist functions. In this picture, the q q̄ pair that ultimately forms the final
+state is directly involved in the hard part [34, 37].
+   It is possible that threshold effects are important [38, 39]. If that is the case, then there are serious implications for
+TMD studies, because additional non-perturbative effects beyond those associated with intrinsic transverse momentum
+can then be important [40]. However, the largest x and z in Fig. 5 and Fig. 7, where the disagreement is the worst,
+corresponds to valence regions of x and z, well away from kinematics where partonic kinematics are close to kinematical
+thresholds for most ξ and ζ. Furthermore, this would contradict the observation in Fig. 3 that fixed order corrections
+alone succeed in describing data, even for very small x and z.
+   Another possibility is that FFs and/or PDFs are not well-enough constrained to handle the particular kinematical
+scenarios that arise at large qT . To see that this is plausible, consider the large qT observable
+                                                  Z 1                               2
+                                                                                          
+                                     dσ                                            xqT
+                                              2 ∼       dξ f (ξ) d   ζ = z  1 +                ,                        (15)
+                                dQ2 dx dz dqT      ξmin                         (ξ − x)Q2
+
+where the “∼” is to indicate the combination of PDF and FF that appear in fixed order pQCD calculations at large
+transverse momentum and lowest order. The minimum final state momentum fraction is
+                                                            2
+                                                                  
+                                                           zqT
+                                           ξmin = x 1 +             .                                       (16)
+                                                        (1 − z)Q2
+
+Note that small ξ (ξ ≈ x) tends to select the large ζ  z region and vice versa, and the nature of the correlation
+between ζ and ξ changes as qT varies. Also, very large qT forces ξmin to be large. Therefore, while the hard
+scattering gives a characteristic power-law shape to the large qT dependence, both its shape and normalization are
+also significantly influenced by the large ξ and ζ behavior in the collinear PDFs and FFs. Note also that gluon PDFs
+and FFs appear in the first non-vanishing order in Eq. (15).
+   Contrast that with the observable,
+                                   X        Z
+                                                      2      dσ              dσ
+                                               z dz dqT             2 = dQ2 dx ∼ f (x) ,
+                                                        dQ2 dx dz dqT
+                                                                                                                 (17)
+                                              Hadron Flavors
+                                                                                                                        10
+
+that is, the total DIS cross section; or with the qT -integrated SIDIS cross section,
+                                   Z
+                                         2      dσ                dσ
+                                      dqT
+                                           dQ2 dx dz dqT 2 = dQ2 dx dz ∼ f (x) d (z) .                                (18)
+
+In Eq. (17), the dominant contribution at leading order is from quark PDFs only, and is evaluated only at a single
+value x. Likewise, Eq. (18) is only sensitive to the FF at ζ = z. Of course, Eq. (15), Eq. (17), and Eq. (18) are all for
+basically the same process, but in going from Eq. (15) to Eq. (17) or Eq. (18) information is lost in the integrations
+and summations, and the sensitivity to the PDFs and FFs is consequently less detailed. Most typically, however,
+low-Q fits that are aimed at constraining the valence region at lower Q use observables like Eq. (17) or Eq. (18). But
+Eq. (15) scans through small to large values of ξ and ζ as qT varies. The question then arises whether existing fits
+maintain enough information to predict Eq. (15) observables reliably. Note that it has already been suggested in the
+past [41] to use transversely differential Drell-Yan measurements at large qT and including smaller Q to constrain
+gluon distributions. An analogous possibility applies to gluon FFs at large ζ in large transverse momentum SIDIS
+or back-to-back hadron pair production in e+ e− annihilation. To test this, it would be informative to include the
+large transverse momentum behavior of lower-Q but highly differential cross sections in global simultaneous fits of
+PDFs and FFs. It is also noteworthy that in very early calculations [42] that gave rise to satisfactory fits in Drell-Yan
+scattering, the gluon and sea distributions used were much larger than modern ones. This suggests that contributions
+from gluon and sea PDFs and FFs at larger values of x may need to be reassessed in light of the mismatches above.
+   We leave further investigation of all these possibilities to future work. A resolution is an important part of the goal
+to understand SIDIS generally in terms of an underlying partonic picture.
+
+
+                                               ACKNOWLEDGMENTS
+
+  We thank J. Collins, L. Gamberg, F. Halzen, J. Owens, J.-W. Qiu, and W. Vogelsang for very useful discussions. We
+thank R. Sassot for explanations regarding the code in [24]. T. Rogers’s work was supported by the U.S. Department
+of Energy, Office of Science, Office of Nuclear Physics, under Award Number DE-SC0018106. This work was also
+supported by the DOE Contract No. DE- AC05-06OR23177, under which Jefferson Science Associates, LLC operates
+Jefferson Lab. N. Sato was supported by DE-FG-04ER41309. B. Wang was supported in part by the National Science
+Foundation of China (11135006, 11275168, 11422544, 11375151, 11535002) and the Zhejiang University Fundamental
+Research Funds for the Central Universities (2017QNA3007). J. O. Gonzalez-Hernandez work was partially supported
+by Jefferson Science Associates, LLC under U.S. DOE Contract #DE-AC05-06OR23177 and by the U.S. DOE Grant
+#DE-FG02-97ER41028.
+
+
+
+
+ [1] J. C. Collins and D. E. Soper, Nucl. Phys. B194, 445 (1982).
+ [2] J. C. Collins and D. E. Soper, Nucl. Phys. B193, 381 (1981), erratum: B213, 545 (1983).
+ [3] J. C. Collins, D. E. Soper, and G. Sterman, Phys. Lett. B109, 388 (1982).
+ [4] J. C. Collins, D. E. Soper, and G. Sterman, Nucl. Phys. B250, 199 (1985).
+ [5] J. C. Collins, Foundations of Perturbative QCD (Cambridge University Press, Cambridge, 2011).
+ [6] T. C. Rogers, Eur. Phys. J. A52, 153 (2016), arXiv:1509.04766 [hep-ph].
+ [7] M. G. Echevarrı́a, A. Idilbi, and I. Scimemi, JHEP 1207, 002 (2012), arXiv:1111.4996 [hep-ph].
+ [8] M. G. Echevarria, I. Scimemi, and A. Vladimirov, JHEP 09, 004 (2016), arXiv:1604.07869 [hep-ph].
+ [9] T. Lübbert, J. Oredsson, and M. Stahlhofen, JHEP 03, 168 (2016), arXiv:1602.01829 [hep-ph].
+[10] Y. Li, D. Neill, and H. X. Zhu, (2016), arXiv:1604.00392 [hep-ph].
+[11] Y. Li and H. X. Zhu, Phys. Rev. Lett. 118, 022004 (2017), arXiv:1604.01404 [hep-ph].
+[12] I. Scimemi and A. Vladimirov, Eur. Phys. J. C78, 89 (2018), arXiv:1706.01473 [hep-ph].
+[13] D. Gutierrez-Reyes, I. Scimemi, W. J. Waalewijn, and L. Zoppi, Phys. Rev. Lett. 121, 162001 (2018), arXiv:1807.07573
+     [hep-ph].
+[14] A. Bacchetta, D. Boer, M. Diehl, and P. J. Mulders, JHEP 08, 023 (2008), arXiv:0803.0227 [hep-ph].
+[15] M. Anselmino, M. Boglione, A. Prokudin, and C. Turk, Eur. Phys. J. A31, 373 (2007), arXiv:hep-ph/0606286 [hep-ph].
+[16] M. Boglione, J. O. G. Hernandez, S. Melis, and A. Prokudin, JHEP 02, 095 (2015), arXiv:1412.1383 [hep-ph].
+[17] J. Collins, L. Gamberg, A. Prokudin, T. C. Rogers, N. Sato, and B. Wang (2017) arXiv:1702.00387 [hep-ph].
+[18] R. D. Field, Applications of Perturbative QCD, Vol. 77 (Addison-Wesley, Redwood City, California, 1989) pp. 1–366.
+[19] R. K. Ellis, W. J. Stirling, and B. R. Webber, QCD and Collider Physics (Cambridge University Press, Cambridge, 1996).
+[20] L. T. Brady, A. Accardi, T. J. Hobbs, and W. Melnitchouk, Phys. Rev. D84, 074008 (2011), [Erratum: Phys.
+     Rev.D85,039902(2012)], arXiv:1108.4734 [hep-ph].
+                                                                                                                        11
+
+[21] J. V. Guerrero, J. J. Ethier, A. Accardi, S. W. Casper, and W. Melnitchouk, JHEP 09, 169 (2015), arXiv:1505.02739
+     [hep-ph].
+[22] P. Nadolsky, D. R. Stump, and C. P. Yuan, Phys. Rev. D61, 014003 (1999), arXiv:hep-ph/9906280 [hep-ph].
+[23] A. Aktas et al. (H1), Eur. Phys. J. C36, 441 (2004), arXiv:hep-ex/0404009 [hep-ex].
+[24] A. Daleo, D. de Florian, and R. Sassot, Phys. Rev. D71, 034013 (2005), arXiv:hep-ph/0411212 [hep-ph].
+[25] B. A. Kniehl, G. Kramer, and M. Maniatis, Nucl. Phys. B711, 345 (2005), [Erratum: Nucl. Phys.B720,231(2005)],
+     arXiv:hep-ph/0411300 [hep-ph].
+[26] L. Trentadue and G. Veneziano, Phys. Lett. B323, 201 (1994).
+[27] A. Kotzinian, M. Anselmino, and V. Barone, Proceedings, 3rd Workshop on the QCD Structure of the Nucleon (QCD-
+     N’12): Bilbao, Spain, October 22-26, 2012, Nuovo Cim. C036, 127 (2013), arXiv:1303.2461 [hep-ph].
+[28] A. Daleo, C. A. Garcia Canal, and R. Sassot, Nucl. Phys. B662, 334 (2003), arXiv:hep-ph/0303199 [hep-ph].
+[29] A. Daleo and R. Sassot, Nucl. Phys. B673, 357 (2003), arXiv:hep-ph/0309073 [hep-ph].
+[30] M. Aghasyan et al. (COMPASS), Phys. Rev. D97, 032006 (2018), arXiv:1709.07374 [hep-ex].
+[31] A. Accardi, L. T. Brady, W. Melnitchouk, J. F. Owens, and N. Sato, Phys. Rev. D93, 114017 (2016), arXiv:1602.03154
+     [hep-ph].
+[32] D. de Florian, R. Sassot, and M. Stratmann, Phys. Rev. D76, 074033 (2007), arXiv:0707.1506 [hep-ph].
+[33] M. Derrick et al. (ZEUS), Z. Phys. C70, 1 (1996), arXiv:hep-ex/9511010 [hep-ex].
+[34] Y.-Q. Ma, J.-W. Qiu, G. Sterman, and H. Zhang, in Proceedings, 7th International Workshop on Charm Physics, CHARM
+     2015, edited by Alexey A. Petrov, eConf C15-05-18.6: Detroit, USA, May 18-22, 2015 (2015) arXiv:1509.05907 [hep-ph].
+[35] M. Anselmino, M. Boglione, J. Gonzalez H., S. Melis, and A. Prokudin, JHEP 1404, 005 (2014), arXiv:1312.6261 [hep-ph].
+[36] A. Signori, A. Bacchetta, M. Radici, and G. Schnell, JHEP 1311, 194 (2013), arXiv:1309.3507 [hep-ph].
+[37] Z.-B. Kang, Y.-Q. Ma, J.-W. Qiu, and G. Sterman, Phys. Rev. D91, 014030 (2015), arXiv:1411.2456 [hep-ph].
+[38] D. de Florian, M. Pfeuffer, A. Schäfer, and W. Vogelsang, Phys. Rev. D88, 014024 (2013), arXiv:1305.6468 [hep-ph].
+[39] D. Westmark and J. F. Owens, Phys. Rev. D95, 056024 (2017), arXiv:1701.06716 [hep-ph].
+[40] J. C. Collins, T. C. Rogers, and A. M. Staśto, Phys. Rev. D77, 085009 (2008), 0708.2833.
+[41] E. L. Berger, L. E. Gordon, and M. Klasen, Phys. Rev. D58, 074012 (1998), arXiv:hep-ph/9803387 [hep-ph].
+[42] F. Halzen and D. M. Scott, Phys. Rev. D18, 3378 (1978).
+

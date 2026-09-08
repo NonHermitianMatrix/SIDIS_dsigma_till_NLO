@@ -1,0 +1,185 @@
+{
+  "CNickelIndex": "1123|e4|e4|e4||:0000|00|00|10||",
+  "MassScales": 1,
+  "FunctionClass": "unknown",
+  "EpsilonOrder": "-3,-2,-1,0,1",
+  "References": [
+    "arXiv:1004.3653",
+    "hep-ph/0607185",
+    "arXiv:2111.13595"
+  ],
+  "Records": [
+    {
+      "epsOrders": "-3,-2,-1,0,1",
+      "reference": "arXiv:1004.3653",
+      "authors": "T. Gehrmann, E.W.N. Glover, T. Huber, N. Ikizlerli, C. Studerus",
+      "description": "The authors give all master integrals used in the computation of quark and gluon form factors to three loops in QCD. These integrals are available in Appendix A and all have a prefactor given by Eq. A.1.",
+      "recordId": "1499084266.Yxp6",
+      "verified": true,
+      "verifiedAt": "auto-loopedia"
+    },
+    {
+      "reference": "hep-ph/0607185",
+      "authors": "T. Gehrmann, G. Heinrich, T. Huber, C. Studerus",
+      "description": "Name in Paper: A7,2",
+      "recordId": "1479985176.mB0B",
+      "verified": true,
+      "verifiedAt": "auto-loopedia"
+    },
+    {
+      "reference": "arXiv:2111.13595",
+      "authors": "Piotr Bargiela, Fabrizio Caola, Andreas von Manteuffel, Lorenzo Tancredi",
+      "description": "Three-loop NPL1 bare scalar (all unit propagator powers) imported from arXiv:2111.13595 ancillary i2m IBP reduction (sector 20721; 68 master(s)). One off-shell external leg P^2 = MM, the other external legs on-shell massless; single-scale (x-free, immune to the t/u variable choice). D=4-2eps all-unit-power scalar, leading 1/eps^3. Stored in the e^{+i pi} branch (library-native).",
+      "recordId": "ax_64ecb5636c1d",
+      "texkey": "Bargiela:2021wuy",
+      "doi": "10.1007/JHEP02(2022)153",
+      "sourceFamily": "NPL1_sec20721",
+      "masterCount": 68,
+      "verified": true,
+      "verifiedVia": "criterion-3: anc i2m bare-scalar value == library STIntegrate-native(home graph) EXACT (max|diff|=0) at 3 Euclidean points across delta-free orders eps^lead..0 (the stored truncation; not validated beyond eps^0). STIntegrate-native ran on the cluster (Nereid) via the HyperIntica backend (HyperFLINT dylib absent; the SubTropica backends integrate the same Symanzik integrand and cross-check); MZV ginsh-reduction on the Mac; additionally re-confirmed byte-identically against an independent all-Mac run. STVerify N/A (timelike e^{+i pi} branch-resolution gap, same as the existing symbol-proposal records in this entry)."
+    }
+  ],
+  "Source": [
+    "arXiv",
+    "Loopedia"
+  ],
+  "Results": [
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T054715Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "MM"
+      ],
+      "singularitiesTeX": [
+        "\\text{MM}"
+      ],
+      "singularitiesVerified": [
+        false
+      ],
+      "groundTruthAvailable": false,
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 5,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 2.81,
+        "chiEngine": "eulerDiscriminant"
+      },
+      "timestamp": "2026-06-14T05:47:15Z",
+      "contributor": "oddletters-v1a",
+      "singularitiesChiDrop": [
+        0
+      ]
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T054715Z",
+      "byEpsOrder": null,
+      "evens": [
+        "MM"
+      ],
+      "evensTeX": [
+        "\\text{MM}"
+      ],
+      "evensVerified": [
+        false
+      ],
+      "groundTruthAvailable": false,
+      "oddLetters": [],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 5,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 2.81,
+        "chiEngine": "eulerDiscriminant"
+      },
+      "timestamp": "2026-06-14T05:47:15Z",
+      "contributor": "oddletters-v1a",
+      "evensChiDrop": [
+        0
+      ]
+    },
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": 0,
+      "propExponents": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "{}",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.2.5",
+      "stCommand": "STIntegrate[{{{{1, 2}, 0}, {{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 5}, 0}, {{3, 5}, 0}, {{4, 5}, 0}}, {{2, 0}, {3, 0}, {4, M}}}, Dimension -> \"4 - 2*eps\", Order -> 0]",
+      "contributor": "SM",
+      "timestamp": "2026-06-19T11:28:34",
+      "byteCount": 7304,
+      "alphabet": [],
+      "symbolWeight": 0,
+      "symbolTerms": 4,
+      "legOrder": [
+        1,
+        2,
+        3
+      ],
+      "resultTeXPreview": "\\varepsilon^{-3}\\colon \\frac{1}{12} \\pi ^2 M^{-2} \\\\ \\varepsilon^{-2}\\colon \\frac{M^{-2} \\left(-90720 \\pi ^2 \\log \\left(M^2\\right)+725760 \\zeta(3)-90720 i \\pi ^3+60480 \\pi ^2\\right)}{362880} \\\\ \\varepsilon^{-1}\\colon \\frac{1}{360} M^{-2} \\left(-2160 \\zeta(3) \\log \\left(M^2\\right)+135 \\pi ^2 \\log ^2\\left(M^2\\right)+270 i \\pi ^3 \\log \\left(M^2\\right)-180 \\pi ^2 \\log \\left(M^2\\right)-2160 i \\pi  \\zeta(3)+1440 \\zeta(3)-101 \\pi ^4-180 i \\pi ^3+120 \\pi ^2\\right) \\\\ \\varepsilon^{0}\\colon \\frac{1}{360} M^{-2} \\left(3240 \\zeta(3) \\log ^2\\left(M^2\\right)+6480 i \\pi  \\zeta(3) \\log \\left(M^2\\right)-4320 \\zeta(3) \\log \\left(M^2\\right)-135 \\pi ^2 \\log ^3\\left(M^2\\right)-405 i \\pi ^3 \\log ^2\\left(M^2\\right)+270 \\pi ^2 \\log ^2\\left(M^2\\right)+303 \\pi ^4 \\log \\left(M^2\\right)+540 i \\pi ^3 \\log \\left(M^2\\right)-360 \\pi ^2 \\log \\left(M^2\\right)+5400 \\zeta(5)-4050 \\pi ^2 \\zeta(3)-4320 i \\pi  \\zeta(3)+2880 \\zeta(3)+33 i \\pi ^5-202 \\pi ^4-360 i \\pi ^3+240 \\pi ^2\\right)",
+      "resultDataId": "dd9b0458157e9993",
+      "import": {
+        "submittedBy": "Sebastian Mizera",
+        "source": {
+          "paper": "arXiv:2111.13595",
+          "title": "Three-loop helicity amplitudes for diphoton production in gluon fusion",
+          "authors": "P. Bargiela, F. Caola, A. von Manteuffel, L. Tancredi",
+          "journal": "JHEP 02 (2022) 153",
+          "ancUrl": "https://arxiv.org/abs/2111.13595"
+        },
+        "importedAt": "2026-06-19"
+      }
+    }
+  ],
+  "Names": [
+    "A7,2",
+    "1-mass bubble-box (3-point)",
+    "one-mass bubble-box (3-point)",
+    "Bubble-box (3-point)"
+  ],
+  "edges": "{{{1, 2}, 0}, {{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 5}, 0}, {{3, 5}, 0}, {{4, 5}, 0}}",
+  "nodes": "{{2, 0}, {3, 0}, {4, M}}",
+  "CanonicalName": "1-mass non-planar bubble-box-box (a)",
+  "MassConfig": {
+    "numEdges": 7,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 7,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "0000000",
+    "numExtLegs": 3,
+    "numOnshellMassiveExtLegs": 1,
+    "numMasslessExtLegs": 2,
+    "extLegSignature": "00M"
+  },
+  "Subsectors": [
+    "1123|e2|e3|e|:0000|00|00|1|"
+  ],
+  "ParentSectors": [],
+  "Loops": 3,
+  "NumPropagators": 7
+}

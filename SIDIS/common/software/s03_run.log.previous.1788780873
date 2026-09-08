@@ -1,0 +1,33 @@
+MONITOR_START job=14692912 host=n7439 kernel_pid=255822
+ideal_module_dependencies 0 	linux-vdso.so.1 (0x00007ffcaafe9000)
+	libSingular-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libSingular-4.1.1.so (0x00002aacf4cf9000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00002aacf50cf000)
+	libsingular_resources-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libsingular_resources-4.1.1.so (0x00002aacf50d5000)
+	libpolys-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libpolys-4.1.1.so (0x00002aacf50dd000)
+	libomalloc-0.9.6.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libomalloc-0.9.6.so (0x00002aacf525c000)
+	libgmp.so.10 => /lib/x86_64-linux-gnu/libgmp.so.10 (0x00002aacf526a000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00002aacf52ee000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00002aacf54cf000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00002aacf561e000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00002aacf5639000)
+	libsingular-factory-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libsingular-factory-4.1.1.so (0x00002aacf582b000)
+	libntl.so.43 => /lib/x86_64-linux-gnu/libntl.so.43 (0x00002aacf59ff000)
+	libreadline.so.8 => /lib/x86_64-linux-gnu/libreadline.so.8 (0x00002aacf5ca8000)
+	libmpfr.so.6 => /lib/x86_64-linux-gnu/libmpfr.so.6 (0x00002aacf5cf8000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00002aacf5d79000)
+	/lib64/ld-linux-x86-64.so.2 (0x00002aacf4c3f000)
+	libgf2x.so.3 => /lib/x86_64-linux-gnu/libgf2x.so.3 (0x00002aacf5d9c000)
+	libtinfo.so.6 => /lib/x86_64-linux-gnu/libtinfo.so.6 (0x00002aacf5dae000)
+ 
+ideal_module_load 1  Unknown option: e
+usage: polymake [-dv] [-A|-a <application>]
+                [--reconfigure] [--config-path PATH ... | --no-config | --ignore-config]
+                [ --script | --iscript <script_file> arg ... ] | script_file | 'one-liner' |
+                - | [ --connect SOCKETFILE | HOST:PORT ] |
+                --touch <file> ... | --help | --version
+
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s03_polymake_runtime.py", line 50, in <module>
+    assert run.returncode == 0 and 'not found' not in run.stdout and 'ERROR' not in run.stderr
+AssertionError
+MONITOR_WAKE {"stage": "s03", "source": "s03_polymake_runtime.py", "source_sha256": "e6a8016818bf6024e5d2f5da5d168c96afece18423e5f88ef0648abc8f48e5d9", "job_id": "14692912", "host": "n7439", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 50274304, "elapsed_seconds": 3.297277506440878, "completed_utc": "2026-09-07T11:31:38.780262+00:00"}

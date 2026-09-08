@@ -1,0 +1,308 @@
+{
+  "schema": "H1Pi0DifferentialData-v1",
+  "stage": "s01",
+  "status": "Complete",
+  "producer_sha256": "a6354c15fd7e0858d2ddd024df436b009d24b37fbfb1ef9b3df74db14bccd783",
+  "inputs": [
+    {
+      "path": "references/hepdata_ins647847.json",
+      "sha256": "213aab9cf3ba3c59cedb4d6f383cf5e9421ec6e8a252a6229ab69a3a588a66de"
+    },
+    {
+      "path": "references/hepdata_table7.json",
+      "sha256": "263265c8cab3b4489edb8af3d8d3e08de4f3d95249996280fde00ddc191fe5f5",
+      "url": "https://www.hepdata.net/download/table/ins647847/Table%207/json"
+    },
+    {
+      "path": "references/hepdata_table8.json",
+      "sha256": "2ffa9ce27dcb123346e2493a7ff978c5d26ee154c836afd29bbbcd58646d2cf5",
+      "url": "https://www.hepdata.net/download/table/ins647847/Table%208/json"
+    },
+    {
+      "path": "references/hepdata_table9.json",
+      "sha256": "31e9c38008dc6b7cdaced12e08b5c89e0ba64c3b8e25ff1780ad9163cb37004a",
+      "url": "https://www.hepdata.net/download/table/ins647847/Table%209/json"
+    }
+  ],
+  "requested_figure": "arXiv:1808.04396 Fig. 3",
+  "original_theory_figure": "hep-ph/0411212 Fig. 4",
+  "experimental_source": "hep-ex/0404009 Table 2/Fig. 4",
+  "tables": [
+    {
+      "name": "Table 7",
+      "doi": "10.17182/hepdata.46278.v1/t7",
+      "Q2_range_GeV2": [
+        "2",
+        "4.5"
+      ],
+      "y_range": [
+        "0.1",
+        "0.6"
+      ],
+      "raw_qualifiers": {
+        "Q**2": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "Q**2",
+            "value": "2 TO 4.5 GEV**2"
+          }
+        ],
+        "RE": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "RE",
+            "value": "E+ P --> E+ PI0 X"
+          }
+        ],
+        "SQRT(S)": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "SQRT(S)",
+            "value": "0.0 GeV"
+          }
+        ],
+        "Y": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "Y",
+            "value": "0.1 TO 0.6"
+          }
+        ]
+      },
+      "bins": [
+        {
+          "pt_low_GeV": "2.5",
+          "pt_high_GeV": "2.8",
+          "dsigma_dpt_pb_per_GeV": "215.0",
+          "stat_pb_per_GeV": "9.0",
+          "total_pb_per_GeV": "36.0"
+        },
+        {
+          "pt_low_GeV": "2.8",
+          "pt_high_GeV": "3.3",
+          "dsigma_dpt_pb_per_GeV": "146.0",
+          "stat_pb_per_GeV": "6.0",
+          "total_pb_per_GeV": "27.0"
+        },
+        {
+          "pt_low_GeV": "3.3",
+          "pt_high_GeV": "4.0",
+          "dsigma_dpt_pb_per_GeV": "60.0",
+          "stat_pb_per_GeV": "3.0",
+          "total_pb_per_GeV": "14.0"
+        },
+        {
+          "pt_low_GeV": "4.0",
+          "pt_high_GeV": "5.2",
+          "dsigma_dpt_pb_per_GeV": "21.7",
+          "stat_pb_per_GeV": "1.4",
+          "total_pb_per_GeV": "4.7"
+        },
+        {
+          "pt_low_GeV": "5.2",
+          "pt_high_GeV": "8.0",
+          "dsigma_dpt_pb_per_GeV": "4.37",
+          "stat_pb_per_GeV": "0.38",
+          "total_pb_per_GeV": "0.83"
+        },
+        {
+          "pt_low_GeV": "8.0",
+          "pt_high_GeV": "15.0",
+          "dsigma_dpt_pb_per_GeV": "0.29",
+          "stat_pb_per_GeV": "0.06",
+          "total_pb_per_GeV": "0.26"
+        }
+      ]
+    },
+    {
+      "name": "Table 8",
+      "doi": "10.17182/hepdata.46278.v1/t8",
+      "Q2_range_GeV2": [
+        "4.5",
+        "15"
+      ],
+      "y_range": [
+        "0.1",
+        "0.6"
+      ],
+      "raw_qualifiers": {
+        "Q**2": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "Q**2",
+            "value": "4.5 TO 15 GEV**2"
+          }
+        ],
+        "RE": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "RE",
+            "value": "E+ P --> E+ PI0 X"
+          }
+        ],
+        "SQRT(S)": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "SQRT(S)",
+            "value": "0.0 GeV"
+          }
+        ],
+        "Y": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "Y",
+            "value": "0.1 TO 0.6"
+          }
+        ]
+      },
+      "bins": [
+        {
+          "pt_low_GeV": "2.5",
+          "pt_high_GeV": "2.8",
+          "dsigma_dpt_pb_per_GeV": "200.0",
+          "stat_pb_per_GeV": "8.0",
+          "total_pb_per_GeV": "34.0"
+        },
+        {
+          "pt_low_GeV": "2.8",
+          "pt_high_GeV": "3.4",
+          "dsigma_dpt_pb_per_GeV": "122.0",
+          "stat_pb_per_GeV": "5.0",
+          "total_pb_per_GeV": "21.0"
+        },
+        {
+          "pt_low_GeV": "3.4",
+          "pt_high_GeV": "4.1",
+          "dsigma_dpt_pb_per_GeV": "58.0",
+          "stat_pb_per_GeV": "3.0",
+          "total_pb_per_GeV": "11.0"
+        },
+        {
+          "pt_low_GeV": "4.1",
+          "pt_high_GeV": "5.2",
+          "dsigma_dpt_pb_per_GeV": "23.0",
+          "stat_pb_per_GeV": "1.5",
+          "total_pb_per_GeV": "4.9"
+        },
+        {
+          "pt_low_GeV": "5.2",
+          "pt_high_GeV": "8.0",
+          "dsigma_dpt_pb_per_GeV": "5.8",
+          "stat_pb_per_GeV": "0.4",
+          "total_pb_per_GeV": "1.2"
+        },
+        {
+          "pt_low_GeV": "8.0",
+          "pt_high_GeV": "15.0",
+          "dsigma_dpt_pb_per_GeV": "0.31",
+          "stat_pb_per_GeV": "0.06",
+          "total_pb_per_GeV": "0.12"
+        }
+      ]
+    },
+    {
+      "name": "Table 9",
+      "doi": "10.17182/hepdata.46278.v1/t9",
+      "Q2_range_GeV2": [
+        "15",
+        "70"
+      ],
+      "y_range": [
+        "0.1",
+        "0.6"
+      ],
+      "raw_qualifiers": {
+        "Q**2": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "Q**2",
+            "value": "15 TO 70 GEV**2"
+          }
+        ],
+        "RE": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "RE",
+            "value": "E+ P --> E+ PI0 X"
+          }
+        ],
+        "SQRT(S)": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "SQRT(S)",
+            "value": "0.0 GeV"
+          }
+        ],
+        "Y": [
+          {
+            "colspan": 1,
+            "group": 0,
+            "type": "Y",
+            "value": "0.1 TO 0.6"
+          }
+        ]
+      },
+      "bins": [
+        {
+          "pt_low_GeV": "2.5",
+          "pt_high_GeV": "2.9",
+          "dsigma_dpt_pb_per_GeV": "118.0",
+          "stat_pb_per_GeV": "5.0",
+          "total_pb_per_GeV": "18.0"
+        },
+        {
+          "pt_low_GeV": "2.9",
+          "pt_high_GeV": "3.5",
+          "dsigma_dpt_pb_per_GeV": "69.1",
+          "stat_pb_per_GeV": "3.3",
+          "total_pb_per_GeV": "8.8"
+        },
+        {
+          "pt_low_GeV": "3.5",
+          "pt_high_GeV": "4.7",
+          "dsigma_dpt_pb_per_GeV": "27.7",
+          "stat_pb_per_GeV": "2.0",
+          "total_pb_per_GeV": "4.7"
+        },
+        {
+          "pt_low_GeV": "4.7",
+          "pt_high_GeV": "8.0",
+          "dsigma_dpt_pb_per_GeV": "5.41",
+          "stat_pb_per_GeV": "0.38",
+          "total_pb_per_GeV": "0.96"
+        },
+        {
+          "pt_low_GeV": "8.0",
+          "pt_high_GeV": "15.0",
+          "dsigma_dpt_pb_per_GeV": "0.21",
+          "stat_pb_per_GeV": "0.04",
+          "total_pb_per_GeV": "0.06"
+        }
+      ]
+    }
+  ],
+  "decimal_policy": "Published decimal strings preserved verbatim; no bin-center conversion or averaging applied.",
+  "uncertainty_policy": "total already includes statistical uncertainty; retain both labels and do not add them again.",
+  "beam_metadata_policy": "The raw SQRT(S)=0.0 qualifier is a placeholder. Use beam energies from the H1 publication and tool-derive the invariant before numerical production.",
+  "checks": {
+    "record_table_identity": true,
+    "observable_and_units": true,
+    "finite_positive_data": true,
+    "contiguous_momentum_bins": true,
+    "contiguous_Q2_ranges": true,
+    "shared_y_cut": true,
+    "distinct_statistical_and_total_uncertainties": true
+  },
+  "theory_prediction_generated": false
+}

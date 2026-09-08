@@ -1,0 +1,206 @@
+{
+  "SourceDirectory": "scripts/numerics",
+  "Sources": {
+    "s01_import_fhats.py": {
+      "OriginalSHA256": "6b0a4fa2b5a2b9882ecfb1af2f97fabd4655b792d9198259790820014d295d67",
+      "OriginalSnapshot": "references/pipeline_sources/s01_import_fhats.py",
+      "CopiedSHA256": "c522fe1ab34982746657d15fb98d6ecab7c3036820d404c62080d156aeeb3c2f"
+    },
+    "s02_check_input_readiness.py": {
+      "OriginalSHA256": "d1dc69095110121dbb255565e375ff066332d9c403626ac61067a015a1a1501f",
+      "OriginalSnapshot": "references/pipeline_sources/s02_check_input_readiness.py",
+      "CopiedSHA256": "245ef8e3b3da76495309ef1e7325c9619334a9054fdd65fa6fdcbff2754ebafc"
+    },
+    "s03_inspect_fhat_schemas.wl": {
+      "OriginalSHA256": "7c8f233699c4feea379b1e30b024d2a8e0ac963add6540299f07dc8f8587ac03",
+      "OriginalSnapshot": "references/pipeline_sources/s03_inspect_fhat_schemas.wl",
+      "CopiedSHA256": "7486ca9b22d35dcfac6ecf9be8b5f6811982c58b91f0ab33aa9952aa10335a39"
+    },
+    "s04_derive_convolution_maps.py": {
+      "OriginalSHA256": "729be7ed59f4665d1d7ac59be6c6e92f499ff7a7dfa9b6f0fad0bc04cbd3eeca",
+      "OriginalSnapshot": "references/pipeline_sources/s04_derive_convolution_maps.py",
+      "CopiedSHA256": "3e18b4a795d0e057a9a0598afc2ec13c144e82753e9c5f1345753a63b498136a"
+    },
+    "s05_prepare_hard_functions.wl": {
+      "OriginalSHA256": "06f11738beb6dd1822055d76f3a1d32c880545fb6d8727a2410255ba4e674721",
+      "OriginalSnapshot": "references/pipeline_sources/s05_prepare_hard_functions.wl",
+      "CopiedSHA256": "e2567ae2e1b4b32b324a025410d17668426fe0b048d0d58a431ecd43946eafcd"
+    },
+    "s06_prepare_pdf_ff.py": {
+      "OriginalSHA256": "9b2beb052a9ef4647f0918dc90036a75e22e2686b4bd08bf08b0bce737f1974c",
+      "OriginalSnapshot": "references/pipeline_sources/s06_prepare_pdf_ff.py",
+      "CopiedSHA256": "e423d7df09a9fbaa8560eb07ecd6bf77c08fb317d123ad3b7d8f21105fa4b72f"
+    },
+    "s07_compile_hard_functions.py": {
+      "OriginalSHA256": "82096088cdc25806d06ea679ad252511ca1695786b71b44b241469b9134e1d16",
+      "OriginalSnapshot": "references/pipeline_sources/s07_compile_hard_functions.py",
+      "CopiedSHA256": "8e9548eaf7cdea48e718cb31188f0e3b3921e0668207146618072fb9978e4dde"
+    },
+    "s08_derive_consumer_actions.py": {
+      "OriginalSHA256": "35095d90ce41e76403617d9e56ff91fab75a637669695be4c6bdbd54a050f23e",
+      "OriginalSnapshot": "references/pipeline_sources/s08_derive_consumer_actions.py",
+      "CopiedSHA256": "4ba067252255d1b1fa3a5290f88de5bee72c464a346139068324433fb3a8310c"
+    },
+    "s09_convolve_channels.py": {
+      "OriginalSHA256": "dc77fd32fa5d0fa99bf7933ae3aaf73950ffb1821af6c8f727cdf48053ffd721",
+      "OriginalSnapshot": "references/pipeline_sources/s09_convolve_channels.py",
+      "CopiedSHA256": "f8e58cc34e24a4f5759d79056b23825157df31ea3ac7943166ba4bbe45ec87cc"
+    },
+    "s10_validate_precision.py": {
+      "OriginalSHA256": "2a98c476ab657e73452b5e406c877c321aa803d22d1f0a2bbf346e6071e34d78",
+      "OriginalSnapshot": "references/pipeline_sources/s10_validate_precision.py",
+      "CopiedSHA256": "c6fdcb9da945a794f675499b5c8bc53f4bc0df0e360600ece985ccc6628a0b04"
+    },
+    "s11_aggregate_replacement.py": {
+      "OriginalSHA256": "940de1658d85fbbd78bff49a65a13dc010fd36583542d0b7cbb5b15f70dc3154",
+      "OriginalSnapshot": "references/pipeline_sources/s11_aggregate_replacement.py",
+      "CopiedSHA256": "5b7325b82171c676a9974ef67d3443d8d34f01b99e8c3647a9e4736d272c510a"
+    },
+    "dsigmapibydpt/s01_import_h1_data.py": {
+      "OriginalSHA256": "a6354c15fd7e0858d2ddd024df436b009d24b37fbfb1ef9b3df74db14bccd783",
+      "OriginalSnapshot": "references/pipeline_sources/dsigmapibydpt/s01_import_h1_data.py",
+      "CopiedSHA256": "c308cc4f1915043bbf14b019d952214288f828ce851e958bfb2451d093e293b1"
+    },
+    "dsigmapibydpt/s02_extract_published_curves.py": {
+      "OriginalSHA256": "4041d869b60ee2c267888b5c3a912f22aef46506ca2e1419faa04c7d40d427e0",
+      "OriginalSnapshot": "references/pipeline_sources/dsigmapibydpt/s02_extract_published_curves.py",
+      "CopiedSHA256": "a9218e8aa30e6256d107f07d04b659bf66e93f62ac341bda471d3c8a1386fbd9"
+    },
+    "dsigmapibydpt/s03_plot_comparison.py": {
+      "OriginalSHA256": "fcbb859e3c5baad5dc31e15d1c3977bf3f2c74d02c897692a9b82fbad687ab7a",
+      "OriginalSnapshot": "references/pipeline_sources/dsigmapibydpt/s03_plot_comparison.py",
+      "CopiedSHA256": "95828651c6703f4e5cbdd4f9e4bebd519f985562268623ad0a1acebc66d3b58e"
+    }
+  },
+  "CommonInputs": {
+    "references/ephox_1.1.tar.gz": {
+      "Source": "scripts/numerics/references/ephox_1.1.tar.gz",
+      "SHA256": "5b7610eda5311a200fd18cb998721cbb854dd33930f31bf69ec055e310d4098b"
+    },
+    "references/hep-ph_0411212.txt": {
+      "Source": "scripts/numerics/references/hep-ph_0411212.txt",
+      "SHA256": "39be5a775c9c30f71bbf4bee99f5c0221b3277b0ad3789b20278c6e646b4026b"
+    },
+    "references/hepdata_table9.json": {
+      "Source": "scripts/numerics/references/hepdata_table9.json",
+      "SHA256": "31e9c38008dc6b7cdaced12e08b5c89e0ba64c3b8e25ff1780ad9163cb37004a"
+    },
+    "references/hep-ex_0404009.pdf": {
+      "Source": "scripts/numerics/references/hep-ex_0404009.pdf",
+      "SHA256": "8d0e04c51b1fecdcbf0f35d39ec1067bcb04dbb05ee9b4f3c2c744ba021cb69c"
+    },
+    "references/hep-ph_0411212_source.tar": {
+      "Source": "scripts/numerics/references/hep-ph_0411212_source.tar",
+      "SHA256": "24f953a4f0a557eb4eb58047afb64349a0b9ae885d8d65afe11d014e9f0deddb"
+    },
+    "references/FIG4.eps": {
+      "Source": "scripts/numerics/references/FIG4.eps",
+      "SHA256": "4990eec62ae98295581bb37ee8d3b07169698baaf25ce6d476c5d3f2503652e6"
+    },
+    "references/1808.04396.pdf": {
+      "Source": "scripts/numerics/references/1808.04396.pdf",
+      "SHA256": "0b82af2c2170f36d4bf93f5b5b361656792e12b89d1067fefc150cff70ad2b65"
+    },
+    "references/1808.04396.txt": {
+      "Source": "scripts/numerics/references/1808.04396.txt",
+      "SHA256": "d6dc7fd7a0b76fcdfda4f91114da8d1cbaf5a7608ef97a7995e7584b0818b505"
+    },
+    "references/hepdata_ins647847.json": {
+      "Source": "scripts/numerics/references/hepdata_ins647847.json",
+      "SHA256": "213aab9cf3ba3c59cedb4d6f383cf5e9421ec6e8a252a6229ab69a3a588a66de"
+    },
+    "references/FIG3B.eps": {
+      "Source": "scripts/numerics/references/FIG3B.eps",
+      "SHA256": "0b621ba31b22d03dced367938c8d4e2171dcf8dc0991e9632c33e6101989db59"
+    },
+    "references/hepdata_table7.json": {
+      "Source": "scripts/numerics/references/hepdata_table7.json",
+      "SHA256": "263265c8cab3b4489edb8af3d8d3e08de4f3d95249996280fde00ddc191fe5f5"
+    },
+    "references/hepdata_table8.json": {
+      "Source": "scripts/numerics/references/hepdata_table8.json",
+      "SHA256": "2ffa9ce27dcb123346e2493a7ff978c5d26ee154c836afd29bbbcd58646d2cf5"
+    },
+    "references/Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Order.txt": {
+      "Source": "scripts/numerics/references/Large_Transverse_Momentum_in_Semi-Inclusive_Deeply_Inelastic_Scattering_Beyond_Lowest_Order.txt",
+      "SHA256": "5a662312bfe389f537c0ad21a2ef5f11caedc62e0a19138f3e17c44f623d909e"
+    },
+    "references/pete.tex": {
+      "Source": "scripts/numerics/references/pete.tex",
+      "SHA256": "b8720d49fb222ffa732b118912ad284bf32a43fa34ceadeb97aa88713ada0d14"
+    },
+    "references/hep-ph_0411212.pdf": {
+      "Source": "scripts/numerics/references/hep-ph_0411212.pdf",
+      "SHA256": "f9f6002e42332a076599ae6eb8aaba9318470e3088b42ad7453d231e57d7d573"
+    },
+    "references/hep-ex_0404009.txt": {
+      "Source": "scripts/numerics/references/hep-ex_0404009.txt",
+      "SHA256": "de79fd05a8254915db55affb6d32507bae7ecabed0f4fb05538d338ad816a2ea"
+    },
+    "vendor/ephox/pkhff.f": {
+      "Source": "scripts/numerics/vendor/ephox/pkhff.f",
+      "SHA256": "89bf35f4778d31eb1cfaacb73b7c303101ffe38d0f9984ea7c4715ead336c471"
+    },
+    "vendor/ephox/alfab.f": {
+      "Source": "scripts/numerics/vendor/ephox/alfab.f",
+      "SHA256": "00dcc4db8beff23968a8d57c7933da7373c8b498cb22f99cf1ab93269e2950d2"
+    },
+    "vendor/ephox/kkp.f": {
+      "Source": "scripts/numerics/vendor/ephox/kkp.f",
+      "SHA256": "8376fbb73e227f01fd1e1f74c7f5324e4bbe25cc3987500ca7d66c92b972fb27"
+    },
+    "vendor/ephox/pnlo.grid": {
+      "Source": "scripts/numerics/vendor/ephox/pnlo.grid",
+      "SHA256": "15bb09f51a493a416cf3979a89b2f2b0f77fb81edb281abd1ee4ac2574d3ddb5"
+    },
+    "vendor/ephox/fragfun_all.f": {
+      "Source": "scripts/numerics/vendor/ephox/fragfun_all.f",
+      "SHA256": "dd5609e0d61406672fa258d6bfe9ef7563ea631df2afbd22b9f861c5e4ee2778"
+    },
+    "vendor/mrst2002/jeppe02.f": {
+      "Source": "scripts/numerics/vendor/mrst2002/jeppe02.f",
+      "SHA256": "a63dd5af2ee9bac8b3761cfc2ab03435f83cc042f57e71657ac015107847585e"
+    },
+    "vendor/mrst2002/mrst2002.f": {
+      "Source": "scripts/numerics/vendor/mrst2002/mrst2002.f",
+      "SHA256": "89c164fc653eb2786c7c046b91dbcd5cb57854060f43fe4f6d85e2e132fdf9e1"
+    },
+    "vendor/mrst2002/mrst2002nlo.dat": {
+      "Source": "scripts/numerics/vendor/mrst2002/mrst2002nlo.dat",
+      "SHA256": "bec81dcb0093a68b44e6b15472bbe67c2b883fb59833529307d80a7f16688d4f"
+    },
+    "references/original_s04_result.json": {
+      "Source": "scripts/numerics/s04_result",
+      "SHA256": "21fa5978d6ae2f7daf8ab600585c63e67622a68682b2a30e48575c2e31620358"
+    },
+    "references/original_s06_result.json": {
+      "Source": "scripts/numerics/s06_result",
+      "SHA256": "dc886e96521d95d0c29ecac780425ec5a7406f3d5833d176a2529441a1c7fcc9"
+    },
+    "references/original_s08_result.json": {
+      "Source": "scripts/numerics/s08_result",
+      "SHA256": "1db2f63fbc29c58f84199e7fd93f6d5a228d7bb155d8600bdc5e2dc5b50b514e"
+    },
+    "dsigmapibydpt/s01_result": {
+      "Source": "scripts/numerics/dsigmapibydpt/s01_result",
+      "SHA256": "4f3406d3dc88bb71292cdbc1132f6309cce6442cb4b64509f0d3c218fe84c421"
+    },
+    "dsigmapibydpt/s02_result": {
+      "Source": "scripts/numerics/dsigmapibydpt/s02_result",
+      "SHA256": "e6a60d2263fe5a728179866c48dcf717a19d732cb1aa34264a6b665024c57e2b"
+    },
+    "dsigmapibydpt/s04_bigtmd_result": {
+      "Source": "scripts/numerics/dsigmapibydpt/s04_bigtmd_result",
+      "SHA256": "d879ddc5f6f2722d252cd6f688c9ac8e639cb0c2ccb8ba43f49a580c9d898659"
+    },
+    "vendor/model/particles.py": {
+      "Source": "scripts/Hgq_v4/madgraph_check/software/MG5_aMC_v3_7_0/models/sm/particles.py",
+      "SHA256": "5a18af7aadba847f6b70749dcd2a787f95f9075c4c8de4406b2138314defe414"
+    },
+    "vendor/model/parameters.py": {
+      "Source": "scripts/Hgq_v4/madgraph_check/software/MG5_aMC_v3_7_0/models/sm/parameters.py",
+      "SHA256": "2e4046c3566f1fb62fad92ffa705eef66a0124cc2a1cf4cc0d0ff2dc7f94c8fc"
+    }
+  },
+  "PhysicsReuse": "Only unchanged numerical definitions, PDF/FF data, model definitions, experimental data, paper curves and accepted BigTMD overlay; no old own F-hat value or bin result."
+}

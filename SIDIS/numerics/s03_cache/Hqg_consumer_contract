@@ -1,0 +1,24 @@
+{
+	"Status":"Complete",
+	"Channel":"Hqg",
+	"InputSHA256":"6f45a83b0c2f2dce2d568431f7eb2fc5e9ba43e0fc612882092b312671ed590b",
+	"JacobianAlreadyIncluded":false,
+	"Checks":{
+		"producer_acceptance":true,
+		"source_identity":true,
+		"pole_input_identity":true,
+		"pole_acceptance":true,
+		"all_pole_residues_zero":true,
+		"partonic_variables":true,
+		"finite_coefficients":true
+	},
+	"PhysicalConditions":"Q2 > 0 && s > w > 0 && -Q2 - s + w < t < -((Q2*w)\/s) && mu > 0 && mu2 > 0 && B > 0 && SUNN > 1 && Nc > 1",
+	"LOAlphaDegree":1,
+	"NLOAlphaDegree":2,
+	"NormalizedPlusLogarithm":true,
+	"PlusDefinition":"Ln=[Log[w\/B]^n\/w]_+ on [0,B]",
+	"PlusLogArgument":"ss\/B",
+	"CoordinateBoundaryPresent":true,
+	"BranchConvention":"sign=+1\/-1 with t=sign omega-s, omega>0; sign=0 means t=-s",
+	"ChargeDegree":2
+}

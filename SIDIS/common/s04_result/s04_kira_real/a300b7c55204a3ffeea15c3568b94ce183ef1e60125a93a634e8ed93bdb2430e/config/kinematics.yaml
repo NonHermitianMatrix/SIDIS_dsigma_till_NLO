@@ -1,0 +1,15 @@
+kinematics:
+  incoming_momenta: [p,q,k1]
+  outgoing_momenta: []
+  kinematic_invariants:
+    - [q2, 2]
+    - [s, 2]
+    - [t, 2]
+    - [w, 2]
+  scalarproduct_rules:
+    - [[p,p], 0]
+    - [[p,q], (q2+s)/2]
+    - [[p,k1], (q2+s+t-w)/2]
+    - [[q,q], -q2]
+    - [[q,k1], (-q2-t)/2]
+    - [[k1,k1], 0]

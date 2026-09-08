@@ -1,0 +1,5 @@
+<|"Channel" -> "Hqq", "RealMappingHash" -> 
+  361295653939922370565684109931186214727662387798433623504384043770884909418\
+27, "SharedReduction" -> "../s04_result.wl", "SharedReductionHash" -> 
+  540324767422391340294569867359158398448513257314091386192956326179182189693\
+60, "Accepted" -> True, "MasterEvaluationPerformed" -> False|>

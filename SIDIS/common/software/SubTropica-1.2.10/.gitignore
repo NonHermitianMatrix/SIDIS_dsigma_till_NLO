@@ -1,0 +1,47 @@
+# Public repo .gitignore — installed into the public release commit by
+# scripts/publish-release.sh.  Intentionally minimal: the stripped
+# public tree has no dev tooling, so there isn't much junk to guard
+# against.
+
+.DS_Store
+*.bak
+*.bak-*
+
+# Build output
+build/
+
+# Caches (should never land in releases)
+cache/
+node_modules/
+pysecdec_cache/
+.wrangler/
+
+# Logs
+*.log
+logs/
+
+# Test runner + backup state (should never reach the public tree)
+test-results/
+.phase6-backups/
+
+# Hard-leak paths guarded against on the dev side too (defence in depth).
+# Matches the entries in scripts/public-release-exclude.txt; rsync should
+# already strip these before the staging tree is committed, but if a
+# future change ever accidentally copies them in, .gitignore keeps them
+# out of the squash commit.
+cuttingEdgeResult
+examples_tutorial.nb
+ui/_norm_fields.json
+ui/audit-starred.mjs
+ui/test-*.mjs
+ui/merge-normalized-symbols.py
+ui/normalize-symbols.py
+ui/recompute-normalized-symbols.wl
+
+# Repo-root data/ is dev-only (data/topology_names.json, read by
+# compute_diagram_name.py during library builds; no consumer on the public
+# paclet). Root-anchored with a leading slash so it does NOT also ignore
+# HyperFLINT/data/ (which ships mzv_reductions.json for the HF add-on); an
+# un-anchored `data/` silently dropped HyperFLINT/data/ from the v1.2.0 squash
+# at `git add -A` time even though rsync had kept it on disk.
+/data/

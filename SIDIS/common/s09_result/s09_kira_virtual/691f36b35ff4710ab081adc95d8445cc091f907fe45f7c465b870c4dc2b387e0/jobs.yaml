@@ -1,0 +1,24 @@
+jobs:
+  - reduce_sectors:
+      reduce:
+        - {topologies: [V01], sectors: [14], r: 4, s: 2}
+        - {topologies: [V02], sectors: [7], r: 4, s: 2}
+        - {topologies: [V03], sectors: [7], r: 4, s: 3}
+        - {topologies: [V04], sectors: [7], r: 4, s: 3}
+        - {topologies: [V05], sectors: [11,14], r: 4, s: 3}
+        - {topologies: [V06], sectors: [15], r: 5, s: 2}
+        - {topologies: [V07], sectors: [15], r: 5, s: 2}
+        - {topologies: [V08], sectors: [15], r: 5, s: 2}
+        - {topologies: [V09], sectors: [12], r: 3, s: 1}
+        - {topologies: [V10], sectors: [3], r: 3, s: 1}
+        - {topologies: [V11], sectors: [10], r: 3, s: 1}
+      select_integrals:
+        select_mandatory_list:
+          - [targets]
+      preferred_masters: preferred
+      run_initiate: true
+      run_triangular: true
+      run_back_substitution: true
+  - kira2math:
+      target:
+        - [targets]

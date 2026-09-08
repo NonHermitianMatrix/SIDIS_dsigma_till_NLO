@@ -1,0 +1,365 @@
+{
+  "channel": "Hgg",
+  "source_channel": "Hgg_v2",
+  "required": [
+    "s01_result/manifest.wl",
+    "s02_result/kinematics.wl",
+    "s02_result/real.wl"
+  ],
+  "files": [
+    {
+      "source": "Hgg_v2/README.md",
+      "path": "Hgg/s01_inputs/README.md",
+      "bytes": 7300,
+      "sha256": "01ea509b2263c9299d844ab312ded776eb09cf43540c2747daaab6355d171290"
+    },
+    {
+      "source": "Hgg_v2/s01_amplitudes.wls",
+      "path": "Hgg/s01_inputs/s01_amplitudes.wls",
+      "bytes": 2258,
+      "sha256": "c708d0fb865e69d106aac475efab4ea97594d50626a46fec2adc3ffb03239188"
+    },
+    {
+      "source": "Hgg_v2/s01_resources.json",
+      "path": "Hgg/s01_inputs/s01_resources.json",
+      "bytes": 114,
+      "sha256": "535a9c3f3815027e4854996b2e466b6983b3b2ffdb94aad2fed716623c7c602a"
+    },
+    {
+      "source": "Hgg_v2/s01_result/born_gq.wl",
+      "path": "Hgg/s01_inputs/s01_result/born_gq.wl",
+      "bytes": 6481,
+      "sha256": "1554eefb686a09f682d3500990114a0ace8ce0e4e3d9225f9aad2e61ea9a7d59"
+    },
+    {
+      "source": "Hgg_v2/s01_result/born_qg.wl",
+      "path": "Hgg/s01_inputs/s01_result/born_qg.wl",
+      "bytes": 6477,
+      "sha256": "cab41953490c5a450eb3dbb9227d36eea8dc4e595276a7e6eb6973be550f99fd"
+    },
+    {
+      "source": "Hgg_v2/s01_result/manifest.wl",
+      "path": "Hgg/s01_inputs/s01_result/manifest.wl",
+      "bytes": 387,
+      "sha256": "f5c77f341405a44827f01a34f0c9d161157f35a97c7827397e21a78cc02b1c41"
+    },
+    {
+      "source": "Hgg_v2/s01_result/real.wl",
+      "path": "Hgg/s01_inputs/s01_result/real.wl",
+      "bytes": 35162,
+      "sha256": "87f8e6569853ab998c595f1a329a0d9c05390eb624cea2fd91ac2b7881703953"
+    },
+    {
+      "source": "Hgg_v2/s01_result.log",
+      "path": "Hgg/s01_inputs/s01_result.log",
+      "bytes": 3115,
+      "sha256": "9aae250bbd16938b315402af9816c801eabfd120de1ff4dc3b56eb62a6aa3444"
+    },
+    {
+      "source": "Hgg_v2/s02_resources.json",
+      "path": "Hgg/s01_inputs/s02_resources.json",
+      "bytes": 112,
+      "sha256": "c242f04362fb97487d00be764c93aeae1ca28b90e14eb9fb73d2daa7c49da032"
+    },
+    {
+      "source": "Hgg_v2/s02_result/born_gq.wl",
+      "path": "Hgg/s01_inputs/s02_result/born_gq.wl",
+      "bytes": 173,
+      "sha256": "1ce6e036f2b21a3336d92cd6ed53d02954cfb36eb08d854c7265e9b7e5362163"
+    },
+    {
+      "source": "Hgg_v2/s02_result/born_gq_0101.wl",
+      "path": "Hgg/s01_inputs/s02_result/born_gq_0101.wl",
+      "bytes": 212,
+      "sha256": "a0fb10cad83f7476869870f0793e316f3343438a2b130d2376cda4fb2a6b1757"
+    },
+    {
+      "source": "Hgg_v2/s02_result/born_gq_0102.wl",
+      "path": "Hgg/s01_inputs/s02_result/born_gq_0102.wl",
+      "bytes": 115,
+      "sha256": "a720ef05dc245c9e1387652fa6f0626f2a6ecec1310043e18880c9db908b9573"
+    },
+    {
+      "source": "Hgg_v2/s02_result/born_gq_0202.wl",
+      "path": "Hgg/s01_inputs/s02_result/born_gq_0202.wl",
+      "bytes": 79,
+      "sha256": "971c47a62518413ef0a2350b2890edf08b235f2f7f894f5cecc88b9bd156978a"
+    },
+    {
+      "source": "Hgg_v2/s02_result/born_qg.wl",
+      "path": "Hgg/s01_inputs/s02_result/born_qg.wl",
+      "bytes": 241,
+      "sha256": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4"
+    },
+    {
+      "source": "Hgg_v2/s02_result/born_qg_0101.wl",
+      "path": "Hgg/s01_inputs/s02_result/born_qg_0101.wl",
+      "bytes": 270,
+      "sha256": "b47d50680970776c355b40a32ddddc31435a7da3ecf9b56b64aff8b8fb610c53"
+    },
+    {
+      "source": "Hgg_v2/s02_result/born_qg_0102.wl",
+      "path": "Hgg/s01_inputs/s02_result/born_qg_0102.wl",
+      "bytes": 181,
+      "sha256": "3bce17e944d96140102639b4cb9f88f2a1c913e8c057a700984fef844868ecb7"
+    },
+    {
+      "source": "Hgg_v2/s02_result/born_qg_0202.wl",
+      "path": "Hgg/s01_inputs/s02_result/born_qg_0202.wl",
+      "bytes": 200,
+      "sha256": "38d2218ace25d7aa4272dc0a8f13fe3a5541b9fb0ffca6e29e14e833dc8634dc"
+    },
+    {
+      "source": "Hgg_v2/s02_result/kinematics.wl",
+      "path": "Hgg/s01_inputs/s02_result/kinematics.wl",
+      "bytes": 474,
+      "sha256": "56772f691f3263b8695e090f26c367b6062d8864bfa41b0cf44eb142f89be0b9"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real.wl",
+      "path": "Hgg/s01_inputs/s02_result/real.wl",
+      "bytes": 556256,
+      "sha256": "8fd5a266c5a15fa3d2cbed9992e26ef005ec3e2400838a0363db1dcc407ed4e7"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0101.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0101.wl",
+      "bytes": 613,
+      "sha256": "ac753d8c4cdecd618c51d787e673e18a5b477946f94bf42b25b6efc38176155b"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0102.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0102.wl",
+      "bytes": 1161,
+      "sha256": "bd980a863bb3902e7b1f22a70bb0fba18f3d20bb72ddd23c2dc79167b3583c25"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0103.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0103.wl",
+      "bytes": 3523,
+      "sha256": "0e094b5f684aa45e8e502c78fb75f80c8d7b1f7a4807d4164b6fca6009cd6a4d"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0104.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0104.wl",
+      "bytes": 3325,
+      "sha256": "3475927e7fcbc648ce1a7479b57bb0de5aaf6c9cf9da51034b8b12352ca9533a"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0105.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0105.wl",
+      "bytes": 5355,
+      "sha256": "fba6f9a01ee73867092eb4ab3c35f25dc79f974fa85a2b78090bb9ddc1ab7468"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0106.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0106.wl",
+      "bytes": 6043,
+      "sha256": "0f5aa42a4e626768263868d38ba5d0d647f94bde1b21902e8cd567e8a969da0c"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0107.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0107.wl",
+      "bytes": 5081,
+      "sha256": "22696ec467b1f75938693af8b1d7349f4c894f6f90e2573455f89e5e4bd82e6f"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0108.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0108.wl",
+      "bytes": 6053,
+      "sha256": "c6f55da03f491f35f6301aae39e51d4362a052206f8a6ff2dec2f55d03498ecb"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0202.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0202.wl",
+      "bytes": 674,
+      "sha256": "51dda65113434c6112298b62efe451ca2099cbc2e2b898c0d82bc3a94434b585"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0203.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0203.wl",
+      "bytes": 5312,
+      "sha256": "d4221a454eb214745fd468e847f7ce53eb60f8ed877e5096a2749652c9d9dce5"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0204.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0204.wl",
+      "bytes": 5113,
+      "sha256": "a2f8e72a997df5456497fa26dcef404cc2fbf6ecdb642a8e1e252d69cdaf96e6"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0205.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0205.wl",
+      "bytes": 3614,
+      "sha256": "f086be98a0748802937cdde1f378f38c6debbdf98efef815763845deec610d3a"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0206.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0206.wl",
+      "bytes": 6169,
+      "sha256": "8c05307f212537df5f567708f6ff0da73a69cc906ad77917b4c20b1dea7ccc1d"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0207.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0207.wl",
+      "bytes": 3339,
+      "sha256": "29be3dfc0d4c1c641aea34f26fdaef012e49e9f827415d11e94a80176350cb4c"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0208.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0208.wl",
+      "bytes": 6159,
+      "sha256": "b9a828c3f0593a4323b3e9f13c2954c48d07f81943bd8a8d95c4b42295cf748f"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0303.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0303.wl",
+      "bytes": 8024,
+      "sha256": "c5af13c95e051215ab4da7b7a4632fd2d663c2bc51f58758348eb223bd3b6fc7"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0304.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0304.wl",
+      "bytes": 13896,
+      "sha256": "6db523849dcf2b496cfa504ac0045edbcfd6c6a08582b7b501ff73bb096e0d12"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0305.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0305.wl",
+      "bytes": 27680,
+      "sha256": "0de5ec192eb43d15ff017be8b0fb6b033a598e1c8105faa6ffc851c3f8f80daf"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0306.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0306.wl",
+      "bytes": 19438,
+      "sha256": "ca200b9771f24625813a24624e228a6a4a84eda5bad849a98c593dfb6a26d43c"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0307.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0307.wl",
+      "bytes": 26414,
+      "sha256": "bde67d6ed5912e859bd71f2774d7db6af7b8a0f7f32ca6cf927058f3e670a228"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0308.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0308.wl",
+      "bytes": 10048,
+      "sha256": "e382bfe30c8b4a28244967ba56f83957d59e5ffe201ef95a70ea02c9f8b9ea30"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0404.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0404.wl",
+      "bytes": 4631,
+      "sha256": "2ddcacec4eed3362feda3fa7d03e25d6871e9a7de3dcb4f4a4f7e9a1ca459bf1"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0405.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0405.wl",
+      "bytes": 30027,
+      "sha256": "0f909f14c9ca1a63dc0bef121506107e3e0574fe3364204557afeebf1ce9a8c3"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0406.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0406.wl",
+      "bytes": 9397,
+      "sha256": "3cd45ac2670f5d8c1b142c93cdc0783269a666e12902a62ef82bd159e5107e9b"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0407.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0407.wl",
+      "bytes": 24232,
+      "sha256": "6fc1ef5f4a6cd189e5b92e87cdb8fe8c8794e3b6227176efde4a116ea94d50b8"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0408.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0408.wl",
+      "bytes": 18787,
+      "sha256": "b84433feb23fae7e62254a6e791f5f8f3ad6e37ef1d34d08edead0c88892f756"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0505.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0505.wl",
+      "bytes": 9618,
+      "sha256": "7dee274cc44284835cc965235c699cb1a03daca63477b945ab51f6a839a164e4"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0506.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0506.wl",
+      "bytes": 10839,
+      "sha256": "9f50c5309210563ab4c43c4082674dbe51f56514a32dfe28a8dd215157b9b85c"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0507.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0507.wl",
+      "bytes": 14408,
+      "sha256": "169ac814f9d5049fc466e6f2cadee40353498315e21bd245e3bbcdc1bff9860e"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0508.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0508.wl",
+      "bytes": 21707,
+      "sha256": "17805f6d0b9b4a20e124eb4d6624450e409636bc73dcbadd7e488d725b1050ac"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0606.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0606.wl",
+      "bytes": 4730,
+      "sha256": "80c1091f09004ad191b19fdabf6eacb5a98344da5f1b052124524006609d66d7"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0607.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0607.wl",
+      "bytes": 20970,
+      "sha256": "d24f5c8be60ff73303b30f531bb71c36cc06d584bcec7ac9e8e0f69ebd0ba1ca"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0608.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0608.wl",
+      "bytes": 26346,
+      "sha256": "98654afede0cfd8348fe372c5e6586527f9be893f7de5329d5ebb0f2c30ac33f"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0707.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0707.wl",
+      "bytes": 5707,
+      "sha256": "dfe99d5daeb8c71dccfab429e2f7fc4d9301e54742dbb11644eada5b24f26a8d"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0708.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0708.wl",
+      "bytes": 10028,
+      "sha256": "8c0ea199075339a5b24f099b79077141764711b9cd6a6ff48f4b83833b231b04"
+    },
+    {
+      "source": "Hgg_v2/s02_result/real_0808.wl",
+      "path": "Hgg/s01_inputs/s02_result/real_0808.wl",
+      "bytes": 4731,
+      "sha256": "d4f5f5209cacdcef43f19973f8d0ada7441c3b3ae0739611ecb986f8ee3e4b9a"
+    },
+    {
+      "source": "Hgg_v2/s02_result.log",
+      "path": "Hgg/s01_inputs/s02_result.log",
+      "bytes": 3741,
+      "sha256": "5b758ea1af93f29f6d5859075d3bbce13c61c037867452091c85eab72f271f5f"
+    },
+    {
+      "source": "Hgg_v2/s02_square.wls",
+      "path": "Hgg/s01_inputs/s02_square.wls",
+      "bytes": 4159,
+      "sha256": "36e2344d20a9d07b48e0a79d86a9f4a92098770643683ffa8874c63b62c5d12c"
+    }
+  ],
+  "reference_sources_only": [
+    {
+      "source": "Hgg_v2/s05_factorize.wls",
+      "path": "Hgg/s01_reference_sources/s05_factorize.wls",
+      "bytes": 5738,
+      "sha256": "389c5f18b1985345d179b55bf129ae68074b2c6cbbed5dbf87fdb797bccfc1a4"
+    }
+  ],
+  "evaluated_loop_results_imported": false,
+  "evaluated_real_integrals_imported": false,
+  "old_final_hats_imported": false,
+  "accepted": true
+}

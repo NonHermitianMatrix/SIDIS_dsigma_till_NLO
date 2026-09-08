@@ -1,0 +1,110 @@
+{
+  "CNickelIndex": "e111|e|:0000|0|",
+  "MassScales": 0,
+  "FunctionClass": "rational",
+  "EpsilonOrder": "",
+  "References": [
+    "arXiv:2111.13595",
+    "arXiv:1901.11510 (JHEP 05 (153), 2019)",
+    "arXiv:1804.00131 (Phys.Rev.D 98 (), 2018)"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:1901.11510 (JHEP 05 (153), 2019)",
+      "authors": "Frellesvig, Hjalte, Gasparotto, Federico, Laporta, Stefano, Mandal, Manoj K., Mastrolia, Pierpaolo, Mattiazzi, Luca, Mizera, Sebastian",
+      "description": "Massless two-loop sunrise (banana) diagram, with three massless propagators and one ISP z=k2^2. The 1-form omega from the standard Baikov representation has a single master on the maximal cut. The reduction I_{1,1,1;-1} = (s/3) I_{1,1,1;0} is obtained in the monomial basis via intersection numbers, in agreement with LiteRed. The same family is also treated via iterated 1-form intersections in Section 17.1 using the two-fold Baikov representation.",
+      "epsOrders": "",
+      "familyName": "Two-Loop Massless Sunrise",
+      "method": "intersection",
+      "tools": [
+        "LiteRed"
+      ],
+      "ancillaryFiles": false,
+      "doi": "10.1007/JHEP05(2019)153",
+      "texkey": "Frellesvig:2019kgj",
+      "masterCount": 1,
+      "dimScheme": "d=D",
+      "computationLevel": "maximal_cut",
+      "location": "Section 8.1, Eqs. (8.1)-(8.5), Fig. 6",
+      "recordId": "bx_aff21ea408ce",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1804.00131 (Phys.Rev.D 98 (), 2018)",
+      "authors": "",
+      "description": "Massless sunrise (sunset) with 3 propagators and one massive external momentum K^2=s. Closed-form in Gamma functions. 1 master integral.",
+      "epsOrders": "all_orders",
+      "familyName": "P_00",
+      "method": "IBP, direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "10.1103/PhysRevD.98.025008",
+      "texkey": "",
+      "masterCount": 1,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Fig. 3, Sec. VIII.A",
+      "recordId": "bx_190de1e53c2c",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2111.13595",
+      "authors": "Piotr Bargiela, Fabrizio Caola, Andreas von Manteuffel, Lorenzo Tancredi",
+      "description": "Two-loop massless four-point sub-topology imported from arXiv:2111.13595 (reduction family L2PL, sector 38). Bare scalar skeleton; reference and ancillary files only, no result imported.",
+      "recordId": "ax_7087bd98d767",
+      "ancillaryFiles": true,
+      "ancillaryPaths": [
+        "anc/integralfamilies_3L.yaml",
+        "anc/integralfamilies_2L.yaml",
+        "anc/kinematics.yaml",
+        "anc/2L_canbasis.m",
+        "anc/3L_masters_w6.m",
+        "anc/2L_masters_w6.m",
+        "anc/3Lx12_masters_w6.m",
+        "anc/3Lx123_masters_w6.m",
+        "anc/3Lx124_masters_w6.m",
+        "anc/3Lx1234_masters_w6.m",
+        "anc/3Lx1243_masters_w6.m",
+        "anc/m2i.c.m",
+        "anc/i2m.c.m",
+        "anc/mcross.c.m",
+        "anc/README.txt"
+      ],
+      "sourceFamily": "L2PL_sec38",
+      "masterCount": 0,
+      "epsOrders": "",
+      "texkey": "Bargiela:2021wuy",
+      "doi": "10.1007/JHEP02(2022)153",
+      "verified": false,
+      "seedCaveat": "Scalar skeleton only: the canonical master(s) for this sector (L2PL_sec38) carry raised propagator powers (dots); the stored topology is the bare scalar skeleton and carries no value yet."
+    }
+  ],
+  "Names": [
+    "Two-Loop Massless Sunrise",
+    "P_00",
+    "$I_{1,1,1}$"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 2,
+  "NumPropagators": 3,
+  "Results": [],
+  "edges": "{{{1, 2}, 0}, {{1, 2}, 0}, {{1, 2}, 0}}",
+  "nodes": "{{1, 0}, {2, 0}}",
+  "CanonicalName": "Massless sunrise (a)",
+  "MassConfig": {
+    "numEdges": 3,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 3,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "000",
+    "numExtLegs": 2,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 2,
+    "extLegSignature": "00"
+  }
+}

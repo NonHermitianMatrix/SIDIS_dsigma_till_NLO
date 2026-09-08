@@ -1,0 +1,5 @@
+<|"Channel" -> "Hgg", "RealMappingHash" -> 
+  331061414614872946671889353883056066889409821544024091356043184157762746509\
+23, "SharedReduction" -> "../s04_result.wl", "SharedReductionHash" -> 
+  540324767422391340294569867359158398448513257314091386192956326179182189693\
+60, "Accepted" -> True, "MasterEvaluationPerformed" -> False|>

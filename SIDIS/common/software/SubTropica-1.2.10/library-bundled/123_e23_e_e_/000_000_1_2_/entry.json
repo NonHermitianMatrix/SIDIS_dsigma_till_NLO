@@ -1,0 +1,178 @@
+{
+  "CNickelIndex": "123|e23|e|e|:000|000|1|2|",
+  "MassScales": 2,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "all",
+  "References": [
+    "hep-ph/9912329",
+    "arXiv:2507.17815 (JHEP 01 (014), 2026)"
+  ],
+  "Records": [
+    {
+      "epsOrders": "all",
+      "reference": "hep-ph/9912329",
+      "authors": "T. Gehrmann, E. Remiddi",
+      "description": "The integrals in this paper are given as analytic functions in $d$ dimensions, so that all orders in $\\varepsilon$ are covered. The common prefactor to all integrals is $(4\\pi)^{(4 - d)/2} (\\Gamma(3 - d/2) \\Gamma^2(d/2 - 1))/\\Gamma(d - 3)$. Be aware that all these integrals have at least one off-shell leg.",
+      "recordId": "1498748916.el66",
+      "verified": true,
+      "verifiedAt": "auto-loopedia"
+    },
+    {
+      "reference": "arXiv:2507.17815 (JHEP 01 (014), 2026)",
+      "authors": [
+        {
+          "full_name": "Barrera, Oscar",
+          "inspire_id": 2957072
+        },
+        {
+          "full_name": "Dersy, Aur\u00e9lien",
+          "inspire_id": 2083042
+        },
+        {
+          "full_name": "Husain, Rabia",
+          "inspire_id": 1925286
+        },
+        {
+          "full_name": "Schwartz, Matthew D.",
+          "inspire_id": 1019662
+        },
+        {
+          "full_name": "Zhang, Xiaoyuan",
+          "inspire_id": 1806305
+        }
+      ],
+      "description": "Called $I_2(x)$ in the paper. 2-loop 3-point master integral for $q\\bar{q} \\to VV$ planar topologies from Gehrmann, Tancredi, Weihs (1306.6344). 5 massless propagators, 2-loop triangle with internal rung. Two on-shell legs combined into $p_{12}$, two off-shell legs $q_1^2=q_2^2=Q^2$. Single variable $x$. Prefactor $P_2(x)=x/(m^2(1-x^2))$. Fitted at $\\varepsilon^0$ (weight 4): full 182, uniform 124 functions. AMFlow: 22.4 CPU-min/point, 362 points, 28 digits. Uniform transcendental weight.",
+      "epsOrders": "0",
+      "familyName": "2-loop triangle with 5 propagators",
+      "method": "DE, IBP",
+      "tools": [
+        "AMFlow",
+        "SOFIA",
+        "BLADE",
+        "GiNaC"
+      ],
+      "ancillaryFiles": false,
+      "doi": "10.1007/JHEP01(2026)014",
+      "texkey": "Barrera:2025uin",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Eq. (19), Section 4.2, second diagram",
+      "recordId": "bx_78b8ee0888e6",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Source": [
+    "arXiv",
+    "Loopedia"
+  ],
+  "Results": [
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": "0",
+      "epsOrders": "0",
+      "propExponents": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.293",
+      "stCommand": "",
+      "contributor": "Sebastian Mizera",
+      "timestamp": "2026-04-15T17:37:35",
+      "verifiedAt": "2026-04-15T17:37:35",
+      "verified": true,
+      "method": "direct_integration",
+      "tools": [
+        "SubTropica"
+      ],
+      "methodLR": "Lungo",
+      "findRoots": false,
+      "byteCount": 22216,
+      "resultDataId": "f38172970318e49d",
+      "resultTeXPreview": "\\left(-\\frac{\\log ^4\\left(M_2^2 M_3^{-2}\\right)}{12 \\left(M_2^2-M_3^2\\right)}-\\frac{\\log \\left(M_2^{-2} M_3^2\\right) \\log ^3\\left(M_2^2 M_3^{-2}\\right)}{3 \\left(M_2^2-M_3^2\\right)}-\\frac{\\log \\left(M_2^{-2} M_3^2\\right) \\log \\left(1-M_2^{-2} M_3^2\\right) \\log ^2\\left(M_2^2 M_3^{-2}\\right)}{2 \\left(M_2^2-M_3^2\\right)}-\\frac{\\zeta(2) \\log ^2\\left(M_2^2 M_3^{-2}\\right)}{M_2^2-M_3^2}+\\frac{H\\left(0,M_2^2 M_3^{-2}\\,;1\\right) \\log ^2\\left(M_2^2 M_3^{-2}\\right)}{2 \\left(M_2^2-M_3^2\\right)}-\\frac{2 \\log \\left(M_2^{-2} M_3^2\\right) \\zeta(2) \\log \\left(M_2^2 M_3^{-2}\\right)}{M_2^2-M_3^2}-\\frac{\\zeta(3) \\log \\left(M_2^2 M_3^{-2}\\right)}{M_2^2-M_3^2}+\\frac{3 H(0,1,1\\,;1) \\log \\left(M_2^2 M_3^{-2}\\right)}{M_2^2-M_3^2}-\\frac{\\log \\left(M_2^{-2} M_3^2\\right) \\log \\left(1-M_2^{-2} M_3^2\\right) \\zeta(2)}{M_2^2-M_3^2}+\\frac{\\pi ^2 \\zeta(2)}{6 \\left(M_2^2-M_3^2\\right)}+\\frac{\\zeta(2) H\\left(0,M_2^2 M_3^{-2}\\,;1\\right)}{M_2^2-M_3^2}+\\frac{\\zeta(2) H\\left(0,\\frac{M_2^2}{M_2^2-M_3^2}\\,;1\\right)}{M_2^2-M_3^2}+\\frac{2 \\log \\left(M_2^{-2} M_3^2\\right) H\\left(0,0,\\frac{1}{1-M_2^2 M_3^{-2}}\\,;1\\right)}{M_2^2-M_3^2}+\\frac{\\log \\left(M_2^{-2} M_3^2\\right) H\\left(0,\\frac{1}{1-M_2^2 M_3^{-2}},1\\,;1\\right)}{M_2^2-M_3^2}+\\frac{2 H\\left(0,0,0,\\frac{1}{1-M_2^2 M_3^{-2}}\\,;1\\right)}{M_2^2-M_3^2}-\\frac{2 H\\left(0,0,1,\\frac{1}{1-M_2^2 M_3^{-2}}\\,;1\\right)}{M_2^2-M_3^2}-\\frac{H\\left(0,1,0,\\frac{1}{1-M_2^2 M_3^{-2}}\\,;1\\right)}{M_2^2-M_3^2}-\\frac{H\\left(0,1,\\frac{1}{1-M_2^2 M_3^{-2}},1\\,;1\\right)}{M_2^2-M_3^2}-\\frac{H\\left(0,\\frac{1}{1-M_2^2 M_3^{-2}},0,1\\,;1\\right)}{M_2^2-M_3^2}-\\frac{2 H\\left(\\frac{1}{1-M_2^2 M_3^{-2}},0,0,1\\,;1\\right)}{M_2^2-M_3^2}+\\frac{H\\left(\\frac{1}{1-M_2^2 M_3^{-2}},1,0,1\\,;1\\right)}{M_2^2-M_3^2}\\right)+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T172759Z",
+      "byEpsOrder": null,
+      "singularities": [],
+      "singularitiesTeX": [],
+      "singularitiesVerified": [],
+      "groundTruthAvailable": false,
+      "provenance": {
+        "engine": "eulerDiscriminant",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 0,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 1.29
+      },
+      "timestamp": "2026-06-14T17:27:59Z",
+      "contributor": "oddletters-v1a"
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T172759Z",
+      "byEpsOrder": null,
+      "evens": [],
+      "evensTeX": [],
+      "evensVerified": [],
+      "groundTruthAvailable": false,
+      "oddLetters": [],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "eulerDiscriminant",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 0,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 1.29
+      },
+      "timestamp": "2026-06-14T17:27:59Z",
+      "contributor": "oddletters-v1a"
+    }
+  ],
+  "Names": [
+    "2-mass kite (3-point)",
+    "two-mass kite (3-point)",
+    "Kite (3-point)"
+  ],
+  "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 3}, 0}, {{2, 4}, 0}}",
+  "nodes": "{{2, 0}, {3, M[2]}, {4, M[3]}}",
+  "CanonicalName": "2-mass double triangle (b-a)",
+  "MassConfig": {
+    "numEdges": 5,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 5,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "00000",
+    "numExtLegs": 3,
+    "numOnshellMassiveExtLegs": 2,
+    "numMasslessExtLegs": 1,
+    "extLegSignature": "0MM"
+  },
+  "Subsectors": [
+    "e1122|e|e|:00000|1|2|"
+  ],
+  "ParentSectors": [
+    "123|e4|e4|e4||:000|00|10|20||"
+  ],
+  "Loops": 2,
+  "NumPropagators": 5
+}

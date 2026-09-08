@@ -1,0 +1,42 @@
+MONITOR_START job=14692885 host=n6042 kernel_pid=57712
+"PASS: ""accepted virtual Kira reduction"
+"PARENT_INPUT "InputForm[GLI["V01", {0, 1, 0, 1}]]
+"PASS: ""master has only zero or unit indices"
+"PASS: ""loop routing uses unit loop coefficients"
+"PASS: ""routing signs preserve every quadratic denominator"
+"PASS: ""P2_0110 unique generic parent Gram matrix"
+"PASS: ""P2_0110 every chord reconstructs"
+"PASS: ""P2_0110 explicit parameter representation"
+"PASS: ""P2_0110 projective parameter count"
+"PASS: ""P2_0110 projective homogeneity"
+"PARENT_INPUT "InputForm[GLI["V02", {1, 1, 0, 0}]]
+"PASS: ""master has only zero or unit indices"
+"PASS: ""loop routing uses unit loop coefficients"
+"PASS: ""routing signs preserve every quadratic denominator"
+"PARENT_INPUT "InputForm[GLI["V03", {0, 1, 1, 0}]]
+"PASS: ""master has only zero or unit indices"
+"PASS: ""loop routing uses unit loop coefficients"
+"PASS: ""routing signs preserve every quadratic denominator"
+"PARENT_INPUT "InputForm[GLI["V03", {1, 1, 0, 0}]]
+"PASS: ""master has only zero or unit indices"
+"PASS: ""loop routing uses unit loop coefficients"
+"PASS: ""routing signs preserve every quadratic denominator"
+"PARENT_INPUT "InputForm[GLI["V06", {1, 1, 1, 1}]]
+"PASS: ""master has only zero or unit indices"
+"PASS: ""loop routing uses unit loop coefficients"
+"PASS: ""routing signs preserve every quadratic denominator"
+"PASS: ""P4_0001001001011010 unique generic parent Gram matrix"
+"PASS: ""P4_0001001001011010 every chord reconstructs"
+"PASS: ""P4_0001001001011010 explicit parameter representation"
+"PASS: ""P4_0001001001011010 projective parameter count"
+"PASS: ""P4_0001001001011010 projective homogeneity"
+"PARENT_INPUT "InputForm[GLI["V07", {1, 1, 1, 1}]]
+"PASS: ""master has only zero or unit indices"
+"PASS: ""loop routing uses unit loop coefficients"
+"PASS: ""routing signs preserve every quadratic denominator"
+"PARENT_INPUT "InputForm[GLI["V08", {1, 1, 1, 1}]]
+"PASS: ""master has only zero or unit indices"
+"PASS: ""loop routing uses unit loop coefficients"
+"PASS: ""routing signs preserve every quadratic denominator"
+"S12_SUCCESS: "7" virtual masters use "2" distinct parent Euler integrands."
+MONITOR_WAKE {"stage": "s12", "source": "s12_virtual_master_inputs.wl", "source_sha256": "0871a65b07078988cca44afa430fa3bec5b6240e70c44cbcd1f9cbc9f543c275", "job_id": "14692885", "host": "n6042", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 202719232, "elapsed_seconds": 10.26481868326664, "completed_utc": "2026-09-07T10:56:14.479425+00:00"}

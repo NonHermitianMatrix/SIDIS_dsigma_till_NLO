@@ -1,0 +1,22 @@
+{
+  "stage": "s08",
+  "source": "s08_derive_consumer_actions.py",
+  "source_sha256": "bff03cec10c43e23da0bd2329dacb18d5823b552d747c5a941b9ac217c980df2",
+  "job_id": "14693763",
+  "host": "n6044",
+  "exit_code": 0,
+  "success_marker": false,
+  "result_checks": {
+    "s08_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s08_derive_consumer_actions.py"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 69607424,
+  "elapsed_seconds": 8.449865229427814,
+  "completed_utc": "2026-09-07T16:32:01.055287+00:00"
+}

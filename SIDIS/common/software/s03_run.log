@@ -1,0 +1,29 @@
+MONITOR_START job=14692915 host=n7439 kernel_pid=256675
+ideal_module_dependencies 0 	linux-vdso.so.1 (0x00007ffeb14fb000)
+	libSingular-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libSingular-4.1.1.so (0x00002b2c584f4000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00002b2c588ca000)
+	libsingular_resources-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libsingular_resources-4.1.1.so (0x00002b2c588d0000)
+	libpolys-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libpolys-4.1.1.so (0x00002b2c588d8000)
+	libomalloc-0.9.6.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libomalloc-0.9.6.so (0x00002b2c58a57000)
+	libgmp.so.10 => /lib/x86_64-linux-gnu/libgmp.so.10 (0x00002b2c58a65000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00002b2c58ae9000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00002b2c58cca000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00002b2c58e19000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00002b2c58e34000)
+	libsingular-factory-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libsingular-factory-4.1.1.so (0x00002b2c59026000)
+	libntl.so.43 => /lib/x86_64-linux-gnu/libntl.so.43 (0x00002b2c591fa000)
+	libreadline.so.8 => /lib/x86_64-linux-gnu/libreadline.so.8 (0x00002b2c594a3000)
+	libmpfr.so.6 => /lib/x86_64-linux-gnu/libmpfr.so.6 (0x00002b2c594f3000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00002b2c59574000)
+	/lib64/ld-linux-x86-64.so.2 (0x00002b2c5843a000)
+	libgf2x.so.3 => /lib/x86_64-linux-gnu/libgf2x.so.3 (0x00002b2c59597000)
+	libtinfo.so.6 => /lib/x86_64-linux-gnu/libtinfo.so.6 (0x00002b2c595a9000)
+ 
+ideal_module_load 1  polymake:  ERROR: "/usr/local/share/polymake/perllib/Polymake/Core/CPlusPlus.pm", line 1785: Can't load shared module /usr/local/lib/polymake/lib/polytope.so: libscip.so.6.0: cannot open shared object file: No such file or directory
+
+
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s03_polymake_runtime.py", line 50, in <module>
+    assert run.returncode == 0 and 'not found' not in run.stdout and 'ERROR' not in run.stderr
+AssertionError
+MONITOR_WAKE {"stage": "s03", "source": "s03_polymake_runtime.py", "source_sha256": "ff0a835c0b9001c392ec9414b0a0b628c5eda08d251c03acc493ecd9fa2cbc54", "job_id": "14692915", "host": "n7439", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 144773120, "elapsed_seconds": 5.7512794099748135, "completed_utc": "2026-09-07T11:35:17.178729+00:00"}

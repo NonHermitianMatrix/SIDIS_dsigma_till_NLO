@@ -1,0 +1,54 @@
+==============================================================
+qname        pod_smp.q           
+hostname     n7403               
+group        saltzber            
+owner        rushil              
+project      campus_prj          
+department   defaultdepartment   
+jobname      SIDISS19            
+jobnumber    14692941            
+taskid       undefined
+pe_taskid    NONE                
+account      sge                 
+priority     0                   
+cwd          /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907
+submit_host  login1              
+submit_cmd   /u/systems/UGE8.6.4/bin/lx-amd64/qsub -clear -terse -wd /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907 -N SIDISS19 -l h_data=8G,h_rt=02:00:00 -o /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/s19_run.log -j y -m n -pe shared 4
+qsub_time    09/07/2026 05:29:03.865
+start_time   09/07/2026 05:29:39.521
+end_time     09/07/2026 05:37:21.359
+granted_pe   shared              
+slots        4                   
+failed       100 : assumedly after job
+deleted_by   rushil@login1
+exit_status  137                 
+ru_wallclock 461.838      
+ru_utime     4.016        
+ru_stime     1.839        
+ru_maxrss    10564               
+ru_ixrss     0                   
+ru_ismrss    0                   
+ru_idrss     0                   
+ru_isrss     0                   
+ru_minflt    5462                
+ru_majflt    17                  
+ru_nswap     0                   
+ru_inblock   3480                
+ru_oublock   152                 
+ru_msgsnd    0                   
+ru_msgrcv    0                   
+ru_nsignals  0                   
+ru_nvcsw     551                 
+ru_nivcsw    191                 
+wallclock    462.314      
+cpu          485.660      
+mem          809.990           
+io           0.243             
+iow          4.090             
+ioops        59413               
+maxvmem      11.061G
+maxrss       0.000
+maxpss       0.000
+arid         undefined
+jc_name      NONE
+bound_cores  NONE

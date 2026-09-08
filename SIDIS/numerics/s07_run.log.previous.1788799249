@@ -1,0 +1,20 @@
+MONITOR_START job=14693772 host=n7127 kernel_pid=58566
+PROGRESS SIDIS numerics S07 2026-09-07T16:37:07.637027+00:00: Starting compact native operation-table build and direct-Wolfram checks for Hqq,Hgg,Hqqbar,Hqqprime,Hgq,Hqg. Next accept only finite values and cancelled singular-log coefficients.
+MONITOR_HEARTBEAT elapsed=31s rss=589.4MiB peak=589.4MiB
+S07_TRANSLATE Hqq_F1_LODelta_1
+PROGRESS SIDIS numerics S07 2026-09-07T16:37:42.006844+00:00: Stage failed: name 'OPS' is not defined. Next correct the originating issue before convolution.
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s07_compile_hard_functions.py", line 334, in <module>
+    try:main()
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s07_compile_hard_functions.py", line 293, in main
+    program=Program(spec);path=cache/('s07_'+spec['Name']+'.dat');program.write(path)
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s07_compile_hard_functions.py", line 32, in __init__
+    self.initial_inputs(spec)
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s07_compile_hard_functions.py", line 28, in initial_inputs
+    self.names={k:self.add('input',i) for i,k in enumerate(spec['Arguments'])}
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s07_compile_hard_functions.py", line 28, in <dictcomp>
+    self.names={k:self.add('input',i) for i,k in enumerate(spec['Arguments'])}
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s07_compile_hard_functions.py", line 42, in add
+    key=(OPS[op],a,b)
+NameError: name 'OPS' is not defined
+MONITOR_WAKE {"stage": "s07", "source": "s07_compile_hard_functions.py", "source_sha256": "1570a8e3be54264dd76d15f534b5aeb04093eb52868059a02a835647e59f6b02", "job_id": "14693772", "host": "n7127", "exit_code": 1, "success_marker": false, "result_checks": {"s07_result": false}, "command": ["/u/local/apps/anaconda3/2023.03/bin/python", "-u", "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s07_compile_hard_functions.py"], "accepted_execution": false, "guard": null, "peak_rss_bytes": 697520128, "elapsed_seconds": 37.986199089093134, "completed_utc": "2026-09-07T16:37:42.124314+00:00"}

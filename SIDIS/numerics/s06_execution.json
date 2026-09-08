@@ -1,0 +1,22 @@
+{
+  "stage": "s06",
+  "source": "s06_prepare_pdf_ff.py",
+  "source_sha256": "bde2bd9d9a0ec4ba531898775badfdbab3f74ec9773665509b9735e6512ccbfe",
+  "job_id": "14693758",
+  "host": "n6132",
+  "exit_code": 0,
+  "success_marker": false,
+  "result_checks": {
+    "s06_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s06_prepare_pdf_ff.py"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 55992320,
+  "elapsed_seconds": 6.95719160605222,
+  "completed_utc": "2026-09-07T16:28:34.732783+00:00"
+}

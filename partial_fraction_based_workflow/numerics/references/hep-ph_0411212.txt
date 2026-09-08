@@ -1,0 +1,754 @@
+                                       .
+                                                  O(αs2 ) QCD corrections to the electroproduction of hadrons with high
+                                                                         transverse momentum.∗
+
+                                                                              A. Daleo,1, † D. de Florian,2, ‡ and R. Sassot2, §
+                                                                              1
+                                                                             Institut für Theoretische Physik, Universität Zürich,
+                                                                           Winterthurerstrasse 190, CH-8057 Zürich, Switzerland
+                                                                          2
+                                                                            Departamento de Fı́sica, Universidad de Buenos Aires
+                                                                        Ciudad Universitaria, Pab.1 (1428) Buenos Aires, Argentina
+                                                                                           (Dated: October 1, 2018)
+                                                       We compute the order α2s corrections to the one particle inclusive electroproduction cross section
+                                                    of hadrons with non vanishing transverse momentum. We perform the full calculation analytically,
+
+
+
+
+arXiv:hep-ph/0411212v1 16 Nov 2004
+                                                    and obtain the expression of the factorized (finite) cross section at this order. We compare our
+                                                    results with H1 data on forward production of π 0 , and discuss the phenomenological implications of
+                                                    the rather large higher order contributions obtained in that case. Specifically, we analyze the cross
+                                                    section sensitivity to the factorization and renormalization scales, and to the input fragmentation
+                                                    functions, over the kinematical region covered by data. We conclude that the data is well described
+                                                    by the O(α2s ) predictions within the theoretical uncertainties and without the inclusion of any physics
+                                                    content beyond the DGLAP approach.
+
+                                                    PACS numbers: 12.38.Bx, 13.85.Ni
+                                                    Keywords: Semi-Inclusive DIS; perturbative QCD.
+
+
+
+
+                                                                                                Introduction
+
+                                        The precise measurement of final state hadrons in lepton nucleon deep inelastic scattering constitutes an excellent
+                                     benchmark for different features of perturbative quantum chromodynamics (pQCD). These processes are crucially
+                                     sensitive to the three main ingredients of pQCD: the parton content of the nucleon, the hadronization mechanism
+                                     of partons into the detected final state hadron, and the parton radiation before and after the interaction with the
+                                     electromagnetic prove.
+                                        The first of these ingredients is well characterized by modern parton distribution functions (PDFs). The knowledge
+                                     on these distributions have become increasingly precise as a result of two decades of high precision inclusive mea-
+                                     surements, and the corresponding QCD analyses, driven by the role of PDFs as inputs for theoretical predictions for
+                                     any experiment involving initial state hadrons [1, 2]. Although the high degree of accuracy attained by PDFs, less
+                                     inclusive observables, sensitive to flavor combinations of PDFs other than those relevant in inclusive measurements,
+                                     improve the insight and provide a further check on the universality of PDFs and on factorization.
+                                        The second ingredient is addressed by the so called fragmentation functions (FF), which are rapidly evolving
+                                     following the path of PDFs, but without attaining yet the refinement of the latter [3, 4]. Most of the data used
+                                     to determine these distributions, which come essentially from electron-positron annihilation into hadrons, give no
+                                     information on how the individual quark flavor fragments into hadrons and leave a considerable uncertainty on the
+                                     gluon density. For these reasons, the NLO analysis of one particle inclusive data is crucial for the extraction of
+                                     fragmentation functions.
+                                        The last ingredient concerns higher order QCD calculations, which have been explored and validated for most
+                                     processes up to next to leading order (NLO) accuracy, and are currently being extended even beyond that point.
+                                     For the one particle inclusive processes only very recently there has been progress beyond the leading order (LO)
+                                     [5, 6, 7, 8, 9]. However, up to now there were no analytic computation of the O(α2s ) corrections for the electroproduction
+                                     of hadrons with non vanishing transverse momentum. The analytic computation of the O(α2s ) corrections allows us
+                                     to check factorization in a direct way, which means that collinear singularities showing up in the partonic cross
+                                     section factorize into PDFs as required by inclusive deep inelastic scattering, and into FFs for electron-positron
+
+
+
+                                     ∗ Partially supported by CONICET, Fundación Antorchas, UBACYT and ANPCyT, Argentina.
+                                     † Electronic address: daleo@physik.unizh.ch
+                                     ‡ Electronic address: deflo@df.uba.ar
+                                     § Electronic address: sassot@df.uba.ar
+                                                                                                                        2
+
+annihilation into hadrons. As a consequence of this explicit cancellation, the resulting cross section is finite and can
+be straightforwardly convoluted with PDFs and FFs in a faster and more stable numerical code, compared to what can
+be usually obtained in numerical implementations using either the subtraction [9] or the slicing [7, 8] methods. The
+analytical result is still sufficiently exclusive and keeps the dependence on the rapidity and the transverse momentum
+of the produced hadron, allowing a detailed comparison with the experimental data.
+   In this paper we compute the order α2s corrections to the one particle inclusive leptoproduction cross section of
+hadrons with non vanishing transverse momentum. We perform the cancellation of collinear singularities analytically,
+and obtain the full expression of the factorized, and thus finite, cross section at this order. The outline of the paper
+is as follows: in the next section we summarize the relevant kinematics and details about the phase space integration
+for the O(α2s ) contributions to the cross section, together with the conventions and notation adopted. In section II
+we compute the corresponding real and virtual amplitudes, we discuss the nature of the singularities that contribute
+to them, we analyse the factorization of collinear singularities, and pay special attention to the scale dependence
+induced in the cross section by this factorization procedure. Section III deals with the phenomenological implications
+of the new corrections. Specifically, we compare our results with data on forward production of π 0 , presented recently
+by the H1 collaboration, as an example, and evaluate the phenomenological implications of the rather large higher
+order corrections. Special attention is paid to the cross section sensitivity to the factorization scale choosen, and to
+the fragmentation functions input as sources of theoretical uncertainties. We also analyze the consequences of the
+forward pion selection on the LO and NLO underlying partonic processes, finding this kinematical suppression as the
+main reason for the unusual difference between the LO and NLO estimates. In agreement with the results obtained
+in [7], we conclude that the data is well described by the pure Dokshitzer-Grivov-Lipatov-Altarelli-Parisi (DGLAP)
+O(α2s ) predictions within the theoretical uncertainties, but without need to appeal to resolved photon contributions,
+as suggested in [8].
+
+
+                                                   I.   KINEMATICS
+
+  We begin with the kinematical characterization of the one particle inclusive deep inelastic scattering processes.
+Since the choice of variables required to deal with the singularity structure of electroproduction is different from those
+used in both photo-production [10, 11, 12] and electroproduction in the very forward region [5, 6], in the following we
+discuss it in some detail. We consider the process
+
+                                          l(l) + P (P ) −→ l′ (l′ ) + h(Ph ) + X,                                     (1)
+
+where a lepton of momentum l scatters off a nucleon of momentum P with a lepton of momentum l′ and a hadron h
+of momentum Ph tagged in the final state. Omitting target fragmentation at zero transverse momentum, which has
+been discussed at length in [5, 6], the cross section for this process can be written as
+                                                                  "                               #
+                        dσ h        XZ 1        Z 1    Z                                  (n)
+                                                                                        dσij
+                                                              (n)
+                                 =          dξ      dζ    dPS      fi (ξ) Dh/j (ζ)                         (2)
+                      dxB dQ2       i,j,n 0      0                                 dxB dQ2 dPS(n)
+
+        (n)
+where σij is the partonic level cross section corresponding to the process
+
+                                l(l) + i(pi ) −→ l′ (l′ ) + j(kj ) + n-1 additional partons ,                         (3)
+
+before renormalization of the coupling constant and factorization of collinear singularities. fi (ξ) and Dh/j (ζ) are the
+bare parton densities and fragmentation functions, and dPS(n) the n-parton phase space. ξ is the proton momentum
+fraction carried by the parton i and ζ is the fraction of parton j momentum taken away by the final state hadron. In
+addition to the usual DIS variables,
+
+                                                           Q2               P ·q
+                      Q2 = −q 2 = −(l′ − l)2 ,     xB =          ,   ye =        ,    SH = (P + l)2 ,                 (4)
+                                                          2P · q            P ·l
+we define Mandelstam variables both at parton and at hadron level:
+
+                              s = (q + pi )2                                  S = (q + P )2 ,                         (5)
+                              t = −2 q · kj                                   T = −2 q · Ph ,                         (6)
+                              u = −2 pi · kj                                  U = −2 P · Ph ,                         (7)
+                                                                                                                     3
+
+respectively. The above definitions imply
+                                                                         T                             ξ
+                    s = ξ S − Q2 (1 − ξ) ,                          t=     ,                     u=      U.        (8)
+                                                                         ζ                             ζ
+
+Notice that the t > 0 (T > 0) region exists only for Q2 6= 0, feature that considerably reduces the integration region
+in the case of photo-production. The following step is the definition of suitable partonic variables to characterize
+the phase space. The choice of these variables is critical for the identification and further prescription of collinear
+singularities in the partonic cross section. We find particularly useful the variables
+
+                                       u                                       (Q2 + s)(s + t + u)
+                           y≡−                                           z≡                        ,               (9)
+                                    Q2 + s                                       s (Q2 + s + u)
+
+with y, z ∈ [0, 1]. In terms of these partonic variables, the n-particle phase space can be factorized as:
+
+                                                              d (n−1) dy dz ,
+                                                     dPS(n) = dPS                                                 (10)
+           (n−1)
+       d
+where dPS       includes the phase space of the ‘spectator’ partons (those that not fragment into the detected final
+state hadron) and the corresponding jacobian. For example for n = 3, in D = 4 + ǫ dimensions we have
+                                s ǫ         s
+                      dPS(3) =              4
+                                                       (1 − y) z ǫ/2 y ǫ/2 (1 − y)ǫ (1 − z)ǫ/2 dy dz
+                                 4π    (4 π) Γ(1 + ǫ)
+                                  × sin1+ǫ β1 sinǫ β2 dβ1 dβ2 ,                                                   (11)
+
+where β1 and β2 are the angles defined by the spectator partons in their center of mass frame. In terms of the
+factorized phase space, eq.(2) reads
+                                                                "                              #
+                       dσ h      XZ 1       Z 1    Z 1    Z 1                          (n)
+                                                                                     dσij
+                               =         dξ     dζ     dy     dz fi (ξ) Dh/j (ζ)                 ,        (12)
+                    dxB dQ2      i,j,n 0     0      0      0                     dxB dQ2 dy dz
+
+         (n)
+where dσij /dxB dQ2 dy dz is the partonic cross section already integrated over the spectator partons, and with the
+adequate normalization. Finally, changing variables from (ξ,ζ) to hadronic transverse momentum pT and rapidity η,
+defined in the center of mass frame of the proton and the virtual photon, we find
+                                   √      Z e2η2η        Z 1− 1−y
+                                                               y
+                                                                           "                       (n)
+                                                                                                           #
+                         X                                        e−2η
+           dσ h                e−η S         1+e     dy                 dz                       dσij
+                      =                                                      fi (ξ) Dh/j (ζ)                 . (13)
+     dxB dQ2 dp2T dη i,j,n |pT | (Q2 + S) eη |p√T | 1 − y 0            1−z                   dxB dQ2 dy dz
+                                                      S
+
+
+In terms of the hadronic variables, ξ and ζ are given by
+
+                             Q2 (1 − y) (1 − z) + S y e−2η                                   eη |pT |
+                        ξ=                                                                ζ= √        .           (14)
+                               (Q2 + S) (1 − y) (1 − z)                                         Sy
+Clearly, the transformation is singular at y = 0, y = 1 and z = 1, however these points are excluded by |pT | > 0
+(notice that |η| is bounded from above), as can be seen from the limits in eq. (13). Finally, in order to obtain more
+compact expressions for the partonic cross sections, it turns out to be convenient to introduce the auxiliary variable
+
+                                                               xB   Q2
+                                                          ̺=      = 2   .                                         (15)
+                                                                ξ  Q +s
+
+
+                            II.     ORDER αs AND α2s PARTONIC CROSS SECTIONS
+
+  The partonic cross sections in eq.(13) are calculated order by order in perturbation theory and are related to the
+                                               (n)
+parton-photon squared matrix elements H µν (i, j) for the i + γ → j + X processes
+                             (n)                                                
+                         dσij        α2em    1                    µν     4x2B µ ν X (n)
+                                   =                        YM (−g ) + YL 2 P P      H µν (i, j) .                (16)
+                     dxB dQ2 dy dz    e2 ξ x2B SH
+                                                2                         Q        n
+                                                                                                                           4
+
+Matrix elements are averaged over initial state polarizations, summed over final state polarizations, and integrated over
+                                                 (n−1)
+                                             d
+the spectator partons (i.e. integrated over dPS        ). αem stands for the fine structure constant and e is the electron
+charge. Finally, YM and YL are the standard kinematic factors for the contributions of each photon polarization and
+are given by,
+
+                                         1 + (1 − ye )2        1 + 4(1 − ye ) + (1 − ye )2
+                                 YM =                   , YL =                             .                            (17)
+                                              2 ye2                      2 ye2
+
+The first contribution to the cross section (13) comes from the partonic tensor at order αs , as, in the naive parton
+model (O(α0s )), final state hadrons can only be produced with |pT | = 0 in the proton-virtual photon rest frame. At
+order αs , the partonic cross sections have no collinear divergences provided |pT | > 0. Up to order ǫ, they are given by
+                                     (    "                                                            #
+                                            (̺ + y)2 + 2 (1 − ̺ − y)      ǫ  ǫ
+             (1)                                                                                  2
+          dσqq            cq Cǫ                                                            (̺ − y)
+                     =          2 CF   YM                              1 + L1 +
+    dxB dQ2 dy dz       ξ x2B SH                 (1 − ̺) (1 − y)           2         2 (1 − ̺) (1 − y)
+                                                                       )
+                                          h           ǫ i
+                                     + YL 2 ̺ y 1 + L1 + O(ǫ2 ) δ(z) ,                                                  (18)
+                                                       2
+                                     (    "                                               #
+             (1)
+          dσqg            cq Cǫ              1 + (̺ − y)2        ǫ  ǫ (1 − ̺ − y)
+                                                                                         2
+                     =          2 CF   YM                    1 + L1 +
+    dxB dQ2 dy dz       ξ x2B SH               (1 − ̺) y          2       2 (1 − ̺) y
+                                                                             )
+                                          h                  ǫ i         2
+                                     + YL 2 ̺ (1 − y) 1 + L1 + O(ǫ ) δ(z) ,                                             (19)
+                                                             2
+                                     (                                                                               
+                                            (1 − 2 (1 − ̺) ̺ − 2 (1 − y) y)      ǫ 
+             (1)
+           dσgq           cq Cǫ                                                               ((1 − ̺) ̺ + (1 − y) y)
+                     =          2 TF   YM                                     1 + L1 + ǫ
+     dxB dQ2 dy dz      ξ x2B SH                       (1 − y) y                  2                  (1 − y) y
+                                                                                              )
+                                          h                  ǫ                   i
+                                     + YL 4 (1 − ̺) ̺ 1 + L1 − 2 ǫ (1 − ̺) ̺ + O(ǫ2 ) δ(z) ,                            (20)
+                                                              2
+
+where
+                                                                               ǫ/2
+                                                         αs               Q2                      Γ(1 + ǫ/2)
+                       cq = α2em 2π (2 + ǫ) e2q ,   Cǫ =    fΓ                         ,   fΓ =                         (21)
+                                                         2π              4πµ2                      Γ(1 + ǫ)
+
+and
+                                                                                
+                                                               (1 − ̺)(1 − y)y
+                                                L1 = log                               .                                (22)
+                                                                      ̺
+
+At order-α2s , the partonic cross sections receive contributions from the following reactions:
+                                                  
+                                                   γ + q(q̄) → g + g + q(q̄)
+                                                  
+                                                    γ + qi (q¯i ) → qi (q¯i ) + qj + q¯j (i 6= j)
+                            Real contributions
+                                                   γ + qi (q¯i ) → qi (q¯i ) + qi + q¯i
+                                                  
+                                                                                                                        (23)
+                                                   γ+g           → g + q + q̄
+                                                    γ + q(q̄) → g + q(q̄)
+                            Virtual contributions
+                                                    γ+g          → q + q̄
+
+where any of the outgoing partons can fragment into the final state hadron h. Order αs and α2s contributions in the
+very forward region and its singularity structure have already discussed in deep in references [5, 6]. In this section
+we analyze the |pT | > 0 region, and examine the nature of the singularities that it involves. These contributions are
+computed in d = 4 + ǫ dimensions, in the Feynman gauge, and considering all the quarks as massless. Algebraic
+manipulations were performed with the aid of the program Mathematica [13] and the package Tracer [14] to
+perform the traces over the Dirac indices.
+  The order α2s partonic cross sections can be obtained from the corresponding quark and gluon initiated amplitudes
+as in references [5, 6], taking care of the appropriate flavor discrimination. The angular integrations can be performed
+with the standard techniques [15, 16], taking into account the additional complications of the one particle inclusive
+case: the necessity of collecting to all orders the potentially singular factors in the three particle final state integrals.
+                                                                                                                            5
+
+For the integrals that are known to all orders in ǫ, this is not a problem, while for those which are only known up
+to a given order a careful treatment is required. Once the angular integrals are performed, matrix elements are still
+distributions in three variables, y and z and ̺, regulated by the parameter ǫ.
+   At variance with the very forward case (|pT | = 0), where the integration over final states leads to overlapping
+singularities along various curves in the residual phase space, here the only remaining singularities are found at z = 0
+and thus they can be dealt with the standard method. After combining real and virtual contributions to a given
+partonic process, the cross section can be written as
+                                 (2)                                                           
+                             dσij          cq Cǫ2            1 (2)           (2)
+                                       =                      P (̺, y, z) + Cij (̺, y, z) + O(ǫ) ,                       (24)
+                         dxB dQ2 dy dz   ξ x2B SH2           ǫ 1 ij
+                                                 (2)                                              (2)
+where the coefficient of the single poles, P1 ij (̺, y, z), as well as the finite contributions Cij (̺, y, z), include ‘delta’
+and ‘plus’ distributions in z. The IR double poles present in the individual real and virtual contributions cancel out in
+the sum, providing the first straightforward check on the angular integration of real amplitudes and the loop integrals
+in the virtual case. In the real terms, the above mentioned double poles come from the product of a pole arising in
+the integration over the spectators phase space (i.e. integration over β1 and β2 in (11)) and a single pole coming from
+the expansion of z −1+ǫ factors. Double poles in the virtual contributions always arise from loop integrals.
+   The remaining singularities, contributing to the single pole, are of UV and collinear origin. The former are removed
+by means of coupling constant renormalization, whereas the latter have to be factorized in the redefinition of parton
+densities and fragmentation functions. The redefinition of parton densities is exactly the same as in totally inclusive
+DIS whereas fragmentation functions are renormalized as they are in one-particle inclusive electron-positron anni-
+hilation. Typical expressions for renormalized parton densities and fragmentation functions, up to order α2s and in
+the M S factorization scheme, can be found, for example, in Refs.[17] and [18] respectively. Factorization of collinear
+singularities and cancellation of the UV ones, then impose
+                                       (2)             (1)      (0)    (1)    (0)        (1)
+                                  P1 ij (̺, y, z) = 2 (Clj ⊗ Pli + Cik ⊗ Pjk ) − β0 Cij                                  (25)
+             (1)
+where the Cik correspond to the finite (O(ǫ0 )) terms in the O(αs ) partonic cross sections of eqs. (18), (19) and
+(20). Pij are the standard LO Altarelli-Parisi kernels, and ⊗ denotes the appropriate convolution coming from the
+factorization recipes.
+  The factorized, and thus finite, partonic cross sections have terms proportional to δ(z), terms containing ‘plus’
+distributions, and purely functional contributions. The logarithmic ‘plus’ contributions have their origin in the
+multiple emission of soft-gluons and can therefore be predicted by taking the order αs expansion of the corresponding
+resumed cross-section. For a partonic subprocess initiated by a parton i, where a parton j fragments, and with a
+gluon and a parton s as spectators, γ + i → g + j + s, the result is
+                               (2)                (1)
+                                                         "                                    #
+                            dσ̂ij              dσ̂ij           αs lnz
+                                        =                  1+              (4 Ci + 4 Cj − 2 Cs )                 (26)
+                       dxB dQ2 dy dz       dxB dQ2 dy dz       2π    z +
+                                             +
+
+where the general color factor Ck corresponds to CF if k is a quark and to CA if it is a gluon. The agreement with
+this prediction provides a further test on our results.
+   Since the factorized coefficients get contributions from both the real and virtual process at order α2s , together with
+finite terms coming from the renormalization and factorization procedure, their explicit expressions are considerably
+long and thus are omitted here [24].
+   Notice that the renormalization and factorization processes introduce scale dependent terms in the final cross section
+which partially cancel the scale dependence induced by the coupling constant, parton densities, and fragmentation
+functions. The structure of these terms follows that of the factorization contributions in eq.(25).
+                                           2                       2                   2
+                                (1)          MF         (1)           MD             (1)     MR
+                        −2 Clj ⊗ Pli ln         2
+                                                    + C ik  ⊗ Pjk ln    2
+                                                                             + β 0 Cij   ln                           (27)
+                                              Q                       Q                      Q2
+where MR , is the renormalization scale and MF and MD are factorization scale for parton densities and fragmentation
+functions, respectively.
+  In order to visualize the magnitude of the higher order corrections, in Figure 1 we show the ratio between the
+order α2s and αs cross sections for π 0 production (K-factor) as a function of pT for Q2 = 200 GeV2 , integrated over
+rapidity and for different values of xB in the kinematically allowed range. As input parton densities and fragmentation
+functions we choose the MRST02 [19] and KKP [3], NLO and LO sets, respectively. In the following we refer to the
+convolution of O(α2s ) cross sections and NLO densities as NLO prediction, whereas O(αs ) cross sections convoluted
+                                                                                                                          6
+
+
+                                               1.4
+
+
+
+
+                                K=dσNLO/dσLO
+                                                                                             2                 2
+                                                                                            Q =200 GeV
+
+                                               1.2
+
+
+
+                                                      1
+
+
+                                                                xB = 0.005
+                                               0.8              xB = 0.01
+                                                                xB = 0.02
+
+                                               0.6
+                                                           4       6         8   10    12        14       16
+                                                                                                      pT (GeV)
+
+                                                           FIG. 1: K-factor as a function of pT .
+
+
+with LO densities define the LO estimate. The renormalization and factorization scales MR2 , MF2 and MD
+                                                                                                      2
+                                                                                                        were taken
+to be the average between the two main physical scales of the process, namely the transverse momentum of the final
+state particle and the virtuality of the photon as
+
+                                                                                      Q2 + p2T
+                                                               MR2 = MF2 = MD
+                                                                            2
+                                                                              =                .                        (28)
+                                                                                         2
+The K-factor exhibits the characteristic behavior of higher order corrections; they increase at low transverse momentum
+and also at low xB . At very high pT , where the LO estimate becomes larger than the NLO prediction, threshold
+effects become dominant and the perturbative expansion at fixed order in the coupling constant is not expected to be
+reliable.
+   The dependence on the particular choice for the factorization and renormalization scales is expected to be weaker
+at NLO than at LO. In Figure 2 we show this dependence plotting the rate between the cross section evaluated at
+an arbitrary scale µ2 and the cross section at µ20 = (Q2 + p2T )/2 as function of the rate µ2 /µ20 . As in the previous
+
+
+                                                      2
+
+
+                                      dσ(µ)/dσ(µ0 )
+                                                                                             2
+                                                                                            Q = 200 GeV
+                                                                                            xB = 0.01
+                                                 1.5                                        pT ≥ 3.5 GeV
+
+
+
+                                                      1.
+
+
+                                                                NLO
+                                                                LO
+                                                 0.5 -1
+                                                    10                           1                                 10
+                                                                                                         µ2/µ20
+
+                             FIG. 2: Scale dependence of the electroproduction cross section.
+
+plot Q2 = 200 GeV2 , but xB = 0.01 and we integrate over the allowed pT range, starting from |pT | > 3.5 GeV. As
+expected, the scale dependence is milder for the NLO estimate, although it is not negligible.
+   Notice that our NLO estimate focus on the ‘direct’ coupling of photons to partons, without taking into account the
+‘resolved’ photon contributions, as those computed with virtual photon parton densities. These contributions have
+been carefully analyzed in references [7, 8].
+                                                                                                                             7
+
+                                                          III.         PHENOMENOLOGY
+
+   Recently the H1 [20] collaboration has presented an improved measurement of the production of neutral pions in
+collisions between 27.6 GeV positrons and 820 GeV protons. Neutral pions are required to be produced within a small
+angle θπ from the proton beam in the laboratory frame (θπ ∈ [5o , 25o ]), with an energy fraction xπ = Eπ /EP > 0.01
+and 2.5 < pT < 15 GeV. The data confirmed previous measurements which suggested that QCD LO predictions
+underestimate the cross section at low xB [21]. On the other side, predictions based on BFKL dynamics [22], or on a
+large virtual photon content [23] seemed to provide better descriptions.
+   The disagreement between the H1 data and estimates based on O(αs ) cross sections convoluted with LO parton
+densities and fragmentation functions can be as large as an order of magnitude, depending on the particular kinematical
+region. This discrepancy is far larger than the typical K-factor found in the previous section, what suggests the onset
+of a physical mechanism different to leading or next to leading order DGLAP dynamics.
+   However, several non-negligible effects are present at the particular kinematical regime of the experiment, which
+are responsible for a large difference between the LO and NLO estimates. The first one is the stringent cut on the
+pion production angle in H1 data, which suppresses LO and NLO contributions in a different way. The suppression
+of LO configurations is proportionally bigger than for NLO, implying an effective K-factor much larger than the one
+found for the cross section without cuts. The second important feature is the rather low value of the scales involved
+(pT and Q2 ) which enhance the uncertainty due to the particular choice for the factorization scale, even in the NLO
+calculation, as it has been pointed in [7]. This is particularly significant for the lowest Q2 bins. Finally, there is also a
+large uncertainty factor in the theoretical prediction coming from fragmentation functions. Although fragmentation
+functions reproduce fairly well e+ e− annihilation into hadrons, they show large differences when they are used to
+compute deep inelastic semi-inclusive cross sections.
+   In Figures 3 and 4 we show the LO and NLO predictions for the electroproduction of neutral pions as a function
+of xB and pT , respectively, in the kinematical range of the H1 experiment, together with the most recent data for
+the range pT ≥ 3.5 GeV. The cross sections are computed as described in the previous sections, applying H1 cuts
+and using MRST02 parton densities [19]. Similar results are found using other sets of modern PDFs. For the input
+fragmentation functions, we use two different sets, the ones from reference [3] denoted as KKP and those from [4]
+referenced as K. We set the renormalization and factorization scales as in eq. (27) and we compute αs at NLO(LO)
+fixing ΛQCD as in the MRST analysis, such that αs (MZ ) = 0.1197(0.130).
+
+
+                                                    600
+
+
+                                     dσπ/dxB (nb)
+                                                                             2 ≤ Q ≤ 8 GeV
+                                                                                    2           2
+                                                    450
+
+                                                    300                                     KKP NLO
+                                                                                            KKP LO
+                                                    150                                     K NLO
+                                                                                            K LO
+                                                     0
+                                                                             8 ≤ Q ≤ 20 GeV
+                                                                                    2               2
+                                                    75
+
+                                                    50
+
+                                                    25
+
+                                                     0
+                                                                             20 ≤ Q ≤ 70 GeV
+                                                                                        2               2
+
+                                                    20
+
+
+                                                    10
+                                                          pT ≥ 3.5 GeV
+                                                     0            -4                -3
+                                                             10                10
+                                                                                                            xB
+
+
+FIG. 3: LO and NLO cross sections, including experimental cuts as explained in the text, as a function of xB . H1 data [20] for
+the range pT ≥ 3.5 GeV are also shown.
+
+   The plots clearly show some of the features mentioned above. On the one hand, the NLO cross sections are much
+larger than the LO ones, even by the required order of magnitude in certain kinematical regions, once the forward
+π 0 selection applied by H1 is implemented. The position of the maximum for the xB distribution is also shifted to
+lower xB values, agreeing nicely with the experimental shape. Cross sections differential in pT show similar features,
+                                                                                                                                               8
+
+
+
+
+                                                 dσπ/dpT (pb/GeV)
+                                                                                                 2 ≤ Q ≤ 4.5 GeV
+                                                                        2                              2                  2
+                                                                    10
+                                                                                                                       KKP NLO
+                                                                    10                                                 KKP LO
+                                                                                                                       K NLO
+                                                                    1                                                  K LO
+
+
+
+                                                                         2
+                                                                                                 4.5 ≤ Q ≤ 15 GeV
+                                                                                                           2                  2
+                                                                    10
+                                                                    10
+                                                                    1
+
+                                                                         2
+                                                                                                 15 ≤ Q ≤70 GeV
+                                                                                                           2              2
+                                                                    10
+
+                                                                    10
+
+                                                                    1
+
+                                                                                3        4   5   6    7 8 9 10                        15
+                                                                                                                       pT (GeV)
+
+
+                           FIG. 4: Cross section as a function of pT , data and cuts as in Figure 3.
+
+
+however the difference between LO and NLO decreases as pT increases.
+   The uncertainty due to the choice of a fragmentation functions set is also quite noticeable, this fact driven by the
+different gluon content of the two sets considered here. Low Q2 bins seem to prefer KKP set, which have a larger
+gluon-fragmentation content, whereas for larger Q2 both sets agree with the data within errors. LO estimates show
+a much smaller sensitivity on the choice of fragmentation functions, since gluon fragmentation does not contribute
+significantly to the cross section at this order.
+
+
+                                                  700
+
+
+                                  dσπ/dxB (nb)
+                                                                                                     2 ≤ Q ≤ 8 GeV
+                                                                                                               2              2
+                                                  525
+
+                                                  350
+
+                                                  175
+
+                                                               0
+                                                                                                     8 ≤ Q ≤ 20 GeV
+                                                                                                               2                  2
+                                                        75
+
+                                                        50
+
+                                                        25
+
+                                                               0
+                                                                                                     20 ≤ Q ≤ 70 GeV
+                                                                                                                   2                  2
+
+
+                                                        20
+
+
+                                                        10
+                                                                             pT ≥ 3.5 GeV
+                                                               0                    -4                         -3
+                                                                               10                      10
+                                                                                                                                          xB
+
+FIG. 5: NLO cross sections as a function of xB . The central (solid) line corresponds to setting the factorization and renormal-
+ization scales to (Q2 + p2T )/2 and the upper and lower (dashed) ones to (Q2 + p2T )/4 and Q2 + p2T respectively.
+
+  As mentioned, the dependence of the cross section in the choice for the renormalization and factorization scale is
+                                                                                                                            9
+
+also an important source of uncertainty even at NLO. In Figure 5 we show the NLO prediction with the standard
+choice for the scale, MRST02 parton densities and KKP fragmentation functions (solid line) as in Figure 3, together
+with H1 data and the estimates with a scale twice as large (lower dashes) and another scale half of the former (upper
+dashes).
+   Finally, in order to illustrate the effects of the forward selection criteria, in Figure 6 we show the effective K-factor
+for the lowest Q2 bin, with and without taking into account the constraints on θπ and xπ . Although the low values
+
+
+                                                             15
+
+
+
+                                         /dxB )/(dσ /dxB )
+                                                                                         2 ≤ Q ≤ 8 GeV
+                                                                                             2           2
+
+                                      LO                                                             H1 cuts
+                                                                                                     No cuts
+                                                             10
+
+
+                                      NLO
+
+
+                                         K=(dσ
+                                                             5
+
+
+
+
+                                                             0                      -4
+                                                                           10
+                                                                                                                  xB
+
+      FIG. 6: K-factors for the lowest Q2 bin of Figure 3 as a function of xB with and without the experimental cuts.
+
+of xB and Q2 lead to a very large K-factor, the forward selection, typically enhances it by a factor of three. Notice
+that the process γ + g → g + q + q̄ becomes active at O(α2s ) and indeed turns out to be responsible for most of the
+correction, as it is illustrated in Figure 7, where we show the different contributions to the cross section discriminated
+by the underlying partonic process.
+   The rather large size of the K-factor can, then, be understood as a consequence of the opening of a new dominant
+(‘leading-order’) channel, and not to the ‘genuine’ increase in the partonic cross section that might otherwise threaten
+
+
+
+                                                       350
+
+
+                                 dσ/dxB (nb)
+                                                                                            2 ≤ Q ≤ 8 GeV
+                                                                                                 2            2
+
+                                                       300         gg
+
+
+
+                                                       250
+
+
+
+                                                       200
+
+
+
+                                                       150
+
+
+                                                                  qi qi
+                                                       100
+
+
+
+                                                             50
+                                                                  LO
+
+                                                                   gq
+                                                                                                             qi qj
+                                                             0                 -4
+                                                                          10
+                                                                                                                  xB
+
+FIG. 7: Contributions to the cross section discriminated by the underlying partonic process for the lowest Q2 bin of Figure 3,
+including experimental cuts. Processes qg and q q̄ give negligible contributions and are not shown in the plot.
+                                                                                                                      10
+
+perturbative stability. The dominance of the new channel is due to the size of the gluon distribution at small xB and
+to the fact that the H1 selection cuts highlight the kinematical region dominated by the γ + g → g + q + q̄ partonic
+process. In particular, without the experimental cuts for the final state hadrons, the gg component represents less than
+25% of the total NLO contribution at small xB , which is dominated by the gq subprocess. The forward selection is also
+responsible of the scale sensitivity of the cross section, as it supresses large components with small scale dependence
+whereas it stresses components as gg whose scale dependence would be partly canceled only at NNLO.
+
+
+                                                IV.   CONCLUSIONS
+
+  We have presented the analytical calculation of the differential cross section for semi-inclusive production of a
+hadron, with non vanishing transverse momentum, in DIS at next-to-leading-order in QCD. As for any semi-inclusive
+process, the necessity of integrating the phase space of the unobserved particles, but keeping the full dependence on the
+variables characterizing the final state hadron (and thus of the parton from where it comes), makes the computation
+of higher order corrections much more involved than the inclusive case. In the present case we showed that, with
+a suitable parameterization of the phase space, the necessary integrations can be performed analytically and the
+remaining singularities can be dealt with standard prescription recipes, without the need of substraction or phase
+space slicing methods.
+  We found that the order α2s corrections are important, leading to large K-factors. The main contributions to these
+corrections come from the partonic subprocess γ + g → g + q + q̄ which appears for the first time at that order. The
+appearance of new channels also leads to quite a significant factorization scale dependence even at the NLO level.
+  Concerning the phenomenological consequences of our results, we compared them with recent data coming from
+the H1 experiment at HERA [20]. Within the uncertainties arising from the scale dependence and the particular
+sensitivity of the results to the gluon hadronization mechanism, parameterized in the fragmentation functions, we
+found a very good agreement between data and theoretical expectations for both the xB and pT distributions. In
+particular, fixing the factorization and renormalization scales as just the average between the photon virtuality and
+the transverse momentum of the final state hadron, both distributions are well described by purely DGLAP evolution.
+We also found that the experimental cuts applied to the H1 data play a crucial role, boosting the NLO corrections,
+and thus explaining the unusual poor description of the LO estimate. Finally, our results are in agreement with those
+obtained previously by numerical methods [7, 8].
+  The large K-factors and the significant factorization scale dependence, both related to the opening of new channels
+at NLO, suggest the presence of non negligible NNLO effects. This feature, altogether with the fact that data is
+reasonably described by NLO estimates within uncertainties, obliterate any further effect that might contribute, like
+the resolved component of the photon or those coming from BFKL dynamics in the present experiments.
+
+
+                                          V.    ACKNOWLEDGEMENTS
+
+  We warmly acknowledge C. A. Garcı́a Canal for comments and suggestions. The work of one of us (A.D.) was
+supported in part by the Swiss National Science Foundation (SNF) through grant No. 200021-101874.
+
+
+
+
+ [1] A. D. Martin, R. G. Roberts, W. J. Stirling and R. S. Thorne, arXiv:hep-ph/0411040.
+ [2] J. Pumplin, D. R. Stump, J. Huston, H. L. Lai, P. Nadolsky and W. K. Tung, JHEP 0207 (2002) 012
+     [arXiv:hep-ph/0201195].
+ [3] B. A. Kniehl, G. Kramer and B. Potter, Nucl. Phys. B582 (2000) 514 [arXiv:hep-ph/0010289].
+ [4] S. Kretzer, Phys. Rev. D62 (2000) 054001. [arXiv:hep-ph/0003177].
+ [5] A. Daleo, C. Garcı́a Canal, R. Sassot, Nucl. Phys. B662 (2003) 334 [arXiv:hep-ph/0303199].
+ [6] A. Daleo, R. Sassot, Nucl. Phys. B673 (2003) 357 [arXiv:hep-ph/0309073].
+ [7] P. Aurenche, R. Basu, M. Fontannaz and R. M. Godbole, Eur. Phys. J. C34 (2004) 277 [arXiv:hep-ph/0312359].
+ [8] M. Fontannaz, arXiv:hep-ph/0410021.
+ [9] M. Maniatis, arXiv:hep-ph/0403002.
+[10] P. Aurenche, A. Douiri, R. Baier, M. Fontannaz and D. Schiff, Phys. Lett. B 135 (1984) 164; Nucl. Phys. B 286 (1987)
+     553.
+[11] L. E. Gordon, Phys. Rev. D 50 (1994) 6753.
+[12] D. de Florian and W. Vogelsang, Phys. Rev. D 57 (1998) 4376 [arXiv:hep-ph/9712273].
+[13] S. Wolfram, Mathematica Third Edition, Cambridge University Press 1996.
+                                                                                                                        11
+
+[14] M. Jamin, M.E. Lautenbacher, Comp. Phys. Comm. 74 (1993) 265.
+[15] R. K. Ellis, D. A. Ross and A. E. Terrano, Nucl. Phys. B 178 (1981) 421.
+[16] W. Beenakker, H. Kuijf, W. L. van Neerven and J. Smith, Phys. Rev. D40 (1989) 54. W. Beenakker, Ph. D. Thesis, Leiden,
+     1989.
+[17] E.B. Zijlstra, W.L. van Neerven, Nuc. Phys. B383 (1992) 525.
+[18] P. J. Rijken, W. L van Neerven, Phys. Lett. B386 (1992) 422.
+[19] A. D. Martin, R. G. Roberts, W. J. Stirling and R. S. Thorne, Eur. Phys. J. C28 (2003) 455 [arXiv:hep-ph/02112080].
+[20] A. Aktas et al. [H1 Collaboration], Eur. Phys. J. C36 (2004) 441 [arXiv:hep-ex/0404009].
+[21] C. Adloff et al. [H1 Collaboration],Phys. Lett. B462 (1999) 440 [arXiv:hep-ex/9907030].
+[22] J. Kwiecinski , A. D. Martin, J. J. Outhwaite, Eur. Phys. J. C9 (1999) 611 [arXiv:hep-ph/9903439].
+[23] H. Jung, L. Jönsson, H. Küster, hep-ph/9805396.
+[24] The explicit expressions for the factorized coefficients can be obtained from the authors upon request.
+

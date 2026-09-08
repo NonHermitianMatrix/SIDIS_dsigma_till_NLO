@@ -1,0 +1,359 @@
+{
+  "CNickelIndex": "e11|e|:102|1|",
+  "MassScales": 2,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "0",
+  "References": [
+    "arXiv:0712.1851",
+    "arXiv:2204.12983"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:2204.12983",
+      "authors": [
+        {
+          "full_name": "Chestnov, Vsevolod",
+          "inspire_id": 1760381
+        },
+        {
+          "full_name": "Gasparotto, Federico",
+          "inspire_id": 1945756
+        },
+        {
+          "full_name": "Mandal, Manoj K.",
+          "inspire_id": 1247611
+        },
+        {
+          "full_name": "Mastrolia, Pierpaolo",
+          "inspire_id": 1025886
+        },
+        {
+          "full_name": "Matsubara-Heo, Saiei J.",
+          "inspire_id": 2016791
+        },
+        {
+          "full_name": "Munch, Henrik J.",
+          "inspire_id": 2000628
+        },
+        {
+          "full_name": "Takayama, Nobuki",
+          "inspire_id": 2072902
+        }
+      ],
+      "description": "One-loop bubble with one massive propagator. Used to demonstrate IBP reduction via matrix factorial recurrence from Pfaffian system. Master integrals $I(4,1,1)$ and $I(4,2,0)$. Result for $I(4,1,2)$ decomposition verified against LiteRed.",
+      "epsOrders": "",
+      "familyName": "one-loop bubble (one mass)",
+      "method": "Macaulay-matrix, Pfaffian-system, matrix-factorial-recurrence",
+      "tools": [
+        "Risa/Asir",
+        "LiteRed"
+      ],
+      "ancillaryFiles": true,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 2,
+      "dimScheme": "",
+      "computationLevel": "full",
+      "location": "Section 6.3, eq. (6.10)-(6.11)",
+      "recordId": "bx_3901b15b3b5a",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Source": [
+    "arXiv",
+    "QCDLoop"
+  ],
+  "Results": [
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": "0",
+      "epsOrders": "0",
+      "propExponents": [
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.293",
+      "stCommand": "",
+      "contributor": "Sebastian Mizera",
+      "timestamp": "2026-04-15T15:48:53",
+      "verifiedAt": "2026-04-15T15:48:53",
+      "verified": true,
+      "method": "direct_integration",
+      "tools": [
+        "SubTropica"
+      ],
+      "methodLR": "Lungo",
+      "findRoots": false,
+      "byteCount": 1200,
+      "resultDataId": "8b5e0640b58d6ccb",
+      "resultTeXPreview": "\\frac{1}{\\varepsilon}+\\left(\\log \\left(\\frac{m^2}{m^2-M^2}\\right)-m^2 M^{-2} \\log \\left(\\frac{m^2}{m^2-M^2}\\right)-\\log (m^2)+2\\right)+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T073304Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "mm",
+        "MM",
+        "mm - MM"
+      ],
+      "singularitiesTeX": [
+        "\\text{mm}",
+        "\\text{MM}",
+        "\\text{mm}-\\text{MM}"
+      ],
+      "singularitiesVerified": [
+        false,
+        false,
+        false
+      ],
+      "groundTruthAvailable": false,
+      "provenance": {
+        "engine": "chi/SPQRLandau-CII SPQR-1.0.4 FF64",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 2,
+        "confirmPrimes": 2,
+        "confirmAgree": true,
+        "wallSeconds": 7.640000000000001
+      },
+      "timestamp": "2026-06-14T07:33:04Z",
+      "contributor": "oddletters-v1a",
+      "singularitiesChiDrop": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T073304Z",
+      "byEpsOrder": null,
+      "evens": [
+        "mm",
+        "MM",
+        "mm - MM"
+      ],
+      "evensTeX": [
+        "\\text{mm}",
+        "\\text{MM}",
+        "\\text{mm}-\\text{MM}"
+      ],
+      "evensVerified": [
+        false,
+        false,
+        false
+      ],
+      "groundTruthAvailable": false,
+      "oddLetters": [
+        {
+          "P": "mm/2 + MM/2",
+          "PTeX": "\\frac{\\text{mm}}{2}+\\frac{\\text{MM}}{2}",
+          "c": "1/4",
+          "Q": "mm*MM",
+          "QTeX": "\\text{mm} \\text{MM}",
+          "multiset": [
+            [
+              "mm - MM",
+              2
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "\\text{mm}-\\text{MM}",
+              2
+            ]
+          ],
+          "letter": "(mm/2 + MM/2 - Sqrt[mm*MM])/(mm/2 + MM/2 + Sqrt[mm*MM])",
+          "letterTeX": "\\frac{-\\sqrt{\\text{mm} \\text{MM}}+\\frac{\\text{mm}}{2}+\\frac{\\text{MM}}{2}}{\\sqrt{\\text{mm} \\text{MM}}+\\frac{\\text{mm}}{2}+\\frac{\\text{MM}}{2}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 1,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 2
+            }
+          ]
+        },
+        {
+          "P": "mm - MM",
+          "PTeX": "\\text{mm}-\\text{MM}",
+          "c": "-1",
+          "Q": "mm^2 - mm*MM",
+          "QTeX": "\\text{mm}^2-\\text{mm} \\text{MM}",
+          "multiset": [
+            [
+              "mm - MM",
+              1
+            ],
+            [
+              "MM",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "\\text{mm}-\\text{MM}",
+              1
+            ],
+            [
+              "\\text{MM}",
+              1
+            ]
+          ],
+          "letter": "(mm - MM - Sqrt[mm^2 - mm*MM])/(mm - MM + Sqrt[mm^2 - mm*MM])",
+          "letterTeX": "\\frac{-\\sqrt{\\text{mm}^2-\\text{mm} \\text{MM}}+\\text{mm}-\\text{MM}}{\\sqrt{\\text{mm}^2-\\text{mm} \\text{MM}}+\\text{mm}-\\text{MM}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 1,
+              "power": 1
+            },
+            {
+              "w": 3,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ]
+        },
+        {
+          "P": "mm - MM",
+          "PTeX": "\\text{mm}-\\text{MM}",
+          "c": "1",
+          "Q": "-(mm*MM) + MM^2",
+          "QTeX": "\\text{MM}^2-\\text{mm} \\text{MM}",
+          "multiset": [
+            [
+              "mm - MM",
+              1
+            ],
+            [
+              "mm",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "\\text{mm}-\\text{MM}",
+              1
+            ],
+            [
+              "\\text{mm}",
+              1
+            ]
+          ],
+          "letter": "(mm - MM - Sqrt[-(mm*MM) + MM^2])/(mm - MM + Sqrt[-(mm*MM) + MM^2])",
+          "letterTeX": "\\frac{-\\sqrt{\\text{MM}^2-\\text{mm} \\text{MM}}+\\text{mm}-\\text{MM}}{\\sqrt{\\text{MM}^2-\\text{mm} \\text{MM}}+\\text{mm}-\\text{MM}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 1,
+              "power": 1
+            }
+          ]
+        }
+      ],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "chi/SPQRLandau-CII SPQR-1.0.4 FF64",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 2,
+        "confirmPrimes": 2,
+        "confirmAgree": true,
+        "wallSeconds": 7.640000000000001
+      },
+      "timestamp": "2026-06-14T07:33:04Z",
+      "contributor": "oddletters-v1a",
+      "evensChiDrop": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "Names": [
+    "Bubble (threshold)",
+    "Bubble",
+    "Self-energy",
+    "B0",
+    "1-loop propagator",
+    "1-mass bubble (4-point)",
+    "Bubble (4-point)"
+  ],
+  "QCDLoopURL": "https://qcdloop.fnal.gov/bub2.pdf",
+  "edges": "{{{1, 2}, 0}, {{1, 2}, m}}",
+  "nodes": "{{1, M}, {2, M}}",
+  "quadruple": "{E^(eps*EulerGamma)*Gamma[eps], (x1 + x2)^(2*(-1 + eps))/(-(x2*(mm*x1 - MM*x1 + mm*x2)))^eps, {x1, x2}, {mm, MM}}",
+  "CanonicalName": "Bubble, 1 massive propagator (b)",
+  "MassConfig": {
+    "numEdges": 2,
+    "numMassiveEdges": 1,
+    "numMasslessEdges": 1,
+    "distinctInternalMasses": 1,
+    "internalMassLabels": [
+      "m"
+    ],
+    "edgeMassPattern": "01",
+    "numExtLegs": 2,
+    "numOnshellMassiveExtLegs": 2,
+    "numMasslessExtLegs": 0,
+    "extLegSignature": "MM"
+  },
+  "commonNames": [
+    "B₀(1×m)",
+    "B"
+  ],
+  "Subsectors": [],
+  "ParentSectors": [
+    "112|e2|e|:012|30|3|",
+    "112|e2|e|:123|40|4|"
+  ],
+  "Loops": 1,
+  "NumPropagators": 2
+}

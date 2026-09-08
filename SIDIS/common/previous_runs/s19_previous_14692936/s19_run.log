@@ -1,0 +1,12 @@
+MONITOR_START job=14692936 host=n6044 kernel_pid=2733
+"From remote kernel:"
+"\"VIRTUAL_CONTINUATION \"InputForm[FeynCalc`GLI[\"V01\", {0, 1, 0, 1}]]\" kernel \"1\n"
+"From remote kernel:"
+"\"VIRTUAL_CONTINUATION \"InputForm[FeynCalc`GLI[\"V02\", {1, 1, 0, 0}]]\" kernel \"2\n"
+"From remote kernel:"
+"\"VIRTUAL_CONTINUATION \"InputForm[FeynCalc`GLI[\"V03\", {0, 1, 1, 0}]]\" kernel \"3\n"
+"From remote kernel:"
+"\"VIRTUAL_CONTINUATION \"InputForm[FeynCalc`GLI[\"V03\", {1, 1, 0, 0}]]\" kernel \"4\n"
+"From remote kernel:"
+"\"FAIL: \"\"one inherited Feynman pole prescription\"\n"
+MONITOR_WAKE {"stage": "s19", "source": "s19_assemble_virtual.wl", "source_sha256": "83b4b13e36ddb2760d6575e790d07a9eb34fd0aa07acd7c3fc7c87faabfdcc07", "job_id": "14692936", "host": "n6044", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": "stage gate failure", "peak_rss_bytes": 731938816, "elapsed_seconds": 29.077746540308, "completed_utc": "2026-09-07T12:25:14.926701+00:00"}

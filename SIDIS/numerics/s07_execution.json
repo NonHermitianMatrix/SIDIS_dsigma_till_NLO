@@ -1,0 +1,23 @@
+{
+  "stage": "s07",
+  "source": "s07_compile_hard_functions.py",
+  "source_sha256": "eb710c9604d4bbe8a493e18e02e89a904868295003fc67467839cc3592124c4c",
+  "job_id": "14693777",
+  "host": "n6044",
+  "exit_code": 0,
+  "success_marker": true,
+  "result_checks": {
+    "s07_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "-c",
+    "import os,sys\nfrom pathlib import Path\nfor name in ['s07_evaluator.cpp','s07_evaluator.so']:\n p=Path('s07_cache')/name\n if p.exists():p.unlink()\nos.execv(sys.executable,[sys.executable,'-u','s07_compile_hard_functions.py'])"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 704008192,
+  "elapsed_seconds": 48.42550669051707,
+  "completed_utc": "2026-09-07T16:42:03.340004+00:00"
+}

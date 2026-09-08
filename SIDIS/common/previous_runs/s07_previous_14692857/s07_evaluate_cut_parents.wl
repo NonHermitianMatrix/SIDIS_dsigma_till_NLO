@@ -1,0 +1,99 @@
+(* Full SubTropica evaluation of the freshly derived Euclidean parents. *)
+$HistoryLength = 0;
+$FeynCalcStartupMessages = False;
+Get["FeynCalc`"];
+root = DirectoryName[$InputFileName];
+gate[name_, condition_] := If[!TrueQ[condition], Print["FAIL: ", name];
+  If[$KernelID > 0, Throw[$Failed, "S07Failure"], CloseKernels[]; Quit[1]]];
+put[value_, path_] := (Put[value, path <> ".tmp"];
+  RenameFile[path <> ".tmp", path, OverwriteTarget -> True]);
+inputs = Get[FileNameJoin[{root, "s06_result.wl"}]];
+gate["accepted corrected parent inputs", TrueQ[inputs["Accepted"]] &&
+  inputs["SourceHash"] === FileHash[FileNameJoin[{root, "s06_cut_parent_inputs.wl"}], "SHA256"]];
+software = Import[FileNameJoin[{root, "software", "s01_result.json"}], "RawJSON"];
+gate["accepted dedicated integration tools", TrueQ[software["accepted"]]];
+sourceHash = FileHash[$InputFileName, "SHA256"];
+inputFileHash = FileHash[FileNameJoin[{root, "s06_result.wl"}], "SHA256"];
+order = 1;
+packageRoot = FileNameJoin[{root, "software", "SubTropica-1.2.10"}];
+packageHash = FileHash[FileNameJoin[{root, "software", "SubTropica-1.2.10.tar.gz"}], "SHA256"];
+polymake = FileNameJoin[{root, "software", "s01_polymake"}];
+workRoot = FileNameJoin[{root, "common", "s07_subtropica_parents"}];
+If[!DirectoryQ[workRoot], CreateDirectory[workRoot, CreateIntermediateDirectories -> True]];
+evaluateParent[id_, data_] := Catch[Module[
+  {inputHash, work, resultFile, saved, tuple, rename, raw, normalized, result, originalDirectory},
+  inputHash = Hash[{sourceHash, data["SubTropicaInput"], order, packageHash,
+    FileHash[polymake, "SHA256"], $Version}, "SHA256"];
+  work = FileNameJoin[{workRoot, id, IntegerString[inputHash, 16]}];
+  If[!DirectoryQ[work], CreateDirectory[work, CreateIntermediateDirectories -> True]];
+  resultFile = FileNameJoin[{work, "s07_result.wl"}];
+  If[FileExistsQ[resultFile], saved = Get[resultFile];
+    If[AssociationQ[saved] && saved["InputHash"] === inputHash &&
+      TrueQ[saved["AcceptedEuclideanParent"]], Return[saved]]];
+  originalDirectory = Directory[]; SetDirectory[work];
+  If[!MemberQ[$Packages, "SubTropica`"],
+    Get[FileNameJoin[{packageRoot, "Kernel", "init.m"}]]];
+  SubTropica`$PolymakeCommand = polymake;
+  SubTropica`STCheckDependencies[];
+  gate[id <> " polymake available in this compute worker",
+    Lookup[SubTropica`$STDependencies["polymake"], "status", ""] === "ok"];
+  SetOptions[HyperIntica`HyperInt, "EvaluatePeriodsQ" -> True];
+  tuple = data["SubTropicaInput"];
+  rename = Thread[tuple[[3]] -> Table[Symbol["Global`xx" <> ToString[i]], {i, Length[tuple[[3]]]}]];
+  tuple = tuple /. rename /. Global`eps -> SubTropica`eps;
+  $Assumptions = And @@ Join[# > 0 & /@ tuple[[4]], {Element[SubTropica`eps, Reals]}];
+  put[<|"InputHash" -> inputHash, "Input" -> tuple, "Order" -> order,
+    "ParameterRename" -> rename, "PackageHash" -> packageHash,
+    "SourceHash" -> sourceHash, "MeasureConvention" -> data["MeasureConvention"]|>,
+    FileNameJoin[{work, "s07_input.wl"}]];
+  Print["SUBTROPICA_START ", id, " order ", order, " kernel ", $KernelID];
+  raw = MemoryConstrained[TimeConstrained[SubTropica`STIntegrate[tuple,
+    "Order" -> order, "Integrator" -> "HyperIntica", "LROrderBackend" -> "HyperIntica",
+    "KernelsAvailable" -> 1, "SimplifyOutput" -> Identity,
+    "Verbose" -> False, "ShowTimings" -> True, "ScanGauges" -> False,
+    "SetProblemID" -> id, "SaveAllIntegrands" -> "s07_all_integrands.wl",
+    "ReuseExistingResults" -> False, "ClearCachesPerIntegrand" -> True],
+    3600, gate[id <> " integration time limit", False]], 3*1024^3,
+    gate[id <> " integration memory limit", False]];
+  put[<|"InputHash" -> inputHash, "Input" -> tuple, "RawOutput" -> raw,
+    "PackageVersion" -> SubTropica`$SubTropicaVersion|>, FileNameJoin[{work, "s07_raw.wl"}]];
+  gate[id <> " genuine complete SubTropica series", MatchQ[raw, _SeriesData] &&
+    FreeQ[raw, $Failed | $Aborted | _SubTropica`STIntegrate] && raw[[5]] > order];
+  normalized = raw /. HyperIntica`Hlog[arg_, word_List] :> HyperIntica`HlogAsMpl[arg, word];
+  normalized = FixedPoint[(# /. {HyperIntica`mzv[n_Integer] :> Zeta[n],
+    HyperIntica`Mpl[{n_Integer}, {arg_}] :> PolyLog[n, arg]}) &, normalized];
+  result = <|"ParentID" -> id, "InputHash" -> inputHash, "Order" -> order,
+    "RawOutputFile" -> FileNameJoin[{work, "s07_raw.wl"}],
+    "RawOutputHash" -> FileHash[FileNameJoin[{work, "s07_raw.wl"}], "SHA256"],
+    "Series" -> normalized, "EuclideanConditions" -> data["EuclideanConditions"],
+    "MeasureConvention" -> data["MeasureConvention"], "WorkDirectory" -> work,
+    "SubTropicaVersion" -> SubTropica`$SubTropicaVersion,
+    "AcceptedEuclideanParent" -> True, "CutExtractionPerformed" -> False|>;
+  put[result, resultFile]; SetDirectory[originalDirectory]; ClearSystemCache[];
+  Print["SUBTROPICA_PARENT_ACCEPTED ", id]; result], "S07Failure"];
+slots = Quiet[Check[ToExpression[Environment["NSLOTS"]], 1]];
+If[!IntegerQ[slots] || slots < 1, slots = 1];
+CloseKernels[];
+If[slots > 1, LaunchKernels[KernelConfiguration["localhost", "KernelCommand" ->
+  "/u/local/apps/mathematica/13.1/Executables/WolframKernel", "KernelCount" -> Min[4, slots],
+  "TimeConstraint" -> 60]]];
+workers = Length[Kernels[]];
+If[workers > 0, ParallelEvaluate[$HistoryLength = 0];
+  DistributeDefinitions[gate, put, evaluateParent, sourceHash, order, packageRoot,
+    packageHash, polymake, workRoot];
+  runtime = ParallelEvaluate[{$MachineName, $Version}];
+  gate["SubTropica workers share the allocated node", And @@ (First[#] === $MachineName & /@ runtime)], runtime = {}];
+$DistributedContexts = None;
+tasks = KeyValueMap[List, inputs["ParentInputs"]];
+results = If[workers > 0, ParallelMap[evaluateParent @@ # &, tasks, Method -> "FinestGrained"],
+  evaluateParent @@ # & /@ tasks];
+CloseKernels[];
+gate["every parent evaluated", FreeQ[results, $Failed | $Aborted] &&
+  And @@ Lookup[results, "AcceptedEuclideanParent"]];
+put[<|"Parents" -> AssociationThread[Keys[inputs["ParentInputs"]], results],
+  "SourceHash" -> sourceHash, "InputFileHash" -> inputFileHash,
+  "PackageHash" -> packageHash, "Order" -> order, "ParallelRuntime" -> runtime,
+  "AcceptedEuclideanParents" -> True, "CutExtractionPerformed" -> False|>,
+  FileNameJoin[{root, "s07_result.wl"}]];
+Print["S07_SUCCESS: ", Length[results], " Euclidean parent integrals evaluated by SubTropica."];
+Quit[0];

@@ -1,0 +1,383 @@
+2 Fermat/Blackbox instances will be run in parallel.
+The user defined environment variable FERMATPATH for Fermat is set:
+/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/fermat/Ferl7/fer64
+The directories for the temporary files, result files and the sector mapping files are: 
+./tmp
+./results
+./sectormappings
+One variable is set to 1: {}
+Kira prepares topology: OS and top level sector: 
+3 
+Kira prepares topology: SE and top level sector: 
+3 
+Kira prepares topology: UV and top level sector: 
+1 
+
+*****Integral ordering*************************************
+VERSION table created successfully
+Kira database version number: 2.1
+WEIGHTBITS table created successfully
+INTEGRALORDERING table created successfully
+Kira will use the integral ordering: 1.
+With topology: OS use intermediate permutation
+0 1 2 3 
+With topology: SE use intermediate permutation
+0 1 2 3 
+With topology: UV use intermediate permutation
+0 1 2 3 
+Following reductions will be performed for the topology: OS
+Sector: 3 rmax: 5 smax: 5 
+
+Following reductions will be performed for the topology: SE
+Sector: 3 rmax: 5 smax: 5 
+
+Following reductions will be performed for the topology: UV
+Sector: 1 rmax: 5 smax: 5 
+
+***********************************************************
+Find IBP LI and symmetry relations for the topology: OS
+***********************************************************
+
+*****Generate IBP identities*******************************
+There are 4 IBP identities
+( 0.004264 s )
+
+*****Generate LI identities********************************
+There are 3 LI identities
+( 0.008964 s )
+
+*****Search trivial sectors********************************
+
+Non trivial sectors in total: 9
+Trivial sectors in total: 7
+( 0.0 s )
+
+Search symmetry relations: 
+
+( 0.0 s )
+***********************************************************
+Find IBP LI and symmetry relations for the topology: SE
+***********************************************************
+
+*****Generate IBP identities*******************************
+There are 4 IBP identities
+( 0.0 s )
+
+*****Generate LI identities********************************
+There are 3 LI identities
+( 0.0 s )
+
+*****Search trivial sectors********************************
+
+Non trivial sectors in total: 9
+Trivial sectors in total: 7
+( 0.0 s )
+
+Search symmetry relations: 
+
+( 0.0 s )
+***********************************************************
+Find IBP LI and symmetry relations for the topology: UV
+***********************************************************
+
+*****Generate IBP identities*******************************
+There are 4 IBP identities
+( 0.0 s )
+
+*****Generate LI identities********************************
+There are 3 LI identities
+( 0.0 s )
+
+*****Search trivial sectors********************************
+
+Non trivial sectors in total: 15
+Trivial sectors in total: 1
+( 0.0 s )
+
+Search symmetry relations: 
+
+( 0.0 s )
+***********************************************************
+Prepare Symmetries for the topology: OS
+***********************************************************
+Build symmetries for OS x OS 
+
+Sector relations: 0
+Sector symmetries: 0
+( 0.0 s )
+***********************************************************
+Prepare Symmetries for the topology: SE
+***********************************************************
+Build symmetries for SE x OS 
+
+Sector relations: 0
+Sector symmetries: 0
+( 0.0 s )
+Build symmetries for SE x SE 
+
+Sector relations: 0
+Sector symmetries: 1
+( 0.0 s )
+***********************************************************
+Prepare Symmetries for the topology: UV
+***********************************************************
+Build symmetries for UV x OS 
+
+Sector relations: 0
+Sector symmetries: 0
+( 0.0 s )
+Build symmetries for UV x SE 
+
+Sector relations: 0
+Sector symmetries: 0
+( 0.0 s )
+Build symmetries for UV x UV 
+
+Sector relations: 0
+Sector symmetries: 0
+( 0.0 s )
+
+***********************************************************
+Kira starts the reduction of the topology: OS
+***********************************************************
+
+***** Select equations recursively ************************
+length of mandatory list: 69
+Algebraic reconstruction is switched off.
+Equation table created successfully
+188 independent coefficients
+directory to the masters: OS
+Number of master integrals: 69
+SE[1,1,0,0]    # 3
+UV[1,0,0,0]    # 1
+UV[1,-1,0,0]   # 1
+UV[1,0,-1,0]   # 1
+UV[1,0,0,-1]   # 1
+UV[2,0,0,0]    # 1
+UV[2,-1,0,0]   # 1
+UV[2,0,-1,0]   # 1
+UV[2,0,0,-1]   # 1
+UV[2,-2,0,0]   # 1
+UV[2,-1,-1,0]  # 1
+UV[2,-1,0,-1]  # 1
+UV[2,0,-2,0]   # 1
+UV[2,0,-1,-1]  # 1
+UV[2,0,0,-2]   # 1
+UV[3,0,0,0]    # 1
+UV[3,-1,0,0]   # 1
+UV[3,0,-1,0]   # 1
+UV[3,0,0,-1]   # 1
+UV[3,-2,0,0]   # 1
+UV[3,-1,-1,0]  # 1
+UV[3,-1,0,-1]  # 1
+UV[3,0,-2,0]   # 1
+UV[3,0,-1,-1]  # 1
+UV[3,0,0,-2]   # 1
+UV[3,-3,0,0]   # 1
+UV[3,-2,-1,0]  # 1
+UV[3,-2,0,-1]  # 1
+UV[3,-1,-2,0]  # 1
+UV[3,-1,-1,-1] # 1
+UV[3,-1,0,-2]  # 1
+UV[3,0,-3,0]   # 1
+UV[3,0,-2,-1]  # 1
+UV[3,0,-1,-2]  # 1
+UV[3,0,0,-3]   # 1
+UV[4,0,0,0]    # 1
+UV[4,-1,0,0]   # 1
+UV[4,0,-1,0]   # 1
+UV[4,0,0,-1]   # 1
+UV[4,-2,0,0]   # 1
+UV[4,-1,-1,0]  # 1
+UV[4,-1,0,-1]  # 1
+UV[4,0,-2,0]   # 1
+UV[4,0,-1,-1]  # 1
+UV[4,0,0,-2]   # 1
+UV[4,-3,0,0]   # 1
+UV[4,-2,-1,0]  # 1
+UV[4,-2,0,-1]  # 1
+UV[4,-1,-2,0]  # 1
+UV[4,-1,-1,-1] # 1
+UV[4,-1,0,-2]  # 1
+UV[4,0,-3,0]   # 1
+UV[4,0,-2,-1]  # 1
+UV[4,0,-1,-2]  # 1
+UV[4,0,0,-3]   # 1
+UV[4,-4,0,0]   # 1
+UV[4,-3,-1,0]  # 1
+UV[4,-3,0,-1]  # 1
+UV[4,-2,-2,0]  # 1
+UV[4,-2,-1,-1] # 1
+UV[4,-2,0,-2]  # 1
+UV[4,-1,-3,0]  # 1
+UV[4,-1,-2,-1] # 1
+UV[4,-1,-1,-2] # 1
+UV[4,-1,0,-3]  # 1
+UV[4,0,-4,0]   # 1
+UV[4,0,-3,-1]  # 1
+UV[4,0,-2,-2]  # 1
+UV[4,0,-1,-3]  # 1
+No integrals to reduce, skipping this family.
+
+***********************************************************
+Kira starts the reduction of the topology: SE
+***********************************************************
+
+***** Select equations recursively ************************
+length of mandatory list: 69
+Algebraic reconstruction is switched off.
+380 independent coefficients
+directory to the masters: SE
+Number of master integrals: 69
+SE[1,1,0,0]    # 3
+UV[1,0,0,0]    # 1
+UV[1,-1,0,0]   # 1
+UV[1,0,-1,0]   # 1
+UV[1,0,0,-1]   # 1
+UV[2,0,0,0]    # 1
+UV[2,-1,0,0]   # 1
+UV[2,0,-1,0]   # 1
+UV[2,0,0,-1]   # 1
+UV[2,-2,0,0]   # 1
+UV[2,-1,-1,0]  # 1
+UV[2,-1,0,-1]  # 1
+UV[2,0,-2,0]   # 1
+UV[2,0,-1,-1]  # 1
+UV[2,0,0,-2]   # 1
+UV[3,0,0,0]    # 1
+UV[3,-1,0,0]   # 1
+UV[3,0,-1,0]   # 1
+UV[3,0,0,-1]   # 1
+UV[3,-2,0,0]   # 1
+UV[3,-1,-1,0]  # 1
+UV[3,-1,0,-1]  # 1
+UV[3,0,-2,0]   # 1
+UV[3,0,-1,-1]  # 1
+UV[3,0,0,-2]   # 1
+UV[3,-3,0,0]   # 1
+UV[3,-2,-1,0]  # 1
+UV[3,-2,0,-1]  # 1
+UV[3,-1,-2,0]  # 1
+UV[3,-1,-1,-1] # 1
+UV[3,-1,0,-2]  # 1
+UV[3,0,-3,0]   # 1
+UV[3,0,-2,-1]  # 1
+UV[3,0,-1,-2]  # 1
+UV[3,0,0,-3]   # 1
+UV[4,0,0,0]    # 1
+UV[4,-1,0,0]   # 1
+UV[4,0,-1,0]   # 1
+UV[4,0,0,-1]   # 1
+UV[4,-2,0,0]   # 1
+UV[4,-1,-1,0]  # 1
+UV[4,-1,0,-1]  # 1
+UV[4,0,-2,0]   # 1
+UV[4,0,-1,-1]  # 1
+UV[4,0,0,-2]   # 1
+UV[4,-3,0,0]   # 1
+UV[4,-2,-1,0]  # 1
+UV[4,-2,0,-1]  # 1
+UV[4,-1,-2,0]  # 1
+UV[4,-1,-1,-1] # 1
+UV[4,-1,0,-2]  # 1
+UV[4,0,-3,0]   # 1
+UV[4,0,-2,-1]  # 1
+UV[4,0,-1,-2]  # 1
+UV[4,0,0,-3]   # 1
+UV[4,-4,0,0]   # 1
+UV[4,-3,-1,0]  # 1
+UV[4,-3,0,-1]  # 1
+UV[4,-2,-2,0]  # 1
+UV[4,-2,-1,-1] # 1
+UV[4,-2,0,-2]  # 1
+UV[4,-1,-3,0]  # 1
+UV[4,-1,-2,-1] # 1
+UV[4,-1,-1,-2] # 1
+UV[4,-1,0,-3]  # 1
+UV[4,0,-4,0]   # 1
+UV[4,0,-3,-1]  # 1
+UV[4,0,-2,-2]  # 1
+UV[4,0,-1,-3]  # 1
+No integrals to reduce, skipping this family.
+
+***********************************************************
+Kira starts the reduction of the topology: UV
+***********************************************************
+
+***** Select equations recursively ************************
+length of mandatory list: 69
+Algebraic reconstruction is switched off.
+416 independent coefficients
+directory to the masters: UV
+Number of master integrals: 2
+SE[1,1,0,0] # 3
+UV[1,0,0,0] # 1
+
+Number of selected equations to reduce: 0 equations
+Regenerate:
+
+Number of selected equations to reduce: 81 equations
+( 0.4 s )
+Algebraic reconstruction is switched off.
+
+***** Select equations recursively ************************
+length of mandatory list: 69
+
+***** Bring system in triangular form *********************
+
+Iterate the system until it is in triangular form: 
+iteration: 0; items left: 2; time: ( 0.0 s )
+redundant: 0; insertions 2
+All coefficients will be normalized
+
+Equations out of bounds rmax and smax: 1
+Equations in the bounds rmax and smax: 80
+( 0.0 s )
+
+Write the triangular system to ./tmp/ on hard disk
+(--> ./tmp/UV/VERconfig, ./tmp/UV/VER###) 
+
+Triangular form completed after ( 0.0 s )
+FIREFLY table created successfully
+Algebraic reconstruction is switched off.
+
+***** Run the back substitution ***********************
+
+Load all files from ./tmp/
+Take 77 equations to reduce 70 missing equations
+
+Back substitution: 
+
+
+Equations reduced: 77 / 77
+Kira committed results ( 0.0 s )
+
+77 equations were reduced
+
+*****Master integrals***********************************
+UV[1,0,0,0] # 1
+SE[1,1,0,0] # 3
+
+*****Master integrals which do not appear on the right**
+*****hand side of the selected integrals****************
+SE[1,1,0,0] # 3
+
+Total number of master integrals: 2
+( 0.0 s )
+One variable is set to 1: {}
+One variable is set to 1: {}
+The input directory is set to:
+./results
+symbol_to_replace_by_one: x in kinematics.yaml is not set. 
+Mass reconstruction is disabled.
+################################################
+kira2math: Reconstruct results
+################################################
+
+Algebraic reconstruction is switched off.
+This requested integral is a master integral: SE[1,1,0,0] # 3
+This requested integral is a master integral: UV[1,0,0,0] # 1
+unreduced integrals: 0.
+
+Total time:
+( 10.4 s )

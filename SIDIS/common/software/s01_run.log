@@ -1,0 +1,19 @@
+MONITOR_START job=14692824 host=n7368 kernel_pid=13589
+Kira Kira version: 3.1 (Git: 3.1)
+Build configuration: release (static); non-MPI; 64 bit weights; with jemalloc;
+with external FireFly with FLINT
+polymake polymake version 4.4
+Copyright (c) 1997-2021
+Ewgenij Gawrilow, Michael Joswig, and the polymake team
+Technische UniversitÃ¤t Berlin, Germany
+https://polymake.org
+
+This is free software licensed under GPL; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+"[SubTropica] FF/SPQR auto-detect aborted; falling back to PolynomialQuotient[]."
+"                                @@@@@@@\n             ^^              @@@@@@@@@@@@@                 [×] polymake\n        ^^        ^^       @@@@@@@@@@@@@@@@@\n                          @@@@@@@@@@@@@@@@@@@           ^^\n                         @@@@@@@@@@@@@@@@@@@@@\n ~~~~ ~~~ ~~~~ ~~~~~ ~~  &&&&&&&&&&&&&&&&&&&&& ~~~~~~~ ~~~~~~~ ~~~ ~~~~\n ~        ~~   ~  ~      ~~~~~~~~~~~~~~~~~~~~~ ~       ~~    ~~ ~  ~~~~\n  ~ ~~     ~~~    ~  ~~   ~~    ~~~~~   ~~  ~~~    ~    ~~~    ~~  ~~\n          [-] pySecDec  [-] FIESTA  [-] AMFlow  [-] feyntrop\n     [-] FiniteFlow  [-] SPQR  [-] LiteRed  [-] FIRE  [-] HyperInt\n         [-] maple  [-] ginsh  [-] python3  [\[Checkmark]] curl  [-] make\n        [-] HyperFLINT  [-] HyperFORM  [-] IterInt  [-] msolve\n                       [-] SOFIA  [-] Effortless\n       [-] Kira  [-] FireFly  [-] Fermat  [-] NeatIBP  [-] SpaSM\n   [-] Singular  [-] FORM  [-] PolyLogTools  [-] Libra  [-] DiffExp\n ~  ~       ~ ~      ~           ~~ ~~~~~~  ~      ~~  ~             ~~\n       ~             ~        ~      ~      ~~   ~             ~\n\nWelcome to SubTropica v1.2.10!\n\nby Mathieu Giroux, Sebastian Mizera, Giulio Salvatori\n\nNew install \[LongDash] run STBenchmark[] to verify your setup."
+"  \[WarningSign] ""polymake"" is REQUIRED: ""brew install polymake  |  apt install polymake  |  conda install -c conda-forge polymake""\n    ""If not on $PATH: ConfigureSubTropica[PolymakePath -> \"/absolute/path/to/polymake\"]"
+"\[Checkmark]polymake  -ginsh  -IterInt  -maple  -HyperInt  -HyperFLINT  -HyperLogProcedures  -python3  -pySecDec  -FIESTA  -AMFlow  -LiteRed  -FIRE  -SPQR  -SOFIA  -Effortless  -feyntrop  -FiniteFlow  \[Checkmark]curl  -make  -Kira  -FireFly  -Fermat  -msolve  -NeatIBP  -SpaSM  -Singular  -FORM  -HyperFORM  -PolyLogTools  -Libra  -DiffExp"
+"S02_SUCCESS: SubTropica and its selected polymake runtime loaded."
+S01_SUCCESS
+MONITOR_WAKE {"stage": "s01", "source": "s01_toolchain.py", "source_sha256": "d4230245cbbf96c37f823cd7ec91bdb7fc5fd10cf79fbaae1c51ffbcd02c86d8", "job_id": "14692824", "host": "n7368", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 264310784, "elapsed_seconds": 12.269257582724094, "completed_utc": "2026-09-07T09:50:18.432364+00:00"}

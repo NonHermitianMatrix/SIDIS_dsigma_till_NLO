@@ -1,0 +1,477 @@
+{
+  "CNickelIndex": "e12|e2|e|:000|00|1|",
+  "MassScales": 1,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "0",
+  "References": [
+    "arXiv:0712.1851 (JHEP 02 (002), 2008)",
+    "arXiv:1401.3546 (JHEP 10 (125), 2014)",
+    "arXiv:1709.06055 (Phys.Rev.D 96 (), 2017)",
+    "arXiv:2201.03593 (doi: 10.1007/978-3-030-99558-4)",
+    "arXiv:hep-ph/0106243",
+    "arXiv:2412.15962",
+    "arXiv:1112.4524 (JHEP 03 (101), 2012)",
+    "arXiv:1510.06758 (Phys.Rev.D 93 (125014), 2016)",
+    "arXiv:1705.03478",
+    "arXiv:2603.18691"
+  ],
+  "Records": [
+    {
+      "dimScheme": "d=4-2*eps",
+      "recordId": "bf_a5883a4cf55d",
+      "verified": false,
+      "verifiedAt": "",
+      "authors": "Abreu, Samuel, Britto, Ruth, Duhr, Claude, Gardi, Einan",
+      "texkey": "Abreu:2014cla",
+      "computationLevel": "full",
+      "masterCount": 0,
+      "reference": "arXiv:1401.3546, JHEP 10 (125), 2014",
+      "ancillaryFiles": [],
+      "description": "One-loop triangle with massless propagators and one external mass $p_1^2$. IR divergent with $1/\\varepsilon^2$ pole.",
+      "familyName": "T(1m) / T^{1m}",
+      "location": "Appendix B",
+      "method": [],
+      "epsOrders": "",
+      "tools": [],
+      "doi": "10.1007/JHEP10(2014)125"
+    },
+    {
+      "dimScheme": "d=4-2*eps",
+      "recordId": "bf_798a0b647844",
+      "familyName": "Triangle_1",
+      "verified": false,
+      "verifiedAt": "",
+      "authors": "Ellis, R.Keith, Zanderighi, Giulia",
+      "texkey": "Ellis:2007qk",
+      "computationLevel": "full",
+      "masterCount": 1,
+      "location": "Sec. 3.1, Sec. 4.3.1",
+      "transcendentalWeight": 2,
+      "method": [],
+      "reference": "arXiv:0712.1851, JHEP 02 (002), 2008",
+      "ancillaryFiles": [],
+      "description": "Divergent one-loop triangle $I_3^D(0,0,p_3^2;0,0,0)$ with all massless internal lines and two on-shell external legs. Contains double $1/\\varepsilon^2$ pole from overlapping IR and collinear singularities.",
+      "epsOrders": "-2,-1,0",
+      "tools": [],
+      "doi": "10.1088/1126-6708/2008/02/002"
+    },
+    {
+      "reference": "arXiv:2201.03593 (doi: 10.1007/978-3-030-99558-4)",
+      "authors": "Weinzierl, Stefan",
+      "description": "One-mass massless one-loop triangle: closed-form result through $\\mathcal{O}(\\varepsilon^0)$ involving $1/\\varepsilon^2$ IR pole, single logarithm, $\\ln^2$ and $\\zeta_2$. Listed in the one-loop integral compendium as $I_3^{1m}(p_1^2,\\mu^2)$.",
+      "epsOrders": "0",
+      "familyName": "one-mass scalar triangle I_3^{1m}",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "10.1007/978-3-030-99558-4",
+      "texkey": "Weinzierl:2022eaz",
+      "masterCount": 1,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Appendix 'Scalar one-loop integrals' Sec. 'Massless scalar one-loop integrals', three-point functions, line ~49",
+      "recordId": "bx_1dc1155cab2b",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:hep-ph/0106243",
+      "authors": [
+        {
+          "full_name": "Binoth, T.",
+          "inspire_id": 1016306
+        },
+        {
+          "full_name": "Guillet, J.P.",
+          "inspire_id": 1007287
+        },
+        {
+          "full_name": "Heinrich, G.",
+          "inspire_id": 1006298
+        },
+        {
+          "full_name": "Schubert, C.",
+          "inspire_id": 989669
+        }
+      ],
+      "description": "Closed form all-orders-in-$\\varepsilon$: $r_\\Gamma/\\varepsilon^2 \\cdot (-s_{12})^{-\\varepsilon}/s_{12}$.",
+      "epsOrders": "all_orders",
+      "familyName": "massless 1-loop triangle with one off-shell leg",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Appendix",
+      "recordId": "bx_bd45df6b5760",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2412.15962",
+      "authors": "Wang, Ziwen, Yang, Li Lin",
+      "description": "Massless triangle with one off-shell leg ($p_1^2=s$). Illustrates contour-based reduction: the integral reduces to bubble sub-sectors.",
+      "epsOrders": "",
+      "familyName": "massless 1-loop 3-point triangle",
+      "method": "IBP",
+      "tools": [
+        "Kira"
+      ],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "Wang:2024hsm",
+      "masterCount": 0,
+      "dimScheme": "d=D",
+      "computationLevel": "IBP_only",
+      "location": "Section 2.2, Figure 2",
+      "recordId": "bx_adf31417a9fe",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1709.06055 (Phys.Rev.D 96 (), 2017)",
+      "authors": "Bern, Zvi, Enciso, Michael, Ita, Harald, Zeng, Mao",
+      "description": "One-loop massless triangle with two massive external legs. IBP relation from embedding formalism. No integral evaluation.",
+      "epsOrders": "",
+      "familyName": "two-external-mass triangle",
+      "method": "IBP",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "10.1103/PhysRevD.96.096017",
+      "texkey": "Bern:2017gdk",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "IBP_only",
+      "location": "Section 3.2, Eq. (3.37), Fig. 3",
+      "recordId": "bx_0a4a17c53a8b",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1112.4524 (JHEP 03 (101), 2012)",
+      "authors": "Gehrmann, Thomas, Henn, Johannes M., Huber, Tobias",
+      "description": "One-loop scalar triangle integral with two on-shell massless legs (p1^2 = p2^2 = 0) and one off-shell leg q = p1 + p2. Defined in Eq. on p. ~14 as D_1 = int d^Dk/[i(2pi)^D] / (k^2 (k+p1)^2 (k-p2)^2). Closed-form result D_1^exp = -Gamma^2(-eps) Gamma(1-eps) Gamma(1+eps) / Gamma(1-2eps) given in appendix (Eq. for D_1).",
+      "epsOrders": "6",
+      "familyName": "Massless 1-loop form-factor triangle",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "10.1007/JHEP03(2012)101",
+      "texkey": "Gehrmann:2011xn",
+      "masterCount": 1,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Section 3.1, Eq. defining D_1 (line 682); appendix Eqs. (A) for D_1 expansion",
+      "recordId": "bx_4545535d7eb8",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1510.06758 (Phys.Rev.D 93 (125014), 2016)",
+      "authors": [
+        {
+          "full_name": "von Manteuffel, Andreas",
+          "inspire_id": 1020667
+        },
+        {
+          "full_name": "Panzer, Erik",
+          "inspire_id": 1261632
+        },
+        {
+          "full_name": "Schabinger, Robert M.",
+          "inspire_id": 1042049
+        }
+      ],
+      "description": "One-loop integral family for massless QCD quark and gluon form factors. Covers all one-loop form factor diagrams. Finite basis uses dimension-shifted ($d=6-2\\varepsilon$) bubble with squared propagators.",
+      "epsOrders": "6",
+      "familyName": "A1",
+      "method": "",
+      "tools": [
+        "Reduze2",
+        "HyperInt",
+        "Qgraf"
+      ],
+      "ancillaryFiles": true,
+      "doi": "10.1103/PhysRevD.93.125014",
+      "texkey": "vonManteuffel:2015gxa",
+      "masterCount": 1,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "basis",
+      "location": "Table 1, Eq. (11)-(12)",
+      "recordId": "bx_59a40488ffef",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1705.03478",
+      "authors": [
+        {
+          "full_name": "Harley, Mark",
+          "inspire_id": 1307863
+        },
+        {
+          "full_name": "Moriello, Francesco",
+          "inspire_id": 1799374
+        },
+        {
+          "full_name": "Schabinger, Robert M.",
+          "inspire_id": 1042049
+        }
+      ],
+      "description": "One-external-mass one-loop triangle with generic positive integer propagator exponents $\\nu_1, \\nu_2, \\nu_3$. Studied via s-channel cut in the Baikov-Lee representation to demonstrate the formalism for higher-multiplicity propagators and to verify the cut-discontinuity relation.",
+      "epsOrders": "all_orders",
+      "familyName": "OneExternalMassOneLoopTriangle",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": true,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 1,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Section 3.1 (subsec:triangle-gendots), Appendix B (sapp:oneloop-tri)",
+      "recordId": "bx_211db94f21ff",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2603.18691",
+      "authors": [
+        {
+          "full_name": "Dhani, Prasanna K.",
+          "inspire_id": 1607975
+        },
+        {
+          "full_name": "Pyretzidis, Konstantinos",
+          "inspire_id": 2938780
+        },
+        {
+          "full_name": "Ramírez-Uribe, Selomit",
+          "inspire_id": 1730297
+        },
+        {
+          "full_name": "Ríos-Sánchez, José",
+          "inspire_id": 2760441
+        },
+        {
+          "full_name": "Sborlini, German F.R.",
+          "inspire_id": 1074173
+        },
+        {
+          "full_name": "Tiwari, Surabhi",
+          "inspire_id": 1935452
+        },
+        {
+          "full_name": "Rodrigo, Germán",
+          "inspire_id": 991497
+        }
+      ],
+      "description": "One-loop massless triangle. IR-finite integrands constructed via LTD.",
+      "epsOrders": "0",
+      "familyName": "Massless 1-loop triangle (3 massless legs) / Massless 1-loop triangle (2 massless legs)",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "Dhani:2026cxx",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Sections 4-5, Table I",
+      "recordId": "bx_8a53ac3dc4bf",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Source": [
+    "arXiv",
+    "QCDLoop"
+  ],
+  "Results": [
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": "0",
+      "epsOrders": "0",
+      "propExponents": [
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.277",
+      "stCommand": "",
+      "contributor": "Sebastian Mizera",
+      "timestamp": "2026-04-14T02:11:32",
+      "verifiedAt": "2026-04-14T02:11:32",
+      "verified": true,
+      "method": "direct_integration",
+      "tools": [
+        "SubTropica"
+      ],
+      "methodLR": "Lungo",
+      "byteCount": 1600,
+      "alphabet": [
+        "M^2"
+      ],
+      "symbolWeight": 2,
+      "symbolTerms": 2,
+      "legOrder": [],
+      "resultDataId": "4139d848ac7e3858",
+      "resultTeXPreview": "\\frac{M^{-2}}{\\varepsilon^2}+\\frac{i M^{-2} \\left(\\pi +i \\log \\left(M^2\\right)\\right)}{\\varepsilon}+\\frac{1}{12} M^{-2} \\left(6 \\log ^2\\left(M^2\\right)-12 i \\pi  \\log \\left(M^2\\right)-12 \\zeta(2)-5 \\pi ^2\\right)+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "dimension": "6 - 2*eps",
+      "epsOrder": 0,
+      "propExponents": [
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "{}",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.379",
+      "stCommand": "STIntegrate[{{{{1, 2}, 0}, {{2, 3}, 0}, {{1, 3}, 0}}, {{1, M}, {2, 0}, {3, 0}}}, Dimension -> \"6 - 2*eps\", Order -> 0]",
+      "contributor": "SM",
+      "timestamp": "2026-04-19T19:00:46",
+      "byteCount": 616,
+      "alphabet": [
+        "M^2"
+      ],
+      "symbolWeight": 1,
+      "symbolTerms": 1,
+      "legOrder": [
+        2,
+        3,
+        1
+      ],
+      "resultDataId": "c593cc045b0833bd",
+      "resultTeXPreview": "-\\frac{1}{2 \\varepsilon}+\\frac{1}{2} \\left(\\log \\left(M^2\\right)-i \\pi -3\\right)+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T042835Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "MM"
+      ],
+      "singularitiesTeX": [
+        "\\text{MM}"
+      ],
+      "singularitiesVerified": [
+        true
+      ],
+      "groundTruthAvailable": true,
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 1,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 0.18,
+        "chiEngine": "eulerDiscriminant"
+      },
+      "timestamp": "2026-06-14T04:28:35Z",
+      "contributor": "oddletters-v1a",
+      "singularitiesChiDrop": [
+        0
+      ]
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T042835Z",
+      "byEpsOrder": null,
+      "evens": [
+        "MM"
+      ],
+      "evensTeX": [
+        "\\text{MM}"
+      ],
+      "evensVerified": [
+        true
+      ],
+      "groundTruthAvailable": true,
+      "oddLetters": [],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 1,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 0.18,
+        "chiEngine": "eulerDiscriminant"
+      },
+      "timestamp": "2026-06-14T04:28:35Z",
+      "contributor": "oddletters-v1a",
+      "evensChiDrop": [
+        0
+      ]
+    }
+  ],
+  "Names": [
+    "1-mass triangle (massless propagators)",
+    "Triangle",
+    "C0",
+    "$T^{1m}$",
+    "Triangle_1",
+    "two-external-mass triangle",
+    "T(1m)",
+    "$one-mass scalar triangle I_3^{1m}$",
+    "massless 1-loop triangle with one off-shell leg",
+    "massless 1-loop 3-point triangle"
+  ],
+  "QCDLoopURL": "https://qcdloop.fnal.gov/tridiv1.pdf",
+  "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{2, 3}, 0}}",
+  "nodes": "{{1, 0}, {2, 0}, {3, M}}",
+  "quadruple": "{E^(eps*EulerGamma)*Gamma[1 + eps], (MM*x2*x3)^(-1 - eps)*(x1 + x2 + x3)^(-1 + 2*eps), {x1, x2, x3}, {MM}}",
+  "Loops": 1,
+  "NumPropagators": 3,
+  "numericallyVerified": true,
+  "numericallyVerifiedAt": "2026-04-12",
+  "CanonicalName": "1-mass triangle",
+  "MassConfig": {
+    "numEdges": 3,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 3,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "000",
+    "numExtLegs": 3,
+    "numOnshellMassiveExtLegs": 1,
+    "numMasslessExtLegs": 2,
+    "extLegSignature": "00M"
+  },
+  "commonNames": [
+    "C₀"
+  ],
+  "Subsectors": [],
+  "ParentSectors": [
+    "e112|e3|e3|e|:0000|00|00|0|",
+    "e12|e3|e3|e|:000|00|00|0|",
+    "e12|e3|e3|e|:000|00|00|1|",
+    "e12|e3|e3|e|:000|00|01|0|",
+    "e12|e3|e3|e|:000|00|01|1|",
+    "e12|e3|e3|e|:000|00|10|1|",
+    "e12|e3|e3|e|:000|00|10|2|",
+    "e12|e3|e3|e|:000|00|11|1|",
+    "e12|e3|e3|e|:000|00|11|2|",
+    "e12|e3|e3|e|:000|00|12|3|"
+  ]
+}

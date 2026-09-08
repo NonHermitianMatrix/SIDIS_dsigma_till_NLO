@@ -1,0 +1,707 @@
+{
+  "CNickelIndex": "e12|e2|e|:100|20|3|",
+  "MassScales": 3,
+  "FunctionClass": "hypergeometric",
+  "EpsilonOrder": "-2,-1,0",
+  "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{2, 3}, 0}}",
+  "nodes": "{{1, M[1]}, {2, M[2]}, {3, M[3]}}",
+  "References": [
+    "arXiv:1401.4361",
+    "arXiv:1401.3546",
+    "arXiv:2309.12772",
+    "arXiv:2303.11105",
+    "arXiv:2402.19034",
+    "arXiv:1207.3824",
+    "Phys. Lett. B 298 (1993) 363",
+    "Phys. Lett. B 305 (1993) 136",
+    "arXiv:1803.05894 (PoS RADCOR2017 (002), 2018)",
+    "arXiv:hep-ph/9307327 (Phys.Atom.Nucl. 56 (1553-1557), 1993)",
+    "arXiv:1912.11067 (JHEP 08 (2020) 029)",
+    "arXiv:hep-th/9709216 (J. Math. Phys. 39 (1998) 4299)",
+    "arXiv:hep-ph/9212308 (Phys. Lett. B 302 (1993) 299-308)"
+  ],
+  "Records": [
+    {
+      "authors": "Panzer, Erik",
+      "texkey": "Panzer:2014gra",
+      "verified": true,
+      "verifiedAt": "auto-loopedia",
+      "reference": "arXiv:1401.4361, JHEP 03 (071), 2014",
+      "ancillaryFiles": [],
+      "recordId": "bf_aef35e2fd589",
+      "masterCount": 0,
+      "computationLevel": "full",
+      "doi": "10.1007/JHEP03(2014)071",
+      "tools": [
+        "HyperInt"
+      ],
+      "description": "One-loop massless triangle with three off-shell legs. Leading order is the Bloch-Wigner dilogarithm.",
+      "epsOrders": "all orders",
+      "method": [],
+      "dimScheme": "d=4-2*eps",
+      "location": "Example 4.3",
+      "familyName": "Delta1_triangle"
+    },
+    {
+      "authors": "Abreu, Samuel, Britto, Ruth, Duhr, Claude, Gardi, Einan",
+      "texkey": "Abreu:2014cla",
+      "verified": true,
+      "verifiedAt": "auto-loopedia",
+      "reference": "arXiv:1401.3546, JHEP 10 (125), 2014",
+      "ancillaryFiles": [],
+      "recordId": "bf_8f4ed77a1ffa",
+      "masterCount": 1,
+      "transcendentalWeight": 2,
+      "computationLevel": "full",
+      "doi": "10.1007/JHEP10(2014)125",
+      "tools": [],
+      "description": "One-loop triangle with massless propagators and three nonzero external masses, finite in $D=4$. Weight-2 result in $z,\\bar{z}$ variables. Single and double cuts computed, integral reconstructed from cuts via dispersion.",
+      "epsOrders": "-2,-1,0",
+      "method": [],
+      "dimScheme": "d=4-2*eps",
+      "location": "Section 4.1, eqs.(4.1)-(4.11)",
+      "familyName": "T (three-mass triangle)"
+    },
+    {
+      "authors": "Duhr, Claude, Porkert, Franziska",
+      "texkey": "Duhr:2023bku",
+      "verified": true,
+      "verifiedAt": "auto-loopedia",
+      "reference": "arXiv:2309.12772, JHEP 02 (179), 2024",
+      "ancillaryFiles": [],
+      "recordId": "bf_412cef2c4ea8",
+      "masterCount": 1,
+      "computationLevel": "full",
+      "doi": "10.1007/JHEP02(2024)179",
+      "tools": [],
+      "description": "One-loop massless triangle in $d=2$ with generic propagator powers. Result: sv Gauss $_2F_1$.",
+      "epsOrders": "all orders",
+      "method": [],
+      "dimScheme": "d=2",
+      "location": "Section 4.2",
+      "familyName": "Star_3 (triangle d=2)"
+    },
+    {
+      "authors": "Henn, Johannes, Pratt, Elizabeth, Sattelberger, Anna-Laura, Zoia, Simone",
+      "texkey": "Henn:2023tbo",
+      "verified": true,
+      "verifiedAt": "auto-loopedia",
+      "reference": "arXiv:2303.11105, Lett.Math.Phys. 114 (87), 2024",
+      "ancillaryFiles": [],
+      "recordId": "bf_77f8938acc3d",
+      "masterCount": 4,
+      "transcendentalWeight": 2,
+      "computationLevel": "full",
+      "doi": "10.1007/s11005-024-01835-7",
+      "tools": [
+        "HolonomicFunctions",
+        "Singular"
+      ],
+      "description": "One-loop massless triangle integral with three off-shell external legs ($x_1=p_1^2, x_2=p_2^2, x_3=(p_1+p_2)^2$) in $d=4$, with general conformal weights specialized to $c_0=4, c_1=c_2=c_3=2$ (unit propagator powers $\\nu_1=\\nu_2=\\nu_3=1$). The integral satisfies a system of three conformal second-order PDEs generating a holonomic $D_3$-ideal $I_3$ of rank 4. The four linearly independent solutions (eq. 2.11) span the analytic continuation space and are expressed in terms of dilogarithms $\\operatorname{Li}_2$ and logarithms. Canonical series solutions are computed via the SST (Saito-Sturmfels-Takayama) algorithm and independently recovered via Wasow's method for Fuchsian systems. Singular locus: $\\{x_1=0\\} \\cup \\{x_2=0\\} \\cup \\{x_3=0\\} \\cup \\{\\lambda=0\\}$ where $\\lambda = x_1^2+x_2^2+x_3^2-2(x_1 x_2+x_1 x_3+x_2 x_3)$.",
+      "epsOrders": "",
+      "method": [],
+      "dimScheme": "d=4",
+      "location": "Eq. (2.1), Fig. 1; analytic result Eq. (2.7); solutions Eqs. (2.11)-(2.14); conformal PDE system Eqs. (2.3)-(2.5)",
+      "familyName": "one-loop triangle (three-mass)"
+    },
+    {
+      "reference": "arXiv:2402.19034",
+      "familyName": "fishnet-multileg-2d_L1_massless-internal-2d",
+      "description": "Multi-leg fishnet family, fishnet-multileg-2d_L1_massless-internal-2d. Multi-leg two-dimensional fishnet on the trivalent (hexagonal) tiling (arXiv:2402.19034 Eq. (2.1), Figs. 5-6): the triangle-track sequence $Z_L$. Position space: a chain of $L$ trivalent integration vertices; momentum space (planar dual, notes/families_sweep_batch/derivations.md): the $L$-triangle strip on vertices $w_1..w_{L+2}$ with path edges $\\{w_i,w_{i+1}\\}$ and chords $\\{w_i,w_{i+2}\\}$, one off-shell leg at every vertex; legs $= L+2$, loops $= L$ (Euler-exact on the dual). $Z_2$ reduces to the box and $Z_3$ to a one-loop pentagon by star-triangle (VALUE identities); the lowest geometry is a genus-2 Picard curve (Eq. (3.30)). Propagator weight $2/3$ per line is a value-level datum.",
+      "method": [
+        "closed form"
+      ],
+      "tools": [
+        "SubTropica seed_families"
+      ],
+      "recordId": "fs_8a79b7dfe415",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1207.3824",
+      "familyName": "generalised-ladder_L1_massless-internal-offshell-external",
+      "description": "Generalised ladder family, generalised-ladder_L1_massless-internal-offshell-external. Drummond's generalised ladders (arXiv:1207.3824 Eq. (2.7)): three-point ladders indexed by loop order $L$ and a binary word $m \\in \\{0,1\\}^{L-1}$; $2^{L-1}$ members per $L$. Seeded representative: the all-zeros word. Momentum-space graph (planar dual, notes/families_sweep_batch/derivations.md): the fan $F_L =$ hub $h$ joined to every vertex of a path $q_0..q_L$, legs at $q_0$, $q_L$, $h$; loops $= L$ (Euler-exact on the dual). The fan is NOT bare-isomorphic to the 4-point box ladder ($V = L+2$ vs $2L+2$); the relation to the box ladders is the value-level conformal completion. The 2-point vacuum limits of the word family are the zigzags and wheels.",
+      "method": [
+        "closed form"
+      ],
+      "tools": [
+        "SubTropica seed_families"
+      ],
+      "recordId": "fs_15390d94ddc7",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "Phys. Lett. B 298 (1993) 363",
+      "familyName": "triangle-ladder_L1_massless-internal-offshell-external",
+      "description": "Triangle ladder family, triangle-ladder_L1_massless-internal-offshell-external. The Usyukina-Davydychev triangle ladder $T^{(L)}$ consists of $(L{-}1)$ box cells capped by a triangle at the apex, with two rails of $L$ edges converging to a shared apex vertex and $L$ rungs connecting the rails at each level. It has $2L{+}1$ vertices, $3L$ massless internal propagators, $L$ loops, and three off-shell external legs at the two base vertices and the apex. The triangle ladder evaluates to the same $\\Phi^{(L)}$ as the four-point box ladder and the generalised-ladder fan via the conformal magic identity, but is a genuinely different topology from both for $L \\ge 2$: the triangle ladder has $V = 2L{+}1$, $E = 3L$ versus $V = L{+}2$, $E = 2L{+}1$ for the fan. Only $L = 1$ (the triangle) is shared.",
+      "method": [
+        "closed form"
+      ],
+      "tools": [
+        "SubTropica seed_families"
+      ],
+      "recordId": "fs_cad8fafd8551",
+      "verified": false,
+      "verifiedAt": "",
+      "title": "An approach to the evaluation of three and four point ladder diagrams",
+      "authors": "N. I. Usyukina, A. I. Davydychev"
+    },
+    {
+      "reference": "arXiv:1803.05894 (PoS RADCOR2017 (002), 2018)",
+      "authors": [
+        {
+          "full_name": "Abreu, Samuel",
+          "inspire_id": 1287226
+        },
+        {
+          "full_name": "Britto, Ruth",
+          "inspire_id": 1015279
+        },
+        {
+          "full_name": "Duhr, Claude",
+          "inspire_id": 1040449
+        },
+        {
+          "full_name": "Gardi, Einan",
+          "inspire_id": 1019159
+        }
+      ],
+      "description": "Three-point one-loop function with three massless internal propagators, used as the primary worked example of the diagrammatic coaction: the coaction of the triangle is written as a sum over pinches (bubbles obtained by pinching one propagator) tensored with the corresponding cut triangles, plus the triangle itself tensored with its maximal cut. Scaleless tadpole pinches are discarded. The consistency of the coaction is checked by expanding in $\\varepsilon$ up to weight 4 and matching against the Goncharov-Brown coaction on MPLs.",
+      "epsOrders": "",
+      "familyName": "massless_triangle_three_offshell_legs",
+      "method": "direct_integration, unitarity",
+      "tools": [],
+      "ancillaryFiles": true,
+      "doi": "10.22323/1.290.0002",
+      "texkey": "Abreu:2018sat",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Sec. 3, eq. (triangle), and surrounding discussion p. 5",
+      "recordId": "bx_4ba130d0450e",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:hep-ph/9307327 (Phys.Atom.Nucl. 56 (1553-1557), 1993)",
+      "authors": [
+        {
+          "full_name": "Usyukina, N.I.",
+          "inspire_id": 2192017
+        },
+        {
+          "full_name": "Davydychev, Andrei I.",
+          "inspire_id": 1012291
+        }
+      ],
+      "description": "One-loop scalar triangle $J(4;1,1,1)=C^{(1)}(p_1^2,p_2^2,p_3^2)$ with massless internal propagators and three generic off-shell external momenta. Evaluated in $n=4$ via Feynman parameters and a two-fold Mellin-Barnes representation, yielding the closed-form $\\Phi^{(1)}(x,y)$ in Eq. (9) with $x=p_1^2/p_3^2$, $y=p_2^2/p_3^2$, $\\lambda=\\sqrt{(1-x-y)^2-4xy}$. Involves $\\operatorname{Li}_2(-\\rho x)$, $\\operatorname{Li}_2(-\\rho y)$ and logarithms.",
+      "epsOrders": "",
+      "familyName": "one-loop massless triangle with off-shell external legs",
+      "method": "direct_integration, Mellin-Barnes",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "Usyukina:1992wz",
+      "masterCount": 1,
+      "dimScheme": "d=4",
+      "computationLevel": "full",
+      "location": "Section 2, Fig. 1, Eqs. (1)-(7)",
+      "recordId": "bx_89aa44620b04",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1912.11067 (JHEP 08 (2020) 029)",
+      "authors": "J. L. Bourjaily, E. Gardi, A. J. McLeod, C. Vergu",
+      "texkey": "Bourjaily:2019exo",
+      "doi": "10.1007/JHEP08(2020)029",
+      "description": "Hyperbolic-volume closed forms for the all-mass n-gon (all-mass box and pentagon via a generalized Gauss-Bonnet theorem); n-gon family reference, the n=3 member being the all-mass triangle.",
+      "verified": false,
+      "verifiedAt": "",
+      "recordId": "bx_a4eca3ef7e85"
+    },
+    {
+      "reference": "arXiv:hep-th/9709216 (J. Math. Phys. 39 (1998) 4299)",
+      "authors": "A. I. Davydychev, R. Delbourgo",
+      "texkey": "Davydychev:1997wa",
+      "doi": "10.1063/1.532513",
+      "description": "Establishes the one-loop n-point integral in D=n dimensions as the volume of a geodesic simplex in non-Euclidean (hyperbolic) space, the geometric interpretation underlying the n-gon family (n=3: the triangle).",
+      "verified": false,
+      "verifiedAt": "",
+      "recordId": "bx_311e6928a3e9"
+    },
+    {
+      "reference": "arXiv:hep-ph/9212308 (Phys. Lett. B 302 (1993) 299-308)",
+      "authors": "Z. Bern, L. Dixon, D. A. Kosower",
+      "texkey": "Bern:1992em",
+      "doi": "10.1016/0370-2693(93)90400-C",
+      "description": "Dimensionally regulated one-loop scalar n-point integrals; recursion reducing n-point integrals to boxes, a foundation of the n-gon reduction.",
+      "verified": false,
+      "verifiedAt": "",
+      "recordId": "bx_48b60345dfdc"
+    }
+  ],
+  "Results": [
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": "0",
+      "epsOrders": "0",
+      "propExponents": [
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.395",
+      "stCommand": "",
+      "contributor": "Sebastian Mizera",
+      "timestamp": "2026-04-19T22:14:48",
+      "verifiedAt": "2026-04-19T22:14:48",
+      "verified": true,
+      "method": "direct_integration",
+      "tools": [
+        "SubTropica"
+      ],
+      "methodLR": "Lungo",
+      "byteCount": 8480,
+      "alphabet": [
+        "W_1^-+1",
+        "W_1^-",
+        "W_1^++1",
+        "W_1^+",
+        "M_3^2 W_1^-+M_2^2",
+        "M_2^2",
+        "M_3^2",
+        "M_3^2 W_1^++M_2^2",
+        "M_1^2"
+      ],
+      "symbolWeight": 2,
+      "symbolTerms": 16,
+      "normalizedAlphabet": [
+        "W_1",
+        "W^-_1",
+        "W_2",
+        "W^+_1",
+        "W_3",
+        "W_4",
+        "W_5",
+        "W_6"
+      ],
+      "symbolScale": "M_1^2",
+      "normalizedSymbolTerms": 12,
+      "legOrder": [],
+      "findRoots": true,
+      "resultDataId": "eaed7ef407754704",
+      "resultTeXPreview": "\\left(-\\frac{2 M_3^{-2} H\\left(0,\\frac{1}{W_1^-+1}\\,;1\\right)}{W_1^--W_1^+}+\\frac{2 M_3^{-2} H\\left(0,\\frac{1}{W_1^++1}\\,;1\\right)}{W_1^--W_1^+}+\\frac{M_3^{-2} H\\left(\\frac{1}{1-M_2^2 M_3^{-2}},\\frac{1}{W_1^-+1}\\,;1\\right)}{W_1^--W_1^+}-\\frac{M_3^{-2} H\\left(\\frac{1}{1-M_2^2 M_3^{-2}},\\frac{1}{W_1^++1}\\,;1\\right)}{W_1^--W_1^+}+\\frac{M_3^{-2} \\log ^2\\left(-W_1^-\\right)}{2 \\left(W_1^--W_1^+\\right)}-\\frac{M_3^{-2} \\log ^2\\left(-W_1^+\\right)}{2 \\left(W_1^--W_1^+\\right)}+\\frac{M_3^{-2} \\log \\left(M_1^2 M_2^{-2}\\right) \\log \\left(-W_1^-\\right)}{W_1^--W_1^+}-\\frac{M_3^{-2} \\log \\left(M_1^2 M_2^{-2}\\right) \\log \\left(-W_1^+\\right)}{W_1^--W_1^+}\\right)+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": 0,
+      "propExponents": [
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "{MM1 -> (1 - z)*(1 - zb), MM2 -> z*zb, MM3 -> 1}",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.379",
+      "stCommand": "STIntegrate[{{{{1, 2}, 0}, {{1, 3}, 0}, {{2, 3}, 0}}, {{1, Subscript[M, 1]}, {2, Subscript[M, 2]}, {3, Subscript[M, 3]}}}, Dimension -> \"4 - 2*eps\", Order -> 0, Substitutions -> {MM1 -> (1 - z)*(1 - zb), MM2 -> z*zb, MM3 -> 1}]",
+      "contributor": "SM",
+      "timestamp": "2026-04-19T18:59:37",
+      "byteCount": 6120,
+      "alphabet": [
+        "z-1",
+        "z",
+        "\\text{zb}-1",
+        "\\text{zb}"
+      ],
+      "symbolWeight": 2,
+      "symbolTerms": 8,
+      "legOrder": [
+        1,
+        2,
+        3
+      ],
+      "resultDataId": "29633f1716d0f7c7",
+      "resultTeXPreview": "\\left(\\frac{4 H\\left(0,\\frac{1}{1-z}\\,;1\\right)}{2 z-2 \\text{zb}}-\\frac{4 H\\left(0,\\frac{1}{1-\\text{zb}}\\,;1\\right)}{2 z-2 \\text{zb}}-\\frac{2 H\\left(\\frac{1}{1-z \\text{zb}},\\frac{1}{1-z}\\,;1\\right)}{2 z-2 \\text{zb}}+\\frac{2 H\\left(\\frac{1}{1-z \\text{zb}},\\frac{1}{1-\\text{zb}}\\,;1\\right)}{2 z-2 \\text{zb}}-\\frac{\\log ^2(z)}{2 z-2 \\text{zb}}+\\frac{\\log ^2(\\text{zb})}{2 z-2 \\text{zb}}-\\frac{2 \\log (z) \\log \\left(\\frac{(z-1) (\\text{zb}-1)}{z \\text{zb}}\\right)}{2 z-2 \\text{zb}}+\\frac{2 \\log (\\text{zb}) \\log \\left(\\frac{(z-1) (\\text{zb}-1)}{z \\text{zb}}\\right)}{2 z-2 \\text{zb}}\\right)+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T042921Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "MM[2]",
+        "MM[3]",
+        "MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2",
+        "MM[1]"
+      ],
+      "singularitiesTeX": [
+        "M_{2}^{2}",
+        "M_{3}^{2}",
+        "M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}",
+        "M_{1}^{2}"
+      ],
+      "singularitiesVerified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "groundTruthAvailable": true,
+      "provenance": {
+        "engine": "chi/SPQRLandau-CII SPQR-1.0.4 FF64",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 4,
+        "confirmPrimes": 2,
+        "confirmAgree": true,
+        "wallSeconds": 5.15
+      },
+      "timestamp": "2026-06-14T04:29:21Z",
+      "contributor": "oddletters-v1a",
+      "singularitiesChiDrop": [
+        2,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T042921Z",
+      "byEpsOrder": null,
+      "evens": [
+        "MM[2]",
+        "MM[3]",
+        "MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2",
+        "MM[1]"
+      ],
+      "evensTeX": [
+        "M_{2}^{2}",
+        "M_{3}^{2}",
+        "M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}",
+        "M_{1}^{2}"
+      ],
+      "evensVerified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "groundTruthAvailable": true,
+      "oddLetters": [
+        {
+          "P": "MM[1]/2 - MM[2]/2 - MM[3]/2",
+          "PTeX": "\\frac{M_{1}^{2}}{2}-\\frac{M_{2}^{2}}{2}-\\frac{M_{3}^{2}}{2}",
+          "c": "1/4",
+          "Q": "MM[2]*MM[3]",
+          "QTeX": "M_{2}^{2} M_{3}^{2}",
+          "multiset": [
+            [
+              "MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}",
+              1
+            ]
+          ],
+          "letter": "(MM[1]/2 - MM[2]/2 - MM[3]/2 - Sqrt[MM[2]*MM[3]])/(MM[1]/2 - MM[2]/2 - MM[3]/2 + Sqrt[MM[2]*MM[3]])",
+          "letterTeX": "\\frac{\\frac{M_{1}^{2}}{2}-\\frac{M_{2}^{2}}{2}-\\frac{M_{3}^{2}}{2}-\\sqrt{M_{2}^{2} M_{3}^{2}}}{\\frac{M_{1}^{2}}{2}-\\frac{M_{2}^{2}}{2}-\\frac{M_{3}^{2}}{2}+\\sqrt{M_{2}^{2} M_{3}^{2}}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 1,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            }
+          ]
+        },
+        {
+          "P": "MM[1]/2 + MM[2]/2 - MM[3]/2",
+          "PTeX": "\\frac{M_{1}^{2}}{2}+\\frac{M_{2}^{2}}{2}-\\frac{M_{3}^{2}}{2}",
+          "c": "1/4",
+          "Q": "MM[1]*MM[2]",
+          "QTeX": "M_{1}^{2} M_{2}^{2}",
+          "multiset": [
+            [
+              "MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}",
+              1
+            ]
+          ],
+          "letter": "(MM[1]/2 + MM[2]/2 - Sqrt[MM[1]*MM[2]] - MM[3]/2)/(MM[1]/2 + MM[2]/2 + Sqrt[MM[1]*MM[2]] - MM[3]/2)",
+          "letterTeX": "\\frac{\\frac{M_{1}^{2}}{2}+\\frac{M_{2}^{2}}{2}-\\frac{M_{3}^{2}}{2}-\\sqrt{M_{1}^{2} M_{2}^{2}}}{\\frac{M_{1}^{2}}{2}+\\frac{M_{2}^{2}}{2}-\\frac{M_{3}^{2}}{2}+\\sqrt{M_{1}^{2} M_{2}^{2}}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 4,
+              "power": 1
+            },
+            {
+              "w": 1,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            }
+          ]
+        },
+        {
+          "P": "MM[1]/2 - MM[2]/2 + MM[3]/2",
+          "PTeX": "\\frac{M_{1}^{2}}{2}-\\frac{M_{2}^{2}}{2}+\\frac{M_{3}^{2}}{2}",
+          "c": "1/4",
+          "Q": "MM[1]*MM[3]",
+          "QTeX": "M_{1}^{2} M_{3}^{2}",
+          "multiset": [
+            [
+              "MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}",
+              1
+            ]
+          ],
+          "letter": "(MM[1]/2 - MM[2]/2 + MM[3]/2 - Sqrt[MM[1]*MM[3]])/(MM[1]/2 - MM[2]/2 + MM[3]/2 + Sqrt[MM[1]*MM[3]])",
+          "letterTeX": "\\frac{\\frac{M_{1}^{2}}{2}-\\frac{M_{2}^{2}}{2}+\\frac{M_{3}^{2}}{2}-\\sqrt{M_{1}^{2} M_{3}^{2}}}{\\frac{M_{1}^{2}}{2}-\\frac{M_{2}^{2}}{2}+\\frac{M_{3}^{2}}{2}+\\sqrt{M_{1}^{2} M_{3}^{2}}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 4,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            }
+          ]
+        },
+        {
+          "P": "MM[1] - MM[2] + MM[3]",
+          "PTeX": "M_{1}^{2}-M_{2}^{2}+M_{3}^{2}",
+          "c": "4",
+          "Q": "MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2",
+          "QTeX": "M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}",
+          "multiset": [
+            [
+              "MM[1]",
+              1
+            ],
+            [
+              "MM[3]",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "M_{1}^{2}",
+              1
+            ],
+            [
+              "M_{3}^{2}",
+              1
+            ]
+          ],
+          "letter": "(MM[1] - MM[2] + MM[3] - Sqrt[MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2])/(MM[1] - MM[2] + MM[3] + Sqrt[MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2])",
+          "letterTeX": "\\frac{M_{1}^{2}-M_{2}^{2}+M_{3}^{2}-\\sqrt{M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}}}{M_{1}^{2}-M_{2}^{2}+M_{3}^{2}+\\sqrt{M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}}}",
+          "identityVerified": true,
+          "verified": true,
+          "wFactors": [
+            {
+              "w": 3,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 4,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ]
+        },
+        {
+          "P": "MM[1] + MM[2] - MM[3]",
+          "PTeX": "M_{1}^{2}+M_{2}^{2}-M_{3}^{2}",
+          "c": "4",
+          "Q": "MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2",
+          "QTeX": "M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}",
+          "multiset": [
+            [
+              "MM[1]",
+              1
+            ],
+            [
+              "MM[2]",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "M_{1}^{2}",
+              1
+            ],
+            [
+              "M_{2}^{2}",
+              1
+            ]
+          ],
+          "letter": "(MM[1] + MM[2] - MM[3] - Sqrt[MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2])/(MM[1] + MM[2] - MM[3] + Sqrt[MM[1]^2 - 2*MM[1]*MM[2] + MM[2]^2 - 2*MM[1]*MM[3] - 2*MM[2]*MM[3] + MM[3]^2])",
+          "letterTeX": "\\frac{M_{1}^{2}+M_{2}^{2}-M_{3}^{2}-\\sqrt{M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}}}{M_{1}^{2}+M_{2}^{2}-M_{3}^{2}+\\sqrt{M_{1}^{4}-2 M_{2}^{2} M_{1}^{2}-2 M_{3}^{2} M_{1}^{2}+M_{2}^{4}+M_{3}^{4}-2 M_{2}^{2} M_{3}^{2}}}",
+          "identityVerified": true,
+          "verified": true,
+          "wFactors": [
+            {
+              "w": 3,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 4,
+              "power": 1
+            },
+            {
+              "w": 1,
+              "power": 1
+            }
+          ]
+        }
+      ],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "chi/SPQRLandau-CII SPQR-1.0.4 FF64",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 4,
+        "confirmPrimes": 2,
+        "confirmAgree": true,
+        "wallSeconds": 5.15
+      },
+      "timestamp": "2026-06-14T04:29:21Z",
+      "contributor": "oddletters-v1a",
+      "evensChiDrop": [
+        2,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "numeric": 6.031161282118907,
+      "normalization": "Exact finite conformal integral: the weight-2 Usyukina--Davydychev function $\\Phi^{(1)}(z,\\bar z)$ (the $1$-loop ladder), written as explicit classical polylogarithms $\\operatorname{Li}_j$ in the conformal cross-ratios $z,\\bar z$ (grounded in the external kinematics; the external scale prefactor is stripped). Not a dim-reg series. The numeric is its value at the reference point $z=1/3$, $\\bar z=1/5$.",
+      "provenance": "closed-form-from-cited-literature",
+      "seedRecordId": "fs_cad8fafd8551",
+      "timestamp": "2026-06-21T23:33:58Z",
+      "contributor": "SM",
+      "stVersion": "SubTropica 1.2.6",
+      "import": {
+        "submittedBy": "Sebastian Mizera",
+        "source": {
+          "paper": "Phys. Lett. B 305 (1993) 136",
+          "title": "Exact results for three and four point ladder diagrams with an arbitrary number of rungs",
+          "authors": "N. I. Usyukina, A. I. Davydychev",
+          "journal": "Phys. Lett. B 305 (1993) 136-143",
+          "texkey": "Usyukina:1993ch",
+          "doi": "10.1016/0370-2693(93)91118-7"
+        },
+        "method": "Usyukina-Davydychev triangle ladder: value is Phi^(L)(z,zbar) at z=1/3, zbar=1/5 (same Phi^(L) as the 4-mass box ladder). Triangle anchor T^(L) = Phi^(L)(x,y)/(p3^2)^L, c0=1, validated by pySecDec at L=1 (12 digits) and L=2 (no-refit ~1e-5).",
+        "importedAt": "2026-06-21"
+      },
+      "verified": true,
+      "method": "pySecDec triangle anchor T^(1)=Phi^(1)/p3^2, 12 digits",
+      "seedFamilyExpand": {
+        "family": "ladder",
+        "params": [
+          1
+        ]
+      },
+      "dimension": "4",
+      "symbolWeight": 2,
+      "resultDataId": "1118d794f6725efe.1",
+      "resultTeXPreview": "-\\frac{1}{1!\\,(z-\\bar z)}\\sum_{j=1}^{2}\\frac{(-1)^{j}\\,j!}{(j-1)!\\,(2-j)!}\\,\\log^{\\,2-j}\\!\\frac{(1-z)(1-\\bar z)}{z\\bar z}\\left[\\operatorname{Li}_{j}\\!\\left(\\tfrac{\\bar z-1}{\\bar z}\\right)-\\operatorname{Li}_{j}\\!\\left(\\tfrac{z-1}{z}\\right)\\right] \\\\[4pt] u=z\\bar z=\\frac{M_1^2}{M_3^2},\\quad v=(1-z)(1-\\bar z)=\\frac{M_2^2}{M_3^2}"
+    }
+  ],
+  "Names": [
+    "Delta1_triangle",
+    "T (three-mass triangle)",
+    "Star_3 (triangle d=2)",
+    "one-loop triangle (three-mass)"
+  ],
+  "Source": [
+    "arXiv",
+    "Loopedia"
+  ],
+  "Loops": 1,
+  "NumPropagators": 3,
+  "CanonicalName": "3-mass triangle",
+  "MassConfig": {
+    "numEdges": 3,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 3,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "000",
+    "numExtLegs": 3,
+    "numOnshellMassiveExtLegs": 3,
+    "numMasslessExtLegs": 0,
+    "extLegSignature": "MMM"
+  },
+  "commonNames": [
+    "C₀"
+  ],
+  "Subsectors": [],
+  "ParentSectors": [
+    "e12|e3|e3|e|:000|00|10|2|",
+    "e12|e3|e3|e|:000|10|20|3|",
+    "e12|e3|e3|e|:100|20|30|4|"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "CNickelIndex": "e112|e3|e4|e5|e5|e|:0000|00|00|00|00|0|",
+  "MassScales": 9,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "4",
+  "References": [
+    "arXiv:2403.19742 (JHEP 08 (027), 2024)",
+    "arXiv:2512.13794"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:2403.19742 (JHEP 08 (027), 2024)",
+      "authors": "Henn, Johannes M., Matijašić, Antonela, Miczajka, Julian, Peraro, Tiziano, Xu, Yingxuan, Zhang, Yang",
+      "description": "Two-loop six-point massless planar hexagon-bubble integral family. 7 propagators from 13-denominator hexagon basis $(D_1,D_2,D_3,D_4,D_5,D_{12},D_{13})$. 32 master integrals (1 top-sector + 31 subsector). $D_{13}$ appears squared in top sector. Solved analytically via canonical DEs to weight 4 / $\\mathcal{O}(\\varepsilon^4)$ in Euclidean region.",
+      "epsOrders": "4",
+      "familyName": "hexagon-bubble",
+      "method": "IBP, DE, series_expansion",
+      "tools": [
+        "LiteRed",
+        "AMFlow",
+        "PolyLogTools"
+      ],
+      "ancillaryFiles": true,
+      "doi": "10.1007/JHEP08(2024)027",
+      "texkey": "Henn:2024ngj",
+      "masterCount": 32,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Section 3.3, Figure 1c, Section 4.3",
+      "recordId": "bx_f7d085cfc443",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2512.13794",
+      "authors": "Bargiela, Piotr, Frellesvig, Hjalte, Marzucca, Robin, Morales, Roger, Seefeld, Florian, Wilhelm, Matthias, Yang, Tong-Zhi",
+      "description": "$I_{5,1,1}$ two-loop topology with three internal paths of lengths a=5, b=1, c=1 (both v_L and v_R carry external legs); 6-point integral, planar (b=1). Geometry: 0 ISPs; algebraic leading singularity; dlog form (§3.4 zero-ISPs)",
+      "epsOrders": "",
+      "familyName": "I_{5,1,1}",
+      "method": "maximal_cut, Baikov",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "Bargiela:2025vwl",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "topology",
+      "location": "§3.4 'Integrals with zero ISPs'",
+      "recordId": "bx_97b88c7d77e1",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Names": [
+    "hexagon-bubble",
+    "$I_{5,1,1}$"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 2,
+  "NumPropagators": 7,
+  "Results": [],
+  "edges": "{{{1, 2}, 0}, {{1, 2}, 0}, {{1, 3}, 0}, {{2, 4}, 0}, {{3, 5}, 0}, {{4, 6}, 0}, {{5, 6}, 0}}",
+  "nodes": "{{1, 0}, {2, 0}, {4, 0}, {6, 0}, {5, 0}, {3, 0}}",
+  "CanonicalName": "Massless bubble-hexagon",
+  "MassConfig": {
+    "numEdges": 7,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 7,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "0000000",
+    "numExtLegs": 6,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 6,
+    "extLegSignature": "000000"
+  },
+  "Subsectors": [
+    "e112|e3|e4|e4|e|:0000|00|00|10|0|",
+    "e12|e3|e4|e4|e|:000|00|00|00|1|"
+  ],
+  "ParentSectors": []
+}

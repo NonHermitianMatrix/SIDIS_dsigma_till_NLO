@@ -1,0 +1,346 @@
+{
+  "CNickelIndex": "112|e3|e4|e4|e|:000|00|00|00|0|",
+  "MassScales": 2,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "4",
+  "References": [
+    "arXiv:2312.06773 (Eur.Phys.J.C 84 (495), 2024)",
+    "arXiv:2512.13794"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:2312.06773 (Eur.Phys.J.C 84 (495), 2024)",
+      "authors": "Böttcher, Nico, Schwanemann, Niklas, Weinzierl, Stefan",
+      "description": "Two-loop box integral with fermion bubble insertion, fully massless case. Topology H: all internal masses zero, all external momenta massless. Simplest topology with only 3 master integrals and 3-letter alphabet $\\{-s, -t, -s-t\\}$. All gauge bosons are photons, green line massless. Relevant to Moller experiment ($e^-e^-$ scattering).",
+      "epsOrders": "4",
+      "familyName": "Box with fermion bubble, topology H (0, 0, 0)",
+      "method": "IBP, DE",
+      "tools": [
+        "Kira",
+        "GiNaC",
+        "AMFlow"
+      ],
+      "ancillaryFiles": true,
+      "doi": "10.1140/epjc/s10052-024-12843-1",
+      "texkey": "Bottcher:2023wsr",
+      "masterCount": 3,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Eq. (3)-(5), Sec. 4.2.8",
+      "recordId": "bx_1506712b7534",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2512.13794",
+      "authors": "Bargiela, Piotr, Frellesvig, Hjalte, Marzucca, Robin, Morales, Roger, Seefeld, Florian, Wilhelm, Matthias, Yang, Tong-Zhi",
+      "description": "$I^{*}_{4,1,1}$ two-loop topology with three internal paths of lengths a=4, b=1, c=1 (only one of v_L/v_R carries external legs); 4-point integral, planar (b=1). Geometry: 0 ISPs; algebraic leading singularity; dlog form (§3.4 zero-ISPs)",
+      "epsOrders": "",
+      "familyName": "I^{*}_{4,1,1}",
+      "method": "maximal_cut, Baikov",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "Bargiela:2025vwl",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "topology",
+      "location": "§3.4 'Integrals with zero ISPs'",
+      "recordId": "bx_59f77fbfaaf2",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Names": [
+    "Box with fermion bubble, topology H (0, 0, 0)",
+    "$I^{*}_{4,1,1}$"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 2,
+  "NumPropagators": 6,
+  "Results": [
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": "0",
+      "epsOrders": "0",
+      "propExponents": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.290",
+      "stCommand": "",
+      "contributor": "Sebastian Mizera",
+      "timestamp": "2026-04-15T02:38:10",
+      "verifiedAt": "2026-04-15T02:38:10",
+      "verified": true,
+      "method": "direct_integration",
+      "tools": [
+        "SubTropica"
+      ],
+      "methodLR": "Lungo",
+      "byteCount": 20104,
+      "alphabet": [
+        "s_{23}",
+        "s_{12}",
+        "s_{12}+s_{23}"
+      ],
+      "symbolWeight": 3,
+      "symbolTerms": 22,
+      "normalizedAlphabet": [
+        "W_1",
+        "W_2"
+      ],
+      "symbolScale": "s_{12}",
+      "normalizedSymbolTerms": 5,
+      "legOrder": [],
+      "resultDataId": "3df547fa52ee3f1a",
+      "resultTeXPreview": "\\frac{9}{4 \\varepsilon^3 s_{12} s_{23}}-\\frac{3 i \\left(2 i \\log \\left(\\frac{s_{23}}{s_{12}}\\right)-3 i \\log (s_{23})+3 \\pi +3 i\\right)}{2 \\varepsilon^2 s_{12} s_{23}}-\\frac{3 \\left(-5 \\zeta(2)-4 \\log ^2\\left(-\\frac{s_{12}}{s_{23}}\\right)-6 \\log ^2\\left(\\frac{s_{23}}{s_{12}}\\right)-8 \\log \\left(\\frac{s_{23}}{s_{12}}\\right) \\log \\left(-\\frac{s_{12}}{s_{23}}\\right)+8 \\log (s_{23}) \\log \\left(\\frac{s_{23}}{s_{12}}\\right)+8 i \\pi  \\log \\left(\\frac{s_{23}}{s_{12}}\\right)-8 \\log \\left(\\frac{s_{23}}{s_{12}}\\right)-6 \\log ^2(s_{23})+6 \\log (-s_{23})-12 i \\pi  \\log (s_{23})+6 \\log (s_{23})+5 \\pi ^2+6 i \\pi -12\\right)}{4 \\varepsilon (s_{12} s_{23})}+(\\text{more terms})+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T172833Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "s12",
+        "s23",
+        "s12 + s23"
+      ],
+      "singularitiesTeX": [
+        "\\text{s12}",
+        "\\text{s23}",
+        "\\text{s12}+\\text{s23}"
+      ],
+      "singularitiesVerified": [
+        true,
+        true,
+        true
+      ],
+      "groundTruthAvailable": true,
+      "provenance": {
+        "engine": "eulerDiscriminant",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 0,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 20.06
+      },
+      "timestamp": "2026-06-14T17:28:33Z",
+      "contributor": "oddletters-v1a"
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T172833Z",
+      "byEpsOrder": null,
+      "evens": [
+        "s12",
+        "s23",
+        "s12 + s23"
+      ],
+      "evensTeX": [
+        "\\text{s12}",
+        "\\text{s23}",
+        "\\text{s12}+\\text{s23}"
+      ],
+      "evensVerified": [
+        true,
+        true,
+        true
+      ],
+      "groundTruthAvailable": true,
+      "oddLetters": [
+        {
+          "P": "s12/2 - s23/2",
+          "PTeX": "\\frac{\\text{s12}}{2}-\\frac{\\text{s23}}{2}",
+          "c": "1/4",
+          "Q": "-(s12*s23)",
+          "QTeX": "-\\text{s12} \\text{s23}",
+          "multiset": [
+            [
+              "s12 + s23",
+              2
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "\\text{s12}+\\text{s23}",
+              2
+            ]
+          ],
+          "letter": "(s12/2 - s23/2 - Sqrt[-(s12*s23)])/(s12/2 - s23/2 + Sqrt[-(s12*s23)])",
+          "letterTeX": "\\frac{-\\sqrt{-\\text{s12} \\text{s23}}+\\frac{\\text{s12}}{2}-\\frac{\\text{s23}}{2}}{\\sqrt{-\\text{s12} \\text{s23}}+\\frac{\\text{s12}}{2}-\\frac{\\text{s23}}{2}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 1,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 2
+            }
+          ]
+        },
+        {
+          "P": "s12 + s23",
+          "PTeX": "\\text{s12}+\\text{s23}",
+          "c": "1",
+          "Q": "s12^2 + s12*s23",
+          "QTeX": "\\text{s12}^2+\\text{s12} \\text{s23}",
+          "multiset": [
+            [
+              "s12 + s23",
+              1
+            ],
+            [
+              "s23",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "\\text{s12}+\\text{s23}",
+              1
+            ],
+            [
+              "\\text{s23}",
+              1
+            ]
+          ],
+          "letter": "(s12 + s23 - Sqrt[s12^2 + s12*s23])/(s12 + s23 + Sqrt[s12^2 + s12*s23])",
+          "letterTeX": "\\frac{-\\sqrt{\\text{s12}^2+\\text{s12} \\text{s23}}+\\text{s12}+\\text{s23}}{\\sqrt{\\text{s12}^2+\\text{s12} \\text{s23}}+\\text{s12}+\\text{s23}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 1,
+              "power": 1
+            },
+            {
+              "w": 3,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ]
+        },
+        {
+          "P": "s12 + s23",
+          "PTeX": "\\text{s12}+\\text{s23}",
+          "c": "1",
+          "Q": "s12*s23 + s23^2",
+          "QTeX": "\\text{s12} \\text{s23}+\\text{s23}^2",
+          "multiset": [
+            [
+              "s12 + s23",
+              1
+            ],
+            [
+              "s12",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "\\text{s12}+\\text{s23}",
+              1
+            ],
+            [
+              "\\text{s12}",
+              1
+            ]
+          ],
+          "letter": "(s12 + s23 - Sqrt[s12*s23 + s23^2])/(s12 + s23 + Sqrt[s12*s23 + s23^2])",
+          "letterTeX": "\\frac{-\\sqrt{\\text{s12} \\text{s23}+\\text{s23}^2}+\\text{s12}+\\text{s23}}{\\sqrt{\\text{s12} \\text{s23}+\\text{s23}^2}+\\text{s12}+\\text{s23}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 2,
+              "power": 1
+            },
+            {
+              "w": 3,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 1,
+              "power": 1
+            }
+          ]
+        }
+      ],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "eulerDiscriminant",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 0,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 20.06
+      },
+      "timestamp": "2026-06-14T17:28:33Z",
+      "contributor": "oddletters-v1a"
+    }
+  ],
+  "edges": "{{{1, 2}, 0}, {{1, 2}, 0}, {{1, 3}, 0}, {{2, 4}, 0}, {{3, 5}, 0}, {{4, 5}, 0}}",
+  "nodes": "{{2, 0}, {4, 0}, {5, 0}, {3, 0}}",
+  "CanonicalName": "Massless bubble-pentagon",
+  "MassConfig": {
+    "numEdges": 6,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 6,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "000000",
+    "numExtLegs": 4,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 4,
+    "extLegSignature": "0000"
+  },
+  "Subsectors": [
+    "e112|e3|e3|e|:0000|00|00|0|",
+    "e12|e3|e3|e|:000|00|00|0|"
+  ],
+  "ParentSectors": [
+    "112|3|e4|e5|e5|e|:000|0|00|00|00|0|",
+    "123|24|e|e5|e5|e|:000|00|0|00|00|0|"
+  ]
+}

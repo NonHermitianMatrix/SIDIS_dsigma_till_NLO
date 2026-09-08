@@ -1,0 +1,372 @@
+MONITOR_START job=14692924 host=n7442 kernel_pid=95818
+Configure pinned SCIP 6.0.2 shared runtime
+-- The C compiler identification is GNU 4.8.5
+-- The CXX compiler identification is GNU 4.8.5
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Build shared libraries: ON
+-- Build type: Release
+-- Looking for FE_DOWNWARD
+-- Looking for FE_DOWNWARD - found
+CMake Warning (dev) at /u/local/apps/cmake/3.19.5/gcc-4.8.5/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake:426 (message):
+  The package name passed to `find_package_handle_standard_args` (CRITERION)
+  does not match the name of the calling package (Criterion).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/Modules/FindCriterion.cmake:27 (find_package_handle_standard_args)
+  CMakeLists.txt:447 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find CRITERION (missing: CRITERION_LIBRARY CRITERION_INCLUDE_DIR) 
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+CMake Warning at doc/CMakeLists.txt:19 (message):
+  Could not find all of doxygen, python, php, and bash in system path, which
+  are required for generation of documentation
+
+
+CMake Warning (dev) at /u/local/apps/cmake/3.19.5/gcc-4.8.5/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake:426 (message):
+  The package name passed to `find_package_handle_standard_args` (CRITERION)
+  does not match the name of the calling package (Criterion).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/Modules/FindCriterion.cmake:27 (find_package_handle_standard_args)
+  applications/Ringpacking/tests/CMakeLists.txt:32 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find CRITERION (missing: CRITERION_LIBRARY CRITERION_INCLUDE_DIR) 
+-- The following REQUIRED packages have been found:
+
+ * SCIP
+
+-- The following OPTIONAL packages have not been found:
+
+ * Criterion
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build
+Compile with two threads; optional SCIP LP/NLP solvers are not used by the Newton-polytope calculation
+Scanning dependencies of target scip_update_githash
+-- Git hash: 
+[  0%] Built target scip_update_githash
+Scanning dependencies of target libscip
+[  0%] Building C object src/CMakeFiles/libscip.dir/__/scipbuildflag.c.o
+[  0%] Building C object src/CMakeFiles/libscip.dir/blockmemshell/memory.c.o
+[  0%] Building C object src/CMakeFiles/libscip.dir/scip/message.c.o
+[  0%] Building C object src/CMakeFiles/libscip.dir/scip/bitencode.c.o
+[  0%] Building C object src/CMakeFiles/libscip.dir/scip/bandit.c.o
+[  0%] Building C object src/CMakeFiles/libscip.dir/scip/bandit_epsgreedy.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/bandit_exp3.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/bandit_ucb.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/branch_allfullstrong.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/branch_cloud.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/branch_distribution.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/branch_fullstrong.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/branch_inference.c.o
+[  2%] Building C object src/CMakeFiles/libscip.dir/scip/branch_leastinf.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/branch_lookahead.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/branch_mostinf.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/branch_multaggr.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/branch_nodereopt.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/branch_pscost.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/branch_random.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/branch_relpscost.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/cons_abspower.c.o
+[  5%] Building C object src/CMakeFiles/libscip.dir/scip/compr_largestrepr.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/compr_weakcompr.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/concsolver_scip.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/cons_and.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/cons_bivariate.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/cons_benders.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/cons_benderslp.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/cons_bounddisjunction.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/cons_cardinality.c.o
+[  7%] Building C object src/CMakeFiles/libscip.dir/scip/cons_components.c.o
+[ 10%] Building C object src/CMakeFiles/libscip.dir/scip/cons_conjunction.c.o
+[ 10%] Building C object src/CMakeFiles/libscip.dir/scip/cons_countsols.c.o
+[ 10%] Building C object src/CMakeFiles/libscip.dir/scip/cons_cumulative.c.o
+[ 10%] Building C object src/CMakeFiles/libscip.dir/scip/cons_disjunction.c.o
+[ 10%] Building C object src/CMakeFiles/libscip.dir/scip/cons_indicator.c.o
+[ 10%] Building C object src/CMakeFiles/libscip.dir/scip/cons_integral.c.o
+[ 10%] Building C object src/CMakeFiles/libscip.dir/scip/cons_knapsack.c.o
+[ 10%] Building C object src/CMakeFiles/libscip.dir/scip/cons_linear.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_linking.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_logicor.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_nonlinear.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_or.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_orbisack.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_orbitope.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_pseudoboolean.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_quadratic.c.o
+[ 12%] Building C object src/CMakeFiles/libscip.dir/scip/cons_setppc.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/scip/cons_soc.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/scip/cons_sos1.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/scip/cons_sos2.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/scip/cons_superindicator.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/scip/cons_symresack.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/scip/cons_varbound.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/scip/cons_xor.c.o
+[ 15%] Building C object src/CMakeFiles/libscip.dir/scip/dialog_default.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/event_globalbnd.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/event_softtimelimit.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/event_solvingphase.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/disp_default.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/heur_actconsdiving.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/heur_bound.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/heur_clique.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/heur_coefdiving.c.o
+[ 17%] Building C object src/CMakeFiles/libscip.dir/scip/heur_completesol.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_conflictdiving.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_crossover.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_dins.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_distributiondiving.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_dualval.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_farkasdiving.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_feaspump.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_fixandinfer.c.o
+[ 20%] Building C object src/CMakeFiles/libscip.dir/scip/heur_fracdiving.c.o
+[ 23%] Building C object src/CMakeFiles/libscip.dir/scip/heur_gins.c.o
+[ 23%] Building C object src/CMakeFiles/libscip.dir/scip/heur_guideddiving.c.o
+[ 23%] Building C object src/CMakeFiles/libscip.dir/scip/heur_indicator.c.o
+[ 23%] Building C object src/CMakeFiles/libscip.dir/scip/heur_intdiving.c.o
+[ 23%] Building C object src/CMakeFiles/libscip.dir/scip/heur_intshifting.c.o
+[ 23%] Building C object src/CMakeFiles/libscip.dir/scip/heur_linesearchdiving.c.o
+MONITOR_HEARTBEAT elapsed=30s rss=23.6MiB peak=164.3MiB
+[ 23%] Building C object src/CMakeFiles/libscip.dir/scip/heur_localbranching.c.o
+[ 23%] Building C object src/CMakeFiles/libscip.dir/scip/heur_lpface.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_locks.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_alns.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_mutation.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_multistart.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_mpec.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_nlpdiving.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_objpscostdiving.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_octane.c.o
+[ 25%] Building C object src/CMakeFiles/libscip.dir/scip/heur_ofins.c.o
+[ 28%] Building C object src/CMakeFiles/libscip.dir/scip/heur_oneopt.c.o
+[ 28%] Building C object src/CMakeFiles/libscip.dir/scip/heur_proximity.c.o
+[ 28%] Building C object src/CMakeFiles/libscip.dir/scip/heur_pscostdiving.c.o
+[ 28%] Building C object src/CMakeFiles/libscip.dir/scip/heur_reoptsols.c.o
+[ 28%] Building C object src/CMakeFiles/libscip.dir/scip/heur_repair.c.o
+[ 28%] Building C object src/CMakeFiles/libscip.dir/scip/heur_randrounding.c.o
+[ 28%] Building C object src/CMakeFiles/libscip.dir/scip/heur_rens.c.o
+[ 28%] Building C object src/CMakeFiles/libscip.dir/scip/heur_rins.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_rootsoldiving.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_rounding.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_shiftandpropagate.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_shifting.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_simplerounding.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_subnlp.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_sync.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_trivial.c.o
+[ 30%] Building C object src/CMakeFiles/libscip.dir/scip/heur_trivialnegation.c.o
+[ 33%] Building C object src/CMakeFiles/libscip.dir/scip/heur_trysol.c.o
+[ 33%] Building C object src/CMakeFiles/libscip.dir/scip/heur_twoopt.c.o
+[ 33%] Building C object src/CMakeFiles/libscip.dir/scip/heur_undercover.c.o
+[ 33%] Building C object src/CMakeFiles/libscip.dir/scip/heur_vbounds.c.o
+[ 33%] Building C object src/CMakeFiles/libscip.dir/scip/heur_veclendiving.c.o
+[ 33%] Building C object src/CMakeFiles/libscip.dir/scip/heur_zeroobj.c.o
+[ 33%] Building C object src/CMakeFiles/libscip.dir/scip/heur_zirounding.c.o
+[ 33%] Building C object src/CMakeFiles/libscip.dir/scip/message_default.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/nodesel_bfs.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/nodesel_breadthfirst.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/nodesel_dfs.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/nodesel_estimate.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/nodesel_hybridestim.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/nodesel_restartdfs.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/nodesel_uct.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/presol_boundshift.c.o
+[ 35%] Building C object src/CMakeFiles/libscip.dir/scip/presol_convertinttobin.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_domcol.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_dualagg.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_dualcomp.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_dualinfer.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_gateextraction.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_implics.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_inttobinary.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_qpkktref.c.o
+[ 38%] Building C object src/CMakeFiles/libscip.dir/scip/presol_redvub.c.o
+[ 41%] Building C object src/CMakeFiles/libscip.dir/scip/presol_sparsify.c.o
+[ 41%] Building C object src/CMakeFiles/libscip.dir/scip/presol_stuffing.c.o
+[ 41%] Building C object src/CMakeFiles/libscip.dir/scip/presol_symbreak.c.o
+[ 41%] Building C object src/CMakeFiles/libscip.dir/scip/presol_symmetry.c.o
+[ 41%] Building C object src/CMakeFiles/libscip.dir/scip/presol_trivial.c.o
+[ 41%] Building C object src/CMakeFiles/libscip.dir/scip/presol_tworowbnd.c.o
+[ 41%] Building C object src/CMakeFiles/libscip.dir/scip/prop_dualfix.c.o
+[ 41%] Building C object src/CMakeFiles/libscip.dir/scip/prop_genvbounds.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_nlobbt.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_obbt.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_orbitalfixing.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_probing.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_pseudoobj.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_redcost.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_rootredcost.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_vbounds.c.o
+[ 43%] Building C object src/CMakeFiles/libscip.dir/scip/prop_sync.c.o
+[ 46%] Building C object src/CMakeFiles/libscip.dir/scip/reader_bnd.c.o
+[ 46%] Building C object src/CMakeFiles/libscip.dir/scip/reader_ccg.c.o
+[ 46%] Building C object src/CMakeFiles/libscip.dir/scip/reader_cip.c.o
+[ 46%] Building C object src/CMakeFiles/libscip.dir/scip/reader_cnf.c.o
+[ 46%] Building C object src/CMakeFiles/libscip.dir/scip/reader_cor.c.o
+[ 46%] Building C object src/CMakeFiles/libscip.dir/scip/reader_diff.c.o
+[ 46%] Building C object src/CMakeFiles/libscip.dir/scip/reader_fix.c.o
+[ 46%] Building C object src/CMakeFiles/libscip.dir/scip/reader_fzn.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_gms.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_lp.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_mps.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_mst.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_opb.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_osil.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_pip.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_pbm.c.o
+[ 48%] Building C object src/CMakeFiles/libscip.dir/scip/reader_ppm.c.o
+[ 51%] Building C object src/CMakeFiles/libscip.dir/scip/reader_rlp.c.o
+[ 51%] Building C object src/CMakeFiles/libscip.dir/scip/reader_sol.c.o
+[ 51%] Building C object src/CMakeFiles/libscip.dir/scip/reader_sto.c.o
+[ 51%] Building C object src/CMakeFiles/libscip.dir/scip/reader_smps.c.o
+[ 51%] Building C object src/CMakeFiles/libscip.dir/scip/reader_tim.c.o
+[ 51%] Building C object src/CMakeFiles/libscip.dir/scip/reader_wbo.c.o
+[ 51%] Building C object src/CMakeFiles/libscip.dir/scip/reader_zpl.c.o
+[ 51%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_cgmip.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_clique.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_closecuts.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_aggregation.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_convexproj.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_disjunctive.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_eccuts.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_gauge.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_gomory.c.o
+[ 53%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_impliedbounds.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_intobj.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_mcf.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_oddcycle.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_rapidlearning.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_strongcg.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/sepa_zerohalf.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/benders_default.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/benderscut_feas.c.o
+[ 56%] Building C object src/CMakeFiles/libscip.dir/scip/benderscut_int.c.o
+[ 58%] Building C object src/CMakeFiles/libscip.dir/scip/benderscut_nogood.c.o
+[ 58%] Building C object src/CMakeFiles/libscip.dir/scip/benderscut_opt.c.o
+[ 58%] Building C object src/CMakeFiles/libscip.dir/scip/table_default.c.o
+[ 58%] Building C object src/CMakeFiles/libscip.dir/scip/benders.c.o
+[ 58%] Building C object src/CMakeFiles/libscip.dir/scip/benderscut.c.o
+[ 58%] Building C object src/CMakeFiles/libscip.dir/scip/bendersdefcuts.c.o
+[ 58%] Building C object src/CMakeFiles/libscip.dir/scip/boundstore.c.o
+[ 58%] Building C object src/CMakeFiles/libscip.dir/scip/branch.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/clock.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/concsolver.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/concurrent.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/conflict.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/conflictstore.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/cons.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/cutpool.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/cuts.c.o
+[ 61%] Building C object src/CMakeFiles/libscip.dir/scip/debug.c.o
+[ 64%] Building C object src/CMakeFiles/libscip.dir/scip/dialog.c.o
+[ 64%] Building C object src/CMakeFiles/libscip.dir/scip/disp.c.o
+[ 64%] Building C object src/CMakeFiles/libscip.dir/scip/event.c.o
+[ 64%] Building C object src/CMakeFiles/libscip.dir/scip/fileio.c.o
+[ 64%] Building C object src/CMakeFiles/libscip.dir/scip/heur.c.o
+[ 64%] Building C object src/CMakeFiles/libscip.dir/scip/heuristics.c.o
+[ 64%] Building C object src/CMakeFiles/libscip.dir/scip/compr.c.o
+[ 64%] Building C object src/CMakeFiles/libscip.dir/scip/history.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/implics.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/interrupt.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/intervalarith.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/lp.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/matrix.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/mem.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/misc.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/misc_linear.c.o
+[ 66%] Building C object src/CMakeFiles/libscip.dir/scip/nlp.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/nodesel.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/paramset.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/presol.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/presolve.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/pricestore.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/pricer.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/primal.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/prob.c.o
+[ 69%] Building C object src/CMakeFiles/libscip.dir/scip/prop.c.o
+[ 71%] Building C object src/CMakeFiles/libscip.dir/scip/reader.c.o
+[ 71%] Building C object src/CMakeFiles/libscip.dir/scip/relax.c.o
+[ 71%] Building C object src/CMakeFiles/libscip.dir/scip/reopt.c.o
+[ 71%] Building C object src/CMakeFiles/libscip.dir/scip/retcode.c.o
+[ 71%] Building C object src/CMakeFiles/libscip.dir/scip/scip_bandit.c.o
+[ 71%] Building C object src/CMakeFiles/libscip.dir/scip/scip_benders.c.o
+[ 71%] Building C object src/CMakeFiles/libscip.dir/scip/scip_branch.c.o
+[ 71%] Building C object src/CMakeFiles/libscip.dir/scip/scip_compr.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_concurrent.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_conflict.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_cons.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_copy.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_cut.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_datastructures.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_dialog.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_debug.c.o
+[ 74%] Building C object src/CMakeFiles/libscip.dir/scip/scip_disp.c.o
+[ 76%] Building C object src/CMakeFiles/libscip.dir/scip/scip_event.c.o
+[ 76%] Building C object src/CMakeFiles/libscip.dir/scip/scip_expr.c.o
+[ 76%] Building C object src/CMakeFiles/libscip.dir/scip/scip_general.c.o
+[ 76%] Building C object src/CMakeFiles/libscip.dir/scip/scip_heur.c.o
+[ 76%] Building C object src/CMakeFiles/libscip.dir/scip/scip_lp.c.o
+[ 76%] Building C object src/CMakeFiles/libscip.dir/scip/scip_mem.c.o
+[ 76%] Building C object src/CMakeFiles/libscip.dir/scip/scip_message.c.o
+[ 76%] Building C object src/CMakeFiles/libscip.dir/scip/scip_nlp.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_nodesel.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_nonlinear.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_numerics.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_param.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_presol.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_pricer.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_prob.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_probing.c.o
+[ 79%] Building C object src/CMakeFiles/libscip.dir/scip/scip_prop.c.o
+[ 82%] Building C object src/CMakeFiles/libscip.dir/scip/scip_randnumgen.c.o
+[ 82%] Building C object src/CMakeFiles/libscip.dir/scip/scip_reader.c.o
+[ 82%] Building C object src/CMakeFiles/libscip.dir/scip/scip_relax.c.o
+[ 82%] Building C object src/CMakeFiles/libscip.dir/scip/scip_reopt.c.o
+[ 82%] Building C object src/CMakeFiles/libscip.dir/scip/scip_sepa.c.o
+[ 82%] Building C object src/CMakeFiles/libscip.dir/scip/scip_sol.c.o
+[ 82%] Building C object src/CMakeFiles/libscip.dir/scip/scip_solve.c.o
+[ 82%] Building C object src/CMakeFiles/libscip.dir/scip/scip_solvingstats.c.o
+[ 84%] Building C object src/CMakeFiles/libscip.dir/scip/scip_table.c.o
+[ 84%] Building C object src/CMakeFiles/libscip.dir/scip/scip_timing.c.o
+[ 84%] Building C object src/CMakeFiles/libscip.dir/scip/scip_tree.c.o
+[ 84%] Building C object src/CMakeFiles/libscip.dir/scip/scip_validation.c.o
+[ 84%] Building C object src/CMakeFiles/libscip.dir/scip/scip_var.c.o
+[ 84%] Building C object src/CMakeFiles/libscip.dir/scip/scipdefplugins.c.o
+[ 84%] Building C object src/CMakeFiles/libscip.dir/scip/scipcoreplugins.c.o
+[ 84%] Building C object src/CMakeFiles/libscip.dir/scip/scipgithash.c.o
+/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/src/scip/scipgithash.c:24:21: fatal error: githash.c: No such file or directory
+ #include "githash.c"
+                     ^
+compilation terminated.
+gmake[3]: *** [src/CMakeFiles/libscip.dir/scip/scipgithash.c.o] Error 1
+gmake[3]: *** Waiting for unfinished jobs....
+gmake[2]: *** [src/CMakeFiles/libscip.dir/all] Error 2
+gmake[1]: *** [src/CMakeFiles/libscip.dir/rule] Error 2
+gmake: *** [libscip] Error 2
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_build_scip.py", line 27, in <module>
+    subprocess.run([cmake, '--build', '.', '--target', 'libscip', '--', '-j2'],
+  File "/u/local/apps/anaconda3/2023.03/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/u/local/apps/cmake/3.19.5/gcc-4.8.5/bin/cmake', '--build', '.', '--target', 'libscip', '--', '-j2']' returned non-zero exit status 2.
+MONITOR_WAKE {"stage": "s04", "source": "s04_build_scip.py", "source_sha256": "c058f21b6253e40972a92bce8d46c5fb115e2f8a1c97d1c3624ba8f99bf65ac8", "job_id": "14692924", "host": "n7442", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 300347392, "elapsed_seconds": 59.26424413174391, "completed_utc": "2026-09-07T12:04:21.188013+00:00"}

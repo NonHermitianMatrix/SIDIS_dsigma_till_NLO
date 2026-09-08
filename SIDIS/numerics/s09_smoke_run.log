@@ -1,0 +1,27 @@
+MONITOR_START job=14693811 host=n6643 kernel_pid=33247
+PROGRESS SIDIS numerics S09 2026-09-07T16:54:30.864307+00:00: Starting S09 smoke with exact frozen inputs and generated transformations. Next inspect numerical gates and retain all signed channel contributions.
+S09_SMOKE 0 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 1 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 2 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 3 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 4 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 5 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 6 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 7 acceptance 1.0 totals [30.463006046981743, 23.711855742779637]
+S09_SMOKE 8 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 9 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 10 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 11 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 12 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 13 acceptance 0.0 totals [0.0, 0.0]
+S09_SMOKE 14 acceptance 0.5541732361198232 totals [119.28555048343404, 118.54117443839993]
+S09_SMOKE 15 acceptance 0.0 totals [0.0, 0.0]
+PROGRESS SIDIS numerics S09 2026-09-07T16:54:31.106095+00:00: S09 smoke completed at 16 sampled points; 2 pass laboratory cuts. Results and timing saved; no integrated prediction yet. Next run convergence-gated bin integrations.
+{
+  "status": "SmokePassed",
+  "calls": 16,
+  "accepted": 2,
+  "wall_seconds": 0.09162967800511979,
+  "source_sha256": "f8e58cc34e24a4f5759d79056b23825157df31ea3ac7943166ba4bbe45ec87cc"
+}
+MONITOR_WAKE {"stage": "s09_smoke", "source": "s09_convolve_channels.py", "source_sha256": "f8e58cc34e24a4f5759d79056b23825157df31ea3ac7943166ba4bbe45ec87cc", "job_id": "14693811", "host": "n6643", "exit_code": 0, "success_marker": false, "result_checks": {"s09_cache/s09_smoke_result": true}, "command": ["/u/local/apps/anaconda3/2023.03/bin/python", "-u", "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s09_convolve_channels.py", "--mode", "smoke"], "accepted_execution": true, "guard": null, "peak_rss_bytes": 122314752, "elapsed_seconds": 2.6338474019867135, "completed_utc": "2026-09-07T16:54:31.216189+00:00"}

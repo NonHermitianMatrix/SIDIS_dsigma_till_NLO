@@ -1,0 +1,21 @@
+{
+  "versions": {
+    "Kira": "Kira version: 3.1 (Git: 3.1)\nBuild configuration: release (static); non-MPI; 64 bit weights; with jemalloc;\nwith external FireFly with FLINT",
+    "polymake": "polymake version 4.4\nCopyright (c) 1997-2021\nEwgenij Gawrilow, Michael Joswig, and the polymake team\nTechnische Universit\u00e4t Berlin, Germany\nhttps://polymake.org\n\nThis is free software licensed under GPL; see the source for copying conditions.\nThere is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+  },
+  "polymake_image": "docker://polymake/release@sha256:fa640521d6bf46d645b166e0f3d5bc34819cafa73f5545149d5fa2aeacdb6fdf",
+  "sha256": {
+    "polymake-4.4.sif": "6b3816b3af6bf3d37d009ec90ec8fb9a43b09b0a15f3a480d105fb397894d881",
+    "kira-3.1": "d57a64ffe5afd3d1174f8805da78b5134f9636359c821d9523ca1b757bf83fbf",
+    "SubTropica-1.2.10.tar.gz": "aa3e5a9a9720f2439b54bf842b4c1474ad7c1589499194898056fbc517482167",
+    "unsquashfs": "283b018b0c80ada76d7620b2027b7c82fcd891064fdb0024e175b7c5adc43f25",
+    "squashfs-tools-el7.rpm": "109b1c2d53cb47e9c654b9b65e74805cf4379f7ee0d7d948d55d0257a5c6569a"
+  },
+  "additional_runtime_library": {
+    "package": "libflint-2.6.3_2.6.3-3_amd64.deb",
+    "url": "https://archive.debian.org/debian/pool/main/f/flint/libflint-2.6.3_2.6.3-3_amd64.deb",
+    "sha256": "b10201433ee97d0089fdb29924edbf7e2c745b7c575a1257b36ba4bed2de2f50"
+  },
+  "subtropica_probe": "s02_result.wl",
+  "accepted": true
+}

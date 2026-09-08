@@ -1,0 +1,89 @@
+integralfamilies:
+  - name: V01
+    loop_momenta: [ell]
+    top_level_sectors: [14]
+    propagators:
+      - ["ell+k1-2*p-q", 0]
+      - ["ell-p-q", 0]
+      - ["ell+k1-p-q", 0]
+      - ["ell", 0]
+  - name: V02
+    loop_momenta: [ell]
+    top_level_sectors: [7]
+    propagators:
+      - ["ell+k1-p-2*q", 0]
+      - ["ell-p-q", 0]
+      - ["ell-q", 0]
+      - ["ell", 0]
+  - name: V03
+    loop_momenta: [ell]
+    top_level_sectors: [7]
+    propagators:
+      - ["ell+k1-2*p-q", 0]
+      - ["ell-p-q", 0]
+      - ["ell-p", 0]
+      - ["ell", 0]
+  - name: V04
+    loop_momenta: [ell]
+    top_level_sectors: [7]
+    propagators:
+      - ["ell-p-q", 0]
+      - ["ell-k1-p", 0]
+      - ["ell-p", 0]
+      - ["ell", 0]
+  - name: V05
+    loop_momenta: [ell]
+    top_level_sectors: [11,14]
+    propagators:
+      - ["ell-p-q", 0]
+      - ["ell-p", 0]
+      - ["ell+k1-p", 0]
+      - ["ell", 0]
+  - name: V06
+    loop_momenta: [ell]
+    top_level_sectors: [15]
+    propagators:
+      - ["ell-p-q", 0]
+      - ["ell+k1-p-q", 0]
+      - ["ell-p", 0]
+      - ["ell", 0]
+  - name: V07
+    loop_momenta: [ell]
+    top_level_sectors: [15]
+    propagators:
+      - ["ell-p-q", 0]
+      - ["ell+k1-p-q", 0]
+      - ["ell-q", 0]
+      - ["ell", 0]
+  - name: V08
+    loop_momenta: [ell]
+    top_level_sectors: [15]
+    propagators:
+      - ["ell+k1-p-q", 0]
+      - ["ell-p", 0]
+      - ["ell+k1-p", 0]
+      - ["ell", 0]
+  - name: V09
+    loop_momenta: [ell]
+    top_level_sectors: [12]
+    propagators:
+      - ["ell-2*p-q", 0]
+      - ["ell-k1-p-q", 0]
+      - ["ell-p-q", 0]
+      - ["ell", 0]
+  - name: V10
+    loop_momenta: [ell]
+    top_level_sectors: [3]
+    propagators:
+      - ["ell+k1-p-q", 0]
+      - ["ell-p", 0]
+      - ["ell-p+q", 0]
+      - ["ell", 0]
+  - name: V11
+    loop_momenta: [ell]
+    top_level_sectors: [10]
+    propagators:
+      - ["ell-p", 0]
+      - ["ell+k1-p", 0]
+      - ["ell-q", 0]
+      - ["ell", 0]

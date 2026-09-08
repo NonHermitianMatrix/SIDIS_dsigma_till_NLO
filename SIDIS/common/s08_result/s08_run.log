@@ -1,0 +1,50 @@
+MONITOR_START job=14692871 host=n7368 kernel_pid=18656
+"PASS: ""accepted real reduction"
+"PASS: ""unique positive-energy cut solution"
+"PASS: ""both defining cuts vanish"
+MONITOR_HEARTBEAT elapsed=31s rss=378.0MiB peak=444.1MiB
+MONITOR_HEARTBEAT elapsed=61s rss=400.6MiB peak=452.8MiB
+MONITOR_HEARTBEAT elapsed=91s rss=409.8MiB peak=452.8MiB
+MONITOR_HEARTBEAT elapsed=121s rss=415.4MiB peak=452.8MiB
+"PASS: ""finite nonnegative requested regulator orders"
+"PASS: ""unit cut master indices"
+"CUT_INPUT "InputForm[CutIntegral["R01", {1, 1, 0, 0}]]" class ""cut_volume"" order "2
+"PASS: ""unit cut master indices"
+"PASS: ""effective vector reconstructs CutIntegral[\"R01\", {1, 1, 1, 1}]"
+"PASS: ""effective vector reconstructs CutIntegral[\"R01\", {1, 1, 1, 1}]"
+"PASS: ""pair has a null direction"
+"CUT_INPUT "InputForm[CutIntegral["R01", {1, 1, 1, 1}]]" class ""cut_pair_massless"" order "1
+"PASS: ""unit cut master indices"
+"PASS: ""effective vector reconstructs CutIntegral[\"R02\", {1, 1, 1, 1}]"
+"PASS: ""effective vector reconstructs CutIntegral[\"R02\", {1, 1, 1, 1}]"
+"PASS: ""pair has a null direction"
+"PASS: ""shared class has the same defining tuple"
+"CUT_INPUT "InputForm[CutIntegral["R02", {1, 1, 1, 1}]]" class ""cut_pair_massless"" order "1
+"PASS: ""unit cut master indices"
+"PASS: ""effective vector reconstructs CutIntegral[\"R03\", {1, 1, 0, 1}]"
+"CUT_INPUT "InputForm[CutIntegral["R03", {1, 1, 0, 1}]]" class ""cut_single_massive"" order "1
+"PASS: ""unit cut master indices"
+"PASS: ""effective vector reconstructs CutIntegral[\"R03\", {1, 1, 1, 1}]"
+"PASS: ""effective vector reconstructs CutIntegral[\"R03\", {1, 1, 1, 1}]"
+"PASS: ""pair has a null direction"
+"CUT_INPUT "InputForm[CutIntegral["R03", {1, 1, 1, 1}]]" class ""cut_pair_one_massive"" order "1
+"PASS: ""unit cut master indices"
+"PASS: ""effective vector reconstructs CutIntegral[\"R04\", {1, 1, 1, 1}]"
+"PASS: ""effective vector reconstructs CutIntegral[\"R04\", {1, 1, 1, 1}]"
+"PASS: ""pair has a null direction"
+"PASS: ""shared class has the same defining tuple"
+"CUT_INPUT "InputForm[CutIntegral["R04", {1, 1, 1, 1}]]" class ""cut_pair_one_massive"" order "1
+"PASS: ""unit cut master indices"
+"PASS: ""effective vector reconstructs CutIntegral[\"R09\", {1, 1, 1, 1}]"
+"PASS: ""effective vector reconstructs CutIntegral[\"R09\", {1, 1, 1, 1}]"
+"PASS: ""pair has a null direction"
+"PASS: ""shared class has the same defining tuple"
+"CUT_INPUT "InputForm[CutIntegral["R09", {1, 1, 1, 1}]]" class ""cut_pair_one_massive"" order "1
+"PASS: ""unit cut master indices"
+"PASS: ""effective vector reconstructs CutIntegral[\"R10\", {1, 1, 1, 1}]"
+"PASS: ""effective vector reconstructs CutIntegral[\"R10\", {1, 1, 1, 1}]"
+"PASS: ""pair has a null direction"
+"PASS: ""shared class has the same defining tuple"
+"CUT_INPUT "InputForm[CutIntegral["R10", {1, 1, 1, 1}]]" class ""cut_pair_one_massive"" order "1
+"S08_SUCCESS: "8" positive-energy cut masters mapped to "4" Euler classes."
+MONITOR_WAKE {"stage": "s08", "source": "s08_cut_master_inputs.wl", "source_sha256": "13b120a7d7d79a1aca6b360dddd5f2e1f8170f7fcc6b2650effcf7145898bc70", "job_id": "14692871", "host": "n7368", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 474800128, "elapsed_seconds": 125.98273531347513, "completed_utc": "2026-09-07T10:32:44.054949+00:00"}

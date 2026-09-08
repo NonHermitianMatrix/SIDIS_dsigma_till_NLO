@@ -1,0 +1,25 @@
+integralfamilies:
+  - name: OS
+    loop_momenta: [ell]
+    top_level_sectors: [3]
+    propagators:
+      - ["ell", 0]
+      - ["ell+p", 0]
+      - ["ell+q", 0]
+      - ["ell+k1", 0]
+  - name: SE
+    loop_momenta: [ell]
+    top_level_sectors: [3]
+    propagators:
+      - ["ell", 0]
+      - ["ell+q", 0]
+      - ["ell+p", 0]
+      - ["ell+k1", 0]
+  - name: UV
+    loop_momenta: [ell]
+    top_level_sectors: [1]
+    propagators:
+      - ["ell", m2]
+      - ["ell+p", m2]
+      - ["ell+q", m2]
+      - ["ell+k1", m2]

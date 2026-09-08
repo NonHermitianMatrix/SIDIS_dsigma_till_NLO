@@ -1,0 +1,41 @@
+<|"Definition" -> <|"Channel" -> "Hqq", "Label" -> "Pg_1_L1", 
+   "Left" -> (alphaS^2*eq^2*(56*omega^2 + 112*omega*Q^2 + 112*Q^4 - 
+       112*omega*s + 112*s^2))/(9*Pi^3*(omega - s)*s), 
+   "Right" -> (alphaS^2*eq^2*(-112*Q^6*(omega - s)^5*s^5 + 
+       (omega - s)^2*s^2*(-56*(omega - s)^6*s^3 - 56*(omega - s)^5*s^4 - 
+         56*(omega - s)^4*s^5 - 56*(omega - s)^3*s^6) - 
+       Q^2*(omega - s)*s*(168*(omega - s)^6*s^4 + 224*(omega - s)^5*s^5 + 
+         168*(omega - s)^4*s^6) + Q^4*(-224*(omega - s)^6*s^5 - 
+         224*(omega - s)^5*s^6)))/(9*Pi^3*(omega + Q^2)*(omega - s)^3*s^6*
+      (-omega + s)^3), "Assumptions" -> Q^2 > 0 && s > 0 && 
+     -Q^2 - s < omega - s && omega - s < 0 && mu > 0 && B > 0 && Q > 0 && 
+     omega > 0 && Element[nf, Integers] && nf >= 1 && alphaS > 0 && 
+     Element[eq | otherChargeMoment[1] | otherChargeMoment[2], Reals], 
+   "Kind" -> "L1"|>, "Difference" -> 
+  (alphaS^2*eq^2*(56*omega^2 + 112*omega*Q^2 + 112*Q^4 - 112*omega*s + 
+      112*s^2))/(9*Pi^3*(omega - s)*s) - 
+   (alphaS^2*eq^2*(-112*Q^6*(omega - s)^5*s^5 + (omega - s)^2*s^2*
+       (-56*(omega - s)^6*s^3 - 56*(omega - s)^5*s^4 - 56*(omega - s)^4*s^5 - 
+        56*(omega - s)^3*s^6) - Q^2*(omega - s)*s*(168*(omega - s)^6*s^4 + 
+        224*(omega - s)^5*s^5 + 168*(omega - s)^4*s^6) + 
+      Q^4*(-224*(omega - s)^6*s^5 - 224*(omega - s)^5*s^6)))/
+    (9*Pi^3*(omega + Q^2)*(omega - s)^3*s^6*(-omega + s)^3), 
+ "NumericalChecks" -> 
+  {<|"Point" -> {Q -> 2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 2, 
+      nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 4/9, 
+      chargeSum -> 1, otherChargeMoment[1] -> 0, otherChargeMoment[2] -> 2/9, 
+      s23 -> 1/7}, "Values" -> {-0.008760383871501275789221559924799214486205\
+801880080958631927207553142789547735005289987988667943657086006942983636`89.0\
+5012205090352, -0.00876038387150127578922155992479921448620580188008095863192\
+72075531427895477350052899879886679436570846813682574166`87.97625007437902}, 
+    "Difference" -> 0``89.99855411350582, "Equal" -> True|>, 
+   <|"Point" -> {Q -> 5/2, s -> 10, t -> -9, omega -> 1, mu -> 3, B -> 2, 
+      nf -> 4, alphaS -> 1/5, eq -> 2/3, eqp -> -1/3, eq2 -> 4/9, 
+      chargeSum -> 1, otherChargeMoment[1] -> 0, otherChargeMoment[2] -> 2/9, 
+      s23 -> 1/7}, "Values" -> {-0.010767146014011466227363376536532066220885\
+2983514795945176345147132235756149480579723664589227610672216589859182359`89.\
+03914852064194, -0.0107671460140114662273633765365320662208852983514795945176\
+345147132235756149480579723664589227610672232131080110446`88.02572746657341}, 
+    "Difference" -> 0``89.95343727987718, "Equal" -> True|>}, 
+ "InputHash" -> 5247318516002520293201507485156330584936199956604982999944190\
+8389751776940183|>

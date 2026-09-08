@@ -1,0 +1,20 @@
+{
+	"Status":"Complete",
+	"Channel":"Hqqbar",
+	"InputSHA256":"28cf4119f7db84a58a76f88aee9e14ace618f5146af6d9c1a1c602c6179bd21e",
+	"JacobianAlreadyIncluded":false,
+	"Checks":{
+		"producer_acceptance":true,
+		"source_identity":true,
+		"pole_input_identity":true,
+		"pole_acceptance":true,
+		"all_pole_residues_zero":true,
+		"partonic_variables":true,
+		"finite_coefficients":true
+	},
+	"PhysicalConditions":"Q2 > 0 && s > w > 0 && -Q2 - s + w < t < -((Q2*w)\/s) && mu > 0 && mu2 > 0 && B > 0 && SUNN > 1 && Nc > 1",
+	"NLOAlphaDegree":2,
+	"RegularOnly":true,
+	"ChargeParameter":"eq2",
+	"ChargeParameterDegree":1
+}

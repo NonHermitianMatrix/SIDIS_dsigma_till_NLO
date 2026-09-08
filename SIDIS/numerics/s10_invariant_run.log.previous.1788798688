@@ -1,0 +1,12 @@
+MONITOR_START job=14693762 host=n6133 kernel_pid=38404
+PROGRESS SIDIS numerics S10 2026-09-07T16:30:00.303955+00:00: Starting an inverse kinematic map from the accepted S04 defining relations. Next gate s,t,B reconstruction and provide exact Wolfram substitution rules for stable coefficient preparation.
+PROGRESS SIDIS numerics S10 2026-09-07T16:30:06.762630+00:00: Precision validation failed: NameError("name 'sha' is not defined"). Next correct this validation stage before using its output.
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s10_validate_precision.py", line 297, in <module>
+    try:main()
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s10_validate_precision.py", line 231, in main
+    if options.invariant_contract:invariant_contract();return
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s10_validate_precision.py", line 217, in invariant_contract
+    result=dict(stage='s10_invariant_contract',status='Complete',producer_sha256=sha(Path(__file__)),
+NameError: name 'sha' is not defined. Did you mean: 'sh'?
+MONITOR_WAKE {"stage": "s10_invariant", "source": "s10_validate_precision.py", "source_sha256": "ca3ddf9fd7857529389a45eec493a97e6a3af2bdbe27509ae777ef1cfa8102b9", "job_id": "14693762", "host": "n6133", "exit_code": 1, "success_marker": false, "result_checks": {"s10_cache/s10_invariant_contract_result": false}, "command": ["/u/local/apps/anaconda3/2023.03/bin/python", "-u", "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s10_validate_precision.py", "--invariant-contract"], "accepted_execution": false, "guard": null, "peak_rss_bytes": 66031616, "elapsed_seconds": 9.242415537009947, "completed_utc": "2026-09-07T16:30:06.874139+00:00"}

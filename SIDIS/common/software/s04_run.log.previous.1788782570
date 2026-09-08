@@ -1,0 +1,14 @@
+MONITOR_START job=14692920 host=n7439 kernel_pid=258630
+Configure pinned SCIP 6.0.2 shared runtime
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.3 or higher is required.  You are running version 2.8.12.2
+
+
+-- Configuring incomplete, errors occurred!
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_build_scip.py", line 25, in <module>
+    subprocess.run(configuration, cwd=str(build), check=True)
+  File "/u/local/apps/anaconda3/2023.03/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/bin/cmake', '/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c', '-DCMAKE_BUILD_TYPE=Release', '-DSHARED=ON', '-DLPS=none', '-DSYM=none', '-DEXPRINT=none', '-DIPOPT=OFF', '-DZIMPL=OFF', '-DREADLINE=OFF', '-DGMP=OFF', '-DZLIB=OFF', '-DCMAKE_C_FLAGS_RELEASE=-O1 -DNDEBUG', '-DCMAKE_CXX_FLAGS_RELEASE=-O1 -DNDEBUG']' returned non-zero exit status 1.
+MONITOR_WAKE {"stage": "s04", "source": "s04_build_scip.py", "source_sha256": "057646be1fb5ba273312752ae4ff377787e0bb45e83d80f7312ef7917154ebde", "job_id": "14692920", "host": "n7439", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 15196160, "elapsed_seconds": 0.4851149916648865, "completed_utc": "2026-09-07T11:52:19.134500+00:00"}

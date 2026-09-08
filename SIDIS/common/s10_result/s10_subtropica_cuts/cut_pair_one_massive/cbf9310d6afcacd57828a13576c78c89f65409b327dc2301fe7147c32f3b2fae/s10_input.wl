@@ -1,0 +1,9 @@
+<|"InputHash" -> 
+  922597917288502413857258101770307470950836195522627590776063914889628370328\
+78, "Input" -> {1, ((1 + xx1*zm)*(1 + xx1*zp))^eps/(1 + xx1), {xx1}, 
+   {zm, zp}}, "Order" -> 1, "ParameterRename" -> {u -> xx1}, 
+ "PackageHash" -> 77003354102090253125630607168089365942099122523326181398545\
+184007216265961831, "SourceHash" -> 
+  944662780184357030575420556099942205426550468642482307933624651474753599226\
+69, "MeasureConvention" -> 
+  "Ordinary du Euler density; regulated cut prefactor is retained in S08"|>

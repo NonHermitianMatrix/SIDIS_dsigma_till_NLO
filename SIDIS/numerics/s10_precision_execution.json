@@ -1,0 +1,24 @@
+{
+  "stage": "s10_precision",
+  "source": "s10_validate_precision.py",
+  "source_sha256": "f9a59c37f080c0acdc50ad9ae1c379508d212816396906d73b94aa61335f1d30",
+  "job_id": "14693785",
+  "host": "n7136",
+  "exit_code": 0,
+  "success_marker": false,
+  "result_checks": {
+    "s10_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s10_validate_precision.py",
+    "--sample-source",
+    "references/s01_validation_coordinates.json"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 1585549312,
+  "elapsed_seconds": 535.2403913736343,
+  "completed_utc": "2026-09-07T16:51:58.771350+00:00"
+}

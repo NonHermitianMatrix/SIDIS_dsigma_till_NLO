@@ -1,0 +1,245 @@
+{
+  "CNickelIndex": "e0|:01|",
+  "MassScales": 1,
+  "FunctionClass": "hypergeometric",
+  "EpsilonOrder": "-1,0",
+  "References": [
+    "arXiv:0712.1851 (JHEP 02 (002), 2008)",
+    "arXiv:1907.08227, Phys.Rev.D 100, 2019",
+    "arXiv:2201.03593 (doi: 10.1007/978-3-030-99558-4)",
+    "arXiv:1704.07931",
+    "arXiv:1609.05071"
+  ],
+  "Records": [
+    {
+      "authors": "Ellis, R.Keith, Zanderighi, Giulia",
+      "texkey": "Ellis:2007qk",
+      "verified": true,
+      "verifiedAt": "2026-04-08",
+      "reference": "arXiv:0712.1851, JHEP 02 (002), 2008",
+      "ancillaryFiles": [],
+      "recordId": "bf_df78f865d80d",
+      "masterCount": 1,
+      "computationLevel": "full",
+      "doi": "10.1088/1126-6708/2008/02/002",
+      "tools": [],
+      "description": "General one-loop tadpole integral $I_1^D(m^2)$ with a single massive propagator. UV-divergent with a simple $1/\\varepsilon$ pole. Analytic result given to $\\mathcal{O}(\\varepsilon^0)$.",
+      "epsOrders": "-1,0",
+      "method": [],
+      "dimScheme": "d=4-2*eps",
+      "location": "Sec. 2.1, Sec. 4.1",
+      "familyName": "Tadpole"
+    },
+    {
+      "authors": "Gerlach, Marvin, Mishima, Go, Steinhauser, Matthias",
+      "texkey": "Gerlach:2019kfo",
+      "verified": false,
+      "verifiedAt": "",
+      "ancillaryPaths": [
+        "https://www.ttp.kit.edu/preprints/2019/ttp19-024/"
+      ],
+      "reference": "arXiv:1907.08227, Phys.Rev.D 100, 2019",
+      "ancillaryFiles": [],
+      "recordId": "bf_128dcef7e5ea",
+      "masterCount": 1,
+      "computationLevel": "full",
+      "doi": "10.1103/PhysRevD.100.054016",
+      "tools": [
+        "FIRE",
+        "LiteRed",
+        "FIESTA"
+      ],
+      "description": "One-loop massive tadpole integral appearing as a master integral in the two-loop NRQCD matching calculation. Result is exact in epsilon, given in terms of a single Gamma function: $\\Gamma(\\varepsilon-1)$. Used in the coupling constant decoupling relation and throughout the matching calculation.",
+      "epsOrders": "all orders",
+      "method": [],
+      "dimScheme": "d=4-2*eps",
+      "location": "Appendix B, Eq. (B.1), Fig. 3",
+      "familyName": "I_1^a"
+    },
+    {
+      "reference": "arXiv:2201.03593 (doi: 10.1007/978-3-030-99558-4)",
+      "authors": "Weinzierl, Stefan",
+      "description": "Single-propagator one-loop vacuum bubble with mass m, T_nu = e^(eps gamma) (mu^2)^(nu-D/2) int d^Dk/(i pi^(D/2)) 1/(-k^2+m^2)^nu. Closed-form Gamma-function result valid for any D given in eq. result_tadpole; explicit 4D and 2D specializations follow. Used throughout the book as the simplest illustration of dim reg, Wick rotation and IBP reduction.",
+      "epsOrders": "all_orders",
+      "familyName": "one-loop tadpole T_nu",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "10.1007/978-3-030-99558-4",
+      "texkey": "Weinzierl:2022eaz",
+      "masterCount": 1,
+      "dimScheme": "d=D",
+      "computationLevel": "full",
+      "location": "Chapter 'Basics', Sec. 'Wick rotation' Eq. (T_1 def, line ~882) and result Eq. (chapter_basics:result_tadpole, line ~1534)",
+      "recordId": "bx_83198f8db12b",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1704.07931",
+      "authors": "",
+      "description": "Massive tadpole one-loop integral in D=2-2eps. UV divergent as O(eps^{-1}). Closed form in Gamma functions.",
+      "epsOrders": "all_orders",
+      "familyName": "tadpole_1m",
+      "method": "direct_integration, coaction",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 1,
+      "dimScheme": "d=2-2*eps",
+      "computationLevel": "full",
+      "location": "Section 3.1, Appendix D.1",
+      "recordId": "bx_b2eeb729bcc1",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:1609.05071",
+      "authors": "",
+      "description": "One-loop massive vacuum bubble integral I_1 = int_k 1/(k^2+1) in d=2-2*eps dimensions. Normalization convention: unit mass. Has a simple pole in eps. Serves as the normalization factor (I_1)^L for L-loop master integrals.",
+      "epsOrders": "all_orders",
+      "familyName": "GN_vacuum_1L",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 1,
+      "dimScheme": "d=2-2*eps",
+      "computationLevel": "full",
+      "location": "Eq. (B.2), Sec. 3, App. B",
+      "recordId": "bx_23fc2df33fbf",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Names": [
+    "Tadpole",
+    "I_1^a",
+    "one-loop tadpole T_nu",
+    "tadpole_1m"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 1,
+  "NumPropagators": 1,
+  "Results": [
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": 0,
+      "propExponents": [
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.449",
+      "stCommand": "STIntegrate[{{{{1, 1}, m}}, {{1, 0}}}, \"Dimension\" -> \"4 - 2*eps\", \"Order\" -> 0, \"Substitutions\" -> \"\"]",
+      "contributor": "Anonymous",
+      "timestamp": "2026-04-22T17:54:21",
+      "byteCount": 392,
+      "alphabet": [
+        "m^2"
+      ],
+      "symbolWeight": 1,
+      "symbolTerms": 2,
+      "legOrder": [
+        1
+      ],
+      "resultDataId": "4b82e940bc969ab9",
+      "resultTeXPreview": "\\frac{m^2}{\\varepsilon}+(m^2-m^2 \\log (m^2))+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T060138Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "mm"
+      ],
+      "singularitiesTeX": [
+        "\\text{mm}"
+      ],
+      "singularitiesVerified": [
+        true
+      ],
+      "groundTruthAvailable": true,
+      "provenance": {
+        "engine": "eulerDiscriminant",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 1,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 2.41
+      },
+      "timestamp": "2026-06-14T06:01:38Z",
+      "contributor": "oddletters-v1a",
+      "singularitiesChiDrop": [
+        0
+      ]
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T060138Z",
+      "byEpsOrder": null,
+      "evens": [
+        "mm"
+      ],
+      "evensTeX": [
+        "\\text{mm}"
+      ],
+      "evensVerified": [
+        true
+      ],
+      "groundTruthAvailable": true,
+      "oddLetters": [],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "eulerDiscriminant",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 1,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 2.41
+      },
+      "timestamp": "2026-06-14T06:01:38Z",
+      "contributor": "oddletters-v1a",
+      "evensChiDrop": [
+        0
+      ]
+    }
+  ],
+  "edges": "{{{1, 1}, m}}",
+  "nodes": "{{1, 0}}",
+  "CanonicalName": "Equal-mass tadpole",
+  "MassConfig": {
+    "numEdges": 1,
+    "numMassiveEdges": 1,
+    "numMasslessEdges": 0,
+    "distinctInternalMasses": 1,
+    "internalMassLabels": [
+      "m"
+    ],
+    "edgeMassPattern": "1",
+    "numExtLegs": 1,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 1,
+    "extLegSignature": "0"
+  },
+  "ValenceVerifiedLegit": true,
+  "commonNames": [
+    "A₀(m)",
+    "A"
+  ],
+  "Subsectors": [],
+  "ParentSectors": []
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "s11",
+  "source": "s11_aggregate_replacement.py",
+  "source_sha256": "5b7325b82171c676a9974ef67d3443d8d34f01b99e8c3647a9e4736d272c510a",
+  "job_id": "14693839",
+  "host": "n6041",
+  "exit_code": 0,
+  "success_marker": false,
+  "result_checks": {
+    "s11_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s11_aggregate_replacement.py"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 113315840,
+  "elapsed_seconds": 7.601665312424302,
+  "completed_utc": "2026-09-07T17:09:02.213842+00:00"
+}

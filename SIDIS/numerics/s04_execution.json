@@ -1,0 +1,22 @@
+{
+  "stage": "s04",
+  "source": "s04_derive_convolution_maps.py",
+  "source_sha256": "3e18b4a795d0e057a9a0598afc2ec13c144e82753e9c5f1345753a63b498136a",
+  "job_id": "14693759",
+  "host": "n6138",
+  "exit_code": 0,
+  "success_marker": false,
+  "result_checks": {
+    "s04_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s04_derive_convolution_maps.py"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 51662848,
+  "elapsed_seconds": 16.450830452144146,
+  "completed_utc": "2026-09-07T16:28:44.773339+00:00"
+}

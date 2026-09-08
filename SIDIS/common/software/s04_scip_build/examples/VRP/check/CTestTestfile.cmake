@@ -1,0 +1,12 @@
+# CMake generated Testfile for 
+# Source directory: /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check
+# Build directory: /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build/examples/VRP/check
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(examples-vrp-build "/u/local/apps/cmake/3.19.5/gcc-4.8.5/bin/cmake" "--build" "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build" "--target" "vrp")
+set_tests_properties(examples-vrp-build PROPERTIES  RESOURCE_LOCK "libscip" _BACKTRACE_TRIPLES "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check/CMakeLists.txt;18;add_test;/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check/CMakeLists.txt;0;")
+add_test(examples-vrp-eil13 "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build/bin/examples/vrp" "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check/../data/eil13.vrp")
+set_tests_properties(examples-vrp-eil13 PROPERTIES  DEPENDS "examples-vrp-build" _BACKTRACE_TRIPLES "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check/CMakeLists.txt;38;add_test;/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check/CMakeLists.txt;0;")
+add_test(examples-vrp-eil7 "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build/bin/examples/vrp" "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check/../data/eil7.vrp")
+set_tests_properties(examples-vrp-eil7 PROPERTIES  DEPENDS "examples-vrp-build" _BACKTRACE_TRIPLES "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check/CMakeLists.txt;38;add_test;/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c/examples/VRP/check/CMakeLists.txt;0;")

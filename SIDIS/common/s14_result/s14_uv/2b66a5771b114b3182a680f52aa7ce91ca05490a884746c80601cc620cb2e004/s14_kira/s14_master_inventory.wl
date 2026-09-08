@@ -1,0 +1,3 @@
+<|"ExportedMasters" -> {GLI["SE", {1, 1, 0, 0}], GLI["UV", {1, 0, 0, 0}]}, 
+ "FinalInventory" -> {GLI["SE", {1, 1, 0, 0}], GLI["UV", {1, 0, 0, 0}]}, 
+ "MissingFromInventory" -> {}|>

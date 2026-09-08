@@ -1,0 +1,29 @@
+MONITOR_START job=14692909 host=n7404 kernel_pid=173500
+ideal_module_dependencies 0 	linux-vdso.so.1 (0x00007fff901cc000)
+	libSingular-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libSingular-4.1.1.so (0x00002aac9f0e0000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00002aac9f4b6000)
+	libsingular_resources-4.1.1.so => not found
+	libpolys-4.1.1.so => not found
+	libomalloc-0.9.6.so => not found
+	libgmp.so.10 => /lib/x86_64-linux-gnu/libgmp.so.10 (0x00002aac9f4be000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00002aac9f542000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00002aac9f723000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00002aac9f872000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00002aac9f88d000)
+	libsingular-polys-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libsingular-polys-4.1.1.so (0x00002aac9fa7f000)
+	libsingular-factory-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libsingular-factory-4.1.1.so (0x00002aac9fc00000)
+	libsingular-resources-4.1.1.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libsingular-resources-4.1.1.so (0x00002aac9fdd2000)
+	libsingular-omalloc-4.1.1+0.9.6.so => /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/singular41/usr/lib/x86_64-linux-gnu/libsingular-omalloc-4.1.1+0.9.6.so (0x00002aac9fdda000)
+	libntl.so.43 => /lib/x86_64-linux-gnu/libntl.so.43 (0x00002aac9fde6000)
+	libreadline.so.8 => /lib/x86_64-linux-gnu/libreadline.so.8 (0x00002aaca008f000)
+	libmpfr.so.6 => /lib/x86_64-linux-gnu/libmpfr.so.6 (0x00002aaca00e1000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00002aaca0162000)
+	/lib64/ld-linux-x86-64.so.2 (0x00002aac9f026000)
+	libgf2x.so.3 => /lib/x86_64-linux-gnu/libgf2x.so.3 (0x00002aaca0185000)
+	libtinfo.so.6 => /lib/x86_64-linux-gnu/libtinfo.so.6 (0x00002aaca0195000)
+ 
+Traceback (most recent call last):
+  File "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s03_polymake_runtime.py", line 44, in <module>
+    assert run.returncode == 0 and 'not found' not in run.stdout and 'ERROR' not in run.stderr
+AssertionError
+MONITOR_WAKE {"stage": "s03", "source": "s03_polymake_runtime.py", "source_sha256": "bd33d8775e47ad9e3f472d497a88ae12d383fe9240cd0ffc4389f8d8472143b9", "job_id": "14692909", "host": "n7404", "exit_code": 1, "success_marker": false, "accepted_execution": false, "guard": null, "peak_rss_bytes": 0, "elapsed_seconds": 0.894353847950697, "completed_utc": "2026-09-07T11:28:44.260866+00:00"}

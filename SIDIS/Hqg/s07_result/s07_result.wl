@@ -1,0 +1,5 @@
+<|"Channel" -> "Hqg", "VirtualMappingHash" -> 
+  316134366464825495324803848082331905162100373391085810769711060995622746122\
+07, "SharedReduction" -> "../s09_result.wl", "SharedReductionHash" -> 
+  549063646323255713609128328993011891321204726074831823095760421892906916481\
+5, "Accepted" -> True, "MasterEvaluationPerformed" -> False|>

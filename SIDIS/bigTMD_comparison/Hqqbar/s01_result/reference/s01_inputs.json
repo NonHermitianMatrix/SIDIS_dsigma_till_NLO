@@ -1,0 +1,3205 @@
+{
+  "Channel": "Hqqbar_v2",
+  "BigTMDChannel": 5,
+  "Commit": "6e97635d21a63b7975b2e7f5891edc0c35c4dc0c",
+  "SourceHashes": {
+    "Hqqbar_v2/s05_result/Fhats.wl": "ce6cada31c35bb582fc4f309538bf9058781164d489861d0b889ba4ddcf32edd",
+    "Hqqbar_v2/bigTMD_check/reference/sidis.py": "150a4b66ce25c41178a51ef54989dc5a83d7a272678e1d4f95237ddb9758785d",
+    "Hqqbar_v2/bigTMD_check/reference/NLO/Pg/fchn5A.py": "9314f660d6ba9e37c203cf010da2f9aee84e993958e5dd3ad7896fb33ac5b48b",
+    "Hqqbar_v2/bigTMD_check/reference/NLO/Pg/fchn5B.py": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+    "Hqqbar_v2/bigTMD_check/reference/NLO/Pg/fchn5C.py": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+    "Hqqbar_v2/bigTMD_check/reference/NLO/Ppp/fchn5A.py": "5c275d8ee0e01fa23e47e3ddef6d84150babc71ef01e391d75e3ed9f12f09a5e",
+    "Hqqbar_v2/bigTMD_check/reference/NLO/Ppp/fchn5B.py": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b",
+    "Hqqbar_v2/bigTMD_check/reference/NLO/Ppp/fchn5C.py": "d38500ab56c6bde16853883a42b6f89f701faff7ee31c8d5fd39c32a18ac5f9b"
+  },
+  "Production": "Hqqbar_v2/s05_result/Fhats.wl",
+  "ProductionSHA256": "ce6cada31c35bb582fc4f309538bf9058781164d489861d0b889ba4ddcf32edd",
+  "Inputs": {
+    "literal": {
+      "output": "s01_literal.wl",
+      "sha256": "9a055510ad34234fe1fd1ceb7b106265fd1cf642e131fc155836a4352c4ce398",
+      "tokens": {
+        "PgA": {
+          "0.333333333333333": {
+            "literal": "333333333333333/1000000000000000",
+            "value": "333333333333333/1000000000000000",
+            "changed": false
+          },
+          "2": {
+            "literal": "2",
+            "value": "2",
+            "changed": false
+          },
+          "5": {
+            "literal": "5",
+            "value": "5",
+            "changed": false
+          },
+          "0.5": {
+            "literal": "1/2",
+            "value": "1/2",
+            "changed": false
+          },
+          "3": {
+            "literal": "3",
+            "value": "3",
+            "changed": false
+          },
+          "4": {
+            "literal": "4",
+            "value": "4",
+            "changed": false
+          },
+          "0.666666666666667": {
+            "literal": "666666666666667/1000000000000000",
+            "value": "666666666666667/1000000000000000",
+            "changed": false
+          },
+          "0.03125": {
+            "literal": "1/32",
+            "value": "1/32",
+            "changed": false
+          },
+          "0.0625": {
+            "literal": "1/16",
+            "value": "1/16",
+            "changed": false
+          },
+          "8": {
+            "literal": "8",
+            "value": "8",
+            "changed": false
+          },
+          "16": {
+            "literal": "16",
+            "value": "16",
+            "changed": false
+          },
+          "6": {
+            "literal": "6",
+            "value": "6",
+            "changed": false
+          },
+          "0.0833333333333333": {
+            "literal": "833333333333333/10000000000000000",
+            "value": "833333333333333/10000000000000000",
+            "changed": false
+          },
+          "0.125": {
+            "literal": "1/8",
+            "value": "1/8",
+            "changed": false
+          },
+          "0.25": {
+            "literal": "1/4",
+            "value": "1/4",
+            "changed": false
+          },
+          "0.0078125": {
+            "literal": "1/128",
+            "value": "1/128",
+            "changed": false
+          },
+          "0.015625": {
+            "literal": "1/64",
+            "value": "1/64",
+            "changed": false
+          },
+          "32": {
+            "literal": "32",
+            "value": "32",
+            "changed": false
+          },
+          "48": {
+            "literal": "48",
+            "value": "48",
+            "changed": false
+          },
+          "24": {
+            "literal": "24",
+            "value": "24",
+            "changed": false
+          },
+          "40": {
+            "literal": "40",
+            "value": "40",
+            "changed": false
+          },
+          "80": {
+            "literal": "80",
+            "value": "80",
+            "changed": false
+          },
+          "96": {
+            "literal": "96",
+            "value": "96",
+            "changed": false
+          },
+          "192": {
+            "literal": "192",
+            "value": "192",
+            "changed": false
+          },
+          "144": {
+            "literal": "144",
+            "value": "144",
+            "changed": false
+          },
+          "0.046875": {
+            "literal": "3/64",
+            "value": "3/64",
+            "changed": false
+          },
+          "112": {
+            "literal": "112",
+            "value": "112",
+            "changed": false
+          },
+          "64": {
+            "literal": "64",
+            "value": "64",
+            "changed": false
+          },
+          "36": {
+            "literal": "36",
+            "value": "36",
+            "changed": false
+          },
+          "20": {
+            "literal": "20",
+            "value": "20",
+            "changed": false
+          },
+          "0.75": {
+            "literal": "3/4",
+            "value": "3/4",
+            "changed": false
+          },
+          "10": {
+            "literal": "10",
+            "value": "10",
+            "changed": false
+          },
+          "12": {
+            "literal": "12",
+            "value": "12",
+            "changed": false
+          },
+          "18": {
+            "literal": "18",
+            "value": "18",
+            "changed": false
+          },
+          "0.375": {
+            "literal": "3/8",
+            "value": "3/8",
+            "changed": false
+          },
+          "9": {
+            "literal": "9",
+            "value": "9",
+            "changed": false
+          },
+          "15": {
+            "literal": "15",
+            "value": "15",
+            "changed": false
+          },
+          "30": {
+            "literal": "30",
+            "value": "30",
+            "changed": false
+          },
+          "72": {
+            "literal": "72",
+            "value": "72",
+            "changed": false
+          },
+          "54": {
+            "literal": "54",
+            "value": "54",
+            "changed": false
+          },
+          "27.0": {
+            "literal": "27",
+            "value": "27",
+            "changed": false
+          },
+          "9.0": {
+            "literal": "9",
+            "value": "9",
+            "changed": false
+          },
+          "0.00694444444444444": {
+            "literal": "173611111111111/25000000000000000",
+            "value": "173611111111111/25000000000000000",
+            "changed": false
+          },
+          "1.5": {
+            "literal": "3/2",
+            "value": "3/2",
+            "changed": false
+          },
+          "0.00520833333333333": {
+            "literal": "520833333333333/100000000000000000",
+            "value": "520833333333333/100000000000000000",
+            "changed": false
+          },
+          "0.166666666666667": {
+            "literal": "166666666666667/1000000000000000",
+            "value": "166666666666667/1000000000000000",
+            "changed": false
+          },
+          "0.0416666666666667": {
+            "literal": "416666666666667/10000000000000000",
+            "value": "416666666666667/10000000000000000",
+            "changed": false
+          },
+          "0.000289351851851852": {
+            "literal": "72337962962963/250000000000000000",
+            "value": "72337962962963/250000000000000000",
+            "changed": false
+          },
+          "216": {
+            "literal": "216",
+            "value": "216",
+            "changed": false
+          },
+          "84": {
+            "literal": "84",
+            "value": "84",
+            "changed": false
+          },
+          "108": {
+            "literal": "108",
+            "value": "108",
+            "changed": false
+          },
+          "0.037037037037037": {
+            "literal": "37037037037037/1000000000000000",
+            "value": "37037037037037/1000000000000000",
+            "changed": false
+          },
+          "0.111111111111111": {
+            "literal": "111111111111111/1000000000000000",
+            "value": "111111111111111/1000000000000000",
+            "changed": false
+          },
+          "0.00347222222222222": {
+            "literal": "173611111111111/50000000000000000",
+            "value": "173611111111111/50000000000000000",
+            "changed": false
+          },
+          "0.0138888888888889": {
+            "literal": "138888888888889/10000000000000000",
+            "value": "138888888888889/10000000000000000",
+            "changed": false
+          },
+          "44": {
+            "literal": "44",
+            "value": "44",
+            "changed": false
+          },
+          "28": {
+            "literal": "28",
+            "value": "28",
+            "changed": false
+          },
+          "52": {
+            "literal": "52",
+            "value": "52",
+            "changed": false
+          },
+          "120": {
+            "literal": "120",
+            "value": "120",
+            "changed": false
+          },
+          "264": {
+            "literal": "264",
+            "value": "264",
+            "changed": false
+          },
+          "588": {
+            "literal": "588",
+            "value": "588",
+            "changed": false
+          },
+          "324": {
+            "literal": "324",
+            "value": "324",
+            "changed": false
+          },
+          "60": {
+            "literal": "60",
+            "value": "60",
+            "changed": false
+          },
+          "624": {
+            "literal": "624",
+            "value": "624",
+            "changed": false
+          },
+          "360": {
+            "literal": "360",
+            "value": "360",
+            "changed": false
+          },
+          "564": {
+            "literal": "564",
+            "value": "564",
+            "changed": false
+          },
+          "696": {
+            "literal": "696",
+            "value": "696",
+            "changed": false
+          },
+          "276": {
+            "literal": "276",
+            "value": "276",
+            "changed": false
+          },
+          "156": {
+            "literal": "156",
+            "value": "156",
+            "changed": false
+          },
+          "252": {
+            "literal": "252",
+            "value": "252",
+            "changed": false
+          },
+          "168": {
+            "literal": "168",
+            "value": "168",
+            "changed": false
+          },
+          "88": {
+            "literal": "88",
+            "value": "88",
+            "changed": false
+          },
+          "76": {
+            "literal": "76",
+            "value": "76",
+            "changed": false
+          },
+          "100": {
+            "literal": "100",
+            "value": "100",
+            "changed": false
+          },
+          "68": {
+            "literal": "68",
+            "value": "68",
+            "changed": false
+          },
+          "128": {
+            "literal": "128",
+            "value": "128",
+            "changed": false
+          },
+          "208": {
+            "literal": "208",
+            "value": "208",
+            "changed": false
+          },
+          "288": {
+            "literal": "288",
+            "value": "288",
+            "changed": false
+          },
+          "336": {
+            "literal": "336",
+            "value": "336",
+            "changed": false
+          },
+          "152": {
+            "literal": "152",
+            "value": "152",
+            "changed": false
+          },
+          "160": {
+            "literal": "160",
+            "value": "160",
+            "changed": false
+          },
+          "224": {
+            "literal": "224",
+            "value": "224",
+            "changed": false
+          },
+          "896": {
+            "literal": "896",
+            "value": "896",
+            "changed": false
+          },
+          "472": {
+            "literal": "472",
+            "value": "472",
+            "changed": false
+          },
+          "416": {
+            "literal": "416",
+            "value": "416",
+            "changed": false
+          },
+          "1264": {
+            "literal": "1264",
+            "value": "1264",
+            "changed": false
+          },
+          "1344": {
+            "literal": "1344",
+            "value": "1344",
+            "changed": false
+          },
+          "496": {
+            "literal": "496",
+            "value": "496",
+            "changed": false
+          },
+          "56": {
+            "literal": "56",
+            "value": "56",
+            "changed": false
+          },
+          "688": {
+            "literal": "688",
+            "value": "688",
+            "changed": false
+          },
+          "1016": {
+            "literal": "1016",
+            "value": "1016",
+            "changed": false
+          },
+          "912": {
+            "literal": "912",
+            "value": "912",
+            "changed": false
+          },
+          "1536": {
+            "literal": "1536",
+            "value": "1536",
+            "changed": false
+          },
+          "1152": {
+            "literal": "1152",
+            "value": "1152",
+            "changed": false
+          },
+          "304": {
+            "literal": "304",
+            "value": "304",
+            "changed": false
+          },
+          "320": {
+            "literal": "320",
+            "value": "320",
+            "changed": false
+          },
+          "352": {
+            "literal": "352",
+            "value": "352",
+            "changed": false
+          },
+          "488": {
+            "literal": "488",
+            "value": "488",
+            "changed": false
+          },
+          "312": {
+            "literal": "312",
+            "value": "312",
+            "changed": false
+          },
+          "672": {
+            "literal": "672",
+            "value": "672",
+            "changed": false
+          },
+          "272": {
+            "literal": "272",
+            "value": "272",
+            "changed": false
+          },
+          "480": {
+            "literal": "480",
+            "value": "480",
+            "changed": false
+          },
+          "176": {
+            "literal": "176",
+            "value": "176",
+            "changed": false
+          },
+          "608": {
+            "literal": "608",
+            "value": "608",
+            "changed": false
+          },
+          "440": {
+            "literal": "440",
+            "value": "440",
+            "changed": false
+          },
+          "240": {
+            "literal": "240",
+            "value": "240",
+            "changed": false
+          },
+          "408": {
+            "literal": "408",
+            "value": "408",
+            "changed": false
+          },
+          "104": {
+            "literal": "104",
+            "value": "104",
+            "changed": false
+          },
+          "384": {
+            "literal": "384",
+            "value": "384",
+            "changed": false
+          },
+          "768": {
+            "literal": "768",
+            "value": "768",
+            "changed": false
+          },
+          "368": {
+            "literal": "368",
+            "value": "368",
+            "changed": false
+          },
+          "280": {
+            "literal": "280",
+            "value": "280",
+            "changed": false
+          },
+          "516": {
+            "literal": "516",
+            "value": "516",
+            "changed": false
+          },
+          "284": {
+            "literal": "284",
+            "value": "284",
+            "changed": false
+          },
+          "140": {
+            "literal": "140",
+            "value": "140",
+            "changed": false
+          },
+          "136": {
+            "literal": "136",
+            "value": "136",
+            "changed": false
+          },
+          "0.09375": {
+            "literal": "3/32",
+            "value": "3/32",
+            "changed": false
+          },
+          "864": {
+            "literal": "864",
+            "value": "864",
+            "changed": false
+          },
+          "1872": {
+            "literal": "1872",
+            "value": "1872",
+            "changed": false
+          },
+          "1008": {
+            "literal": "1008",
+            "value": "1008",
+            "changed": false
+          },
+          "456": {
+            "literal": "456",
+            "value": "456",
+            "changed": false
+          },
+          "576": {
+            "literal": "576",
+            "value": "576",
+            "changed": false
+          },
+          "2688": {
+            "literal": "2688",
+            "value": "2688",
+            "changed": false
+          },
+          "1416": {
+            "literal": "1416",
+            "value": "1416",
+            "changed": false
+          },
+          "1248": {
+            "literal": "1248",
+            "value": "1248",
+            "changed": false
+          },
+          "3792": {
+            "literal": "3792",
+            "value": "3792",
+            "changed": false
+          },
+          "4032": {
+            "literal": "4032",
+            "value": "4032",
+            "changed": false
+          },
+          "1488": {
+            "literal": "1488",
+            "value": "1488",
+            "changed": false
+          },
+          "648": {
+            "literal": "648",
+            "value": "648",
+            "changed": false
+          },
+          "2064": {
+            "literal": "2064",
+            "value": "2064",
+            "changed": false
+          },
+          "3048": {
+            "literal": "3048",
+            "value": "3048",
+            "changed": false
+          },
+          "2736": {
+            "literal": "2736",
+            "value": "2736",
+            "changed": false
+          },
+          "4608": {
+            "literal": "4608",
+            "value": "4608",
+            "changed": false
+          },
+          "3456": {
+            "literal": "3456",
+            "value": "3456",
+            "changed": false
+          },
+          "960": {
+            "literal": "960",
+            "value": "960",
+            "changed": false
+          },
+          "1056": {
+            "literal": "1056",
+            "value": "1056",
+            "changed": false
+          },
+          "1464": {
+            "literal": "1464",
+            "value": "1464",
+            "changed": false
+          },
+          "936": {
+            "literal": "936",
+            "value": "936",
+            "changed": false
+          },
+          "13": {
+            "literal": "13",
+            "value": "13",
+            "changed": false
+          },
+          "21": {
+            "literal": "21",
+            "value": "21",
+            "changed": false
+          },
+          "0.15625": {
+            "literal": "5/32",
+            "value": "5/32",
+            "changed": false
+          },
+          "0.9375": {
+            "literal": "15/16",
+            "value": "15/16",
+            "changed": false
+          },
+          "1.875": {
+            "literal": "15/8",
+            "value": "15/8",
+            "changed": false
+          },
+          "0.1875": {
+            "literal": "3/16",
+            "value": "3/16",
+            "changed": false
+          },
+          "1": {
+            "literal": "1",
+            "value": "1",
+            "changed": false
+          },
+          "0.222222222222222": {
+            "literal": "111111111111111/500000000000000",
+            "value": "111111111111111/500000000000000",
+            "changed": false
+          },
+          "0.0277777777777778": {
+            "literal": "138888888888889/5000000000000000",
+            "value": "138888888888889/5000000000000000",
+            "changed": false
+          }
+        },
+        "PgB": {
+          "0": {
+            "literal": "0",
+            "value": "0",
+            "changed": false
+          }
+        },
+        "PgC": {
+          "0": {
+            "literal": "0",
+            "value": "0",
+            "changed": false
+          }
+        },
+        "PppA": {
+          "0.00173611111111111": {
+            "literal": "173611111111111/100000000000000000",
+            "value": "173611111111111/100000000000000000",
+            "changed": false
+          },
+          "2": {
+            "literal": "2",
+            "value": "2",
+            "changed": false
+          },
+          "6": {
+            "literal": "6",
+            "value": "6",
+            "changed": false
+          },
+          "3": {
+            "literal": "3",
+            "value": "3",
+            "changed": false
+          },
+          "4": {
+            "literal": "4",
+            "value": "4",
+            "changed": false
+          },
+          "1.5": {
+            "literal": "3/2",
+            "value": "3/2",
+            "changed": false
+          },
+          "18": {
+            "literal": "18",
+            "value": "18",
+            "changed": false
+          },
+          "9": {
+            "literal": "9",
+            "value": "9",
+            "changed": false
+          },
+          "12": {
+            "literal": "12",
+            "value": "12",
+            "changed": false
+          },
+          "24": {
+            "literal": "24",
+            "value": "24",
+            "changed": false
+          },
+          "5": {
+            "literal": "5",
+            "value": "5",
+            "changed": false
+          },
+          "0.00130208333333333": {
+            "literal": "130208333333333/100000000000000000",
+            "value": "130208333333333/100000000000000000",
+            "changed": false
+          },
+          "8": {
+            "literal": "8",
+            "value": "8",
+            "changed": false
+          },
+          "32": {
+            "literal": "32",
+            "value": "32",
+            "changed": false
+          },
+          "16": {
+            "literal": "16",
+            "value": "16",
+            "changed": false
+          },
+          "0.00694444444444444": {
+            "literal": "173611111111111/25000000000000000",
+            "value": "173611111111111/25000000000000000",
+            "changed": false
+          },
+          "0.000144675925925926": {
+            "literal": "72337962962963/500000000000000000",
+            "value": "72337962962963/500000000000000000",
+            "changed": false
+          },
+          "20": {
+            "literal": "20",
+            "value": "20",
+            "changed": false
+          },
+          "112": {
+            "literal": "112",
+            "value": "112",
+            "changed": false
+          },
+          "92": {
+            "literal": "92",
+            "value": "92",
+            "changed": false
+          },
+          "64": {
+            "literal": "64",
+            "value": "64",
+            "changed": false
+          },
+          "56": {
+            "literal": "56",
+            "value": "56",
+            "changed": false
+          },
+          "0.000108506944444444": {
+            "literal": "27126736111111/250000000000000000",
+            "value": "27126736111111/250000000000000000",
+            "changed": false
+          },
+          "36": {
+            "literal": "36",
+            "value": "36",
+            "changed": false
+          },
+          "0.00347222222222222": {
+            "literal": "173611111111111/50000000000000000",
+            "value": "173611111111111/50000000000000000",
+            "changed": false
+          },
+          "11": {
+            "literal": "11",
+            "value": "11",
+            "changed": false
+          },
+          "0.0078125": {
+            "literal": "1/128",
+            "value": "1/128",
+            "changed": false
+          },
+          "0.015625": {
+            "literal": "1/64",
+            "value": "1/64",
+            "changed": false
+          },
+          "48": {
+            "literal": "48",
+            "value": "48",
+            "changed": false
+          },
+          "60": {
+            "literal": "60",
+            "value": "60",
+            "changed": false
+          },
+          "40": {
+            "literal": "40",
+            "value": "40",
+            "changed": false
+          },
+          "0.1875": {
+            "literal": "3/16",
+            "value": "3/16",
+            "changed": false
+          },
+          "7": {
+            "literal": "7",
+            "value": "7",
+            "changed": false
+          },
+          "0.375": {
+            "literal": "3/8",
+            "value": "3/8",
+            "changed": false
+          },
+          "15": {
+            "literal": "15",
+            "value": "15",
+            "changed": false
+          },
+          "10": {
+            "literal": "10",
+            "value": "10",
+            "changed": false
+          },
+          "0.0625": {
+            "literal": "1/16",
+            "value": "1/16",
+            "changed": false
+          },
+          "45": {
+            "literal": "45",
+            "value": "45",
+            "changed": false
+          },
+          "30": {
+            "literal": "30",
+            "value": "30",
+            "changed": false
+          },
+          "27.0": {
+            "literal": "27",
+            "value": "27",
+            "changed": false
+          },
+          "0.111111111111111": {
+            "literal": "111111111111111/1000000000000000",
+            "value": "111111111111111/1000000000000000",
+            "changed": false
+          },
+          "0.03125": {
+            "literal": "1/32",
+            "value": "1/32",
+            "changed": false
+          },
+          "0.0208333333333333": {
+            "literal": "208333333333333/10000000000000000",
+            "value": "208333333333333/10000000000000000",
+            "changed": false
+          },
+          "0.0138888888888889": {
+            "literal": "138888888888889/10000000000000000",
+            "value": "138888888888889/10000000000000000",
+            "changed": false
+          },
+          "1": {
+            "literal": "1",
+            "value": "1",
+            "changed": false
+          },
+          "72": {
+            "literal": "72",
+            "value": "72",
+            "changed": false
+          },
+          "352": {
+            "literal": "352",
+            "value": "352",
+            "changed": false
+          },
+          "84": {
+            "literal": "84",
+            "value": "84",
+            "changed": false
+          },
+          "540": {
+            "literal": "540",
+            "value": "540",
+            "changed": false
+          },
+          "436": {
+            "literal": "436",
+            "value": "436",
+            "changed": false
+          },
+          "552": {
+            "literal": "552",
+            "value": "552",
+            "changed": false
+          },
+          "248": {
+            "literal": "248",
+            "value": "248",
+            "changed": false
+          },
+          "476": {
+            "literal": "476",
+            "value": "476",
+            "changed": false
+          },
+          "520": {
+            "literal": "520",
+            "value": "520",
+            "changed": false
+          },
+          "240": {
+            "literal": "240",
+            "value": "240",
+            "changed": false
+          },
+          "452": {
+            "literal": "452",
+            "value": "452",
+            "changed": false
+          },
+          "260": {
+            "literal": "260",
+            "value": "260",
+            "changed": false
+          },
+          "44": {
+            "literal": "44",
+            "value": "44",
+            "changed": false
+          },
+          "28": {
+            "literal": "28",
+            "value": "28",
+            "changed": false
+          },
+          "76": {
+            "literal": "76",
+            "value": "76",
+            "changed": false
+          },
+          "0.25": {
+            "literal": "1/4",
+            "value": "1/4",
+            "changed": false
+          },
+          "0.125": {
+            "literal": "1/8",
+            "value": "1/8",
+            "changed": false
+          },
+          "0.046875": {
+            "literal": "3/64",
+            "value": "3/64",
+            "changed": false
+          },
+          "4.0": {
+            "literal": "4",
+            "value": "4",
+            "changed": false
+          },
+          "9.0": {
+            "literal": "9",
+            "value": "9",
+            "changed": false
+          },
+          "0.09375": {
+            "literal": "3/32",
+            "value": "3/32",
+            "changed": false
+          },
+          "80": {
+            "literal": "80",
+            "value": "80",
+            "changed": false
+          },
+          "156": {
+            "literal": "156",
+            "value": "156",
+            "changed": false
+          },
+          "196": {
+            "literal": "196",
+            "value": "196",
+            "changed": false
+          },
+          "88": {
+            "literal": "88",
+            "value": "88",
+            "changed": false
+          },
+          "116": {
+            "literal": "116",
+            "value": "116",
+            "changed": false
+          },
+          "208": {
+            "literal": "208",
+            "value": "208",
+            "changed": false
+          },
+          "168": {
+            "literal": "168",
+            "value": "168",
+            "changed": false
+          },
+          "184": {
+            "literal": "184",
+            "value": "184",
+            "changed": false
+          },
+          "68": {
+            "literal": "68",
+            "value": "68",
+            "changed": false
+          },
+          "144": {
+            "literal": "144",
+            "value": "144",
+            "changed": false
+          },
+          "104": {
+            "literal": "104",
+            "value": "104",
+            "changed": false
+          },
+          "96": {
+            "literal": "96",
+            "value": "96",
+            "changed": false
+          },
+          "124": {
+            "literal": "124",
+            "value": "124",
+            "changed": false
+          },
+          "52": {
+            "literal": "52",
+            "value": "52",
+            "changed": false
+          },
+          "140": {
+            "literal": "140",
+            "value": "140",
+            "changed": false
+          },
+          "120": {
+            "literal": "120",
+            "value": "120",
+            "changed": false
+          },
+          "192": {
+            "literal": "192",
+            "value": "192",
+            "changed": false
+          },
+          "200": {
+            "literal": "200",
+            "value": "200",
+            "changed": false
+          },
+          "0.0416666666666667": {
+            "literal": "416666666666667/10000000000000000",
+            "value": "416666666666667/10000000000000000",
+            "changed": false
+          },
+          "0.0833333333333333": {
+            "literal": "833333333333333/10000000000000000",
+            "value": "833333333333333/10000000000000000",
+            "changed": false
+          },
+          "42": {
+            "literal": "42",
+            "value": "42",
+            "changed": false
+          },
+          "376": {
+            "literal": "376",
+            "value": "376",
+            "changed": false
+          },
+          "438": {
+            "literal": "438",
+            "value": "438",
+            "changed": false
+          },
+          "176": {
+            "literal": "176",
+            "value": "176",
+            "changed": false
+          },
+          "34": {
+            "literal": "34",
+            "value": "34",
+            "changed": false
+          },
+          "264": {
+            "literal": "264",
+            "value": "264",
+            "changed": false
+          },
+          "392": {
+            "literal": "392",
+            "value": "392",
+            "changed": false
+          },
+          "188": {
+            "literal": "188",
+            "value": "188",
+            "changed": false
+          },
+          "528": {
+            "literal": "528",
+            "value": "528",
+            "changed": false
+          },
+          "560": {
+            "literal": "560",
+            "value": "560",
+            "changed": false
+          },
+          "66": {
+            "literal": "66",
+            "value": "66",
+            "changed": false
+          },
+          "210": {
+            "literal": "210",
+            "value": "210",
+            "changed": false
+          },
+          "106": {
+            "literal": "106",
+            "value": "106",
+            "changed": false
+          },
+          "202": {
+            "literal": "202",
+            "value": "202",
+            "changed": false
+          },
+          "216": {
+            "literal": "216",
+            "value": "216",
+            "changed": false
+          },
+          "126": {
+            "literal": "126",
+            "value": "126",
+            "changed": false
+          },
+          "468": {
+            "literal": "468",
+            "value": "468",
+            "changed": false
+          },
+          "336": {
+            "literal": "336",
+            "value": "336",
+            "changed": false
+          },
+          "1128": {
+            "literal": "1128",
+            "value": "1128",
+            "changed": false
+          },
+          "1314": {
+            "literal": "1314",
+            "value": "1314",
+            "changed": false
+          },
+          "180": {
+            "literal": "180",
+            "value": "180",
+            "changed": false
+          },
+          "102": {
+            "literal": "102",
+            "value": "102",
+            "changed": false
+          },
+          "792": {
+            "literal": "792",
+            "value": "792",
+            "changed": false
+          },
+          "1176": {
+            "literal": "1176",
+            "value": "1176",
+            "changed": false
+          },
+          "564": {
+            "literal": "564",
+            "value": "564",
+            "changed": false
+          },
+          "504": {
+            "literal": "504",
+            "value": "504",
+            "changed": false
+          },
+          "1584": {
+            "literal": "1584",
+            "value": "1584",
+            "changed": false
+          },
+          "1680": {
+            "literal": "1680",
+            "value": "1680",
+            "changed": false
+          },
+          "600": {
+            "literal": "600",
+            "value": "600",
+            "changed": false
+          },
+          "198": {
+            "literal": "198",
+            "value": "198",
+            "changed": false
+          },
+          "630": {
+            "literal": "630",
+            "value": "630",
+            "changed": false
+          },
+          "780": {
+            "literal": "780",
+            "value": "780",
+            "changed": false
+          },
+          "318": {
+            "literal": "318",
+            "value": "318",
+            "changed": false
+          },
+          "204": {
+            "literal": "204",
+            "value": "204",
+            "changed": false
+          },
+          "606": {
+            "literal": "606",
+            "value": "606",
+            "changed": false
+          },
+          "14": {
+            "literal": "14",
+            "value": "14",
+            "changed": false
+          },
+          "22": {
+            "literal": "22",
+            "value": "22",
+            "changed": false
+          },
+          "27": {
+            "literal": "27",
+            "value": "27",
+            "changed": false
+          },
+          "19": {
+            "literal": "19",
+            "value": "19",
+            "changed": false
+          },
+          "21": {
+            "literal": "21",
+            "value": "21",
+            "changed": false
+          },
+          "17": {
+            "literal": "17",
+            "value": "17",
+            "changed": false
+          },
+          "26": {
+            "literal": "26",
+            "value": "26",
+            "changed": false
+          },
+          "74": {
+            "literal": "74",
+            "value": "74",
+            "changed": false
+          },
+          "0.333333333333333": {
+            "literal": "333333333333333/1000000000000000",
+            "value": "333333333333333/1000000000000000",
+            "changed": false
+          },
+          "0.5": {
+            "literal": "1/2",
+            "value": "1/2",
+            "changed": false
+          },
+          "0.037037037037037": {
+            "literal": "37037037037037/1000000000000000",
+            "value": "37037037037037/1000000000000000",
+            "changed": false
+          },
+          "50": {
+            "literal": "50",
+            "value": "50",
+            "changed": false
+          },
+          "70": {
+            "literal": "70",
+            "value": "70",
+            "changed": false
+          },
+          "98": {
+            "literal": "98",
+            "value": "98",
+            "changed": false
+          },
+          "78": {
+            "literal": "78",
+            "value": "78",
+            "changed": false
+          },
+          "86": {
+            "literal": "86",
+            "value": "86",
+            "changed": false
+          },
+          "38": {
+            "literal": "38",
+            "value": "38",
+            "changed": false
+          },
+          "150": {
+            "literal": "150",
+            "value": "150",
+            "changed": false
+          },
+          "90": {
+            "literal": "90",
+            "value": "90",
+            "changed": false
+          },
+          "294": {
+            "literal": "294",
+            "value": "294",
+            "changed": false
+          },
+          "360": {
+            "literal": "360",
+            "value": "360",
+            "changed": false
+          },
+          "252": {
+            "literal": "252",
+            "value": "252",
+            "changed": false
+          },
+          "234": {
+            "literal": "234",
+            "value": "234",
+            "changed": false
+          },
+          "258": {
+            "literal": "258",
+            "value": "258",
+            "changed": false
+          },
+          "54": {
+            "literal": "54",
+            "value": "54",
+            "changed": false
+          },
+          "114": {
+            "literal": "114",
+            "value": "114",
+            "changed": false
+          },
+          "3.61689814814815e-5": {
+            "literal": "72337962962963/2000000000000000000",
+            "value": "72337962962963/2000000000000000000",
+            "changed": false
+          },
+          "0.00260416666666667": {
+            "literal": "260416666666667/100000000000000000",
+            "value": "260416666666667/100000000000000000",
+            "changed": false
+          },
+          "0.00390625": {
+            "literal": "1/256",
+            "value": "1/256",
+            "changed": false
+          },
+          "0.0234375": {
+            "literal": "3/128",
+            "value": "3/128",
+            "changed": false
+          },
+          "0.166666666666667": {
+            "literal": "166666666666667/1000000000000000",
+            "value": "166666666666667/1000000000000000",
+            "changed": false
+          },
+          "0.0277777777777778": {
+            "literal": "138888888888889/5000000000000000",
+            "value": "138888888888889/5000000000000000",
+            "changed": false
+          },
+          "13": {
+            "literal": "13",
+            "value": "13",
+            "changed": false
+          }
+        },
+        "PppB": {
+          "0": {
+            "literal": "0",
+            "value": "0",
+            "changed": false
+          }
+        },
+        "PppC": {
+          "0": {
+            "literal": "0",
+            "value": "0",
+            "changed": false
+          }
+        }
+      }
+    },
+    "reconstructed": {
+      "output": "s01_reconstructed.wl",
+      "sha256": "506058bf647e08b6ef5257c184d074b69b4514757dc7fc4be673ef568ddc2290",
+      "tokens": {
+        "PgA": {
+          "0.333333333333333": {
+            "literal": "333333333333333/1000000000000000",
+            "value": "1/3",
+            "changed": true
+          },
+          "2": {
+            "literal": "2",
+            "value": "2",
+            "changed": false
+          },
+          "5": {
+            "literal": "5",
+            "value": "5",
+            "changed": false
+          },
+          "0.5": {
+            "literal": "1/2",
+            "value": "1/2",
+            "changed": false
+          },
+          "3": {
+            "literal": "3",
+            "value": "3",
+            "changed": false
+          },
+          "4": {
+            "literal": "4",
+            "value": "4",
+            "changed": false
+          },
+          "0.666666666666667": {
+            "literal": "666666666666667/1000000000000000",
+            "value": "2/3",
+            "changed": true
+          },
+          "0.03125": {
+            "literal": "1/32",
+            "value": "1/32",
+            "changed": false
+          },
+          "0.0625": {
+            "literal": "1/16",
+            "value": "1/16",
+            "changed": false
+          },
+          "8": {
+            "literal": "8",
+            "value": "8",
+            "changed": false
+          },
+          "16": {
+            "literal": "16",
+            "value": "16",
+            "changed": false
+          },
+          "6": {
+            "literal": "6",
+            "value": "6",
+            "changed": false
+          },
+          "0.0833333333333333": {
+            "literal": "833333333333333/10000000000000000",
+            "value": "1/12",
+            "changed": true
+          },
+          "0.125": {
+            "literal": "1/8",
+            "value": "1/8",
+            "changed": false
+          },
+          "0.25": {
+            "literal": "1/4",
+            "value": "1/4",
+            "changed": false
+          },
+          "0.0078125": {
+            "literal": "1/128",
+            "value": "1/128",
+            "changed": false
+          },
+          "0.015625": {
+            "literal": "1/64",
+            "value": "1/64",
+            "changed": false
+          },
+          "32": {
+            "literal": "32",
+            "value": "32",
+            "changed": false
+          },
+          "48": {
+            "literal": "48",
+            "value": "48",
+            "changed": false
+          },
+          "24": {
+            "literal": "24",
+            "value": "24",
+            "changed": false
+          },
+          "40": {
+            "literal": "40",
+            "value": "40",
+            "changed": false
+          },
+          "80": {
+            "literal": "80",
+            "value": "80",
+            "changed": false
+          },
+          "96": {
+            "literal": "96",
+            "value": "96",
+            "changed": false
+          },
+          "192": {
+            "literal": "192",
+            "value": "192",
+            "changed": false
+          },
+          "144": {
+            "literal": "144",
+            "value": "144",
+            "changed": false
+          },
+          "0.046875": {
+            "literal": "3/64",
+            "value": "3/64",
+            "changed": false
+          },
+          "112": {
+            "literal": "112",
+            "value": "112",
+            "changed": false
+          },
+          "64": {
+            "literal": "64",
+            "value": "64",
+            "changed": false
+          },
+          "36": {
+            "literal": "36",
+            "value": "36",
+            "changed": false
+          },
+          "20": {
+            "literal": "20",
+            "value": "20",
+            "changed": false
+          },
+          "0.75": {
+            "literal": "3/4",
+            "value": "3/4",
+            "changed": false
+          },
+          "10": {
+            "literal": "10",
+            "value": "10",
+            "changed": false
+          },
+          "12": {
+            "literal": "12",
+            "value": "12",
+            "changed": false
+          },
+          "18": {
+            "literal": "18",
+            "value": "18",
+            "changed": false
+          },
+          "0.375": {
+            "literal": "3/8",
+            "value": "3/8",
+            "changed": false
+          },
+          "9": {
+            "literal": "9",
+            "value": "9",
+            "changed": false
+          },
+          "15": {
+            "literal": "15",
+            "value": "15",
+            "changed": false
+          },
+          "30": {
+            "literal": "30",
+            "value": "30",
+            "changed": false
+          },
+          "72": {
+            "literal": "72",
+            "value": "72",
+            "changed": false
+          },
+          "54": {
+            "literal": "54",
+            "value": "54",
+            "changed": false
+          },
+          "27.0": {
+            "literal": "27",
+            "value": "27",
+            "changed": false
+          },
+          "9.0": {
+            "literal": "9",
+            "value": "9",
+            "changed": false
+          },
+          "0.00694444444444444": {
+            "literal": "173611111111111/25000000000000000",
+            "value": "1/144",
+            "changed": true
+          },
+          "1.5": {
+            "literal": "3/2",
+            "value": "3/2",
+            "changed": false
+          },
+          "0.00520833333333333": {
+            "literal": "520833333333333/100000000000000000",
+            "value": "1/192",
+            "changed": true
+          },
+          "0.166666666666667": {
+            "literal": "166666666666667/1000000000000000",
+            "value": "1/6",
+            "changed": true
+          },
+          "0.0416666666666667": {
+            "literal": "416666666666667/10000000000000000",
+            "value": "1/24",
+            "changed": true
+          },
+          "0.000289351851851852": {
+            "literal": "72337962962963/250000000000000000",
+            "value": "1/3456",
+            "changed": true
+          },
+          "216": {
+            "literal": "216",
+            "value": "216",
+            "changed": false
+          },
+          "84": {
+            "literal": "84",
+            "value": "84",
+            "changed": false
+          },
+          "108": {
+            "literal": "108",
+            "value": "108",
+            "changed": false
+          },
+          "0.037037037037037": {
+            "literal": "37037037037037/1000000000000000",
+            "value": "1/27",
+            "changed": true
+          },
+          "0.111111111111111": {
+            "literal": "111111111111111/1000000000000000",
+            "value": "1/9",
+            "changed": true
+          },
+          "0.00347222222222222": {
+            "literal": "173611111111111/50000000000000000",
+            "value": "1/288",
+            "changed": true
+          },
+          "0.0138888888888889": {
+            "literal": "138888888888889/10000000000000000",
+            "value": "1/72",
+            "changed": true
+          },
+          "44": {
+            "literal": "44",
+            "value": "44",
+            "changed": false
+          },
+          "28": {
+            "literal": "28",
+            "value": "28",
+            "changed": false
+          },
+          "52": {
+            "literal": "52",
+            "value": "52",
+            "changed": false
+          },
+          "120": {
+            "literal": "120",
+            "value": "120",
+            "changed": false
+          },
+          "264": {
+            "literal": "264",
+            "value": "264",
+            "changed": false
+          },
+          "588": {
+            "literal": "588",
+            "value": "588",
+            "changed": false
+          },
+          "324": {
+            "literal": "324",
+            "value": "324",
+            "changed": false
+          },
+          "60": {
+            "literal": "60",
+            "value": "60",
+            "changed": false
+          },
+          "624": {
+            "literal": "624",
+            "value": "624",
+            "changed": false
+          },
+          "360": {
+            "literal": "360",
+            "value": "360",
+            "changed": false
+          },
+          "564": {
+            "literal": "564",
+            "value": "564",
+            "changed": false
+          },
+          "696": {
+            "literal": "696",
+            "value": "696",
+            "changed": false
+          },
+          "276": {
+            "literal": "276",
+            "value": "276",
+            "changed": false
+          },
+          "156": {
+            "literal": "156",
+            "value": "156",
+            "changed": false
+          },
+          "252": {
+            "literal": "252",
+            "value": "252",
+            "changed": false
+          },
+          "168": {
+            "literal": "168",
+            "value": "168",
+            "changed": false
+          },
+          "88": {
+            "literal": "88",
+            "value": "88",
+            "changed": false
+          },
+          "76": {
+            "literal": "76",
+            "value": "76",
+            "changed": false
+          },
+          "100": {
+            "literal": "100",
+            "value": "100",
+            "changed": false
+          },
+          "68": {
+            "literal": "68",
+            "value": "68",
+            "changed": false
+          },
+          "128": {
+            "literal": "128",
+            "value": "128",
+            "changed": false
+          },
+          "208": {
+            "literal": "208",
+            "value": "208",
+            "changed": false
+          },
+          "288": {
+            "literal": "288",
+            "value": "288",
+            "changed": false
+          },
+          "336": {
+            "literal": "336",
+            "value": "336",
+            "changed": false
+          },
+          "152": {
+            "literal": "152",
+            "value": "152",
+            "changed": false
+          },
+          "160": {
+            "literal": "160",
+            "value": "160",
+            "changed": false
+          },
+          "224": {
+            "literal": "224",
+            "value": "224",
+            "changed": false
+          },
+          "896": {
+            "literal": "896",
+            "value": "896",
+            "changed": false
+          },
+          "472": {
+            "literal": "472",
+            "value": "472",
+            "changed": false
+          },
+          "416": {
+            "literal": "416",
+            "value": "416",
+            "changed": false
+          },
+          "1264": {
+            "literal": "1264",
+            "value": "1264",
+            "changed": false
+          },
+          "1344": {
+            "literal": "1344",
+            "value": "1344",
+            "changed": false
+          },
+          "496": {
+            "literal": "496",
+            "value": "496",
+            "changed": false
+          },
+          "56": {
+            "literal": "56",
+            "value": "56",
+            "changed": false
+          },
+          "688": {
+            "literal": "688",
+            "value": "688",
+            "changed": false
+          },
+          "1016": {
+            "literal": "1016",
+            "value": "1016",
+            "changed": false
+          },
+          "912": {
+            "literal": "912",
+            "value": "912",
+            "changed": false
+          },
+          "1536": {
+            "literal": "1536",
+            "value": "1536",
+            "changed": false
+          },
+          "1152": {
+            "literal": "1152",
+            "value": "1152",
+            "changed": false
+          },
+          "304": {
+            "literal": "304",
+            "value": "304",
+            "changed": false
+          },
+          "320": {
+            "literal": "320",
+            "value": "320",
+            "changed": false
+          },
+          "352": {
+            "literal": "352",
+            "value": "352",
+            "changed": false
+          },
+          "488": {
+            "literal": "488",
+            "value": "488",
+            "changed": false
+          },
+          "312": {
+            "literal": "312",
+            "value": "312",
+            "changed": false
+          },
+          "672": {
+            "literal": "672",
+            "value": "672",
+            "changed": false
+          },
+          "272": {
+            "literal": "272",
+            "value": "272",
+            "changed": false
+          },
+          "480": {
+            "literal": "480",
+            "value": "480",
+            "changed": false
+          },
+          "176": {
+            "literal": "176",
+            "value": "176",
+            "changed": false
+          },
+          "608": {
+            "literal": "608",
+            "value": "608",
+            "changed": false
+          },
+          "440": {
+            "literal": "440",
+            "value": "440",
+            "changed": false
+          },
+          "240": {
+            "literal": "240",
+            "value": "240",
+            "changed": false
+          },
+          "408": {
+            "literal": "408",
+            "value": "408",
+            "changed": false
+          },
+          "104": {
+            "literal": "104",
+            "value": "104",
+            "changed": false
+          },
+          "384": {
+            "literal": "384",
+            "value": "384",
+            "changed": false
+          },
+          "768": {
+            "literal": "768",
+            "value": "768",
+            "changed": false
+          },
+          "368": {
+            "literal": "368",
+            "value": "368",
+            "changed": false
+          },
+          "280": {
+            "literal": "280",
+            "value": "280",
+            "changed": false
+          },
+          "516": {
+            "literal": "516",
+            "value": "516",
+            "changed": false
+          },
+          "284": {
+            "literal": "284",
+            "value": "284",
+            "changed": false
+          },
+          "140": {
+            "literal": "140",
+            "value": "140",
+            "changed": false
+          },
+          "136": {
+            "literal": "136",
+            "value": "136",
+            "changed": false
+          },
+          "0.09375": {
+            "literal": "3/32",
+            "value": "3/32",
+            "changed": false
+          },
+          "864": {
+            "literal": "864",
+            "value": "864",
+            "changed": false
+          },
+          "1872": {
+            "literal": "1872",
+            "value": "1872",
+            "changed": false
+          },
+          "1008": {
+            "literal": "1008",
+            "value": "1008",
+            "changed": false
+          },
+          "456": {
+            "literal": "456",
+            "value": "456",
+            "changed": false
+          },
+          "576": {
+            "literal": "576",
+            "value": "576",
+            "changed": false
+          },
+          "2688": {
+            "literal": "2688",
+            "value": "2688",
+            "changed": false
+          },
+          "1416": {
+            "literal": "1416",
+            "value": "1416",
+            "changed": false
+          },
+          "1248": {
+            "literal": "1248",
+            "value": "1248",
+            "changed": false
+          },
+          "3792": {
+            "literal": "3792",
+            "value": "3792",
+            "changed": false
+          },
+          "4032": {
+            "literal": "4032",
+            "value": "4032",
+            "changed": false
+          },
+          "1488": {
+            "literal": "1488",
+            "value": "1488",
+            "changed": false
+          },
+          "648": {
+            "literal": "648",
+            "value": "648",
+            "changed": false
+          },
+          "2064": {
+            "literal": "2064",
+            "value": "2064",
+            "changed": false
+          },
+          "3048": {
+            "literal": "3048",
+            "value": "3048",
+            "changed": false
+          },
+          "2736": {
+            "literal": "2736",
+            "value": "2736",
+            "changed": false
+          },
+          "4608": {
+            "literal": "4608",
+            "value": "4608",
+            "changed": false
+          },
+          "3456": {
+            "literal": "3456",
+            "value": "3456",
+            "changed": false
+          },
+          "960": {
+            "literal": "960",
+            "value": "960",
+            "changed": false
+          },
+          "1056": {
+            "literal": "1056",
+            "value": "1056",
+            "changed": false
+          },
+          "1464": {
+            "literal": "1464",
+            "value": "1464",
+            "changed": false
+          },
+          "936": {
+            "literal": "936",
+            "value": "936",
+            "changed": false
+          },
+          "13": {
+            "literal": "13",
+            "value": "13",
+            "changed": false
+          },
+          "21": {
+            "literal": "21",
+            "value": "21",
+            "changed": false
+          },
+          "0.15625": {
+            "literal": "5/32",
+            "value": "5/32",
+            "changed": false
+          },
+          "0.9375": {
+            "literal": "15/16",
+            "value": "15/16",
+            "changed": false
+          },
+          "1.875": {
+            "literal": "15/8",
+            "value": "15/8",
+            "changed": false
+          },
+          "0.1875": {
+            "literal": "3/16",
+            "value": "3/16",
+            "changed": false
+          },
+          "1": {
+            "literal": "1",
+            "value": "1",
+            "changed": false
+          },
+          "0.222222222222222": {
+            "literal": "111111111111111/500000000000000",
+            "value": "2/9",
+            "changed": true
+          },
+          "0.0277777777777778": {
+            "literal": "138888888888889/5000000000000000",
+            "value": "1/36",
+            "changed": true
+          }
+        },
+        "PgB": {
+          "0": {
+            "literal": "0",
+            "value": "0",
+            "changed": false
+          }
+        },
+        "PgC": {
+          "0": {
+            "literal": "0",
+            "value": "0",
+            "changed": false
+          }
+        },
+        "PppA": {
+          "0.00173611111111111": {
+            "literal": "173611111111111/100000000000000000",
+            "value": "1/576",
+            "changed": true
+          },
+          "2": {
+            "literal": "2",
+            "value": "2",
+            "changed": false
+          },
+          "6": {
+            "literal": "6",
+            "value": "6",
+            "changed": false
+          },
+          "3": {
+            "literal": "3",
+            "value": "3",
+            "changed": false
+          },
+          "4": {
+            "literal": "4",
+            "value": "4",
+            "changed": false
+          },
+          "1.5": {
+            "literal": "3/2",
+            "value": "3/2",
+            "changed": false
+          },
+          "18": {
+            "literal": "18",
+            "value": "18",
+            "changed": false
+          },
+          "9": {
+            "literal": "9",
+            "value": "9",
+            "changed": false
+          },
+          "12": {
+            "literal": "12",
+            "value": "12",
+            "changed": false
+          },
+          "24": {
+            "literal": "24",
+            "value": "24",
+            "changed": false
+          },
+          "5": {
+            "literal": "5",
+            "value": "5",
+            "changed": false
+          },
+          "0.00130208333333333": {
+            "literal": "130208333333333/100000000000000000",
+            "value": "1/768",
+            "changed": true
+          },
+          "8": {
+            "literal": "8",
+            "value": "8",
+            "changed": false
+          },
+          "32": {
+            "literal": "32",
+            "value": "32",
+            "changed": false
+          },
+          "16": {
+            "literal": "16",
+            "value": "16",
+            "changed": false
+          },
+          "0.00694444444444444": {
+            "literal": "173611111111111/25000000000000000",
+            "value": "1/144",
+            "changed": true
+          },
+          "0.000144675925925926": {
+            "literal": "72337962962963/500000000000000000",
+            "value": "1/6912",
+            "changed": true
+          },
+          "20": {
+            "literal": "20",
+            "value": "20",
+            "changed": false
+          },
+          "112": {
+            "literal": "112",
+            "value": "112",
+            "changed": false
+          },
+          "92": {
+            "literal": "92",
+            "value": "92",
+            "changed": false
+          },
+          "64": {
+            "literal": "64",
+            "value": "64",
+            "changed": false
+          },
+          "56": {
+            "literal": "56",
+            "value": "56",
+            "changed": false
+          },
+          "0.000108506944444444": {
+            "literal": "27126736111111/250000000000000000",
+            "value": "1/9216",
+            "changed": true
+          },
+          "36": {
+            "literal": "36",
+            "value": "36",
+            "changed": false
+          },
+          "0.00347222222222222": {
+            "literal": "173611111111111/50000000000000000",
+            "value": "1/288",
+            "changed": true
+          },
+          "11": {
+            "literal": "11",
+            "value": "11",
+            "changed": false
+          },
+          "0.0078125": {
+            "literal": "1/128",
+            "value": "1/128",
+            "changed": false
+          },
+          "0.015625": {
+            "literal": "1/64",
+            "value": "1/64",
+            "changed": false
+          },
+          "48": {
+            "literal": "48",
+            "value": "48",
+            "changed": false
+          },
+          "60": {
+            "literal": "60",
+            "value": "60",
+            "changed": false
+          },
+          "40": {
+            "literal": "40",
+            "value": "40",
+            "changed": false
+          },
+          "0.1875": {
+            "literal": "3/16",
+            "value": "3/16",
+            "changed": false
+          },
+          "7": {
+            "literal": "7",
+            "value": "7",
+            "changed": false
+          },
+          "0.375": {
+            "literal": "3/8",
+            "value": "3/8",
+            "changed": false
+          },
+          "15": {
+            "literal": "15",
+            "value": "15",
+            "changed": false
+          },
+          "10": {
+            "literal": "10",
+            "value": "10",
+            "changed": false
+          },
+          "0.0625": {
+            "literal": "1/16",
+            "value": "1/16",
+            "changed": false
+          },
+          "45": {
+            "literal": "45",
+            "value": "45",
+            "changed": false
+          },
+          "30": {
+            "literal": "30",
+            "value": "30",
+            "changed": false
+          },
+          "27.0": {
+            "literal": "27",
+            "value": "27",
+            "changed": false
+          },
+          "0.111111111111111": {
+            "literal": "111111111111111/1000000000000000",
+            "value": "1/9",
+            "changed": true
+          },
+          "0.03125": {
+            "literal": "1/32",
+            "value": "1/32",
+            "changed": false
+          },
+          "0.0208333333333333": {
+            "literal": "208333333333333/10000000000000000",
+            "value": "1/48",
+            "changed": true
+          },
+          "0.0138888888888889": {
+            "literal": "138888888888889/10000000000000000",
+            "value": "1/72",
+            "changed": true
+          },
+          "1": {
+            "literal": "1",
+            "value": "1",
+            "changed": false
+          },
+          "72": {
+            "literal": "72",
+            "value": "72",
+            "changed": false
+          },
+          "352": {
+            "literal": "352",
+            "value": "352",
+            "changed": false
+          },
+          "84": {
+            "literal": "84",
+            "value": "84",
+            "changed": false
+          },
+          "540": {
+            "literal": "540",
+            "value": "540",
+            "changed": false
+          },
+          "436": {
+            "literal": "436",
+            "value": "436",
+            "changed": false
+          },
+          "552": {
+            "literal": "552",
+            "value": "552",
+            "changed": false
+          },
+          "248": {
+            "literal": "248",
+            "value": "248",
+            "changed": false
+          },
+          "476": {
+            "literal": "476",
+            "value": "476",
+            "changed": false
+          },
+          "520": {
+            "literal": "520",
+            "value": "520",
+            "changed": false
+          },
+          "240": {
+            "literal": "240",
+            "value": "240",
+            "changed": false
+          },
+          "452": {
+            "literal": "452",
+            "value": "452",
+            "changed": false
+          },
+          "260": {
+            "literal": "260",
+            "value": "260",
+            "changed": false
+          },
+          "44": {
+            "literal": "44",
+            "value": "44",
+            "changed": false
+          },
+          "28": {
+            "literal": "28",
+            "value": "28",
+            "changed": false
+          },
+          "76": {
+            "literal": "76",
+            "value": "76",
+            "changed": false
+          },
+          "0.25": {
+            "literal": "1/4",
+            "value": "1/4",
+            "changed": false
+          },
+          "0.125": {
+            "literal": "1/8",
+            "value": "1/8",
+            "changed": false
+          },
+          "0.046875": {
+            "literal": "3/64",
+            "value": "3/64",
+            "changed": false
+          },
+          "4.0": {
+            "literal": "4",
+            "value": "4",
+            "changed": false
+          },
+          "9.0": {
+            "literal": "9",
+            "value": "9",
+            "changed": false
+          },
+          "0.09375": {
+            "literal": "3/32",
+            "value": "3/32",
+            "changed": false
+          },
+          "80": {
+            "literal": "80",
+            "value": "80",
+            "changed": false
+          },
+          "156": {
+            "literal": "156",
+            "value": "156",
+            "changed": false
+          },
+          "196": {
+            "literal": "196",
+            "value": "196",
+            "changed": false
+          },
+          "88": {
+            "literal": "88",
+            "value": "88",
+            "changed": false
+          },
+          "116": {
+            "literal": "116",
+            "value": "116",
+            "changed": false
+          },
+          "208": {
+            "literal": "208",
+            "value": "208",
+            "changed": false
+          },
+          "168": {
+            "literal": "168",
+            "value": "168",
+            "changed": false
+          },
+          "184": {
+            "literal": "184",
+            "value": "184",
+            "changed": false
+          },
+          "68": {
+            "literal": "68",
+            "value": "68",
+            "changed": false
+          },
+          "144": {
+            "literal": "144",
+            "value": "144",
+            "changed": false
+          },
+          "104": {
+            "literal": "104",
+            "value": "104",
+            "changed": false
+          },
+          "96": {
+            "literal": "96",
+            "value": "96",
+            "changed": false
+          },
+          "124": {
+            "literal": "124",
+            "value": "124",
+            "changed": false
+          },
+          "52": {
+            "literal": "52",
+            "value": "52",
+            "changed": false
+          },
+          "140": {
+            "literal": "140",
+            "value": "140",
+            "changed": false
+          },
+          "120": {
+            "literal": "120",
+            "value": "120",
+            "changed": false
+          },
+          "192": {
+            "literal": "192",
+            "value": "192",
+            "changed": false
+          },
+          "200": {
+            "literal": "200",
+            "value": "200",
+            "changed": false
+          },
+          "0.0416666666666667": {
+            "literal": "416666666666667/10000000000000000",
+            "value": "1/24",
+            "changed": true
+          },
+          "0.0833333333333333": {
+            "literal": "833333333333333/10000000000000000",
+            "value": "1/12",
+            "changed": true
+          },
+          "42": {
+            "literal": "42",
+            "value": "42",
+            "changed": false
+          },
+          "376": {
+            "literal": "376",
+            "value": "376",
+            "changed": false
+          },
+          "438": {
+            "literal": "438",
+            "value": "438",
+            "changed": false
+          },
+          "176": {
+            "literal": "176",
+            "value": "176",
+            "changed": false
+          },
+          "34": {
+            "literal": "34",
+            "value": "34",
+            "changed": false
+          },
+          "264": {
+            "literal": "264",
+            "value": "264",
+            "changed": false
+          },
+          "392": {
+            "literal": "392",
+            "value": "392",
+            "changed": false
+          },
+          "188": {
+            "literal": "188",
+            "value": "188",
+            "changed": false
+          },
+          "528": {
+            "literal": "528",
+            "value": "528",
+            "changed": false
+          },
+          "560": {
+            "literal": "560",
+            "value": "560",
+            "changed": false
+          },
+          "66": {
+            "literal": "66",
+            "value": "66",
+            "changed": false
+          },
+          "210": {
+            "literal": "210",
+            "value": "210",
+            "changed": false
+          },
+          "106": {
+            "literal": "106",
+            "value": "106",
+            "changed": false
+          },
+          "202": {
+            "literal": "202",
+            "value": "202",
+            "changed": false
+          },
+          "216": {
+            "literal": "216",
+            "value": "216",
+            "changed": false
+          },
+          "126": {
+            "literal": "126",
+            "value": "126",
+            "changed": false
+          },
+          "468": {
+            "literal": "468",
+            "value": "468",
+            "changed": false
+          },
+          "336": {
+            "literal": "336",
+            "value": "336",
+            "changed": false
+          },
+          "1128": {
+            "literal": "1128",
+            "value": "1128",
+            "changed": false
+          },
+          "1314": {
+            "literal": "1314",
+            "value": "1314",
+            "changed": false
+          },
+          "180": {
+            "literal": "180",
+            "value": "180",
+            "changed": false
+          },
+          "102": {
+            "literal": "102",
+            "value": "102",
+            "changed": false
+          },
+          "792": {
+            "literal": "792",
+            "value": "792",
+            "changed": false
+          },
+          "1176": {
+            "literal": "1176",
+            "value": "1176",
+            "changed": false
+          },
+          "564": {
+            "literal": "564",
+            "value": "564",
+            "changed": false
+          },
+          "504": {
+            "literal": "504",
+            "value": "504",
+            "changed": false
+          },
+          "1584": {
+            "literal": "1584",
+            "value": "1584",
+            "changed": false
+          },
+          "1680": {
+            "literal": "1680",
+            "value": "1680",
+            "changed": false
+          },
+          "600": {
+            "literal": "600",
+            "value": "600",
+            "changed": false
+          },
+          "198": {
+            "literal": "198",
+            "value": "198",
+            "changed": false
+          },
+          "630": {
+            "literal": "630",
+            "value": "630",
+            "changed": false
+          },
+          "780": {
+            "literal": "780",
+            "value": "780",
+            "changed": false
+          },
+          "318": {
+            "literal": "318",
+            "value": "318",
+            "changed": false
+          },
+          "204": {
+            "literal": "204",
+            "value": "204",
+            "changed": false
+          },
+          "606": {
+            "literal": "606",
+            "value": "606",
+            "changed": false
+          },
+          "14": {
+            "literal": "14",
+            "value": "14",
+            "changed": false
+          },
+          "22": {
+            "literal": "22",
+            "value": "22",
+            "changed": false
+          },
+          "27": {
+            "literal": "27",
+            "value": "27",
+            "changed": false
+          },
+          "19": {
+            "literal": "19",
+            "value": "19",
+            "changed": false
+          },
+          "21": {
+            "literal": "21",
+            "value": "21",
+            "changed": false
+          },
+          "17": {
+            "literal": "17",
+            "value": "17",
+            "changed": false
+          },
+          "26": {
+            "literal": "26",
+            "value": "26",
+            "changed": false
+          },
+          "74": {
+            "literal": "74",
+            "value": "74",
+            "changed": false
+          },
+          "0.333333333333333": {
+            "literal": "333333333333333/1000000000000000",
+            "value": "1/3",
+            "changed": true
+          },
+          "0.5": {
+            "literal": "1/2",
+            "value": "1/2",
+            "changed": false
+          },
+          "0.037037037037037": {
+            "literal": "37037037037037/1000000000000000",
+            "value": "1/27",
+            "changed": true
+          },
+          "50": {
+            "literal": "50",
+            "value": "50",
+            "changed": false
+          },
+          "70": {
+            "literal": "70",
+            "value": "70",
+            "changed": false
+          },
+          "98": {
+            "literal": "98",
+            "value": "98",
+            "changed": false
+          },
+          "78": {
+            "literal": "78",
+            "value": "78",
+            "changed": false
+          },
+          "86": {
+            "literal": "86",
+            "value": "86",
+            "changed": false
+          },
+          "38": {
+            "literal": "38",
+            "value": "38",
+            "changed": false
+          },
+          "150": {
+            "literal": "150",
+            "value": "150",
+            "changed": false
+          },
+          "90": {
+            "literal": "90",
+            "value": "90",
+            "changed": false
+          },
+          "294": {
+            "literal": "294",
+            "value": "294",
+            "changed": false
+          },
+          "360": {
+            "literal": "360",
+            "value": "360",
+            "changed": false
+          },
+          "252": {
+            "literal": "252",
+            "value": "252",
+            "changed": false
+          },
+          "234": {
+            "literal": "234",
+            "value": "234",
+            "changed": false
+          },
+          "258": {
+            "literal": "258",
+            "value": "258",
+            "changed": false
+          },
+          "54": {
+            "literal": "54",
+            "value": "54",
+            "changed": false
+          },
+          "114": {
+            "literal": "114",
+            "value": "114",
+            "changed": false
+          },
+          "3.61689814814815e-5": {
+            "literal": "72337962962963/2000000000000000000",
+            "value": "1/27648",
+            "changed": true
+          },
+          "0.00260416666666667": {
+            "literal": "260416666666667/100000000000000000",
+            "value": "1/384",
+            "changed": true
+          },
+          "0.00390625": {
+            "literal": "1/256",
+            "value": "1/256",
+            "changed": false
+          },
+          "0.0234375": {
+            "literal": "3/128",
+            "value": "3/128",
+            "changed": false
+          },
+          "0.166666666666667": {
+            "literal": "166666666666667/1000000000000000",
+            "value": "1/6",
+            "changed": true
+          },
+          "0.0277777777777778": {
+            "literal": "138888888888889/5000000000000000",
+            "value": "1/36",
+            "changed": true
+          },
+          "13": {
+            "literal": "13",
+            "value": "13",
+            "changed": false
+          }
+        },
+        "PppB": {
+          "0": {
+            "literal": "0",
+            "value": "0",
+            "changed": false
+          }
+        },
+        "PppC": {
+          "0": {
+            "literal": "0",
+            "value": "0",
+            "changed": false
+          }
+        }
+      }
+    }
+  },
+  "DriverAssignments": {
+    "zh": [
+      {
+        "line": 114,
+        "expression": "((((1/1)-xh)-((xh*w)/(Q^(2/1))))/(((1/1)-xh)+((xh*(qT^(2/1)))/(Q^(2/1)))))"
+      }
+    ],
+    "zh0": [
+      {
+        "line": 115,
+        "expression": "(((1/1)-xh)/(((1/1)-xh)+((xh*(qT^(2/1)))/(Q^(2/1)))))"
+      }
+    ],
+    "gs2": [
+      {
+        "line": 123,
+        "expression": "((sourceAlphaS[mu2]*(4/1))*Pi)"
+      }
+    ],
+    "F1h": [
+      {
+        "line": 247,
+        "expression": "(((-(1/2))*Fg)+((((2/1)*(xh^(2/1)))/(Q^(2/1)))*Fpp))"
+      }
+    ],
+    "F2h": [
+      {
+        "line": 248,
+        "expression": "(((-xh)*Fg)+((((12/1)*(xh^(3/1)))/(Q^(2/1)))*Fpp))"
+      }
+    ],
+    "s": [
+      {
+        "line": 185,
+        "expression": "((((1/1)-xh)/xh)*(Q^(2/1)))"
+      }
+    ],
+    "t": [
+      {
+        "line": 186,
+        "expression": "(((-((1/1)-zh))*(Q^(2/1)))-(zh*(qT^(2/1))))"
+      }
+    ],
+    "nf": [
+      {
+        "line": 188,
+        "expression": "(4/1)"
+      }
+    ],
+    "B": [
+      {
+        "line": 189,
+        "expression": "((((Q^(2/1))*(((1/1)/xh)-(1/1)))*((1/1)-z))-(z*(qT^(2/1))))"
+      }
+    ],
+    "factor0": [
+      {
+        "line": 174,
+        "expression": "(((((gs2*jac0)*lum0)/xi)/zeta0)*zh0)"
+      },
+      {
+        "line": 204,
+        "expression": "((((((gs2^(2/1))*jac0)*lum0)/xi)/zeta0)*zh0)"
+      }
+    ],
+    "factor": [
+      {
+        "line": 203,
+        "expression": "((((((gs2^(2/1))*jac)*lum)/xi)/zeta)*zh)"
+      }
+    ]
+  },
+  "HelperDefinitions": {
+    "NLO/Pg/fchn5A.py": {
+      "_PolyLOG": "def _PolyLOG(s, z):\n    tol = 1e-10\n    l = 0\n    k = 1\n    zk = z\n    while 1:\n        term = zk / k**s\n        l += term\n        if abs(term) < tol:\n            break\n        zk *= z\n        k += 1\n    return l",
+      "PolyLOG": "def PolyLOG(s, z):\n    #return fp.polylog(s,z)\n    #if abs(z) > 0.75:\n    #  return -PolyLOG(s,1-z) + np.pi**2/6 - np.log(z)*np.log(1-z)\n    if abs(z) >1: \n      return -PolyLOG(s, 1/z) - np.pi**2/6 - 0.5*np.log(-z)**2\n    return _PolyLOG(s, z)"
+    },
+    "NLO/Pg/fchn5B.py": {
+      "_PolyLOG": "def _PolyLOG(s, z):\n    tol = 1e-10\n    l = 0\n    k = 1\n    zk = z\n    while 1:\n        term = zk / k**s\n        l += term\n        if abs(term) < tol:\n            break\n        zk *= z\n        k += 1\n    return l",
+      "PolyLOG": "def PolyLOG(s, z):\n    #return fp.polylog(s,z)\n    #if abs(z) > 0.75:\n    #  return -PolyLOG(s,1-z) + np.pi**2/6 - np.log(z)*np.log(1-z)\n    if abs(z) >1: \n      return -PolyLOG(s, 1/z) - np.pi**2/6 - 0.5*np.log(-z)**2\n    return _PolyLOG(s, z)"
+    },
+    "NLO/Pg/fchn5C.py": {
+      "_PolyLOG": "def _PolyLOG(s, z):\n    tol = 1e-10\n    l = 0\n    k = 1\n    zk = z\n    while 1:\n        term = zk / k**s\n        l += term\n        if abs(term) < tol:\n            break\n        zk *= z\n        k += 1\n    return l",
+      "PolyLOG": "def PolyLOG(s, z):\n    #return fp.polylog(s,z)\n    #if abs(z) > 0.75:\n    #  return -PolyLOG(s,1-z) + np.pi**2/6 - np.log(z)*np.log(1-z)\n    if abs(z) >1: \n      return -PolyLOG(s, 1/z) - np.pi**2/6 - 0.5*np.log(-z)**2\n    return _PolyLOG(s, z)"
+    },
+    "NLO/Ppp/fchn5A.py": {
+      "_PolyLOG": "def _PolyLOG(s, z):\n    tol = 1e-10\n    l = 0\n    k = 1\n    zk = z\n    while 1:\n        term = zk / k**s\n        l += term\n        if abs(term) < tol:\n            break\n        zk *= z\n        k += 1\n    return l",
+      "PolyLOG": "def PolyLOG(s, z):\n    #return fp.polylog(s,z)\n    #if abs(z) > 0.75:\n    #  return -PolyLOG(s,1-z) + np.pi**2/6 - np.log(z)*np.log(1-z)\n    if abs(z) >1: \n      return -PolyLOG(s, 1/z) - np.pi**2/6 - 0.5*np.log(-z)**2\n    return _PolyLOG(s, z)"
+    },
+    "NLO/Ppp/fchn5B.py": {
+      "_PolyLOG": "def _PolyLOG(s, z):\n    tol = 1e-10\n    l = 0\n    k = 1\n    zk = z\n    while 1:\n        term = zk / k**s\n        l += term\n        if abs(term) < tol:\n            break\n        zk *= z\n        k += 1\n    return l",
+      "PolyLOG": "def PolyLOG(s, z):\n    #return fp.polylog(s,z)\n    #if abs(z) > 0.75:\n    #  return -PolyLOG(s,1-z) + np.pi**2/6 - np.log(z)*np.log(1-z)\n    if abs(z) >1: \n      return -PolyLOG(s, 1/z) - np.pi**2/6 - 0.5*np.log(-z)**2\n    return _PolyLOG(s, z)"
+    },
+    "NLO/Ppp/fchn5C.py": {
+      "_PolyLOG": "def _PolyLOG(s, z):\n    tol = 1e-10\n    l = 0\n    k = 1\n    zk = z\n    while 1:\n        term = zk / k**s\n        l += term\n        if abs(term) < tol:\n            break\n        zk *= z\n        k += 1\n    return l",
+      "PolyLOG": "def PolyLOG(s, z):\n    #return fp.polylog(s,z)\n    #if abs(z) > 0.75:\n    #  return -PolyLOG(s,1-z) + np.pi**2/6 - np.log(z)*np.log(1-z)\n    if abs(z) >1: \n      return -PolyLOG(s, 1/z) - np.pi**2/6 - 0.5*np.log(-z)**2\n    return _PolyLOG(s, z)"
+    }
+  },
+  "ReconstructionPolicy": "Conditional nearest rational with denominator <= 10^6 for tokens with >=12 digits within 5e-15 * max(1,abs(token)); shorter tokens are exact decimals. Not a recovery proof for unavailable original exact coefficients.",
+  "Scope": "Analytical PolyLog functions; actual Python helper audited separately. Original source bytes are copied without changes."
+}

@@ -1,0 +1,341 @@
+{
+  "CNickelIndex": "e12|e2|e|:001|02|0|",
+  "MassScales": 2,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "-2,-1,0",
+  "References": [
+    "arXiv:2306.11718"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:2306.11718",
+      "authors": [
+        {
+          "full_name": "Bera, Souvik",
+          "inspire_id": 1969293
+        }
+      ],
+      "description": "One-loop three-point function $I_3^D(\\nu_1, \\nu_2, \\nu_3; Q_1^2, 0, 0, M_1^2, M_2^2, 0)$ with two massive internal lines (masses $M_1, M_2$), one massless internal line, one off-shell external leg of virtuality $Q_1^2$ and two on-shell massless external legs. Evaluated with unit propagator powers ($\\nu_i = 1$) in $D = 4 - 2\\varepsilon$. Expressed as sum of a Kampe de Feriet $S_1$ function and a Horn $H_2$ function (region IIIb representation), epsilon-expanded using MultiHypExp to obtain series coefficients as multiple polylogarithms / classical $\\operatorname{Li}_{1,1}$. Used to validate agreement between the IIIb and IIb analytic continuations of Anastasiou-Ellis-Gehrmann-Melrose.",
+      "epsOrders": "0",
+      "familyName": "one-loop triangle with two massive propagators and one off-shell leg (I_3^D)",
+      "method": "NDIM, hypergeometric representation, series expansion via differential equations, canonical form",
+      "tools": [
+        "MultiHypExp",
+        "Mathematica"
+      ],
+      "ancillaryFiles": true,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 0,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "full",
+      "location": "Section 5 (Application to the Feynman integrals), Eqs. (5.1)-(5.8)",
+      "recordId": "bx_b5a44dd111a9",
+      "verified": true,
+      "verifiedAt": "auto-loopedia"
+    }
+  ],
+  "Names": [
+    "Triangle (2 massive propagators)",
+    "Triangle",
+    "C0",
+    "one-loop triangle two-mass",
+    "Tri (one-loop triangle, two massive propagators, three off-shell legs)",
+    "one-loop triangle with two massive propagators and one off-shell leg (I_3^D)"
+  ],
+  "Source": [
+    "arXiv",
+    "Loopedia"
+  ],
+  "Loops": 1,
+  "NumPropagators": 3,
+  "Results": [
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": "0",
+      "epsOrders": "0",
+      "propExponents": [
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.280",
+      "stCommand": "",
+      "contributor": "Sebastian Mizera",
+      "timestamp": "2026-04-14T11:06:01",
+      "verifiedAt": "2026-04-14T11:06:01",
+      "verified": true,
+      "method": "direct_integration",
+      "tools": [
+        "SubTropica"
+      ],
+      "methodLR": "Lungo",
+      "byteCount": 888,
+      "alphabet": [
+        "m_1^2",
+        "m_2^2"
+      ],
+      "symbolWeight": 1,
+      "symbolTerms": 2,
+      "normalizedAlphabet": [
+        "W_1"
+      ],
+      "symbolScale": "m_1^2",
+      "normalizedSymbolTerms": 1,
+      "legOrder": [],
+      "resultDataId": "f6e52899d3acd4ec",
+      "resultTeXPreview": "\\frac{\\log \\left(m_1^2 m_2^{-2}\\right)}{m_2^2-m_1^2}+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T042849Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "mm[1] - mm[2]",
+        "mm[2]",
+        "mm[1]"
+      ],
+      "singularitiesTeX": [
+        "m_{1}^{2}-m_{2}^{2}",
+        "m_{2}^{2}",
+        "m_{1}^{2}"
+      ],
+      "singularitiesVerified": [
+        false,
+        true,
+        true
+      ],
+      "groundTruthAvailable": true,
+      "provenance": {
+        "engine": "chi/SPQRLandau-CII SPQR-1.0.4 FF64",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 2,
+        "confirmPrimes": 2,
+        "confirmAgree": true,
+        "wallSeconds": 2.09
+      },
+      "timestamp": "2026-06-14T04:28:49Z",
+      "contributor": "oddletters-v1a",
+      "singularitiesChiDrop": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T042849Z",
+      "byEpsOrder": null,
+      "evens": [
+        "mm[1] - mm[2]",
+        "mm[2]",
+        "mm[1]"
+      ],
+      "evensTeX": [
+        "m_{1}^{2}-m_{2}^{2}",
+        "m_{2}^{2}",
+        "m_{1}^{2}"
+      ],
+      "evensVerified": [
+        false,
+        true,
+        true
+      ],
+      "groundTruthAvailable": true,
+      "oddLetters": [
+        {
+          "P": "mm[1]",
+          "PTeX": "m_{1}^{2}",
+          "c": "1",
+          "Q": "mm[1]*mm[2]",
+          "QTeX": "m_{1}^{2} m_{2}^{2}",
+          "multiset": [
+            [
+              "mm[1]",
+              1
+            ],
+            [
+              "mm[1] - mm[2]",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "m_{1}^{2}",
+              1
+            ],
+            [
+              "m_{1}^{2}-m_{2}^{2}",
+              1
+            ]
+          ],
+          "letter": "(mm[1] - Sqrt[mm[1]*mm[2]])/(mm[1] + Sqrt[mm[1]*mm[2]])",
+          "letterTeX": "\\frac{m_{1}^{2}-\\sqrt{m_{1}^{2} m_{2}^{2}}}{m_{1}^{2}+\\sqrt{m_{1}^{2} m_{2}^{2}}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 1,
+              "power": 1
+            }
+          ]
+        },
+        {
+          "P": "mm[1]/2 - mm[2]",
+          "PTeX": "\\frac{m_{1}^{2}}{2}-m_{2}^{2}",
+          "c": "1/4",
+          "Q": "-(mm[1]*mm[2]) + mm[2]^2",
+          "QTeX": "m_{2}^{4}-m_{1}^{2} m_{2}^{2}",
+          "multiset": [
+            [
+              "mm[1]",
+              2
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "m_{1}^{2}",
+              2
+            ]
+          ],
+          "letter": "(mm[1]/2 - mm[2] - Sqrt[-(mm[1]*mm[2]) + mm[2]^2])/(mm[1]/2 - mm[2] + Sqrt[-(mm[1]*mm[2]) + mm[2]^2])",
+          "letterTeX": "\\frac{\\frac{m_{1}^{2}}{2}-m_{2}^{2}-\\sqrt{m_{2}^{4}-m_{1}^{2} m_{2}^{2}}}{\\frac{m_{1}^{2}}{2}-m_{2}^{2}+\\sqrt{m_{2}^{4}-m_{1}^{2} m_{2}^{2}}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 1,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 2
+            }
+          ]
+        },
+        {
+          "P": "mm[1]",
+          "PTeX": "m_{1}^{2}",
+          "c": "1",
+          "Q": "mm[1]^2 - mm[1]*mm[2]",
+          "QTeX": "m_{1}^{4}-m_{1}^{2} m_{2}^{2}",
+          "multiset": [
+            [
+              "mm[1]",
+              1
+            ],
+            [
+              "mm[2]",
+              1
+            ]
+          ],
+          "multisetTeX": [
+            [
+              "m_{1}^{2}",
+              1
+            ],
+            [
+              "m_{2}^{2}",
+              1
+            ]
+          ],
+          "letter": "(mm[1] - Sqrt[mm[1]^2 - mm[1]*mm[2]])/(mm[1] + Sqrt[mm[1]^2 - mm[1]*mm[2]])",
+          "letterTeX": "\\frac{m_{1}^{2}-\\sqrt{m_{1}^{4}-m_{1}^{2} m_{2}^{2}}}{m_{1}^{2}+\\sqrt{m_{1}^{4}-m_{1}^{2} m_{2}^{2}}}",
+          "identityVerified": true,
+          "verified": false,
+          "wFactors": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 1,
+              "power": 1
+            }
+          ],
+          "multisetIdx": [
+            {
+              "w": 3,
+              "power": 1
+            },
+            {
+              "w": 2,
+              "power": 1
+            }
+          ]
+        }
+      ],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "chi/SPQRLandau-CII SPQR-1.0.4 FF64",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 2,
+        "confirmPrimes": 2,
+        "confirmAgree": true,
+        "wallSeconds": 2.09
+      },
+      "timestamp": "2026-06-14T04:28:49Z",
+      "contributor": "oddletters-v1a",
+      "evensChiDrop": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "edges": "{{{1, 2}, 0}, {{1, 3}, m[1]}, {{2, 3}, m[2]}}",
+  "nodes": "{{1, 0}, {2, 0}, {3, 0}}",
+  "quadruple": "{E^(eps*EulerGamma)*Gamma[1 + eps], (x1 + x2 + x3)^(-1 + 2*eps)*(-((x1 + x2 + x3)*(x2*mm[1] + x3*mm[2])))^(-1 - eps), {x1, x2, x3}, {}}",
+  "CanonicalName": "2-mass triangle, 2 massive propagators (a)",
+  "MassConfig": {
+    "numEdges": 3,
+    "numMassiveEdges": 2,
+    "numMasslessEdges": 1,
+    "distinctInternalMasses": 2,
+    "internalMassLabels": [
+      "m[1]",
+      "m[2]"
+    ],
+    "edgeMassPattern": "012",
+    "numExtLegs": 3,
+    "numOnshellMassiveExtLegs": 0,
+    "numMasslessExtLegs": 3,
+    "extLegSignature": "000"
+  },
+  "commonNames": [
+    "C₀(2 masses)"
+  ],
+  "Subsectors": [],
+  "ParentSectors": []
+}

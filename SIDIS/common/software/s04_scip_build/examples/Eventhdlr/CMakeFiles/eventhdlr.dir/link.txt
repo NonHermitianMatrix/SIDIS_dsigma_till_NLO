@@ -1,0 +1,1 @@
+/bin/cc -O1 -DNDEBUG -rdynamic CMakeFiles/eventhdlr.dir/src/cmain.c.o CMakeFiles/eventhdlr.dir/src/event_bestsol.c.o CMakeFiles/eventhdlr.dir/src/event_boundwriting.c.o -o ../../bin/examples/eventhdlr  -Wl,-rpath,/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build/lib ../../lib/libscip.so.6.0.2.0 

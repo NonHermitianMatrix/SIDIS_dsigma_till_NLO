@@ -1,0 +1,9 @@
+<|"InputHash" -> 
+  423642346044544533308822074044797281968239852624853717704857202658751178728\
+16, "Input" -> {I*Pi^(2 - eps)*Gamma[eps], (1 + xx1)^(-2 + 2*eps)/
+    (c12*xx1)^eps, {xx1}, {c12}}, "Order" -> 1, 
+ "ParameterRename" -> {Global`x[1] -> xx1}, "PackageHash" -> 7700335410209025\
+3125630607168089365942099122523326181398545184007216265961831, 
+ "SourceHash" -> 643246402886947140304625132726471033516619724302047357753039\
+32456572455152025, "MeasureConvention" -> 
+  "Unnormalized Minkowski d^D r; FCFeynmanParametrize Unity"|>

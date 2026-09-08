@@ -1,0 +1,109 @@
+integralfamilies:
+  - name: R01
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["p-r", 0]
+      - ["k1+r", 0]
+    cut_propagators: [1,2]
+  - name: R02
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["p-r", 0]
+      - ["p+q-r", 0]
+    cut_propagators: [1,2]
+  - name: R03
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["p-r", 0]
+      - ["q-r", 0]
+    cut_propagators: [1,2]
+  - name: R04
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["p-r", 0]
+      - ["k1-p+r", 0]
+    cut_propagators: [1,2]
+  - name: R05
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["k1-q+r", 0]
+      - ["k1+r", 0]
+    cut_propagators: [1,2]
+  - name: R06
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["k1-q+r", 0]
+      - ["p+q-r", 0]
+    cut_propagators: [1,2]
+  - name: R07
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["k1-q+r", 0]
+      - ["q-r", 0]
+    cut_propagators: [1,2]
+  - name: R08
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["k1-q+r", 0]
+      - ["k1-p+r", 0]
+    cut_propagators: [1,2]
+  - name: R09
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["k1+r", 0]
+      - ["q-r", 0]
+    cut_propagators: [1,2]
+  - name: R10
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["k1+r", 0]
+      - ["k1-p+r", 0]
+    cut_propagators: [1,2]
+  - name: R11
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["p+q-r", 0]
+      - ["q-r", 0]
+    cut_propagators: [1,2]
+  - name: R12
+    loop_momenta: [r]
+    top_level_sectors: [15]
+    propagators:
+      - ["r", 0]
+      - ["-k1+p+q-r", 0]
+      - ["p+q-r", 0]
+      - ["k1-p+r", 0]
+    cut_propagators: [1,2]

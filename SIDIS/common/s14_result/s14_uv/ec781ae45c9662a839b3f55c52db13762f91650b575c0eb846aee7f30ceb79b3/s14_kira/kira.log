@@ -1,0 +1,157 @@
+2 Fermat/Blackbox instances will be run in parallel.
+The user defined environment variable FERMATPATH for Fermat is set:
+/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/fermat/Ferl7/fer64
+The directories for the temporary files, result files and the sector mapping files are: 
+./tmp
+./results
+./sectormappings
+One variable is set to 1: {}
+Kira prepares topology: OS and top level sector: 
+3 
+Kira prepares topology: SE and top level sector: 
+
+Kira prepares topology: UV and top level sector: 
+
+
+*****Integral ordering*************************************
+VERSION table created successfully
+Kira database version number: 2.1
+WEIGHTBITS table created successfully
+INTEGRALORDERING table created successfully
+Kira will use the integral ordering: 1.
+With topology: OS use intermediate permutation
+0 1 2 3 
+With topology: SE use intermediate permutation
+0 1 2 3 
+With topology: UV use intermediate permutation
+0 1 2 3 
+Following reductions will be performed for the topology: OS
+Sector: 3 rmax: 3 smax: 1 
+
+Following reductions will be performed for the topology: SE
+Following reductions will be performed for the topology: UV
+***********************************************************
+Find IBP LI and symmetry relations for the topology: OS
+***********************************************************
+
+*****Generate IBP identities*******************************
+There are 4 IBP identities
+( 0.003 s )
+
+*****Generate LI identities********************************
+There are 3 LI identities
+( 0.005724 s )
+
+*****Search trivial sectors********************************
+
+Non trivial sectors in total: 9
+Trivial sectors in total: 7
+( 0.0 s )
+
+Search symmetry relations: 
+
+( 0.0 s )
+***********************************************************
+Find IBP LI and symmetry relations for the topology: SE
+***********************************************************
+
+*****Generate IBP identities*******************************
+There are 4 IBP identities
+( 0.0 s )
+
+*****Generate LI identities********************************
+There are 3 LI identities
+( 0.0 s )
+
+*****Search trivial sectors********************************
+
+Non trivial sectors in total: 9
+Trivial sectors in total: 7
+( 0.0 s )
+
+Search symmetry relations: 
+
+( 0.0 s )
+***********************************************************
+Find IBP LI and symmetry relations for the topology: UV
+***********************************************************
+
+*****Generate IBP identities*******************************
+There are 4 IBP identities
+( 0.0 s )
+
+*****Generate LI identities********************************
+There are 3 LI identities
+( 0.0 s )
+
+*****Search trivial sectors********************************
+
+Non trivial sectors in total: 15
+Trivial sectors in total: 1
+( 0.0 s )
+
+Search symmetry relations: 
+
+( 0.0 s )
+***********************************************************
+Prepare Symmetries for the topology: OS
+***********************************************************
+Build symmetries for OS x OS 
+
+Sector relations: 0
+Sector symmetries: 0
+( 0.0 s )
+***********************************************************
+Prepare Symmetries for the topology: SE
+***********************************************************
+Build symmetries for SE x OS 
+
+Sector relations: 0
+Sector symmetries: 0
+( 0.0 s )
+Build symmetries for SE x SE 
+Skip mappings because all top level sectors are mapped
+already to a lower topology.
+( 0.0 s )
+***********************************************************
+Prepare Symmetries for the topology: UV
+***********************************************************
+Build symmetries for UV x OS 
+
+Sector relations: 0
+Sector symmetries: 0
+( 0.0 s )
+Build symmetries for UV x SE 
+Skip mappings because all top level sectors are mapped
+already to a lower topology.
+( 0.0 s )
+Build symmetries for UV x UV 
+Skip mappings because all top level sectors are mapped
+already to a lower topology.
+( 0.0 s )
+
+***********************************************************
+Kira starts the reduction of the topology: OS
+***********************************************************
+
+***** Select equations recursively ************************
+length of mandatory list: 0
+
+***** No equations selected *******************************
+No integrals to reduce, skipping this family.
+Equation table created successfully
+One variable is set to 1: {}
+One variable is set to 1: {}
+The input directory is set to:
+./results
+symbol_to_replace_by_one: x in kinematics.yaml is not set. 
+Mass reconstruction is disabled.
+################################################
+kira2math: Reconstruct results
+################################################
+
+Algebraic reconstruction is switched off.
+unreduced integrals: 0.
+
+Total time:
+( 1.8 s )

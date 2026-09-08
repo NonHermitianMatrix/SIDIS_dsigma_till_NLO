@@ -1,0 +1,39 @@
+physical=Q2>0 && s>w>0 && w-Q2-s<t<-Q2 w/s;
+kin=Get["/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/Hqqbar/s01_inputs/s02_result/kinematics.wl"];u=kin["u"];
+bornQ=Get["/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/Hqqbar/s01_inputs/s02_result/born_qg.wl"];bornG=Get["/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/Hqqbar/s01_inputs/s02_result/born_gq.wl"];
+colorTrace=SUNSimplify[SUNTrace[SUNT[aa,aa]],SUNNToCACF->False] /. SUNN->Nc;
+tf=Cancel[colorTrace/(Nc^2-1)];cf=Cancel[colorTrace/Nc];
+require[FreeQ[{tf,cf},_SUNTrace|_SUNT|_SUNTF|_SUNDelta],"color normalization"];
+pqg=2tf ((1-xi)^2+xi^2);pgq=2cf (1+(1-zz)^2)/zz; (* Eqs. 52-53 *)
+initialS=xi(s+Q2)-Q2;initialT=t;initialU=xi u;
+finalS=s;finalT=(t+Q2)/zz-Q2;finalU=u/zz;
+initialMass=Expand[initialS+initialT+initialU+Q2];
+finalMass=Together[finalS+finalT+finalU+Q2];
+xiRoot=xi /. First[Solve[initialMass==0,xi]];
+zzRoot=zz /. First[Solve[finalMass==0,zz]];
+require[FullSimplify[0<xiRoot<1 && 0<zzRoot<1,physical],"factorization roots in support"];
+xiJac=FullSimplify[Abs[D[initialMass,xi] /. xi->xiRoot],physical];
+zzJac=FullSimplify[Abs[D[finalMass,zz] /. zz->zzRoot],physical];
+flows={gluon}; (* One intermediate gluon in each fixed-flavour convolution. *)
+counter=Association@Table[projection -> Module[{initial,final},
+  initial=(bornG[projection] /. {s->initialS,t->initialT}) (pgq /. zz->xi)/
+    (xi If[projection=="pp",xi^2,1]);
+  final=(bornQ[projection] /. {s->finalS,t->finalT}) (pqg /. xi->zz)/zz^2;
+  Factor[Together[Total[Table[(initial /. xi->xiRoot)/xiJac+
+    (final /. zz->zzRoot)/zzJac,{flow,flows}]]]]],{projection,{"g","pp"}}];
+Put[<|"convolutions"->counter,"xi"->xiRoot,"zeta"->zzRoot,
+  "jacobians"->{xiJac,zzJac},"TF"->tf,"CF"->cf,"flows"->flows|>,
+  "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/Hqqbar/s16_result/counterterms.wl"];
+
+FCClearScalarProducts[];SPD[p]=0;SPD[q]=-Q2;SPD[p,q]=Q2/(2xh);
+transverse=FVD[p,mu]-FVD[q,mu]SPD[p,q]/SPD[q];
+tensor=(-MTD[mu,nu]+FVD[q,mu]FVD[q,nu]/SPD[q]) f1+
+  transverse (transverse /. mu->nu) f2/SPD[p,q];
+contractions={Contract[MTD[mu,nu]tensor],Contract[FVD[p,mu]FVD[p,nu]tensor]};
+projectors=First[Solve[Thread[{Hg,Hpp}==contractions],{f1,f2}]];
+require[FullSimplify[({f1,f2} /. projectors /. D->4-2eps)-{
+  (-Hg/2+2xh^2 Hpp/Q2)/(1-eps),
+  ((3-2eps)4xh^3 Hpp/Q2-xh Hg)/(1-eps)}] === {0,0},"paper projectors"];
+Put[projectors,"/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/Hqqbar/s16_result/projectors.wl"];
+Print["PASS: factorization support, Jacobians, and paper projectors"];
+phaseCT=(2Pi)/(2Pi)^4 mu2^eps gs^2/(16Pi^2) (4Pi)^eps Exp[-EulerGamma eps]/eps;

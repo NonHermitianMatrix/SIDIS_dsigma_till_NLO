@@ -1,0 +1,207 @@
+{
+  "CNickelIndex": "123|45|45|e4||e|:000|00|00|10||1|",
+  "MassScales": 1,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "-6,-5,-4,-3,-2,-1,0,1,2",
+  "References": [
+    "arXiv:hep-ph/0505174 (Comput.Phys.Commun. 175 (180), 2006)",
+    "arXiv:hep-ph/9307327",
+    "arXiv:2111.13595"
+  ],
+  "Records": [
+    {
+      "dimScheme": "d=4-2*eps",
+      "recordId": "bf_e1d6dfb01c98",
+      "familyName": "N (nonplanar 3L propagator)",
+      "verified": false,
+      "verifiedAt": "",
+      "authors": "Bekavac, Stefan",
+      "texkey": "Bekavac:2005xs",
+      "computationLevel": "full",
+      "masterCount": 1,
+      "location": "Section 2, Sections 5 and 7",
+      "transcendentalWeight": 7,
+      "method": [],
+      "reference": "arXiv:hep-ph/0505174, Comput.Phys.Commun. 175 (180), 2006",
+      "ancillaryFiles": [],
+      "description": "Nonplanar 3-loop massless propagator MI (6 vertices, 8 edges). Computed via GPXT. Epsilon expansion through $\\varepsilon^2$ in MZVs to weight 7. The $\\varepsilon^2$ coefficient obtained numerically via PSLQ.",
+      "epsOrders": "-6,-5,-4,-3,-2,-1,0,1,2",
+      "tools": [
+        "FORM"
+      ],
+      "doi": "10.1016/j.cpc.2006.02.004"
+    },
+    {
+      "reference": "arXiv:hep-ph/9307327",
+      "authors": [
+        {
+          "full_name": "Usyukina, N.I.",
+          "inspire_id": 2192017
+        },
+        {
+          "full_name": "Davydychev, Andrei I.",
+          "inspire_id": 1012291
+        }
+      ],
+      "description": "Three-loop non-planar crossed scalar propagator-type diagram $\\tilde{B}^{(3)}(k^2)$ with massless internal lines. Called $\\tilde{B}^{(3)}$ in the paper. Obtained by inserting the closed form $\\tilde{C}^{(2)} = (C^{(1)})^2$ into a remaining one-loop box integration, reproducing $20\\zeta(5)$: $\\tilde{B}^{(3)}(k^2) = (i\\pi^2)^3/(k^2)^2 \\cdot 20\\zeta(5)$. Same formula holds for the planar three-loop propagator.",
+      "epsOrders": "",
+      "familyName": "three-loop massless non-planar crossed propagator",
+      "method": "direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 1,
+      "dimScheme": "d=4",
+      "computationLevel": "full",
+      "location": "Section 4, Fig. 6, Eqs. (29)-(30)",
+      "recordId": "bx_88d0c64c0239",
+      "verified": false,
+      "verifiedAt": ""
+    },
+    {
+      "reference": "arXiv:2111.13595",
+      "authors": "Piotr Bargiela, Fabrizio Caola, Andreas von Manteuffel, Lorenzo Tancredi",
+      "description": "Three-loop NPL1 bare scalar (all unit propagator powers) imported from arXiv:2111.13595 ancillary i2m IBP reduction (sector 29125; 22 master(s)). One off-shell external leg P^2 = MM, the other external legs on-shell massless; single-scale (x-free, immune to the t/u variable choice). D=4-2eps all-unit-power scalar, leading finite (eps^0 leading). Stored in the e^{+i pi} branch (library-native). Its eps^0 value 20*zeta(5)/MM^2 coincides with the known Usyukina-Davydychev crossed-propagator constant referenced in this entry's literature Records; this import provides the FIRST machine-readable, crit-3-validated Laurent series for it (the home previously held only symbol-level proposals plus literature citations, with no stored series).",
+      "recordId": "ax_5848866df2af",
+      "texkey": "Bargiela:2021wuy",
+      "doi": "10.1007/JHEP02(2022)153",
+      "sourceFamily": "NPL1_sec29125",
+      "masterCount": 22,
+      "verified": true,
+      "verifiedVia": "criterion-3: anc i2m bare-scalar value == library STIntegrate-native(home graph) EXACT (max|diff|=0) at 3 Euclidean points across delta-free orders eps^lead..0 (the stored truncation; not validated beyond eps^0). STIntegrate-native ran on the cluster (Nereid) via the HyperIntica backend (HyperFLINT dylib absent; the SubTropica backends integrate the same Symanzik integrand and cross-check); MZV ginsh-reduction on the Mac; single cluster-STIntegrate + Mac-ginsh hybrid witness. STVerify N/A (timelike e^{+i pi} branch-resolution gap, same as the existing symbol-proposal records in this entry)."
+    }
+  ],
+  "Names": [
+    "N (nonplanar 3L propagator)",
+    "three-loop massless non-planar crossed propagator"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 3,
+  "NumPropagators": 8,
+  "Results": [
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T055625Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "MM"
+      ],
+      "singularitiesTeX": [
+        "\\text{MM}"
+      ],
+      "singularitiesVerified": [
+        false
+      ],
+      "groundTruthAvailable": false,
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": null,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 3.2
+      },
+      "timestamp": "2026-06-14T05:56:25Z",
+      "contributor": "oddletters-v1a"
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T055625Z",
+      "byEpsOrder": null,
+      "evens": [
+        "MM"
+      ],
+      "evensTeX": [
+        "\\text{MM}"
+      ],
+      "evensVerified": [
+        false
+      ],
+      "groundTruthAvailable": false,
+      "oddLetters": [],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": null,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 3.2
+      },
+      "timestamp": "2026-06-14T05:56:25Z",
+      "contributor": "oddletters-v1a"
+    },
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": 0,
+      "propExponents": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "{}",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.2.5",
+      "stCommand": "STIntegrate[{{{{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 5}, 0}, {{2, 6}, 0}, {{3, 5}, 0}, {{3, 6}, 0}, {{4, 5}, 0}}, {{4, M}, {6, M}}}, Dimension -> \"4 - 2*eps\", Order -> 0]",
+      "contributor": "SM",
+      "timestamp": "2026-06-19T11:28:35",
+      "byteCount": 416,
+      "alphabet": [],
+      "symbolWeight": 0,
+      "symbolTerms": 1,
+      "legOrder": [
+        1,
+        2
+      ],
+      "resultTeXPreview": "\\varepsilon^{0}\\colon 20 \\zeta(5) M^{-4}",
+      "resultDataId": "991d52b3843c24df",
+      "import": {
+        "submittedBy": "Sebastian Mizera",
+        "source": {
+          "paper": "arXiv:2111.13595",
+          "title": "Three-loop helicity amplitudes for diphoton production in gluon fusion",
+          "authors": "P. Bargiela, F. Caola, A. von Manteuffel, L. Tancredi",
+          "journal": "JHEP 02 (2022) 153",
+          "ancUrl": "https://arxiv.org/abs/2111.13595"
+        },
+        "importedAt": "2026-06-19"
+      }
+    }
+  ],
+  "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 5}, 0}, {{2, 6}, 0}, {{3, 5}, 0}, {{3, 6}, 0}, {{4, 5}, 0}}",
+  "nodes": "{{4, M}, {6, M}}",
+  "CanonicalName": "Massless quad-box core",
+  "MassConfig": {
+    "numEdges": 8,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 8,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "00000000",
+    "numExtLegs": 2,
+    "numOnshellMassiveExtLegs": 2,
+    "numMasslessExtLegs": 0,
+    "extLegSignature": "MM"
+  },
+  "Subsectors": [
+    "123|234|4|e|e|:000|000|0|1|1|"
+  ],
+  "ParentSectors": []
+}

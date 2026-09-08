@@ -1,0 +1,174 @@
+{
+    "CNickelIndex": "123|45|e4|e5|e|e|:000|00|00|00|0|1|",
+    "MassScales": 3,
+    "FunctionClass": "unknown",
+    "EpsilonOrder": "",
+    "References": [
+        "arXiv:1408.3107",
+        "arXiv:2401.08226 (JHEP 03 (159), 2024)"
+    ],
+    "Records": [
+        {
+            "reference": "arXiv:1408.3107",
+            "authors": [
+                {
+                    "full_name": "Di Vita, Stefano",
+                    "inspire_id": 1078369
+                },
+                {
+                    "full_name": "Mastrolia, Pierpaolo",
+                    "inspire_id": 1025886
+                },
+                {
+                    "full_name": "Schubert, Ulrich",
+                    "inspire_id": 1284288
+                },
+                {
+                    "full_name": "Yundin, Valery",
+                    "inspire_id": 1071118
+                }
+            ],
+            "description": "Two-loop planar ladder-box diagram with one massive external leg. All internal propagators are massless. Provides 18 master integrals computed to higher epsilon orders than previously available in the literature (Gehrmann:1999as, Gehrmann:2000zt). Covers the full tower of subtopologies (bubble, vertex, box types).",
+            "epsOrders": "6",
+            "familyName": "TwoLoopLadderBox1m",
+            "method": "DEs (differential equations), Magnus exponential, IBP reduction",
+            "tools": [
+                "Reduze 2",
+                "GiNaC",
+                "FIESTA 3"
+            ],
+            "ancillaryFiles": true,
+            "doi": "",
+            "texkey": "",
+            "masterCount": 18,
+            "dimScheme": "d=4-2*eps",
+            "computationLevel": "analytic",
+            "location": "diffeq.tex, Eqs. for D_1..D_7 (first `gather` block after 'For the two-loop ladder diagram in Fig.~\\ref{Fig:3L1mLadder:a}') and auxiliary D_8, D_9 (second `gather` block); kinematics gather with s,t,u,m^2 definitions. 2loop.tex, Sec. sec:2loop, Eq. def:2loopBasisMIs (integer-power basis {f_i}_{i=1..18}) and Eq. def:2loopCanonicalMIs (canonical basis {g_i}_{i=1..18}); Fig. Fig:2loopMIs (figures/2loopMIs.pdf) depicting the 18 MI topologies. Appendix App:2loopMatrices (2loopMatrices.tex) for the sparse matrices M_1..M_6 of the canonical DE system. Ancillary file anc/2loopMIs.m: list `gladder2L` with 18 explicit e-expansions through e^6 (e^7 is a `Help[...]` placeholder).",
+            "recordId": "bx_02b139ce5669",
+            "verified": false,
+            "verifiedAt": ""
+        },
+        {
+            "reference": "arXiv:2401.08226 (JHEP 03 (159), 2024)",
+            "authors": [
+                {
+                    "full_name": "Fontana, Gaia",
+                    "inspire_id": 2656187
+                },
+                {
+                    "full_name": "Gehrmann, Thomas",
+                    "inspire_id": 1008686
+                },
+                {
+                    "full_name": "Sch\u00f6nwald, Kay",
+                    "inspire_id": 1749673
+                }
+            ],
+            "description": "Massless 2-loop 4-point DIS real-virtual family F (forward scattering). Master integrals as HPLs to $\\mathcal{O}(\\varepsilon^6)$. Boundaries via analytic auxiliary mass flow.",
+            "epsOrders": "6",
+            "familyName": "Massless 2-loop 4-point DIS real-virtual family F (forward scattering)",
+            "method": "DE, IBP, series_expansion",
+            "tools": [
+                "Kira",
+                "Fuchsia"
+            ],
+            "ancillaryFiles": false,
+            "doi": "10.1007/JHEP03(2024)159",
+            "texkey": "Fontana:2024olm",
+            "masterCount": 6,
+            "dimScheme": "d=4-2*eps",
+            "computationLevel": "full",
+            "location": "Eq. (3.12), Fig. 3b",
+            "recordId": "bx_b9bb8c3d4b35",
+            "verified": true,
+            "verifiedAt": "auto-loopedia"
+        }
+    ],
+    "Source": [
+        "SubTropica",
+        "arXiv"
+    ],
+    "Names": [
+        "One-mass planar double box",
+        "TwoLoopLadderBox1m"
+    ],
+    "Results": [
+        {
+            "dimension": "4 - 2*eps",
+            "epsOrder": 0,
+            "propExponents": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "propagators": 0,
+            "numerators": [],
+            "internalMasses": [],
+            "externalMasses": [],
+            "substitutions": "{}",
+            "normalization": "Automatic",
+            "stVersion": "SubTropica v1.1.4",
+            "stCommand": "STIntegrate[{{{{5, 6}, 0}, {{1, 5}, 0}, {{2, 5}, 0}, {{3, 6}, 0}, {{4, 6}, 0}, {{1, 3}, 0}, {{2, 4}, 0}}, {{1, 0}, {2, 0}, {3, 0}, {4, M}}}, \"Dimension\" -> \"4 - 2*eps\", \"Order\" -> 0]",
+            "contributor": "Anonymous",
+            "timestamp": "Thu 23 Apr 2026 22:04:37",
+            "byteCount": 522872,
+            "verified": true,
+            "verifiedMethod": "pySecDec",
+            "verifiedTolerance": 0.001,
+            "verifiedMaxRelErr": 6.335540639465003e-05,
+            "verifiedAt": "Thu 23 Apr 2026 22:04:37",
+            "verifiedKinPoint": [
+                {
+                    "var": "Msq",
+                    "value": "-17/31"
+                },
+                {
+                    "var": "s12",
+                    "value": "-51/248"
+                },
+                {
+                    "var": "s23",
+                    "value": "-17/248"
+                }
+            ],
+            "resultDataId": "012ec51c1c4deddf",
+            "resultTeXPreview": "\\frac{1}{\\varepsilon^4 s_{12} \\left(-M^2+s_{12}+s_{23}\\right)^2}-\\frac{4 \\log \\left(-M^2+s_{12}+s_{23}\\right)-3 \\log \\left(-\\frac{-M^2+s_{12}+s_{23}}{s_{12}}\\right)+3 \\log \\left(-M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right)+\\log \\left(s_{12} M^{-2}\\right)}{2 \\varepsilon^3 \\left(s_{12} \\left(-M^2+s_{12}+s_{23}\\right)^2\\right)}-\\frac{72 H\\left(0,\\frac{M^2}{s_{12}+s_{23}}\\,;1\\right)+24 H\\left(0,\\frac{M^2}{M^2-s_{12}}\\,;1\\right)-192 H(-1,-1\\,;1)+6 \\log ^2\\left(\\frac{s_{12}}{-M^2+s_{12}+s_{23}}\\right)-48 \\log ^2\\left(-M^2+s_{12}+s_{23}\\right)-30 \\log ^2\\left(-\\frac{-M^2+s_{12}+s_{23}}{s_{12}}\\right)-24 \\log ^2\\left(-M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right)+12 \\log ^2\\left(M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right)+12 \\log \\left(-\\frac{-M^2+s_{12}+s_{23}}{s_{12}}\\right) \\log \\left(\\frac{s_{12}}{-M^2+s_{12}+s_{23}}\\right)-24 \\log \\left(s_{12} M^{-2}\\right) \\log \\left(-M^2+s_{12}+s_{23}\\right)+12 \\log \\left(s_{12} M^{-2}\\right) \\log \\left(-\\frac{-M^2+s_{12}+s_{23}}{s_{12}}\\right)+72 \\log \\left(-M^2+s_{12}+s_{23}\\right) \\log \\left(-\\frac{-M^2+s_{12}+s_{23}}{s_{12}}\\right)-12 \\log \\left(s_{12} M^{-2}\\right) \\log \\left(-M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right)+24 \\log \\left(-\\frac{s_{12}}{-M^2+s_{12}+s_{23}}\\right) \\log \\left(-M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right)-72 \\log \\left(-M^2+s_{12}+s_{23}\\right) \\log \\left(-M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right)+96 \\log \\left(-\\frac{-M^2+s_{12}+s_{23}}{s_{12}}\\right) \\log \\left(-M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right)-24 \\log \\left(-M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right) \\log \\left(M^{-2} \\left(-M^2+s_{12}+s_{23}\\right)\\right)+138 \\zeta(2)+\\pi ^2+96 \\log ^2(2)}{24 \\varepsilon^2 \\left(s_{12} \\left(-M^2+s_{12}+s_{23}\\right)^2\\right)}+(\\text{more terms})+O\\left(\\varepsilon^1\\right)"
+        }
+    ],
+    "edges": "{{{1, 2}, 0}, {{1, 3}, 0}, {{1, 4}, 0}, {{2, 5}, 0}, {{2, 6}, 0}, {{3, 5}, 0}, {{4, 6}, 0}}",
+    "nodes": "{{3, 0}, {4, 0}, {6, M}, {5, 0}}",
+    "Loops": 2,
+    "NumPropagators": 7,
+    "CanonicalName": "1-mass double box",
+    "MassConfig": {
+        "numEdges": 7,
+        "numMassiveEdges": 0,
+        "numMasslessEdges": 7,
+        "distinctInternalMasses": 0,
+        "internalMassLabels": [],
+        "edgeMassPattern": "0000000",
+        "numExtLegs": 4,
+        "numOnshellMassiveExtLegs": 1,
+        "numMasslessExtLegs": 3,
+        "extLegSignature": "00M0"
+    },
+    "commonNames": [
+        "L2"
+    ],
+    "Subsectors": [
+        "123|24|e|e4|e|:000|00|1|00|0|",
+        "123|e24|e|e4|e|:000|000|0|00|1|",
+        "123|e24|e|e4|e|:000|000|0|10|0|",
+        "123|e24|e|e4|e|:000|100|0|00|0|"
+    ],
+    "ParentSectors": [
+        "123|45|e4|e6|e|e6|e|:000|00|00|00|0|00|0|",
+        "123|45|e4|e6|e|e6|e|:000|00|00|00|0|01|0|",
+        "123|45|e4|e6|e|e6|e|:000|00|00|00|0|10|0|",
+        "123|45|e4|e6|e|e6|e|:000|00|00|00|0|11|1|"
+    ]
+}

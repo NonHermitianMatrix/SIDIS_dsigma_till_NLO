@@ -1,0 +1,2275 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,tabularx}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{tt}
+\hypersetup{pdftitle={SIDIS through NLO: calculation methods and numerical results},
+ pdfauthor={SIDIS calculation workflow},
+ pdfsubject={Six channels with reverse unitarity, Kira and SubTropica}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{2}
+\allowdisplaybreaks[1]
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\MSbar}{\overline{\mathrm{MS}}}
+\newcommand{\Fhat}{\widehat F}
+\newcommand{\What}{\widehat W}
+\newcommand{\NLO}{\mathrm{NLO}}
+\newcommand{\LO}{\mathrm{LO}}
+\newcommand{\PDF}{\mathrm{PDF}}
+\newcommand{\FF}{\mathrm{FF}}
+\newcommand{\ct}{\mathrm{CT}}
+\newcommand{\cut}{\mathrm{cut}}
+\newcommand{\obs}[1]{\underline{#1}}
+\newcommand{\Li}{\operatorname{Li}}
+\newcommand{\GeV}{\mathrm{GeV}}
+\newcommand{\pb}{\mathrm{pb}}
+
+\title{The SIDIS calculation through NLO\\
+\large Six channels with reverse unitarity, Kira and SubTropica}
+\author{Calculation-method report for the local SIDIS workflow}
+\date{7 September 2026}
+
+\begin{document}
+\maketitle
+
+This report explains the accepted calculation in \path{scripts/SIDIS/}.
+The outputs are the symbolic partonic structure functions
+$\Fhat_{1,ij}$ and $\Fhat_{2,ij}$ for all six channels.
+The notation and definition of the observable follow the supplied SIDIS
+paper~\cite{sidispaper}. The real integral calculation follows the
+reverse-unitarity approach of the supplied standalone reference~\cite{standalone}.
+Equations below state the definitions used by those sources and the programs~\cite{localcalculation},
+or quote saved tool results. No new physics calculation was performed to
+write this report.
+
+The implemented routes are
+\begin{align*}
+\text{real:}\quad&
+\text{FeynArts}\to\text{FeynCalc}\to\text{reverse unitarity}
+\to\text{Kira}\to\text{SubTropica},\\
+\text{virtual and self energies:}\quad&
+\text{FeynArts}\to\text{FeynCalc}\to\text{Kira}\to\text{SubTropica}.
+\end{align*}
+These are followed by renormalization where needed, collinear factorization,
+pole cancellation and the final structure-function projection.
+The unchanged generated amplitudes, unintegrated tensors, Born tensors and
+observable definitions are imported from the existing channel calculations.
+The required real, virtual and self-energy master values are evaluated in
+the new integral workflow. Package-X/PaVe values and the paper's evaluated
+angular-integral tables do not supply those values.
+
+\paragraph{How to read this report.}
+The common sections define the observable, amplitude algebra, real and
+virtual integration, and subtraction. Each channel then has its own
+section stating its generated process, Born input where present, flavor
+weights, subtraction routes and final output. The numerical sections
+follow an F hat into a measured transverse-momentum bin: kinematic maps,
+PDFs, fragmentation, acceptance, endpoint subtraction, integration, and
+the two saved figures. The final file tables identify the full symbolic
+coefficients, whose long expressions remain in executable Wolfram Language
+form.
+
+\paragraph{Scope of the calculation.}
+The hard scattering is massless, unpolarized, and evaluated through NLO
+at nonzero transverse momentum. Symbolic $N_c$, $N_f$ and quark charges
+are retained in the production hard parts. Numerical choices such as
+$N_c=3$, active flavors, a common scale and neutral-pion fragmentation
+are made by the numerical consumer. This document describes the
+accepted run and its stated limitations; it does not replace the
+calculation by a derivation performed while writing the report.
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Observable, momenta and channels}
+\label{sec:observable}
+
+The process is
+\begin{equation}
+ \ell(l)+H(P_H)\longrightarrow \ell'(l')+h(P_h)+X,
+ \qquad
+ \gamma^*(q)+i(p)\longrightarrow j(k_1)+X.
+\end{equation}
+Here $P_H$ denotes the incoming hadron momentum, and $P_h$ the observed
+hadron momentum. The first channel label is the incoming parton; the second
+is the observed, fragmenting parton. Its momentum is always $k_1$.
+Only the unobserved partons are integrated in the partonic hard tensor.
+The calculation is unpolarized and uses the azimuth-independent $F_1,F_2$
+decomposition of the paper.
+
+The defining relations are
+\begin{gather}
+ D=4-2\eps,\qquad q^2=-Q^2<0,\qquad p^2=k_1^2=k_2^2=k_3^2=0,
+ \label{eq:dimension}\\
+ s=(p+q)^2,\qquad t=(q-k_1)^2,\qquad u=(p-k_1)^2,\\
+ P_X=p+q-k_1,\qquad w=P_X^2=s_{23},\qquad
+ s+t+u=-Q^2+w,\label{eq:invariants}\\
+ \hat x=\frac{Q^2}{2p\cdot q}=\frac{x}{\xi},\qquad
+ \hat z=\frac{p\cdot k_1}{p\cdot q}=\frac{z}{\zeta},\qquad
+ p=\xi P_H,\quad k_1=P_h/\zeta.
+\end{gather}
+These are the paper's definitions, implemented and checked in shared S02.
+The Born and virtual kinematics have $w=0$. The interior real-emission
+domain recorded in the final files is
+\begin{equation}
+ Q^2>0,\qquad s>w>0,\qquad
+ w-Q^2-s<t<-\frac{Q^2w}{s}.
+ \label{eq:support}
+\end{equation}
+Endpoint distributions are defined separately at $w=0$.
+
+\subsection{What is observed and what is integrated}
+
+There are two different integrations. At the parton level, $p,q,k_1$
+are external data, and the unresolved final state is integrated to
+construct $\What^{\mu\nu}$. At the hadron level, the resulting hard
+functions are convolved with the incoming PDF and the fragmentation
+function of the observed parton. Reverse unitarity is used for the first
+integration. The PDF/FF convolution and the experimental bin integration
+are performed later.
+
+The observed-particle label matters even when two rows contain the same
+species. Hqq and Hqg share the Born scattering $\gamma^*q\to qg$, but
+attach fragmentation to different outgoing legs. Their definition of
+$t$, the tensor contractions, the fragmentation subtraction and the final
+coefficient must all use their own $k_1$ assignment.
+
+\subsection{Perturbative order and the photon convention}
+
+At nonzero transverse momentum the leading hard parts are of order
+$\alpha_s$, and this calculation keeps the correction of order
+$\alpha_s^2$. This is the meaning of LO and NLO in this report.
+The following table lists the generated processes; an underline marks $k_1$.
+The photon is understood on the incoming side of every row.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}l l l X@{}}
+\toprule
+Folder & Incoming & Born final state & Real final states at $\alpha_s^2$\\
+\midrule
+\texttt{Hqq} & $q_i$ & $\obs{q_i}\,g$ &
+ $\obs{q_i}\,gg$; $\obs{q_i}\,q_i\bar q_i$;
+ $\obs{q_i}\,q_j\bar q_j$ with $j\ne i$\\
+\texttt{Hqg} & $q_i$ & $\obs{g}\,q_i$ & $\obs{g}\,q_i g$\\
+\texttt{Hgq} & $g$ & $\obs{q_i}\,\bar q_i$ & $\obs{q_i}\,\bar q_i g$\\
+\texttt{Hgg} & $g$ & absent & $\obs{g}\,q_f\bar q_f$\\
+\texttt{Hqqbar} & $q_i$ & absent & $\obs{\bar q_i}\,q_i q_i$\\
+\texttt{Hqqprime} & $q_i$ & absent & $\obs{q_j}\,q_i\bar q_j$, $j\ne i$\\
+\bottomrule
+\end{tabularx}
+\end{center}
+Hqq, Hqg and Hgq require one-loop corrections to their Born processes.
+Hgg, Hqqbar and Hqqprime first contribute at the real-emission order shown;
+they have no virtual contribution at this order.
+
+The electromagnetic coupling used in the lepton cross section is kept
+outside the partonic F hats. Squared quark charges remain in the hard
+functions with the conventions stated for each channel. The generated
+Born, real and one-loop amplitudes carry the recorded coupling degrees
+$(e,g_s)$ of $(1,1)$, $(1,2)$ and $(1,3)$, respectively. The virtual
+contribution is the interference with the Born amplitude. The square of
+a one-loop amplitude is outside this NLO calculation.
+
+\paragraph{Symbols in the saved files.}
+The symbol \texttt{Q2} means $Q^2$, \texttt{w} means $s_{23}$, and
+\texttt{SUNN} or \texttt{Nc} means $N_c$. The symbols \texttt{mu} and
+\texttt{mu2} retain their source-specific scale conventions; the latter
+is a squared scale. In the numerical sections,
+$p_T=|\boldsymbol P_{hT}|$ is the hadron transverse momentum and $z$ is
+the hadron fragmentation variable of the paper.
+
+\section{From diagrams to two scalar contractions}
+\label{sec:amplitudes}
+
+\subsection{Generation and the reusable inputs}
+
+FeynArts supplies the diagrams and amplitudes. FeynCalc performs the spin
+and color algebra and the tensor contractions. The imported inputs retain
+the generated diagram factors, incoming averages, photon-charge removal,
+observed-particle tags and identical-particle bookkeeping.
+The imported real interference pieces must sum exactly to the saved
+unintegrated tensors. In the virtual route the Born interference must
+reproduce each channel's own accepted Born contractions.
+
+The generation programs use the massless QCD part of the FeynArts
+\texttt{SMQCD} model. Requested external fields, loop order and
+observed-leg ordering define each process. The core scattering sources
+exclude tadpoles and external wave-function corrections from diagram
+generation; external-field effects enter at renormalization. Internal
+fields are restricted to the intended QCD content. FeynCalc's
+\texttt{FCFAConvert} converts the amplitudes to $D$ dimensions, with
+the recorded mass substitutions and coupling conventions. Original
+diagrams and amplitude lists are preserved alongside the scalar inputs.
+
+These inputs remain useful when the integration method changes. The new
+import accepts the generated amplitudes, Born contractions, unintegrated
+real tensors, virtual integrands and loop-independent subtraction
+definitions, with their recorded identities. An evaluated old real
+angular integral or an old Package-X virtual value is not used as a new
+master integral.
+
+\subsection{Interferences, spin sums and color algebra}
+
+The square is assembled from generated diagram pairs. Diagonal pairs and
+off-diagonal interferences carry the factors recorded by the pair
+program. FeynCalc performs fermion spin sums, Dirac traces, polarization
+sums and $SU(N_c)$ color contractions before scalar integral reduction.
+Pair results can be cached separately, so the complete unsimplified
+diagram sum need not be held in memory at once.
+
+The saved color and spin measurements in the core Born records give
+\begin{gather}
+ C_F=\frac{(N_c-1)(N_c+1)}{2N_c},\qquad
+ T_F=\frac12,\qquad C_A=N_c,\label{eq:color}\\
+ n_{\mathrm{spin},q}=2,\qquad n_{\mathrm{spin},g}=D-2,\\
+ A_q=\frac{1}{2N_c},\qquad
+ A_g=\frac{1}{(D-2)(N_c-1)(N_c+1)}.
+ \label{eq:averages}
+\end{gather}
+These equations quote the stored color traces and physical spin
+projectors. The incoming-gluon average remains $D$ dimensional.
+Its dependence on the regulator must be retained in pole-multiplied
+terms.
+
+Physical gluon polarization sums use the reference vectors prescribed
+by the source, with $p$ and $k_1$ supplying the relevant lightlike
+directions. Photon and gluon Ward tests are evaluated on the appropriate
+generated amplitudes or contractions. A Ward test checks gauge
+consistency; it does not by itself fix a spectator factor, an incoming
+average or the normalization of a separate program.
+
+\subsection{Charges and identical particles}
+
+The source model has definite quark charges. Core normalization programs
+measure the model photon vertex, remove the model charge and expose the
+physical charge symbols used by the channel. In four-quark sectors,
+the two photon-charge assignments are retained through their interference.
+Flavor summation is performed at the documented assembly boundary.
+
+The program distinguishes the observed tag from unobserved identical
+particles. Core tagged squares obtain their weight from the generated
+final-species list. The real-only convention leaves the unobserved
+spectator factor outside the imported tensor. Each channel section states
+which weight is already present and which enters at final assembly.
+
+\subsection{Tensor projection and dimensional dependence}
+
+The two contractions are
+\begin{equation}
+ T_g=g^{\mu\nu}\What_{\mu\nu},\qquad
+ T_{pp}=p^\mu p^\nu\What_{\mu\nu}.
+ \label{eq:contractions}
+\end{equation}
+The first uses $g^{\mu\nu}$ with the sign stated here. A sign change to a
+physical-photon polarization sum must not be inserted into this definition.
+Each charge and real-emission sector is retained separately until its
+required weights have been applied.
+
+The paper's partonic decomposition is
+\begin{equation}
+ \What^{\mu\nu}_{ij}
+ =\left(-g^{\mu\nu}+\frac{q^\mu q^\nu}{q^2}\right)\Fhat_{1,ij}
+ +\frac{\widetilde p^\mu\widetilde p^\nu}{p\cdot q}\Fhat_{2,ij},
+ \qquad
+ \widetilde p^\mu=p^\mu-q^\mu\frac{p\cdot q}{q^2}.
+\end{equation}
+The saved $D$-dimensional projector definitions are
+\begin{align}
+ \mathcal P_1^{(D)}[T_g,T_{pp}]
+ &=\frac{-T_g/2+2\hat x^2 T_{pp}/Q^2}{1-\eps},\\
+ \mathcal P_2^{(D)}[T_g,T_{pp}]
+ &=\frac{-\hat x T_g+4(3-2\eps)\hat x^3T_{pp}/Q^2}{1-\eps}.
+ \label{eq:projectors}
+\end{align}
+The Born terms used in subtraction retain their $D$ dependence. The final
+projection uses the finite combined contractions only after their poles
+have canceled.
+
+The projector program constructs the decomposition, contracts it with
+$g^{\mu\nu}$ and $p^\mu p^\nu$, and solves the linear system. It
+checks the resulting projectors against the defining tensor and the
+paper. Thus projectors and Born tensors share the same sign and dimension
+convention. In particular, \texttt{Pg} means the $g^{\mu\nu}$
+contraction; the source explicitly accounts for its sign relative to the
+virtual-photon polarization-sum operation.
+
+Keeping both scalar contractions through real, virtual and collinear
+assembly lets the pole test use one normalization. The final projector
+acts on finite contractions. The Born tensor inside subtraction remains
+$D$ dimensional because poles multiplying its regulator dependence
+contribute to the finite result.
+
+\section{Real integration by reverse unitarity}
+\label{sec:real}
+
+\subsection{The two physical cuts}
+
+For real emission the common loop routing is
+\begin{equation}
+ k_2=r,\qquad k_3=P_X-r.
+\end{equation}
+The two on-shell constraints become the two cut propagators of one loop.
+In discontinuity notation the positive-energy cut is
+\begin{equation}
+ \left[\frac{1}{k^2}\right]_{\cut,+}
+ \equiv\frac{\theta(k^0)}{2\pi i}
+ \left(\frac{1}{k^2-i0}-\frac{1}{k^2+i0}\right)
+ =\delta_+(k^2),\qquad
+ \delta_+(k^2)=\theta(k^0)\delta(k^2).
+ \label{eq:cut}
+\end{equation}
+The energy restriction is part of the physical master definition. It is
+retained when evaluating the cut masters, in addition to marking the cuts
+in the Kira reduction.
+
+The master measure used in SIDIS is explicitly
+\begin{equation}
+ M[\mathcal R]=\int\dd^D r\,
+ \delta_+(r^2)\delta_+((P_X-r)^2)\,\mathcal R(r).
+ \label{eq:cutmeasure}
+\end{equation}
+There are no absorbed $2\pi$ factors in this definition. The observed $k_1$
+is fixed and is not another integrated cut. Thus a tree-level real
+contribution becomes a cut one-loop integral for its unresolved phase
+space. It does not become a virtual amplitude with an unrestricted loop.
+
+The conversion back to the paper's unobserved-state phase space uses the
+normalizations already present in its Eqs.~(34) and (38):
+\begin{equation}
+ N_{\mathrm{ps}}(D)
+ =(2\pi)^D\prod_{a=2,3}(2\pi)^{-(D-1)},\qquad
+ N_H=(2\pi)^{-4}.
+ \label{eq:normalization}
+\end{equation}
+The program derives this product and checks it against each channel's
+preserved phase-space definition. Dimensional scale factors, charge and
+strong-coupling factors, and any remaining spectator weights are inserted
+at the documented assembly boundary. They are not part of
+Eq.~\eqref{eq:cutmeasure}.
+
+\subsection{Scalar families and Kira reduction}
+
+FeynCalc expresses the contractions as rational loop integrands. Shared
+S02 defines candidate families from the actual tree propagator routings,
+including $r^2$, $(P_X-r)^2$ and independent uncut denominators.
+Shared S03 maps every interference to these families and reconstructs its
+original integrand exactly.
+
+Algebraic elimination of dependent denominators is used to construct valid
+families. That algebra does not evaluate a phase-space integral. The
+integration reduction is performed by Kira, using integration-by-parts
+(IBP) relations. Their usual schematic form is
+\begin{equation}
+ 0=\int\dd^D r\,
+ \left[\frac{\partial}{\partial r^\mu}
+       \bigl(v^\mu\mathcal I(r)\bigr)\right]_{\cut},
+ \qquad v\in\{r,p,q,k_1\},
+ \label{eq:ibp}
+\end{equation}
+with the cut-sector rules imposed on the resulting integrals.
+Both physical cuts must remain in every surviving master. A pinched cut
+sector cannot be treated as an ordinary uncut contribution.
+
+\paragraph{The common scalar coordinates.}
+The family construction uses the basis $\{p,q,k_1,r\}$ and solves the
+defining scalar-product equations with coordinates
+\begin{equation}
+ z_1=r^2,\qquad z_2=(P_X-r)^2,\qquad
+ a=(p-r)^2,\qquad b=(k_1+r)^2.
+ \label{eq:realcoordinates}
+\end{equation}
+The candidate uncut momentum list is
+\begin{equation}
+ \{p-r,\ p-(P_X-r),\ k_1+r,\ k_1+(P_X-r),\ q-r,\ q-(P_X-r)\}.
+\end{equation}
+On the cuts these quadratic denominators are affine in $a,b$. The code
+chooses independent pairs by their determinant and checks independence
+again in the full $(z_1,z_2,a,b)$ coordinates. The accepted geometry has
+twelve candidate families. Each starts with the two physical cuts,
+followed by an independent pair of uncut propagators. Every inherited
+scalar-product map is checked against its defining equations in the new
+coordinates.
+
+\paragraph{Targets and reduction bounds.}
+The mapper records integral-index tuples for every numerator and
+denominator term. Positive indices specify denominator powers;
+nonpositive uncut indices specify absent denominators or numerators.
+Kira receives the actual targets, their sectors and preferred masters
+retaining both cuts. Reduction bounds are measured from these targets:
+the $r$ bound is the largest positive-index sum plus the number of loop
+momenta, and the $s$ bound is the largest numerator-index sum. The run
+therefore requests the domain needed by the current integrands.
+
+Kira performs initialization, triangular reduction and back substitution,
+then exports exact rules. The importer requires every target to have a
+rule or be a declared master, unique rule left-hand sides, and complete
+termination in the final master inventory. Both physical cuts must have
+positive indices in every master. Kira and Fermat operate on symbolic
+dimension and invariants throughout this production reduction.
+
+The result is a rational linear combination
+\begin{equation}
+ R_{c,\Gamma}^{\cut}(\eps;s,t,Q^2,w)
+ =\sum_a c_{c,\Gamma a}(D;s,t,Q^2,w)\,M_a(D;s,t,Q^2,w),
+ \label{eq:realreduction}
+\end{equation}
+where $c$ labels a channel and charge sector, and $\Gamma=g,pp$.
+The accepted shared reduction has \textbf{315 requested real integrals
+and eight cut masters}. These counts are reported by the saved Kira run;
+the same master set serves the six channels, with different coefficients.
+
+\subsection{What SubTropica evaluates}
+
+Kira supplies relations between integrals. SubTropica evaluates the
+remaining master integrals from explicit parameter representations.
+In this workflow it is used as an integration engine, with HyperIntica as
+its backend; a master name alone is not treated as a table lookup.
+Wolfram Language still coordinates the symbolic work and hosts these
+packages.
+
+Shared S08 solves the two cut equations in the $P_X$ rest frame,
+selects the positive-energy solution and derives the Jacobian. The saved
+tool results are
+\begin{equation}
+ r^0=|\boldsymbol r|=\frac{\sqrt w}{2},\qquad
+ J_{\cut}=2^{-3+2\eps}w^{-\eps},\qquad
+ \Omega(n)=\frac{2\pi^{n/2}}{\Gamma(n/2)}.
+ \label{eq:cutjacobian}
+\end{equation}
+Here $J_{\cut}$ is the radial measure after imposing both cuts, and
+$\Omega(n)$ is the surface area of the unit sphere in $n$ Euclidean
+dimensions. For example, the actual volume-master input is represented as
+\begin{equation}
+ M_0=J_{\cut}\,\Omega(D-2)
+ \int_0^\infty\dd v\,
+ [1-c(v)^2]^{-\eps}\left|\frac{\dd c(v)}{\dd v}\right|,
+ \qquad c(v)=\frac{1-v}{1+v}.
+ \label{eq:volumeinput}
+\end{equation}
+This is an input to SubTropica, not an inserted evaluated angular table.
+
+On the cuts, every remaining propagator is reconstructed as a linear
+scalar product with an effective external vector. The resulting eight
+masters fall into four evaluated Euler classes:
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+Saved class & Parameter integral supplied to SubTropica\\
+\midrule
+\texttt{cut\_volume} & The positive-energy two-particle cut volume.\\
+\texttt{cut\_single\_massive} & One uncut denominator with a non-null effective vector.\\
+\texttt{cut\_pair\_one\_massive} & Two denominators, with one null effective vector.\\
+\texttt{cut\_pair\_massless} & Two null effective vectors; a separate input before expansion.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The pair inputs use the unexpanded Euler representation referenced in
+shared S08~\cite{eulerreference}. Its parameters are obtained from the
+current master geometry. The program retains the radial and Gamma-function
+prefactors separately and calls \texttt{STIntegrate} on an ordinary
+parameter measure. The tuple interface supplies its own internal conversion
+to a logarithmic measure; the adapter must not insert that factor twice.
+
+Raw engine output, algebraic-root definitions, physical substitutions and
+required $\eps$ orders are saved. The volume class is evaluated through
+$\eps^2$, and the other production cut classes through $\eps^1$ in this run.
+The required orders are checked against the reduction coefficients and
+endpoint needs. An independent normalization check compares two different
+representations of the same null-denominator cut integral.
+
+The accepted real route is shared S08/S10/S15 together with the S04 Kira
+reduction. The earlier shared S06/S07 uncut-parent route is retained as
+history and is not the source of the accepted physical cut-master values.
+
+\subsection{Explicit Euler inputs and their geometric parameters}
+\label{sec:euler}
+
+This subsection records the defining parameter integrals constructed in
+shared S08. Let $v_i$ be the effective vector reconstructed for an uncut
+denominator on the two-cut surface. The program verifies that denominator
+against $2r\cdot v_i$ and defines
+\begin{equation}
+ S_i=P_X\cdot v_i,\qquad
+ m_i^2=\frac{w\,v_i^2}{S_i^2},\qquad
+ \beta_i=\sqrt{1-m_i^2}.
+ \label{eq:effectivevectors}
+\end{equation}
+Here $m_i^2$ is a dimensionless geometric parameter, not a physical
+particle mass. Effective vectors, their powers and all substitutions are
+saved for each Kira master. This is how the common classes acquire the
+actual $s,t,Q^2,w$ dependence of a channel calculation.
+
+For the single-denominator class the defining density is
+\begin{equation}
+ M_{\mathrm{single}}=
+ \frac{J_{\cut}\Omega(D-2)}{S_1}
+ \int_0^\infty\dd v\,
+ \frac{[1-c(v)^2]^{-\eps}|c'(v)|}{1-\beta_1 c(v)},
+ \qquad c(v)=\frac{1-v}{1+v}.
+ \label{eq:singleinput}
+\end{equation}
+The tuple uses $z_*=(1-\beta_1)/(1+\beta_1)$ as its algebraic parameter.
+SubTropica evaluates the parameter integral; the regulated radial and
+sphere factors multiply its output afterwards.
+
+For a pair, the source orders the effective vectors so that the second
+is null. With denominator powers $j,k$, it defines
+\begin{gather}
+ y_{12}=\frac{w\,v_1\cdot v_2}{2S_1S_2},\qquad
+ z_- =\frac{1-\sqrt{1-m_1^2}}{2y_{12}},\qquad
+ z_+ =\frac{1+\sqrt{1-m_1^2}}{2y_{12}},\\
+ a_E=j,\qquad b_E=1-k-\eps,\qquad c_E=2-k-2\eps,\\
+ I_E=\int_0^1\dd\tau\,
+ \tau^{a_E-1}(1-\tau)^{c_E-a_E-1}
+ [1-(1-z_-)\tau]^{-b_E}
+ [1-(1-z_+)\tau]^{-b_E}.
+ \label{eq:paireuler}
+\end{gather}
+The prefactors stored with this input are
+\begin{align}
+ \mathcal O_{jk}&=
+ 2^{2-j-k-2\eps}\pi^{1-\eps}
+ \frac{\Gamma(1-k-\eps)}{\Gamma(2-k-2\eps)},\\
+ \mathcal E_{jk}&=
+ \frac{\Gamma(c_E)}{\Gamma(a_E)\Gamma(c_E-a_E)},\\
+ M_{\mathrm{pair}}&=
+ \frac{J_{\cut}\mathcal O_{jk}\mathcal E_{jk}}
+ {S_1^jS_2^k y_{12}^{\,j}}\,I_E.
+ \label{eq:pairprefactor}
+\end{align}
+These are the unexpanded Euler definitions transcribed from the input
+builder. The map $\tau=v/(1+v)$ puts the integral on the positive
+half-line used by the tuple. Its Jacobian is included once in the
+density. If both vectors are null, the source sets $z_-=0$ in the
+defining integrand before expansion and sends a distinct class to the
+engine. A limit of an already expanded massive expression is not used
+to define that class.
+
+\paragraph{Dimensional orders and algebraic branches.}
+An integral's finite term is generally insufficient when its Kira
+coefficient has a pole in $\eps$. The input builder measures the Laurent
+valuation of the reduction coefficients and keeps the required master
+orders. Endpoint assembly also retains the regulated prefactors and
+soft powers. The saved root definitions and physical substitutions
+accompany every evaluated class so that subsequent logarithms and
+dilogarithms are continued on the same branch.
+
+\paragraph{What is reused across channels.}
+The master value depends on its cut measure and propagator geometry;
+the diagram, color, spin and charge dependence resides in
+$c_{c,\Gamma a}$ of Eq.~\eqref{eq:realreduction}. Shared master
+evaluation is therefore compatible with different channel coefficients.
+It does not license importing a coefficient or average from a different
+observed-particle assignment.
+
+\subsection{The accepted cut-master inventory}
+
+The following entries are transcribed from the shared S08 result. Each
+tuple lists the four propagator indices in its named family. The first
+two entries are the physical cuts. A common class means a common Euler
+input; each master still has its own geometric substitutions and
+regulated prefactor.
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Family & Indices & Euler class\\
+\midrule
+R01 & $(1,1,0,0)$ & volume\\
+R01 & $(1,1,1,1)$ & pair, both null\\
+R02 & $(1,1,1,1)$ & pair, both null\\
+R03 & $(1,1,0,1)$ & single, non-null\\
+R03 & $(1,1,1,1)$ & pair, one non-null\\
+R04 & $(1,1,1,1)$ & pair, one non-null\\
+R09 & $(1,1,1,1)$ & pair, one non-null\\
+R10 & $(1,1,1,1)$ & pair, one non-null\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For the powers occurring in this inventory, the saved half-line
+densities supplied to \texttt{STIntegrate} are particularly short:
+\begin{align}
+ f_{\mathrm{volume}}(v)&=
+ \frac{2^{1-2\eps}(1+v)^{-2+2\eps}}{v^\eps},\\
+ f_{\mathrm{single}}(v;z_*)&=
+ \frac{(1+v)^{-1+2\eps}(1+z_*)}{4^\eps v^\eps(v+z_*)},\\
+ f_{\mathrm{pair,null}}(v;z_+)&=
+ \frac{(1+vz_+)^\eps}{1+v},\\
+ f_{\mathrm{pair,non\mbox{-}null}}(v;z_-,z_+)&=
+ \frac{[(1+vz_-)(1+vz_+)]^\eps}{1+v}.
+ \label{eq:actualcutdensities}
+\end{align}
+Each density is integrated with $\dd v$ on $[0,\infty)$ and multiplied
+by the corresponding saved prefactor. These are the actual parameter
+inputs recorded by the tool, not a list of evaluated master values.
+
+\section{Soft limits and distributions}
+\label{sec:soft}
+
+A master series at fixed $w>0$ does not yet define its action at $w=0$.
+Shared S15 therefore finds the required soft regions before expanding the
+regulator. It uses SubTropica's \texttt{STGetRegionVectors} and
+\texttt{STPuiseux}, integrates every returned region and keeps the regulated
+powers of $w$ until distribution assembly.
+
+The saved plus-distribution convention is
+\begin{align}
+ L_n(w;B)&=\left[\frac{\log^n(w/B)}{w}\right]_+,
+ \qquad 0\leq w\leq B,\label{eq:plus}\\
+ \int_0^B\dd w\,L_n(w;B)\,\varphi(w)
+ &=\int_0^B\dd w\,\frac{\log^n(w/B)}{w}
+       [\varphi(w)-\varphi(0)].
+\end{align}
+Here $B$ has the same units as $w$. In the paper's convolution variables
+its physical upper endpoint is
+\begin{equation}
+ B=Q^2\left(\frac{1}{\hat x}-1\right)(1-z)
+       -\frac{P_{hT}^2}{z}.
+\end{equation}
+The symbolic coefficient files retain $B$ explicitly.
+
+Shared S17 collects the soft terms of the form
+$A_\kappa(\eps)w^{-1-\kappa\eps}$.
+The delta coefficient is obtained by evaluating the regulated endpoint
+integral in the program; the logarithmic coefficients are obtained from
+the exponential series:
+\begin{equation}
+ E_\kappa(\eps;B)=\int_0^B\dd w\,w^{-1-\kappa\eps},
+ \qquad
+ \exp[-\kappa\eps\log(w/B)].
+ \label{eq:endpoint}
+\end{equation}
+The calculation uses the convergent orientation $\kappa>0$, $\eps<0$
+for this endpoint definition, followed by its Laurent expansion.
+It checks cancellation of stronger recoil singularities and of higher
+logarithmic plus terms. The saved result separates \texttt{Delta},
+\texttt{L0}, \texttt{L1} and the ordinary \texttt{Regular} remainder.
+
+The three channels with virtual corrections retain the physical branches
+\begin{equation}
+ t=\sigma\omega-s,\qquad \omega>0,\qquad \sigma=+1,-1.
+\end{equation}
+The key \texttt{0} in the final files is their common boundary $t=-s$,
+evaluated by symbolic limits. It must be read from that saved branch;
+direct substitution into separately singular terms is not the prescribed
+boundary operation.
+
+\subsection{The order of the endpoint operations}
+
+The program first forms the regulated master representation, then finds
+its small-$w$ regions. It retains the region scaling exponent together
+with each coefficient series. Only after multiplying by the channel's
+reduction coefficients and combining the required regions does it
+separate delta, plus and ordinary pieces. A fixed-$w$ Taylor expansion
+alone would not supply the endpoint action in Eq.~\eqref{eq:plus}.
+
+For each regulated soft row the endpoint contribution is defined by
+$A_\kappa(\eps)E_\kappa(\eps;B)$, while the logarithmic coefficients
+come from the recorded expansion of
+$A_\kappa(\eps)B^{-\kappa\eps}
+\exp[-\kappa\eps\log(w/B)]$. The source performs both Laurent
+products at the requested order. The ordinary remainder is the expanded
+interior expression with its expanded singular soft terms removed.
+Consequently its addition to the distribution pieces recovers the same
+regulated real integral when applied to a smooth test function.
+
+The endpoint program checks cancellation of powers stronger than the
+required $w^{-1-\kappa\eps}$ structure, and its saved coefficient of
+$L_2$ vanishes at this order. For Hgg, Hqqbar and Hqqprime the complete
+endpoint coefficients vanish in the final assembly. That result is
+checked on their own contractions, rather than assumed from the absence
+of a Born process.
+
+\subsection{Region enumeration and physical branches}
+
+The accepted source explicitly processes every vector returned by
+\texttt{STGetRegionVectors} and calls \texttt{STPuiseux} for each
+region. It does not rely on the installed convenience wrapper that, in
+the recorded environment, processed only its first returned region.
+Raw region outputs and the nonempty regulator series are retained with
+the accepted result. This distinction concerns which engine outputs
+enter the calculation; it is not an additional analytic approximation.
+
+The branches $s+t>0$ and $s+t<0$ encode the physical continuation of
+the combined expression. The boundary entry is obtained from the common
+symbolic limit after the relevant terms are combined. A numerical
+consumer must use the matching branch and the saved boundary operation,
+and must not repair a singular component by assigning it zero.
+
+\section{Virtual integrals and UV renormalization}
+\label{sec:virtual}
+
+\subsection{Scalar loop families and fresh master values}
+
+For Hqq, Hqg and Hgq, FeynCalc contracts each one-loop amplitude with its
+Born amplitude and expresses the result in complete scalar loop families.
+Every mapped integrand is reconstructed before integration. The loop
+measure inherited from the generated amplitude is
+\begin{equation}
+ \frac{\mu^{2\eps}}{(2\pi)^D}\int\dd^D\ell.
+\end{equation}
+Kira canonicalizes and reduces the virtual targets. The accepted run maps
+1625 original targets to 252 canonical targets and seven scalar masters.
+The masters use two freshly derived Euler templates, for bubble and box
+parents. The evaluated series reach $\eps^1$ for the bubble template and
+$\eps^0$ for the box template, as required by their coefficients.
+
+FeynCalc constructs the parameter inputs with
+\texttt{FeynmanIntegralPrefactor -> "Unity"}; the generated amplitude's
+loop measure remains external. SubTropica evaluates the Euclidean master
+series. Shared S19 then applies the recorded physical substitutions and
+Feynman prescription to their logarithms and dilogarithms. Only after this
+continuation does it form the Hermitian interference,
+\begin{equation}
+ V_\Gamma=I_\Gamma+I_\Gamma^*,\qquad
+ I_\Gamma=\sum_a c^{V}_{\Gamma a}M_a^V.
+\end{equation}
+Here $I_\Gamma$ includes the stored loop measure and pre-Hermitian
+interference convention.
+
+\subsection{Bubble and box parent integrals}
+
+The virtual input builder starts from each master's active propagators,
+normalizes the routing signs and constructs the matrix of squared
+differences between its loop-momentum shifts. It groups masters by the
+zero pattern of that matrix and derives a generic parent Gram matrix.
+Every nonzero chord has a symbolic Euclidean parameter $c_{ab}>0$.
+The map from that parameter to the actual physical invariant is saved
+separately for each master.
+
+FeynCalc produces a homogeneous projective parameter representation.
+The program checks its scaling before fixing the final parameter to one.
+The two resulting inputs, quoted from shared S12, are
+\begin{align}
+ I_2(c_{12})={}&i\pi^{2-\eps}\Gamma(\eps)
+ \int_0^\infty\dd x_1\,
+ \frac{(1+x_1)^{-2+2\eps}}{(c_{12}x_1)^\eps},
+ \label{eq:bubbleinput}\\
+ I_4(c_{14},c_{23},c_{34})={}&i\pi^{2-\eps}\Gamma(2+\eps)
+ \int_0^\infty\dd x_1\dd x_2\dd x_3\,
+ \frac{(1+x_1+x_2+x_3)^{2\eps}}
+ {(c_{14}x_1+c_{34}x_3+c_{23}x_2x_3)^{2+\eps}}.
+ \label{eq:boxinput}
+\end{align}
+They represent unnormalized Minkowski $\dd^D\ell$ integrals with the
+stated FeynCalc prefactor convention. The amplitude's
+$\mu^{2\eps}/(2\pi)^D$ factor is applied separately. SubTropica
+evaluates these Euler inputs to the orders requested by their measured
+coefficients.
+
+The seven physical-master substitutions saved in this run are:
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Kira family and indices & Parent & Physical parameter map\\
+\midrule
+V01 $(0,1,0,1)$ & $I_2$ & $c_{12}=-s$\\
+V02 $(1,1,0,0)$ & $I_2$ & $c_{12}=-t$\\
+V03 $(0,1,1,0)$ & $I_2$ & $c_{12}=Q^2$\\
+V03 $(1,1,0,0)$ & $I_2$ & $c_{12}=Q^2+s+t$\\
+V06 $(1,1,1,1)$ & $I_4$ & $(c_{14},c_{23},c_{34})=(-t,-s,Q^2)$\\
+V07 $(1,1,1,1)$ & $I_4$ & $(c_{14},c_{23},c_{34})=(-s,Q^2+s+t,Q^2)$\\
+V08 $(1,1,1,1)$ & $I_4$ & $(c_{14},c_{23},c_{34})=(-t,Q^2+s+t,Q^2)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These substitutions accompany the recorded Feynman prescription; their
+signs alone are not a replacement for that prescription. In particular,
+continuation is performed before adding the conjugate interference.
+All 252 canonical targets in eleven families are reduced before the
+seven-master assembly. Triangle and tensor structures appearing in
+intermediate diagrams are therefore not additional unevaluated outputs.
+
+\subsection{Self energies, scaleless terms and the UV/IR separation}
+
+Self energies and UV residues are also evaluated with Kira and SubTropica.
+Shared S14 uses generated quark, gluon/ghost and one-flavor gluon
+two-point functions. It isolates the logarithmic large-loop-momentum
+terms with an auxiliary mass, reduces them with Kira, and evaluates the
+auxiliary vacuum and off-shell bubble masters with SubTropica.
+The auxiliary mass is an infrared rearrangement device; it is not a
+physical quark mass.
+
+In the stored convention, with the strong couplings removed from the
+interference, the accepted common coupling residue is
+\begin{equation}
+ R_g=-\frac{11N_c-2N_f}{96\pi^2},\qquad
+ \Delta_{\MSbar}=\frac1\eps-\gamma_E+\log(4\pi).
+ \label{eq:uvresidue}
+\end{equation}
+This quotes \texttt{CouplingResidue} and \texttt{MSPole} from the new S14
+result. The generated Born coupling count gives
+\texttt{CouplingWeight}=2 in each of the three Born channels.
+The corresponding stored coupling counterterm is
+\begin{equation}
+ V^{\ct}_{\Gamma,c}
+ =n_{g,c}R_g\Delta_{\MSbar}\,B_{\Gamma,c}^{(D)},
+ \qquad n_{g,c}=2,
+\end{equation}
+with the common-regulator and external-field terms included by S19.
+The program keeps UV and IR residues separate long enough to check UV
+cancellation. Kira's scaleless on-shell boundary and the generated external
+field counts fix the external-field bookkeeping. They are not imported
+Package-X results. The UV poles cancel before the new renormalized virtual
+tensors enter the final real-plus-virtual assembly.
+
+The saved field UV residues in the same stripped-coupling convention are
+\begin{align}
+ R_q^{\mathrm{UV}}&=-\frac{(N_c-1)(N_c+1)}{32\pi^2N_c},\\
+ R_g^{\mathrm{field,UV}}&=-\frac{N_f}{24\pi^2}
+                         +\frac{5N_c}{48\pi^2}.
+ \label{eq:fieldresidues}
+\end{align}
+The gluon result records the gauge-sector contribution and the generated
+one-flavor fermion contribution separately before multiplying the latter
+by $N_f$. These are S14 tool outputs. The coupling residue in
+Eq.~\eqref{eq:uvresidue} and the gluon field residue in
+Eq.~\eqref{eq:fieldresidues} are different quantities.
+
+For all three Born channels the generated external-field inventory has
+two quark fields and one gluon field. S19 constructs the external-field
+factor from the product of the square-root field factors and extracts
+the interference term at the required order. Its on-shell common-regulator
+residue obeys the scaleless boundary returned by Kira. UV and IR
+labels are nevertheless kept separate during the cancellation test, so
+an on-shell zero does not cause the UV residue needed by renormalization
+to be silently discarded.
+
+\subsection{The renormalized virtual assembly}
+
+In the notation of the executed S19 operations, let
+$V_\Gamma^{\mathrm{bare}}=I_\Gamma+I_\Gamma^*$ and let
+$U_\Gamma$ denote the corresponding Hermitian UV residue. The program
+forms the separated expression
+\begin{equation}
+ V_\Gamma^{\mathrm{sep}}
+ =V_\Gamma^{\mathrm{bare}}+
+ U_\Gamma\left(\frac{1}{\eps_{\mathrm{UV}}}-\frac{1}{\eps}\right),
+ \label{eq:uvseparation}
+\end{equation}
+then adds the generated external-field interference and the coupling
+counterterm, each multiplying the appropriate $D$-dimensional Born
+tensor. It requires the coefficient of $1/\eps_{\mathrm{UV}}$ to
+vanish. Only after this test are the regulator labels identified and
+the remaining series retained for combination with real emission and
+factorization. IR poles at this boundary are expected components of
+that subsequent combination; a virtual tensor is not required to be
+IR finite by itself.
+
+This ordering also fixes the finite $\MSbar$ constants. The pole factor
+contains $-\gamma_E+\log(4\pi)$ in the same convention as the loop
+measure and the collinear subtraction. A standalone textbook UV
+coefficient with a different stripped-coupling or measure convention
+cannot be substituted for this complete assembly.
+
+\section{Collinear factorization and finite assembly}
+\label{sec:factorization}
+
+\subsection{The two factorization boundaries}
+
+The paper's factorization prescription removes overlaps with the
+perturbative parton distributions and fragmentation functions. In its
+splitting-kernel convention, Eq.~(46) can be written as
+\begin{align}
+ \What^{\NLO}_{ij}
+ ={}&W^{\NLO}_{ij,\mathrm{unsub}}
+ +\frac{\alpha_s}{4\pi}\frac{S_\eps}{\eps}
+   \sum_a\int\frac{\dd\eta}{\eta}\,
+       \What^{\LO}_{aj}(q,\hat x/\eta,\hat z)P_{a/i}(\eta)
+ \nonumber\\
+ &+\frac{\alpha_s}{4\pi}\frac{S_\eps}{\eps}
+   \sum_b\int\frac{\dd\eta}{\eta^2}\,
+       \What^{\LO}_{ib}(q,\hat x,\hat z/\eta)P_{j/b}(\eta).
+ \label{eq:factorization}
+\end{align}
+The integration ranges and endpoint actions are those of the paper's
+convolutions. $S_\eps/\eps$ denotes its $\MSbar$ subtraction pole.
+The plus signs here follow the negative pole in the perturbative PDF/FF
+definitions in the paper. The saved \texttt{Counterterms} or
+\texttt{PhaseCT} inputs already include their signs.
+
+The Born tensor inside these convolutions is $D$ dimensional. For an
+incoming rescaling, the $p^\mu p^\nu$ contraction also needs the saved
+$\eta^{-2}$ projector conversion. The kernel normalizations, fixed-flavor
+$P_{qg}$ convention and any quark/antiquark multiplicities are retained
+from each channel's own subtraction inputs.
+
+For Hqq, Hqg and Hgq, the loop-independent subtraction results are reused
+unchanged. For Hgg, Hqqbar and Hqqprime, shared S16 evaluates the preserved
+Born convolution and projector definitions afresh. Neither operation
+loads an old integrated real or virtual tensor.
+
+\subsection{Kernels, roots and projector rescaling}
+
+The core subtraction inputs retain the following kernel convention,
+quoted here using $v$ for the splitting fraction and
+$\mathscr P(v)=[1/(1-v)]_+$:
+\begin{align}
+ P_{qq}(v)={}&-\frac{(N_c-1)(N_c+1)}{2N_c}
+ \bigl[2+2v-3\delta(1-v)-4\mathscr P(v)\bigr],\\
+ P_{qg}(v)={}&1-2v+2v^2,\\
+ P_{gq}(v)={}&\frac{(N_c-1)(N_c+1)(2-2v+v^2)}{N_c v},\\
+ P_{gg}(v)={}&-\frac{1}{3v}\bigl[-12N_c+24N_cv-12N_cv^2+12N_cv^3
+ \nonumber\\
+ &\hspace{20mm}+2N_fv\delta(1-v)-11N_cv\delta(1-v)
+                    -12N_cv\mathscr P(v)\bigr].
+ \label{eq:storedkernels}
+\end{align}
+This notation reproduces the stored kernel definitions without
+redistributing their normalization among the coupling prefactor,
+species count and convolution. The metadata additionally specifies
+kernel-normalization weights. In the Hqq and Hgq core inputs these are
+$1/2$ for $P_{qq},P_{gq},P_{gg}$ and $1/4$ for $P_{qg}$, together with
+the recorded fermion-species multiplicity 2. Hqg records $1/2$ for its
+kernel normalization. These factors belong to those specific contraction
+and fixed-flavor inputs. They must be used together with their stored
+counterterm definitions, rather than appended to an independently
+normalized splitting formula.
+
+The Born delta function fixes the splitting fraction in an interior real
+configuration. The accepted core subtraction output records
+\begin{gather}
+ \eta_{\PDF}=-\frac{t}{w-t},\qquad
+ \eta_{\FF}=\frac{s-w}{s},\\
+ J_{\PDF}=\frac{1}{w-t},\qquad
+ J_{\FF}=\frac{s-w}{s^2},\qquad
+ S_{pp,\PDF}=\eta^{-2}.
+ \label{eq:ctroots}
+\end{gather}
+The root and Jacobian are obtained from the defining rescaled Born
+kinematics in the source program. The last factor converts the incoming
+$pp$ contraction to the original incoming momentum. The metric
+contraction has no such projector rescaling. These details matter
+independently of the splitting kernel.
+
+Kernel delta and plus terms are transformed with their endpoint action.
+The resulting subtraction records carry their own \texttt{Delta},
+\texttt{L0} and ordinary pieces, including finite terms from the
+$D$-dimensional Born tensor. They are combined with the real and virtual
+objects before taking the finite part.
+
+\subsection{Restoring the hard-tensor normalization}
+
+For the three Born channels, the executed assembly has the form
+\begin{align}
+ \mathbf T_c^{\NLO}
+ =\Big[&\mu^{2\eps}N_{\mathrm{ps}}(D)
+                \mathbf R_c^{\cut}
+       +2\pi\,\mathbf V_c^{\mathrm{ren}}\delta(w)
+       +\mathbf C_c^{\mathrm{coll}}\Big]_{\eps^0},
+ \label{eq:assembly}\\
+ \Fhat_{i,c}^{\NLO}
+ &=e_c^2 g_s^4 N_H\,
+          \mathcal P_i^{(4)}[\mathbf T_c^{\NLO}],
+ \qquad g_s^2=4\pi\alpha_s.
+ \label{eq:assemblyprojection}
+\end{align}
+The bold quantities have $g$ and $pp$ components; $e_c$ here is the fixed
+quark charge of the Born process, including Hgq. In Hqq,
+$\mathbf R_c^{\cut}$ includes the saved flavor-weighted sum of real sectors.
+The stripped-coupling convention in these equations is the one used by
+the corresponding S20 core-channel code.
+
+The three channels without Born terms retain their couplings in the
+imported real tensors, so S20 uses their own stored normalization instead
+of multiplying them by the core-channel prefactor again. Their spectator
+weight, phase and collinear term are combined before the same finite
+projector operation. The code symbols \texttt{mu} and \texttt{mu2} belong
+to the respective saved scale conventions; \texttt{mu2} denotes a squared
+scale. Comparisons and numerical consumers use the recorded scale maps.
+
+The finite-part notation in Eq.~\eqref{eq:assembly} is used only after
+the program has required
+\begin{equation}
+ [\eps^{-n}]\,
+ \bigl(\mathbf R+\mathbf V+\mathbf C^{\mathrm{coll}}\bigr)=0
+ \qquad\text{for every present }n>0,
+ \label{eq:poles}
+\end{equation}
+with all normalization factors included. This check is made separately
+for the two contractions and their saved distribution and charge
+components. Taking $\eps=0$ before this combination would lose the finite
+terms generated by poles multiplying $D$-dependent factors.
+
+\paragraph{The Born contribution.}
+For the stripped core Born contractions $\mathbf B_c^{(D)}$, the
+executed final projection is
+\begin{equation}
+ \Fhat_{i,c}^{\LO}
+ =e_c^2(4\pi\alpha_s)\,2\pi N_H\,
+ \mathcal P_i^{(4)}[\mathbf B_c^{(D)}|_{D=4}]\,\delta(w).
+ \label{eq:bornfinal}
+\end{equation}
+This quotes the production assembly operation. The explicit Born tensors
+in the next sections make its channel content unambiguous. The complete
+NLO coefficient uses Eq.~\eqref{eq:assemblyprojection}, with its
+coupling and charge factors already restored in the final files.
+
+\paragraph{The acceptance boundary.}
+No negative Laurent coefficient is discarded merely because a finite
+term can be extracted. UV cancellation is required in the virtual route,
+then final IR cancellation is required in each contracted, weighted
+distribution component. Core boundary branches must agree under their
+saved common-limit operation. Only the accepted finite expressions are
+exported as the final F hats.
+
+\section{Hqq: an observed quark of the incoming flavor}
+\label{sec:hqq}
+
+\subsection{Processes and the Born normalization}
+
+The incoming state is $\gamma^*(q)q_i(p)$ and the tagged parton is
+$q_i(k_1)$. The two generated Born diagrams form the QCD Compton
+amplitude with recoil $g(k_2)$. Its virtual correction has the same
+external state. The core input uses the quark average $A_q$ of
+Eq.~\eqref{eq:averages} and removes $e_i^2g_s^2$ from the Born
+contractions.
+
+The following equations quote \texttt{BornPg} and \texttt{BornPpp}
+from this channel's imported \texttt{s02\_result.wl}. To keep the
+polynomial readable, its numerator is displayed separately:
+\begin{align}
+ \mathcal N_{qq}={}&4Q^4+4Q^2s-2s^2+Ds^2+4Q^2t
+                  -8st+2Dst-2t^2+Dt^2,\\
+ B_{g,qq}^{(D)}={}&
+ \frac{(D-2)(N_c-1)(N_c+1)\mathcal N_{qq}}{2sN_ct},\\
+ B_{pp,qq}^{(D)}={}&
+ \frac{(D-2)(N_c-1)(N_c+1)(Q^2+s+t)}{2N_c}.
+ \label{eq:bornqq}
+\end{align}
+The stored photon and gluon Ward contractions vanish. These Born tensors
+are used both in the LO projection of Eq.~\eqref{eq:bornfinal} and
+inside the pole-multiplied NLO terms. Auxiliary Hgq and Hqg Born
+contractions are generated for the mixed factorization routes.
+
+\subsection{Real sectors and their flavor weights}
+
+All three real sectors in the process table are required, together with
+the virtual correction to $\gamma^*q_i\to q_i g$.
+The saved generated tag weights are $1/2$ for the $q_i gg$ sector and
+$1$ for each of the same-flavor and distinct-flavor quark sectors.
+These weights belong to the imported tensor convention and must not be
+applied a second time at final assembly.
+
+The distinct-flavor charge polynomial is retained. Its saved charge
+moments have the definition
+\begin{equation}
+ \mathcal Q_n^{(i)}
+ =\sum_{f=1}^{N_f}e_f^n(1-\delta_{if}),\qquad n=1,2.
+\end{equation}
+The stored observed-flavor label is $i=1$, with the accepted integer domain
+$N_f\geq1$. The per-sector flavor weights and these moments accompany the
+final payload. The PDF subtraction uses the Hqq Born tensor with $P_{qq}$
+and the Hgq Born tensor with $P_{gq}$. The FF subtraction uses the Hqq Born
+tensor with $P_{qq}$ and the Hqg Born tensor with the fixed-flavor $P_{qg}$.
+
+More explicitly, the real assembly's charge-component dictionary uses
+\begin{equation}
+ \mathbf R_{qq}^{\cut}=
+ \mathbf R_{qgg,0}+\mathbf R_{\mathrm{same},0}
+ +n_{\mathrm{other}}\mathbf R_{\mathrm{distinct},0}
+ +\frac{\mathcal Q_1^{(i)}}{e_i}\mathbf R_{\mathrm{distinct},1}
+ +\frac{\mathcal Q_2^{(i)}}{e_i^2}\mathbf R_{\mathrm{distinct},2},
+ \label{eq:hqqcharges}
+\end{equation}
+where the saved flavor weight is
+\begin{equation}
+ n_{\mathrm{other}}=
+ \begin{cases}N_f-1,&N_f\geq2,\\0,&\text{otherwise},\end{cases}
+ \qquad N_f\in\mathbb Z,\quad N_f\geq1.
+\end{equation}
+The component subscripts are the stored powers of the other flavor's
+charge after removing the fixed Born charge. The overall $e_i^2$ in
+Eq.~\eqref{eq:assemblyprojection} restores the physical charge
+convention. The moment definitions, weights and domain are part of the
+result, so a consumer must not substitute a single value of $N_f$ for
+all three charge structures.
+
+Each sector goes through the same two physical cuts and the shared Kira
+masters. Its rational coefficients, interference signs and tag weights
+remain distinct. The quark-pair sectors include the photon attachments
+and their interference before charge summation; neither a flavor count
+nor a guessed gluon-splitting term replaces those generated tensors.
+
+\subsection{Subtraction, virtual assembly and final output}
+
+The channel's factorization routes are
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Boundary & Born tensor & Splitting kernel\\
+\midrule
+Incoming PDF & Hqq & $P_{q/q}$\\
+Incoming PDF & Hgq & $P_{g/q}$\\
+Outgoing FF & Hqq & $P_{q/q}$\\
+Outgoing FF & Hqg & fixed-flavor $P_{q/g}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The incoming $pp$ route uses the projector conversion of
+Eq.~\eqref{eq:ctroots}. The virtual contribution uses the channel's
+own Born interference and the common new self-energy residues with its
+generated field count. All three real sectors, that virtual term and
+the four subtraction routes enter the distribution-level pole test.
+
+The final output has an LO delta coefficient and NLO delta, $L_0$,
+$L_1$ and ordinary coefficients for both $\Fhat_1$ and $\Fhat_2$.
+Its final stage is \path{Hqq/s17_result/}. The two physical branches
+and their common boundary retain the charge-moment information of
+Eq.~\eqref{eq:hqqcharges}. In hadronic numerics this result is paired
+with same-flavor quark or antiquark PDFs and FFs, using the saved
+charge-conjugation contract.
+
+\section{Hqg: an observed gluon from an incoming quark}
+\label{sec:hqg}
+
+\subsection{Observed-leg assignment and Born tensor}
+
+The observed gluon is $k_1$; the recoil is $q_i(k_2)g(k_3)$ in the real
+term and $q_i(k_2)$ in the Born/virtual term. The generated quark average,
+charge removal and tagged-real weight are retained. This placement of the
+observed leg controls the fragmentation subtraction.
+The input kernels are $P_{qq}$ on the PDF side, and $P_{gg}$ and $P_{gq}$
+for the gluon and quark parents on the FF side.
+The quark charge remains fixed; $N_f$ is the closed massless-flavor count.
+
+The photon and incoming quark are the same species as in Hqq, but the
+observed field is now the gluon. FeynArts generates the Born, real and
+one-loop amplitudes with this external ordering. The saved Born
+contractions, with $e_i^2g_s^2$ removed, are
+\begin{align}
+ \mathcal N_{qg}={}&-2Q^4+DQ^4+4Q^2s+4s^2-8Q^2t
+                  +2DQ^2t+4st-2t^2+Dt^2,\\
+ B_{g,qg}^{(D)}={}&-
+ \frac{(D-2)(N_c-1)(N_c+1)\mathcal N_{qg}}
+ {2sN_c(Q^2+s+t)},\\
+ B_{pp,qg}^{(D)}={}&-
+ \frac{(D-2)(N_c-1)(N_c+1)t}{2N_c}.
+ \label{eq:bornqg}
+\end{align}
+The source's Born Ward checks pass. These expressions are quoted from
+the channel's own accepted Born record. They are not obtained in this
+report by exchanging labels in Eq.~\eqref{eq:bornqq}.
+
+\subsection{Real integration and gluon fragmentation}
+
+The generated real process is
+\begin{equation}
+ \gamma^*(q)q_i(p)\to\obs{g}(k_1)q_i(k_2)g(k_3).
+\end{equation}
+The cut momenta are $k_2$ and $k_3$. The tagged-square bookkeeping
+already accounts for observing a gluon among the generated final
+species. The observed gluon is not integrated as a third cut and no
+additional spectator symmetry weight is appended to this core tensor.
+Kira reduces the contracted real coefficients in the common recoil
+geometry, and the physical cut masters supply their integrals.
+
+The factorization table is
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Boundary & Born tensor & Splitting kernel\\
+\midrule
+Incoming PDF & Hqg & $P_{q/q}$\\
+Outgoing FF, gluon parent & Hqg & $P_{g/g}$\\
+Outgoing FF, quark parent & Hqq & $P_{g/q}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The last row describes a quark produced in the auxiliary Born process
+whose collinear fragmentation produces the observed gluon. This is why
+the Hqg subtraction is not the Hqq FF subtraction with an unchanged
+kernel label.
+
+\subsection{Virtual term, finite hats and the consumer}
+
+The one-loop correction is interfered with this channel's gluon-tagged
+Born amplitude. It uses the seven shared virtual masters and the new
+Kira/SubTropica UV input, with two external quark fields and one gluon
+field in the recorded count. The renormalized virtual delta term is
+combined with the real distribution and the three subtraction routes
+before final projection.
+
+The final \path{Hqg/s17_result/} contains both LO and NLO hats with
+the core distribution and branch schema. Its fixed quark charge is
+supplied by the incoming quark or antiquark in the numerical flavor sum.
+The final-state FF is $D_{h/g}$; no final quark-flavor sum is hidden in
+that gluon fragmentation factor.
+
+\section{Hgq: an observed fixed-flavor quark from an incoming gluon}
+\label{sec:hgq}
+
+\subsection{Photon--gluon fusion and the Born tensor}
+
+The real recoil is $\bar q_i(k_2)g(k_3)$; the Born/virtual recoil is
+$\bar q_i(k_2)$. The incoming average uses the generated $D$-dimensional
+physical gluon polarization and color convention. It is not replaced by
+the incoming-quark average.
+The PDF routes use the Hgq Born tensor with $P_{gg}$ and the Hqq Born
+tensor with the per-flavor $P_{qg}$. The FF route uses the Hgq Born tensor
+with $P_{qq}$. The observed quark charge is fixed, while $N_f$ counts
+closed flavors.
+
+The generated Born process is $\gamma^*g\to\obs{q_i}\bar q_i$.
+Its saved contractions, with the fixed $e_i^2g_s^2$ factor removed,
+are
+\begin{align}
+ \mathcal N_{gq}={}&-2Q^4+DQ^4-8Q^2s+2DQ^2s-2s^2+Ds^2
+                   +4Q^2t+4st+4t^2,\\
+ B_{g,gq}^{(D)}={}&\frac{\mathcal N_{gq}}{t(Q^2+s+t)},\\
+ B_{pp,gq}^{(D)}={}&\frac{4s}{D-2}.
+ \label{eq:borngq}
+\end{align}
+The Born normalization includes the generated gluon spin and color
+average. In particular, the remaining $D$ dependence in
+$B_{pp,gq}^{(D)}$ is retained inside the factorization and UV products.
+The Born photon and gluon Ward contractions vanish in the accepted input.
+
+\subsection{Real radiation and the subtraction routes}
+
+The real process is
+\begin{equation}
+ \gamma^*(q)g(p)\to\obs{q_i}(k_1)\bar q_i(k_2)g(k_3).
+\end{equation}
+The observed quark is fixed before the recoil integration. The incoming
+gluon is summed and averaged according to its own physical polarization
+projector. The unobserved antiquark and gluon are the two cut lines.
+No sum over distinct observed flavors is made inside this fixed-flavor
+hard tensor.
+
+The subtraction inputs retain these routes:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Boundary & Born tensor & Splitting kernel\\
+\midrule
+Incoming PDF, gluon parent process & Hgq & $P_{g/g}$\\
+Incoming PDF, quark Born process & Hqq & per-flavor $P_{q/g}$\\
+Outgoing FF & Hgq & $P_{q/q}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The per-flavor normalization and fermion-species metadata of the
+incoming mixing term are used together. The auxiliary Hqq tensor is
+generated and checked for that contraction convention. Replacing the
+whole incoming route by a flavor-summed kernel would change the meaning
+of the fixed observed flavor.
+
+\subsection{Virtual correction, output and comparison boundary}
+
+The virtual process has recoil $\bar q_i$ and is the Born--one-loop
+interference of photon--gluon fusion. Its loop coefficients differ from
+Hqq and Hqg even though the scalar master templates are shared. The new
+UV residues enter with the generated external-field count, and its
+renormalized term is combined with the cut real result and the three
+subtraction routes. The final pole and branch tests precede the
+$\Fhat_1,\Fhat_2$ export in \path{Hgq/s17_result/}.
+
+The numerical consumer uses the gluon PDF and sums the fixed-flavor
+hard function over active observed quarks and antiquarks with their
+charges and FFs. The saved BigTMD coefficient comparison passes within
+its stated scope. The inherited MadGraph real-emission sign comparison
+is still unresolved; the final IR pole checks do not close that separate
+comparison. The numerical figures retain this documented input caveat.
+
+\section{Hgg: an observed gluon from an incoming gluon}
+\label{sec:hgg}
+
+\subsection{Generated process and normalization}
+
+This contribution is $\gamma^*g\to gq_f\bar q_f$ at the order calculated.
+The unobserved quark-antiquark pair is integrated once. The saved spectator
+weight is $1$, and the final charge factor is
+\begin{equation}
+ \texttt{chargeSum}=\sum_{f=1}^{N_f}e_f^2.
+\end{equation}
+Quark and antiquark PDF/FF subtraction routes are kept with their own
+conventions. Their multiplicities do not introduce a second copy of the
+integrated spectator pair. Real integration and factorization provide the
+finite result; there is no virtual term at this order.
+
+The generated real amplitude is squared with an incoming-gluon average
+and with the gluon $k_1$ treated as observed. The FeynCalc source also
+generates the auxiliary quark--gluon Born processes required by the
+collinear terms. The real scalar record retains its strong coupling and
+charge factors after removing the common electromagnetic coupling used
+by the lepton cross section. It explicitly records that the spectator
+weight has not yet been applied.
+
+The field list is $\{g(k_1),q_f(k_2),\bar q_f(k_3)\}$. The
+unobserved quark and antiquark are different species, giving the saved
+$S_{\mathrm{spectator}}=1$. Their two positive-energy constraints form
+the cut master. The same shared eight-master basis supplies the integral,
+with this channel's gluon-averaged real coefficients.
+
+\subsection{Flavor sum and collinear mixing}
+
+The photon couples to the generated quark line. The fixed representative
+charge in that tensor is mapped at final assembly to
+$\sum_f e_f^2$. The incoming gluon PDF and outgoing gluon FF do not
+perform this electromagnetic sum themselves.
+
+The incoming collinear routes use a quark or antiquark from a gluon
+splitting, followed by a Born process with an observed gluon. The
+outgoing routes use photon--gluon fusion followed by fragmentation of
+the quark or antiquark into the observed gluon. Thus both quark and
+antiquark routes are present in the subtraction bookkeeping. Their
+species multiplicity is associated with the factorization routes, not
+with an extra integration of the same real spectator pair.
+
+\subsection{Finite projection and the real-only normalization}
+
+For this channel and the two following channels, the final code uses the
+stored real-only assembly operation
+\begin{equation}
+ \mathbf T_c^{\mathrm{fin}}=
+ \left[S_{\mathrm{spectator},c}(\mu^2)^{2\eps}
+ N_HN_{\mathrm{ps}}(D)\,\mathbf R_c^{\cut}
+ +\mathbf C_c^{\mathrm{phase}}\right]_{\eps^0}.
+ \label{eq:simpleassembly}
+\end{equation}
+Here $\mu^2$ denotes the code's squared scale \texttt{mu2}, and
+$\mathbf C_c^{\mathrm{phase}}$ is the complete stored phase-normalized
+Born convolution. The real tensor in this equation retains its own
+couplings. The program maps $g_s^2$ to $4\pi\alpha_s$, performs the
+channel's charge substitution, and applies $\mathcal P_i^{(4)}$.
+The core prefactor of Eq.~\eqref{eq:assemblyprojection} is not applied
+again.
+
+The executed Hgg result has zero delta and plus coefficients after
+assembly and a finite ordinary NLO coefficient. Both hats are in
+\path{Hgg/s11_result/}. In the neutral-pion convolution the associated
+luminosity is the gluon PDF times the gluon FF, multiplied by the
+charge sum according to the coefficient contract.
+
+\section{Hqqbar: an observed antiquark of the incoming flavor}
+\label{sec:hqqbar}
+
+\subsection{Identical spectator quarks}
+
+The process is $\gamma^*q_i\to\bar q_i(k_1)q_i(k_2)q_i(k_3)$.
+The incoming flavor and its squared charge, \texttt{eq2}, are fixed.
+The two unobserved quarks are identical. S20 reads the generated field
+list and computes
+\begin{equation}
+ S_{\mathrm{spectator}}=\frac{1}{\prod_a n_a!},
+\end{equation}
+where $n_a$ counts identical unobserved fields. Its saved value for this
+channel is $1/2$, applied once because the imported real tensor excludes
+that spectator weight.
+The initial subtraction uses $q_i\to g$ followed by
+$\gamma^*g\to\bar q_i q_i$; the final subtraction uses
+$\gamma^*q_i\to gq_i$ followed by $g\to\bar q_i$.
+There is no extra flavor sum and no virtual contribution.
+
+Both assignments of the identical quark lines are included in the
+generated amplitude before squaring. Their exchange interference and
+fermion signs belong to the FeynArts/FeynCalc result. The spectator
+factor divides the phase-space counting once; it does not remove an
+amplitude or its interference. The source uses a quark incoming average,
+while the observed antiquark is summed as the tagged final state.
+
+\subsection{Cut integration and subtraction}
+
+The real tensor is mapped with $k_2=r$, $k_3=P_X-r$ and the same common
+invariants as the other channels. The two unobserved quarks are the cut
+lines. The rational master coefficients retain the identical-flavor
+interference. Kira reduction and SubTropica evaluation then proceed
+with the shared physical master inputs.
+
+The incoming PDF route changes the incoming quark into a gluon and uses
+the Born photon--gluon-fusion tensor with the antiquark observed. The FF
+route uses the Born observed-gluon tensor followed by the fixed-flavor
+$g\to\bar q_i$ fragmentation kernel. Shared S16 evaluates these
+preserved Born convolution definitions, including their $D$-dimensional
+projectors and flavor normalization. There is no virtual amplitude or
+UV loop term to add at this order in this channel.
+
+\subsection{Charge convention and final hats}
+
+The spectator factor $1/2$ and the phase normalization enter
+Eq.~\eqref{eq:simpleassembly}. The final charge substitution is
+\texttt{eq}$^2\to$\texttt{eq2}; \texttt{eq2} denotes the fixed
+squared incoming-flavor charge, not a sum over active flavors. The
+endpoint tests give zero delta, $L_0$ and $L_1$, and the ordinary finite
+coefficients are exported to \path{Hqqbar/s11_result/}.
+
+The hadronic luminosity pairs an incoming quark with the FF of its
+antiquark, and includes the conjugate incoming-antiquark process under
+the saved consumer convention. Even for a neutral hadron with equal
+quark and antiquark FFs, this channel remains a separate hard
+coefficient and is counted once in the six-channel sum.
+
+\section{Hqqprime: an observed quark of a different flavor}
+\label{sec:hqqprime}
+
+\subsection{The two independent photon charges}
+
+The process is $\gamma^*q_i\to q_j(k_1)q_i(k_2)\bar q_j(k_3)$ with
+$j\ne i$. The saved spectator weight is $1$. Both charges are retained
+independently, with the polynomial structure
+\begin{equation}
+ \Fhat_{a,qq'}=e_i^2 A_a+e_i e_j B_a+e_j^2 C_a,\qquad a=1,2.
+\end{equation}
+This notation labels the saved charge components; no component is dropped
+as an integration assumption. The initial subtraction carries $e_j^2$
+through the $\gamma^*g\to q_j\bar q_j$ Born process. The final subtraction
+carries $e_i^2$ through $\gamma^*q_i\to gq_i$, followed by $g\to q_j$.
+The result is for a fixed distinct observed flavor; physical flavor sums
+are performed by the consumer.
+
+The generated amplitude retains photon attachment to the incoming-flavor
+line and to the distinct-flavor line. Their squares give the two squared
+charge structures, and their interference gives the mixed charge
+structure. The labels $A_a,B_a,C_a$ refer to those complete coefficient
+components after integration and subtraction, rather than to separately
+guessed splitting approximations.
+
+\subsection{Real master coefficients and factorization}
+
+The observed $q_j$ is held fixed and the recoil pair $q_i,\bar q_j$
+is integrated through the two positive-energy cuts. The distinct flavor
+condition makes the spectator species different, as recorded by the
+generated field list. The program retains all three charge coefficients
+while mapping the real contractions to Kira and assembling their master
+values. A mixed-charge coefficient is not dropped because a later
+observable may sum it to zero.
+
+There are two factorization routes with different electromagnetic
+charges. The PDF route has an incoming splitting $q_i\to g$ followed
+by $\gamma^*g\to\obs{q_j}\bar q_j$, so its Born input carries
+$e_j^2$. The FF route has $\gamma^*q_i\to\obs{g}q_i$ followed
+by $g\to q_j$, so its Born input carries $e_i^2$. The same incoming
+and outgoing convolution measures of Eq.~\eqref{eq:factorization}
+apply with these fixed-flavor assignments. There is no Born hard part
+for the channel itself and hence no NLO virtual interference to add.
+
+\subsection{Final coefficient and flavor summation}
+
+The final assembly uses Eq.~\eqref{eq:simpleassembly} with spectator
+weight one. After the charge-resolved pole and endpoint checks, the
+output in \path{Hqqprime/s11_result/} is an ordinary finite NLO
+coefficient polynomial in the two charges. It is for one fixed ordered
+pair of different flavors. Summing over observed species belongs to the
+PDF/FF convolution, with an explicit distinct-flavor condition.
+
+For the neutral-pion numerical setup, the consumer verifies equality of
+conjugate FFs and the corresponding cancellation of the mixed-charge
+luminosity. That is a checked property of this numerical flavor sum.
+It neither changes the saved partonic polynomial nor asserts that its
+mixed coefficient vanishes for arbitrary fragmentation functions.
+
+\section{Final F hats and the files that contain them}
+
+For Hqq, Hqg and Hgq the output format is
+\begin{align}
+ \Fhat_{i,c}^{\LO}&=B_{i,c}\,\delta(w),\\
+ \Fhat_{i,c}^{\NLO}
+ &=D_{i,c}\,\delta(w)+C_{i,c}^{(0)}L_0(w;B)
+                  +C_{i,c}^{(1)}L_1(w;B)+R_{i,c}(w).
+ \label{eq:finalformat}
+\end{align}
+The file keys are respectively \texttt{LODelta}, \texttt{Delta},
+\texttt{L0}, \texttt{L1} and \texttt{Regular}. The NLO coefficients have
+branch keys \texttt{1}, \texttt{-1} and \texttt{0}, as described above.
+Their coupling, charge and hard-tensor normalization factors are already
+included.
+
+For Hgg, Hqqbar and Hqqprime, the executed endpoint checks give zero
+\texttt{Delta}, \texttt{L0} and \texttt{L1}. Their F-hat files contain
+the finite NLO ordinary coefficient directly. This is an outcome of the
+new calculation and its endpoint checks, not a condition imposed on the
+unintegrated real tensors.
+
+\begin{center}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Channel & Full final result relative to this report\\
+\midrule
+Hqq & \path{Hqq/s17_result/s17_result.wl}\\
+Hqg & \path{Hqg/s17_result/s17_result.wl}\\
+Hgq & \path{Hgq/s17_result/s17_result.wl}\\
+Hgg & \path{Hgg/s11_result/s11_result.wl}\\
+Hqqbar & \path{Hqqbar/s11_result/s11_result.wl}\\
+Hqqprime & \path{Hqqprime/s11_result/s11_result.wl}\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each listed directory also contains the corresponding
+\texttt{sNN\_F1\_hat.wl} and \texttt{sNN\_F2\_hat.wl} files.
+The full result must accompany those direct expressions because it records
+the support, distributions, branches, scale convention and input identities.
+The long analytic coefficient expressions are retained in these symbolic
+files; the present report explains their construction and interpretation.
+
+\section{Stage map, execution and checks}
+
+Channel-level stages are consecutive links to shared implementations.
+The numbers in the following table are \emph{channel} step numbers;
+the shared source filenames retain their original execution numbers.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}X c c@{}}
+\toprule
+Operation & Hqq/Hqg/Hgq & Hgg/Hqqbar/Hqqprime\\
+\midrule
+Import unchanged inputs; define kinematics & s01--s02 & s01--s02\\
+Real family mapping and Kira reduction & s03--s04 & s03--s04\\
+Physical cut-master inputs; SubTropica evaluation & s06, s08 & s05--s06\\
+Real master coefficients; regulated soft regions & s09, s13 & s07--s08\\
+Virtual families, reduction, inputs and evaluation & s05, s07, s10--s11 & --\\
+New self-energy/UV evaluation & s12 & --\\
+Collinear inputs & preserved in s01 & s09\\
+Real distribution assembly & s14 & s10\\
+Virtual coefficients and renormalized assembly & s15--s16 & --\\
+Final pole cancellation and F-hat projection & s17 & s11\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The table groups operations by purpose; the numbered channel sequence
+and each README give the actual dependencies. Shared integrations and
+reductions run once for the applicable channel group.
+
+The accepted calculation ran on Hoffman2 compute nodes. The local folders
+retain the main sources, results, logs, Kira databases, SubTropica outputs
+and resumable caches. Independent work is divided among a bounded number
+of workers with per-operation memory limits, process-tree RSS guards and
+persistent job monitors. The recorded accepted runs did not encounter OOM.
+
+The saved gates cover input reconstruction, Born normalization and Ward
+identities, complete Kira target coverage, retention of both cuts,
+parameter-measure normalization, regulator depth, physical continuation,
+UV cancellation, final IR cancellation and the required branch boundaries.
+The all-six final acceptance and its execution receipt are in
+\path{common/s20_result/}.
+
+The subsequent \path{bigTMD_comparison/} compares the frozen new F hats
+with the same reference used by the earlier comparison workflow. Its saved
+report gives \textbf{60/60 exact comparisons and 120/120 high-precision
+checks passing}. The exact comparison uses the documented rational
+reconstruction of printed reference decimals, SU(3), matched charges,
+scales and distribution conventions. It is a comparison after production,
+and does not set or tune a coefficient. The scope of the public numerical
+driver differs from that of the complete reference coefficient files and
+is recorded separately.
+
+The inherited \textbf{Hgq MadGraph real-emission sign comparison remains
+unresolved}. Neither the passed pole checks nor the BigTMD coefficient
+comparison is reported as closing that separate check.
+
+\section{Numerics: from partonic hats to a hadronic cross section}
+\label{sec:numerics}
+
+\subsection{Inputs and the quantity being predicted}
+
+The separate \path{numerics/} folder consumes the six new symbolic
+results~\cite{localnumerics}. It predicts the neutral-pion transverse-momentum distribution
+with the saved H1 bin definitions and cuts. The symbolic hard scattering
+ends at the finite F hats; PDFs, FFs, active-flavor choices and
+experimental cuts enter here. The accepted numerical run evaluates the
+new F hats, rather than loading old channel-integrated bin totals.
+
+The paper's convolution definitions are
+\begin{align}
+ F_1&=\sum_{ij}\int_x^1\frac{\dd\xi}{\xi}
+                    \int_z^1\frac{\dd\zeta}{\zeta^2}
+       \Fhat_{1,ij}(x/\xi,z/\zeta,Q^2,q_T)
+       f_{i/H}(\xi)D_{h/j}(\zeta),\\
+ F_2&=\sum_{ij}\int_x^1\dd\xi
+                    \int_z^1\frac{\dd\zeta}{\zeta^2}
+       \Fhat_{2,ij}(x/\xi,z/\zeta,Q^2,q_T)
+       f_{i/H}(\xi)D_{h/j}(\zeta).
+\end{align}
+The different $\xi$ measures are part of the paper's $F_1,F_2$
+definitions. The fragmentation Jacobian is applied once, and the
+distributions act on the complete convolution test function.
+
+The azimuth-independent lepton cross section used by the numerical
+definitions is the paper's expression
+\begin{equation}
+ \frac{\dd\sigma}{\dd x\,\dd y\,\dd z\,\dd p_T^2}
+ =\frac{\pi^2\alpha_{\mathrm{EM}}^2}{zxyQ^2}
+ \left[xy^2F_1+(1-y)F_2\right].
+ \label{eq:leptonxs}
+\end{equation}
+The maps and weights needed to express it in the integrated variables
+are derived in numerical s04 from its defining physics inputs. This
+report quotes those saved outputs. It does not introduce a different
+lepton normalization or a different $F_2$ convolution measure.
+
+\subsection{Beam energies, cuts and scale choices}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+Input & Accepted numerical setting\\
+\midrule
+Electron and proton energies & $E_e=27.6\,\GeV$, $E_p=820\,\GeV$\\
+Inelasticity & $0.1<y<0.6$\\
+Photon virtuality panels & $2<Q^2<4.5$, $4.5<Q^2<15$,
+ $15<Q^2<70\,\GeV^2$\\
+Transverse momentum & H1 bins between $2.5$ and $15\,\GeV$\\
+Pion laboratory angle & $5^\circ<\theta_h<25^\circ$\\
+Pion laboratory energy & $E_h/E_p>0.01$\\
+Common scale & $\mu_R^2=\mu_F^2=\mu_D^2=(Q^2+p_T^2)/2$\\
+PDF & MRST2002 NLO, original interpolation, mode 1\\
+FF options & KKP neutral pion; Kretzer neutral-pion average\\
+Hard-part color & $N_c=3$ in the consumer\\
+Mass and azimuth treatment & Massless kinematics; uniform-azimuth
+ $F_1,F_2$ approximation\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Here $\mu_D$ denotes the fragmentation factorization scale. The
+reported plots use the common central-scale choice above. They do not
+show an independent scale-variation band. Laboratory cuts are applied
+to the pion momentum reconstructed from the saved massless frame map,
+not to the partonic recoil or directly to a centre-of-mass polar angle.
+
+\subsection{PDF, FF and coupling conventions}
+
+The native MRST interpolation returns the momentum-weighted PDF
+$\xi f_a(\xi,\mu^2)$. The numerical adapter converts it to the
+$f_a$ required by the convolution before applying the explicit
+$1/\xi$ factor for $F_1$. This separates the PDF library's output
+convention from the structure-function measure.
+
+The KKP input uses its saved pion option \texttt{ih=5} and NLO
+\texttt{iset=1}. The Kretzer input uses its NLO set and the recorded
+neutral combination $(\pi^++\pi^-)/2$. The adapter checks the
+neutral quark/antiquark equalities needed by the flavor assembly. It
+does not identify quark and antiquark PDFs; those remain distinct.
+
+The retained native flavor order is
+\begin{equation}
+ \{g,u,\bar u,d,\bar d,s,\bar s,c,\bar c,b,\bar b\}.
+\end{equation}
+The model supplies the up-type and down-type charges and their
+antiparticle signs. The numerical hard parts use four active flavors
+below the saved bottom threshold and five above it; the phase-space
+contract requires the scale to lie above the charm threshold. The
+accepted coupling input uses the EPHOX implicit two-loop convention
+with continuity at the bottom threshold and records
+\begin{gather}
+ \alpha_s(M_Z)=0.1197,\qquad M_Z=91.188\,\GeV,\\
+ m_c^2=2.045\,\GeV^2,\qquad m_b^2=18.5\,\GeV^2,\qquad
+ \Lambda_4^2=0.1085488995978293\,\GeV^2.
+\end{gather}
+The electromagnetic input is
+$\alpha_{\mathrm{EM}}=0.0072973525643$ and the retained unit
+conversion is $1\,\GeV^{-2}=389379372.17185944\,\pb$.
+These are the numerical input records, not additional fitted parameters
+of the new F-hat calculation.
+
+The PDF and FF adapters are checked on their declared input grids. The
+retained PDF domain is $10^{-5}\leq\xi\leq1$ with
+$1.25\leq\mu^2\leq10^7\,\GeV^2$, and the FF domain is
+$0.01\leq\zeta\leq1$ with
+$1\leq\mu^2\leq10^6\,\GeV^2$. Evaluation errors are handled as
+errors by the numerical driver; an unsuccessful library call is not
+converted to a zero cross-section contribution.
+
+\section{Numerics: recoil variables and laboratory acceptance}
+\label{sec:nummap}
+
+\subsection{From the fragmentation fraction to recoil mass}
+
+The integration uses $Q^2,y,p_T,z,\xi,w$ with
+\begin{equation}
+ x=\frac{Q^2}{4E_eE_p y},\qquad \hat x=\frac{x}{\xi},\qquad
+ s=-\frac{Q^2(x-\xi)}{x}.
+\end{equation}
+The fragmentation fraction is changed to the recoil invariant $w$.
+The defining solution recorded in s04, also used in the paper's
+convolution map, is
+\begin{equation}
+ \zeta(w)=
+ \frac{\hat x p_T^2+z^2Q^2(1-\hat x)}
+ {z[Q^2(1-\hat x)-w\hat x]}.
+ \label{eq:zetamap}
+\end{equation}
+The endpoint value $\zeta_0$ is this map at $w=0$. The FF must be
+evaluated separately at $\zeta(w)$ for interior terms and at
+$\zeta_0$ for delta terms and endpoint subtraction.
+
+The saved lower bound and recoil endpoint are
+\begin{align}
+ \xi_{\min}&=
+ \frac{x(Q^2z^2-Q^2z-p_T^2)}{Q^2z(z-1)},\\
+ B&=Q^2\left(\frac{1}{\hat x}-1\right)(1-z)-\frac{p_T^2}{z},
+ \qquad 0\leq w\leq B.
+ \label{eq:numbounds}
+\end{align}
+The source solves the remaining support conditions to give the two
+$z$ bounds
+\begin{equation}
+ z_{\mathrm{low,up}}=
+ \frac{\sqrt{Q^2}(x-1)\ \mathbin{\pm}
+ \sqrt{(x-1)(Q^2x-Q^2+4p_T^2x)}}
+ {2\sqrt{Q^2}(x-1)},
+ \label{eq:zlimits}
+\end{equation}
+where the saved lower root uses the plus sign and the upper root the
+minus sign. Configurations with empty physical support do not enter
+the convolution. The resulting maps are checked against the invariant
+definitions, rather than treating independently sampled $s,t,w$ as
+an automatically physical point.
+
+\subsection{Jacobian and invariant evaluation}
+
+The s04 output gives the fragmentation Jacobian explicitly as
+\begin{equation}
+ J_\zeta(w)=
+ -\frac{x\,[Q^2xz^2-Q^2\xi z^2-p_T^2x]}
+ {z[Q^2x-Q^2\xi+wx]^2}.
+ \label{eq:zetajacobian}
+\end{equation}
+It is the positive integration Jacobian on the accepted support. All
+new coefficient bundles record that this Jacobian is not already
+included. The consumer consequently multiplies by $J_\zeta$ once,
+along with the separate $1/\zeta^2$ FF measure.
+
+For completeness, the saved invariant maps passed to the hard functions
+include
+\begin{align}
+ t(w)&=\frac{Q^2p_T^2\xi+Q^2wxz^2-p_T^2wx}
+ {Q^2xz^2-Q^2\xi z^2-p_T^2x},\\
+ u(w)&=-\frac{Q^2\xi z^2(Q^2x-Q^2\xi+wx)}
+ {x(Q^2xz^2-Q^2\xi z^2-p_T^2x)},\\
+ \hat z(w)&=\frac{z^2(Q^2x-Q^2\xi+wx)}
+ {Q^2xz^2-Q^2\xi z^2-p_T^2x}.
+\end{align}
+These formulas are quoted from the symbolic map result. The branch
+selector evaluates $s+t$ at the same point, and the saved boundary
+entry is used for its common limit.
+
+The s04 weights multiplying the structure functions after changing
+to the integration variables are
+\begin{align}
+ W_1&=\frac{\pi^2\alpha_{\mathrm{EM}}^2p_T}
+ {2E_eE_pQ^2z},\\
+ W_2&=-\frac{\pi^2\alpha_{\mathrm{EM}}^2p_T(4E_eE_py-4E_eE_p)}
+ {2E_eE_p(Q^2)^2yz}.
+ \label{eq:numweights}
+\end{align}
+The native paired evaluator uses $W_1/\xi$ with $\Fhat_1$ and
+$W_2$ with $\Fhat_2$. Their different incoming measures are therefore
+preserved explicitly.
+
+\subsection{The pion momentum in the laboratory}
+
+The laboratory acceptance is obtained from the saved massless frame
+transformation. With $\phi$ the azimuth used in that map, the output is
+\begin{align}
+ E_h={}&\frac{2\sqrt{Q^2}p_Tz\sqrt{1-y}\cos\phi+Q^2z^2+p_T^2
+                    +yz^2(4E_e^2y-Q^2)}{4E_eyz},\\
+ p_{h,x}={}&\sqrt{Q^2}z\sqrt{1-y}+p_T\cos\phi,\\
+ p_{h,y}={}&p_T\sin\phi,\\
+ p_{h,z}={}&\frac{2\sqrt{Q^2}p_Tz\sqrt{1-y}\cos\phi+Q^2z^2+p_T^2
+                    -yz^2(4E_e^2y+Q^2)}{4E_eyz}.
+ \label{eq:labmap}
+\end{align}
+The cuts are imposed on $E_h$ and on the massless polar-angle
+definition $\cos\theta_h=p_{h,z}/E_h$. The source solves the energy
+and angle inequalities as bounds on $\cos\phi$, clips those bounds
+to $[-1,1]$ and calculates the allowed azimuth fraction. An empty
+interval gives zero acceptance.
+
+The defining quantity is
+\begin{equation}
+ \mathcal A_{\mathrm{lab}}(Q^2,y,z,p_T)=\frac{1}{2\pi}
+ \int_0^{2\pi}\dd\phi\,
+ \mathbf1_{E_h/E_p>0.01}\,
+ \mathbf1_{5^\circ<\theta_h<25^\circ}.
+ \label{eq:acceptance}
+\end{equation}
+The accepted numerical source uses the analytic angular fraction
+derived from these inequalities, so it does not need a seventh Monte
+Carlo variable for $\phi$. It assumes the retained $F_1,F_2$
+contribution is uniform in this azimuth. Azimuth-dependent SIDIS
+structure functions are outside the plotted approximation; the
+acceptance fraction alone does not supply them.
+
+\section{Numerics: assembling all six channel luminosities}
+\label{sec:luminosities}
+
+Write $f_a=f_{a/H}(\xi,\mu^2)$ and
+$D_a=D_{h/a}(\zeta,\mu^2)$. Let $a$ run over active quarks and
+antiquarks, and let $e_a$ carry the charge sign from the model. The
+native consumer factors the charge polynomials according to each
+export contract and constructs the following luminosities. The formulas
+are the definitions used by numerical s08/s09; when the full hat already
+contains its charge, the exporter exposes the corresponding normalized
+charge component so the factor is not included twice.
+
+\subsection{Hgg, Hgq, Hqg and Hqqbar}
+
+\begin{align}
+ \mathcal L_{gg}&=f_gD_g\sum_{f\,\mathrm{quark\ flavors}}e_f^2,\\
+ \mathcal L_{gq}&=f_g\sum_a e_a^2D_a,\\
+ \mathcal L_{qg}&=D_g\sum_a e_a^2f_a,\\
+ \mathcal L_{q\bar q}&=\sum_a e_a^2f_aD_{\bar a}.
+ \label{eq:simplelums}
+\end{align}
+The first sum is over quark flavors, not a doubled quark-plus-antiquark
+copy of the Hgg spectator pair. In the other sums quarks and antiquarks
+are distinct incoming or observed species. The neutral-FF equalities
+are checked where used; they do not erase those species definitions.
+
+\subsection{Hqq charge moments}
+
+Hqq uses same-species luminosities $f_aD_a$ and evaluates its coefficient
+with the fixed charge and the other-flavor moments appropriate to that
+species. The accepted neutral consumer groups equal-charge species
+using its verified charge-conjugation identities. For each group,
+\begin{equation}
+ \mathcal L_{qq,\mathrm{group}}=\sum_{a\in\mathrm{group}}f_aD_a.
+\end{equation}
+The hard coefficient is evaluated with its stored
+$e_i,\mathcal Q_1^{(i)},\mathcal Q_2^{(i)}$ arguments. The saved
+tool-generated values used by the two active-flavor settings are:
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$N_f$ & Representative charge & $\mathcal Q_1^{(i)}$ & $\mathcal Q_2^{(i)}$\\
+\midrule
+4 & $2/3$ & $0$ & $2/3$\\
+4 & $-1/3$ & $1$ & $1$\\
+5 & $2/3$ & $-1/3$ & $7/9$\\
+5 & $-1/3$ & $2/3$ & $10/9$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These values belong to the numerical flavor model. Production Hqq
+continues to retain symbolic moments and its stated $N_f$ domain.
+
+\subsection{Distinct-flavor charge components}
+
+For Hqqprime, the pair $(a,b)$ is ordered and its quark-flavor names
+must differ, independently of whether a species is a quark or an
+antiquark. The source constructs
+\begin{align}
+ \mathcal L_{\mathrm{incoming}}&=
+ \sum_{\mathrm{flavor}(a)\ne\mathrm{flavor}(b)}e_a^2 f_aD_b,\\
+ \mathcal L_{\mathrm{prime}}&=
+ \sum_{\mathrm{flavor}(a)\ne\mathrm{flavor}(b)}e_b^2 f_aD_b,\\
+ \mathcal L_{\mathrm{mixed}}&=
+ \sum_{\mathrm{flavor}(a)\ne\mathrm{flavor}(b)}e_ae_b f_aD_b.
+ \label{eq:primelums}
+\end{align}
+They multiply the corresponding three charge coefficients of
+Section~\ref{sec:hqqprime}. The neutral-pion input passes the symbolic
+and native mixed-luminosity cancellation checks. The mixed partonic
+coefficient remains in the symbolic result. No factor based only on
+the number of active flavors replaces these ordered sums.
+
+\section{Numerics: distributions, precision and bin integration}
+\label{sec:binintegration}
+
+\subsection{The complete endpoint test function}
+
+For a distribution component $d$ and a channel/charge component $c$,
+the paired hard evaluator forms the saved combination
+\begin{equation}
+ K_{c,d}(w)=\frac{J_\zeta(w)}{\zeta(w)^2}
+ \left[\frac{W_1}{\xi}\Fhat_{1,c,d}(w)
+                         +W_2\Fhat_{2,c,d}(w)\right].
+ \label{eq:pairedkernel}
+\end{equation}
+The channel's compatible charge luminosity is
+$\mathcal L_c(w)$, using the FF at $\zeta(w)$. In this notation
+$G_{c,d}(w)=K_{c,d}(w)\mathcal L_c(w)$ names the complete test-function
+product used by the native source. The product includes the kinematic
+dependence of the coefficient, its Jacobian, the FF and the PDF, rather
+than subtracting only the value of the analytic F-hat expression.
+
+For a core channel the implemented recoil integration is represented by
+\begin{align}
+ \mathcal I_{c}^{\LO}={}&G_{c,\mathrm{Born}}(0),\\
+ \mathcal I_{c}^{\NLO}={}&G_{c,\Delta}(0)
+ +\int_0^B\dd w\,\left\{
+ G_{c,\mathrm{Regular}}(w)
+ +\frac{G_{c,L_0}(w)-G_{c,L_0}(0)}{w}\right.
+ \nonumber\\[-1mm]
+ &\hspace{39mm}\left.
+ +\frac{G_{c,L_1}(w)-G_{c,L_1}(0)}{w}\log\frac{w}{B}
+ \right\}.
+ \label{eq:numericalplus}
+\end{align}
+This is the numerical source's implementation of the saved distribution
+convention. Its delta terms are evaluated at the endpoint without a
+recoil integration Jacobian. The ordinary and endpoint-subtracted
+interior terms carry that Jacobian. Hgg, Hqqbar and Hqqprime enter with
+their ordinary NLO terms and no LO contribution.
+
+\subsection{Six-dimensional sampling map}
+
+Each accepted bin uses six unit-cube variables. The transformations are
+logarithmic for $Q^2,p_T,z,\xi$ and linear for $y,w$, with the
+kinematic lower and upper limits evaluated in their dependency order.
+The definitions in the source are
+\begin{align}
+ x_{\mathrm{lin}}(v)&=a+v(b-a),&
+ J_{\mathrm{lin}}&=b-a,\\
+ x_{\log}(v)&=a\exp[v\log(b/a)],&
+ J_{\log}&=x_{\log}(v)\log(b/a),\qquad 0\leq v\leq1.
+\end{align}
+At a sampled point the outer weight contains the five non-recoil
+Jacobians, $\mathcal A_{\mathrm{lab}}$ and the pb conversion. The
+linear $w$ Jacobian multiplies only the interior terms in
+Eq.~\eqref{eq:numericalplus}. The endpoint contribution is independent
+of the sixth coordinate and is included with its unit-cube measure.
+
+The PDF is evaluated once for the sampled $\xi,\mu^2$ and used in
+all channel components. FFs are evaluated at both the interior and
+endpoint fragmentation fractions. All six channels and both FF choices
+use the same sample points, retaining the covariance of their sum.
+Empty physical support or failed experimental cuts produce a defined
+zero contribution. A failed hard-function evaluation is an error and
+is not treated as an empty phase-space point.
+
+\subsection{Stable evaluation of symbolic coefficients}
+
+The symbolic export retains all distribution, branch, coupling, scale
+and charge contracts. The numerical build contains 110 scalar
+coefficients arranged into 55 $F_1,F_2$ pairs. The native evaluator
+uses the recorded multiprecision complex arithmetic, with the
+100-decimal-digit Boost implementation and a high-precision
+dilogarithm path. Opposite large terms are combined at the prescribed
+precision before returning the real observable contribution.
+
+Two saved comparison stages validate that translation. Numerical s07
+records 7662 native/Wolfram checks. Numerical s10 records 1274
+independent checks using 100- and 140-digit evaluation. These are
+coefficient-evaluation tests against the new symbolic inputs; they are
+separate from the statistical convergence of an integrated bin.
+
+\subsection{VEGAS iterations and statistical acceptance}
+
+The run uses VEGAS 6.3 with a recorded seed for every bin. Its initial
+configuration has three adaptation iterations, then eight production
+iterations with 1000 requested evaluations per iteration and adaptation
+disabled. If the acceptance conditions fail, the driver increases the
+requested evaluations by the recorded doubling rule, up to its bounded
+refinement limit. Accepted outputs preserve the actual evaluation
+counts and iteration records.
+
+The final estimator uses the arithmetic average of production
+iterations, as recorded by \texttt{weighted=False}. The joint result
+retains all 24 signed components: two FF options, six channels and LO/NLO
+orders. Their covariance is used for the uncertainty of the total;
+signed channel contributions are not converted into positive weights.
+The weighted iteration estimate is used only for its consistency
+diagnostic, not silently substituted for the reported estimator.
+
+The recorded error requirement for each FF prediction is
+\begin{equation}
+ \delta\sigma\leq
+ \max\!\left(0.05|\sigma|,
+ 0.005\,\left.\frac{\dd\sigma}{\dd p_T}\right|_{\mathrm{data}}
+ \Delta p_T\right).
+ \label{eq:mcgate}
+\end{equation}
+Additional gates require finite covariance, consistent nonnegative
+variances, agreement of the first and second iteration halves within
+the saved three-error pull, a chi-square tail probability at least
+$0.001$, and reconstruction of each FF total from its channel
+components. All 17 accepted bins pass their saved gates. Those gates
+establish numerical integration quality for the specified setup; they
+are not a test of agreement with the experimental central value.
+
+The plotted quantity is the bin integral divided by its transverse
+momentum width,
+\begin{equation}
+ \left\langle\frac{\dd\sigma}{\dd p_T}\right\rangle_b
+ =\frac{\sigma_b}{\Delta p_{T,b}}.
+ \label{eq:binaverage}
+\end{equation}
+The integration error is divided by the same width. The calculation
+integrates over the full $Q^2,y,p_T$ bin and over the convolution
+variables with acceptance, rather than evaluating the hard function
+at one representative point.
+
+\section{Numerical results, plots and comparison conventions}
+\label{sec:numresults}
+
+\subsection{The saved bin averages}
+
+Table~\ref{tab:bins} transcribes the saved SIDIS plot result. H1
+uncertainties are the recorded total experimental errors. KKP and
+Kretzer uncertainties are numerical integration errors only. Values
+are rounded for display; the JSON results retain the accepted precision.
+All cross-section entries in the table have units $\pb/\GeV$.
+
+% BEGIN GENERATED BIN TABLE
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}llrrr@{}}
+\caption{Accepted SIDIS bin averages and saved H1 data.\label{tab:bins}}\\
+\toprule
+$Q^2\ [\GeV^2]$ & $p_T\ [\GeV]$ & H1 & SIDIS KKP & SIDIS Kretzer\\
+\midrule
+\endfirsthead
+\toprule
+$Q^2\ [\GeV^2]$ & $p_T\ [\GeV]$ & H1 & SIDIS KKP & SIDIS Kretzer\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+2--4.5 & 2.5--2.8 & $215\pm 36$ & $199.9\pm 3.47$ & $142.6\pm 2.71$\\
+ & 2.8--3.3 & $146\pm 27$ & $130.1\pm 3.19$ & $95.75\pm 3.08$\\
+ & 3.3--4 & $60\pm 14$ & $64.9\pm 1.32$ & $47.29\pm 1.03$\\
+ & 4--5.2 & $21.7\pm 4.7$ & $24.31\pm 0.34$ & $16.94\pm 0.254$\\
+ & 5.2--8 & $4.37\pm 0.83$ & $5.264\pm 0.0767$ & $3.665\pm 0.0526$\\
+ & 8--15 & $0.29\pm 0.26$ & $0.4058\pm 0.00633$ & $0.2894\pm 0.00465$\\
+\midrule
+4.5--15 & 2.5--2.8 & $200\pm 34$ & $187.7\pm 3.18$ & $139.3\pm 2.55$\\
+ & 2.8--3.4 & $122\pm 21$ & $120.9\pm 1.81$ & $88.54\pm 1.42$\\
+ & 3.4--4.1 & $58\pm 11$ & $64.04\pm 1.06$ & $45.91\pm 0.801$\\
+ & 4.1--5.2 & $23\pm 4.9$ & $26.31\pm 0.441$ & $18.7\pm 0.338$\\
+ & 5.2--8 & $5.8\pm 1.2$ & $6.189\pm 0.108$ & $4.409\pm 0.0859$\\
+ & 8--15 & $0.31\pm 0.12$ & $0.5181\pm 0.00849$ & $0.3713\pm 0.00608$\\
+\midrule
+15--70 & 2.5--2.9 & $118\pm 18$ & $100.3\pm 2.6$ & $77.83\pm 2.41$\\
+ & 2.9--3.5 & $69.1\pm 8.8$ & $67.78\pm 1.32$ & $52.85\pm 1.23$\\
+ & 3.5--4.7 & $27.7\pm 4.7$ & $30.69\pm 0.424$ & $23.65\pm 0.339$\\
+ & 4.7--8 & $5.41\pm 0.96$ & $6.817\pm 0.122$ & $5.125\pm 0.0962$\\
+ & 8--15 & $0.21\pm 0.06$ & $0.4823\pm 0.00618$ & $0.3536\pm 0.00454$\\
+\end{longtable}
+\endgroup
+% END GENERATED BIN TABLE
+
+The corresponding accepted integrated cross sections are given in
+Table~\ref{tab:integrals}. The final row sums the measured bin domains
+included in these three panels; it is not an extrapolation outside
+their cuts and transverse-momentum range.
+
+% BEGIN GENERATED INTEGRAL TABLE
+\begin{table}[htbp]
+\centering
+\caption{Integrated cross sections in pb, with integration errors.\label{tab:integrals}}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+$Q^2\ [\GeV^2]$ & SIDIS KKP & SIDIS Kretzer\\
+\midrule
+2--4.5 & $217.2\pm 2.17$ & $156.4\pm 1.92$\\
+4.5--15 & $223.6\pm 1.72$ & $162.6\pm 1.35$\\
+15--70 & $143.5\pm 1.46$ & $110.6\pm 1.32$\\
+\midrule
+All included bins & $584.3\pm 3.13$ & $429.6\pm 2.69$\\
+\bottomrule
+\end{tabular}
+\end{table}
+% END GENERATED INTEGRAL TABLE
+
+\subsection{What the plotted comparisons mean}
+
+The solid blue and orange predictions in Figure~\ref{fig:crosssection}
+use the new SIDIS hats with KKP and Kretzer fragmentation, respectively.
+They are LO plus NLO bin averages with all six channels. The black
+points are the saved H1 measurements with total experimental errors.
+The complete BigTMD predictions use the recorded full coefficient
+formulas and the matched numerical inputs. Only the full six-channel
+BigTMD variant is present in these SIDIS figures.
+
+The dashed paper curves are the preserved original EPS curve vertices
+identified by the plotting inputs: hep-ph/0411212, Fig.~4, and
+arXiv:1808.04396, Fig.~3. They are displayed as curves. Their values
+used in the ratio figure are interpolated at each bin centre, whereas
+the SIDIS and BigTMD predictions are bin averages. A curve-to-bin-centre
+ratio is therefore not a reconstruction of the paper's bin-integrated
+prediction, particularly for the broadest transverse-momentum bins.
+
+The hard-coefficient BigTMD comparison in
+\path{bigTMD_comparison/} and the plotted cross-section overlay answer
+different questions. The former compares partonic coefficient formulas
+under matched symbolic conventions. The latter includes PDFs, FFs,
+phase-space integration, cuts and numerical errors. The saved exact
+coefficient agreement is not a claim that independent Monte Carlo
+central values must coincide digit for digit.
+
+\subsection{Ratio definition and uncertainties}
+
+The source defines the plotted theory-to-data ratio and its integration
+error by
+\begin{equation}
+ r_b=\frac{\langle\dd\sigma/\dd p_T\rangle_b^{\mathrm{theory}}}
+ { (\dd\sigma/\dd p_T)_b^{\mathrm{H1}}},\qquad
+ \delta r_b^{\mathrm{int}}=
+ \frac{\delta\langle\dd\sigma/\dd p_T\rangle_b^{\mathrm{int}}}
+ { (\dd\sigma/\dd p_T)_b^{\mathrm{H1}}}.
+ \label{eq:ratios}
+\end{equation}
+The gray band in Figure~\ref{fig:ratios} is the H1 relative total
+uncertainty around one. It is shown separately from the theory
+integration errors. The plots do not include PDF uncertainty, FF
+uncertainty, scale variation or an uncertainty from the azimuth
+approximation. The inherited Hgq MadGraph comparison remains a stated
+input caveat, as described in Section~\ref{sec:hgq}.
+
+\clearpage
+\begin{figure}[p]
+ \centering
+ \includegraphics[width=\textwidth,height=0.83\textheight,keepaspectratio]
+ {numerics/dsigmapibydpt/s03_cross_section.pdf}
+ \caption{The saved neutral-pion LO+NLO transverse-momentum comparison
+ using the six new SIDIS channels. Panels show the three $Q^2$ ranges.
+ SIDIS and full BigTMD predictions are bin averages; paper inputs are
+ curves. Theory errors represent numerical integration only. The
+ setup and inherited Hgq caveat are stated in the text.}
+ \label{fig:crosssection}
+\end{figure}
+\clearpage
+\begin{figure}[p]
+ \centering
+ \includegraphics[width=\textwidth,height=0.83\textheight,keepaspectratio]
+ {numerics/dsigmapibydpt/s03_ratios.pdf}
+ \caption{The saved theory-to-H1 ratios with KKP and Kretzer FFs.
+ SIDIS and full BigTMD entries use bin averages; paper ratios use
+ interpolated bin-centre values. The gray band shows experimental
+ relative total errors, while theory bars show integration errors.
+ Ratios use the definition in Eq.~\eqref{eq:ratios}.}
+ \label{fig:ratios}
+\end{figure}
+\clearpage
+
+\section{Files, reproducibility and the boundary of this report}
+
+\subsection{Symbolic channel and shared artifacts}
+
+Each channel directory contains its sequential stage sources and the
+corresponding \texttt{sNN\_result} folders. Its README records the
+channel conventions, normalization, accepted artifact dependencies and
+consumer boundaries. The \path{common/} directory holds implementations
+and results shared by channels, including Kira reduction databases,
+SubTropica inputs, evaluated master series and the final acceptance
+receipt. The layout adapter maps the original execution paths to the
+organized local folders; its preserved source and relocation records
+identify that path conversion.
+
+The \path{.cluster/} directory contains the cluster execution support.
+The accepted production uses bounded workers and resumable caches,
+keeping the main source and result artifacts locally. Sharing one
+master reduction across the channels saves repeated integration work
+without merging their charge or spectator conventions. The current
+document expansion does not rerun those physics stages.
+
+\subsection{Numerical artifact sequence}
+
+The numerical README specifies the stage contracts. The sequence starts
+with frozen hard-function inputs and exports their branch and charge
+components. It then derives the physical kinematic maps, builds the
+native multiprecision evaluator, validates its PDF/FF interfaces and
+coefficient values, assembles flavor luminosities and integrates bins.
+The independent precision comparison precedes publication of the
+accepted plot bundle. The following records connect the equations and
+plots in this report to the retained outputs:
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+Path within \texttt{numerics/} & Content used here\\
+\midrule
+\path{s04_result} & Defining physics inputs and symbolic maps,
+ Jacobians, lepton weights and laboratory momentum.\\
+\path{s06_result} & Numerical PDF, FF and coupling conventions
+ and interface checks.\\
+\path{s08_result} & Flavor, charge, neutral-FF and acceptance
+ contracts used in the convolution.\\
+\path{s09_result} & Seventeen accepted bins, components,
+ covariance, iteration records and integrated cross sections.\\
+\path{s10_result} & Independent coefficient precision checks.\\
+\path{s11_result} & Accepted numerical aggregate and its output
+ identity.\\
+\path{dsigmapibydpt/s03_result} & Bin averages, ratios, comparison
+ inputs and figure identities.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The accepted numerical run records no OOM and a peak memory of about
+$1.48$ GiB. Reusing its finished figures in this report requires only
+PDF typesetting. The source and regenerated report PDF are stored
+together in the SIDIS directory.
+
+\subsection{What an extension would have to supply}
+
+This is an NLO result. Reverse unitarity, Kira and explicit master
+evaluation provide a reusable integration organization, but this run
+does not establish an NNLO result. An extension would need its own
+higher-order amplitudes, cut and virtual families, master integrals and
+regulator depths, renormalization and factorization inputs, and final
+cancellation checks. None of those missing higher-order objects is
+supplied merely by the availability of the current two parent templates
+or by the agreement of the NLO coefficients with a reference.
+
+\begin{thebibliography}{9}
+\raggedright
+
+\bibitem{sidispaper}
+B. Wang, J. O. Gonzalez-Hernandez, T. C. Rogers and N. Sato,
+\emph{Large Transverse Momentum in Semi-Inclusive Deeply Inelastic
+Scattering Beyond Lowest Order}, arXiv:1903.01529v1 (2019).
+Supplied local paper in \path{scripts/}; especially Eqs.~(9), (12),
+(16)--(19), (21)--(24), (32), (34), (38) and (46)--(53).
+
+\bibitem{standalone}
+Supplied \path{standalone_nlo_qcd_reference/standalone_nlo_qcd-main/},
+including \path{manual/standalone.tex} and its FeynCalc workflow.
+This supplies the reverse-unitarity/Kira/SubTropica integration approach.
+The actual SIDIS routing, physical cut representations and normalization
+are defined by the SIDIS programs.
+
+\bibitem{eulerreference}
+Somogyi, arXiv:1101.3557, Eqs.~(7), (56) and Appendix B.
+This is the unevaluated Euler-representation reference recorded in
+\path{common/s08_cut_master_inputs.wl} and its accepted result.
+SubTropica evaluates the SIDIS inputs built from that representation.
+
+\bibitem{localcalculation}
+Local implementation and accepted results:
+\path{common/s02_definitions.wl},
+\path{common/s04_reduce_real.wl},
+\path{common/s08_cut_master_inputs.wl},
+\path{common/s10_evaluate_cut_masters.wl},
+\path{common/s14_uv_residues.wl},
+\path{common/s17_assemble_real.wl},
+\path{common/s19_assemble_virtual.wl} and
+\path{common/s20_final_hats.wl};
+the six channel \path{README.md} files; and the corresponding numbered
+result directories. Original executed sources and the layout manifest
+are retained under \path{common/previous_runs/layout_sources/} and
+\path{common/s21_result/layout.json}.
+
+\bibitem{localnumerics}
+Local numerical implementation and accepted outputs:
+\path{numerics/README.md};
+\path{numerics/s04_derive_convolution_maps.py},
+\path{numerics/s06_prepare_pdf_ff.py},
+\path{numerics/s08_derive_consumer_actions.py},
+\path{numerics/s09_convolve_channels.py},
+\path{numerics/s10_validate_precision.py},
+\path{numerics/s11_aggregate_replacement.py};
+their numbered result files; and
+\path{numerics/dsigmapibydpt/s03_result},
+which records the H1 points, paper-curve inputs, full BigTMD overlay,
+ratios and figure identities used in this report.
+
+\end{thebibliography}
+\end{document}

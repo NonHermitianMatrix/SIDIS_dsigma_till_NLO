@@ -1,0 +1,172 @@
+{
+  "CNickelIndex": "112|e|34|e4|e|:000|1|00|00|0|",
+  "MassScales": 1,
+  "FunctionClass": "MPL",
+  "EpsilonOrder": "0",
+  "References": [
+    "arXiv:1401.6766"
+  ],
+  "Records": [
+    {
+      "reference": "arXiv:1401.6766",
+      "authors": [
+        {
+          "full_name": "Feng, Bo",
+          "inspire_id": 1010183
+        },
+        {
+          "full_name": "Zhen, Jun",
+          "inspire_id": 2270526
+        },
+        {
+          "full_name": "Huang, Rijun",
+          "inspire_id": 1069552
+        },
+        {
+          "full_name": "Zhou, Kang",
+          "inspire_id": 1770938
+        }
+      ],
+      "description": "2-loop triangle-box with left bubble (legs 1,2 merged) and right triangle (separate legs 3,4). 1 scalar basis in 4D; 48 dimensional-shifted integral bases. Called $A_{213}$ in the paper.",
+      "epsOrders": "0",
+      "familyName": "two-loop four-point triangle-box",
+      "method": "unitarity, direct_integration",
+      "tools": [],
+      "ancillaryFiles": false,
+      "doi": "",
+      "texkey": "",
+      "masterCount": 1,
+      "dimScheme": "d=4-2*eps",
+      "computationLevel": "basis",
+      "location": "Sec. 5",
+      "recordId": "bx_7f04f03e7ebd",
+      "verified": false,
+      "verifiedAt": ""
+    }
+  ],
+  "Names": [
+    "two-loop four-point triangle-box"
+  ],
+  "Source": [
+    "arXiv"
+  ],
+  "Loops": 2,
+  "NumPropagators": 6,
+  "Results": [
+    {
+      "dimension": "4 - 2*eps",
+      "epsOrder": "0",
+      "epsOrders": "0",
+      "propExponents": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "propagators": [],
+      "numerators": [],
+      "internalMasses": [],
+      "externalMasses": [],
+      "substitutions": "",
+      "normalization": "Automatic",
+      "stVersion": "SubTropica v1.0.290",
+      "stCommand": "",
+      "contributor": "Sebastian Mizera",
+      "timestamp": "2026-04-15T02:42:44",
+      "verifiedAt": "2026-04-15T02:42:44",
+      "verified": true,
+      "method": "direct_integration",
+      "tools": [
+        "SubTropica"
+      ],
+      "methodLR": "Lungo",
+      "byteCount": 4136,
+      "alphabet": [
+        "s_{12}"
+      ],
+      "symbolWeight": 3,
+      "symbolTerms": 6,
+      "legOrder": [],
+      "resultDataId": "a2aa8cc05287bc91",
+      "resultTeXPreview": "\\frac{1}{\\varepsilon^3 s_{12}^2}-\\frac{2 i (-i \\log (s_{12})+\\pi +i)}{\\varepsilon^2 s_{12}^2}+\\frac{12 \\log ^2(s_{12})+24 i \\pi  \\log (s_{12})-24 \\log (s_{12})-13 \\pi ^2-24 i \\pi +24}{6 \\varepsilon s_{12}^2}+(\\text{more terms})+O\\left(\\varepsilon^1\\right)"
+    },
+    {
+      "resultType": "singularities",
+      "status": "proposal",
+      "recordId": "sg_20260614T055649Z",
+      "byEpsOrder": null,
+      "singularities": [
+        "MM[1]"
+      ],
+      "singularitiesTeX": [
+        "M_{1}^{2}"
+      ],
+      "singularitiesVerified": [
+        false
+      ],
+      "groundTruthAvailable": true,
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 0,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 2.73,
+        "chiEngine": "eulerDiscriminant"
+      },
+      "timestamp": "2026-06-14T05:56:49Z",
+      "contributor": "oddletters-v1a"
+    },
+    {
+      "resultType": "proposed-alphabet",
+      "status": "proposal",
+      "recordId": "pa_20260614T055649Z",
+      "byEpsOrder": null,
+      "evens": [
+        "MM[1]"
+      ],
+      "evensTeX": [
+        "M_{1}^{2}"
+      ],
+      "evensVerified": [
+        false
+      ],
+      "groundTruthAvailable": true,
+      "oddLetters": [],
+      "bareRootsNote": "no bare-root letters (V1a evens-only graph form; flagged-sqrt list empty)",
+      "refusals": [],
+      "provenance": {
+        "engine": "chi/PrefactorScale (single-scale; no Landau elimination)",
+        "stVersion": "1.2.4",
+        "seed": 1234,
+        "chi": 0,
+        "confirmPrimes": null,
+        "confirmAgree": null,
+        "wallSeconds": 2.73,
+        "chiEngine": "eulerDiscriminant"
+      },
+      "timestamp": "2026-06-14T05:56:49Z",
+      "contributor": "oddletters-v1a"
+    }
+  ],
+  "edges": "{{{1, 2}, 0}, {{1, 2}, 0}, {{1, 3}, 0}, {{3, 4}, 0}, {{3, 5}, 0}, {{4, 5}, 0}}",
+  "nodes": "{{2, M[1]}, {4, 0}, {5, 0}}",
+  "CanonicalName": "1-mass extended core with bubble insertion",
+  "MassConfig": {
+    "numEdges": 6,
+    "numMassiveEdges": 0,
+    "numMasslessEdges": 6,
+    "distinctInternalMasses": 0,
+    "internalMassLabels": [],
+    "edgeMassPattern": "000000",
+    "numExtLegs": 3,
+    "numOnshellMassiveExtLegs": 1,
+    "numMasslessExtLegs": 2,
+    "extLegSignature": "M00"
+  },
+  "Subsectors": [],
+  "ParentSectors": []
+}

@@ -1,0 +1,1 @@
+../common/s12_virtual_master_inputs.wl

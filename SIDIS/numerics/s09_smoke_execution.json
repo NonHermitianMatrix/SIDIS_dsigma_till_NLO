@@ -1,0 +1,24 @@
+{
+  "stage": "s09_smoke",
+  "source": "s09_convolve_channels.py",
+  "source_sha256": "f8e58cc34e24a4f5759d79056b23825157df31ea3ac7943166ba4bbe45ec87cc",
+  "job_id": "14693811",
+  "host": "n6643",
+  "exit_code": 0,
+  "success_marker": false,
+  "result_checks": {
+    "s09_cache/s09_smoke_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/s09_convolve_channels.py",
+    "--mode",
+    "smoke"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 122314752,
+  "elapsed_seconds": 2.6338474019867135,
+  "completed_utc": "2026-09-07T16:54:31.216189+00:00"
+}

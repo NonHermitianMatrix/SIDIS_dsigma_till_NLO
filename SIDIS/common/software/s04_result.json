@@ -1,0 +1,32 @@
+{
+  "commit": "e639a0059d28e97a67f62f7764f49626d4054e9c",
+  "source_url": "https://github.com/scipopt/scip/tree/v602",
+  "configuration": [
+    "/u/local/apps/cmake/3.19.5/gcc-4.8.5/bin/cmake",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/scip-source/scip-e639a0059d28e97a67f62f7764f49626d4054e9c",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DSHARED=ON",
+    "-DLPS=none",
+    "-DSYM=none",
+    "-DEXPRINT=none",
+    "-DIPOPT=OFF",
+    "-DZIMPL=OFF",
+    "-DREADLINE=OFF",
+    "-DGMP=OFF",
+    "-DZLIB=OFF",
+    "-DCMAKE_C_FLAGS_RELEASE=-O1 -DNDEBUG",
+    "-DCMAKE_CXX_FLAGS_RELEASE=-O1 -DNDEBUG"
+  ],
+  "libraries": {
+    "libscip.so": "a36700a646b461074966e6d05ace3f3d754d5b484d13574f55caee24cb4e3048",
+    "libscip.so.6.0": "a36700a646b461074966e6d05ace3f3d754d5b484d13574f55caee24cb4e3048",
+    "libscip.so.6.0.2.0": "a36700a646b461074966e6d05ace3f3d754d5b484d13574f55caee24cb4e3048"
+  },
+  "probe": {
+    "exit_code": 0,
+    "stdout": "SIDIS_POLYMAKE_MODULE_OK\n",
+    "stderr": ""
+  },
+  "wrapper_sha256": "4f7ff66cdd73311723ce98b325ae695af178e1d283971e32721182a12a4f162f",
+  "accepted": true
+}

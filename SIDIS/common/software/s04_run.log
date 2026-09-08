@@ -1,0 +1,51 @@
+MONITOR_START job=14692926 host=n7439 kernel_pid=260938
+Configure pinned SCIP 6.0.2 shared runtime
+-- Build shared libraries: ON
+-- Build type: Release
+CMake Warning (dev) at /u/local/apps/cmake/3.19.5/gcc-4.8.5/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake:426 (message):
+  The package name passed to `find_package_handle_standard_args` (CRITERION)
+  does not match the name of the calling package (Criterion).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/Modules/FindCriterion.cmake:27 (find_package_handle_standard_args)
+  CMakeLists.txt:447 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find CRITERION (missing: CRITERION_LIBRARY CRITERION_INCLUDE_DIR) 
+CMake Warning at doc/CMakeLists.txt:19 (message):
+  Could not find all of doxygen, python, php, and bash in system path, which
+  are required for generation of documentation
+
+
+CMake Warning (dev) at /u/local/apps/cmake/3.19.5/gcc-4.8.5/share/cmake-3.19/Modules/FindPackageHandleStandardArgs.cmake:426 (message):
+  The package name passed to `find_package_handle_standard_args` (CRITERION)
+  does not match the name of the calling package (Criterion).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  cmake/Modules/FindCriterion.cmake:27 (find_package_handle_standard_args)
+  applications/Ringpacking/tests/CMakeLists.txt:32 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find CRITERION (missing: CRITERION_LIBRARY CRITERION_INCLUDE_DIR) 
+-- The following REQUIRED packages have been found:
+
+ * SCIP
+
+-- The following OPTIONAL packages have not been found:
+
+ * Criterion
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/software/s04_scip_build
+Compile with two threads; optional SCIP LP/NLP solvers are not used by the Newton-polytope calculation
+-- Git hash: e639a0059d28e97a67f62f7764f49626d4054e9c
+[  0%] Built target scip_update_githash
+[100%] Built target libscip
+Remaining module dependencies {}
+SIDIS_POLYMAKE_MODULE_OK
+ 
+S04_SUCCESS: pinned runtime built and Polymake modules loaded.
+MONITOR_WAKE {"stage": "s04", "source": "s04_build_scip.py", "source_sha256": "1dfc1bf09e95ddce1e43b3d440966eba5d9f800b1c5546265e0be26b1b77e722", "job_id": "14692926", "host": "n7439", "exit_code": 0, "success_marker": true, "accepted_execution": true, "guard": null, "peak_rss_bytes": 195579904, "elapsed_seconds": 20.40711010247469, "completed_utc": "2026-09-07T12:12:23.994035+00:00"}

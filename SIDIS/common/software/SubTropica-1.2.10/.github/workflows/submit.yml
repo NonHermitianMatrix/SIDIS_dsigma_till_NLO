@@ -1,0 +1,470 @@
+# .github/workflows/submit.yml
+#
+# Triggered by workflow_dispatch from the Cloudflare Worker.
+# Parses a JSON payload, writes the result to the appropriate
+# library entry (JSON format), and opens a PR targeting main.
+
+name: Process Submission
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: "Inline JSON payload from SubTropica (legacy path, results-split spec §5.2; superseded by submission_key for staged submissions)"
+        required: false
+        type: string
+      submission_key:
+        description: "R2 staged-submission key (64-hex sha256) minted by the submit worker (results-split spec §5.2)"
+        required: false
+        type: string
+      sha256:
+        description: "Expected sha256 of the staged payload; verified after the /staged fetch (results-split spec §5.2)"
+        required: false
+        type: string
+      size:
+        description: "Staged payload size in bytes (informational, results-split spec §5.2)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # Node 22 for the TeX parseability gate (the harness npm-installs its
+      # pinned katex into a scratch dir on first run; node >= 20 required).
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Resolve payload (staged or inline)
+        env:
+          SUBMISSION_KEY: ${{ inputs.submission_key }}
+          EXPECTED_SHA: ${{ inputs.sha256 }}
+          INLINE_PAYLOAD: ${{ inputs.payload }}
+          STAGED_TOKEN: ${{ secrets.STAGED_TOKEN }}
+        run: |
+          set -euo pipefail
+          # payload.json is transport scratch, not library content; keep it
+          # out of the "git add -A" sweep in the Create PR step.
+          echo "payload.json" >> .git/info/exclude
+          if [ -n "$SUBMISSION_KEY" ]; then
+            # Worker base matches ui/app.js SUBMIT_WORKER_BASE (the worker is
+            # served on its workers.dev subdomain, not on subtropi.ca).
+            code=$(curl -sS -o payload.json -w '%{http_code}' \
+              -H "Authorization: Bearer $STAGED_TOKEN" \
+              "https://subtropica-submit.subtropica.workers.dev/staged/$SUBMISSION_KEY")
+            if [ "$code" = "404" ]; then
+              echo "::error::Submission expired or unknown (R2 lifecycle is 30 days); please resubmit." ; exit 1
+            fi
+            [ "$code" = "200" ] || { echo "::error::Staged fetch failed (HTTP $code)"; exit 1; }
+            actual=$(shasum -a 256 payload.json | cut -d' ' -f1)
+            [ "$actual" = "$EXPECTED_SHA" ] || {
+              echo "::error::Payload sha256 mismatch (got $actual, expected $EXPECTED_SHA)"; exit 1; }
+          elif [ -n "$INLINE_PAYLOAD" ]; then
+            printf '%s' "$INLINE_PAYLOAD" > payload.json   # legacy path
+          else
+            echo "::error::Neither submission_key nor payload provided"; exit 1
+          fi
+
+      - name: Parse and write entry
+        id: write
+        shell: python3 {0}
+        run: |
+          import json, os, hashlib
+
+          # Written by "Resolve payload (staged or inline)"; reading a file
+          # instead of an env var retires the ~128 KiB env ceiling
+          # (results-split spec §5.2).
+          payload = json.load(open("payload.json"))
+
+          def _extract_graph_from_stcommand(cmd):
+              # Pulls "{edges, nodes}" out of "STIntegrate[{edges,nodes}, ...]"
+              # by balanced-brace scanning. Returns (edges_str, nodes_str)
+              # both as Mma list strings, or None on parse failure.
+              if not cmd or not isinstance(cmd, str):
+                  return None
+              ob = cmd.find("[")
+              if ob < 0:
+                  return None
+              depth = 1
+              arg_start = -1
+              for i in range(ob + 1, len(cmd)):
+                  c = cmd[i]
+                  if c == "[":
+                      depth += 1
+                  elif c == "]":
+                      depth -= 1
+                      if depth == 0:
+                          break
+                  elif c == "{" and depth == 1:
+                      arg_start = i
+                      break
+              if arg_start < 0:
+                  return None
+              bdepth = 0
+              j = arg_start
+              while j < len(cmd):
+                  if cmd[j] == "{":
+                      bdepth += 1
+                  elif cmd[j] == "}":
+                      bdepth -= 1
+                      if bdepth == 0:
+                          j += 1
+                          break
+                  j += 1
+              inner = cmd[arg_start + 1: j - 1]  # strip outer {}
+              bdepth = 0
+              split_at = -1
+              for i, c in enumerate(inner):
+                  if c == "{" or c == "[":
+                      bdepth += 1
+                  elif c == "}" or c == "]":
+                      bdepth -= 1
+                  elif c == "," and bdepth == 0:
+                      split_at = i
+                      break
+              if split_at < 0:
+                  return None
+              return inner[:split_at].strip(), inner[split_at + 1:].strip()
+
+          # Backwards compat: kernels prior to the v1.1.5+ payload bump
+          # don't ship "edges"/"nodes" as top-level fields, but stCommand
+          # always contains the graph as its first argument.
+          if (not payload.get("edges") or not payload.get("nodes")) and payload.get("stCommand"):
+              g = _extract_graph_from_stcommand(payload["stCommand"])
+              if g is not None:
+                  if not payload.get("edges"):
+                      payload["edges"] = g[0]
+                  if not payload.get("nodes"):
+                      payload["nodes"] = g[1]
+
+          import re
+
+          def _count_top_brace_items(s):
+              """Count top-level {...} items in a Mma list string '{a, b, c}'."""
+              if not isinstance(s, str):
+                  return 0
+              s = s.strip()
+              if not s or s == "{}":
+                  return 0
+              if s.startswith("{") and s.endswith("}"):
+                  s = s[1:-1].strip()
+              if not s:
+                  return 0
+              depth, count = 0, 1
+              for ch in s:
+                  if ch in "{[":
+                      depth += 1
+                  elif ch in "}]":
+                      depth -= 1
+                  elif ch == "," and depth == 0:
+                      count += 1
+              return count
+
+          def _count_distinct_internal_vertices(edges_str):
+              """Distinct vertex IDs in '{{{v1,v2},m},{{v3,v4},m},...}'."""
+              if not isinstance(edges_str, str):
+                  return 0
+              verts = set()
+              for m in re.finditer(r"\{\s*(\d+)\s*,\s*(\d+)\s*\}", edges_str):
+                  verts.add(int(m.group(1)))
+                  verts.add(int(m.group(2)))
+              return len(verts)
+
+          # Derive Loops/Legs/Propagators from edges/nodes.  STSubmitResult
+          # ships these as integers via $nloops/$nl/$ne (SubTropica.wl ~25283),
+          # but those globals are only populated by the kernel-server /api/lock
+          # path; notebook users calling STIntegrate directly then
+          # STSubmitResult[] ship zeros.  Fall back to the payload integers
+          # only if the edges/nodes parse yields nothing usable.
+          n_props_derived = _count_top_brace_items(payload.get("edges", ""))
+          n_legs_derived  = _count_top_brace_items(payload.get("nodes", ""))
+          n_verts_derived = _count_distinct_internal_vertices(payload.get("edges", ""))
+          n_loops_derived = (n_props_derived - n_verts_derived + 1
+                             if n_props_derived > 0 and n_verts_derived > 0 else 0)
+
+          def _payload_int(k):
+              v = payload.get(k, 0)
+              return v if isinstance(v, int) else 0
+
+          loops_val = n_loops_derived if n_loops_derived > 0 else _payload_int("loops")
+          legs_val  = n_legs_derived  if n_legs_derived  > 0 else _payload_int("legs")
+          props_val = n_props_derived if n_props_derived > 0 else _payload_int("propagators")
+
+          cnickel = payload["cnickelIndex"]
+          parts = cnickel.split(":", 1)
+          topo_nickel = parts[0]
+          mass_nickel = parts[1] if len(parts) > 1 else ''.join('0' if c != '|' else '|' for c in topo_nickel)
+
+          # --- CNI <-> result mass-consistency check ------------------------
+          # Close the hole where a MASSIVE result is filed under a MASSLESS
+          # CNI (e.g. a massive triangle under e12|e2|e|:000|00|0|).  The CNI
+          # mass-config (the part after ':') encodes one slot per edge/leg:
+          # '0' = massless, any other char = a named mass scale.  A FULLY
+          # MASSLESS mass-config (only '0' and '|') is therefore incompatible
+          # with any declared internalMasses or externalMasses.
+          #
+          # CONSERVATIVE BY DESIGN: only this one direction is enforced.  Many
+          # legitimate massive results ship empty mass lists because the
+          # masses are absorbed into benign scale substitutions (e.g. {MM->1}),
+          # so we do NOT require a massive CNI to carry nonempty mass lists and
+          # we do NOT match per-mass counts -- those would false-reject ~170+
+          # existing library entries.  Alignment-free, so robust to multi-digit
+          # vertex labels / mass scales.  Verified against all 861 library
+          # entries: fires on exactly the two known-bad cases with zero
+          # false-rejects.
+          def _st_cni_is_massless(cni):
+              if not isinstance(cni, str) or ":" not in cni:
+                  return False   # unparseable -> do not assume massless
+              color = cni.split(":", 1)[1]
+              return all(ch in "0|" for ch in color)
+
+          def _st_mass_list_nonempty(v):
+              # Treat None, [], {}, '', '{}', '{ }' as empty so benign
+              # payloads are never mistaken for massive ones.
+              if v is None:
+                  return False
+              if isinstance(v, (list, tuple, dict, set)):
+                  return len(v) > 0
+              if isinstance(v, str):
+                  return v.strip() not in ("", "{}", "{ }")
+              return True
+
+          _decl_internal = payload.get("internalMasses")
+          _decl_external = payload.get("externalMasses")
+          if _st_cni_is_massless(cnickel) and (
+                  _st_mass_list_nonempty(_decl_internal)
+                  or _st_mass_list_nonempty(_decl_external)):
+              import sys as _sys
+              print(
+                  "MASS-CONSISTENCY FAILURE: CNickelIndex '" + str(cnickel)
+                  + "' has a fully-massless mass-config (all '0'), but the "
+                  + "submission declares masses: internalMasses="
+                  + repr(_decl_internal) + ", externalMasses="
+                  + repr(_decl_external) + ". A massive result cannot be filed "
+                  + "under a massless CNI; the CNI mass-config and the declared "
+                  + "internal/external masses are inconsistent. Rejecting "
+                  + "submission (no entry written).")
+              _sys.exit(1)
+          # -----------------------------------------------------------------
+
+          # --- topology guard (incident 2026-06-06, PRs #36/#39) ------------
+          # Two checks, in .github/scripts/submission_topology_guard.py:
+          # (1) the bare Nickel key must decode to a graph isomorphic (legs
+          # included) to the payload edges/nodes graph; (2) a submission that
+          # would CREATE a new topology directory must not be isomorphic to an
+          # existing library topology (PR #39 minted the non-canonical
+          # e12|e3|33|| for a graph the library already keys as 112|3|e3|e|).
+          # The guard prints its reason and the run fails before any write.
+          import subprocess as _sp
+          import sys as _gsys
+          _guard = _sp.run(
+              [_gsys.executable,
+               ".github/scripts/submission_topology_guard.py",
+               "--bare", topo_nickel,
+               "--edges", str(payload.get("edges", "")),
+               "--nodes", str(payload.get("nodes", "")),
+               "--library", "library-bundled"],
+              capture_output=True, text=True)
+          print(_guard.stdout, end="")
+          if _guard.returncode != 0:
+              print(_guard.stderr, end="")
+              _gsys.exit(1)
+          # -----------------------------------------------------------------
+
+          def sanitize(s):
+              # Replace Nickel-index separators with underscores so the result
+              # is safe as both a directory name AND a git branch name.  Git
+              # refs forbid ':' (among others), and branches built from the
+              # full CNI include the topology/mass separator.
+              return s.replace("|", "_").replace(":", "_")
+
+          topo_dir = f"library-bundled/{sanitize(topo_nickel)}"
+          config_dir = f"{topo_dir}/{sanitize(mass_nickel)}"
+          os.makedirs(config_dir, exist_ok=True)
+
+          # Write topology.json if missing
+          topo_path = f"{topo_dir}/topology.json"
+          if not os.path.exists(topo_path):
+              topo_data = {
+                  "NickelIndex": topo_nickel,
+                  "Name": "",
+                  "Loops": loops_val,
+                  "Legs": legs_val,
+                  "Propagators": props_val,
+                  "LoopediaURL": ""
+              }
+              with open(topo_path, "w") as f:
+                  json.dump(topo_data, f, indent="\t")
+                  f.write("\n")
+
+          # Build result record (matches STSaveResult schema)
+          result_record = {
+              "resultCompressed": payload["resultCompressed"],
+              "resultTeX": payload.get("resultTeX", ""),
+              "dimension": payload["dimension"],
+              "epsOrder": payload["epsOrder"],
+              "propExponents": payload.get("propExponents", []),
+              "propagators": payload.get("propagators", []),
+              "numerators": payload.get("numerators", []),
+              "internalMasses": payload.get("internalMasses", []),
+              "externalMasses": payload.get("externalMasses", []),
+              "substitutions": payload.get("substitutions", "{}"),
+              "normalization": payload.get("normalization", "Automatic"),
+              "stVersion": payload.get("stVersion", "unknown"),
+              "stCommand": payload.get("stCommand", ""),
+              "contributor": payload.get("contributor", ""),
+              "timestamp": payload.get("timestamp", ""),
+              "byteCount": payload.get("byteCount", 0),
+              # Numerical verification (STSubmitResult enforces this
+              # before reaching the Worker; fields are always present).
+              # UI badge reads verified/verifiedMethod/verifiedMaxRelErr/
+              # verifiedAt from cached library entries.
+              "verified": payload.get("verified", False),
+              "verifiedMethod": payload.get("verifiedMethod", ""),
+              "verifiedTolerance": payload.get("verifiedTolerance", 0),
+              "verifiedMaxRelErr": payload.get("verifiedMaxRelErr", -1),
+              "verifiedAt": payload.get("verifiedAt", ""),
+              "verifiedKinPoint": payload.get("verifiedKinPoint", [])
+          }
+
+          # Pass-through symbol-level fields computed by STSubmitResult
+          # (SubTropica.wl ~25307-25322): symbolTeX/alphabet/symbolWeight/
+          # symbolTerms always; normalizedSymbolTeX/wDefinitions/
+          # normalizedAlphabet/symbolScale/normalizedSymbolTerms when
+          # stComputeNormalizedSymbolFields succeeded; algebraicLetters
+          # only for results carrying Wm/Wp letters.  Add each field only
+          # when the kernel sent it, so legacy payloads stay clean.
+          for k in ("symbolTeX", "alphabet", "symbolWeight", "symbolTerms",
+                    "normalizedSymbolTeX", "normalizedAlphabet", "wDefinitions",
+                    "symbolScale", "normalizedSymbolTerms", "algebraicLetters"):
+              if k in payload:
+                  result_record[k] = payload[k]
+
+          import sys as _ssys
+          _ssys.path.insert(0, "scripts")
+          import _results_split_common as _rs
+
+          # Old-kernel preview fallback (spec §3.4): payloads from kernels
+          # that do not ship resultTeXPreview get the copy-or-flag rule
+          # inside split_record; new kernels' preview passes through.
+          if "resultTeXPreview" in payload:
+              result_record["resultTeXPreview"] = payload["resultTeXPreview"]
+              if payload.get("resultTeXTruncated"):
+                  result_record["resultTeXTruncated"] = True
+
+          # Read existing entry.json or create new
+          entry_path = f"{config_dir}/entry.json"
+          if os.path.exists(entry_path):
+              with open(entry_path) as f:
+                  entry = json.load(f)
+              if "Results" not in entry:
+                  entry["Results"] = []
+              # Dedup: skip if an identical result already exists
+              # (same dimension + epsOrder + propExponents + substitutions + normalization)
+              is_dup = any(
+                  r.get("dimension") == result_record["dimension"]
+                  and r.get("epsOrder") == result_record["epsOrder"]
+                  and r.get("propExponents") == result_record["propExponents"]
+                  and r.get("substitutions") == result_record["substitutions"]
+                  and r.get("normalization") == result_record["normalization"]
+                  for r in entry["Results"]
+              )
+              if is_dup:
+                  print(f"Duplicate result for {cnickel}, skipping.")
+              else:
+                  entry["Results"].append(result_record)
+          else:
+              # New-entry skeleton.  Field set + types match the canonical
+              # entry.json schema documented in docs/naming-conventions.md
+              # §9 (CanonicalName / MassConfig / Subsectors / ParentSectors
+              # are populated empty so post-processing scripts —
+              # _build_manifest.py, build_subtopology_index.py, the diagram-
+              # naming pipeline — can fill them in without conditional
+              # key-existence checks).  Source is a list (290/300 sampled
+              # entries store it as a list; the string form was a bug).
+              entry = {
+                  "CNickelIndex": cnickel,
+                  "MassScales": payload.get("massScales", 0),
+                  "FunctionClass": "MPL",
+                  "EpsilonOrder": str(payload["epsOrder"]),
+                  "References": [],
+                  "Records": [],
+                  "Source": ["SubTropica"],
+                  "Loops": loops_val,
+                  "NumPropagators": props_val,
+                  # Stringified Mma lists ("{{{1,2},0},...}" form) supplied
+                  # by STSubmitResult so CocoTropica + the public UI can
+                  # render the diagram without round-tripping the kernel.
+                  "edges": payload.get("edges", ""),
+                  "nodes": payload.get("nodes", ""),
+                  "CanonicalName": "",
+                  "MassConfig": {},
+                  "Subsectors": [],
+                  "ParentSectors": [],
+                  "Results": [result_record],
+                  "Names": []
+              }
+
+          _rs.write_split_entry(entry_path, entry)
+
+          # Set outputs
+          short_hash = hashlib.md5(json.dumps(payload).encode()).hexdigest()[:8]
+          branch = f"submit/{sanitize(cnickel)}-{short_hash}"
+          # Sanitize dimension for shell safety (replace spaces, *, etc.)
+          dim_safe = payload['dimension'].replace(' ', '').replace('*', '')
+          title = f"Add result: {sanitize(cnickel)} eps^{payload['epsOrder']} D={dim_safe}"
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"branch={branch}\n")
+              f.write(f"title={title}\n")
+              f.write(f"cnickel={cnickel}\n")
+
+      - name: TeX parseability gate (submission)
+        id: texgate
+        run: |
+          set -euo pipefail
+          # The TeX parseability harness lives under scripts/tests/, which is
+          # stripped from the public release. Skip the gate when it is absent
+          # (the split-write itself does not depend on it); run it on dev.
+          if [ ! -f scripts/tests/test_tex_parseability.mjs ]; then
+            echo "skipped: TeX harness not present in this tree (stripped public release)"
+            exit 0
+          fi
+          node scripts/tests/test_tex_parseability.mjs --json /tmp/texgate.json && exit 0
+          # Remediation path (results-split spec §8.6): a failure ONLY in the
+          # new record's resultTeXPreview degrades to empty preview + flag,
+          # not a reject. Any other failure exits 1 here and fails the run.
+          python3 .github/scripts/texgate_remediate.py /tmp/texgate.json
+          node scripts/tests/test_tex_parseability.mjs
+
+      - name: Create PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_TITLE: ${{ steps.write.outputs.title }}
+          PR_BRANCH: ${{ steps.write.outputs.branch }}
+          PR_CNICKEL: ${{ steps.write.outputs.cnickel }}
+        run: |
+          git config user.name "subtropica-bot"
+          git config user.email "subtropica-bot@users.noreply.github.com"
+          git checkout -b "$PR_BRANCH"
+          git add -A
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Add result for $PR_CNICKEL"
+          git push -u origin "$PR_BRANCH"
+          gh pr create \
+            --title "$PR_TITLE" \
+            --body "Automated submission from SubTropica.
+
+          **Topology**: \`$PR_CNICKEL\`
+
+          Submitted via SubTropica library submission system." \
+            --base main

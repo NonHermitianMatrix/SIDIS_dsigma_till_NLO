@@ -1,0 +1,45 @@
+<|"InputHash" -> 
+  304838671747087279424231957699229214819143419428287621085503624369901238683\
+73, "Channel" -> "Hqq", "Mode" -> "Pg", "Diagram" -> 3, 
+ "UVPowers" -> <|4 -> <|GLI["UV", {3, 0, 0, 0}] -> 
+      ((I/4)*(-2 + D)^2*Q2^2*(-1 + SUNN)*(1 + SUNN)*(Q2 + s + t)^2)/
+       (s*SUNN^2*t^2), GLI["UV", {2, 0, 0, 0}] -> 
+      ((I/4)*(-2 + D)*(-1 + SUNN)*(1 + SUNN)*(6*Q2^2*s - 3*D*Q2^2*s + 
+         2*Q2*s^2 - D*Q2*s^2 + 6*Q2^2*t - 3*D*Q2^2*t + 8*Q2*s*t - 
+         6*D*Q2*s*t + 12*s^2*t - 8*D*s^2*t + D^2*s^2*t + 6*Q2*t^2 - 
+         3*D*Q2*t^2 + 20*s*t^2 - 10*D*s*t^2 + D^2*s*t^2))/(s*SUNN^2*t^2), 
+     GLI["UV", {1, 0, 0, 0}] -> ((I/4)*(-2 + D)*(-1 + SUNN)*(1 + SUNN)*
+        (2*Q2^2 - D*Q2^2 + 2*Q2*s - D*Q2*s + 2*Q2*t - D*Q2*t + 2*D*s*t - 
+         4*t^2 + 2*D*t^2))/(s*SUNN^2*t^2), GLI["UV", {3, -1, 0, 0}] -> 
+      ((I/4)*(-2 + D)*Q2*(-1 + SUNN)*(1 + SUNN)*(-6*Q2*s + 3*D*Q2*s - 2*s^2 + 
+         D*s^2 - 2*Q2*t + D*Q2*t + 2*D*s*t - 2*t^2 + D*t^2))/(s*SUNN^2*t^2), 
+     GLI["UV", {2, -1, 0, 0}] -> ((-1/4*I)*(-2 + D)*(-1 + SUNN)*(1 + SUNN)*
+        (4*Q2^2 - 2*D*Q2^2 + 4*Q2*s - 2*D*Q2*s + 4*Q2*t - 2*D*Q2*t + 6*s*t + 
+         D*s*t - 2*t^2 + D*t^2))/(s*SUNN^2*t^2), GLI["UV", {3, -2, 0, 0}] -> 
+      ((-1/4*I)*(-2 + D)*(-1 + SUNN)*(1 + SUNN)*(-2*Q2^2 + D*Q2^2 - 2*Q2*s + 
+         D*Q2*s - 2*Q2*t + D*Q2*t - 6*s*t + D*s*t))/(s*SUNN^2*t^2), 
+     GLI["UV", {3, 0, -1, 0}] -> ((I/2)*(-2 + D)^2*Q2*(-1 + SUNN)*(1 + SUNN)*
+        (Q2 + s + t)^2)/(s*SUNN^2*t^2), GLI["UV", {2, 0, -1, 0}] -> 
+      ((-1/4*I)*(-2 + D)*(-1 + SUNN)*(1 + SUNN)*(-6*Q2*s + 3*D*Q2*s - 2*s^2 + 
+         D*s^2 - 6*Q2*t + 3*D*Q2*t - 4*s*t + 4*D*s*t - 6*t^2 + 3*D*t^2))/
+       (s*SUNN^2*t^2), GLI["UV", {3, -1, -1, 0}] -> 
+      ((I/4)*(-2 + D)*(-1 + SUNN)*(1 + SUNN)*(-6*Q2*s + 3*D*Q2*s - 2*s^2 + 
+         D*s^2 - 2*Q2*t + D*Q2*t + 2*D*s*t - 2*t^2 + D*t^2))/(s*SUNN^2*t^2), 
+     GLI["UV", {3, 0, -2, 0}] -> ((I/4)*(-2 + D)^2*(-1 + SUNN)*(1 + SUNN)*
+        (Q2 + s + t)^2)/(s*SUNN^2*t^2), GLI["UV", {3, 0, 0, -1}] -> 
+      ((-1/2*I)*(-2 + D)^2*Q2*(Q2 + s)*(-1 + SUNN)*(1 + SUNN)*(Q2 + s + t))/
+       (s*SUNN^2*t^2), GLI["UV", {2, 0, 0, -1}] -> 
+      ((I/4)*(-2 + D)*(-1 + SUNN)*(1 + SUNN)*(-6*Q2*s + 3*D*Q2*s - 2*s^2 + 
+         D*s^2 - 6*Q2*t + 3*D*Q2*t + 2*s*t + D*s*t))/(s*SUNN^2*t^2), 
+     GLI["UV", {3, -1, 0, -1}] -> ((-1/4*I)*(-2 + D)*(-1 + SUNN)*(1 + SUNN)*
+        (-6*Q2*s + 3*D*Q2*s - 2*s^2 + D*s^2 - 2*Q2*t + D*Q2*t + 6*s*t - 
+         D*s*t))/(s*SUNN^2*t^2), GLI["UV", {3, 0, -1, -1}] -> 
+      ((-1/2*I)*(-2 + D)^2*(Q2 + s)*(-1 + SUNN)*(1 + SUNN)*(Q2 + s + t))/
+       (s*SUNN^2*t^2), GLI["UV", {3, 0, 0, -2}] -> 
+      ((I/4)*(-2 + D)^2*(Q2 + s)^2*(-1 + SUNN)*(1 + SUNN))/
+       (s*SUNN^2*t^2)|>|>, "OriginalInputHash" -> 717624544346222184773739137\
+01572087456071155972420193355146121083404538047719, 
+ "UnchangedMapSource" -> "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_2026090\
+7/s14_previous_14692901/s14_uv_residues.wl", "OriginalFile" -> "/u/scratch/r/\
+rushil/AI_Assisted_SIDIS/SIDIS_20260907/common/s14_uv/9ea81c1dc5f4ba9538fd040\
+8f4a4df75ff2bf274d5e5337ff210dd8c33976ce7/s14_Hqq_Pg_3.wl"|>

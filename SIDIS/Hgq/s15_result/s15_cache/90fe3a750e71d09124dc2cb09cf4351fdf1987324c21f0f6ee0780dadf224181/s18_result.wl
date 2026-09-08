@@ -1,0 +1,273 @@
+<|"Channel" -> "Hgq", "Mode" -> "Pg", "Coefficients" -> 
+  <|FeynCalc`GLI["V01", {0, 1, 0, 1}] -> 
+    (I*(384*Q2^4 - 392*D*Q2^4 + 142*D^2*Q2^4 - 21*D^3*Q2^4 + D^4*Q2^4 + 
+       1632*Q2^3*s - 1624*D*Q2^3*s + 576*D^2*Q2^3*s - 84*D^3*Q2^3*s + 
+       4*D^4*Q2^3*s + 2544*Q2^2*s^2 - 2480*D*Q2^2*s^2 + 868*D^2*Q2^2*s^2 - 
+       126*D^3*Q2^2*s^2 + 6*D^4*Q2^2*s^2 + 1728*Q2*s^3 - 1656*D*Q2*s^3 + 
+       576*D^2*Q2*s^3 - 84*D^3*Q2*s^3 + 4*D^4*Q2*s^3 + 432*s^4 - 408*D*s^4 + 
+       142*D^2*s^4 - 21*D^3*s^4 + D^4*s^4 + 96*Q2^3*t - 104*D*Q2^3*t + 
+       36*D^2*Q2^3*t - 4*D^3*Q2^3*t + 224*Q2^2*s*t - 264*D*Q2^2*s*t + 
+       100*D^2*Q2^2*s*t - 12*D^3*Q2^2*s*t + 128*Q2*s^2*t - 208*D*Q2*s^2*t + 
+       92*D^2*Q2*s^2*t - 12*D^3*Q2*s^2*t - 48*D*s^3*t + 28*D^2*s^3*t - 
+       4*D^3*s^3*t + 96*Q2^2*t^2 - 104*D*Q2^2*t^2 + 36*D^2*Q2^2*t^2 - 
+       4*D^3*Q2^2*t^2 + 128*Q2*s*t^2 - 160*D*Q2*s*t^2 + 64*D^2*Q2*s*t^2 - 
+       8*D^3*Q2*s*t^2 - 48*D*s^2*t^2 + 28*D^2*s^2*t^2 - 4*D^3*s^2*t^2))/
+     ((-4 + D)*(-2 + D)*(Q2 + s)^2*FeynCalc`SUNN*t*(Q2 + s + t)), 
+   FeynCalc`GLI["V02", {1, 1, 0, 0}] -> 
+    ((-1/4*I)*(-160*Q2^4 + 224*D*Q2^4 - 108*D^2*Q2^4 + 20*D^3*Q2^4 - 
+       D^4*Q2^4 - 576*Q2^3*s + 672*D*Q2^3*s - 268*D^2*Q2^3*s + 
+       42*D^3*Q2^3*s - 2*D^4*Q2^3*s - 224*Q2^2*s^2 + 288*D*Q2^2*s^2 - 
+       128*D^2*Q2^2*s^2 + 22*D^3*Q2^2*s^2 - D^4*Q2^2*s^2 - 
+       64*Q2^4*FeynCalc`SUNN^2 + 96*D*Q2^4*FeynCalc`SUNN^2 - 
+       52*D^2*Q2^4*FeynCalc`SUNN^2 + 12*D^3*Q2^4*FeynCalc`SUNN^2 - 
+       D^4*Q2^4*FeynCalc`SUNN^2 - 192*Q2^3*s*FeynCalc`SUNN^2 + 
+       256*D*Q2^3*s*FeynCalc`SUNN^2 - 124*D^2*Q2^3*s*FeynCalc`SUNN^2 + 
+       26*D^3*Q2^3*s*FeynCalc`SUNN^2 - 2*D^4*Q2^3*s*FeynCalc`SUNN^2 - 
+       128*Q2^2*s^2*FeynCalc`SUNN^2 + 160*D*Q2^2*s^2*FeynCalc`SUNN^2 - 
+       72*D^2*Q2^2*s^2*FeynCalc`SUNN^2 + 14*D^3*Q2^2*s^2*FeynCalc`SUNN^2 - 
+       D^4*Q2^2*s^2*FeynCalc`SUNN^2 + 192*Q2^3*t - 64*D*Q2^3*t - 
+       52*D^2*Q2^3*t + 20*D^3*Q2^3*t - D^4*Q2^3*t - 768*Q2^2*s*t + 
+       1184*D*Q2^2*s*t - 560*D^2*Q2^2*s*t + 98*D^3*Q2^2*s*t - 
+       5*D^4*Q2^2*s*t - 704*Q2*s^2*t + 928*D*Q2*s^2*t - 424*D^2*Q2*s^2*t + 
+       76*D^3*Q2*s^2*t - 4*D^4*Q2*s^2*t - 384*Q2^3*FeynCalc`SUNN^2*t + 
+       240*D*Q2^3*FeynCalc`SUNN^2*t - 52*D^2*Q2^3*FeynCalc`SUNN^2*t + 
+       8*D^3*Q2^3*FeynCalc`SUNN^2*t - D^4*Q2^3*FeynCalc`SUNN^2*t - 
+       448*Q2^2*s*FeynCalc`SUNN^2*t + 272*D*Q2^2*s*FeynCalc`SUNN^2*t - 
+       48*D^2*Q2^2*s*FeynCalc`SUNN^2*t + 6*D^3*Q2^2*s*FeynCalc`SUNN^2*t - 
+       D^4*Q2^2*s*FeynCalc`SUNN^2*t - 32*D*Q2*s^2*FeynCalc`SUNN^2*t + 
+       24*D^2*Q2*s^2*FeynCalc`SUNN^2*t - 4*D^3*Q2*s^2*FeynCalc`SUNN^2*t + 
+       992*Q2^2*t^2 - 888*D*Q2^2*t^2 + 228*D^2*Q2^2*t^2 - 18*D^3*Q2^2*t^2 + 
+       D^4*Q2^2*t^2 + 1152*Q2*s*t^2 - 544*D*Q2*s*t^2 - 16*D^2*Q2*s*t^2 + 
+       28*D^3*Q2*s*t^2 - 2*D^4*Q2*s*t^2 - 512*s^2*t^2 + 664*D*s^2*t^2 - 
+       300*D^2*s^2*t^2 + 54*D^3*s^2*t^2 - 3*D^4*s^2*t^2 - 
+       1696*Q2^2*FeynCalc`SUNN^2*t^2 + 984*D*Q2^2*FeynCalc`SUNN^2*t^2 - 
+       116*D^2*Q2^2*FeynCalc`SUNN^2*t^2 - 10*D^3*Q2^2*FeynCalc`SUNN^2*t^2 + 
+       D^4*Q2^2*FeynCalc`SUNN^2*t^2 - 1216*Q2*s*FeynCalc`SUNN^2*t^2 + 
+       592*D*Q2*s*FeynCalc`SUNN^2*t^2 + 8*D^2*Q2*s*FeynCalc`SUNN^2*t^2 - 
+       28*D^3*Q2*s*FeynCalc`SUNN^2*t^2 + 2*D^4*Q2*s*FeynCalc`SUNN^2*t^2 + 
+       160*s^2*FeynCalc`SUNN^2*t^2 - 216*D*s^2*FeynCalc`SUNN^2*t^2 + 
+       100*D^2*s^2*FeynCalc`SUNN^2*t^2 - 18*D^3*s^2*FeynCalc`SUNN^2*t^2 + 
+       D^4*s^2*FeynCalc`SUNN^2*t^2 + 768*Q2*t^3 - 688*D*Q2*t^3 + 
+       180*D^2*Q2*t^3 - 16*D^3*Q2*t^3 + D^4*Q2*t^3 + 1344*s*t^3 - 
+       1056*D*s*t^3 + 276*D^2*s*t^3 - 28*D^3*s*t^3 + D^4*s*t^3 - 
+       2496*Q2*FeynCalc`SUNN^2*t^3 + 1632*D*Q2*FeynCalc`SUNN^2*t^3 - 
+       284*D^2*Q2*FeynCalc`SUNN^2*t^3 + 4*D^3*Q2*FeynCalc`SUNN^2*t^3 + 
+       D^4*Q2*FeynCalc`SUNN^2*t^3 - 960*s*FeynCalc`SUNN^2*t^3 + 
+       576*D*s*FeynCalc`SUNN^2*t^3 - 68*D^2*s*FeynCalc`SUNN^2*t^3 - 
+       8*D^3*s*FeynCalc`SUNN^2*t^3 + D^4*s*FeynCalc`SUNN^2*t^3 + 128*t^4 - 
+       88*D*t^4 + 8*D^2*t^4 + 2*D^3*t^4 - 1120*FeynCalc`SUNN^2*t^4 + 
+       792*D*FeynCalc`SUNN^2*t^4 - 168*D^2*FeynCalc`SUNN^2*t^4 + 
+       10*D^3*FeynCalc`SUNN^2*t^4))/((-4 + D)*(-2 + D)*FeynCalc`SUNN*t*
+      (Q2 + t)^2*(Q2 + s + t)), FeynCalc`GLI["V03", {0, 1, 1, 0}] -> 
+    ((-1/2*I)*(704*Q2^6*s^2 - 692*D*Q2^6*s^2 + 236*D^2*Q2^6*s^2 - 
+       31*D^3*Q2^6*s^2 + D^4*Q2^6*s^2 + 2880*Q2^5*s^3 - 2760*D*Q2^5*s^3 + 
+       924*D^2*Q2^5*s^3 - 120*D^3*Q2^5*s^3 + 4*D^4*Q2^5*s^3 + 4448*Q2^4*s^4 - 
+       4168*D*Q2^4*s^4 + 1376*D^2*Q2^4*s^4 - 178*D^3*Q2^4*s^4 + 
+       6*D^4*Q2^4*s^4 + 3072*Q2^3*s^5 - 2824*D*Q2^3*s^5 + 924*D^2*Q2^3*s^5 - 
+       120*D^3*Q2^3*s^5 + 4*D^4*Q2^3*s^5 + 800*Q2^2*s^6 - 724*D*Q2^2*s^6 + 
+       236*D^2*Q2^2*s^6 - 31*D^3*Q2^2*s^6 + D^4*Q2^2*s^6 + 
+       64*Q2^6*s^2*FeynCalc`SUNN^2 - 92*D*Q2^6*s^2*FeynCalc`SUNN^2 + 
+       48*D^2*Q2^6*s^2*FeynCalc`SUNN^2 - 11*D^3*Q2^6*s^2*FeynCalc`SUNN^2 + 
+       D^4*Q2^6*s^2*FeynCalc`SUNN^2 + 384*Q2^5*s^3*FeynCalc`SUNN^2 - 
+       488*D*Q2^5*s^3*FeynCalc`SUNN^2 + 228*D^2*Q2^5*s^3*FeynCalc`SUNN^2 - 
+       48*D^3*Q2^5*s^3*FeynCalc`SUNN^2 + 4*D^4*Q2^5*s^3*FeynCalc`SUNN^2 + 
+       640*Q2^4*s^4*FeynCalc`SUNN^2 - 792*D*Q2^4*s^4*FeynCalc`SUNN^2 + 
+       360*D^2*Q2^4*s^4*FeynCalc`SUNN^2 - 74*D^3*Q2^4*s^4*FeynCalc`SUNN^2 + 
+       6*D^4*Q2^4*s^4*FeynCalc`SUNN^2 + 384*Q2^3*s^5*FeynCalc`SUNN^2 - 
+       488*D*Q2^3*s^5*FeynCalc`SUNN^2 + 228*D^2*Q2^3*s^5*FeynCalc`SUNN^2 - 
+       48*D^3*Q2^3*s^5*FeynCalc`SUNN^2 + 4*D^4*Q2^3*s^5*FeynCalc`SUNN^2 + 
+       64*Q2^2*s^6*FeynCalc`SUNN^2 - 92*D*Q2^2*s^6*FeynCalc`SUNN^2 + 
+       48*D^2*Q2^2*s^6*FeynCalc`SUNN^2 - 11*D^3*Q2^2*s^6*FeynCalc`SUNN^2 + 
+       D^4*Q2^2*s^6*FeynCalc`SUNN^2 + 896*Q2^6*s*t - 912*D*Q2^6*s*t + 
+       318*D^2*Q2^6*s*t - 41*D^3*Q2^6*s*t + D^4*Q2^6*s*t + 6176*Q2^5*s^2*t - 
+       5968*D*Q2^5*s^2*t + 1998*D^2*Q2^5*s^2*t - 253*D^3*Q2^5*s^2*t + 
+       7*D^4*Q2^5*s^2*t + 14848*Q2^4*s^3*t - 13992*D*Q2^4*s^3*t + 
+       4624*D^2*Q2^4*s^3*t - 590*D^3*Q2^4*s^3*t + 18*D^4*Q2^4*s^3*t + 
+       16384*Q2^3*s^4*t - 15304*D*Q2^3*s^4*t + 5072*D^2*Q2^3*s^4*t - 
+       662*D^3*Q2^3*s^4*t + 22*D^4*Q2^3*s^4*t + 8512*Q2^2*s^5*t - 
+       7960*D*Q2^2*s^5*t + 2674*D^2*Q2^2*s^5*t - 361*D^3*Q2^2*s^5*t + 
+       13*D^4*Q2^2*s^5*t + 1696*Q2*s^6*t - 1592*D*Q2*s^6*t + 
+       546*D^2*Q2*s^6*t - 77*D^3*Q2*s^6*t + 3*D^4*Q2*s^6*t + 
+       608*Q2^6*s*FeynCalc`SUNN^2*t - 616*D*Q2^6*s*FeynCalc`SUNN^2*t + 
+       234*D^2*Q2^6*s*FeynCalc`SUNN^2*t - 41*D^3*Q2^6*s*FeynCalc`SUNN^2*t + 
+       3*D^4*Q2^6*s*FeynCalc`SUNN^2*t + 2560*Q2^5*s^2*FeynCalc`SUNN^2*t - 
+       2600*D*Q2^5*s^2*FeynCalc`SUNN^2*t + 990*D^2*Q2^5*s^2*FeynCalc`SUNN^2*
+        t - 175*D^3*Q2^5*s^2*FeynCalc`SUNN^2*t + 13*D^4*Q2^5*s^2*
+        FeynCalc`SUNN^2*t + 4064*Q2^4*s^3*FeynCalc`SUNN^2*t - 
+       4144*D*Q2^4*s^3*FeynCalc`SUNN^2*t + 1588*D^2*Q2^4*s^3*FeynCalc`SUNN^2*
+        t - 286*D^3*Q2^4*s^3*FeynCalc`SUNN^2*t + 22*D^4*Q2^4*s^3*
+        FeynCalc`SUNN^2*t + 2912*Q2^3*s^4*FeynCalc`SUNN^2*t - 
+       2992*D*Q2^3*s^4*FeynCalc`SUNN^2*t + 1164*D^2*Q2^3*s^4*FeynCalc`SUNN^2*
+        t - 218*D^3*Q2^3*s^4*FeynCalc`SUNN^2*t + 18*D^4*Q2^3*s^4*
+        FeynCalc`SUNN^2*t + 832*Q2^2*s^5*FeynCalc`SUNN^2*t - 
+       872*D*Q2^2*s^5*FeynCalc`SUNN^2*t + 354*D^2*Q2^2*s^5*FeynCalc`SUNN^2*
+        t - 73*D^3*Q2^2*s^5*FeynCalc`SUNN^2*t + 7*D^4*Q2^2*s^5*
+        FeynCalc`SUNN^2*t + 32*Q2*s^6*FeynCalc`SUNN^2*t - 
+       40*D*Q2*s^6*FeynCalc`SUNN^2*t + 22*D^2*Q2*s^6*FeynCalc`SUNN^2*t - 
+       7*D^3*Q2*s^6*FeynCalc`SUNN^2*t + D^4*Q2*s^6*FeynCalc`SUNN^2*t + 
+       208*Q2^6*t^2 - 232*D*Q2^6*t^2 + 84*D^2*Q2^6*t^2 - 10*D^3*Q2^6*t^2 + 
+       3872*Q2^5*s*t^2 - 3848*D*Q2^5*s*t^2 + 1306*D^2*Q2^5*s*t^2 - 
+       161*D^3*Q2^5*s*t^2 + 3*D^4*Q2^5*s*t^2 + 16016*Q2^4*s^2*t^2 - 
+       15296*D*Q2^4*s^2*t^2 + 5088*D^2*Q2^4*s^2*t^2 - 638*D^3*Q2^4*s^2*t^2 + 
+       16*D^4*Q2^4*s^2*t^2 + 26784*Q2^3*s^3*t^2 - 25208*D*Q2^3*s^3*t^2 + 
+       8392*D^2*Q2^3*s^3*t^2 - 1082*D^3*Q2^3*s^3*t^2 + 32*D^4*Q2^3*s^3*t^2 + 
+       20816*Q2^2*s^4*t^2 - 19656*D*Q2^2*s^4*t^2 + 6644*D^2*Q2^2*s^4*t^2 - 
+       890*D^3*Q2^2*s^4*t^2 + 30*D^4*Q2^2*s^4*t^2 + 7360*Q2*s^5*t^2 - 
+       7024*D*Q2*s^5*t^2 + 2430*D^2*Q2*s^5*t^2 - 341*D^3*Q2*s^5*t^2 + 
+       13*D^4*Q2*s^5*t^2 + 912*s^6*t^2 - 880*D*s^6*t^2 + 312*D^2*s^6*t^2 - 
+       46*D^3*s^6*t^2 + 2*D^4*s^6*t^2 + 528*Q2^6*FeynCalc`SUNN^2*t^2 - 
+       512*D*Q2^6*FeynCalc`SUNN^2*t^2 + 184*D^2*Q2^6*FeynCalc`SUNN^2*t^2 - 
+       30*D^3*Q2^6*FeynCalc`SUNN^2*t^2 + 2*D^4*Q2^6*FeynCalc`SUNN^2*t^2 + 
+       3808*Q2^5*s*FeynCalc`SUNN^2*t^2 - 3544*D*Q2^5*s*FeynCalc`SUNN^2*t^2 + 
+       1214*D^2*Q2^5*s*FeynCalc`SUNN^2*t^2 - 191*D^3*Q2^5*s*FeynCalc`SUNN^2*
+        t^2 + 13*D^4*Q2^5*s*FeynCalc`SUNN^2*t^2 + 9424*Q2^4*s^2*
+        FeynCalc`SUNN^2*t^2 - 8512*D*Q2^4*s^2*FeynCalc`SUNN^2*t^2 + 
+       2808*D^2*Q2^4*s^2*FeynCalc`SUNN^2*t^2 - 430*D^3*Q2^4*s^2*
+        FeynCalc`SUNN^2*t^2 + 30*D^4*Q2^4*s^2*FeynCalc`SUNN^2*t^2 + 
+       10560*Q2^3*s^3*FeynCalc`SUNN^2*t^2 - 9232*D*Q2^3*s^3*FeynCalc`SUNN^2*
+        t^2 + 2920*D^2*Q2^3*s^3*FeynCalc`SUNN^2*t^2 - 
+       436*D^3*Q2^3*s^3*FeynCalc`SUNN^2*t^2 + 32*D^4*Q2^3*s^3*FeynCalc`SUNN^2*
+        t^2 + 5392*Q2^2*s^4*FeynCalc`SUNN^2*t^2 - 4480*D*Q2^2*s^4*
+        FeynCalc`SUNN^2*t^2 + 1324*D^2*Q2^2*s^4*FeynCalc`SUNN^2*t^2 - 
+       192*D^3*Q2^2*s^4*FeynCalc`SUNN^2*t^2 + 16*D^4*Q2^2*s^4*FeynCalc`SUNN^2*
+        t^2 + 928*Q2*s^5*FeynCalc`SUNN^2*t^2 - 664*D*Q2*s^5*FeynCalc`SUNN^2*
+        t^2 + 154*D^2*Q2*s^5*FeynCalc`SUNN^2*t^2 - 
+       21*D^3*Q2*s^5*FeynCalc`SUNN^2*t^2 + 3*D^4*Q2*s^5*FeynCalc`SUNN^2*t^2 - 
+       48*s^6*FeynCalc`SUNN^2*t^2 + 64*D*s^6*FeynCalc`SUNN^2*t^2 - 
+       28*D^2*s^6*FeynCalc`SUNN^2*t^2 + 4*D^3*s^6*FeynCalc`SUNN^2*t^2 + 
+       576*Q2^5*t^3 - 640*D*Q2^5*t^3 + 232*D^2*Q2^5*t^3 - 28*D^3*Q2^5*t^3 + 
+       6336*Q2^4*s*t^3 - 6256*D*Q2^4*s*t^3 + 2120*D^2*Q2^4*s*t^3 - 
+       260*D^3*Q2^4*s*t^3 + 4*D^4*Q2^4*s*t^3 + 17472*Q2^3*s^2*t^3 - 
+       16688*D*Q2^3*s^2*t^3 + 5616*D^2*Q2^3*s^2*t^3 - 712*D^3*Q2^3*s^2*t^3 + 
+       16*D^4*Q2^3*s^2*t^3 + 19904*Q2^2*s^3*t^3 - 18992*D*Q2^2*s^3*t^3 + 
+       6480*D^2*Q2^2*s^3*t^3 - 856*D^3*Q2^2*s^3*t^3 + 24*D^4*Q2^2*s^3*t^3 + 
+       10112*Q2*s^4*t^3 - 9808*D*Q2*s^4*t^3 + 3432*D^2*Q2*s^4*t^3 - 
+       476*D^3*Q2*s^4*t^3 + 16*D^4*Q2*s^4*t^3 + 1920*s^5*t^3 - 
+       1888*D*s^5*t^3 + 680*D^2*s^5*t^3 - 100*D^3*s^5*t^3 + 4*D^4*s^5*t^3 + 
+       1632*Q2^5*FeynCalc`SUNN^2*t^3 - 1432*D*Q2^5*FeynCalc`SUNN^2*t^3 + 
+       452*D^2*Q2^5*FeynCalc`SUNN^2*t^3 - 64*D^3*Q2^5*FeynCalc`SUNN^2*t^3 + 
+       4*D^4*Q2^5*FeynCalc`SUNN^2*t^3 + 8224*Q2^4*s*FeynCalc`SUNN^2*t^3 - 
+       6872*D*Q2^4*s*FeynCalc`SUNN^2*t^3 + 2012*D^2*Q2^4*s*FeynCalc`SUNN^2*
+        t^3 - 260*D^3*Q2^4*s*FeynCalc`SUNN^2*t^3 + 
+       16*D^4*Q2^4*s*FeynCalc`SUNN^2*t^3 + 15360*Q2^3*s^2*FeynCalc`SUNN^2*
+        t^3 - 12304*D*Q2^3*s^2*FeynCalc`SUNN^2*t^3 + 3352*D^2*Q2^3*s^2*
+        FeynCalc`SUNN^2*t^3 - 392*D^3*Q2^3*s^2*FeynCalc`SUNN^2*t^3 + 
+       24*D^4*Q2^3*s^2*FeynCalc`SUNN^2*t^3 + 13056*Q2^2*s^3*FeynCalc`SUNN^2*
+        t^3 - 10000*D*Q2^2*s^3*FeynCalc`SUNN^2*t^3 + 2504*D^2*Q2^2*s^3*
+        FeynCalc`SUNN^2*t^3 - 256*D^3*Q2^2*s^3*FeynCalc`SUNN^2*t^3 + 
+       16*D^4*Q2^2*s^3*FeynCalc`SUNN^2*t^3 + 4768*Q2*s^4*FeynCalc`SUNN^2*
+        t^3 - 3416*D*Q2*s^4*FeynCalc`SUNN^2*t^3 + 740*D^2*Q2*s^4*
+        FeynCalc`SUNN^2*t^3 - 56*D^3*Q2*s^4*FeynCalc`SUNN^2*t^3 + 
+       4*D^4*Q2*s^4*FeynCalc`SUNN^2*t^3 + 480*s^5*FeynCalc`SUNN^2*t^3 - 
+       280*D*s^5*FeynCalc`SUNN^2*t^3 + 28*D^2*s^5*FeynCalc`SUNN^2*t^3 + 
+       4*D^3*s^5*FeynCalc`SUNN^2*t^3 + 688*Q2^4*t^4 - 760*D*Q2^4*t^4 + 
+       276*D^2*Q2^4*t^4 - 34*D^3*Q2^4*t^4 + 4480*Q2^3*s*t^4 - 
+       4488*D*Q2^3*s*t^4 + 1564*D^2*Q2^3*s*t^4 - 196*D^3*Q2^3*s*t^4 + 
+       2*D^4*Q2^3*s*t^4 + 8096*Q2^2*s^2*t^4 - 7896*D*Q2^2*s^2*t^4 + 
+       2764*D^2*Q2^2*s^2*t^4 - 360*D^3*Q2^2*s^2*t^4 + 6*D^4*Q2^2*s^2*t^4 + 
+       5376*Q2*s^3*t^4 - 5400*D*Q2*s^3*t^4 + 1956*D^2*Q2*s^3*t^4 - 
+       268*D^3*Q2*s^3*t^4 + 6*D^4*Q2*s^3*t^4 + 1200*s^4*t^4 - 
+       1264*D*s^4*t^4 + 480*D^2*s^4*t^4 - 70*D^3*s^4*t^4 + 2*D^4*s^4*t^4 + 
+       2256*Q2^4*FeynCalc`SUNN^2*t^4 - 1736*D*Q2^4*FeynCalc`SUNN^2*t^4 + 
+       436*D^2*Q2^4*FeynCalc`SUNN^2*t^4 - 42*D^3*Q2^4*FeynCalc`SUNN^2*t^4 + 
+       2*D^4*Q2^4*FeynCalc`SUNN^2*t^4 + 9056*Q2^3*s*FeynCalc`SUNN^2*t^4 - 
+       6800*D*Q2^3*s*FeynCalc`SUNN^2*t^4 + 1620*D^2*Q2^3*s*FeynCalc`SUNN^2*
+        t^4 - 138*D^3*Q2^3*s*FeynCalc`SUNN^2*t^4 + 
+       6*D^4*Q2^3*s*FeynCalc`SUNN^2*t^4 + 13024*Q2^2*s^2*FeynCalc`SUNN^2*
+        t^4 - 9552*D*Q2^2*s^2*FeynCalc`SUNN^2*t^4 + 2156*D^2*Q2^2*s^2*
+        FeynCalc`SUNN^2*t^4 - 158*D^3*Q2^2*s^2*FeynCalc`SUNN^2*t^4 + 
+       6*D^4*Q2^2*s^2*FeynCalc`SUNN^2*t^4 + 7904*Q2*s^3*FeynCalc`SUNN^2*t^4 - 
+       5648*D*Q2*s^3*FeynCalc`SUNN^2*t^4 + 1196*D^2*Q2*s^3*FeynCalc`SUNN^2*
+        t^4 - 70*D^3*Q2*s^3*FeynCalc`SUNN^2*t^4 + 
+       2*D^4*Q2*s^3*FeynCalc`SUNN^2*t^4 + 1680*s^4*FeynCalc`SUNN^2*t^4 - 
+       1160*D*s^4*FeynCalc`SUNN^2*t^4 + 224*D^2*s^4*FeynCalc`SUNN^2*t^4 - 
+       8*D^3*s^4*FeynCalc`SUNN^2*t^4 + 480*Q2^3*t^5 - 528*D*Q2^3*t^5 + 
+       192*D^2*Q2^3*t^5 - 24*D^3*Q2^3*t^5 + 1440*Q2^2*s*t^5 - 
+       1488*D*Q2^2*s*t^5 + 552*D^2*Q2^2*s*t^5 - 72*D^3*Q2^2*s*t^5 + 
+       1248*Q2*s^2*t^5 - 1344*D*Q2*s^2*t^5 + 528*D^2*Q2*s^2*t^5 - 
+       72*D^3*Q2*s^2*t^5 + 288*s^3*t^5 - 384*D*s^3*t^5 + 168*D^2*s^3*t^5 - 
+       24*D^3*s^3*t^5 + 1728*Q2^3*FeynCalc`SUNN^2*t^5 - 
+       1224*D*Q2^3*FeynCalc`SUNN^2*t^5 + 252*D^2*Q2^3*FeynCalc`SUNN^2*t^5 - 
+       12*D^3*Q2^3*FeynCalc`SUNN^2*t^5 + 5184*Q2^2*s*FeynCalc`SUNN^2*t^5 - 
+       3672*D*Q2^2*s*FeynCalc`SUNN^2*t^5 + 756*D^2*Q2^2*s*FeynCalc`SUNN^2*
+        t^5 - 36*D^3*Q2^2*s*FeynCalc`SUNN^2*t^5 + 5184*Q2*s^2*FeynCalc`SUNN^2*
+        t^5 - 3672*D*Q2*s^2*FeynCalc`SUNN^2*t^5 + 756*D^2*Q2*s^2*
+        FeynCalc`SUNN^2*t^5 - 36*D^3*Q2*s^2*FeynCalc`SUNN^2*t^5 + 
+       1728*s^3*FeynCalc`SUNN^2*t^5 - 1224*D*s^3*FeynCalc`SUNN^2*t^5 + 
+       252*D^2*s^3*FeynCalc`SUNN^2*t^5 - 12*D^3*s^3*FeynCalc`SUNN^2*t^5 + 
+       160*Q2^2*t^6 - 176*D*Q2^2*t^6 + 64*D^2*Q2^2*t^6 - 8*D^3*Q2^2*t^6 + 
+       320*Q2*s*t^6 - 320*D*Q2*s*t^6 + 120*D^2*Q2*s*t^6 - 16*D^3*Q2*s*t^6 + 
+       96*s^2*t^6 - 128*D*s^2*t^6 + 56*D^2*s^2*t^6 - 8*D^3*s^2*t^6 + 
+       576*Q2^2*FeynCalc`SUNN^2*t^6 - 408*D*Q2^2*FeynCalc`SUNN^2*t^6 + 
+       84*D^2*Q2^2*FeynCalc`SUNN^2*t^6 - 4*D^3*Q2^2*FeynCalc`SUNN^2*t^6 + 
+       1152*Q2*s*FeynCalc`SUNN^2*t^6 - 816*D*Q2*s*FeynCalc`SUNN^2*t^6 + 
+       168*D^2*Q2*s*FeynCalc`SUNN^2*t^6 - 8*D^3*Q2*s*FeynCalc`SUNN^2*t^6 + 
+       576*s^2*FeynCalc`SUNN^2*t^6 - 408*D*s^2*FeynCalc`SUNN^2*t^6 + 
+       84*D^2*s^2*FeynCalc`SUNN^2*t^6 - 4*D^3*s^2*FeynCalc`SUNN^2*t^6))/
+     ((-4 + D)*(-2 + D)*(Q2 + s)^2*FeynCalc`SUNN*t*(Q2 + t)^2*(s + t)^2*
+      (Q2 + s + t)), FeynCalc`GLI["V03", {1, 1, 0, 0}] -> 
+    ((I/4)*(1536*Q2^2*s^2 - 1568*D*Q2^2*s^2 + 568*D^2*Q2^2*s^2 - 
+       84*D^3*Q2^2*s^2 + 4*D^4*Q2^2*s^2 + 3456*Q2*s^3 - 3360*D*Q2*s^3 + 
+       1168*D^2*Q2*s^3 - 168*D^3*Q2*s^3 + 8*D^4*Q2*s^3 + 1728*s^4 - 
+       1632*D*s^4 + 568*D^2*s^4 - 84*D^3*s^4 + 4*D^4*s^4 + 2048*Q2^2*s*t - 
+       2192*D*Q2^2*s*t + 828*D^2*Q2^2*s*t - 126*D^3*Q2^2*s*t + 
+       6*D^4*Q2^2*s*t + 6848*Q2*s^2*t - 6656*D*Q2*s^2*t + 2308*D^2*Q2*s^2*t - 
+       328*D^3*Q2*s^2*t + 15*D^4*Q2*s^2*t + 4544*s^3*t - 4144*D*s^3*t + 
+       1396*D^2*s^3*t - 200*D^3*s^3*t + 9*D^4*s^3*t + 
+       960*Q2^2*s*FeynCalc`SUNN^2*t - 864*D*Q2^2*s*FeynCalc`SUNN^2*t + 
+       276*D^2*Q2^2*s*FeynCalc`SUNN^2*t - 38*D^3*Q2^2*s*FeynCalc`SUNN^2*t + 
+       2*D^4*Q2^2*s*FeynCalc`SUNN^2*t + 2304*Q2*s^2*FeynCalc`SUNN^2*t - 
+       1936*D*Q2*s^2*FeynCalc`SUNN^2*t + 564*D^2*Q2*s^2*FeynCalc`SUNN^2*t - 
+       68*D^3*Q2*s^2*FeynCalc`SUNN^2*t + 3*D^4*Q2*s^2*FeynCalc`SUNN^2*t + 
+       1280*s^3*FeynCalc`SUNN^2*t - 1008*D*s^3*FeynCalc`SUNN^2*t + 
+       268*D^2*s^3*FeynCalc`SUNN^2*t - 28*D^3*s^3*FeynCalc`SUNN^2*t + 
+       D^4*s^3*FeynCalc`SUNN^2*t + 544*Q2^2*t^2 - 648*D*Q2^2*t^2 + 
+       264*D^2*Q2^2*t^2 - 42*D^3*Q2^2*t^2 + 2*D^4*Q2^2*t^2 + 3648*Q2*s*t^2 - 
+       3632*D*Q2*s*t^2 + 1288*D^2*Q2*s*t^2 - 184*D^3*Q2*s*t^2 + 
+       8*D^4*Q2*s*t^2 + 3776*s^2*t^2 - 3304*D*s^2*t^2 + 1080*D^2*s^2*t^2 - 
+       150*D^3*s^2*t^2 + 6*D^4*s^2*t^2 + 928*Q2^2*FeynCalc`SUNN^2*t^2 - 
+       840*D*Q2^2*FeynCalc`SUNN^2*t^2 + 272*D^2*Q2^2*FeynCalc`SUNN^2*t^2 - 
+       38*D^3*Q2^2*FeynCalc`SUNN^2*t^2 + 2*D^4*Q2^2*FeynCalc`SUNN^2*t^2 + 
+       4288*Q2*s*FeynCalc`SUNN^2*t^2 - 3472*D*Q2*s*FeynCalc`SUNN^2*t^2 + 
+       952*D^2*Q2*s*FeynCalc`SUNN^2*t^2 - 104*D^3*Q2*s*FeynCalc`SUNN^2*t^2 + 
+       4*D^4*Q2*s*FeynCalc`SUNN^2*t^2 + 3680*s^2*FeynCalc`SUNN^2*t^2 - 
+       2808*D*s^2*FeynCalc`SUNN^2*t^2 + 704*D^2*s^2*FeynCalc`SUNN^2*t^2 - 
+       66*D^3*s^2*FeynCalc`SUNN^2*t^2 + 2*D^4*s^2*FeynCalc`SUNN^2*t^2 + 
+       256*Q2*t^3 - 336*D*Q2*t^3 + 148*D^2*Q2*t^3 - 24*D^3*Q2*t^3 + 
+       D^4*Q2*t^3 + 832*s*t^3 - 704*D*s*t^3 + 244*D^2*s*t^3 - 36*D^3*s*t^3 + 
+       D^4*s*t^3 + 1984*Q2*FeynCalc`SUNN^2*t^3 - 1536*D*Q2*FeynCalc`SUNN^2*
+        t^3 + 388*D^2*Q2*FeynCalc`SUNN^2*t^3 - 36*D^3*Q2*FeynCalc`SUNN^2*
+        t^3 + D^4*Q2*FeynCalc`SUNN^2*t^3 + 3520*s*FeynCalc`SUNN^2*t^3 - 
+       2592*D*s*FeynCalc`SUNN^2*t^3 + 604*D^2*s*FeynCalc`SUNN^2*t^3 - 
+       48*D^3*s*FeynCalc`SUNN^2*t^3 + D^4*s*FeynCalc`SUNN^2*t^3 - 128*t^4 + 
+       88*D*t^4 - 8*D^2*t^4 - 2*D^3*t^4 + 1120*FeynCalc`SUNN^2*t^4 - 
+       792*D*FeynCalc`SUNN^2*t^4 + 168*D^2*FeynCalc`SUNN^2*t^4 - 
+       10*D^3*FeynCalc`SUNN^2*t^4))/((-4 + D)*(-2 + D)*FeynCalc`SUNN*t*
+      (s + t)^2*(Q2 + s + t)), FeynCalc`GLI["V06", {1, 1, 1, 1}] -> 
+    ((-1/4*I)*s*(8*Q2^2 - 8*D*Q2^2 + 2*D^2*Q2^2 + 32*Q2*s - 24*D*Q2*s + 
+       4*D^2*Q2*s + 8*s^2 - 8*D*s^2 + 2*D^2*s^2 - 112*Q2*t + 72*D*Q2*t - 
+       14*D^2*Q2*t + D^3*Q2*t - 128*s*t + 72*D*s*t - 14*D^2*s*t + D^3*s*t + 
+       8*t^2 - 8*D*t^2 + 2*D^2*t^2))/((-2 + D)*FeynCalc`SUNN*(Q2 + s + t)), 
+   FeynCalc`GLI["V07", {1, 1, 1, 1}] -> 
+    ((-1/4*I)*s*(-128*Q2^2 + 88*D*Q2^2 - 18*D^2*Q2^2 + D^3*Q2^2 - 288*Q2*s + 
+       184*D*Q2*s - 36*D^2*Q2*s + 2*D^3*Q2*s - 144*s^2 + 88*D*s^2 - 
+       18*D^2*s^2 + D^3*s^2 - 128*Q2*t + 88*D*Q2*t - 18*D^2*Q2*t + D^3*Q2*t - 
+       144*s*t + 88*D*s*t - 18*D^2*s*t + D^3*s*t - 8*t^2 + 8*D*t^2 - 
+       2*D^2*t^2))/((-2 + D)*FeynCalc`SUNN*t), 
+   FeynCalc`GLI["V08", {1, 1, 1, 1}] -> 
+    ((-1/2*I)*FeynCalc`SUNN*(4*Q2^2 - 4*D*Q2^2 + D^2*Q2^2 + 16*Q2*s - 
+       12*D*Q2*s + 2*D^2*Q2*s + 4*s^2 - 4*D*s^2 + D^2*s^2 - 48*Q2*t + 
+       18*D*Q2*t - D^2*Q2*t - 48*s*t + 18*D*s*t - D^2*s*t - 48*t^2 + 
+       18*D*t^2 - D^2*t^2))/(-2 + D)|>, "RequiredOrders" -> 
+  <|FeynCalc`GLI["V01", {0, 1, 0, 1}] -> 1, 
+   FeynCalc`GLI["V02", {1, 1, 0, 0}] -> 1, 
+   FeynCalc`GLI["V03", {0, 1, 1, 0}] -> 1, 
+   FeynCalc`GLI["V03", {1, 1, 0, 0}] -> 1, 
+   FeynCalc`GLI["V06", {1, 1, 1, 1}] -> 0, 
+   FeynCalc`GLI["V07", {1, 1, 1, 1}] -> 0, 
+   FeynCalc`GLI["V08", {1, 1, 1, 1}] -> 0|>, "InputHash" -> 65582232807567136\
+196098251975664618060160520792935973420302697650727327777153, 
+ "ChannelHash" -> 90628761499834143402558532148144720339562784055334569395669\
+156268252145994082, "SourceHash" -> 
+  875325582690736178834713405283481543181474910650441292580487358879451786982\
+72, "Accepted" -> True|>

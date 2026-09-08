@@ -1,0 +1,22 @@
+{
+  "stage": "s03_plot",
+  "source": "s03_plot_comparison.py",
+  "source_sha256": "bb921cbfe290416165e1fbe69481d346ed1c66bf7d77dbfcb087888899da85d7",
+  "job_id": "14693841",
+  "host": "n6041",
+  "exit_code": 0,
+  "success_marker": false,
+  "result_checks": {
+    "dsigmapibydpt/s03_result": true
+  },
+  "command": [
+    "/u/local/apps/anaconda3/2023.03/bin/python",
+    "-u",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/numerics/dsigmapibydpt/s03_plot_comparison.py"
+  ],
+  "accepted_execution": true,
+  "guard": null,
+  "peak_rss_bytes": 179449856,
+  "elapsed_seconds": 11.09428546577692,
+  "completed_utc": "2026-09-07T17:10:19.814722+00:00"
+}
