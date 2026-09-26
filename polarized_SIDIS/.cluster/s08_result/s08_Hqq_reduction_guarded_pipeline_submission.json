@@ -1,0 +1,28 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s08_Hqq_reduction_guarded_pipeline_job.json",
+  "config_sha256": "6ab7f58728ebd01309963ddbd1196ff9ff44a4696da59fa621d34e70b915826e",
+  "event": "SUBMITTED",
+  "job_id": "14817871",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqq_reduction_guarded_pipeline_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqq_reduction_guarded_pipeline",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqq_reduction_guarded_pipeline_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s08_Hqq_reduction_guarded_pipeline"
+}

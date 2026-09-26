@@ -1,0 +1,25 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s08_Hqg_recover_blocked_input_job.json",
+  "config_sha256": "3733650b87870a3b5bbd353b23c8bbd69460e9aa6da79e051b3c120feae03458",
+  "event": "SUBMITTED",
+  "job_id": "14835980",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqg_recover_blocked_input_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqg_recover_blocked_input",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:15:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqg_recover_blocked_input_scheduler.log"
+  ],
+  "tag": "s08_Hqg_recover_blocked_input"
+}

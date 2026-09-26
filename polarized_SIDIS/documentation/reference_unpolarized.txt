@@ -1,0 +1,2280 @@
+                                                                                                                          JLAB-THY-19-2897
+
+
+                                             Large Transverse Momentum in Semi-Inclusive Deeply Inelastic
+                                                                         Scattering Beyond Lowest Order
+
+                                               B. Wang,1, 2, 3, ∗ J. O. Gonzalez-Hernandez,1, 2, 4, † T. C. Rogers,1, 2, ‡ and N. Sato2, §
+                                                  1
+                                                      Department of Physics, Old Dominion University, Norfolk, VA 23529, USA
+                                                      2
+                                                          Jefferson Lab, 12000 Jefferson Avenue, Newport News, VA 23606, USA
+                                                                           3
+                                                                               Zhejiang Institute of Modern Physics,
+
+
+
+
+arXiv:1903.01529v1 [hep-ph] 4 Mar 2019
+                                                                         Department of Physics, Zhejiang University,
+                                                                                    Hangzhou 310027, China
+                                                                     4
+                                                                         Dipartimento di Fisica, Università di Torino,
+                                                                           Via P. Giuria 1, 1-10125, Torino, Italy
+                                                                                      (Dated: 4 March 2019)
+
+                                                                                            Abstract
+                                             Motivated by recently observed tension between O αs2 calculations of very large transverse
+                                                                                                 
+
+                                         momentum dependence in both semi-inclusive deep inelastic scattering and Drell-Yan scattering,
+                                         we repeat the details of the calculation through O αs2 transversely differential cross section. The
+                                                                                               
+
+                                         results confirm earlier calculations, and provide further support to the observation that tension
+                                         exists with current parton distribution and fragmentation functions.
+
+
+
+
+                                         ∗
+                                             0617626@zju.edu.cn
+                                         †
+                                             joseosvaldo.gonzalez@to.infn.it
+                                         ‡
+                                             tedconantrogers@gmail.com
+                                         §
+                                             nsato@jlab.org
+
+
+                                                                                               1
+I.    INTRODUCTION
+
+
+     In a previous article [1], we discussed the semi-inclusive deep inelastic scattering (SIDIS)
+process:
+                          l(l) + Proton(P ) → l0 (l0 ) + Hadron(PH ) + X,
+
+and we highlighted the challenge of finding agreement between O (αs2 ) calculations and ex-
+isting SIDIS data in the very large transverse momentum transverse momentum limit where
+standard collinear factorization is expected to be valid. One motivation is that obtaining a
+description of the small transverse momentum behavior associated with nucleon structure
+requires a good understanding of the matching to large transverse momentum where a trans-
+verse momentum dependent (TMD) factorization description fails. Given the current focus
+on using deeply inelastic hadro-production to access nucleon structure sensitivity sensitivity,
+it is imperative to examine theoretical framework for the full qT -range in greater detail. In
+the language of Ref. [1], we are interested in this paper in what was there called “region
+3” behavior, corresponding to where qT is so large that the small qT /Q approximations as-
+sociated with TMDs are not reliable, but where ordinary collinear factorization should be
+applicable and reliable. Calculations to O (αs2 ) have existed for some time [2, 3]. The main
+observation of Ref. [1] was that, while the O (αs2 ) correction gives an order of magnitude
+increase over the leading order, that still is not sufficient to achieve reasonable agreement
+with data for Q in the region of one to several GeVs, transverse momentum of order Q,
+and for moderate Bjorken-x. Combined with similar observations concerning the Drell-Yan
+pointed out in [4], this points to general tension between transverse momentum dependent
+cross sections at qT ∼ Q and collinear factorization.
+     There are a number of potential explanations or solutions, including a direct re-tuning
+of collinear parton distribution and/or fragmentation functions to transversely differential
+SIDIS cross sections. (A proposal to constrain gluon PDFs in transversely differential Drell-
+Yan cross sections was made already in [5].) But before proceeding to consider these di-
+rections, it is important to validate the O(αS2 ) in [2, 3] that led to our conclusions in [1].
+Therefore, we have in this paper repeated the large transverse momentum order O (αs2 ) cal-
+culation following a slightly different formal framework. We are able to reproduce the results
+in [2] very closely, thus bolstering the observations we made earlier in [1].
+     The specific purposes of this article are as follows: i.) to lay out the logical steps of the
+
+                                                2
+calculation with enough detail, we hope, to lead to clues as to how to improve phenomeno-
+logical agreement, ii.) to make available a convenient numerical implementation for the
+large qT region and, iii.) to present some quantitative results relevant to current experimen-
+tal programs such as those at COMPASS and Jefferson Lab 12 GeV. Overall, our results
+support the general observations made in [1].
+      In our calculations we use qgraf [6] to generate Feynman graphs and FORM [7] to carry
+out spinor and color traces for the amplitudes. The renormalization counter terms are
+computed in MATHEMATICA with the packages FeynArts [8, 9] and FeynCalc [10, 11].
+Further analytic manipulations were performed in MATHEMATICA. The code to compute
+the cross sections are publically available at [12].
+      In Sec. II, we explain our setup and notation. In Sec. III we summarize the organization
+of our calculations. This includes a classification of the partonic Feynman graphs needed at
+order αs (Q)2 and a discussion of the phase space integrals for multiparton final states. We
+discuss the results of the calculation in Sec. IV, and give concluding remarks in Sec. V.
+
+
+II.     NOTATION AND CONVENTIONS
+
+
+      We will express quantities in terms of the conventional kinematical variable z ≡ PH ·P/(P ·
+q). PH,T is the Breit frame transverse momentum of the produced hadron, and P and q are
+the four-momenta of the incoming target hadron and the virtual photon respectively. We will
+focus on the unpolarized and azimuthally-independent cross section since this is the most
+straight forward observable to calculate. (Although the results have potential implications
+also for polarization dependent observables.) Many general treatments of SIDIS as a process
+are available [13–24]. Our notation is consistent with trends among these, with modifications
+as needed for our current purposes.
+      The unpolarized differential cross section is
+
+                                                      2
+                                         dσH      2 αem
+                               4PH0 E 0 3 0 3   =        Lµν W µν ,                          (1)
+                                       d l d PH   SlP Q4
+
+or
+                                     dσH         π 2 αem
+                                                      2
+                                                         y
+                                           2
+                                               =      4
+                                                           Lµν W µν ,                        (2)
+                                dx dy dz dPH,T    2Q z
+
+where σH is the unpolarized hadronic cross section. SlP = (l + P )2 . The hadron transverse
+
+                                                3
+momentum PH,T is defined in a frame where the photon and incoming hadron are back-
+to-back (a “photon” frame). The Bjorken x and the y variable are the usual definitions
+x ≡ Q2 /2P · q and y ≡ P · q/P · l. Lµν is the usual leptonic tensor
+
+
+                                  Lµν ≡ 2(lµ lν0 + lµ0 lν − gµν l · l0 ) ,                           (3)
+
+
+and W µν is the hadronic tensor for SIDIS:
+
+                          1 X
+                                       Z
+          µν
+        W (P, q, PH ) ≡                    d4 z eiq·z hP, S|j µ (z)|PH , XihPH , X|j ν (0)|P, Si ,   (4)
+                        (2π)4 X
+
+where we have omitted spin and azimuthal angle dependent terms since we do not consider
+these in this paper. Also, we assume that x and 1/Q are small enough that both the proton
+and lepton mass can be dropped in kinematical and phase space factors. The normalization
+convention in Eq. (4) is so that the prefactor on the right hand side of Eq. (2) is similar to
+the unpolarized case.
+
+
+   The unpolarized structure functions F1 and F2 are defined by the usual gauge invariant
+decomposition
+
+                           qµqν        (P µ − q µ P · q/q 2 )(P ν − q ν P · q/q 2 )
+                               
+               µν       µν
+           W        = −g + 2      F1 +                                              F2 .             (5)
+                            q                            P ·q
+
+Then, the cross section is
+                                                   "                   #
+                               dσH         π 2 αem
+                                                2
+
+                                     2
+                                         =          xy 2 F1 + (1 − y)F2 .                            (6)
+                          dx dy dz dPH,T   zxyQ2
+
+
+
+   In calculations, it is convenient to work with Lorentz invariant structure function extrac-
+tion tensors Pµν
+              Γ with Γ ∈ {g, P P } where
+
+
+
+                                    Pµν   µν
+                                     g = g ,           Pµν    µ ν
+                                                        PP = P P .                                   (7)
+
+
+Then,
+                                 F1 = Pµν
+                                       1 Wµν ,           F2 = Pµν
+                                                               2 Wµν                                 (8)
+
+                                                   4
+where in 4 − 2 dimensions,
+
+                          1 µν 2x2 µν                                              3 − 2       4x3 µν
+                                                                                         
+                  1                                                                                         x
+      Pµν
+       1 =               − Pg + 2 PP P ,                            Pµν
+                                                                     2 =                            PP P −    Pµν .         (9)
+                 1−      2    Q                                                   1−          Q 2        1− g
+
+(We we always use the massless target approximation – see discussion in [25].) It is useful
+to express transverse momentum in terms of
+
+                                                                    PH,T
+                                                      qT = −             .                                                 (10)
+                                                                     z
+
+In a frame where the incoming and outgoing hadrons are back-to-back, qT is the transverse
+momentum of the virtual photon (assuming, as always in this paper, that external hadron
+masses are negligible).
+
+
+   Our treatment of factorization will follow the general style of [26]. The factorization
+theorem that relates the hadronic and partonic differential cross sections in SIDIS is
+                                      Z 1        Z 1                                             
+                      dσH                   dξ         dζ                           dσ̂ij
+    4PH0 E 0                      =                               4k10 E 0                            fi/P (ξ)dH/j (ζ) .   (11)
+               d 3−2 l0 d3−2 PH      x    ξ     z    ζ2                    d 3−2 l0 d3−2 k1
+
+The 1/ξ is from the partonic flux factor, and the 1/ζ 2 is from the conversion between k1
+and PH . The indices i and j denote, respectively, the flavors of the parton in the proton
+(with a momentum fraction ξ) and of the outgoing parton that fragments into hadron H,
+whose momentum is a fraction ζ of parton j momentum. The incoming and outgoing parton
+momenta p and k1 satisfy p = ξP and k1 = PH /ζ. (Indices i and j for incoming and outgoing
+partons pi and k1,j are not shown explicitly but are understood). fi/P (ξ) and dH/j (ζ) are
+the collinear parton distribution and fragmentation functions respectively. It is also useful
+to define partonic variables
+
+                               Q2      x                      k1 · p   z                              PH,T
+                      x̂ ≡            = ,              ẑ ≡           = ,                k1T ≡             .               (12)
+                             (2p · q)  ξ                      (p · q)  ζ                               ζ
+
+The differential partonic hard part in Eq. (11) is finite and well-behaved, and at large
+transverse momentum it starts at O (αs ).
+
+
+   The unpolarized partonic structure tensor for scattering off parton i into parton j is
+
+                                                              5
+defined in exact analogy with the hadronic tensor:
+
+                                                                2
+                                                  dσ̂ij     2 αem
+                                     4k10 E 0 3−2 0 3−2 =      4
+                                                                   Lµν Ŵ µν ,                                      (13)
+                                             d    l d    k1  ŝQ
+
+with,
+
+                     1 1 X
+                                          Z
+           Ŵµν,ij ≡                              d4 w eiq·w hpi , s|jµ (w)|k1j , Xihk1j , X|jν (0)|pi , si .       (14)
+                     2 (2π)4 s,X
+
+
+Thus, from Eq. (11),
+                                          Z 1           Z 1
+                  µν                               dξ         dζ µν
+               W (P, q, PH ) =                                   Ŵ (q, x/ξ, z/ζ)fi/P (ξ)dH/j (ζ) .                 (15)
+                                              x     ξ    z    ζ 2 ij
+
+The partonic structure function decomposition is
+
+                                      qµqν                    (pµ − q µ p · q/q 2 )(pν − q ν p · q/q 2 )
+                                             
+           Ŵijµν =        −g   µν
+                                     + 2           F̂1,ij +                                              F̂2,ij .   (16)
+                                       q                                       p·q
+
+Then,
+                                        Z 1          Z 1
+                           2                dζdξ
+            F1 (x, z, Q , qT ) =                 F̂ (x/ξ, z/ζ, Q2 , qT )fi/P (ξ)dH/j (ζ) ,
+                                               2 1,ij
+                                                                                                                    (17)
+                                             ζ ξ
+                                  Zx 1 Z z1
+                                            dζ
+            F2 (x, z, Q2 , qT ) =     dξ      2
+                                                F̂2,ij (x/ξ, z/ζ, Q2 , qT )fi/P (ξ)dH/j (ζ) .                       (18)
+                                   x     z ζ
+
+
+
+
+III.    ORGANIZATION
+
+
+   A.    Basic Setup
+
+
+                                                         µν
+   For a process with N final state partons, Pµν
+                                              g Wµν and PP P Wµν are squared amplitudes
+
+integrated over the N -particle phase space for the outgoing partons,
+
+                                                1
+                                                        Z
+                    µν                                                                 (N )
+        {Pµν  (N )        (N )
+          g Ŵµν ; PP P Ŵµν } ≡                             {|Mg2→N |2 ; |MP2→N 2
+                                                                              P | } dΠ      − Subtractions
+                                              (2π)4
+                                                       µν    (N )
+                                         ≡ {Pµν  (N )
+                                             g Ŵµν ; PP P Ŵµν }unsub − Subtractions .                             (19)
+
+
+                                                                6
+                         q                                          q
+                                     k1                                         k1
+
+                                                                                          k2
+
+
+                        p                     k2                   p
+                                                                                     k3
+
+
+                                 (a)                                      (b)
+FIG. 1. Momentum labels in amplitudes for (a) 2 → 2 and (b) 2 → 3 partonic scattering. The
+dashed lines represent partons of unspecified flavor. The dot on the end of k1 indicates this is the
+fragmenting parton. The other momenta are integrated in SIDIS.
+
+
+
+Here |Mg |2 or |MP P |2 is the squared amplitude for the process
+
+
+                γ ∗ (q) + parton(p) → parton(k1 ) + (N − 1) spectator partons,
+
+
+with the polarization sum of the virtual photon replaced by g µν or P µ P ν . The subtraction
+terms in Eq. (19) are needed to remove double counting with lower orders of perturbation
+theory and cancel singularities in the first term. The form of the subtraction term will be
+discussed in Sec. III B. It is assumed in Eq. (19) that all integrals that allow kinematical
+δ-functions to be evaluated have been performed. Also, the phase space factors associated
+                                                                               2
+with k1 are excluded from the partonic phase space since they give the ẑ and k1T dependence
+of the differential partonic cross section. The 1/(2π)4 on the right hand side of Eq. (19) is
+the same factor in Eq. (4). The dΠ(N ) represents a generic phase space factor for 2 → N
+scattering (see Eq. (35) and Eq. (39)).
+
+   Thus it is convenient to express the structure functions in the form
+
+                                X Z 1 dξ Z 1 dζ
+         Pµν
+          Γ Wµν (P, q, PH ) =                                   {Pµν  (N )  µν    (N )
+                                                                  g Ŵµν ; PP P Ŵµν }fi/P (ξ)dH/j (ζ) ,   (20)
+                                N         x        ξ   z   ζ2
+
+            P
+where the     N is a sum over all possible partonic final states.
+
+   We will express the phase space in terms of Mandelstam variables:
+
+
+                                    s =(p + q)2 = 2p · q − Q2 ,                                            (21)
+                                    ti =(q − ki )2 = −Q2 − 2q · ki ,                                       (22)
+                                  ui =(p − ki )2 = −2p · ki ,                                              (23)
+
+                                                           7
+                                    sij =(ki + kj )2 = 2ki · kj ,                                       (24)
+
+
+where i, j = 1, 2, 3, with the labeling in Fig. 1. For simplicity, u1 and t1 will be abbreviated
+as u and t from here on. All Mandelstam variables will refer to the partonic cross sections.
+Occasionally it will be useful to change kinematical variables, For example,
+
+
+     s = (p + q)2 = 2p · q − Q2 = Q2 (1/(x/ξ) − 1),                                                     (25)
+                                                                                                   !
+                                        k2                                  k2
+      t = (q − k1 )2 = −Q2 − 2q · k1 = − 1T − Q2 (1 − (z/ζ)) = −Q2 + ẑ Q2 − 1T                        , (26)
+                                        z/ζ                                  ẑ 2
+                                             (z/ζ)Q2    ẑQ2
+     u = (p − k1 )2 = −2p · k1 = −                   =−      ,                                          (27)
+                                               x/ξ        x̂
+           Q2         2
+ dt du =        dẑ dk1T .                                                                              (28)
+           x̂ẑ
+
+The O(αs0 ) contribution to Eq. (19) is kinematically constrained to k1T = 0. At O(αs1 ), only
+tree level processes contribute, and no singularities appear. At O(αs2 ), soft, collinear and
+UV singularities arise as 1/ and 1/2 poles in dimensional regularization with space-time
+dimension n ≡ 4 − 2.
+
+
+   These singularities cancel in the sum of real, virtual and counterterm graphs and after
+applying collinear factorization. More discussion of the singularity structure at O(αS2 ) is
+available in [2, 27]. The O(αs ) partonic cross section is described in details in [17], and our
+results match that calculation. At O(αs2 ), details below can also be found in, e.g., [27–31].
+The change of variables in Eq. (20) from momentum fractions to Mandelstam variables is
+
+                                                              x̂2 PH,T
+                                                                   2
+                                                                       + x̂z 2 Q2 (1 − x̂)
+                   Z                    Z 1        Z B
+                        dξ dζ · · · =         dξ         ds23                              ··· ,        (29)
+                                         A          0           z(Q2 (1 − x̂) − s23 x̂)2
+
+                                                                                     2
+where ζ is replaced by s23 , the virtuality of the spectator parton system. (s23 is kX in the
+notation of [1]). Overall momentum conservation s + u + t = −Q2 + s23 (s ≡ (p + q)2 =
+Q2 (1 − x̂)/x̂) gives
+
+                                       2
+                                    x̂PH,T + z 2 Q2 (1 − x̂)
+                                  ζ=                         ,                                          (30)
+                                     z(Q2 (1 − x̂) − s23 x̂)
+                                               2
+                                            xPH,T
+                                  A=x+                 ,                                                (31)
+                                         z(1 − z)Q2
+
+                                                          8
+                                                                        2
+                                                                       PH,T
+                                                           
+                                              2       1
+                                      B=Q                − 1 (1 − z) −      .                         (32)
+                                                      x̂                z
+
+    The graphical structures needed at order αs (Q)2 can be classified as in Fig. 2. Each
+diagram corresponds to a contribution to the squared amplitude, and the blobs include
+all possible attachments. For the 2 → 2 subprocesses, the blobs include up to one loop
+corrections in one side of the cut to give O(αS2 ) accuracy to the hard parts. The black dot
+marks the fragmenting parton and the other lines are integrated over all phase space.
+    The following are assumed and not shown explicitly in the graphs:
+
+     • Subtractions, consistent with factorization, for all collinear divergences.
+
+     • One QCD loop at all possible positions inside the blob in virtual processes.
+
+     • Associated UV counter term graphs for virtual processes.
+
+Define the hard parts H for individual graphs as
+
+                                                Γ
+                                               Hij;kl ≡ Pµν
+                                                         Γ Ŵµν,ij ,                                  (33)
+
+
+where Γ ∈ {g, pp} and i, j, k, l ∈ {q, q̄, g}. As before, i and j label incoming and fragmenting
+parton flavors respectively while k and l label the unobserved parton flavors. The graph is
+virtual when only one flavor index appears after the “;”. Figures 2(V-A) through 2(V-F)
+correspond to the O (αs ) graphs if all virtual loops in the blobs are removed.
+                      g
+    So, for example, Hqq;gg is represented by Fig. 2(R-A), when the partonic tensor is con-
+                                               g                g
+tracted with g µν . Fig. 2(R-E) includes both Hqq;q 0 q̄ 0 and Hqq 0 ;q q̄ 0 contributions where the
+
+
+prime indicates a different flavor. Note that graphs like Fig. 2(R-G) give contributions like
+Hqgq̄;qq or Hqgq̄0 ;q0 q .
+    We work in the approximation that all particles are massless, except for the photon which
+is highly virtual, q 2 = −Q2 . In Eq. (19), for 2 → 2 scattering,
+
+                                µν
+                  {Pµν    (2)         (2)
+                     g Ŵµν ; PP P Ŵµν }unsub
+
+                        1                                  dn−1 k2
+                             Z
+                                    2→2 2        2→2 2
+                   =       4
+                               {|M  g     | ; |MP P |  }     n−1   0
+                                                                     (2π)n δ (n) (q + p − k1 − k2 )
+                      (2π)                               (2π) 2k2
+                        1
+                   =       4
+                             {|Mg2→2 |2 ; |MP2→2  2           2
+                                               P | }(2π)δ+ (k2 ) .                                    (34)
+                      (2π)
+
+                                                          9
+         (R-A)                   (R-B)                    (R-C)                    (R-D)
+
+
+
+
+         (R-E)                   (R-F)                    (R-G)                    (R-H)
+
+
+
+
+                     (R-I)                    (R-J)                    (R-K)
+
+
+
+
+        (V-A)                    (V-B)                    (V-C)                    (V-D)
+
+
+
+
+                                 (V-E)                     (V-F)
+
+FIG. 2. Structure of graphs needed at order αs (Q)2 . The last six correspond to virtual corrections
+to αs (Q) order graphs.
+
+
+
+
+                                               10
+Thus the 2 → 2 phase space factor is
+
+
+                           dΠ(2) = (2π)δ+ (k22 )
+                                        
+                                   2πx̂                 x̂k 2 
+                                 = 2δ        1 − x̂ 1 − ẑ − 1T     .                                (35)
+                                    Q                        ẑQ2
+
+
+   For the 2 → 3 case, we follow the strategy in [29, 30] where we work in the rest frame of
+the k2 + k3 system, in which
+                               √
+                                s23
+                          k2 =      (1, k̂n−3 , cos β2 sin β1 , cos β1 ),                            (36)
+                               √2
+                                s23
+                          k3 =      (1, −k̂n−3 , − cos β2 sin β1 , − cos β1 ),                       (37)
+                                2
+
+where k̂n−3 denotes unit vectors for the first n − 3 components of the n − 1 dimensional unit
+spatial vector in spherical coordinates. See Fig. 3.
+
+   In the center-of-mass of p and q, the spatial vectors p, q, k1 , and k2 + k3 are in the same
+plane. We then boost to the k2 + k3 rest frame p, where q, and k1 are still in the same plane
+– see Fig. 3. We choose the spatial orientations of this coordinate system so that p, q, and
+k1 are in the plane created by the last two spatial axes. For these vectors, the first n − 3
+spatial components are zero. Then the scattering amplitudes do not depend on the first
+n − 3 spatial components of k2 or k3 , and the 3-body phase space simplifies (see Appendix A
+for useful identities relating to the 3-body final state phase space). In this frame,
+
+                µν
+   {Pµν    (3)         (3)
+      g Ŵµν ; PP P Ŵµν }unsub
+
+         1                                 dn−1 k2       dn−1 k3
+              Z
+                     2→3 2       2→3 2
+    =           {|M  g    | ; |M PP |  }                            (2π)n δ (n) (q + p − k1 − k2 − k3 )
+       (2π)4                             (2π)n−1 2k20 (2π)n−1 2k30
+                                             n−2
+         1                       2→3 2 |k2 |     d|k2 |
+              Z
+                     2→3 2
+    =       4
+                {|Mg | ; |MP P | }             n−2
+                                                         δ (k 2 ) dΩn−4 dβ1 dβ2 sinn−3 β1 sinn−4 β2
+                                                     0 + 3
+       (2π)                               (2π) 2k2
+        − −2 −
+       s 2 π Γ(1 − )
+                                Z
+    = 23 6−2                     {|Mg2→3 |2 ; |MP2→3  2
+                                                   P | } dβ1 dβ2 sin
+                                                                       1−2
+                                                                             β1 sin−2 β2 ,           (38)
+        (2π)      Γ(1 − 2)
+
+where in the third equality we use that the scattering amplitudes are independent of the
+first n − 3 spatial components of k2 . That is,
+
+                              s−  −2 −
+                               23 2 π    Γ(1 − )
+                    dΠ(3) =                        dβ1 dβ2 sin1−2 β1 sin−2 β2 .                    (39)
+                               (2π) 2−2 Γ(1 − 2)
+
+                                                 11
+                        y                                 k2
+                                x
+
+                                                q
+
+
+                                    remnant                                       p
+
+
+                                k1
+                                                                                      z
+                      fragmentation             k3
+
+
+
+
+FIG. 3. Schematic of SIDIS with 2 → 3 partonic scattering, using the orientation of the vectors
+defined in Eqs. (36)–(37) in 4-dimensions. A 2 → 2 scattering configuration is recovered if (k2 +k3 )2
+becomes much less than Q2 , or if k2 or k3 align with one of the other hadrons. The three frames
+defined in this section are obtain by rotating p, q and k1 inside the plane; frame 1 corresponds to
+orienting the z-axis along k1 (Eq. (B4)), frame 2 orients the z-axis along p (Eq. (B5)), frame 3
+orients the z-axis along q (Eq. (B9)).
+
+
+From overall momentum conservation
+
+                                      Q2 (ẑ(1 − x̂) − ẑ 2 (1 − x̂)) − x̂k1T
+                                                                           2
+                            s23 =                                             .                  (40)
+                                                       x̂ẑ
+
+Since s23 can become zero in certain regions of x̂ and ẑ, dimensional regularization is needed
+for the s23 → 0 behavior. Further details of the 2 → 3 phase space are provided in the next
+subsection.
+   To summarize the basic steps, integrals for the unobserved final state phase space are first
+performed over angular variables. Then, integrals over momentum fractions are expressed
+via Eq. (29) as integrals over ξ and s23 . In the s23 → 0 limit there are soft and collinear
+singularities, proportional to δ(s23 )/ or δ(s23 )/2 , that cancel after combining 2 → 3 and
+the corresponding virtual 2 → 2 processes. There are additional collinear singularities in
+
+                                                     12
+2 → 3 and virtual 2 → 2 processes which are ultimately canceled by subtraction terms in the
+factorization algorithm. (These contain also δ(s23 ) and plus distributions.) All contributions
+are integrated over the physical range of s23 in Eqs. (29)–(32).
+
+
+
+   B.     Factorization Order-By-Order
+
+
+   Once all real and virtual Feynman graphs have been computed in dimensional regular-
+ization, they must be combined in an algorithm consistent with a factorization theorem.
+   According to the collinear factorization theorem, hard factors are independent of the
+species of target and final state particles, so hard scattering calculations can be performed
+for free and massless partons as the target and final state without loss of generality. (In other
+words, we will consider perturbatively calculable parton-in-parton PDFs and and parton-to-
+parton FFs.) This simplifies calculations, so we start our calculations by rewriting Eq. (15)
+as a factorization theorem for a partonic initial and final state:
+                                           Z 1+        Z 1+
+                                                  dξ          dζ
+              Wµν,i0 j 0 (p , q, k10 ) =
+                          0
+                                                                 Ŵµν,ij (q, x/ξ, z/ζ)fi/i0 (ξ)dj 0 /j (ζ)
+                                            x−     ξ    z−    ζ2
+                                      = Ŵµν,ij (q, x/ξ, z/ζ) ⊗ fi/i0 (ξ) ⊗ dj 0 /j (ζ)
+                                             (LO)                      (NLO)
+                                      = Wµν,i0 j 0 (p0 , q, k10 ) + Wµν,i0 j 0 (p0 , q, k10 ) + O(αs3 ) .           (41)
+
+
+All manipulations will be done in n = 4 − 2 dimensions until the very end. The left side is
+now an argument of p0 , q, and k10 , and the PDFs and FFs have subscripts i/i0 and j 0 /j. The
+momenta p0 and k10 play the roles that P and PH,T played earlier. The initial p0 has a flavor
+i0 and the final k10 has a flavor j 0 . The second line in Eq. (41) defines the “⊗” notation as
+                                                                                                             (LO)
+the usual shorthand for the convolution integrals in ξ and ζ. On the last line, Wµν,i0 j 0 and
+  (NLO)
+Wµν,i0 j 0 are hadronic tensors calculated to LO and NLO in the hard parts, i.e. what one
+normally means when one speaks of a “leading order” or “next-to-leading order” calculation
+in collinear pQCD.
+   Expanding Eq. (41) to the relevant order in αs gives
+
+                               (LO)                            (NLO)
+  Wµν,i0 j 0 (p0 , q, k10 ) = (Ŵµν,ij (q, x/ξ, z/ζ) + Ŵµν,ij (q, x/ξ, z/ζ))
+                                                                                              
+                                 (1)         (α )                (1)          (α )
+                            ⊗ fi/i0 (ξ) + fi/i0s (ξ) + · · · ⊗ dj 0 /j (ζ) + dj 0 /js (ζ) + · · · + O(αs3 ) . (42)
+
+
+                                                             13
+                                                    (LO)                               (NLO)
+The aim is to get the hard parts, Ŵµν,ij (q, x/ξ, z/ζ) and Ŵµν,ij (q, x/ξ, z/ζ). The leading
+order is just
+
+              (LO)                        (LO)
+          Wµν,i0 j 0 (p0 , q, k10 ) = Ŵµν,ij (q, x/ξ, z/ζ)
+                                                                                                      
+                                        (1)         (α )                (1)           (α )
+                                    ⊗ fi/i0 (ξ) + fi/i0s (ξ) + · · · ⊗ dj 0 /j (ζ) + dj 0 /js (ζ) + · · · ,              (43)
+
+                                      (LO)
+where the expression for Ŵµν,ij (q, x/ξ, z/ζ) is simple and well-known – it is just the sum of
+tree level 2 → 2 graphs contributing to Ŵµν,i0 j 0 (q, x/ξ, z/ζ).
+
+                (NLO)
+   To get Ŵµν,ij (q, x/ξ, z/ζ), first write
+
+                                                              h                                                     i
+                                    (LO)                                                    (LO)
+       Wµν,i0 j 0 (p0 , q, k10 ) = Wµν,i0 j 0 (p0 , q, k10 ) + Wµν,i0 j 0 (p0 , q, k10 ) − Wµν,i0 j 0 (p0 , q, k10 ) .   (44)
+
+
+The term in braces is the correction to the leading order so it vanishes by construction at
+order αs in the hard part. Also, it contains subtractions for the overlap with the LO, so it
+is infrared safe through order αs2 in hard scattering. Thus, we may rewrite it as:
+
+                                   (LO)
+    Wµν,i0 j 0 (p0 , q, k10 ) − Wµν,i0 j 0 (p0 , q, k10 ) =
+         h                                                     iα2s
+                                                  (LO)
+            Wµν,i0 j 0 (q, x/ξ, z/ζ) − Wµν,i0 j 0 (q, x/ξ, z/ζ)     ⊗ fi/i0 (ξ) ⊗ dj 0 /j (ζ) + O(αs3 ) .                (45)
+
+
+The term in braces on the second line is equal to the first line evaluated with hatted partonic
+variables and expanded only to order αs2 in the coupling. Comparing with Eq. (42) and
+                                                                                 (NLO)
+Eq. (44) shows that the factor in braces in Eq. (45) is Ŵµν,ij (q, x/ξ, z/ζ). We use Eq. (43)
+to evaluate it explicitly in terms of low order PDFs and FFs:
+
+      (NLO)                (NLO)                          (LO)         ˜ ẑ/ζ̃) ⊗ f (α0s ) (ξ)
+    Ŵµν,ij (q, x̂, ẑ) = Wµν,i0 j 0 (q, x̂, ẑ)unsub − Ŵµν,ij (q, x̂/ξ,                   ˜ ⊗ d(1)
+                                                                                   i/i           j 0 /j (ζ̃)
+                                                       (LO)         ˜ ẑ/ζ̃) ⊗ f (1)0 (ξ)
+                                                   − Ŵµν,ij (q, x̂/ξ,                 ˜ ⊗ d(α0 s ) (ζ̃)
+                                                                                i/i         j /j
+                                 (NLO)
+                          = Wµν,i0 j 0 (q, x̂, ẑ)unsub
+                                                    Z 1+ ˜ Z 1+
+                                                         dξ     dζ̃ (LO)           ˜ ẑ/ζ̃)f (α0s ) (ξ)d
+                                                                                                     ˜ (1)
+                                                  −                 Ŵµν,ij (q, x̂/ξ,                   j 0 /j (ζ̃)
+                                                      x− ξ
+                                                          ˜ z− ζ̃
+                                                                  2                         i/i
+                                                    Z 1+ ˜ Z 1+
+                                                         dξ     dζ̃ (LO)           ˜ ẑ/ζ̃)f (1)0 (ξ)d
+                                                                                                    ˜ (α0 s ) (ζ̃)
+                                                  −                 Ŵµν,ij (q, x̂/ξ,
+                                                      x− ξ
+                                                          ˜ z− ζ̃ 2                         i/i        j /j
+
+                                 (NLO)
+                          = Wµν,i0 j 0 (q, x̂, ẑ)unsub
+
+                                                              14
+                                                    Z 1+ ˜
+                                               αs S    dξ (LO)
+                                                           Ŵµν,i00 j 0 (q, x̂/ ˜
+                                                                               ξ, ẑ)Pi00 /i0 ( ˜
+                                                                                       (0)
+                                             +                                                 ξ)
+                                               4π   x− ξ
+                                                         ˜
+                                               αs S 1+ dζ̃ (LO)
+                                                    Z
+                                                                                       (0)
+                                             +             Ŵ 0 00 (q, x̂, ẑ/ζ̃)Pj 0 /j 00 (ζ̃) .   (46)
+                                               4π  z− ζ̃ 2 µν,i j
+
+             (NLO)
+Here, the Wµν        (q, x̂, ẑ)unsub is the sum of order O(αs2 ) graphs contributing to Wµν (q, x̂, ẑ)
+without any subtractions (i.e., graphs in Fig. 2(R-A) through Fig. 2(V-F) integrated over
+phase space, but absent the subtractions). The second two terms are obtained from Eq. (43),
+expanded to order αs2 . The last line in Eq. (46) uses the known results for PDFs and FFs
+calculated to O (αs ) for massless quarks and gluons:
+
+                                        (1)
+                                      fi/i0 (ξ) = δii0 δ(1 − ξ) ,                                    (47)
+                                       (1)
+                                      dj 0 /j (ζ) = δj 0 j δ(1 − ζ) ,                                (48)
+                                       (α )           αs S (0)
+                                     fi/i0s (ξ) = −        P 0 (ξ) ,                                 (49)
+                                                      4π  i/i
+                                      (α )            αs S (0)
+                                     dj 0 /js (ζ) = −      P 0 (ζ) .                                 (50)
+                                                      4π  j /j
+
+Note that, consistent with the MS scheme, the renormalized order αs PDFs and FFs in
+dimensional regularization for massless pQCD are just S / poles. There are no µ factors
+or logarithms of µ. Thus the last line of Eq. (46) involves no factors of µ . For completeness,
+the one-loop splitting functions [32] are
+                                                                       
+                         (1)                    2              3
+                        Pqq0 (ξ) = 2CF δqq0           − 1 − ξ + δ(1 − ξ) ,                           (51)
+                                            (1 − ξ)+           2
+                         (1)
+                             (ξ) = 2TF (1 − ξ)2 + ξ 2 ,
+                                                     
+                        Pqg                                                                          (52)
+                                         1 + (1 − ξ)2
+                                                     
+                         (1)
+                        Pgq (ξ) = 2CF                   .                                            (53)
+                                              ξ
+
+
+
+
+   Our calculations need Eq. (46), contracted with specific Pµν
+                                                             Γ tensors. The substraction
+
+scheme has been carry out without contracting the Lorentz indices of the partonic tensor.
+However the method is equally applicable for any kind of contraction with external momenta.
+In our calculations we carry out the substractions separately for the two extraction tensors
+in Eq.(7) and verified analytically the cancellation of all infrared and collinear singularities.
+
+                                                     15
+IV.     RESULTS
+
+
+   A.    Combining real and virtual contributions
+
+
+   After the hard real and virtual contributions are calculated, they must be combined into
+infrared safe squared amplitudes. Table I shows graphs from corresponding real and virtual
+processes. Note that the correspondence between real and virtual processes is not one-to-
+one. In particular, infrared (soft and collinear) singularities in Hqq;g are canceled by three
+real processes. A subtlety arises when a quark loop appears on the gluon leg of Hqq;g . This
+creates a collinear pole term proportional to Nf , the number of massless quark flavors in
+the loop. This pole term is canceled after adding the real processes Hqq;qq̄ and Hqq;q0 q̄0 with
+all massless flavors q 0 (other than q) [29]. For processes with a non-spectator gluon leg, the
+Nf dependence of the collinear pole is removed by factorization. Also notice that some real
+processes have no corresponding virtual ones, and in these cases factorization subtractions
+are sufficient to remove all infrared poles. Since many graphs need to be combined, the
+results are presented as the six scattering hard parts listed in the last column of Table I.
+We also need the hard parts for processes with reversed quark number flow in one or two
+open fermion lines in the graph. That is, in one or two open quark lines, quarks and
+their corresponding anti-quarks are interchanged. These are easily related to the hard parts
+already listed in Tabel I by using the fact that QED vertices acquire a minus sign under
+charge conjugation. The results are summerized in Tabel II. Note that when a quark line
+links an outgoing spectator quark anti-quark pair, there is no need for the reversed quark
+flow. This is because the spectator momenta are integrated over and interchanging the quark
+and anti-quark will double count the contribution.
+
+
+
+
+   B.    Comparison with existing results
+
+
+   After combining the graphs in each of the six scattering channels in Table I, we have
+verified explicitly that all single and double poles cancel. The terms left are finite in the
+limit  → 0, and constitute the infrared safe hard parts in the last column of Table I. As a
+check, we have compared with a (privately obtained) computer calculation that appears to
+reproduce the results of Ref. [2] but is modified to be consistent with the kinematics of the
+
+                                             16
+                virtual                                real                        combined
+
+
+       Hgq;q̄                      Hgq;q̄g                                            Hgq
+
+
+
+                                  Hqq;gg
+       Hqq;g                     + Hqq;qq̄                                            Hqq
+                                 + Hqq;q0 q̄0
+
+
+
+       Hqg;q                       Hqg;qg                                             Hqg
+
+
+
+
+                 N/A               Hgg;qq̄                                            Hgg
+
+
+
+
+                 N/A               Hqq̄;qq                                            Hqq̄
+
+
+
+
+                 N/A              Hqq0 ;qq̄0                                          Hqq0
+
+
+
+TABLE I. Correspondence between real and virtual graphs at order αs (Q)2 . The superscript of
+the hard part Γ ∈ {g, pp} is supressed. For virtual graphs, the additional gluon is inside one of the
+blobs.
+
+current experimental data. For most kinematics, the calculations agree within experimental
+uncertainties, but we found several possible differences.
+
+   • In the last row of Table I, our calculation of terms from the Pµν
+                                                                    g projection with the
+
+      charge structure e2q and eq eq0 differs from the corresponding terms calculated in the
+      previously existing code by a minus sign. (By contrast, terms with e2q0 agree.)
+
+   • As is discussed in subsection IV A, adding the real processes Hqq;qq̄ and Hqq;q0 q̄0 with all
+      massless flavors q 0 gives terms proportional to Nf . The pole parts of these terms are
+
+                                                17
+        canceled by the corresponding poles from Hqq;g . However, a finite part remains since
+        the real processes above with Nf final state quark pairs give identical contribution
+        even when the quark pairs are not collinear. These terms contribute to the third row
+        of Table I. In the previously existing code, we did not find an explicit dependence on
+        Nf in this channel.
+
+The numerical result of our calculation can in some cases differ from the previously existing
+code by as much as ∼ 100% for certain individual subchannels. In the kinematics of the
+COMPASS experiment, this translates into a discrepancy of up to ∼ 20% for the overall
+cross section.
+
+
+   C.    Phenomenological Results
+
+
+   We examine the impact of the O(αS2 ) corrections in SIDIS by plotting the NLO to LO
+ratio K-factor for the F1 structure function. We will consider values of z between 0.2 and
+0.8 since this is a region where factorization theorems based on current fragmentation in
+SIDIS is conventionally expected to apply.
+   For x, Q, qT , we choose values of Q = 2, 20 GeV, qT = Q, 2Q and 0.001 ≤ x ≤ 1,
+which correspond to kinematics ranges accessible by existing experimental facilities such as
+COMPASS and JLab 12. Fig. 4 shows the K-factor across the aforementioned kinematical
+range, and it shows a clear concave up shape in its dependence on x with values that decrease
+as Q varies from Q = 2 to 20 GeV.
+   It is notable that even for Q as large as 2 GeV, the K-factor is greater than 2, even
+at its minimum value. Note also that this minimum is approximately in the region of
+0.01 ≤ x ≤ 0.1, close to the valence region relevant to many hadron structure studies.
+The K-factor increases at smaller values of x, indicating that the NLO corrections becomes
+increasingly important for describing regions with large (P + q)2 . It also increases at large
+x until it reaches the kinematic boundary where the phase space for the hadron production
+vanishes.
+   The enhancements at large x can be traced to the logarithms of B (see Eq. 32 and
+appendix D) which are associated with soft gluon effects near the kinematical threshold.
+Thus it is likely that threshold resummation becomes important in this region. Point-by-
+point in qT , effects near the kinematical boundaries are more apparent than in qT -inclusive
+
+                                             18
+cross sections. It is interesting to compare with observations found in [33] where threshold
+resummation effects for qT integrated SIDIS were found to give sizable corrections, but not
+the factor of & 5 enhancement needed to explain the largest qT present in Fig. 4.
+     The minimum in the K-factor is helpful for identifying regions in x where ordinary fixed
+order treatments are most likely to be sufficient. Given a set of values for z, qT , and Q, let
+x0 denote the x value corresponding to the minimum K-factor. Then bins in x, Q, z ,qT can
+be classified according to x < x0 and x > x0 . We show this in Fig. 5 for kinematical bins
+corresponding to recent COMPASS qT -dependent SIDIS multiplicities h± [34] for qT /Q > 1.
+The values of x the for which the K-factor reaches its minimum for qT ≈ Q can be read from
+the plots. Away from these regions, additional resummation techniques may be needed.
+     It may also be necessary to update collinear PDFs outside these regions in order to fully
+describe the large qT behavior. As mentioned in [1], the large qT tails of SIDIS are sensitive
+to the large ξ PDFs and large ζ FFs. These could potentially open up new opportunities to
+constrain collinear PDFs at large momentum fractions.
+     At the same time, factorization theorems for the full qT -dependent SIDIS spectrum,
+including qT ≈ 0 with non-perturbative TMD PDFs and TMD FFs, need the large qT ∼
+Q component in order to have a completely reliable tests of the factorization formalism.
+Ideally, such validation will take place when qT -dependent SIDIS data are included in the
+simultaneous extraction of collinear PDFs and FFs as well as non-perturbative TMD PDFs
+and FFs in QCD global analysis.
+
+
+
+V.     CONCLUSION
+
+
+     The computational tools necessary to reproduce Fig. 4, Fig. 5 and other similar calcu-
+lations are available at [12], along with documentation. As indicated in the introduction,
+these generally confirm earlier calculations (e.g., [2, 3]) of the overall cross section to within
+about 20%, well within present experimental uncertainties, and thus strengthens our ear-
+lier position [1] that significant tension exists between existing SIDIS data and collinear
+factorization calculations at large qT & Q.
+     We have identified region where collinear factorization appears most reliable as the re-
+gions with minimal K-factors, with current sets of collinear PDFs and FFs. As discussed
+in Sec. IV C, minimal values for the K-factor lie in the region 0.01 < x < 0.1, that is, ap-
+
+                                              19
+              virtual                                                               real
+       Hgq;q̄ Hgq̄;q = Hgq;q̄ Hgq;q̄g                                              Hgq̄;qg = Hgq;q̄g
+                              Hqq;gg                                               Hq̄q̄;gg = Hqq;gg
+       Hqq;g Hq̄q̄;g = Hqq;g Hqq;qq̄                                               Hq̄q̄;qq̄ = Hqq;qq̄
+                                                                     e2                  e2           e20                e20
+                             Hqq;q0 q̄0                          Hq̄qq̄;q0 q̄0 = Hqq;qq                 q               q
+                                                                                           0 q̄ 0 ; Hq̄ q̄;q 0 q̄ 0 = Hqq;q 0 q̄ 0
+
+       Hqg;q Hq̄g;q̄ = Hqg;q Hqg;qg                                              Hq̄g;q̄g = Hqg;qg
+              N/A            Hgg;qq̄                                                       N/A
+              N/A            Hqq̄;qq                                             Hq̄q;q̄q̄ = Hqq̄;qq
+                                                                                Hq̄q̄0 ;q̄q0 = Hqq0 ;qq̄0
+                  N/A          Hqq0 ;qq̄0 He2q                       e2            e20                e20            eq e 0          eq e 0
+                                             q̄q 0 ;q̄ q̄ 0   = Hqqq 0 ;qq̄0 ; Hq̄qq 0 ;q̄q̄0 = Hqqq 0 ;qq̄0 ; Hq̄q0 ;q̄q q̄0 = −Hqq0 ;qq q̄0
+                                             e2                      e2            e20                e20            eq e 0          eq e 0
+                                          Hqqq̄0 ;qq0 = Hqqq 0 ;qq̄0 ; Hqqq̄0 ;qq0 = Hqqq 0 ;qq̄0 ; Hqq̄0 ;qq
+                                                                                                           q              q
+                                                                                                              0 = −Hqq 0 ;q q̄ 0
+
+
+TABLE II. The first column of real and virtual are the hard parts as in Table I. The second column
+gives the hard parts needed other than those in the first column. The superscript of the hard part
+Γ ∈ {g, pp} is supressed. e2q , e2q0 , and eq eq0 are various combinations of quark electric charges. A
+charge combination as a superscript denotes terms proportional to that particular charge structure
+in a hard part.
+
+
+
+
+ F1NLO/F1LO
+              6
+              4
+              2
+                  z = 0.2 qT = Q                                                     z = 0.8 qT = Q
+
+                                                                                                                               Q = 2 GeV
+              6                                                                                                                Q = 20 GeV
+
+
+              4
+              2
+                  z = 0.2 qT = 2Q                                                    z = 0.8 qT = 2Q
+                         0.01              0.1                                                      0.01                       0.1            x
+FIG. 4. K-factor ratio. We use CJ15nlo PDFs [35] and DSS09 FFs [36]. The ratio is bounded at
+large x due to limiting phase space for hadron production. The small noise in the lower left panel
+is due to the oscillatory behavior in the interpolation of FFs tables.
+
+
+
+
+                                                                   20
+        7                           7                              7
+                                                                               x > x0
+        6                           6                              6
+                                                                               x ≤ x0
+        5             < z >= 0.24   5                < z >= 0.48   5                < z >= 0.69
+ qT/Q   4                           4                              4
+        3                           3                              3
+        2                           2                              2
+        1                           1                              1
+            0.01      0.1       x        0.01        0.1       x        0.01            0.1   x
+
+FIG. 5. SIDIS kinematics of h± at COMPASS [34]. x0 is the location in x where the minumum
+of K-factor is attained at a given (Q, qT , z). Samples with x > x0 indicates sensitivity to large
+threshold corrections.
+
+
+proximately in valence kinematics. The increase of the K-factor at both smaller and larger
+values of x, may point at the importance of resummation effects outside the valence region,
+or the need to refit collinear PDFs and FFs. This last interpretation is consistent with that
+of our previous study [1]. It is also important to note that the 2 → 2 kinematics of the
+O (αs ) contribution places severe kinematical constraints on the relationship between the
+initial and final state partons. Therefore, it is likely that the generally large K-factors are
+at least partly due simply to a kinematical suppression of the O (αs ) contribution, and are
+not a fundamental problem with the convergence of the perturbation series. We note that
+Reference [37] has addressed somewhat similar issues, but in the region where qT is still small
+enough that a qT /Q power expansion is still meaningful, and also in the limit of Q2  s.
+   As a next step, we plan to refit collinear functions in the large qT region, using SIDIS
+and e+ e− -annihilation to back-to-back, and Drell-Yan scattering to explore the possibility
+that this allows the region of minimum K-factor in Fig. 4 to be fully accommodated with
+minimal modification to existing fits.
+   Since the pioneering work in presented in [15, 17, 38], there has been a large number
+of studies on unpolarized SIDIS cross sections [22, 39–44]. Unpolarized SIDIS is however,
+only one component in a broad program of phenomenolical studies where the universality of
+parton correlation functions plays a central role in testing pictures of nucleon structure [4, 45–
+64]. In order for this program to be successful, the precision in the determination of parton
+correlation functions needs to meet the demands of the increasingly precision of current and
+future experimental programs [65–70]. This demands a satisfactory resolution to problems
+
+                                                21
+in the qT ∼ Q region for which the pQCD calculation at large qT is crucial.
+
+
+
+
+  ACKNOWLEDGMENTS
+
+
+  We thank J. Owens, J.-W. Qiu, and W. Vogelsang for very useful discussions. We thank R.
+Sassot for explanations regarding the code in [2]. T. Rogers’s work was supported by the U.S.
+Department of Energy, Office of Science, Office of Nuclear Physics, under Award Number de-
+sc0018106. This work was also supported by the DOE Contract No. DE- AC05-06OR23177,
+under which Jefferson Science Associates, LLC operates Jefferson Lab. N. Sato was partially
+supported by DE-FG-04ER41309, de-sc0018106 and the DOE Contract No. DE- AC05-
+06OR23177, under which Jefferson Science Associates, LLC operates Jefferson Lab. B. Wang
+was supported in part by the National Science Foundation of China (11135006, 11275168,
+11422544, 11375151, 11535002) and the Zhejiang University Fundamental Research Funds
+for the Central Universities (2017QNA3007). J. O. Gonzalez-Hernandez work was partially
+supported by Jefferson Science Associates, LLC under U.S. DOE Contract #DE-AC05-
+06OR23177 and by the U.S. DOE Grant #DE-FG02-97ER41028.
+
+
+
+
+  Appendix A: Identities for three-body partonic phase space
+
+
+  The phase space of three massless particles has the form
+
+                     dn−1 k1      dn−1 k2      dn−1 k3
+  Z            Z
+      P S3 =                                              (2π)n δ (n) (p + q − k1 − k2 − k3 ) · · · .   (A1)
+                   (2π)n−1 2k10 (2π)n−1 2k20 (2π)n−1 2k30
+
+The k1 integral can be performed in the center-of-mass frame of p and q
+
+
+                                           p =(P, 0n−2 , −P ),                                          (A2)
+                                           q =(E1 , 0n−2 , P ),                                         (A3)
+                                          k1 =E(1, kn−2 , cos θ),                                       (A4)
+
+
+                                                    22
+where kn−2 denotes the first n − 2 components of the n − 1 dimensional unit spatial vector
+in spherical coordinates, and
+
+                                                  s + Q2
+                                              P =   √ ,                                     (A5)
+                                                   2 s
+                                                  s − Q2
+                                              E1 = √ .                                      (A6)
+                                                   2 s
+
+In k1 phase space, E and θ are related with observables. The “azimuthal” angles in kn−2
+can be integrated to give
+
+                        dn−1 k1               1
+                    Z                     Z
+                                ··· = −         Ωn−3 E 1−2 sin−2 θ dE d cos θ · · · ,     (A7)
+                         2k10                 2
+
+where Ωm is the m dimensional angular volume,
+
+                                                        Γ(m/2)
+                                      Ωm =2m π m/2             .                            (A8)
+                                                         Γ(m)
+
+E and θ are related to Lorentz invariants u and t via
+
+
+                                 t = − 2(E1 E − P E cos θ) − Q2 ,                           (A9)
+                                 u = − 2(P E + P E cos θ).                                 (A10)
+
+
+In terms of t and u, the k1 phase space becomes
+                                                                     
+                    dn−1 k1                            (s + Q2 )
+                                                    
+                                            Ωn−3
+                Z                     Z
+                            ··· = −                                     du dt · · · .      (A11)
+                     2k10                 4(s + Q2 ) u(st + Q2 s23 )
+
+To simplify the k2 and k3 phase space, we work in the k2 and k3 center-of-mass frame where
+k2 and k3 take the form of Eqs. (36) and (37). The choice of the spatial orientation of axes
+also follows the discussion below Eq. (36). In this frame
+ Z
+   P Sk2 k3 · · ·
+   Z n−1
+      d k2 dn−1 k3 (n)
+                                                        Z n−1
+                                                          d    k2 + 0 2
+ ≡          0       0
+                      δ (p + q − k1 − k2 − k3 ) · · · =       0
+                                                                 δ ((k3 ) − |k3 |2 ) · · · . (A12)
+        2k2       2k3                                       2k2
+
+
+
+
+                                                   23
+Since the scattering amplitudes are independent of the first n − 3 spatial components of k2 ,
+the “azimuthal” part of dn−1 k2 can be integrated to give
+              Z                        Z
+                    P Sk2 k3 · · · =       22−3 Ωn−4 s−
+                                                       23 sin
+                                                             1−2
+                                                                  β1 sin−2 β2 dβ1 dβ2 · · · .   (A13)
+
+
+
+   Appendix B: Phase space integration for 2 → 3 processes in SIDIS
+
+
+   The main effort of the calculation is in the 2 → 3 process p + q → k1 + k2 + k3 . After
+partial fractioning (to be discussed Appendix D), each term from the squared amplitudes
+                  2
+|Mg2→3 |2 ,|MP2→3
+               P | in Eq. (38) contains at most two Mandelstam variables depending on the
+
+angles β1 and β2 . So, up to overall factors, Eq. (38) takes the form
+
+                                                      sin1−2 β1 sin−2 β2
+              Z π          Z π
+                     dβ1         dβ2                                                     ,        (B1)
+                0           0        (a + b cos β1 )j (A + B cos β1 + C sin β1 cos β2 )l
+
+where j and l are integers. The coefficients a, b, A, B, and C are specific to the squared
+amplitude and do not depend on β1 and β2 . They are determined by the spatial orientations
+of axes in the k2 + k3 rest frame. Note that Eqs. (36)–(37) do not determine uniquely the
+components of p, q, and k1 . There can still be a rotation in the plane determined by the
+last two spatial axes. Taking advantage of this freedom, we specify three frames.
+
+
+      Frame 1:
+
+
+                                           p = p0 (1, 0n−3 , sin α1 , cos α1 ),                   (B2)
+                                           q = (q0 , 0n−3 , q 0 sin θ1 , q 0 cos θ1 ),            (B3)
+
+                                           k1 = k10 (1, 0n−3 , 0, 1),                             (B4)
+
+
+
+      Frame 2:
+
+
+                                           p = p0 (1, 0n−3 , 0, 1),                               (B5)
+                                           q = (q0 , 0n−3 , q 0 sin α2 , q 0 cos α2 ),            (B6)
+                                           k1 = k10 (1, 0n−3 , sin θ2 , cos θ2 ),                 (B7)
+
+
+                                                         24
+     Frame 3:
+
+
+                                       p = p0 (1, 0n−3 , sin α3 , cos α3 ),                 (B8)
+                                       q = (q0 , 0n−3 , 0, q 0 ),                           (B9)
+
+                                       k1 = k10 (1, 0n−3 , sin θ3 , cos θ3 ),              (B10)
+
+
+     where
+
+                                    s23 − t
+                               p0 = √ ,                                                    (B11)
+                                     2 s23
+                                     s+t
+                               q0 = √ ,                                                    (B12)
+                                    2 s23
+                                    q
+                               q 0 = q02 + Q2 ,                                            (B13)
+                                       s23 − s
+                               k10 = − √ ,                                                 (B14)
+                                        2 s23
+                                                   p
+                                                 2 s23 u(Q2 s23 + st)
+                               sin α1 = sin θ2 =                       ,                   (B15)
+                                                   (s − s23 )(s23 − t)
+                                                        p
+                                                       2 s23 u(Q2 s23 + st)
+                               sin α2 = sin α3 =           p                    ,          (B16)
+                                                  (s23 − t) 4Q2 s23 + (s + t)2
+                                                       p
+                                                      2 s23 u(Q2 s23 + st)
+                               sin θ1 = sin θ3 =           p                   .           (B17)
+                                                 (s − s23 ) 4Q2 s23 + (s + t)2
+
+
+  There are three cases (see Appendix C for a proof) for the coefficients in the integral in
+Eq. (B1): (1) a2 = b2 and A2 = B 2 + C 2 ; (2) a2 > b2 and A2 = B 2 + C 2 ; (3) a2 = b2 and
+A2 > B 2 + C 2 . Integrals in case (3) can be transformed to case (2) by switching to another
+frame. With multiple frames, the number of integrals to compute can be reduced. In the
+following we show how the integrals in case (1) and (2) are obtained.
+
+     Case (1): In this case the integral in Eq. (B1) has a closed form [71]
+
+                                                sin1−2 β1 sin−2 β2
+             Z π         Z π
+                   dβ1         dβ2
+               0       0      (1 − cos β1 )j (1 − cos χ cos β1 − sin χ sin β1 cos β2 )l
+                   Γ(1 − 2) −j−l                               
+                                                                                  2 χ
+                                                                                      
+              = 2π           2    B(1  −   −  j, 1 −  − l) F
+                                                            2 1   j, l, 1 − ; cos     ,   (B18)
+                   Γ(1 − )2                                                        2
+
+     where for simplicity an overall factor is not shown and we choose a = A = −b = 1,
+     B = cos χ, and C = sin χ. In the frames we choose above, χ can be α1 or θ2 . Here
+
+                                                    25
+the signs of the trigonometric function terms in the denominator are chosen to be
+negative. All other choices can be transformed to this one by applying substitutions
+β1,2 → π − β1,2 , and/or χ → π + χ. The derivation of this integral can be found in
+appendix A of [71].
+
+
+
+
+Case (2): In this case the integral no longer has a closed form. Following steps similar
+to appendix A of [71], we arrive at
+
+                                                        sin1−2 β1 sin−2 β2
+              Z π         Z π
+     Ij,l =         dβ1         dβ2
+               0           0          (D − cos β1 )j (1 − cos χ cos β1 − sin χ sin β1 cos β2 )l
+
+                                      Γ(n − 3)Γ(2 + l − n/2)
+      = (−1)l+1 21−l−j π
+                                Γ(n/2 − 1)Γ(l)Γ(n/2 − 2)Γ(3 − n/2)
+                                      Z 1        Z 1
+                                                            xl−1 z n/2−2 (1 − x)n/2−l−2 (1 − z)n/2−l−2
+                                 ×          dx         dz
+                                       0          0          [z + (D − 1)/2 − (1 + cos χ)xz/2]j
+
+                                Γ(n − 3)Γ(2 + l − n/2)Γ(n/2 − l − 1)
+      = (−1)l+1 21−l−j π
+                                  Γ(n/2 − 1)2 Γ(n/2 − 2)Γ(3 − n/2)
+                                      Z 1
+                                                 z n/2−2 (1 − z)n/2−l−2                       
+                                 ×          dz                           F
+                                                                        2 1   j, l, n/2 − 1, w   ,       (B19)
+                                       0           (z + (D − 1)/2)j
+
+         (1 + cos χ)z
+   w≡                 ,                                                                                  (B20)
+         D − 1 + 2z
+
+where D > 1. The integral representation of hypergeometric function is used. Note
+the Ij,l notation for integrals with different denominator structures. The result of
+evaluating Eq. (B19) for specific j and l is given in Appendix F. Here χ can be α3
+or θ3 . The remaining z integral has to be performed by expanding the integrand into
+series of , and computing the integral order by order. The subtlety comes from the
+treatment of the factor (1 − z)n/2−l−2 , which can produce poles for l ≥ 1. The integral
+has the form
+                                            Z 1
+                                                  dz (1 − z)−−l f (z),                                  (B21)
+                                             0
+
+
+where f (z) is a regular function at z = 1. When l = 1, the pole term can be made
+
+                                                      26
+explicit using the identity
+
+                            δ(1 − z)                            log(1 − z)
+                                                                            
+                  −−1                     1
+       (1 − z)           =−          +          −                                + O(2 ),     (B22)
+                                      (1 − z)+                   1−z         +
+
+
+where the “plus” functions are defined, for a function p(ξ), through
+             Z 1                       Z 1                              Z x
+                   dξ (p(ξ))+ q(ξ) =         dξ p(ξ)(q(ξ) − q(1)) −              dξ p(ξ)q(ξ).   (B23)
+              x                         0                                 0
+
+
+When l > 1, the integral in Eq. (B21) is divergent. Nonetheless, it can be analytically
+continued. To do this, we write
+                    Z 1
+                        dz (1 − z)−−l f (z)
+                     0
+                       Z 1                                  Z 1
+                                     −−l+1
+                    =      dz (1 − z)        f1 (z) + f (1)     dz (1 − z)−−l ,                (B24)
+                          0                                       0
+                                    (f (z) − f (1))
+                    with f1 (z) ≡                   .                                           (B25)
+                                         1−z
+
+Note that, in the first term on the right-hand side of Eq. (B24), the power of 1 − z is
+increased by 1, with a regular function f1 (z). The second term is divergent, but can
+be analytically continued using Γ functions:
+     Z 1
+                                                        Γ(− − l + 1)       1
+           dz (1 − z)−−l = B(1, − − l + 1) =                        =            .            (B26)
+       0                                                Γ(− − l + 2)   − − l + 1
+
+The manipulation in Eq. (B24) can be repeated until the power of 1 − z in the integral
+becomes − − 1, in which case Eq. (B22) can be used. To expand the hypergeometric
+function in the integrand in Eq. (B19), we note that if either j or l is less than 1, the
+hypergeometric series terminates and the function reduces to a polynomial. For j = 1
+and l = 1 we use the expansion
+
+                                                     −1−
+                   2 F1 (1, 1, 1 − , w) = (1 − w)          (1 + 2 Li2 (w) + O(3 )).          (B27)
+
+
+For the case that one of j and l is larger than 1 and the other is at least 1, we use
+Gauss’s contiguous relations to reduce j or l. For example, for F (1, 2, 1 − ) and
+
+
+
+                                              27
+      F (2, 2, 1 − ) (with the shorthand notation F (j, l, k) ≡ 2 F1 (j, l, k, w)), we use
+
+
+         (k − 2j + (j − l)w)F (j, l, k) + j(1 − w)F (j + 1, l, k) − (k − j)F (j − 1, l, k) = 0,
+                                                                                              (B28)
+
+         (k − j − l)F (j, l, k) + l(1 − w)F (j, l + 1, l) − (l − j)F (j − 1, l, k) = 0        (B29)
+
+
+      to get
+
+                              1
+          F (1, 2, 1 − ) =       (− + ( + 1) F (1, 1, 1 − )) ,                            (B30)
+                            1−w          
+                                1
+          F (2, 2, 1 − ) = −         + 1 F (1, 1, 1 − )
+                              1−w
+                                                                          
+                                        1
+                                  +             + 2 − +  + 1 F (1, 1, 1 − ) .             (B31)
+                                    (1 − w)2
+
+
+   Other well-known non-trivial aspects of the computation are the conversion of the ex-
+pressions in the squared amplitude into forms that allow Eq. (B18) or Eq. (B19) to be used,
+which are reviewed in Appendix D, and the algorithm for calculating virtual corrections,
+which are reviewed in Appendix E. Finally the procedure for combining all Feynman graph
+calculations consistently into a a factorized cross section is reviewed in Appendix ??.
+
+
+
+   Appendix C: Proof that a2 ≥ b2 and A2 ≥ B 2 + C 2 in Eq. (B1)
+
+
+   First, we show that ti < 0. In the center-of-mass frame of p and q,
+
+                                      W 2 + Q2            W 2 + Q2
+                                                                  
+                                  p=           , 0n−2 , −            ,                        (C1)
+                                        2W                  2W
+                                      2
+                                      W − Q2            W 2 + Q2
+                                                                 
+                                  q=           , 0n−2 ,            ,                          (C2)
+                                        2W                2W
+                                  k =E(1, kn−2 , cos θ) ,                                     (C3)
+
+            √
+where W =     s. k can be any one of ki , i = 1, 2, 3, with the subscript suppressed above. In
+                  √
+this frame, E < 12 s = 21 W and
+
+                                (W 2 − Q2 )E (W 2 + Q2 )E cos θ
+                                                               
+                              2
+                t =(q − k) = −2             −                     − Q2                        (C4)
+                                    2W              2W
+
+                                                   28
+                                          EQ2
+                                                          
+                  = − W E(1 − cos θ) −          (1 + cos θ) − Q2                        (C5)
+                                           W
+                            1
+                              W Q2
+                                             
+                  <− 0−     2
+                                   (1 + cos θ) − Q2                                     (C6)
+                              W
+                   1
+                  = Q2 (cos θ − 1)                                                      (C7)
+                   2
+                  ≤0.                                                                   (C8)
+
+
+The ti are Lorentz invariants and thus ti < 0 holds in any frame. Since the signs of ti do
+not change and
+
+                               √                                        √
+     −|b| ≤ b cos β1 ≤ |b|,   − B 2 + C 2 ≤ B cos β1 + C sin β1 cos β2 ≤ B 2 + C 2 ,    (C9)
+
+
+we conclude that a2 ≥ b2 and A2 ≥ B 2 + C 2 , where the “=” holds when the corresponding
+variable is ui or sij , and the “>” holds for ti .
+
+
+
+
+   Appendix D: Partial fraction algorithm
+
+
+   To perform the three-body phase space integrations as described Sec. B, it is necessary
+to first convert expressions in the squared amplitude into forms that allow Eq. (B18) or
+Eq. (B19) to be used. In this appendix, we review the way this can be automized.
+
+   To simplify the discussion, we will refer to angle dependent Mandelstam variables
+(ADMV):
+
+
+   ADMV = “Angle Dependent Mandelstam Variables” = {t2 , t3 , u2 , u3 , s12 , s13 } .   (D1)
+
+
+The angle independent Mandelstam variables (AIMVs) are:
+
+
+       AIMV = “Angle Independent Mandelstam Variables” = {t1 , u1 , s, s23 } .          (D2)
+
+
+A general term in the squared amplitude starts as simple products of AIMVs and ADMVs.
+A conversion to a useful form is accomplished with a set partial fractions such that each
+
+                                               29
+term in the squared amplitude can be expressed as
+
+                                            [AIMVs]
+                                                       ,                                (D3)
+                                             X α1 Y α2
+
+with α1 and α2 being real numbers that could be positive, negative or zero. The quantity
+in the brackets is some combination of the AIMVs while X and Y are two different types
+of ADMV that belong to to either ti , ui or sij . A term in such a form is called a “reduced”
+term. Otherwise, we will call it “unreduced”. Example are:
+
+   • reduced terms: (constant), (t−2 −1     −2
+                                  2 u3 ), (s12 ),(u2 )
+
+
+   • unreduced terms: (t−2 −1               −2 −1 −1
+                        2 t3 ), (u2 u3 ), (t2 u3 s12 )
+
+
+We need the following further sets of definitions:
+
+   • t-type, u-type, s-type Mandelstam variables: An ADMV is referred to as t-type
+      if it is t2 or t3 , and similarly for u-type and s-type.
+
+   • The ADMVs are not independent variables; it is possible to construct linear relations
+      relating them. This is achieved by squaring different rearrangements of the momentum
+      conservation equation:
+                                         p + q − k1 = k2 + k3 .                         (D4)
+
+           Two ADMV relations (2ARs): One such type of relation is between two
+           ADMVs of the same type. These are obtained by moving one of p, q, and k1 in
+           Eq. (D4) to the right-hand side and squaring the equation. For instance, moving
+           p to the right and squaring gives
+
+
+                                             t1 = u2 + u3 + s23 ,                       (D5)
+
+
+           relating two u-type ADMVs. Similarly, moving q or k1 to the right gives the
+           relations for t-type or s-type ADMVs respectively. There are three 2ARs. The
+           other two are:
+
+
+                                           s = s12 + s23 + s13                          (D6)
+                                          u1 = t2 + t3 + s23 + Q2 .                     (D7)
+
+                                               30
+          Three ADMV relations (3ARs): Another type of relation is between three
+          ADMVs, each from a different ADMV type. We can get such relations for any
+          three ADMVs of different types. To do this notice that exchanging the positions
+          of k2 or k3 with k1 in Eq. (D4) and squaring will give one of such relation. For
+          instance, squaring p + q − k2 = k1 + k3 :
+
+
+                                        s13 = s + t2 + u2 + Q2 ,                           (D8)
+
+
+          a relations between s13 , t2 , and u2 . After one such relation is obtained, the others
+          are obtained by replacing the ADMVs in that relation using three 2ARs.
+
+
+
+Now the partial fraction is implemented in two steps:
+
+
+
+     Step 1: Consider a term T1 in the squared amplitude. The first step is to reduce the
+     number of ADMVs in the denominator to two or fewer, and to ensure that no two
+     ADMVs of the same type appear in the denominator. This is done in two substeps:
+
+
+
+          Substep 1: First, separate any ADMVs of the same type in the denominator.
+          If two ADMVs of the same type appear in the denominator of T1 , use a 2AR for
+          the two ADMVs to write a factor of unity in the form
+                                                  P
+                                                      i ci ADMVi
+                                           1=                                              (D9)
+                                                   [AIMVs]
+
+          and write                               P                
+                                                       i ci ADMVi
+                                       T1 = T1                          ,                 (D10)
+                                                      [AIMVs]
+          with cj = ±1. Expanding the right side of Eq. (D10) produces a sum of new
+          terms. Each will have one power lower of these two ADMVs in its denominator.
+          Further multiplication by unity factors like Eq. (D9) can be repeated until in all
+          terms only one of the two ADMVs appears in any denominator. As an example,
+          consider
+                                                           s
+                                              T1 =              .                         (D11)
+                                                       t2 t3 u2
+
+                                             31
+    t2 and t3 both appear in the denominator, so we will use Eq. (D7) to write Eq. (D9):
+
+                                    u1 − s23 − Q2       t2 + t3
+                            1=                     =               .             (D12)
+                                    u1 − s23 − Q 2   u1 − s23 − Q2
+
+    Then
+                                                             
+                                   s              t2 + t3
+                   T1 =                                                          (D13)
+                               t2 t3 u2        u1 − s23 − Q2
+                                      s                     s
+                       =                        +                       .        (D14)
+                           t3 u2 (u1 − s23 − Q ) t2 u2 (u1 − s23 − Q2 )
+                                              2
+
+
+
+
+    Substep 2: After Substep 1 is done for all three types, the leftover terms have
+    denominators with at most three ADMVs, all from different types. For terms
+    with two or fewer ADMVs in the denominator, nothing more needs to be done in
+    this step. For terms with three ADMVs in the denominator, one may write a 3AR
+    in the form of Eq. (D9) and reduce the number of ADMVs in the denominator
+    to two or fewer in a way similar to Substep 1. For example, say that
+
+                                                          1
+                                               T1 =             .                (D15)
+                                                      s13 u2 t2
+
+    Then it is possible to eliminate s13 , u2 and t2 by using Eq. (D8) to con-
+    struct Eq. (D9). Then,
+
+                                     s + Q2
+                                         
+                            1
+                 T1 =
+                        s ut         s + Q2
+                       13 2 2  
+                                     s13 − t2 − u2
+                                                   
+                            1
+                    =
+                        s13 u2 t2       s + Q2
+                       1         1        1        1     1      1
+                    =                 −                −              .          (D16)
+                      u2 t2 (s + Q ) s13 u2 (s + Q ) s13 t2 (s + Q2 )
+                                   2                 2
+
+
+
+
+Step 2: After Step 1 is completed, all terms have two or fewer ADMVs in the denom-
+inator. To get to the final form in Eq. (D3), we need to make sure no third ADMV
+appears in the numerator. This is done by noticing that the ADMVs in the numerator
+can be written in terms of the ADMVs of the denominator using 2ARs and 3ARs.
+For instance, if one term has t2 u3 in the denominator, then any t-type ADMV in the
+numerator can be replaced by t2 , and u-type by u3 , using 2ARs. Any s-type ADMV
+
+                                           32
+      can be replaced by a linear combination of t2 and u3 using the corresponding 3AR in-
+      volving t2 and u3 . This puts T1 in the form of Eq. (D3). (Recall that α1 and α2 can be
+      negative or zero.) This example had two ADMVs in the denominator. If the number
+      of ADMVs in the denominator is 1, one can express the ADMVs in the numerator in
+      terms of two ADMVs of different types, where one is the ADMV in the denominator
+      and the other is chosen randomly. If the number of ADMVs in the denominator is
+      0, then the ADMVs in the numerator can be expressed by any two randomly cho-
+      sen ADMVs of different types. There are six ADMVs, but the four relations from
+      Eqs. (D5)–(D8) eliminate four in terms of the other two.
+
+
+
+   Appendix E: Virtual Contributions
+
+
+   At order O(αs2 ), virtual corrections to the partonic cross section involve only one-loop
+integrals. Comprehensive reviews of the methods for this type of calculation can be found
+in [72–74]. In this article, we use the traditional Passarino-Veltman (PV) approach [75], for
+which we closely follow the notation of [74].
+   Our O(αs2 ) virtual contributions are the interference terms between tree-level 2 → 2
+amplitudes and 2 → 2 amplitudes with an additional virtual loop, averaged(summed) over
+initial(final) states. The structure of each such interference term is
+
+                                          d4−2 l Tr{...}µν Pµν
+                                     Z
+             MV M∗tree = µ2                                 Γ
+                                                                + Hermitian Conjugate .   (E1)
+                                         (2π)4−2 d1 ...dn
+
+The denominators contain massless propagators of the form di = (l + ∆i )2 + i0, where ∆i
+depends only on external momenta, which we will call vi . That is, vi ∈ {p, q, k1 } or combi-
+nations thereof. The trace in (E1) contains Dirac gamma matrices contracted with either
+the external momenta vi , or with the loop momentum l. Both IR and UV divergences are
+handled by standard dimensional regularization techniques. After these steps, the numera-
+tor in Eq (E1) is a collection of terms with Lorentz invariant products of loop and external
+momenta. All integrals needed to calculate the virtual corrections in Figure 2 can be written
+in one of the following ways:
+
+                                      d4−2 l    {1, lα }
+                                 Z
+                            2
+                B{0,α} ≡µ                                   ,
+                                     (2π)4−2 l2 (k + v1 )2
+
+                                                   33
+                                  d4−2 l    {1, lα , lα lβ }
+                                      Z
+                                 2
+               C{0,α,αβ} ≡µ          4−2
+                                                                         ,
+                                 (2π)     l (l + v1 )2 (l + v1 + v2 )2
+                                           2
+
+                                  d4−2 k    {1, lα , lα lβ , lα lβ lδ }
+                               Z
+                            2
+           D{0,α,αβ,αβδ} ≡µ          4−2
+                                                                                            ,         (E2)
+                                 (2π)     l (l + v1 )2 (l + v1 + v2 )2 (l + v1 + v2 + v3 )2
+                                           2
+
+
+
+where higher rank integrals cannot appear since, in every case, virtual correction diagrams
+at one-loop involve at least one gluon propagator. We have left the Feynman prescription
+implicit in the denominators in Eq. (E2), and partonic cross section calculations are done in
+massless QCD. These tensor integrals can be written in terms the scalar box (D0 ), triangle
+(C0 ) and bubble (B0 ) integrals using the Passarino-Veltman reduction procedure[75].
+
+
+   As an example, consider the steps to reduce C αβ . Symmetry properties allow C αβ , C β
+and B β to be written in terms of form factors B1 (v1 ), C1 (v1 , v2 ), C2 (v1 , v2 ), and Cij (v1 , v2 ):
+
+
+                                 B β (v1 ) ≡ v1β B1 (v1 ) ,                                          (E3a)
+                         C β (v1 , v2 ) ≡ v1β C1 (v1 , v2 ) + v2β C2 (v2 , v2 ) ,                    (E3b)
+                                                                   2
+                                                                   X
+                        C   αβ                 αβ
+                                 (v1 , v2 ) ≡ g C00 (v1 , v2 ) +          viα vjβ Cij (v1 , v2 ) .   (E3c)
+                                                                   ij=1
+
+
+                                                              ~ (1) = Ci1 , C
+Defining the Graham matrix Gi,j = vi · vj and the row vectors C             ~ (2) = Ci2 , the
+                                                                i             i
+
+contraction of both sides of Eq. (E3c) with viα and gαβ respectively gives
+
+                                
+                    ~ (1) G C
+                   GC       ~ (2) = R ,                  (4 − 2) C00 = B0 (v2 ) − Tr{R} ,            (E4)
+                      i       i
+
+
+
+where R is defined by the relations
+
+                            1
+                                      B1 (u) + B0 (v2 ) − v12 C1 (v1 , u) − 2C00 (v1 , u) ,
+                                                                                         
+                      R11 =
+                            2
+                            1
+                                      B1 (u) − B1 (v2 ) − v12 C2 (v1 , u) ,
+                                                                         
+                      R12 =
+                            2
+                            1
+                                      B1 (v1 ) − B1 (u) − (v12 + 2v1 · v2 )C1 (v1 , u) ,
+                                                                                      
+                      R21 =
+                            2
+                            1
+                                      −B1 (u) − (v12 + 2v1 · v2 )C2 (v1 , u) − 2C00 .
+                                                                                   
+                      R22 =                                                                           (E5)
+                            2
+
+Here we have used the notation u = v1 + v2 . The results for Rij above are obtained
+by contracting viα with the right-hand side of Eq. (E3c) and using the property that the
+
+                                                         34
+products vi · l can always be written in terms of the denominators di = (l + v1 + ... + vi+1 )2
+as
+
+                          1                              1
+                            d2 − d1 − v12 ,                d3 − d2 − v22 − 2v1 · v2 .
+                                                                                  
+               v1 · l =                       v2 · l =                                      (E6)
+                          2                              2
+
+This allows viα C αβ to be reduced to rank-1 integrals, whereupon expansion according to
+Eqs. (E3b), lead to Eqs. (E5). Solving Eq. (E4) gives Cij and C00 in terms of form factors
+corresponding to lower rank tensor integrals. In a similar way, one may reduce residual Ci
+and B1 form factors so that only the scalar integrals C0 and B0 appear at the end of the
+reduction procedure. Equations analogous to (E4) and (E5) for all cases in Eq. (E2) are
+provided in Appendix A of [74].
+
+     After the reduction procedure, all virtual contributions from Figure 2 are in terms of
+scalar integrals, whose values depend only on Lorentz invariants constructed from momenta
+that appear in the denominators. The complete set of scalar integrals are in [76]. In our
+calculation, all of these contain single or double pole singularities.
+
+     The singular behavior of D0 and C0 corresponds to soft and collinear divergences that
+exactly cancel the soft and collinear singularities in the 2 → 3 calculation of the correspond-
+ing channel.
+
+
+
+     For our computations, we only need expressions for a reduced number of cases for C0 and
+D0 , following the notation of [76]: C0 divergent type 1 and type 2, D0 divergent type 2
+
+     The usual UV singularities introduced by virtual corrections ultimately are all produced
+by B0 -type integrals. UV divergent tadpole integrals A0 also appear but are zero in a
+massless theory. Thus, keeping track of B0 integrals accounts for all UV singularities, which
+cancel in the sum of virtual graphs. Self-energy diagrams on external legs enter for each
+                                                                             1/2
+channel via the corresponding factors of field strength normalization Zi , as prescribed by
+the LSZ theorem.
+
+
+
+     At order O(αs2 ), Zi deviates from unity only for 2 → 2 partonic scattering. Denoting the
+                                                                                    (a)   (a)
+sum of amputated diagrams for leading order, virtual, and real emission by MLO , MV and
+
+                                              35
+  (a)
+MR , the square-modulus amplitude for partonic scattering is
+
+                                      (a)           (a)         (a)    (a)
+                         |M| 2 = |MLO | 2 + |MR | 2 + 2<{MLO † MV } .                       (E7)
+
+
+   Explicit solutions for scalar integrals given in [76] hold when all of the relevant Lorentz
+invariants are space-like. When needed, we perform analytic continuation on the logarithms,
+                                                                       1
+by restoring the Feynman prescription log ab −→ log (a + i0) + log b+i0
+                                                                        
+                                                                          . For the diloga-
+rithms in our calculation, we find the following relation useful
+
+                a − i0     π2 1
+                                                                      
+                                  2
+                                      a             a           1
+        Li2 1 +          =   − log 1 +    − iπ log 1 +    − Li2                             (E8)
+                b + i0     3  2        b               b          1 + ab
+
+where both a and b are positive.
+
+
+
+   Appendix F: Angular integrals with a virtual photon
+
+
+   For completeness we provide a complete list of the relevant angular integrals. The method
+to compute these integrals is described in detail in Sec Sec. B. The alternatives for some of
+the integrals here can be found from appendix C of Ref. [77]. But there the list of integrals is
+computed for heavy quark production process and is not adequate for SIDIS. To compactify
+notation, we define
+
+
+                             C = cos χ                                                      (F1)
+                             F = C 2 1 − 3D   2
+                                                    + 4 CD + D2 − 3
+                                                
+                                                                                            (F2)
+
+                             G = C 2 3D2 − 1 − 4 CD − D2 + 3
+                                            
+                                                                                            (F3)
+                                          
+                                       D+1
+                             L = log                                                        (F4)
+                                       D−1
+                                                         
+                                         2               2
+                             K = Li2           − Li2 −          .                           (F5)
+                                        D+1            D−1
+
+The integrals are computed up to the needed powers in . The expressions for Ij,l from
+Eq. B19 needed for order αs2 SIDIS are then
+
+             π
+  I 1,−4 =      −630 C 4 D3 + 330 C 4 D + 1440 C 3 D2 − 384 C 3 + 540 C 2 D3 − 1764 C 2 D
+             72
+
+                                                36
+                
+            + 9 C 4 35D4 − 30D2 + 3 + 16 C 3 D 3 − 5D2 − 6 C 2 5D4 − 18D2 + 5
+                                                                                           
+                                                                   
+                                 2               4         2
+                                        
+                 + 16 CD 3D − 5 + 3D − 30D + 35 L
+                                                         
+            − 864 CD2 + 1152 C − 54D3 + 522D
+         π 
+       +      −1773 C 4 D3 + 943 C 4 D + 3744 C 3 D2 − 1024 C 3 + 1674 C 2 D3
+         72
+               27 2
+                    C − 1 D2 − 1 C 2 19D2 − 3 − 32 CD − 3D2 + 19 L
+                                                                                    
+            +
+               2               
+            − 4398 C D + 9 C 4 35D4 − 30D2 + 3 + 16 C 3 D 3 − 5D2
+                     2
+                                                                                    
+
+
+                 − 6 C 2 5D4 − 18D2 + 5 + 16 CD 3D2 − 5
+                                                                        
+                                           
+                 + 3D4 − 30D2 + 35 K
+                                                              
+            − 2592 CD2 + 2688 C − 189D3 + 1599D                                                 (F6)
+               π     
+                                        2
+                                           3                  2
+                                                                      
+I 2,−4 =               36  C   3 −  5 C     D  +   12 C  13  C   −  11   D
+         3 (D2 − 1)
+                                                                                                 
+            + 3 35 C 4 − 30 C 2 + 3 D4 + −115 C 4 + 222 C 2 − 51 D2 + 16 C 4 − 6 C 2 + 3
+                                                                            
+
+               1  4
+            + π 5 C D 3 − 7D2 + 12 C 3 5D2 − 1 + 6 C 2 D 5D2 − 9
+                                                                                    
+               2
+                                                        
+                 + 4 C 5 − 9D2 − 3D D2 − 5 L
+                                   
+
+         π 
+              72 21 − 29 C 2 CD + 32 39 − 8 C 2 C 2 + 54 27 C 4 − 26 C 2 + 3 D2
+                                                                                         
+       +
+         18
+            − 9 5 C 4 D 7D2 − 3 + C 3 12 − 60D2 + 6 C 2 D 9 − 5D2 + 4 C 9D2 − 5
+                                                                                            
+                                           
+                     2
+                            
+            +3D D − 5 K − 528
+              π     
+                         4          4          2
+                                                                  3     4      2
+                                                                                      
+       +               C     −11D      +  30D    −  15   D  −  4 C    D    + 6D   − 3
+         2 (D2 − 1)
+            + 6 C 2 3D4 − 2D2 + 3 D − 4 C 3D4 − 2D2 + 3
+                                                                        
+                                  
+                  5       3
+            − 3D + 6D + D L                                                                     (F7)
+                       4        1
+I 1,−3 = π 5 C 3 D2 − C 3 − ( CD − 1) 5 C 2 D2 − 3 C 2 − 4 CD − 3D2 + 5 L
+                                                                                         
+                        3        2              
+          − 9 C 2 D − 3 CD2 + 8 C + 3D
+               
+                    1
+          + π − ( CD − 1) C 2 5D2 − 3 − 4 CD − 3D2 + 5 K
+                                                          
+                    2
+            1                     27
+          + 117 C 3 D2 − 32 C 3 − ( CD − 1) C 2 D2 − C 2 − D2 + 1 L
+                                                                 
+            9                       2
+                  2          2
+                                         
+          −189 C D − 81 CD + 156 C + 81D                                                       (F8)
+
+
+
+                                              37
+           3
+  I 2,−3 = π C C 2 5D2 − 1 − 6 CD − 3D2 + 3 + 2D L
+                                                                
+           2
+                 π C 3 D (13 − 15D2 ) + 6 C 2 (3D2 − 2) + 3 CD (3D2 − 5) − 6D2 + 8
+                                                                                        
+             +
+                                                    D2 − 1
+                 π  
+             +         −58 C 3 D
+                  2
+                    + 3 C C 2 5D2 − 1 − 6 CD − 3D2 + 3 + 2D K
+                                                                      
+                                              
+                    + 48 C 2 + 42 CD − 24                                                    (F9)
+           4π                                     4π
+                  C 2 + 10 CD + 10D2 + 3 +             46 C 2 + 400 CD + 325D2 + 123
+                                                                                     
+I −2,−2 =                                                                                   (F10)
+           15                                     225
+           4π                  π
+I −1,−2 =      ( C + 2D) +         (32 C + 52D)                                             (F11)
+            3                   9
+             
+                        2              1      
+  I 1,−2 = π D − 3 C D + 4 C − F L
+                                    2                    
+                         1             1                 3
+             + π − G L log              (D − 1)(D + 1)
+                         4            16
+                 1
+              − L − C 2 D2 + C 2 + D2 − 1
+                                                 
+                 2
+                 1 2 2
+              + π C 3D2 − 1 − 4 CD − D2 + 3
+                                                         
+                 6
+                                                    D−1
+                                                         
+              +( C(8 − 7 CD) + 3D) − GLi2                                                   (F12)
+                                                    D+1
+                  2
+                                                                                    
+           π C (6D2 − 4) − (D2 − 1) ( C(3 CD − 2) − D) L − 4 CD − 2D2 + 4
+  I 2,−2 =
+                                                 D2− 1
+                                           2
+                             D( CD − 1) L
+               
+         + π 4 2 C 2 +                         −1
+                                2 (D2 − 1)
+              −( C(3 CD − 2) − D) K)                                                        (F13)
+                                         32 CD
+                                                        
+           2π              2
+                                                  2  16
+I −2,−1 =       2 CD + 3D + 1 + π             + 4D +                                       (F14)
+            3                               9          9
+              C               16 C
+                                        
+I −1,−1 = 2π      + D + π           + 4D                                                   (F15)
+                3                9
+                                       
+                  2   1             2   4
+  I −2,0 = 2π D +         + 4π D +                                                         (F16)
+                      3                 9
+ I −1,0 = 2πD + 4πD                                                                        (F17)
+  I 1,0 = π L + π K                                                                        (F18)
+             2π        2πD L
+  I 2,0 =          +                                                                       (F19)
+            D2 − 1     D2 − 1
+ I 1,−1 = π (−( CD − 1) L + 2 C)
+                        π2
+                                                                       
+                                  1                  1                 3
+            + π 4 C − ( CD − 1) + ( CD − 1) L log      (D − 1)(D + 1)
+                         3        2                  16
+
+                                               38
+                                   D−1
+                                         
+             +2( CD − 1)Li2                                                                           (F20)
+                                   D+1
+            π (− C (D2 − 1) L + 2 CD − 2)
+I 2,−1 = −
+                   (       D2 − 1
+                                               1                                          
+                      − L C (D2 − 1) log 16         (D − 1)(D + 1)3 + 4D( CD − 1)
+            + π
+                                                     2(D2 − 1)
+               π2                 D−1
+                                         
+             + C − 2 CLi2                                                                             (F21)
+                3                 D+1
+              ( C − D)2
+                           + π −3 C 2 + 4 CD + 1 + π −7 C 2 + 8 CD + 3
+                                                                                       
+I −2,1 = −π                                                                                           (F22)
+                    
+            ( C − D)
+I −1,1 = π             + 2π C + 4π C                                                                 (F23)
+                               h 2 i
+                                    D −1
+               π          π log (D−   C)2           2π
+                                                              
+                                                                       C−1
+                                                                                       
+                                                                                          D− C
+                                                                                               
+  I 1,1 =              +                     +                 Li2              − Li2
+          ( C − D)            C−D               ( C − D)             D−1                 D+1
+                                                                         D− C
+                                                                               
+                                    D+1
+             + log( C + 1) log                  + log(D − C) log
+                                    D− C                                  D−1
+                                                       2
+                                                         
+               1                                π
+             − L log (D − 1)(D + 1)3 +                                                                (F24)
+               4                                      6
+                                                   h         i               
+                                      2               (D− C)2
+            π       1         π (D − 1) log −1+D2 − 2 CD + 2
+  I 2,1 = −                 +
+              (D − C)2                    (D2 − 1) ( C − D)2
+                           D− C          C−1 
+                2π Li2 D+1 − Li2 D−1
+            +
+                           ( C − D)2
+                           π            n
+                                                                   2
+                                                                                               2
+                                                                                                         
+            −                              12  log[D    +  1]   D    − 1   log[ C +  1] + C + D   − D − 1
+                6 (D2 − 1) ( C − D)2
+             −12 log[D − 1] D2 − 1 log[D − C] + C − D2 − D + 1
+                                                                                   
+
+                                                            D− C
+                                                                              
+                   2                                                              2
+                         
+             + D − 1 2 6 log[D − C] log                                −2 +π
+                                                            C+1
+                                           3
+                                              o
+             −3 L log (D − 1)(D + 1)                                                                  (F25)
+          π
+              3 C 2 − 2 CD − 1 + π 3 C 2 + 2 CD − D2 − 2
+                                                                      
+I −2,2 =
+          
+            + π 9 C 2 − 2 CD + D2 − 4
+                                                
+                                                                                                      (F26)
+           πC
+I −1,2 = −      + π( C − D) + π(D − C)                                                             (F27)
+            
+         π (1 − CD)
+ I 1,2 =
+          ( C − D)3
+                                                               (D − C)2
+                                                                      
+                  π          2          2
+           +              − C − 2 CD + D + 2 + ( CD − 1) log                                        (F28)
+              ( C − D)3                                        −1 + D2
+
+
+
+
+                                                 39
+             π C 2 + 2 CD − 3          π           
+                                                     C 2 7D2 − 5
+                                                                
+   I 2,2 =                    +
+              ( C − D)   4     (D − 1) ( C − D)
+                                  2              4
+                                               2
+                                                D −1
+                                                          
+                     2
+                          2             
+               + D − 1 C + 2 CD − 3 log
+                                               (D − C)2
+                                                   
+                       2            2  2
+                                            
+               + 2 D − 3 CD − D D + 5 + 8 .                                               (F29)
+
+
+Certain order  terms are not needed and may be dropped in calculations at O (αs2 ).
+
+
+
+
+ [1] J. O. Gonzalez-Hernandez, T. C. Rogers, N. Sato, and B. Wang, Phys. Rev. D98, 114005
+    (2018), arXiv:1808.04396 [hep-ph].
+ [2] A. Daleo, D. de Florian, and R. Sassot, Phys. Rev. D71, 034013 (2005), arXiv:hep-ph/0411212
+    [hep-ph].
+ [3] B. A. Kniehl, G. Kramer, and M. Maniatis, Nucl. Phys. B711, 345 (2005), [Erratum: Nucl.
+    Phys.B720,231(2005)], arXiv:hep-ph/0411300 [hep-ph].
+ [4] A. Bacchetta, G. Bozzi, M. Lambertsen, F. Piacenza, J. Steiglechner, and W. Vogelsang,
+    (2019), arXiv:1901.06916 [hep-ph].
+ [5] E. L. Berger, L. E. Gordon, and M. Klasen, Phys. Rev. D58, 074012 (1998), arXiv:hep-
+    ph/9803387 [hep-ph].
+ [6] P. Nogueira, J. Comput. Phys. 105, 279 (1993).
+ [7] J. Kuipers, T. Ueda, J. A. M. Vermaseren, and J. Vollinga, Comput. Phys. Commun. 184,
+    1453 (2013), arXiv:1203.6543 [cs.SC].
+ [8] J. Kublbeck, M. Bohm, and A. Denner, Comput. Phys. Commun. 60, 165 (1990).
+ [9] T. Hahn, Comput. Phys. Commun. 140, 418 (2001), arXiv:hep-ph/0012260 [hep-ph].
+[10] R. Mertig, M. Bohm, and A. Denner, Comput. Phys. Commun. 64, 345 (1991).
+[11] V. Shtabovenko, R. Mertig, and F. Orellana, Comput. Phys. Commun. 207, 432 (2016),
+    arXiv:1601.01167 [hep-ph].
+[12] J. O. Gonzalez-Hernandez, T. C. Rogers, N. Sato, and B. Wang, “Jeffersonlab/bigtmd,”
+    (2018).
+[13] R. Meng, F. I. Olness, and D. E. Soper, Nucl. Phys. B371, 79 (1992).
+[14] J. Levelt and P. J. Mulders, Phys. Rev. D49, 96 (1994), arXiv:hep-ph/9304232 [hep-ph].
+
+                                             40
+[15] R. Meng, F. I. Olness, and D. E. Soper, Phys. Rev. D54, 1919 (1996), arXiv:hep-ph/9511311.
+[16] P. J. Mulders and R. D. Tangerman, Nucl. Phys. B461, 197 (1996), arXiv:hep-ph/9510301
+    [hep-ph].
+[17] P. Nadolsky, D. R. Stump, and C. P. Yuan, Phys. Rev. D61, 014003 (1999), arXiv:hep-
+    ph/9906280 [hep-ph].
+[18] P. M. Nadolsky, D. R. Stump,      and C. P. Yuan, Phys. Rev. D64, 114011 (2001), hep-
+    ph/0012261.
+[19] V. Barone, A. Drago, and P. G. Ratcliffe, Phys. Rept. 359, 1 (2002), hep-ph/0104283.
+[20] X.-D. Ji, J.-P. Ma, and F. Yuan, Phys. Lett. B597, 299 (2004), arXiv:hep-ph/0405085 [hep-
+    ph].
+[21] A. Bacchetta, U. D’Alesio, M. Diehl, and C. A. Miller, Phys. Rev. D70, 117504 (2004),
+    hep-ph/0410050.
+[22] Y. Koike, J. Nagashima,     and W. Vogelsang, Nucl. Phys. B744, 59 (2006), arXiv:hep-
+    ph/0602188 [hep-ph].
+[23] A. Bacchetta et al., JHEP 02, 093 (2007), arXiv:hep-ph/0611265.
+[24] A. Bacchetta, D. Boer, M. Diehl, and P. J. Mulders, JHEP 08, 023 (2008), arXiv:0803.0227
+    [hep-ph].
+[25] E. Moffat, T. C. Rogers, W. Melnitchouk, N. Sato, and F. Steffens, (2019), arXiv:1901.09016
+    [hep-ph].
+[26] J. C. Collins, Foundations of Perturbative QCD (Cambridge University Press, Cambridge,
+    2011).
+[27] P. B. Arnold and M. H. Reno, Nucl. Phys. B319, 37 (1989), [Erratum:                    Nucl.
+    Phys.B330,284(1990)].
+[28] F. Aversa, P. Chiappetta, M. Greco, and J. P. Guillet, Nucl. Phys. B327, 105 (1989).
+[29] L. E. Gordon and W. Vogelsang, Phys. Rev. D48, 3136 (1993).
+[30] R. K. Ellis, M. A. Furman, H. E. Haber, and I. Hinchliffe, Nucl. Phys. B173, 397 (1980).
+[31] R. K. Ellis, G. Martinelli, and R. Petronzio, Nucl. Phys. B211, 106 (1983).
+[32] G. Altarelli and G. Parisi, Nucl. Phys. B126, 298 (1977).
+[33] D. P. Anderle, F. Ringer, and W. Vogelsang, Phys. Rev. D87, 034014 (2013), arXiv:1212.2099
+    [hep-ph].
+[34] M. Aghasyan et al. (COMPASS), Phys. Rev. D97, 032006 (2018), arXiv:1709.07374 [hep-ex].
+
+
+                                              41
+[35] A. Accardi, L. T. Brady, W. Melnitchouk, J. F. Owens, and N. Sato, Phys. Rev. D93, 114017
+    (2016), arXiv:1602.03154 [hep-ph].
+[36] D. de Florian, R. Sassot, and M. Stratmann, Phys. Rev. D76, 074033 (2007), arXiv:0707.1506
+    [hep-ph].
+[37] I. Balitsky and A. Tarasov, JHEP 05, 150 (2018), arXiv:1712.09389 [hep-ph].
+[38] D. Graudenz, Phys. Lett. B406, 178 (1997), arXiv:hep-ph/9606470 [hep-ph].
+[39] M. Anselmino, M. Boglione, A. Prokudin, and C. Turk, Eur. Phys. J. A31, 373 (2007),
+    arXiv:hep-ph/0606286 [hep-ph].
+[40] M. Anselmino, M. Boglione, J. O. Gonzalez Hernandez, S. Melis, and A. Prokudin, JHEP
+    04, 005 (2014), arXiv:1312.6261 [hep-ph].
+[41] A. Signori, A. Bacchetta, M. Radici, and G. Schnell, JHEP 1311, 194 (2013), arXiv:1309.3507
+    [hep-ph].
+[42] P. Sun and F. Yuan, Phys. Rev. D88, 114012 (2013), arXiv:1308.5003 [hep-ph].
+[43] P. Sun, J. Isaacson, C. P. Yuan, and F. Yuan, (2014), arXiv:1406.3073 [hep-ph].
+[44] A. Bacchetta, F. Delcarro, C. Pisano, M. Radici, and A. Signori, (2017), arXiv:1703.10157
+    [hep-ph].
+[45] M. Anselmino, M. Boglione, U. D’Alesio, F. Murgia, and A. Prokudin, JHEP 04, 046 (2017),
+    arXiv:1612.06413 [hep-ph].
+[46] M. Anselmino, M. Boglione, U. D’Alesio, J. O. Gonzalez Hernandez, S. Melis, F. Murgia, and
+    A. Prokudin, Phys. Rev. D92, 114023 (2015), arXiv:1510.05389 [hep-ph].
+[47] A. Bacchetta, M. G. Echevarria, P. J. G. Mulders, M. Radici, and A. Signori, JHEP 11, 076
+    (2015), arXiv:1508.00402 [hep-ph].
+[48] I. Scimemi and A. Vladimirov, Eur. Phys. J. C78, 89 (2018), arXiv:1706.01473 [hep-ph].
+[49] Z.-B. Kang, A. Prokudin, F. Ringer,         and F. Yuan, Phys. Lett. B774, 635 (2017),
+    arXiv:1707.00913 [hep-ph].
+[50] Z.-B. Kang, A. Prokudin, P. Sun,        and F. Yuan, Phys. Rev. D91, 071501 (2015),
+    arXiv:1410.4877 [hep-ph].
+[51] F. Landry, R. Brock, P. M. Nadolsky, and C.-P. Yuan, Phys. Rev. D67, 073016 (2003),
+    arXiv:hep-ph/0212159 [hep-ph].
+[52] P. Sun, J. Isaacson, C. P. Yuan, and F. Yuan, Phys. Lett. B769, 57 (2017), arXiv:1602.08133
+    [hep-ph].
+
+
+                                                42
+[53] P. Sun, B.-W. Xiao, and F. Yuan, Phys. Rev. D84, 094005 (2011), arXiv:1109.1354 [hep-ph].
+[54] M. G. Echevarria, T. Kasemets, P. J. Mulders, and C. Pisano, JHEP 07, 158 (2015), [Erratum:
+    JHEP05,073(2017)], arXiv:1502.05354 [hep-ph].
+[55] M. Guzzi, P. M. Nadolsky, and B. Wang, Phys. Rev. D90, 014030 (2014), arXiv:1309.1393
+    [hep-ph].
+[56] M. G. Echevarria, I. Scimemi, and A. Vladimirov, JHEP 09, 004 (2016), arXiv:1604.07869
+    [hep-ph].
+[57] M. G. Echevarria, A. Idilbi, Z.-B. Kang,      and I. Vitev, Phys. Rev. D89, 074013 (2014),
+    arXiv:1401.5078 [hep-ph].
+[58] M. Boglione, U. D’Alesio, C. Flore, and J. O. Gonzalez-Hernandez, JHEP 07, 148 (2018),
+    arXiv:1806.10645 [hep-ph].
+[59] M. Boglione, J. O. Gonzalez-Hernandez,        and R. Taghavi, Phys. Lett. B772, 78 (2017),
+    arXiv:1704.08882 [hep-ph].
+[60] Z.-B. Kang, A. Prokudin, P. Sun, and F. Yuan, (2015), arXiv:1505.05589 [hep-ph].
+[61] H.-W. Lin, W. Melnitchouk, A. Prokudin, N. Sato, and H. Shows, Phys. Rev. Lett. 120,
+    152502 (2018), arXiv:1710.09858 [hep-ph].
+[62] Z. Ye, N. Sato, K. Allada, T. Liu, J.-P. Chen, H. Gao, Z.-B. Kang, A. Prokudin, P. Sun, and
+    F. Yuan, Phys. Lett. B767, 91 (2017), arXiv:1609.02449 [hep-ph].
+[63] S. Bastami et al., (2018), arXiv:1807.10606 [hep-ph].
+[64] V. Bertone, I. Scimemi, and A. Vladimirov, (2019), arXiv:1902.08474 [hep-ph].
+[65] A. Airapetian et al. (HERMES), Phys. Rev. D87, 074029 (2013), arXiv:1212.5407 [hep-ex].
+[66] C. Adolph et al. (COMPASS), Eur. Phys. J. C73, 2531 (2013), [Erratum: Eur. Phys.
+    J.C75,no.2,94(2015)], arXiv:1305.7317 [hep-ex].
+[67] C. Adolph et al. (COMPASS), Phys. Lett. B764, 1 (2017), arXiv:1604.02695 [hep-ex].
+[68] R. Seidl et al. (Belle), Submitted to: Phys. Rev. D (2019), arXiv:1902.01552 [hep-ex].
+[69] E. C. Aschenauer, I. Borsa, R. Sassot, and C. Van Hulse, (2019), arXiv:1902.10663 [hep-ph].
+[70] F. Bradamante (COMPASS), in 23rd International Symposium on Spin Physics (SPIN 2018)
+    Ferrara, Italy, September 10-14, 2018 (2018) arXiv:1812.07281 [hep-ex].
+[71] W. L. van Neerven, Nucl. Phys. B268, 453 (1986).
+[72] C. F. Berger and D. Forde, Ann. Rev. Nucl. Part. Sci. 60, 181 (2010), arXiv:0912.3534 [hep-
+    ph].
+
+
+                                              43
+[73] R. Britto, J. Phys. A44, 454006 (2011), arXiv:1012.4493 [hep-th].
+[74] R. K. Ellis, Z. Kunszt, K. Melnikov,    and G. Zanderighi, Phys. Rept. 518, 141 (2012),
+    arXiv:1105.4319 [hep-ph].
+[75] G. Passarino and M. J. G. Veltman, Nucl. Phys. B160, 151 (1979).
+[76] R. K. Ellis and G. Zanderighi, JHEP 02, 002 (2008), arXiv:0712.1851 [hep-ph].
+[77] W. Beenakker, H. Kuijf, W. L. van Neerven, and J. Smith, Phys. Rev. D40, 54 (1989).
+
+
+
+
+                                             44
+

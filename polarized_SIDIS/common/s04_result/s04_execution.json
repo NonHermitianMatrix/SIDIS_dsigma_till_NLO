@@ -1,0 +1,48 @@
+{
+  "child_maxrss_bytes": 313438208,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s04_transverse_angular_average.wls"
+  ],
+  "completed_utc": "2026-09-17T07:31:44.869234+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "62d870f60dee2fb3f7bfa9c17515d1a0c3817c0dcfeb8960c82844a196b62257",
+  "job_id": "14773690",
+  "node": "n6045",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 290426880,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "common/s04_result/s04_checks.json": "b513098665a42d2758e0c8a2e3b60339c7a9f29e6b443e31f0e4238072c81467",
+    "common/s04_result/s04_result.wl": "970f0bfd74d9cb5838703d01d8ce3066ff4dc28367bad67c74076bbab6b7c0b3"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "7d07c760951a3c2d0cb028cdefe5b5561628e8f33ac96c6cdc28622ce2bb4499",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_transverse_angular_average.wls": "44e4741c1247d149ea6eec0d72ca494500f3eba7616319435006b8de5bcd2674"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 27.658810638822615
+}

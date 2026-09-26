@@ -1,0 +1,56 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s06_reuse_scalar_integrals.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s06",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s06"
+  },
+  "execution_result": "common/s06_result/s06_execution.json",
+  "expected_results": [
+    "common/s06_result/s06_result.wl",
+    "common/s06_result/s06_checks.json"
+  ],
+  "heartbeat": "cache/s06_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 960,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 8589934592,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 1200
+  },
+  "log": "cache/s06.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "7d07c760951a3c2d0cb028cdefe5b5561628e8f33ac96c6cdc28622ce2bb4499",
+    "common/s06_inputs.json": "90c3a3661e857ef111701e404be2ae5c76eb4cae5286dd9f2fa89caa930dafc3",
+    "common/s06_result/reference/layout.json": "e2e56e15f2b45807670eb7c1acb44569d31acd13214a8182579ce96fc284c601",
+    "common/s06_result/reference/s02_result.wl": "c1e5f21d97b10b831b16ccafe2a9b3ed3fac463d5c6e204b4ecbafb471bf740d",
+    "common/s06_result/reference/s04_result.wl": "77754c4eb11f5626cc9ab473aa6c8f7a4722ab94d979cdd175da8e4a79192110",
+    "common/s06_result/reference/s08_result.wl": "76b97660cedd87b8c9dbcf5cb3b46ae8a95835e30ba0bcab7b67c3c78ffcf755",
+    "common/s06_result/reference/s09_result.wl": "0c23971167f6b6cab97accd1fe5ddc05c99a7844be2a1aa560d4e4ebcc50090f",
+    "common/s06_result/reference/s10_result.wl": "dba9edd52b6cc80846a08f65ec2b98b908a4d7a429edff359dd3a460c597a253",
+    "common/s06_result/reference/s12_result.wl": "07e1f4b08b86df75ee9fc9e489d929f22789e4d58017a5cdee40f12abc4c124e",
+    "common/s06_result/reference/s13_result.wl": "5193fc3cbbf055e34dfc6d718fe33fd72e2c676d2a5b5f4a7a6b8175a7a12513",
+    "common/s06_result/reference/s14_result.wl": "47cc08f577206fbfafc583320aeed48d53cd57b649e1a3e2db3c46dcfacb9aa0",
+    "common/s06_result/reference/s15_result.wl": "82cb3ca0de4501b3c045d025e6b93f4228426c344023b2a727fc93d69615ef0b",
+    "common/s06_result/reference/sources/s02_definitions.wl": "39d5225662b92b1f9ecd654e6edb721f9f6ad1b52facf2e0a9ba59f616145eed",
+    "common/s06_result/reference/sources/s04_reduce_real.wl": "7fb2a8373395b2e6d85812186abe3d7394c47ed76722e30c212c262e232a0b03",
+    "common/s06_result/reference/sources/s08_cut_master_inputs.wl": "13b120a7d7d79a1aca6b360dddd5f2e1f8170f7fcc6b2650effcf7145898bc70",
+    "common/s06_result/reference/sources/s09_reduce_virtual.wl": "5e9ddee07997d6584ae3e9f7762a8d2f82986c7cdb124257cc51b09f3257ba26",
+    "common/s06_result/reference/sources/s10_evaluate_cut_masters.wl": "5b8e29f097a6fb1452c5ea7d95a3ac89489abab96045fa4543241dbd23032c8b",
+    "common/s06_result/reference/sources/s12_virtual_master_inputs.wl": "0871a65b07078988cca44afa430fa3bec5b6240e70c44cbcd1f9cbc9f543c275",
+    "common/s06_result/reference/sources/s13_evaluate_virtual_masters.wl": "8e3674c9feee48a291a577ce8c0e25c5db2f68084fb032bf7cc05301a666e999",
+    "common/s06_result/reference/sources/s14_uv_residues.wl": "dd8482c58e0569ab71e5a206ece5d3ee75d1c5cf582dc5a8f10579060f2076ed",
+    "common/s06_result/reference/sources/s15_cut_soft_regions.wl": "1597b12ecf01f9df4f526a7ae73a7e98a51be7d64936573b3b635b720cdde066",
+    "common/s06_reuse_scalar_integrals.wls": "a6aa5b442190d4d8a025d03b1204152ddef373404ecb6b19d988ecc8fb0c74cc"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s06_reuse_scalar_integrals"
+}

@@ -1,0 +1,25 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s08_Hgg_active_equations_20260923_job.json",
+  "config_sha256": "b654f0c9bbf7d9c31abbd96b427038156fc3eebaa2d8c8fff161439bad84704b",
+  "event": "SUBMITTED",
+  "job_id": "14874556",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_active_equations_20260923_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_active_equations_20260923",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:30:00,h_data=12G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_active_equations_20260923_scheduler.log"
+  ],
+  "tag": "s08_Hgg_active_equations_20260923"
+}

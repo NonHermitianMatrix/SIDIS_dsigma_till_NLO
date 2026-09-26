@@ -1,0 +1,1 @@
+../common/s16_collinear_inputs.wl

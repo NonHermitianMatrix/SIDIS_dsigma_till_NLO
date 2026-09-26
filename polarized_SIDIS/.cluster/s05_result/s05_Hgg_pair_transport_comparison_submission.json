@@ -1,0 +1,25 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s05_Hgg_pair_transport_comparison_job.json",
+  "config_sha256": "1dafe5a8235cf0b15273a47ad66bb4c17b17f38d7b9108b87b4c0544c790500a",
+  "event": "SUBMITTED",
+  "job_id": "14814614",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hgg_pair_transport_comparison_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hgg_pair_transport_comparison",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hgg_pair_transport_comparison_scheduler.log"
+  ],
+  "tag": "s05_Hgg_pair_transport_comparison"
+}

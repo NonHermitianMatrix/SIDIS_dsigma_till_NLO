@@ -1,0 +1,38 @@
+{
+  "channel": "Hgq",
+  "job_configuration_sha256": "e554aa95c74c133f674f92a47b1c6a9936ce2a087dde51a254cff21eac1fa1cc",
+  "job_id": "14775516",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s15_Hgq_scheme_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s15_Hgq_scheme",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s15_Hgq_scheme_scheduler.log"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hgq/s03_result/s03_result.wl": "570bde9d826e893d775f6bc458307369c6eb65316872f7268562345e527da177",
+    "Hgq/s11_result/s11_result.wl": "1fbc01498047f39d73573dc5e97ebac79ace566ba0d8e8e494aebf5043c929fd",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_collinear_spin_convolutions.wls": "9c5784631fbeb46741b274186985fb21f1607d4063525025517bb0560f11de96",
+    "common/s14_result/reference/s20_final_hats.wl": "c56f0f20deca9c2100218304eadbfdecb139826c6d36dd2e06bf31b6895a36fa",
+    "common/s15_finalize_spin_coefficients.wls": "54838cdee6222b75e578a242a940bdb79bd1517d41e098cbd9ca18fd369463f8",
+    "common/s15_inputs.json": "029ed10114018ec59a1c55196d01a39fb993c25ebd2a4ae8e0ce35354366d85f",
+    "common/s15_result/reference/s54_factorization_contract.wls": "21fc30cc2cfd4386457dc7ab7ce1b1d22b4456460e4c0bbdc86dfbb446c23f6c"
+  },
+  "tag": "s15_Hgq_scheme"
+}

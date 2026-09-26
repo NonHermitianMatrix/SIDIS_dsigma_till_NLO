@@ -1,0 +1,48 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s12_check_rational_master_product.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s12_Hqqbar_rational_master_comparison",
+    "POLARIZED_SIDIS_CHANNEL": "Hqqbar",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s12_Hqqbar_rational_master_comparison"
+  },
+  "execution_result": "Hqqbar/s12_rational_series_result/s12_execution.json",
+  "expected_results": [
+    "Hqqbar/s12_rational_series_result/s12_result.wl",
+    "Hqqbar/s12_rational_series_result/s12_checks.json"
+  ],
+  "heartbeat": "cache/s12_Hqqbar_rational_master_comparison_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 15,
+    "scratch_bytes": 4294967296,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 3500
+  },
+  "log": "cache/s12_Hqqbar_rational_master_comparison.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqqbar/s08_result/s08_result.wl": "98ec141e8b923b0856062287ec44daff6a620152edcd42ff5a0d2b9c1086eee7",
+    "cache/s12/Hqqbar/2b43ec40e4eb73555f089a7a4474a257b2a4d8f0a29a71059c9eb094192367bf/component_0001.wl": "e03c9fd85048978d2a3b0c97c61b7e1db2b97ab8ffa6a1354970c4ef56bc54d3",
+    "common/s06_result/reference/s08_result.wl": "76b97660cedd87b8c9dbcf5cb3b46ae8a95835e30ba0bcab7b67c3c78ffcf755",
+    "common/s06_result/reference/s10_result.wl": "dba9edd52b6cc80846a08f65ec2b98b908a4d7a429edff359dd3a460c597a253",
+    "common/s06_result/reference/s15_result.wl": "82cb3ca0de4501b3c045d025e6b93f4228426c344023b2a727fc93d69615ef0b",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s12_assemble_real_spin.wls": "ca3777035d3d220b3fb8fcddb8131348f0d7c97f8fd9b8d54703337c93daa243",
+    "common/s12_check_rational_master_product.wls": "f04001b8a0d7f42e3823d598ddd66eedd38d1f7d74881748daa691e3c428cec7",
+    "common/s12_inputs.json": "037b7d316a22447129102d94fad18f3979ea44b78751790854bb737e520e5253",
+    "common/s12_rational_series_inputs.json": "66586c575cc957892716327032ae47e8168b861d0fd4994db6b29472110fd9d8",
+    "common/s12_result/reference/s12_standalone_rational_series.wls": "0685ea2e148fa2691b61c9cd0bebec67d7befb76eb681bd429bd1d9fbba298cd",
+    "common/s12_result/reference/s17_assemble_real.wl": "1df84e6817fdcf4b0db8c588d1083a9be499530c63ba10b6cb9991083d1f77e5"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s12_check_rational_master_product"
+}

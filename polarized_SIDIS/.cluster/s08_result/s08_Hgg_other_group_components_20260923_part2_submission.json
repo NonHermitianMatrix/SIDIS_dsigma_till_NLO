@@ -1,0 +1,33 @@
+{
+  "event": "RESUBMITTED_AFTER_SSH_RECONNECT",
+  "job_id": "14886549",
+  "previous_job_id": "14884509",
+  "tag": "s08_Hgg_other_group_components_20260923_part2",
+  "config": ".cluster/s08_Hgg_other_group_components_20260923_part2_job.json",
+  "configuration_sha256": "73e4fecec27bf93bef0ade6f422eb1e0ca25769be0e819e30535afafdccfef64",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-h",
+    "-N",
+    "pSIDIS_s08_Hgg_other_group_components_20260923_part2",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=24G,h_vmem=INFINITY",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_other_group_components_20260923_part2_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_other_group_components_20260923_part2_job.json\n",
+  "resources": "h_rt=02:00:00,h_data=24G,h_vmem=INFINITY",
+  "slots": 2,
+  "utc": "2026-09-24T04:30:54.147820+00:00",
+  "state_after_release": "qw"
+}

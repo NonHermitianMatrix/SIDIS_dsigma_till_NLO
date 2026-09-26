@@ -1,0 +1,32 @@
+{
+  "changes": [
+    {
+      "after": "\nlocalFiniteFinalParentSource=FileNameJoin[{root,\"misc\",\"s14_result\",\"reference\",\"before_exact_hat_comparison\",\"s14_assemble_Hgg_finite.wls\"}];\nlocalFiniteFinalParentConfig=FileNameJoin[{root,\"misc\",\"s14_result\",\"reference\",\"before_exact_hat_comparison\",\"s14_inputs.json\"}];\nlocalFiniteCaptureReceipt=Import[FileNameJoin[{root,\"misc\",\"s37_result\",\"s37_execution.json\"}],\"RawJSON\"];\ngate[\"accepted full-component parent generation\",\n TrueQ[localFiniteCaptureReceipt[\"passed\"]]&&\n IntegerString[FileHash[localFiniteFinalParentSource,\"SHA256\"],16,64]===\n localFiniteCaptureReceipt[\"input_sha256\"][\"misc/s14_assemble_Hgg_finite.wls\"]&&\n IntegerString[FileHash[localFiniteFinalParentConfig,\"SHA256\"],16,64]===\n localFiniteCaptureReceipt[\"input_sha256\"][\"misc/s14_inputs.json\"]];\nlocalFiniteFinalParentInputs=inputHashes;\nAssociateTo[localFiniteFinalParentInputs,{\n \"misc/s14_assemble_Hgg_finite.wls\"->FileHash[localFiniteFinalParentSource,\"SHA256\"],\n \"misc/s14_inputs.json\"->FileHash[localFiniteFinalParentConfig,\"SHA256\"]}];\nAppendTo[localFiniteAcceptedInputHashes,\n Hash[{sourceHash,localFiniteFinalParentInputs,$Version,FeynCalc`$FeynCalcVersion},\"SHA256\"]];\n\nlocalFiniteReused=<||>;",
+      "before": "localFiniteReused=<||>;"
+    },
+    {
+      "after": "\n(* Reuse accepted finite parts before evaluating any phase argument. *)\nSetAttributes[finitePart,HoldFirst];\nlocalHatComparisonPath=FileNameJoin[{root,\"misc\",\"s38_exact_Hgg_hat_comparison.wls\"}];\nlocalHatComparisonProofPath=FileNameJoin[{root,\"misc\",\"s38_result\",\"s38_result.wl\"}];\nlocalHatComparisonReceipt=Import[FileNameJoin[{root,\"misc\",\"s38_result\",\"s38_execution.json\"}],\"RawJSON\"];\nlocalHatComparisonChecksPath=FileNameJoin[{root,\"misc\",\"s38_result\",\"s38_checks.json\"}];\nlocalHatComparisonChecks=Import[localHatComparisonChecksPath,\"RawJSON\"];\ngate[\"accepted complete actual final comparison\",\n TrueQ[localHatComparisonReceipt[\"passed\"]]&&\n localHatComparisonReceipt[\"result_sha256\"][\"misc/s38_result/s38_result.wl\"]===\n IntegerString[FileHash[localHatComparisonProofPath,\"SHA256\"],16,64]&&\n localHatComparisonReceipt[\"result_sha256\"][\"misc/s38_result/s38_checks.json\"]===\n IntegerString[FileHash[localHatComparisonChecksPath,\"SHA256\"],16,64]&&\n And@@Values[localHatComparisonChecks[\"checks\"]]&&TrueQ[localHatComparisonChecks[\"reference_comparison_passed\"]]];\nlocalHatComparisonProof=Get[localHatComparisonProofPath];\ngate[\"exact reference helper source and runtime\",\n localHatComparisonProof[\"SourceHash\"]===FileHash[localHatComparisonPath,\"SHA256\"]&&\n localHatComparisonProof[\"NativeVersions\"]==={$Version,FeynCalc`$FeynCalcVersion}&&\n And@@Values[localHatComparisonProof[\"Checks\"]]&&localHatComparisonProof[\"ControlValue\"]=!=0];\nGet[localHatComparisonPath];\nlocalHatFinalZero[value_,assumptions_]:=Module[{expression},\n ClearSystemCache[];\n expression=localHatExactReduce[value,assumptions];\n expression===0||FullSimplify[expression,assumptions]===0];\n\nlocalFiniteMemoryAssemble[index_]:=Module[{before,value},",
+      "before": "localFiniteMemoryAssemble[index_]:=Module[{before,value},"
+    },
+    {
+      "after": " \"values=assemble/@indices;\"->\"values=localFiniteMemoryAssemble/@indices;\",\n \"bounded[zero[\\n      hats[name][\\\"NLO\\\"]\"->\"bounded[localHatFinalZero[\\n      hats[name][\\\"NLO\\\"]\"};",
+      "before": " \"values=assemble/@indices;\"->\"values=localFiniteMemoryAssemble/@indices;\"};"
+    },
+    {
+      "after": "SetAttributes[localHatBounded,HoldFirst];\nlocalHatBounded[value_,label_]:=MemoryConstrained[TimeConstrained[value,1200,\n gate[ToString[label,InputForm]<>\" time limit\",False]],4*1024^3,\n gate[ToString[label,InputForm]<>\" memory limit\",False]];\nlocalHatFinalZero[value_,assumptions_]:=",
+      "before": "localHatFinalZero[value_,assumptions_]:="
+    },
+    {
+      "after": "->\"localHatBounded[localHatFinalZero[",
+      "before": "->\"bounded[localHatFinalZero["
+    },
+    {
+      "after": "\n(* Release consumed transfer buffers before parsing the normalized answer. *)\nlocalHatTransferSource=ReadString[FileNameJoin[{root,\"misc\",\"s31_exact_Hgg_recoil_sum.wls\"}]];\nlocalHatTransferStart=\"localExactRecoilRatio[rational_]:=\";\nlocalHatTransferEnd=\"\\nIf[Environment[\\\"POLARIZED_SIDIS_VALIDATE_RECOIL\\\"]\";\ngate[\"unique complete native polynomial implementation\",\n StringCount[localHatTransferSource,localHatTransferStart]===1&&\n StringCount[localHatTransferSource,localHatTransferEnd]===1];\nlocalHatTransferDefinition=localHatTransferStart<>First[StringSplit[\n Last[StringSplit[localHatTransferSource,localHatTransferStart]],localHatTransferEnd]];\nlocalHatTransferAnchor=\" value=(ToExpression[output[\\\"factored\\\"][\\\"numerator\\\"],InputForm]\";\nlocalHatTransferReplacement=\n \" Clear[terms,pair,lifted,payload,atomRules,rules,encode];ClearSystemCache[];\\n\"<>localHatTransferAnchor;\nlocalHatTransferCandidate=localFiniteChange[localHatTransferDefinition,\n {localHatTransferAnchor->localHatTransferReplacement}];\nToExpression[localHatTransferCandidate,InputForm];\ngate[\"all transfer equations and gates unchanged\",\n StringReplace[localHatTransferCandidate,localHatTransferReplacement->localHatTransferAnchor]===\n localHatTransferDefinition];\n\nSetAttributes[localHatBounded,HoldFirst];",
+      "before": "SetAttributes[localHatBounded,HoldFirst];"
+    }
+  ],
+  "parent": "misc/s14_result/reference/before_exact_hat_comparison/s14_assemble_Hgg_finite.wls",
+  "parent_sha256": "d79c5f9ae1e9b2e94dde7cefd6fe2eefb24f9e52ba9a244859f51a6df0798018",
+  "resume_manifest_sha256": "5116b8a398be11c6f776b9bcf75ba2cd8f9cc1e307efb870f09a0f16cc87b0d6",
+  "source_sha256": "bd2406fb5ce16224113dd643264f40ef6951667b6fc54c41041ff844de8289be"
+}

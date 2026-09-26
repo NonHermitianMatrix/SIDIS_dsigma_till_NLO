@@ -1,0 +1,28 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s05_Hgq_assembly_memory_resume_job.json",
+  "config_sha256": "82f81d3b162bf684f829f9d8ee203d2b7d8bf3f39238816b9624445fa91a41eb",
+  "event": "SUBMITTED",
+  "job_id": "14783103",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hgq_assembly_memory_resume_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hgq_assembly_memory_resume",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=12G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hgq_assembly_memory_resume_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s05_Hgq_assembly_memory_resume"
+}

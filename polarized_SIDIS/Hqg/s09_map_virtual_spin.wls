@@ -1,0 +1,1 @@
+../common/s09_map_virtual_spin.wls

@@ -1,0 +1,1 @@
+../common/s05_pair_assembly_check.wls

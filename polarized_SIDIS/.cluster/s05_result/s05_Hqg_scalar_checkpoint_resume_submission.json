@@ -1,0 +1,28 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s05_Hqg_scalar_checkpoint_resume_job.json",
+  "config_sha256": "f87063a916efea903f46610f0099db1785ba1892eff7d6d5cf9989680c420f91",
+  "event": "SUBMITTED",
+  "job_id": "14801142",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hqg_scalar_checkpoint_resume_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hqg_scalar_checkpoint_resume",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=5G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hqg_scalar_checkpoint_resume_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s05_Hqg_scalar_checkpoint_resume"
+}

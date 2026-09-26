@@ -1,0 +1,14 @@
+
+file::shdw: Symbol file appears in multiple contexts {FeynCalc`, Global`}; definitions in context FeynCalc` may shadow or be shadowed by other definitions.
+"PASS: ""bound entire native writer"
+"PASS: ""pinned chunk-writer input misc/s35_result/s35_execution.json"
+"PASS: ""pinned chunk-writer input misc/s35_result/s35_result.wl"
+"PASS: ""pinned chunk-writer input misc/s37_result/s37_execution.json"
+"PASS: ""pinned chunk-writer input misc/s37_result/s37_result.wl"
+"PASS: ""accepted native own and actual inputs"
+"PASS: ""native chunk marker is unassigned"
+"PASS: ""bounded native chunk"
+"PASS: ""exact native chunk reload"
+"CHUNK_STRUCTURE "InputForm[<|"TemplateHead" -> Association, "OriginalHead" -> Association, "TemplateKeys" -> {"Own", "Actual"}, "OriginalKeys" -> {"Own", "Actual"}, "Parts" -> 20, "Markers" -> 20|>]
+"CHUNK_RECONSTRUCTION "InputForm[<|"SameQ" -> False, "KeysEqual" -> True, "ValuesEqual" -> False, "NormalEqual" -> False, "OriginalRuleHeads" -> {Rule, Rule}, "ReconstructedRuleHeads" -> {Rule, Rule}, "RebuiltEqual" -> False|>]
+"FAIL: ""entire native record exactly reconstructs"

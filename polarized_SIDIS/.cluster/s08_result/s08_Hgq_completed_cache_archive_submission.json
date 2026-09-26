@@ -1,0 +1,25 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s08_Hgq_completed_cache_archive_job.json",
+  "config_sha256": "a9b83608c7e773375ef942049e0ab8af2b6391fbcc3b9c1398c22680f036b7d2",
+  "event": "SUBMITTED",
+  "job_id": "14814827",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgq_completed_cache_archive_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgq_completed_cache_archive",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:30:00,h_data=2G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgq_completed_cache_archive_scheduler.log"
+  ],
+  "tag": "s08_Hgq_completed_cache_archive"
+}

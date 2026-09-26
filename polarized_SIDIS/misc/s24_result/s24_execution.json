@@ -1,0 +1,27 @@
+{
+  "schema": "polarized-sidis-local-execution-v1",
+  "execution_backend": "local",
+  "passed": true,
+  "execution_kind": "exact_function_argument_comparison",
+  "command": [
+    "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "If[!SyntaxQ[ReadString[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s24_canonical_Hgg_arguments.wls\"]],Print[\"FAIL: source syntax\"];Quit[1]];Get[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s24_canonical_Hgg_arguments.wls\"]"
+  ],
+  "source_sha256": "0b04a1ec7d2898c1eb77fc2400d0c61ca45558f2e21695dad5b8141ecf33cf8a",
+  "input_sha256": {
+    "misc/s23_result/s23_result.wl": "ce7bb4db1615ba2ddf6e9a40e5c760ddd33b2f7f125677632f42dfbb2bf719da",
+    "misc/s23_result/s23_execution.json": "5961f0c17ab5a36c728aaac940f1435fa97db24b519276b540e9ad12898ae3a2",
+    "misc/s25_result/s25_result.wl": "34175106ce52e511eda00d01df2e425094133578bb86c4d8793f0cd26809381b",
+    "misc/s25_result/s25_execution.json": "ee62c6a01fc9f85e986ace5086bf3f9842ef9c5c22f8aa3e00293caf5bb4ed44"
+  },
+  "result_sha256": {
+    "misc/s24_result/s24_result.wl": "1ed61045d5ccd8692e7a1263cb335618d1bd63ea75fa3f9e3087a2e1d32452ee",
+    "misc/s24_result/s24_checks.json": "a476a1daccbbf7394e133df5d51c5bead42fb414b8ee0bd3377f745c5b6a9875"
+  },
+  "exit_code": 0,
+  "wall_seconds": 15.651165147999563,
+  "completed_utc": "2026-09-26T07:34:06.524553+00:00"
+}

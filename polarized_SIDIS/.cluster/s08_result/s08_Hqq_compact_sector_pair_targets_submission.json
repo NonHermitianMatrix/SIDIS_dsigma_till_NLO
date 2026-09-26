@@ -1,0 +1,28 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s08_Hqq_compact_sector_pair_targets_job.json",
+  "config_sha256": "bc5ec9ec17e60c7a3599cecd215e5e9476967559c4d15ed8fb1e967ce71f3f4f",
+  "event": "SUBMITTED",
+  "job_id": "14814259",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqq_compact_sector_pair_targets_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqq_compact_sector_pair_targets",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqq_compact_sector_pair_targets_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s08_Hqq_compact_sector_pair_targets"
+}

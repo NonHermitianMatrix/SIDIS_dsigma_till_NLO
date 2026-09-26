@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "$HistoryLength=0;root=Directory[];\ninput=FileNameJoin[{root,\"Hgg\",\"s08_additive_reconstruction_result\",\"s08_input_equation.wl\"}];\nIf[IntegerString[FileHash[input,\"SHA256\"],16,64]=!=\"4cda50d89a117b0a7607ab0bb25cc299635f13bb47505b150d0cc84c40767074\",Quit[1]];\nvalue=Get[input];output=FileNameJoin[{DirectoryName[input],\"s08_equation_readable.wl\"}];\nPut[value[\"Equation\"],output<>\".tmp\"];\nIf[FileByteCount[output<>\".tmp\"]>64*1024^2||Get[output<>\".tmp\"]=!=value[\"Equation\"],Quit[1]];\nRenameFile[output<>\".tmp\",output,OverwriteTarget->True];\nPrint[\"PASS: s08_Hgg_additive_readable\"];Quit[0];"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s08_Hgg_additive_readable_20260925",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s08_Hgg_additive_readable_20260925"
+  },
+  "execution_result": "Hgg/s08_additive_reconstruction_result/s08_readable_execution.json",
+  "expected_results": [
+    "Hgg/s08_additive_reconstruction_result/s08_equation_readable.wl"
+  ],
+  "heartbeat": "cache/s08_Hgg_additive_readable_20260925_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 3221225472,
+    "inactivity_seconds": 180,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 3221225472,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 240
+  },
+  "log": "cache/s08_Hgg_additive_readable_20260925.log",
+  "reviewed_sha256": {
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hgg/s08_additive_reconstruction_result/s08_input_equation.wl": "4cda50d89a117b0a7607ab0bb25cc299635f13bb47505b150d0cc84c40767074"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s08_Hgg_additive_readable"
+}

@@ -1,0 +1,25 @@
+{
+  "job_id": "14922467",
+  "config": ".cluster/s08_Hgg_coefficient_merge_batch_01_20260925_part1_job.json",
+  "configuration_sha256": "8e23e9f45c88739586d907265a0e697a2fb92cb7a59192c8050e933d83ef5fbf",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_coefficient_merge_batch_01_20260925_part1",
+    "-S",
+    "/bin/bash",
+    "-pe",
+    "shared",
+    "4",
+    "-l",
+    "h_rt=02:00:00,h_data=10G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_coefficient_merge_batch_01_20260925_part1_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexport LC_ALL=C LANG=C\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_coefficient_merge_batch_01_20260925_part1_job.json\n"
+}

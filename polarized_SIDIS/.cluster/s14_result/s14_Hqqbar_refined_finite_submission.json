@@ -1,0 +1,25 @@
+{
+  "channel": "Hqqbar",
+  "config": ".cluster/s14_Hqqbar_refined_finite_job.json",
+  "config_sha256": "b3e16456c63f1ae80a8a258279ba67545cd515e7f32cb2610d9b4d3992625555",
+  "event": "SUBMITTED",
+  "job_id": "14806677",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s14_Hqqbar_refined_finite_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s14_Hqqbar_refined_finite",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=6G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s14_Hqqbar_refined_finite_scheduler.log"
+  ],
+  "tag": "s14_Hqqbar_refined_finite"
+}

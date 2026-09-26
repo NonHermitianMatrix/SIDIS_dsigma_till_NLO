@@ -1,0 +1,28 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s05_Hgg_sector_ward_resume_job.json",
+  "config_sha256": "21b6f866680a7f3e3b0248a38654ad676ff142802d0a12883336a8b63355168e",
+  "event": "SUBMITTED",
+  "job_id": "14809321",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hgg_sector_ward_resume_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hgg_sector_ward_resume",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=6G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hgg_sector_ward_resume_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s05_Hgg_sector_ward_resume"
+}

@@ -1,0 +1,50 @@
+{
+	"checks":{
+		"compute allocation":true,
+		"complete source syntax":true,
+		"accepted input Hgg\/s08_mapping_inputs_result\/s08_component_0008.wl":true,
+		"accepted own coordinate conventions":true,
+		"unchanged scientific input common\/s08_inputs.json":true,
+		"unchanged scientific input common\/s08_result\/reference\/s03_real_families.wl":true,
+		"unchanged scientific input common\/s08_result\/reference\/s11_real_master_coefficients.wl":true,
+		"unchanged scientific input Hgg\/s05_result\/s05_result.wl":true,
+		"unchanged scientific input common\/s06_result\/s06_result.wl":true,
+		"unchanged scientific input common\/s06_result\/reference\/s02_result.wl":true,
+		"unchanged scientific input common\/s06_result\/reference\/s04_result.wl":true,
+		"accepted input Hgg\/s05_projected_components_result\/Photon_1\/s05_result.wl":true,
+		"accepted original photon response":true,
+		"metadata belongs to accepted scalar input":true,
+		"two active tasks use the exact loaded response":true,
+		"bounded readable equation 1":true,
+		"entire saved equation reloads unchanged 1":true,
+		"bounded readable equation 2":true,
+		"entire saved equation reloads unchanged 2":true
+	},
+	"files":{
+		"Hgg\/s08_active_equations_result\/s08_component_0001_equation.wl":"faf23563a55dded94c8ea4ea21ed88315dca6e7b2cc951b60cd7a3893d1e80a3",
+		"Hgg\/s08_active_equations_result\/s08_component_0002_equation.wl":"e511de4934fbf5181d88f117258713bc8330edcc34e080bcd8a849796343d6a0"
+	},
+	"measurements":[
+		{
+			"Component":1,
+			"Task":"<|\"Sector\" -> \"Real\", \"Kind\" -> \"ExtendedResponse\", \"Index\" -> {1, 1, 1}|>",
+			"ExpressionBytes":354268040,
+			"FileBytes":24344979
+		},
+		{
+			"Component":2,
+			"Task":"<|\"Sector\" -> \"Real\", \"Kind\" -> \"ExtendedResponse\", \"Index\" -> {1, 1, 2}|>",
+			"ExpressionBytes":325908552,
+			"FileBytes":22355949
+		}
+	],
+	"input_sha256":{
+		"Hgg\/s05_projected_components_result\/Photon_1\/s05_result.wl":"3b5319949f3b54c50ebb4c6ad2ec4deed15dc5e27826473016e26b1156f46a03",
+		"Hgg\/s05_projected_components_result\/Photon_1\/s05_execution.json":"b9dffda41cdd4b5b22ca340adc572f272980bc07bd37d9643cdb7535dab9d994",
+		"Hgg\/s08_mapping_inputs_result\/s08_component_0008.wl":"23bac881805e9ea0da7b96af42e16ec67e94e43c22363bfc9c9b1bf89e03e30e",
+		"Hgg\/s08_mapping_inputs_result\/s08_recovery_execution.json":"236e32ff981c08d5024d09ff4cf2bf9fb65f1d1fd4e28aea58a5ac98fe8a4189",
+		"Hgg\/s05_result\/s05_metadata.wl":"f858b207d449632d03f284a4706a9998c0cb1ee5b2a2b7064ca027a0e41c20d7"
+	},
+	"job_id":"14874556",
+	"finite_nlo_fhats_computed":false
+}

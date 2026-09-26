@@ -1,0 +1,24 @@
+{
+  "event": "SUBMITTED",
+  "job_id": "14886527",
+  "tag": "s08_Hgg_direct_group_resume_20260924_part5",
+  "config": ".cluster/s08_Hgg_direct_group_resume_20260924_part5_job.json",
+  "configuration_sha256": "925a58d056019c1dfd92b949c33791f1566b468c8399b57df2aea5911162fe70",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_direct_group_resume_20260924_part5",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_direct_group_resume_20260924_part5_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_direct_group_resume_20260924_part5_job.json\n"
+}

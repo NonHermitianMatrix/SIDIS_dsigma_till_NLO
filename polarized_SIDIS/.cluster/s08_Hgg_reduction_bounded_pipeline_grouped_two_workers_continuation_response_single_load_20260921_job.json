@@ -1,0 +1,44 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s08_extend_real_reduction.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s08_Hgg_reduction_bounded_pipeline_grouped_two_workers_continuation_response_single_load_20260921",
+    "POLARIZED_SIDIS_CHANNEL": "Hgg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s08_Hgg_reduction_bounded_pipeline_grouped_two_workers_continuation_response_single_load_20260921"
+  },
+  "execution_result": "Hgg/s08_reduction_result/s08_execution.json",
+  "expected_results": [
+    "Hgg/s08_reduction_result/s08_reduction.wl",
+    "Hgg/s08_reduction_result/s08_checks.json"
+  ],
+  "heartbeat": "cache/s08_Hgg_reduction_bounded_pipeline_grouped_two_workers_continuation_response_single_load_20260921_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 3660,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 6442450944,
+    "wall_seconds": 14100
+  },
+  "log": "cache/s08_Hgg_reduction_bounded_pipeline_grouped_two_workers_continuation_response_single_load_20260921.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "common/s06_result/reference/s02_result.wl": "c1e5f21d97b10b831b16ccafe2a9b3ed3fac463d5c6e204b4ecbafb471bf740d",
+    "common/s06_result/reference/s04_result.wl": "77754c4eb11f5626cc9ab473aa6c8f7a4722ab94d979cdd175da8e4a79192110",
+    "common/s06_result/reference/sources/s04_reduce_real.wl": "7fb2a8373395b2e6d85812186abe3d7394c47ed76722e30c212c262e232a0b03",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s08_extend_real_reduction.wls": "db9875bb42086b9e52a405bc61b46262661cf91b72681dc57c22c977121a22e7",
+    "common/s08_extension_inputs.json": "7b096b1000d5ee6186f6538ca9ad1df8cae5c398624afaa5daca7aa863a7ef40",
+    "common/s08_map_real_targets.wls": "8700fb675c4a0196d1a6f7aa7d1710e25a9210b0de85bd902990e2e7589772a9",
+    "common/s08_result/reference/s08_map_real_spin_before_known_denominator.wls": "e23a79589bfce183535a6f1166eda799a9f119168feb9cff1b13feb669c8b21f"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s08_extend_real_reduction"
+}

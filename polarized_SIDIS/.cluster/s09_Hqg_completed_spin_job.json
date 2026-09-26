@@ -1,0 +1,44 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s09_map_virtual_spin.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s09_Hqg_completed_spin",
+    "POLARIZED_SIDIS_CHANNEL": "Hqg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s09_Hqg_completed_spin"
+  },
+  "execution_result": "Hqg/s09_result/s09_execution.json",
+  "expected_results": [
+    "Hqg/s09_result/s09_result.wl",
+    "Hqg/s09_result/s09_checks.json"
+  ],
+  "heartbeat": "cache/s09_Hqg_completed_spin_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 14100
+  },
+  "log": "cache/s09_Hqg_completed_spin.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqg/s07_result/reference/unpolarized_virtual.wl": "45e4923088f5e449237c9843ee37be6d5b01c14f86c8cc9d917196ec64ffe3ef",
+    "Hqg/s07_result/s07_result.wl": "b5b4b79349842d4383b607b671ea97554b82c1039631f972985d09380c8e308c",
+    "common/s06_result/reference/s09_result.wl": "0c23971167f6b6cab97accd1fe5ddc05c99a7844be2a1aa560d4e4ebcc50090f",
+    "common/s06_result/reference/s12_result.wl": "07e1f4b08b86df75ee9fc9e489d929f22789e4d58017a5cdee40f12abc4c124e",
+    "common/s06_result/reference/s13_result.wl": "5193fc3cbbf055e34dfc6d718fe33fd72e2c676d2a5b5f4a7a6b8175a7a12513",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s07_inputs.json": "a545945765b5cf85018299090c78f109e06fb4a2b9c369bd685256e71e843596",
+    "common/s09_map_virtual_spin.wls": "4d5ef7c92f3a71f9410d8c1fe2c83e26431f23b84b3a0ea83131bb4bd9f072a5"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s09_map_virtual_spin"
+}

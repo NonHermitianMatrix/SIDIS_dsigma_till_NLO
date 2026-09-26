@@ -1,0 +1,37 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s04_transverse_angular_average.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s04_angular",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s04_angular"
+  },
+  "execution_result": "common/s04_result/s04_execution.json",
+  "expected_results": [
+    "common/s04_result/s04_result.wl",
+    "common/s04_result/s04_checks.json"
+  ],
+  "heartbeat": "cache/s04_angular_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 600,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 8589934592,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 1200
+  },
+  "log": "cache/s04_angular.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "7d07c760951a3c2d0cb028cdefe5b5561628e8f33ac96c6cdc28622ce2bb4499",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_transverse_angular_average.wls": "44e4741c1247d149ea6eec0d72ca494500f3eba7616319435006b8de5bcd2674"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s04_transverse_angular_average"
+}

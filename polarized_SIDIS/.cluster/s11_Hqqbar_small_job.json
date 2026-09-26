@@ -1,0 +1,49 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s11_small_collinear_spin.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s11_Hqqbar_small",
+    "POLARIZED_SIDIS_CHANNEL": "Hqqbar",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s11_Hqqbar_small"
+  },
+  "execution_result": "Hqqbar/s11_result/s11_execution.json",
+  "expected_results": [
+    "Hqqbar/s11_result/s11_result.wl",
+    "Hqqbar/s11_result/s11_checks.json"
+  ],
+  "heartbeat": "cache/s11_Hqqbar_small_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 8589934592,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 6900
+  },
+  "log": "cache/s11_Hqqbar_small.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "393e8503576b3fdd557c40f0fe6cfab9dd31d956100f8091dd615d904ab70c8a",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl": "1ce6e036f2b21a3336d92cd6ed53d02954cfb36eb08d854c7265e9b7e5362163",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/kinematics.wl": "56772f691f3263b8695e090f26c367b6062d8864bfa41b0cf44eb142f89be0b9",
+    "Hqqbar/s03_result/gq/s03_result.wl": "9cb6b437c7c7c316ce83e1b9eef1b1c66d8c8329d59074b3065e01718631ee69",
+    "Hqqbar/s03_result/qg/s03_result.wl": "7ddf294ee5969ff4177017020fab1f8b516bbc8d208c0fa38f81d919e46f97c7",
+    "Hqqbar/s11_result/reference/github_s09_result_s09_result.wl": "5845217f51ea3f27760cbe031363942504e368984ac93d7c339b63da0ed6427b",
+    "Hqqbar/s11_result/reference/s05_factorize.wls": "eeffd4cce10cad261260c7fab83c2f628e0782f7fc276087d446a19aa6c8d945",
+    "common/s03_auxiliary_inputs.json": "d564b985ba59959a1aed6bd204cd59de53f1182e5113a415fa32c5bf8566d61f",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_result/reference/s16_collinear_inputs.wl": "ee121b6a83eec08225a20f7cd3dc13faf404f990bcba89142d206f47f7acf52a",
+    "common/s11_small_collinear_spin.wls": "44ac7b5470ce54c6d0276bfa685ab88a5fff8d78d90c3835e7548488c48ffc8a",
+    "common/s11_small_inputs.json": "d761f5c9517ba17eee12a0093236e67ef10ae326ab2f014e4d7f63a768ef0fd1"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s11_small_collinear_spin"
+}

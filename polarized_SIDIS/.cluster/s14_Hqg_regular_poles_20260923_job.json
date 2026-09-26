@@ -1,0 +1,48 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s14_check_Hqg_regular_poles.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s14_Hqg_regular_poles_20260923",
+    "POLARIZED_SIDIS_CHANNEL": "Hqg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s14_Hqg_regular_poles_20260923"
+  },
+  "execution_result": "Hqg/s14_regular_pole_result/s14_execution.json",
+  "expected_results": [
+    "Hqg/s14_regular_pole_result/s14_result.wl",
+    "Hqg/s14_regular_pole_result/s14_checks.json"
+  ],
+  "heartbeat": "cache/s14_Hqg_regular_poles_20260923_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 600,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 7516192768,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 7516192768,
+    "wall_seconds": 3300
+  },
+  "log": "cache/s14_Hqg_regular_poles_20260923.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqg/s14_pole_refinement_result/s14_execution.json": "e65418fe477edb27ccd39d5798e40e1a78069f47f8d7179db5cda589b65206da",
+    "Hqg/s14_pole_refinement_result/s14_result.wl": "188ecb1ef43e3a9458a45c1c8b9dc3b2f81e9f86fd081492c4984ae547af73c7",
+    "Hqg/s14_regular_pole_result/reference/s14_control_checkpoint.wl": "023727b95804718534df3352e47e9c7948f7d2393196950c8a683912498066db",
+    "Hqg/s14_regular_pole_result/reference/s14_failed_execution.json": "f766f6a4987e056c2d50718d87864ba63592990a6da6c66a2766041df836aafe",
+    "Hqg/s14_regular_pole_result/reference/s14_regular_checkpoint.wl": "43341b517059462e31638954e745e2fc985524b9b2c74ea5e3a7a7a0547325c8",
+    "Hqq/s14_pole_refinement_result/s14_execution.json": "3d9d8ca66d94c5e03f46265d9b1bea8f294f98873e1c5c4237ea52a1f6d36490",
+    "Hqq/s14_pole_refinement_result/s14_result.wl": "544b29854428fa6ffefd7550e57029b942aa9d68b2c229e86e3b6c24dd22fa9a",
+    "common/s14_Hqg_regular_pole_inputs.json": "c8ab1e14c51594ba9e82a1eb3e82498b94608ffc6a6821975b8caa817dcb4793",
+    "common/s14_assemble_finite_spin.wls": "9f511361187996d8fef88f8897ba2b40018032d9d4e789ec2cd17d445939a94a",
+    "common/s14_check_Hqg_pole_refinement.wls": "a2f5bc445db2fad7ff271d799eb7a09852c92f2dcc3645a4294ab175f28dd1d2",
+    "common/s14_check_Hqg_regular_poles.wls": "d5e49bc107db2c2cb1ab010d83cc1863c47237b780ffd12111684433d06ab9f7",
+    "common/s14_check_Hqq_pole_refinement.wls": "b43b9e438dd20750fd058e3f343e9b096ca0568cc361179c9cfa537791b3dab4"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s14_check_Hqg_regular_poles"
+}

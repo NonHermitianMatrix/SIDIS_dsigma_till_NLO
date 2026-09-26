@@ -1,0 +1,68 @@
+{
+  "child_maxrss_bytes": 590524416,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s14_check_Hqg_reference_terms.wls"
+  ],
+  "completed_utc": "2026-09-24T01:46:30.920302+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 7516192768
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      17179869184,
+      17179869184
+    ]
+  },
+  "job_configuration_sha256": "0de3d77b9090539966cb10cda49d6983d44d58cb4cc5973ff11f2c33eb8be575",
+  "job_id": "14885810",
+  "node": "n6047",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 589008896,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqg/s14_reference_terms_result/s14_checks.json": "c1fc0d75555847603b3c259f3b85659cf0edb5ef3348be39aa919635d3fd3b2a",
+    "Hqg/s14_reference_terms_result/s14_result.wl": "1ae0af5bb48f374861e7f2fcc46078e634f50cf2c10b49c9f907569e90403ad1"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hqg/s11_result/reference/before_dimensional_completion/s11_result.wl": "1e6725ce5ad93598bf3744502333e8fee20741c3bb1be368aa9444d6a1a4482f",
+    "Hqg/s11_result/s11_result.wl": "12fa352ba9ae7edde73e3cfda989e4f4ed2c81864c0808503500a995bcc0486f",
+    "Hqg/s14_reference_residual_result/s14_checks.json": "7278433f9a450db0e59d527c19730a7ffbdd5c541aaf942568c8b9a4220ce2aa",
+    "Hqg/s14_reference_residual_result/s14_execution.json": "5970c7e984bdb2cffe378b9fafe2e417fa8edc1efdb41aba2e4a4380160dbc0b",
+    "Hqg/s14_reference_residual_result/s14_residual_F1.wl": "72dfcbe4ff840125c0e76690a1e153bcd32cc07759c25b5239de5d956628678b",
+    "Hqg/s14_reference_residual_result/s14_residual_F2.wl": "914e7a0310bc58fb8b2de3a3817c7de90cc8d6378eda33bb81a49dd0b9e97cc5",
+    "Hqg/s14_reference_residual_result/s14_result.wl": "b3dc0266a542de5ffddcd78095e87eaa3c7ec689de4418b08456241b64e80ba6",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s14_assemble_finite_spin.wls": "9f511361187996d8fef88f8897ba2b40018032d9d4e789ec2cd17d445939a94a",
+    "common/s14_check_Hqg_reference_terms.wls": "750786ee2c9d59b8f6d0e9457af2fce42cdf03071095032f1a007b76362c1c21",
+    "common/s14_inspect_Hqg_reference_residual.wls": "0ed5152eb676d812bedbbf756ba0da3aa9e4cdc42e98d452709e5d0ef636aa8d"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "storage_monitor": {
+    "error": null,
+    "measurement": {
+      "free_bytes": 717806512832512,
+      "scratch_bytes": 10589961148
+    },
+    "measurement_age_seconds": 2.488117039203644,
+    "scan_elapsed_seconds": 45.21393005549908,
+    "scan_pending": false
+  },
+  "wall_seconds": 45.27703142166138
+}

@@ -1,0 +1,25 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s05_Hgg_project_Photon_4_piecewise_reload_job.json",
+  "config_sha256": "54b9ab6b77b5c8638b2ac06bf95d0b20fe37c22d0319f99ecc6fa806717e5f46",
+  "event": "SUBMITTED",
+  "job_id": "14826126",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hgg_project_Photon_4_piecewise_reload_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hgg_project_Photon_4_piecewise_reload",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=24G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hgg_project_Photon_4_piecewise_reload_scheduler.log"
+  ],
+  "tag": "s05_Hgg_project_Photon_4_piecewise_reload"
+}

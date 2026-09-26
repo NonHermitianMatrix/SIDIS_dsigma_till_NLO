@@ -1,0 +1,57 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s11_small_collinear_spin.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s11_Hgg_dimensional_corrected",
+    "POLARIZED_SIDIS_CHANNEL": "Hgg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s11_Hgg_dimensional_corrected"
+  },
+  "execution_result": "Hgg/s11_result/s11_execution.json",
+  "expected_results": [
+    "Hgg/s11_result/s11_result.wl",
+    "Hgg/s11_result/s11_checks.json"
+  ],
+  "heartbeat": "cache/s11_Hgg_dimensional_corrected_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 3500
+  },
+  "log": "cache/s11_Hgg_dimensional_corrected.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "87f8e6569853ab998c595f1a329a0d9c05390eb624cea2fd91ac2b7881703953",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl": "1ce6e036f2b21a3336d92cd6ed53d02954cfb36eb08d854c7265e9b7e5362163",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/kinematics.wl": "56772f691f3263b8695e090f26c367b6062d8864bfa41b0cf44eb142f89be0b9",
+    "Hgg/s03_result/aqg/s03_result.wl": "42a21b96b2f6d0af7f9b0b0377830ad25c639ee84fb9bac1acf6d79d61181ed3",
+    "Hgg/s03_result/gq/s03_result.wl": "9d4fae5305d926dd243757feadfa2b86952ae4f6d4804bfc96fc588e4e1199a4",
+    "Hgg/s03_result/qg/s03_result.wl": "37a5f4efce200707c3596e69dd089414ab097325df161ed8d94754b65872da06",
+    "Hgg/s11_result/reference/before_dimensional_completion/s11_result.wl": "e5a4aa27a7a5e22fe07b0ee22e9f9709ba0d87e5c191ee1bbdfa0115052ceebc",
+    "Hgg/s11_result/reference/github_s09_result_s09_result.wl": "29191dd490460e2da081ce0684a5765f178cd67ecd8fc1b16280adeceaaea041",
+    "Hgg/s11_result/reference/s05_factorize.wls": "389c5f18b1985345d179b55bf129ae68074b2c6cbbed5dbf87fdb797bccfc1a4",
+    "Hqqbar/s03_result/gq/s03_result.wl": "9cb6b437c7c7c316ce83e1b9eef1b1c66d8c8329d59074b3065e01718631ee69",
+    "Hqqprime/s11_dimensional_result/s11_execution.json": "263420a0b3b402d0c32a66343161c0f801cda759c626337936c074bb3cc35e64",
+    "Hqqprime/s11_dimensional_result/s11_result.wl": "3c76ab221bf3c99ba7c35223b26ca10ec527596dc2f60307d5cc7e508dbc411c",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_auxiliary_inputs.json": "d564b985ba59959a1aed6bd204cd59de53f1182e5113a415fa32c5bf8566d61f",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_check_dimensional_convolution.wls": "fcc88fab3d9a6fc14c630d194fd6f3bf6fc8932a62b18a55c6fcbcf5ddacbef1",
+    "common/s11_result/reference/s11_small_collinear_spin_before_dimensional.wls": "44ac7b5470ce54c6d0276bfa685ab88a5fff8d78d90c3835e7548488c48ffc8a",
+    "common/s11_result/reference/s16_collinear_inputs.wl": "ee121b6a83eec08225a20f7cd3dc13faf404f990bcba89142d206f47f7acf52a",
+    "common/s11_small_collinear_spin.wls": "b47acf502782cf5da4720163519a419c81a1a7f750679441a32685da2838f1af",
+    "common/s11_small_inputs.json": "d761f5c9517ba17eee12a0093236e67ef10ae326ab2f014e4d7f63a768ef0fd1"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s11_small_collinear_spin"
+}

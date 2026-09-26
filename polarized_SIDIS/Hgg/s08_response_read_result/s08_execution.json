@@ -1,0 +1,80 @@
+{
+  "child_maxrss_bytes": 13215854592,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s08_check_Hgg_response_read.wls"
+  ],
+  "completed_utc": "2026-09-21T04:12:18.140491+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 23622320128
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      25769803776,
+      25769803776
+    ]
+  },
+  "job_configuration_sha256": "801c6464a0b2439880ccd0c458e094b3159675ce069dba421b58e7fc4d5fc10f",
+  "job_id": "14828218",
+  "node": "n7644",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 12958167040,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s08_response_read_result/s08_checks.json": "d9cddf54178821b28faa86f55e71d1501ff465fe2f34f21971578334cd750916",
+    "Hgg/s08_response_read_result/s08_result.wl": "26833dd3d7306c70dde337fc1356f9a341b0da494264aa1e55ebb0cc1e318abb"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgg/s05_projected_components_result/Photon_4/s05_checks.json": "6cbfc8a0ee0a642adfdcd4dbb601536773cc216077398b4505c32cc9f3454ff0",
+    "Hgg/s05_projected_components_result/Photon_4/s05_execution.json": "376c2d5ab250a46ff9f529860599b2c10627a57abec41774022efb56050fd300",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0001.txt": "3ce95984ce82b1c561062981d0fa69a6cb4bd717698b50daddf29f95e5efdbf1",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0002.txt": "9a468a63a92e8313ddd4029bcc630ac8712129215336ae1cef70379bcb97260d",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0003.txt": "2c88fd4138ba9c029699d100d8a58b68a05ed27ed3636cab61c0edb3e42947d4",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0004.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0005.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0006.txt": "c79fbb16db53738b869ce767c007bb47966f63b9b8ebf0067f922b8024c9139b",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0007.txt": "cbe2d13fe66b315f276d203ba09bc6384e4c4cc5e98a6f218bef2974d2cac533",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0008.txt": "4e2d722c8f6e4d1e6f546000e33b0840f7151fa6cb2ba1219aba6b95cf853895",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0009.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0010.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0011.txt": "8e8a2cef68ae8b47c0da9ae6d628bc82099b9c6622cf463316858a67a732c1e9",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0012.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0013.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0014.txt": "26720394af96e73f92c5b3026a15539d0e6c4c1ee96ba52953c4ffa3910350df",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0015.txt": "806bc7579bb5b39d164d9ca8946759270e693f0ddd76a2242acb6027e3ebdaff",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0016.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0017.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0018.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0019.txt": "684461e3ceaccff0ba6c3dfef4a70d542900e3ed6ff980026b80e88bcd828bc9",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0020.txt": "bd036b83b8b6c9af7817c3022c0669cc28fd03455ab24c438a0c4d7fa6b554fb",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0021.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0022.txt": "bfcde7529de8233c59aa50063e1cf47ca84078553ab3f1fe83f0921ee57b607a",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0023.txt": "7dc103961b0395e4b5b7ce3d83caf81bd66467c63439d451cf4930b1db4c48fd",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0024.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0025.txt": "db94845707feaccacdbe1d65dfcd64dcd5db60091675c6dd44297cb0192ef8b8",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0026.txt": "fdad593818e41897bd60286e48087d6bdc4d95285056fa78e89ce75d1f8282e6",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0027.txt": "ad7532849aa786a107ee2b146264f7ed01f5af8f451ec2f2c6abbf5611c28373",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_0028.txt": "087a3019ebf8b501bb2bb423c23ccc3b99e1ad3833437e7ecde3ee93e9d18e65",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_manifest.json": "ba7677b2cff9d416b7257e46d5f116d41cab1855647be59a4d1ddf1395f203cf",
+    "Hgg/s05_projected_components_result/Photon_4/s05_result.wl": "1b26350dc41d79bedf7e9b1fe1fd1079cdc4c209880a615c8188aa5c6e4aad9e",
+    "common/s05_project_Hgg_piecewise_storage.wls": "fc9e17ee0bb7d4cfa7ae517dfcc166c1c273dac1177c8d21d153cc6bfdf1acaa",
+    "common/s08_check_Hgg_response_read.wls": "e9a066e9e47ed9e82c06a95bc39479e177b1c60a66db4edf6e8d074d50b33170"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 1065.2630699286237
+}

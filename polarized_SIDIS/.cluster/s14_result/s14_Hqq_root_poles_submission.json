@@ -1,0 +1,25 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s14_Hqq_root_poles_job.json",
+  "config_sha256": "dbb255833c15970bd54b625b49f7f88b26442ec7e8779308045014547b24aeec",
+  "event": "SUBMITTED",
+  "job_id": "14826102",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s14_Hqq_root_poles_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s14_Hqq_root_poles",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s14_Hqq_root_poles_scheduler.log"
+  ],
+  "tag": "s14_Hqq_root_poles"
+}

@@ -1,0 +1,28 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s12_Hqq_factored_series_storage_resume_job.json",
+  "config_sha256": "f5d5a2032431c9fd18926586d3308c9c82d9b54f01b21957b1de4e02d12346d3",
+  "event": "SUBMITTED",
+  "job_id": "14820801",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s12_Hqq_factored_series_storage_resume_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s12_Hqq_factored_series_storage_resume",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s12_Hqq_factored_series_storage_resume_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s12_Hqq_factored_series_storage_resume"
+}

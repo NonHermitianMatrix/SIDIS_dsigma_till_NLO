@@ -1,0 +1,80 @@
+{
+  "channel": "Hgq",
+  "commit": "5062dcb2407594dafcc2f9f72800e96ff9e6d957",
+  "completed_utc": "2026-09-17T06:36:22.123341+00:00",
+  "configuration_sha256": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+  "files": [
+    {
+      "bytes": 46309,
+      "channel": "Hgq",
+      "destination": "Hgq/s01_result/reference/README.md",
+      "git_blob": "c93b9af97eb93ac1a663a26a6f9e838aa8ebdf77",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "1cc696fff6773f1cda2fde426c4431219b425219fd2520588de8aaee0537497e",
+      "upstream_path": "SIDIS/Hgq/README.md"
+    },
+    {
+      "bytes": 6041,
+      "channel": "Hgq",
+      "destination": "Hgq/s01_result/reference/s01_result/s01_inputs/s01_generate_amplitudes.wl",
+      "git_blob": "e00d8a81c8f9ed144c37ffb474753fa7d9b1f124",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "bd03ca4e615f35e19a470fcb3d317b6484f46fed71e1729cd393cecbd3655c6b",
+      "upstream_path": "SIDIS/Hgq/s01_result/s01_inputs/s01_generate_amplitudes.wl"
+    },
+    {
+      "bytes": 559102,
+      "channel": "Hgq",
+      "destination": "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl",
+      "git_blob": "8d424391dd68284f3807827321db96b33c1c44e9",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+      "upstream_path": "SIDIS/Hgq/s01_result/s01_inputs/s01_result.wl"
+    },
+    {
+      "bytes": 108839,
+      "channel": "Hgq",
+      "destination": "Hgq/s01_result/reference/s01_result/s01_inputs/s01_diagrams.wl",
+      "git_blob": "b7d82d3302d90b9e729f9b49fc41cc60f096013a",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "06e88b5e43e083678244bf65df534032ca7fc216b18b6b26b78541e48719bc10",
+      "upstream_path": "SIDIS/Hgq/s01_result/s01_inputs/s01_diagrams.wl"
+    },
+    {
+      "bytes": 8315,
+      "channel": "Hgq",
+      "destination": "Hgq/s01_result/reference/s01_result/s01_inputs/s02_born_and_projectors.wl",
+      "git_blob": "53b845a756d07342f9b4c7c9533b813015841e7a",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "4cdd00d8d5049eb190fb6b3e11a856b507083f9e7ab51713b912df3723f272e1",
+      "upstream_path": "SIDIS/Hgq/s01_result/s01_inputs/s02_born_and_projectors.wl"
+    },
+    {
+      "bytes": 2561,
+      "channel": "Hgq",
+      "destination": "Hgq/s01_result/reference/s01_result/s01_inputs/s02_result.wl",
+      "git_blob": "93b5168b3b1153206399536f850608ca7e3e2240",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "81da52572b7ee1ae58a9002f54335ae22425859c69d090a284d0b3c7233973da",
+      "upstream_path": "SIDIS/Hgq/s01_result/s01_inputs/s02_result.wl"
+    }
+  ],
+  "finite_fhats_computed": false,
+  "input_identity_checks_passed": true,
+  "job_id": "14773300",
+  "limitation": "Input provenance is verified; polarized contractions and finite assembly are separate stages.",
+  "node": "n7041",
+  "physics_executed": false,
+  "repository": "https://github.com/NonHermitianMatrix/SIDIS_dsigma_till_NLO",
+  "schema": "polarized-sidis-input-receipt-v1",
+  "scope": {
+    "jet_matching": "deferred",
+    "measurement": "reference-large-transverse-momentum-SIDIS",
+    "numerics": "deferred",
+    "order": "through alpha_s^2, reference nonzero-transverse-momentum counting",
+    "spin": "all-incoming-and-tagged-outgoing-components",
+    "working_gamma5_prescription": "BMHV; finite scheme conversions require separate checks"
+  },
+  "source_sha256": "5eb03c10b39c1002006e732698c748bfd2084c5feef365f9ed4e808db822ebee",
+  "tree": "428a4eb2327589d067372a090d5ca33427108f45"
+}

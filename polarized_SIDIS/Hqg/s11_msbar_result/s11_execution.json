@@ -1,0 +1,112 @@
+{
+  "child_maxrss_bytes": 1967673344,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s11_finalize_Hqg_all_routes.wls"
+  ],
+  "completed_utc": "2026-09-24T03:41:18.151575+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 7516192768
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      8589934592,
+      8589934592
+    ]
+  },
+  "job_configuration_sha256": "1c5162775c419b49526eca936a60c9153e2057742e84d1c2ca2e90e0a4f45205",
+  "job_id": "14886271",
+  "node": "n7141",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 1546002432,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqg/s11_msbar_result/s11_checks.json": "beb8e7037c6e1571cd7ee9d33d34c13f8116c42d28ef063d1a4e3408c5fe3656",
+    "Hqg/s11_msbar_result/s11_comparison.wl": "5efbf228e7a5fea6c9a7692137cf5666133e1b32b6d605cd2167f972a3a63d87",
+    "Hqg/s11_msbar_result/s11_result.wl": "b2bce739b0ea9e4164a433511dcf5d7d4957438cee2c8d0df63a5e703a213f72"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hgq/s03_result/s03_result.wl": "570bde9d826e893d775f6bc458307369c6eb65316872f7268562345e527da177",
+    "Hgq/s10_dimensional_gluon_result/s10_checks.json": "a0c7fadc72f816047db187bee42683e98a74bd0bdc60f4a33dfd61600fcab26c",
+    "Hgq/s10_dimensional_gluon_result/s10_execution.json": "ab74a24ab801fe574e738848eea1714404bd3fe256925cacf81432978367d5ab",
+    "Hgq/s10_dimensional_gluon_result/s10_result.wl": "8673c70ab8dca6be2775e70e339c1100829472e27f74a9f8eb1d2e3f13948006",
+    "Hgq/s10_gluon_transfer_result/s10_execution.json": "b0f367b038313539852445b064e5c00e906ccf668f63b08bce5b9206bb812728",
+    "Hgq/s10_gluon_transfer_result/s10_result.wl": "4b32f19586f56b1ccda00968a0acbddc0eea5b1b7068f2ea6a42fc0df5edee13",
+    "Hqg/s01_result/reference/s01_result/s01_inputs/s04_result.wl": "8403c287ed130c5db601069eb71ad2d6a7b2b851662dea716441c472bc10eba9",
+    "Hqg/s03_result/s03_result.wl": "f08420e83f346d36de3f890ba51c2f31692907a699c0cab5fb96e43eb71c059a",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_checks.json": "6ff3378a0c4a1e285ffe34fea510778ec91d4100abe1a93919fade2ab55f8116",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_execution.json": "992effb42fe5c41c29557eec6ad5db9fac079eb2c1060bd6806b07836c641e66",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_result.wl": "dac72a358f77e3b10483b88108da433a2e265e234cf5e04bb699a22b2d917162",
+    "Hqg/s11_result/reference/before_dimensional_completion/s11_result.wl": "1e6725ce5ad93598bf3744502333e8fee20741c3bb1be368aa9444d6a1a4482f",
+    "Hqg/s11_result/reference/s10_collinear_subtraction.wl": "befcd8a01946c50ec05f2087eeebdaa12c97da19c28ac519221e7614a82bb932",
+    "Hqg/s11_result/reference/s10_result.wl": "c8d1732042d54b1bb576a87963987acc45098f389abdd85aba7b6d0339062477",
+    "Hqg/s11_result/s11_checks.json": "534ad443caa21624a5610b113ae919575f69a2f4a28e3e1af9b3b38f85983778",
+    "Hqg/s11_result/s11_execution.json": "9bb5738609b14b27624e9a489301a198105d9f1e90e3026c5f4486e971adf284",
+    "Hqg/s11_result/s11_result.wl": "12fa352ba9ae7edde73e3cfda989e4f4ed2c81864c0808503500a995bcc0486f",
+    "Hqg/s14_reference_residual_result/s14_checks.json": "7278433f9a450db0e59d527c19730a7ffbdd5c541aaf942568c8b9a4220ce2aa",
+    "Hqg/s14_reference_residual_result/s14_execution.json": "5970c7e984bdb2cffe378b9fafe2e417fa8edc1efdb41aba2e4a4380160dbc0b",
+    "Hqg/s14_reference_residual_result/s14_residual_F1.wl": "72dfcbe4ff840125c0e76690a1e153bcd32cc07759c25b5239de5d956628678b",
+    "Hqg/s14_reference_residual_result/s14_residual_F2.wl": "914e7a0310bc58fb8b2de3a3817c7de90cc8d6378eda33bb81a49dd0b9e97cc5",
+    "Hqg/s14_reference_residual_result/s14_result.wl": "b3dc0266a542de5ffddcd78095e87eaa3c7ec689de4418b08456241b64e80ba6",
+    "Hqg/s14_reference_terms_result/s14_checks.json": "c1fc0d75555847603b3c259f3b85659cf0edb5ef3348be39aa919635d3fd3b2a",
+    "Hqg/s14_reference_terms_result/s14_execution.json": "4fd0536e1af84e2138ae78b5abbf3654f3a18b6cbf1b498b9230ac7edf2b23d0",
+    "Hqg/s14_reference_terms_result/s14_result.wl": "1ae0af5bb48f374861e7f2fcc46078e634f50cf2c10b49c9f907569e90403ad1",
+    "Hqg/s14_result/reference/unpolarized_F1_hat.wl": "fc161bd3e9f0a69af14e91ad951aed7e8f7356543920f9dcc48e9f5ff2c32b6e",
+    "Hqg/s14_result/reference/unpolarized_F2_hat.wl": "4ba318fe07287aee14f0a2b9520cbf06043bb07ce609af83af8038430df09f85",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "0dc987fe060db67a8fa060945380760b0ceb788843882e760c0a79959852297a",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "Hqq/s03_result/s03_result.wl": "99dff181bf85da2d93376236b37b98e116f5965d5015cba01eb150bb19e5c9cc",
+    "Hqqprime/s11_dimensional_result/s11_execution.json": "263420a0b3b402d0c32a66343161c0f801cda759c626337936c074bb3cc35e64",
+    "Hqqprime/s11_dimensional_result/s11_result.wl": "3c76ab221bf3c99ba7c35223b26ca10ec527596dc2f60307d5cc7e508dbc411c",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_collinear_spin_kernels.wls": "4e2e1b0b662948805d939ea52ebd7e227d0719f2d85e03f3843b791b47c09696",
+    "common/s10_dimensional_gluon_transfer.wls": "113b9968a31eec26914c7018515e9ca214bfbc622b9fe7f5a3b539037aef957d",
+    "common/s10_dimensional_quark_gluon_transfer.wls": "16a98ccb008189f631f6da124e602e581219cd7635212f5e9272ef6be7fbf46b",
+    "common/s10_inputs.json": "8aa54936b2ed7ca5cff487586639e1e580073562ffc81663ce4bd19fa2586536",
+    "common/s10_result/reference/s08_collinear_subtraction.wl": "6b821fc64d1b8b593f6635dd49269a36b62588903c1681763a1e6b034cfe865d",
+    "common/s10_result/reference/s08_result.wl": "3febb99ebac11172d1ce55b4315cf118b0cbc158b0d25a7fe1ae943b1371e6ea",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_check_dimensional_convolution.wls": "fcc88fab3d9a6fc14c630d194fd6f3bf6fc8932a62b18a55c6fcbcf5ddacbef1",
+    "common/s11_collinear_spin_convolutions.wls": "4fa3afa28525d57a63c8aea1dee8a4825d761b504f0cd8192837360ec5b531c6",
+    "common/s11_exact_reference_reduction.wl": "168b4b51f1ff470e33a7a4a7cb1a5727a21a1b6050086a8d3ede67690a2eef7c",
+    "common/s11_finalize_Hqg_all_routes.wls": "c0b59352030e2d089a141045edbe4e25269d61ca825923cace595d194fa09b14",
+    "common/s11_finalize_Hqg_subtraction.wls": "63816e69360545196122597d030db39d2d28628d96a844b1638a64b82f69e627",
+    "common/s11_inputs.json": "20e2f7da6abf25eeeace096a4d8df702e5048eb46f7010100fe066782e82c835",
+    "common/s11_result/reference/s11_collinear_spin_convolutions_before_dimensional.wls": "9c5784631fbeb46741b274186985fb21f1607d4063525025517bb0560f11de96",
+    "common/s11_result/reference/s11_small_collinear_spin_before_dimensional.wls": "44ac7b5470ce54c6d0276bfa685ab88a5fff8d78d90c3835e7548488c48ffc8a",
+    "common/s14_assemble_finite_spin.wls": "9f511361187996d8fef88f8897ba2b40018032d9d4e789ec2cd17d445939a94a",
+    "common/s14_check_Hqg_reference_terms.wls": "750786ee2c9d59b8f6d0e9457af2fce42cdf03071095032f1a007b76362c1c21",
+    "common/s14_inputs.json": "145a05b23c01a6fa4a9fca32e1bbb3ef41466db3bd0bc7cf1842691dc3c77999",
+    "common/s14_inspect_Hqg_reference_residual.wls": "0ed5152eb676d812bedbbf756ba0da3aa9e4cdc42e98d452709e5d0ef636aa8d"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "storage_monitor": {
+    "error": null,
+    "measurement": {
+      "free_bytes": 716199341129728,
+      "scratch_bytes": 10697537339
+    },
+    "measurement_age_seconds": 11.994526989758015,
+    "scan_elapsed_seconds": 75.26027928292751,
+    "scan_pending": false
+  },
+  "wall_seconds": 1294.8424172420055
+}

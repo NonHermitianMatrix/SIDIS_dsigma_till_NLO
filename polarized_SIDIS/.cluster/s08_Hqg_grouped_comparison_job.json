@@ -1,0 +1,69 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s08_check_Hqg_grouped_mapping.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s08_Hqg_grouped_comparison",
+    "POLARIZED_SIDIS_CHANNEL": "Hqg",
+    "POLARIZED_SIDIS_OWN_TARGET_FILE": "cache/s08_targets/Hqg/bd2242c9a42c3a41157e0d44ef3bb8784fe7d444bf22423fbbd7d9e664754064/component_0004.wl",
+    "POLARIZED_SIDIS_OWN_TARGET_SHA256": "06e097212bd8053a27ad3bf6dd2f212d763adeb452944f304be0e21111170b26",
+    "POLARIZED_SIDIS_TARGET_MEMORY_GIB": "4",
+    "POLARIZED_SIDIS_TARGET_SECONDS": "10800",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s08_Hqg_grouped_comparison"
+  },
+  "execution_result": "Hqg/s08_grouped_comparison_result/s08_execution.json",
+  "expected_results": [
+    "Hqg/s08_grouped_comparison_result/s08_result.wl",
+    "Hqg/s08_grouped_comparison_result/s08_checks.json"
+  ],
+  "heartbeat": "cache/s08_Hqg_grouped_comparison_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 10860,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 15032385536,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 15032385536,
+    "wall_seconds": 14100
+  },
+  "log": "cache/s08_Hqg_grouped_comparison.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgq/s08_certified_denominator_result/s08_execution.json": "86f6610b2aeba4ef9839b75a634a2025360f80b1a3a2f120a90bc84faa58f498",
+    "Hgq/s08_certified_denominator_result/s08_result.wl": "04c9d378a4c3ae74e16177a399435a687a476df6182cea953c6dfa47fe6c0feb",
+    "Hqg/s05_result/s05_checks.json": "3eb721f610de2b82497ddbda8be93f5faeb44f008b4e1314b8d8d0ec1942e7fe",
+    "Hqg/s05_result/s05_execution.json": "d17e1936cb1516c4268175b4f43cfc02a7243020d8b20a735869e47e1f68cb91",
+    "Hqg/s05_result/s05_payload_manifest.json": "e39440acfbf41cf39a03a648749e713aaec8355fa8b9b1cfb8d6ad9ada4ad826",
+    "Hqg/s05_result/s05_result.wl": "522ceae713f66c9748ead11403608287304ee1eb0c56ba05f307ef4ab54c5c7d",
+    "Hqqprime/s05_result/s05_result.wl": "07679643127071c38d0522479236858ff7fd1f4e770d22d65572072f56e03d9f",
+    "cache/s08_coefficient_check/5f814c41b2ea52650d1f94ce8379c9b37f7b551f6b6020ca41c440a024093df4/s08_raw_map.wl": "ad5dd5dd3a9043496f796825961e3cc585c9a67044210c0d64a7ae1c5f19143a",
+    "cache/s08_targets/Hqg/bd2242c9a42c3a41157e0d44ef3bb8784fe7d444bf22423fbbd7d9e664754064/component_0004.wl": "06e097212bd8053a27ad3bf6dd2f212d763adeb452944f304be0e21111170b26",
+    "common/s05_result/reference/s05_real_spin_response_before_parallel_spin_checks.wls": "46c45f60a0f97c18d430cd8a3ee05182bc5e10f5deb424e8b69487d76e75e500",
+    "common/s06_result/reference/s02_result.wl": "c1e5f21d97b10b831b16ccafe2a9b3ed3fac463d5c6e204b4ecbafb471bf740d",
+    "common/s06_result/reference/s04_result.wl": "77754c4eb11f5626cc9ab473aa6c8f7a4722ab94d979cdd175da8e4a79192110",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s08_certified_denominator_inputs.json": "6f1af64503698c68affe68610038e9d091f78cc62b58ba2851af54ca498bf593",
+    "common/s08_check_Hqg_grouped_mapping.wls": "186ba59d98cdc9c5ad8c4c107243085cdd3537f1a4325b63d54be1ddc76dba12",
+    "common/s08_check_certified_denominator_mapping.wls": "92b48ef6d8503188c58059cf9d7eb1ade32250ec5632d1ccdda3b695245d603e",
+    "common/s08_inputs.json": "e452387d27ffa4dab87e716d2061b5ad6d171f8589e9099d5b02c5bb3933af6d",
+    "common/s08_map_Hqg_target_packets.wls": "2be9cfe584e8b1714827d89db0e75c542a31a96bf8e1b413bb767324a61551a4",
+    "common/s08_map_real_targets.wls": "8700fb675c4a0196d1a6f7aa7d1710e25a9210b0de85bd902990e2e7589772a9",
+    "common/s08_rational_sum_check.wls": "7057bd25031c8032c05ba486395032e46c5e5dd10db004c4ce1c96f32779603f",
+    "common/s08_rational_sum_inputs.json": "985d9b844cb495e61ba268159ddfaea78f9fcc3a559feb83c3bdce0d5cfdaaeb",
+    "common/s08_result/reference/s03_real_families.wl": "af23fd0f16f04dde4897cf92b77a9f6826bfee3442a29f26b9450663c78c0675",
+    "common/s08_result/reference/s08_coefficient_check_before_rational_sum.wls": "46e5b7ae4c248c82cffe2e5e8d9dd5d789224fbb05365cc71dbc369eae2aa84d",
+    "common/s08_result/reference/s08_inputs_before_reference_coefficients.json": "87a9e16db43dc2624c3dcabb18d06ed4b09de6082296cb0b1360314548df01b8",
+    "common/s08_result/reference/s08_map_real_spin_before_known_denominator.wls": "e23a79589bfce183535a6f1166eda799a9f119168feb9cff1b13feb669c8b21f",
+    "common/s08_result/reference/s08_map_real_spin_before_reference_coefficients.wls": "77c7352ffeacaab4a888450e1f3811509a5ba0f9df2a412409504f986279ed52",
+    "common/s08_result/reference/s08_map_real_targets_before_channel_resume.wls": "eaebc31004da122daa275f4d817ba45e84c8ed5db8e5c0bf40a008289791a1ce",
+    "common/s08_result/reference/s08_standalone_rational_reducer.wls": "a2d379159eb49df3fdd8ad49db4b437dd18dbccd87f3a2667f91896e167aae30",
+    "common/s08_result/reference/s11_real_master_coefficients.wl": "c453a12bebd4ce2b8dc8aa7ecf14931602aea619889c581f7850db11fc62a03a"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s08_check_Hqg_grouped_mapping"
+}

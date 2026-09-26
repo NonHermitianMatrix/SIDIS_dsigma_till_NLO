@@ -1,0 +1,672 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,bm,booktabs,longtable,array,slashed}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{microtype}
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\as}{\alpha_s}
+\newcommand{\eps}{\epsilon}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newcommand{\code}[1]{{\small\nolinkurl{#1}}}
+\newcommand{\pathref}[1]{\par{\footnotesize\textit{Calculation record:} \code{#1}.}\par}
+\title{Spin-resolved partonic SIDIS through NLO\\
+\large Physics, conventions, all six channels, and the meaning of the final coefficients}
+\author{Documentation of the accepted \texttt{polarized\_SIDIS} calculation}
+\date{26 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+This report explains the completed partonic calculation for large-transverse-momentum semi-inclusive deep-inelastic scattering (SIDIS), retaining the spin of both the incoming parton and the tagged outgoing parton. It follows the saved equations, source definitions, and accepted result records. The hard scattering is evaluated through order $\as^2$, with the same measurement and unpolarized normalization as the pinned SIDIS reference. All six channels are covered: $H_{qq}$, $H_{qg}$, $H_{gq}$, $H_{gg}$, $H_{q\bar q}$, and $H_{qq'}$.
+
+The output consists of finite spin-response matrices, together with the full physical photon response. It is not yet a hadronic cross section, a probability table, or a hadron-in-jet Collins asymmetry. This report explains what was retained, what was reused, how real radiation and loops were combined with factorization counterterms, and what each validation establishes. Detailed source listings, execution instructions, exact input identities, and artifact paths accompany the report in the READMEs. The long analytic coefficient expressions remain in the exact native result files; this document explains their complete construction rather than printing millions of algebraic terms.
+\end{abstract}
+\tableofcontents
+\newpage
+
+\section{The question being calculated}
+\subsection{The measured process and the perturbative order}
+Let $\ell$ and $\ell'$ be the incoming and scattered lepton momenta, $P$ the proton momentum, $S$ its spin specification, and $P_h$ the momentum of an identified hadron. The inclusive remainder is denoted by $X$. The SIDIS process underlying the reference is
+\begin{equation}
+ e(\ell)+p(P,S)\longrightarrow e(\ell')+h(P_h)+X.
+\end{equation}
+The momentum exchanged by the electromagnetic current is $q=\ell-\ell'$. Its spacelike virtuality is written as a positive quantity $Q^2=-q^2$. The Bjorken variable $x$, lepton inelasticity $y$, and fragmentation variable $z_h$ are defined by
+\begin{equation}
+ x=\frac{Q^2}{2P\cdot q},\qquad
+ y=\frac{P\cdot q}{P\cdot\ell},\qquad
+ z_h=\frac{P\cdot P_h}{P\cdot q}.
+\end{equation}
+These are the measurement definitions of the large-transverse-momentum SIDIS reference \cite{wang}. The present calculation keeps that measurement. It does not introduce a jet algorithm, jet radius, or a hadron momentum measured relative to a reconstructed jet.
+
+Let $\xi$ be the proton momentum fraction entering the hard scattering and $\zeta$ the fraction of the tagged parton momentum carried by the hadron. Neglecting the masses in the hard kinematics, the incoming parton momentum $p$ and tagged outgoing momentum $k_1$ are specified by
+\begin{equation}
+ p=\xi P,\qquad k_1=P_h/\zeta,\qquad
+ \widehat x=x/\xi,\qquad \widehat z=z_h/\zeta.
+\end{equation}
+At nonzero large transverse momentum, a recoiling parton is required already at the first nonzero order. Consequently the reference counts the two-body hard process as order $\as$, and its NLO correction as order $\as^2$. This differs from counting the zero-transverse-momentum inclusive Born process as order one. The electromagnetic current normalization is inherited from the reference; the electron tensor and its electromagnetic prefactors must still be included when constructing an electron--proton cross section.
+
+\subsection{What ``polarizing the quark'' means}
+A transversely polarized proton supplies a spin-dependent parton ensemble. It does not force every extracted quark into a pure transverse-spin state, nor does it assign every flavor the same polarization. The eventual proton matrix element determines the spin density of the entering parton. In a leading-twist collinear description, the usual quark functions are the unpolarized density $f_1$, helicity density $g_1$, and transversity $h_1$. Their roles are distinct. The hard calculation therefore retains a complete parton spin basis instead of selecting a numerical proton polarization at this stage.
+
+For a quark, a transverse spin is a coherent superposition of the two helicities. Keeping only separate positive- and negative-helicity probabilities would lose the interference needed for transverse spin transfer. This is the reason to preserve off-diagonal spin-density information in the amplitudes. The general helicity description of SIDIS makes this distinction explicit \cite{helicity}.
+
+A gluon also has two physical helicities, but the off-diagonal coherences describe linear polarization, not a spin-one-half transverse-spin vector. The partonic library keeps both linear Stokes components and gluon helicity. This does not assert that every partonic entry corresponds to an independent leading-twist collinear PDF of a spin-one-half proton. The operator content of the later hadronic factorization must decide which entries can contribute.
+
+\subsection{What changed and what stayed reusable}
+The original calculation contracted the resolved external spins into an incoming spin average and an outgoing spin sum. Here these contractions are replaced by a complete basis of spin insertions, while all unobserved states are still summed. The photon tensor is also retained before the legacy two scalar projections. This changes the numerators and the collinear spin operators.
+
+The external measurement, generated open amplitudes, scalar integral families, valid reduction rules, master integrals, and reference normalization remain reusable wherever their definitions match. A spin-summed number cannot be inverted to recover its discarded coherences. Thus reuse is primarily at the amplitude and scalar-integral level, rather than multiplying an already spin-summed final coefficient by a universal polarization factor. No new observable or higher perturbative order was added.
+
+\section{Kinematics, axes, and spin-response matrices}
+\subsection{Invariants and the physical domain}
+Let $k_2$ and $k_3$ denote the unobserved real-emission momenta. All external partons are massless. The independent invariants used in the saved real-radiation geometry are
+\begin{align}
+ p^2=k_1^2=k_2^2=k_3^2&=0, &q^2&=-Q^2,\\
+ s&=(p+q)^2, &t&=(q-k_1)^2,\\
+ s_{23}&=(p+q-k_1)^2, &a_{12}&=(k_1+k_2)^2,\\
+ u_3&=(p-k_3)^2, &k_3&=p+q-k_1-k_2.
+\end{align}
+In particular, $t$ is defined with $q-k_1$ in this repository. Replacing it by another common Mandelstam convention would change the formulas. At the two-body endpoint $s_{23}=0$; real radiation has $s_{23}>0$. The interior domain used by the assembly is
+\begin{equation}
+ Q>0,\qquad s>s_{23}>0,\qquad
+ s_{23}-Q^2-s<t<-\frac{Q^2s_{23}}{s}.
+\end{equation}
+Scale parameters and the plus-distribution endpoint are positive. The number of colors is symbolic and restricted to its physical domain. Flavor-domain restrictions are retained separately when the reference sums spectator flavors.
+
+Let $G$ be the Gram matrix of the ordered vectors $(p,q,k_1)$, with $G_{mn}=v_m\cdot v_n$. The following matrix is a saved tool-derived result of the invariant equations, not an extra kinematic assumption:
+\begin{equation}
+G=\begin{pmatrix}
+0&(Q^2+s)/2&(Q^2+s-s_{23}+t)/2\\
+(Q^2+s)/2&-Q^2&(-Q^2-t)/2\\
+(Q^2+s-s_{23}+t)/2&(-Q^2-t)/2&0
+\end{pmatrix}.
+\end{equation}
+It fixes the scalar-product substitutions used in the contractions and integration maps. The construction requires nonzero transverse momentum, so that the physical span has the required rank.
+\pathref{common/s04_result/s04_result.wl}
+
+The reference frame is a Breit frame: the proton parton points in the positive spatial $z$ direction, the virtual photon in the negative $z$ direction, and $k_1$ lies in the $xz$ plane with nonnegative transverse component. The metric is $(+,-,-,-)$. The physical photon axes are called $L,X,Y$. The outgoing spin's longitudinal axis is along $k_1$; its $Y$ axis is the normal to the scattering plane and its $X$ axis is fixed by $Y\mathbin{\times}Z_{\rm out}$. These axes, including their signs, are saved in \code{PhysicalFrame}. A later azimuthal convention must be related to these axes explicitly.
+
+\subsection{The two-dimensional density matrix}
+Let $p_X,p_Y,p_H$ be the polarization components of one physical two-state parton, and let $\sigma_U$ be the identity matrix and $\sigma_X,\sigma_Y,\sigma_H$ the three Pauli matrices. The basis program saves the normalized density matrix
+\begin{equation}
+ \rho=\frac12\bigl(\sigma_U+p_X\sigma_X+p_Y\sigma_Y+p_H\sigma_H\bigr)
+ =\frac12\begin{pmatrix}1+p_H&p_X-i p_Y\\p_X+i p_Y&1-p_H\end{pmatrix}.
+\end{equation}
+Its saved eigenvalues are $(1\pm\sqrt{p_X^2+p_Y^2+p_H^2})/2$. Positivity therefore restricts the polarization vector to length at most one. Zero polarization is a mixture, while length one is a pure state. The letters used in all output arrays are ordered as
+\begin{equation}
+ (U,X,Y,H).
+\end{equation}
+Here $U$ is the identity insertion, not a third or fourth physical spin state. For gluons, $X$ and $Y$ mean the two linear Stokes components, and $H$ means circular polarization or helicity.
+
+An outgoing analyzer is an operator on the outgoing two-state space. The repository's $U$ analyzer is the identity: it sums the outgoing spin. The incoming $U$ insertion is divided by two: it averages the incoming spin. A normalized projector selecting one outgoing spin has its own one-half factor. Adding another average to the saved $UU$ coefficient would therefore give the wrong normalization.
+
+\subsection{Why a hard coefficient is a four-by-four matrix}
+For fixed photon indices, let $\mathcal M$ denote the amplitude as a map from the incoming to outgoing two-state spin space, with unobserved indices understood. Let $\mathcal N$ collect the prescribed color average, coupling, and phase-space factors. A notation for the contraction implemented by the spin basis is
+\begin{equation}
+ R^{\mu\nu}_{ji}=\frac{\mathcal N}{2}
+ \sum_{\text{unobserved}}\tr\!\left[
+ \sigma_j\mathcal M^\mu\sigma_i\mathcal M^{\nu\dagger}\right],
+ \qquad i,j\in\{U,X,Y,H\}.
+\end{equation}
+This equation describes the spin contraction; each stage determines which amplitude order and measure belong in $\mathcal N$. The ordering of amplitude/conjugate indices is fixed by the saved projector construction, including the transposed outgoing gluon dyad. It must not be guessed from a diagram label.
+
+Rows are outgoing response labels and columns are incoming labels. Thus $R_{UU}$ is the spin-averaged and spin-summed term, $R_{XU}$ is an outgoing transverse analyzer with an unpolarized incoming quark, and $R_{XX}$ is a transverse-spin-transfer response. For a gluon label, the same position refers instead to the appropriate Stokes analyzer.
+
+Let $p_i$ denote incoming expansion coefficients with $p_U=1$, and $a_j$ the coefficients of an outgoing analyzer. The hard contraction is the bilinear expression
+\begin{equation}
+ R[a,p]=\sum_{j,i}a_jR_{ji}p_i.
+\end{equation}
+This defines how to use the response table. Its entries are generally signed interference coefficients, and at NLO they include distributions. They are not probabilities. An outgoing polarization could only be inferred after contracting with a physical incoming state, the photon/lepton weighting, and any required integrations, and then normalizing the resulting outgoing density matrix. Fixed-order subtracted distributions must not be interpreted pointwise as event probabilities.
+\pathref{common/s02_result/s02_result.wl}
+
+\subsection{Quark, antiquark, and gluon insertions}
+Let $r$ be the resolved fermion momentum and $s_X,s_Y$ its physical transverse spin axes. The saved quark numerators, in the order $(U,X,Y,H)$, are
+\begin{equation}
+ \left(\slashed r,\ \gamma_5\slashed s_X\slashed r,
+ \ \gamma_5\slashed s_Y\slashed r,\ \gamma_5\slashed r\right).
+\end{equation}
+They are derived in the basis program from normalized wavefunctions and their massless limit. The saved antiquark list has the opposite sign in the last entry. That sign belongs to the wavefunction and spin-index convention; it is not an instruction to reverse an entire antiquark cross section. All trace ordering is kept when these numerators replace the resolved spin sums.
+
+For gluons, the basis is built from the two transverse helicity polarization vectors. Their dyads with Pauli insertions produce the unpolarized, two linear, and helicity tensors. The basis program checks transversality and completeness. In the dimensional calculation the physical $U$ tensor alone is not the complete unresolved $D$-dimensional sum; the regulator complement is handled separately below.
+
+\subsection{The photon tensor and the two legacy hats}
+Current conservation removes the component along $q$. The remaining photon space is three-dimensional, with ordered axes $(L,X,Y)$. A Hermitian three-by-three response has nine real basis coordinates. The saved order is
+\begin{equation}
+ LL,XX,YY,\operatorname{Re}LX,\operatorname{Re}LY,\operatorname{Re}XY,
+ \operatorname{Im}LX,\operatorname{Im}LY,\operatorname{Im}XY.
+\end{equation}
+Let $B_A$ be the corresponding Hermitian basis matrices and $B^A$ their trace-dual matrices. The diagonal basis elements have unit normalization; the off-diagonal duals carry the recorded one-half factors. In this notation the definitions are
+\begin{equation}
+ R_{A,ji}=\tr(B^A R_{ji}),\qquad R_{ji}=\sum_A R_{A,ji}B_A.
+\end{equation}
+The repository verifies this reconstruction. Imaginary photon interference is retained until the Hermitian tensor is assembled. The full saved response therefore has axes $9\times4\times4$.
+
+Let $g_{\mu\nu}$ be the metric and $p$ the incoming parton momentum. The legacy F1 and F2 projectors, here written with $D=4-2\eps$ and $\widehat x=Q^2/(2p\cdot q)$, are the reference definitions
+\begin{align}
+ \mathcal P_{1,\mu\nu}&=\frac{1}{1-\eps}
+ \left(-\frac12g_{\mu\nu}+\frac{2\widehat x^2}{Q^2}p_\mu p_\nu\right),\\
+ \mathcal P_{2,\mu\nu}&=\frac{3-2\eps}{1-\eps}
+ \frac{4\widehat x^3}{Q^2}p_\mu p_\nu
+ -\frac{\widehat x}{1-\eps}g_{\mu\nu}.
+\end{align}
+The finite exporter uses their physical-dimensional values after the regulated assembly. For each spin pair it projects the full response using saved weights $w_{rA}$, where $r=1,2$ labels the two hats:
+\begin{equation}
+ \widehat F_{r,ji}=\sum_A w_{rA}R_{A,ji}.
+\end{equation}
+These are the requested F hats, now four-by-four matrices instead of spin-summed scalars. F1 and F2 are two specified contractions of a polarized tensor. They do not form a complete polarized or azimuthal structure-function basis. The nine photon components must be retained for general lepton-angle or spin observables. A zero in these two contractions need not imply a zero in every other photon projection.
+\pathref{common/s14_assemble_finite_spin.wls; common/s15_finalize_spin_coefficients.wls}
+
+\section{The common calculation, from inputs to finite coefficients}
+\subsection{S01: preserve the open amplitudes and the reference measurement}
+The input stage pins the GitHub SIDIS commit and imports the original generated amplitudes before resolved spin sums. It records field species, flavor labels, tagged momentum, model charges, source identities, and the corresponding unpolarized comparison tensors. The input is an amplitude with open external states, not a final F hat. The unpolarized tensors are comparison inputs and are not used to invent polarized entries.
+
+For each channel, the generated process defines which momentum is tagged and which particles are spectators. This determines identical-particle weights and flavor sums downstream. A factor belonging to the unobserved pair is not an average over the tagged parton. The pinned commit is \code{5062dcb2407594dafcc2f9f72800e96ff9e6d957} of the repository in Ref.~\cite{github}. The independently supplied standalone QCD reference contributes reused factorization and rational-reduction definitions. These are recorded as actual source inputs, not treated as a second independent polarized prediction.
+\pathref{common/s01_prepare_inputs.py; common/s01_inputs.json}
+
+\subsection{S02: establish a complete physical spin basis}
+The basis construction supplies the Pauli matrices, quark and antiquark insertions, gluon Stokes tensors, photon basis and duals, and their normalization. Its gates test the Dirac equation, Clifford algebra, density normalization and Hermiticity, massless projector reconstruction, gluon completeness, and photon reconstruction. The source also inventories which Born, real, and virtual amplitudes are present.
+
+This stage establishes a representation, not a cross section. The recorded factors of two are used consistently in the subsequent traces, the Born spin response, the splitting operators, and the final spin contraction. Replacing the convention at a later stage would change both the hard functions and the associated parton operators.
+\pathref{common/s02_define_spin_basis.wls; common/s02_result/s02_result.wl}
+
+\subsection{S03: the Born hard response and auxiliary Born routes}
+The channels with a direct two-body Born process are $H_{qq}$, $H_{qg}$, and $H_{gq}$. Their open amplitudes are contracted with each incoming and outgoing spin insertion and each photon projector. Let $\mathcal M^{(0)}$ denote a Born amplitude. The Born contribution is the bilinear $\mathcal M^{(0)}\mathcal M^{(0)\dagger}$ with the prescribed insertions, summed over unobserved spin and color.
+
+The program solves the physical frame from the invariant equations and verifies its reconstruction before applying the spin projectors. It keeps physical four-dimensional response entries and a dimensional completion needed for comparison and factorization. Photon Ward identities and the reconstructed conventional-dimensional-regularization (CDR) metric and $pp$ contractions are checked against the original Born results.
+
+The three real-only channels also need Born tensors, but as lower-order subprocesses inside their collinear subtraction routes. These are auxiliary $qg$, $gq$, and, when needed, charge-conjugate Born processes with the appropriate inherited charge and tag conventions. They do not create a direct order-$\as$ contribution in a channel whose tagged process starts at order $\as^2$.
+\pathref{common/s03_born_spin_response.wls; common/s03_auxiliary_born_spin.wls}
+
+\subsection{Regulated algebra and why the extra-dimensional terms matter}
+The working scheme is BMHV: physical resolved spin vectors and the photon basis are four-dimensional, while loop and unresolved-radiation algebra retains $D=4-2\eps$. The metric is split into a physical part $\bar g$ and an evanescent part $\widehat g$. Their defining traces are four and $D-4$, respectively. The gamma-five prescription distinguishes these spaces rather than assuming that a four-dimensional anticommutation rule is valid everywhere inside a divergent trace.
+
+The saved extra gluon label $E$ represents the complement needed to reconstruct the dimensional state sum. It is not another measurable polarization. Dimensional projector norms determine the dual matrices and the incoming averages. The photon metric complement is also retained where a CDR reconstruction requires it.
+
+The reason to retain these terms is a Laurent-series effect: a coefficient vanishing with $\eps$ can multiply a collinear or soft pole. The expansion program includes those products before taking the finite coefficient. Setting the complement to zero at the beginning could therefore preserve a four-dimensional Born check while changing a finite NLO term. This is addressed by the dimensional transfer operators and scheme completion described under S10--S11, not by an arbitrary correction to a final hat.
+
+\subsection{S04: average the unobserved angular dependence}
+The observed geometry spans $p,q,k_1$. The unresolved momentum is decomposed into its projection on that span and a perpendicular part. In four dimensions only one physical normal direction remains; the dimensional calculation also has $D-4$ evanescent directions. The denominator and measurement must be independent of the residual angle before an angular-moment replacement is valid.
+
+Let $r_\perp$ be the Euclidean radius of the residual space, $n$ the physical normal component, and $\widehat k^2$ the Minkowski evanescent square. Let $a,b$ be nonnegative integer powers. The saved generic moment is
+\begin{equation}
+ \left\langle n^{2a}(\widehat k^2)^b\right\rangle
+ =\frac{(-1)^b(r_\perp^2)^{a+b}
+ \Gamma(a+\tfrac12)\Gamma(b+\tfrac{D-4}{2})\Gamma(\tfrac{D-3}{2})}
+ {\sqrt\pi\,\Gamma(\tfrac{D-4}{2})\Gamma(a+b+\tfrac{D-3}{2})}.
+\end{equation}
+Odd powers of the physical normal average to zero. The result is first obtained in a convergent-dimensional region from the normalized sphere integral, independently compared with Gaussian moments, and then continued as a meromorphic expression to $D=4-2\eps$. The saved weight for the fraction $u$ of squared radius in the physical normal direction is proportional to
+\begin{equation}
+ u^{-1/2}(1-u)^{(D-4)/2-1},\qquad 0<u<1.
+\end{equation}
+The radius itself is obtained from the Gram projection. Real cut kinematics and an off-shell virtual loop have different radius formulas; the loop calculation must use the general formula before any cut specialization. Complete numerator reconstruction precedes the moment replacement. This ensures that an abbreviation or an omitted evanescent term cannot alter the angular average.
+\pathref{common/s04_transverse_angular_average.wls; common/s04_result/s04_result.wl}
+
+\subsection{S05: real-emission spin tensors}
+Let $\mathcal M_r$ be the tree amplitude for real-emission diagram $r$. For each generated final state, the real tensor is the sum over all diagonal and interference pairs. Before integration its defining structure is
+\begin{equation}
+ R^{\mu\nu}_{\rm real,ji}
+ =\sum_{r,s}\mathcal C_{ji}
+       [\mathcal M_r^\mu\mathcal M_s^{\nu *}],
+\end{equation}
+where $\mathcal C_{ji}$ denotes the spin/color contraction defined above, with unresolved states summed in the regulator scheme. The complete amplitude interference matters. In particular, an off-diagonal diagram pair is completed by the Hermitian conjugate of the photon matrix. Taking the scalar real part of each entry would lose the antisymmetric imaginary photon information.
+
+After restoring the invariant scalar products, the source extracts the spin polynomial and performs the allowed residual angular averages. It checks photon Ward identities, Hermiticity, complete spin/photon reconstruction, and CDR reconstruction of the reference metric and $pp$ contractions. The result is still an unintegrated real tensor. Pair assembly, polynomial coefficient extraction, compact exact rational sums, and checkpoint storage can be optimized without changing this equation; accepted versions preserve exact reconstruction and input identities.
+\pathref{common/s05_real_spin_response.wls and the accepted channel-specific S05 entry points}
+
+\subsection{S06: reuse the scalar integration library}
+An integral depends on its denominators, numerator powers, measure, kinematic region, cut prescription, and expansion depth. It does not know whether its coefficient arose from a $UU$ trace or a transverse-spin trace. The shared scalar library can therefore be reused for all spin components when these definitions coincide.
+
+This stage validates the reference geometry, existing Kira rules, cut master integrals, endpoint/soft-region inputs, ordinary loop masters, and auxiliary ultraviolet residues. A missing target or insufficient power of $\eps$ remains a missing input; it is not set to zero. The actual spin numerator determines which additional reductions are necessary. Existing master values are reused only with their original continuation and normalization.
+\pathref{common/s06_reuse_scalar_integrals.wls}
+
+\subsection{S07: virtual interference before loop integration}
+Only the three Born channels need this stage at the requested order. Let $\mathcal M^{(1)}$ be the one-loop amplitude. The virtual response is formed from
+\begin{equation}
+ \mathcal C_{ji}\!\left[
+ \mathcal M^{(1)\mu}\mathcal M^{(0)\nu *}
+ +\mathcal M^{(0)\mu}\mathcal M^{(1)\nu *}\right].
+\end{equation}
+The spin insertions are the same as at Born level. Ordinary loop momentum routing, the unresolved dimensional algebra, and the physical photon axes remain explicit. The general off-shell normal-radius formula is used. Imaginary loop parts are preserved until the full Hermitian interference is formed; a premature real-part projection can remove a physical interference component.
+
+The original diagramwise CDR integrand contractions provide a reference check. At this stage the result is a loop integrand, not a renormalized virtual coefficient. The photon-index mapping handles both physical and dimensional external indices so that the evanescent complement is not silently dropped.
+\pathref{common/s07_virtual_spin_response.wls}
+
+\subsection{S08: map real phase space to cut integrals and reduce it}
+Reverse unitarity expresses phase-space constraints as cut propagators. Let $f_r$ denote the defining quadratic form of cut line $r$, $\delta_+(f_r)$ its positive-energy on-shell constraint, and $D_b$ an uncut denominator. A schematic family member is
+\begin{equation}
+ I_{\bm n}^{\rm cut}
+ =\int\dd^D k\;\mathcal W(k)\,
+   \prod_{r\in\mathrm{cuts}}\delta_+(f_r)
+   \prod_{b\notin\mathrm{cuts}}D_b^{-n_b},
+\end{equation}
+where $\mathcal W$ includes the remaining measurement and the family's specified measure. The repository uses the pinned cut-propagator prescription, not a replacement of $\delta_+$ by an unsigned delta function. Its normalization and positive-energy support are preserved through the map.
+
+Each tensor component is mapped into rational coefficients multiplying members of these families. Partial fractioning and Laurent extraction are checked by reconstructing the original mapped expression. Kira applies integration-by-parts identities to express the requested family members in a master basis. With $c_{\alpha}$ denoting mapped coefficients and $r_{\alpha m}$ reduction coefficients, the reduction contract is
+\begin{equation}
+ R_{A,ji}^{\rm mapped}=\sum_\alpha c_{A,ji;\alpha} I_\alpha,
+ \qquad I_\alpha=\sum_m r_{\alpha m}I_m.
+\end{equation}
+The labels $\alpha,m$ run over the actual generated targets and masters. Existing rules are reused. Extensions must reproduce every original rule, cover all requested targets, and preserve the accepted master basis. A completed reduction is still not an integrated response, because the regulated master values have not yet been inserted.
+
+IBP is thus a reduction of many integrals to a smaller independent set. It is not a new physical correction. The polarized numerators can request targets absent from the original spin-summed table; this explains why reusing the reference does not always eliminate the reduction work.
+\pathref{common/s08_map_real_spin.wls; common/s08_extend_real_reduction.wls}
+
+\subsection{S09: reduce the ordinary virtual loop integrals}
+The virtual map uses ordinary propagators rather than positive-energy phase-space cuts. Tensor and numerator structures are expressed in the reference loop families with the original routing. Kira then reduces the actual virtual targets. The map is reconstructed exactly, and its CDR contractions are compared with the inherited reduced maps.
+
+If additional targets occur, the extension takes the union of old and new targets, checks every inherited rule, and preserves the original master basis. The requested order in $\eps$ is recorded for each master coefficient. This stage does not take the final real part of the amplitude and does not apply UV counterterms; both belong to the subsequent virtual assembly.
+\pathref{common/s09_map_virtual_spin.wls; common/s09_extend_virtual_reduction.wls}
+
+\subsection{S10: derive spin-dependent collinear operators}
+Collinear factorization subtracts the part of the real correction already assigned to the PDFs and fragmentation functions. With spin retained, the splitting operator maps a parent spin response into a daughter response. The source derives these operators from native QCD vertices, the accepted spin basis, the collinear on-shell kinematics, and the appropriate unresolved sum. The azimuth of the unobserved collinear momentum is averaged according to the collinear operator definition.
+
+Let $K_{ji}(z)$ be a splitting-response matrix, with daughter index $j$, parent index $i$, and longitudinal fraction $z$. Let $R_{ji}(z)$ be its ordinary real-emission part, $S_{ji}$ its soft coefficient, and $d$ the inherited diagonal endpoint coefficient. The code implements the distributional decomposition
+\begin{align}
+ S_{ji}&=\lim_{z\to1}(1-z)R_{ji}(z),\\
+ K_{ji}(z)&=R_{ji}(z)-\frac{S_{ji}}{1-z}
+       +S_{ji}\left[\frac{1}{1-z}\right]_+
+       +d\,\delta(1-z)\delta_{ji}.
+\end{align}
+These formulas describe the implemented construction; the matrices and normalization constants are derived and checked by the program. The $UU$ distribution agrees with the inherited unpolarized kernel. The $HH$ distribution is compared with the native polarized splitting-function library. Charge-conjugate routes are checked rather than copied with an assumed sign.
+
+Repository kernel names put the parent first, while many published $P_{ab}$ notations put the daughter first. The saved mapping is essential: repository \code{qg} means quark-to-gluon and is associated with the reference \code{Pgq}; repository \code{gq} means gluon-to-quark and is associated with \code{Pqg}. Matrix index order remains daughter, parent.
+
+The physical four-state matrices are not the entire dimensional subtraction operator. Native gluon and quark--gluon transfer calculations retain the $E$ complement, form duals from projector Gram matrices, reconstruct CDR completeness and averages, and subtract the specified regulator remainder. For the channels with these routes, the accepted operator difference is convoluted with the channel's own Born tensor. This retains finite terms generated by dimensional components multiplying poles. It is separate from the final axial helicity restoration.
+\pathref{common/s10_collinear_spin_kernels.wls; common/s10_dimensional_gluon_transfer.wls; common/s10_dimensional_quark_gluon_transfer.wls; common/s10_Hgg_offdiagonal_transfer.wls}
+
+\subsection{S11: incoming-PDF and outgoing-fragmentation counterterms}
+Let $B_{A,ji}$ be a Born spin response and $K_{ji}$ an allowed collinear spin operator. Let $k$ denote the intermediate spin index. For an incoming PDF route the kernel acts on the incoming column, whereas for an outgoing fragmentation route it acts on the outgoing row. Suppressing the known kinematic rescaling and measure, the contractions are
+\begin{align}
+ C^{\rm PDF}_{A,ji}&\sim\sum_k B_{A,jk}\otimes K_{ki},\\
+ C^{\rm FF}_{A,ji}&\sim\sum_k K_{jk}\otimes B_{A,ki}.
+\end{align}
+The symbol $\otimes$ here denotes the measured collinear convolution, not ordinary multiplication at a fixed $z$. Its definition uses a rescaled incoming momentum $\eta p$ or rescaled fragmenting momentum $k_1/\zeta$. The Born recoil constraint is
+\begin{equation}
+ (\eta p+q-k_1/\zeta)^2=0.
+\end{equation}
+The code solves this equation separately with $\zeta=1$ and with $\eta=1$. If $\eta_*$ and $\zeta_*$ are those roots, the delta-function Jacobians are defined by
+\begin{equation}
+ J_{\rm PDF}=\left|\frac{\partial s'_{23}}{\partial\eta}\right|_{\eta_*}^{-1},
+ \qquad
+ J_{\rm FF}=\left|\frac{\partial s'_{23}}{\partial\zeta}\right|_{\zeta_*}^{-1}.
+\end{equation}
+The actual measure weights are $J_{\rm PDF}/\eta_*$ and $J_{\rm FF}/\zeta_*^2$. The roots, Jacobians, allowed support, rescaled invariants, and fixed spin axes are verified against the reference. Thus an incoming and an outgoing convolution cannot be interchanged by transposing a final scalar expression alone.
+
+Each flavor route is generated from the incoming and tagged species and checked against the reference route inventory. Its dimensional Born tensor and kernel are multiplied before the regulator expansion. The source preserves the signed subtraction convention of the original factorization contract. The real-only channel counterterms already include the phase and Born coupling factors recorded by their producer; the core-channel counterterms have a different intermediate normalization. The assembly checks which contract applies to avoid multiplying those factors twice.
+
+For $H_{qg}$ and $H_{gq}$ the final accepted subtraction lives in \code{s11_msbar_result}; for $H_{gg}$ it lives in \code{s11_native_result}. Their original \code{s11_result} remains useful provenance but is not the complete final subtraction input. The native dimensional additions are finite after the appropriate pole prefactor is included, preserve the agreed $UU$ convention, and are applied through the same measured routes. The real-only channels use auxiliary Born processes because their own direct Born term is absent.
+\pathref{common/s11_collinear_spin_convolutions.wls; common/s11_small_collinear_spin.wls; common/s11_finalize_Hqg_all_routes.wls; common/s11_finalize_Hgq_subtraction.wls; common/s11_Hgg_native_routes.wls}
+
+\subsection{S12: integrate the real response and retain endpoint distributions}
+After reduction, each scalar master is replaced by its accepted regulated expansion. The input coefficient may contain poles in $\eps$, so the required master depth is determined before multiplication. The real response is expanded only deeply enough to assemble the requested finite order, but not less deeply. Cut master values, soft-region information, analytic continuation, and measure factors follow the pinned scalar library, including the SubTropica-related integration inputs where they occur in that library.
+
+The variable $s_{23}$ reaches a soft/collinear endpoint at zero. The integrated result is therefore stored as distributions, rather than as a single ordinary function. Let $B>0$ be the upper limit defining the plus prescription and $\varphi$ a smooth test function. Define
+\begin{equation}
+ \mathcal L_n(s_{23};B)=\left[\frac{\log^n(s_{23}/B)}{s_{23}}\right]_+,
+ \qquad
+ \int_0^B\!\dd s_{23}\,\mathcal L_n\varphi
+ =\int_0^B\!\dd s_{23}\,
+ \frac{\log^n(s_{23}/B)}{s_{23}}
+ [\varphi(s_{23})-\varphi(0)].
+\end{equation}
+The stored entries \code{Delta}, \code{L0}, \code{L1}, and \code{Regular} multiply $\delta(s_{23})$, $\mathcal L_0$, $\mathcal L_1$, and an ordinary remainder. They are coefficients of distributions. The plus entries cannot be treated as ordinary functions all the way to zero or dropped when integrating a cross section.
+
+The physical transverse-momentum relation is restored before the recoil endpoint limit. Spin axes and their kinematic factors participate in that limit. Applying the limit to an expression that still treats the transverse variable as independent can generate an incorrect endpoint coefficient. The accepted variants preserve this order and compare their ordinary and endpoint reconstructions with the original method.
+
+Logarithms require different representations on the two sides of $s+t=0$. The saved branch label $\sigma$ and positive quantity $\omega$ are defined by
+\begin{equation}
+ t=\sigma\omega-s,\qquad \omega>0,\qquad\sigma=+1\ \hbox{or}\ -1.
+\end{equation}
+The separate key $0$ means $t=-s$, the common boundary, not an instruction to set $\omega=0$ blindly inside a singular representation. Both branch limits and the reconstructed ordinary expression are used to establish the boundary. These branches are analytic representations of the same physical response, not distinct processes.
+\pathref{common/s12_assemble_real_spin.wls and the accepted factored/regulator channel variants}
+
+\subsection{S13: integrate and ultraviolet-renormalize the virtual response}
+For each Born channel, the reduced ordinary loop integrals are replaced by the accepted complex master values. The source retains their physical continuation and sufficient regulator depth. UV residues are obtained using the inherited auxiliary-mass expansion and Kira UV reduction rules. The coupling and field counterterms are then applied in the reference convention.
+
+Let $V_{A,ji}^{\rm bare}$ denote the integrated bare virtual response and $V_{A,ji}^{\rm CT}$ its UV counterterm. The stage defines
+\begin{equation}
+ V_{A,ji}^{\rm ren}=V_{A,ji}^{\rm bare}+V_{A,ji}^{\rm CT}.
+\end{equation}
+This addition removes ultraviolet poles component by component. Infrared poles can remain; they cancel only when real radiation and mass factorization are included. The stage also tests the inherited CDR UV residues and integrated photon Ward identities. A finite UV residue or a successful loop reduction alone is not a finite partonic F hat.
+
+The real-only channels have no same-channel one-loop/Born interference at order $\as^2$, so they have no S07/S09/S13 virtual sector in this counting. Their factorization counterterms are still essential.
+\pathref{common/s13_assemble_virtual_spin.wls; common/s13_assemble_virtual_refined.wls; common/s13_extend_uv_reduction.wls}
+
+\subsection{S14: restore normalization, assemble, and cancel every pole}
+The phase-space normalization is obtained from the original state measure and the angular Jacobian. The electromagnetic charges, powers of $g_s$, color average, flavor sums, and unobserved-particle weights are restored according to the generating channel. The recorded coupling relation is $g_s^2=4\pi\as$. The reference hard-tensor factor is $(2\pi)^{-4}$ after taking the physical-dimensional normalization.
+
+For a real-only final state, let $n_f$ count each identical spectator species among the unobserved fields. The producer's bookkeeping rule is
+\begin{equation}
+ w_{\rm spec}=\frac{1}{\prod_f n_f!}.
+\end{equation}
+The program obtains the counts from the generated fields and requires agreement with the contracted tensor's tag weight. The tagged parton is excluded from this spectator count. Channel charges and flavor multiplicities are also read from the original definitions rather than borrowed from a different channel.
+
+Let $d$ label one of the four distribution slots and $\sigma$ one of the branch keys. Denote the normalized real term by $R^{\sigma d}_{A,ji}$, the renormalized virtual term by $V_{A,ji}^{\rm ren}$, and the signed PDF/FF subtraction by $C^{\sigma d}_{A,ji}$. The assembly operation is
+\begin{equation}
+ T^{\sigma d}_{A,ji}(\eps)
+ =R^{\sigma d}_{A,ji}(\eps)
+ +\mathbf1_{d=\mathrm{Delta}}V_{A,ji}^{\rm ren}(\eps)
+ +C^{\sigma d}_{A,ji}(\eps).
+\end{equation}
+All terms in this equation have first been brought to the same normalization. Writing the counterterm with a plus sign means it is already signed according to the factorization convention. It does not mean that a positive splitting function is simply added to a bare cross section.
+
+Let $[\eps^n]$ denote Laurent-coefficient extraction. The stage accepts a component only when every negative-power coefficient vanishes and then retains its finite term:
+\begin{equation}
+ [\eps^n]T^{\sigma d}_{A,ji}=0\quad(n<0),\qquad
+ T^{\sigma d,\mathrm{fin}}_{A,ji}=[\eps^0]T^{\sigma d}_{A,ji}.
+\end{equation}
+This is required for the full photon/spin response, the retained charge and coupling components, the distribution slots, and both branches and their common boundary. The legacy F1/F2 projections are then formed, and their $UU$ entries, including LO and NLO distribution pieces, are compared with the pinned unpolarized hats.
+
+S14 is a finite BMHV result with the specified dimensional subtraction. It is deliberately distinguished from the final helicity-scheme export. Passing an unpolarized comparison is one gate; it cannot substitute for the componentwise polarized cancellation.
+\pathref{common/s14_assemble_finite_spin.wls and the final assembly entry points listed in the channel READMEs}
+
+\subsection{S15: finite helicity restoration and the final export}
+The BMHV definition of $\gamma_5$ requires a finite quark-helicity scheme conversion to the stated conventional $\MS$ helicity convention. Let $C_F$ be the fundamental quadratic color factor and $z$ the splitting fraction. The scheme input, explicitly sourced to Ref.~\cite{stratmann}, records
+\begin{equation}
+ \Delta P_{qq}^{\mathrm{difference}}(z,\eps)=4C_F\eps(1-z),
+ \qquad \Delta f_{qq}(z)=-4C_F(1-z).
+\end{equation}
+The exporter checks this relation algebraically and derives the normalization ratio between its saved quark kernel and the conventional kernel. The hard insertion has the opposite sign to the scheme kernel, as verified against the standalone factorization contract. Its physical convolution prefactor is $\as/(2\pi)$.
+
+The same S11 roots, Jacobians, Born tensors, and convolution function are reused. Only the selected quark or antiquark helicity leg is converted. The program verifies the absence of added endpoint distributions and verifies that $UU$ is unchanged. In these accepted outputs the conversion is added to the regular NLO slot. The real-only channels have no diagonal quark scheme route at this order; their route inventories establish the corresponding zero correction. Dimensional gluon transfer completion, already included earlier, is not removed by this statement.
+
+After the conversion, F1 and F2 are projected again from the corrected full photon response. Export gates exclude the regulator, unresolved integral heads, unevaluated integrations or limits, failed evaluations, and machine-real contamination. The final records state the scheme, the bases and index order, the pole-cancellation acceptance, and the finite-export acceptance. This is the stage whose output is called the final F hats.
+\pathref{common/s15_inputs.json; common/s15_finalize_spin_coefficients.wls; accepted channel-specific S15 exporters}
+
+\section{The six channels, individually}
+\subsection{Channel labels and perturbative inventory}
+The first channel letter denotes the incoming parton, and the second the tagged parton at $k_1$. Let $i$ be the incoming or observed fixed flavor as appropriate and $j\ne i$ a distinct flavor. The following processes are the generated physical sectors. The counts in parentheses are the amplitude-inventory counts saved by S02, not newly estimated diagram counts.
+\begin{longtable}{p{0.13\linewidth}p{0.40\linewidth}p{0.38\linewidth}}
+\toprule Channel & Two-body Born and virtual sector & Three-body real sector\\\midrule
+$H_{qq}$ & $\gamma^*q_i\to q_i g$ (2 Born, 15 virtual) & $q_i gg$ (8), same-flavor $q_iq_i\bar q_i$ (8), distinct $q_iq_j\bar q_j$ (4)\\
+$H_{qg}$ & $\gamma^*q_i\to gq_i$ (2 Born, 15 virtual) & $gq_i g$ (8)\\
+$H_{gq}$ & $\gamma^*g\to q_i\bar q_i$ (2 Born, 15 virtual) & $q_i\bar q_i g$ (8)\\
+$H_{gg}$ & No direct Born/virtual term at this order & $\gamma^*g\to gq_i\bar q_i$ (8)\\
+$H_{q\bar q}$ & No direct Born/virtual term at this order & $\gamma^*q_i\to\bar q_i q_i q_i$ (8)\\
+$H_{qq'}$ & No direct Born/virtual term at this order & $\gamma^*q_i\to q_j q_i\bar q_j$ (4)\\\bottomrule
+\end{longtable}
+The tagged particle is listed first in each final state. These are the sectors through $\as^2$ in the selected large-transverse-momentum counting. The three-body tree amplitude squared and the two-body one-loop/Born interference exhaust the real and virtual corrections here; a one-loop three-body real-virtual contribution would belong to a higher order.
+
+\subsection{Hqq: incoming quark, tagged same-flavor quark}
+\paragraph{Amplitude and spin construction.}
+S01 imports the open $\gamma^*q_i\to q_i g$ amplitude and all three real sectors. S02 fixes the common quark basis. S03 places the incoming density insertion on $p$ and the outgoing analyzer on the same-flavor quark $k_1$. Both $X$ and $Y$ are quark transverse-spin directions, so this channel contains the direct quark transverse-spin-transfer information relevant to later Collins constructions. The complete photon response is retained even where a particular legacy hat does not select it.
+
+S05 contracts the $qgg$, same-flavor four-fermion, and distinct-flavor four-fermion amplitudes separately with their full interference. A same-flavor exchange contribution cannot be replaced by a distinct-flavor result times a multiplicity. The original charge polynomial and spectator-flavor moments identify which photon attachments and interference terms are combined. S14 uses the reference flavor domain to establish the multiplicities and restores the recorded sector weights once.
+
+\paragraph{Integration and subtraction.}
+S04 supplies the allowed normal-direction moments. S06 supplies the matching scalar library; S08 maps and reduces all real targets, extending the inherited rules where required. S12 inserts the regulated master and endpoint expansions with the physical transverse substitution made before endpoint extraction. Independently, S07 forms the one-loop/Born interference, S09 reduces its ordinary loop families, and S13 integrates and UV-renormalizes it. The auxiliary UV reduction extension is used where its target coverage is needed.
+
+The S11 routes include the diagonal incoming and outgoing quark operators and allowed gluon-mediated Born routes. They are generated from the complete core Born inventory and checked against the original subtraction. The completed collinear-difference entry point supplies the accepted dimensional subtraction for this channel. S14 combines real, virtual, and signed factorization terms, checking all spin/photon poles and the complete legacy $UU$ hats. S15 applies the diagonal helicity restoration using the same route convolutions; it leaves the transversity-basis definitions and the $UU$ reference normalization in their recorded scheme.
+
+\paragraph{Final record.}
+The accepted finite assembly uses \code{s14_assemble_finite_raw_poles.wls}; the final exporter is \code{s15_finalize_spin_coefficients_compact.wls}. These representation choices do not introduce a new physical term. The channel's final \code{s15_result} contains the complete response and both projected hats. The separate LO delta term is nonzero for this Born channel. Its S15 check record contains 49 recorded checks.
+\pathref{Hqq/README.md; Hqq/README_code.md; Hqq/s15_result/}
+
+\subsection{Hqg: incoming quark, tagged gluon}
+\paragraph{Amplitude and spin construction.}
+The Born process is $\gamma^*q_i\to g(k_1)q_i$; real radiation is $\gamma^*q_i\to g(k_1)q_i g$. S03 and S05 therefore use a quark incoming density and a gluon outgoing Stokes analyzer. The other gluon in real radiation is unobserved and receives the unresolved state sum. Exchanging which gluon is tagged changes the measurement bookkeeping and cannot be done after integration by a casual relabeling.
+
+The final accepted S05 uses the linear-assembly implementation, preserving the same complete real tensor and reconstruction gates. Quark transverse labels in columns and gluon linear-polarization labels in rows have different physical meanings. A coefficient in a row $X$ is not the transverse spin of an outgoing quark.
+
+\paragraph{Integration and dimensional completion.}
+The real and virtual paths are S04/S06/S08/S12 and S07/S09/S13 respectively. The accepted real integration uses factored series with exact reconstruction; the virtual integration uses the refined assembly. The saved ordinary and endpoint comparisons bind these operations to their actual inputs, rather than assuming that an algebraically shorter expression must be equivalent.
+
+The outgoing fragmentation subtraction has both a gluon-to-gluon intermediate transfer and a quark-to-gluon transfer from the appropriate Born route. The accepted native dimensional operators are applied to the channel's own mapped Born tensors with their projector Gram duals and CDR completion. Their regulator differences generate finite additions after the collinear prefactor. The final subtraction is \code{Hqg/s11_msbar_result/s11_result.wl}, produced by \code{s11_finalize_Hqg_all_routes.wls}; the earlier physical-kernel subtraction alone is not its replacement.
+
+S14 uses this completed subtraction, the integrated real term, and the UV-renormalized virtual term. Pole cancellation and both unpolarized hats are required again. S15 uses the same completed subtraction for the final quark-helicity conversion and verifies agreement with the previously established finite axial correction. This separates the correction associated with dimensional gluon states from the axial quark scheme conversion.
+
+\paragraph{Final record.}
+The accepted final assembly is \code{s14_assemble_Hqg_finite_update.wls}, followed by \code{s15_finalize_Hqg_coefficients.wls}. The final response has a nonzero Born delta term and NLO distribution slots. Its S15 record contains 52 checks. All final consumers must use the updated S14/S15 outputs, not an archived assembly predating dimensional completion.
+\pathref{Hqg/README.md; Hqg/README_code.md; Hqg/s15_result/}
+
+\subsection{Hgq: incoming gluon, tagged quark}
+\paragraph{Amplitude and spin construction.}
+The Born process is photon--gluon fusion, $\gamma^*g\to q_i(k_1)\bar q_i$, and the real process adds an unobserved gluon. Columns carry the incoming gluon Stokes basis and rows the outgoing quark basis. S03 retains the dimensional incoming-gluon average required for the reference comparison; S05 keeps the complete real interference and unresolved sums. The observed flavor is fixed by the channel record, so a flavor sum must not be introduced merely because the incoming particle is a gluon.
+
+\paragraph{Integration and subtraction.}
+The Born, real, and loop sectors use the same common definitions as the other core channels. The accepted real path uses the streamed map and factored-input master assembly; the virtual path uses ordinary mapping and the integrated UV-renormalized response. Its dimensional incoming-gluon transfer is derived from the native projector Gram matrix. The completed subtraction in \code{s11_msbar_result} incorporates the accepted operator convention and is the input to the reference-reuse final assembly. Reuse of a completed scalar or reference comparison is permitted only with its matching definitions and identities.
+
+S14 checks the complete finite response and the unpolarized legacy hats. S15 applies any allowed diagonal quark-helicity restoration on its generated routes using the recorded spin leg. The final exporter is \code{s15_finalize_Hgq_coefficients.wls}; its check record contains 52 checks. The full result retains both the gluon linear response and quark transverse response without identifying either with a proton PDF automatically.
+
+\paragraph{The resolved independent sign comparison.}
+An older independent unpolarized Born/real comparison carried a sign discrepancy. The accepted S17 check traced it to the comparison reader substituting the signed UFO antitriplet label $-3$ for the number of colors. Native color traces and the model dimensions instead supplied the positive color dimension. With the corrected reader, all 32 Born/real metric and $pp$ projector comparisons at the 16 original points passed; the saved maximum relative difference is $6.285644251393455\times10^{-13}$. Production contractions and F hats were not sign-flipped. This resolves that unpolarized tree-comparison caveat. It does not constitute an independent NLO comparison of every polarized entry.
+\pathref{Hgq/README.md; Hgq/README_code.md; Hgq/s17_result/; Hgq/s15_result/}
+
+\subsection{Hgg: incoming gluon, tagged gluon}
+\paragraph{Amplitude and spin construction.}
+This channel first contributes through $\gamma^*g\to g(k_1)q_i\bar q_i$ at order $\as^2$. Both row and column labels refer to gluon Stokes operators. The observed gluon has its physical analyzer; the quark pair is unobserved. The electromagnetic charge factor belongs to the produced quark flavors and is restored as the inherited charge sum. There is no direct two-body gluon-to-gluon Born contribution at the order retained here.
+
+S05 contracts the full real amplitude, preserving the physical and dimensional gluon information. The saved accepted optimizations restore actual scalar products before rational reduction and use exact polynomial and denominator structure. They do not replace polarized entries by unpolarized coefficients. S04 gives the normal moments and S06 the reusable scalar inputs. The actual real targets are mapped, Kira-reduced, and assembled with the regulated master and endpoint information.
+
+\paragraph{Subtraction and finite assembly.}
+The necessary lower-order processes occur as auxiliary Born routes: quark and antiquark incoming routes with a tagged gluon, and gluon incoming routes with a tagged quark or antiquark. Their off-diagonal splitting operators and charge-conjugate conventions are checked against the generated flavor flows. The native PDF and FF operators are then applied to each route's own Born tensor. The accepted final subtraction is \code{Hgg/s11_native_result/s11_result.wl}; its dimensional additions are finite and do not introduce an unverified new soft endpoint.
+
+There is no virtual interference to add for $H_{gg}$ at this order. S14 combines the normalized real term and the signed collinear subtraction, cancels every required pole, and compares both $UU$ hats with the pinned reference. S15 establishes the absence of a diagonal quark finite-axial route for this channel and exports the finite response with the scheme metadata. Its final check record contains 44 checks.
+
+\paragraph{The local continuation and the channel-owned result.}
+The accepted last real mapping/reduction/integration steps were continued in the authorized local \code{misc} sequence with bounded memory and disk. Its local stage numbers differ from the common physics numbering: local S09 is a real Kira reduction, and local S11 is real integration, not a new virtual stage or the channel's original subtraction. The physics remains the sequence just described.
+
+The channel exposes \code{s11_local_real_result} for the integrated real term, \code{s14_local_finite_result} for assembly, and \code{s15_result} for the final hats. The final result uses small native index files with companion piece directories. These pieces are one exact result and must remain together. Chunking changes storage, not the definition of the coefficient. The zero direct LO delta term and the order-$\as^2$ response must be interpreted according to this channel's perturbative inventory.
+\pathref{Hgg/README.md; Hgg/README_code.md; misc/README.md; Hgg/s15_result/}
+
+\subsection{Hqqbar: incoming quark, tagged same-flavor antiquark}
+\paragraph{Amplitude and spin construction.}
+The generated real process is $\gamma^*q_i\to\bar q_i(k_1)q_iq_i$. There is no direct same-channel two-body Born process at the retained order. The outgoing analyzer uses the antiquark numerator convention established by S02. The two unobserved quarks are identical, so the spectator weight is obtained from their generated field multiplicity and applied exactly once. Their exchange interference remains in the amplitude tensor; a factorial is not a substitute for that interference.
+
+\paragraph{Integration and factorization.}
+S05 retains all diagram pairs, physical spin components, and the dimensional comparison pieces. S08 uses the streamed real mapping and the accepted reduction table; uncovered targets are handled by the inherited extension contract. The accepted S12 completion restores the physical recoil relation before endpoint factorization and produces the same distribution interface as every other channel.
+
+S11 supplies the allowed incoming and outgoing off-diagonal routes using auxiliary Born processes, including the appropriate antiquark identity on the tagged leg. It retains the original flavor flow, charge normalization, phase factor, and Born coupling. Since there is no same-channel virtual sector at this order, S14 cancels the real poles with these counterterms alone. It must still establish the full $UU$ comparison, including any endpoint slots required by the inherited representation, rather than infer finiteness from the absence of a loop.
+
+\paragraph{Final record.}
+The accepted completed finite-export entry point is \code{s14_complete_saved_finite_export.wls}. The compact S15 exporter establishes the real-only scheme-route condition and writes the final four-by-four hats and full photon response. The direct LO delta term is zero; the S15 check record contains 38 checks. Charge-conjugate conventions belong to the basis and routes, not to an overall manually chosen sign.
+\pathref{Hqqbar/README.md; Hqqbar/README_code.md; Hqqbar/s15_result/}
+
+\subsection{Hqqprime: incoming quark, tagged distinct-flavor quark}
+\paragraph{Amplitude and spin construction.}
+Here the real process is $\gamma^*q_i\to q_j(k_1)q_i\bar q_j$ with $j\ne i$. The tagged flavor differs from the incoming one. The four generated amplitudes include the appropriate electromagnetic-current attachments; their squared and interference charge structures remain distinct until the channel's recorded bookkeeping combines them. In particular, a single squared-charge prefactor must not be imposed before reading that bookkeeping.
+
+Both resolved spin spaces are quark spaces, but this is a different flavor-flow channel from $H_{qq}$. Its transverse-spin entries are obtained from its own open amplitude and subtraction routes. They are not copied from the same-flavor result. There is no direct same-channel two-body Born or virtual sector through the retained order.
+
+\paragraph{Integration and factorization.}
+The common real contractions and residual moments feed the streamed S08 map. This channel provided accepted exact-rational and denominator-sum comparisons used later by other channels. The optimization collects measured denominator factors, embeds terms in their common denominator, and cancels a polynomial factor only when its exact remainder vanishes. The reconstructed coefficient and the original same-channel control must agree. Reusing that algorithm does not mean reusing its numerical or spin coefficient values in another channel.
+
+The accepted regulator-aware S12 assembly retains the required master depth and endpoint terms. Auxiliary Born routes supply the off-diagonal PDF and fragmentation counterterms in S11. S14 combines the real and signed factorization contributions and verifies pole cancellation and the final legacy $UU$ hats. The ordinary S15 exporter checks the absent diagonal axial route and writes the final scheme-complete record.
+
+\paragraph{Final record.}
+The finite assembly's acceptance entry point is \code{s14_verify_completed_assembly.wls}; its produced result, not merely the act of running the verifier, is bound by the execution receipt. The final S15 check record contains 30 checks. The LO delta term is zero and the accepted order-$\as^2$ coefficients are in the channel's \code{s15_result} directory.
+\pathref{Hqqprime/README.md; Hqqprime/README_code.md; Hqqprime/s15_result/}
+
+\section{Reading the final F hats correctly}
+\subsection{Distribution coefficients, spin indices, and photon indices}
+For each channel, the main result contains \code{Fhats}, \code{LODeltaResponse}, and \code{NLOResponse}. Under \code{Fhats}, the keys \code{F1} and \code{F2} each contain \code{LODelta} and \code{NLO}. The NLO association is indexed by the branch keys $+1,-1,0$, followed by the four distribution names. The arrays for the projected hats have row/column order $(U,X,Y,H)$ and outgoing/incoming meaning.
+
+Let $F^{\rm LO}_{r,ji}$ denote a saved LO delta coefficient, and let $F^{\sigma,\Delta}_{r,ji}$, $F^{\sigma,0}_{r,ji}$, $F^{\sigma,1}_{r,ji}$, and $F^{\sigma,\mathrm{reg}}_{r,ji}$ denote the saved NLO entries. Their distributional reading is
+\begin{align}
+ \widehat F_{r,ji}={}&F^{\rm LO}_{r,ji}\delta(s_{23})
+ +F^{\sigma,\Delta}_{r,ji}\delta(s_{23})
+ +F^{\sigma,0}_{r,ji}\mathcal L_0(s_{23};B)\nonumber\\
+ &+F^{\sigma,1}_{r,ji}\mathcal L_1(s_{23};B)
+ +F^{\sigma,\mathrm{reg}}_{r,ji}(s_{23}).
+\end{align}
+The saved coefficients already have the strong-coupling and charge normalization restored according to the record. The LO/NLO labels identify perturbative order; they are not an instruction to multiply the output by another $\as$ or $\as^2$. The same distribution layout applies to each $9\times4\times4$ full response. Choose one branch corresponding to the kinematics; do not sum the branch representations.
+
+The separate \code{s15_F1_hat.wl} and \code{s15_F2_hat.wl} files contain the hat associations. The main \code{s15_result.wl} also supplies the basis, frame, projector weights, physical conditions, flavor bookkeeping, scheme, source identities, and checks. A hat-only file cannot tell a reader all those conventions by itself. FeynCalc must be loaded first when reading the native expressions so that its color symbols retain their correct contexts.
+
+\subsection{What was checked against the spin-summed reference}
+There are two distinct reference comparisons. Before finite assembly, the full dimensional spin sum is reconstructed from the physical response and the regulator complement, including the correct incoming-gluon averaging conversion. Its metric and incoming-$p$ contractions are compared with the original CDR Born, real, and virtual objects where those sectors exist. This is stronger than comparing a four-dimensional $UU$ trace while ignoring its $\eps$ dependence.
+
+After assembly, the physical $UU$ entries of both F1 and F2 are compared with the pinned final unpolarized reference. The comparisons include the core Born term, each NLO distribution slot, both analytic branches, and the common boundary. The finite axial conversion separately checks that it does not alter $UU$. Thus the answer to ``was the unpolarized calculation reconstructed and checked?'' is yes, in both these specified senses.
+
+\subsection{How the polarized information was checked, and the limit of those checks}
+The unpolarized reference contains no separate $XX$, $YH$, or other polarized coefficient with which to compare. Agreement of $UU$ therefore cannot verify those entries individually. Their recorded checks include complete spin and photon reconstruction, projector normalization, Hermiticity, Ward identities, the dimensional operator and route comparisons, master/reduction reconstruction, UV cancellation, componentwise full pole cancellation, scheme consistency, and exact native export/reload.
+
+The checks constrain different possible errors. Ward identities test current conservation; Hermiticity tests the relationship between amplitude and conjugate indices; basis reconstruction tests completeness; subtraction and pole cancellation test singular limits and factorization; reference reconstruction tests the inherited spin sum and normalization. Independent tree-level comparisons, including the corrected $H_{gq}$ comparison, provide additional evidence at their stated order and projections.
+
+None of these facts should be enlarged into a claim that every finite polarized NLO coefficient was compared with an independent external polarized NLO calculation. A finite error confined to a polarized component can evade an unpolarized check and a pole check. The report documents the actual acceptance evidence and this limitation. It does not label the spin-summed reference as an independent measurement of the information it discarded.
+
+\section{The mathematical shape of the long files}
+\subsection{How to read these forms}
+The following expressions describe the general organization of the saved equations. Their letters stand for the actual coefficients or tensors in the files; they are not extra calculated coefficients, assumed nonzero terms, or replacements for the exact expressions. A long native file may compress an association of these objects rather than display them as plain text. Compression and splitting into companion files leave the underlying mathematical object unchanged.
+
+\subsection{Open amplitudes and spin polynomials}
+Let $r$ label a generated diagram, $\mathcal Q_r$ its electromagnetic charge factor, $\mathcal C_r$ its color structure, $N_r^\mu$ its spinor/polarization numerator, and $D_{rb}$ its propagator denominators. The open amplitude has the familiar diagram-sum organization
+\begin{equation}
+ \mathcal M^\mu=\sum_r
+ \mathcal Q_r\,\mathcal C_r\,g_s^{n_r}
+ \frac{N_r^\mu}{\prod_b D_{rb}^{\nu_{rb}}}.
+\end{equation}
+The actual coupling powers $n_r$, denominator powers $\nu_{rb}$, field assignments, and numerators are read from the generated amplitudes. Their interference can produce different charge products; those products remain separate according to the channel bookkeeping.
+
+Let $a_U=p_U=1$ specify an identity outgoing analyzer and normalized incoming spin expansion, with the remaining $a_j,p_i$ regarded as formal analyzer/polarization coefficients. Each photon component of the resolved-spin trace is a bilinear polynomial of the form
+\begin{align}
+ \mathcal R_A(a,p)={}&R_{A,UU}
+ +\sum_{i\ne U}R_{A,Ui}p_i
+ +\sum_{j\ne U}a_jR_{A,jU}
+ +\sum_{j\ne U}\sum_{i\ne U}a_jR_{A,ji}p_i.
+\end{align}
+The long real and Born files hold these coefficients, organized as arrays, together with their dimensional extensions and checks. They do not hold a list of sampled polarization probabilities. Before angular averaging, the numerator can also be a polynomial in the residual physical normal component and evanescent square; S04 supplies the exact moment for every term retained by the numerator.
+
+\subsection{Mapped integrands and integrated master expansions}
+Let $v=(Q^2,s,t,s_{23},a_{12},u_3)$ stand for the relevant invariants before integration. A mapped response is organized as a finite sum
+\begin{equation}
+ \mathcal R_{A,ji}=\sum_{\alpha}
+ \frac{P_{A,ji;\alpha}(v,D)}{Q_{A,ji;\alpha}(v,D)}\,
+ I_\alpha(v,D),
+\end{equation}
+with exact polynomial/rational factors and any explicit physical spin-frame factors retained. Where a square root is required by the frame, it is kept with its physical branch rather than silently treated as a rational invariant. Reduction replaces the family integrals by masters, without changing the summed response.
+
+Let $C_{A,ji;m}(\eps)$ be the reduced coefficient of master $m$, and $M_m^{(n)}$ the coefficient of its regulated expansion. The real or virtual integration step has the organization
+\begin{equation}
+ \sum_m C_{A,ji;m}(\eps)
+   \left[\sum_{n=n_m}^{n_m^{\max}}\eps^n M_m^{(n)}\right].
+\end{equation}
+Each $n_m^{\max}$ is chosen from the required final order and the pole depth of the accompanying coefficient. The coefficients of a cut master are distributions or endpoint/ordinary pieces; those of an ordinary loop master carry its complex continuation. The large files store these pieces by component and sector so that their sum can be reconstructed exactly.
+
+\subsection{The scalar functions inside a final matrix entry}
+Let $\mathcal Q_c$ denote an allowed charge/flavor monomial in channel $c$, and let $v_f=(Q^2,s,t,s_{23})$ denote the remaining physical invariants after unresolved integration. A useful general description of one finite entry in one distribution slot is
+\begin{equation}
+ F_{r,ji}^{\sigma,d}
+ =\sum_c\mathcal Q_c\sum_{\beta}
+ A_{r,ji;c\beta}^{\sigma,d}(v_f;N_c,N_f,\mu,B)\,
+ \Phi_{c\beta}^{\sigma,d}(v_f;\mu,B).
+\end{equation}
+Here $A$ denotes exact algebraic prefactors, including the recorded coupling, color, rational, and spin-frame factors. The $\Phi$ denote the analytic functions inherited from the evaluated masters: constants, logarithms and their products, and polylogarithmic or equivalent branch-resolved functions where present. This is a description of the function classes and sums, not a claim that every class occurs in every spin entry, or that their arguments can be replaced by one universal list. The exact arguments, powers, cancellations, and nonzero charge sectors are those of the saved result. The final export rejects unevaluated master integrals and regulator series.
+
+For either legacy projector, the matrix in a given slot is arranged as
+\begin{equation}
+ \bm F_r^{\sigma,d}=\begin{pmatrix}
+ F_{r,UU}^{\sigma,d}&F_{r,UX}^{\sigma,d}&F_{r,UY}^{\sigma,d}&F_{r,UH}^{\sigma,d}\\
+ F_{r,XU}^{\sigma,d}&F_{r,XX}^{\sigma,d}&F_{r,XY}^{\sigma,d}&F_{r,XH}^{\sigma,d}\\
+ F_{r,YU}^{\sigma,d}&F_{r,YX}^{\sigma,d}&F_{r,YY}^{\sigma,d}&F_{r,YH}^{\sigma,d}\\
+ F_{r,HU}^{\sigma,d}&F_{r,HX}^{\sigma,d}&F_{r,HY}^{\sigma,d}&F_{r,HH}^{\sigma,d}
+ \end{pmatrix}.
+\end{equation}
+This displays all possible positions, not sixteen asserted nonzero values. Symmetries and the explicit calculation determine which entries vanish. The full-response file contains nine such matrices per distribution slot, one per photon basis component; F1 and F2 contain the two weighted sums of those matrices.
+
+\subsection{How the six long final files differ}
+The three core channels $H_{qq},H_{qg},H_{gq}$ contain a direct LO delta matrix and NLO matrices assembled from real, virtual, and factorization pieces. $H_{qq}$ additionally retains the charge/flavor bookkeeping of its three separate real sectors. In $H_{qg}$ the outgoing matrix axis is a gluon Stokes axis; in $H_{gq}$ it is the incoming axis. These labels change the physical meaning of the same matrix position.
+
+The real-only $H_{gg},H_{q\bar q},H_{qq'}$ files have the same final association and distribution interface but a zero direct LO delta matrix. Their NLO entries combine real radiation with auxiliary-Born factorization routes. $H_{gg}$ carries gluon Stokes labels on both axes and the produced-flavor charge sum; $H_{q\bar q}$ uses the antiquark outgoing convention and identical-spectator bookkeeping; $H_{qq'}$ retains the distinct-flavor charge structures. The Hgg companion pieces partition the same mathematical association. They are not an extra sum over subprocesses and must not be added as though each were a separate cross section.
+
+\section{How these coefficients relate to a future Collins observable}
+\subsection{Hadronic spin contraction}
+Let $f_a^i(\xi;S)$ denote the appropriate proton parton-operator component and $D_b^j(\zeta)$ a fragmentation analyzer component. Let $a,b$ label incoming and fragmenting species. With the operator normalizations chosen to match the hard basis, the tensor factorization has the reference measure and the schematic spin contraction
+\begin{equation}
+ W^{\mu\nu}=\sum_{a,b}\int\frac{\dd\xi}{\xi}
+ \int\frac{\dd\zeta}{\zeta^2}
+ \sum_{i,j} f_a^i(\xi;S)\,
+ R^{\mu\nu}_{ab,ji}(p,q,k_1)\,D_b^j(\zeta).
+\end{equation}
+This equation describes the next factorization interface, not a numerical result of the present task. The lepton tensor then contracts $W^{\mu\nu}$. The legacy scalar F2 convolution carries its own momentum-fraction convention inherited from its projector; the tensor expression is the safe starting point when retaining general spin and azimuthal dependence. One must not apply the scalar F1 measure mechanically to a differently normalized hadronic structure function.
+
+A numerical proton polarization parameter belongs in the proton matrix element. For example, the transverse quark response is weighted by the chosen proton transverse polarization and a transversity function; its ratio to the unpolarized density need not be flavor- or momentum-independent. Fragmentation must likewise be described by the correct spin analyzer, not by a final-parton polarization probability inserted in place of a fragmentation correlator.
+
+\subsection{What the Collins effect adds}
+The Collins effect is an azimuthal preference in the fragmentation of a transversely polarized quark into an unpolarized hadron. A hadron-in-jet measurement resolves the hadron's transverse direction around the jet axis. Combining quark transversity in the proton, transverse spin transfer in the hard scattering, and a Collins fragmentation analyzer can then produce an azimuthal spin asymmetry. The overall modulation sign and angle combination depend on the chosen axes and observable conventions; they are not fixed by naming a matrix entry $XX$.
+
+Let $\phi$ stand for the defined measured azimuthal variables and $S_T$ for the chosen transverse target-spin direction. A generic spin-reversal asymmetry is defined by
+\begin{equation}
+ A(\phi)=\frac{\dd\sigma(S_T;\phi)-\dd\sigma(-S_T;\phi)}
+ {\dd\sigma(S_T;\phi)+\dd\sigma(-S_T;\phi)}.
+\end{equation}
+A Collins harmonic is extracted only after defining those angles, the fragmentation measurement, and any polarization normalization. This definition is not an evaluated asymmetry in the current repository.
+
+The user-supplied hadron-in-jet paper \cite{collinspp} concerns proton--proton scattering and motivates the fragmentation observable, but it does not change the present electromagnetic SIDIS hard process. For $e+p\to e+\mathrm{jet}(h)+X$, jet matching, the jet and hadron measurement, the relevant fragmentation factorization, nonperturbative functions, scale choices, and numerical integration are still required. They are deliberately outside the completed partonic calculation. Keeping the full photon and spin response makes that later contraction possible; it does not by itself implement it.
+
+\appendix
+\section{Where every mathematical stage is recorded}
+The following map connects the discussion to its saved definitions and results. The ordinary numbering is a dependency map, not an instruction to execute all scripts alphabetically. Real and virtual paths run independently until assembly; shared libraries are reused, and the real-only channels omit the absent virtual path.
+\begin{longtable}{p{0.07\linewidth}p{0.36\linewidth}p{0.47\linewidth}}
+\toprule Stage & Mathematical output & Owning record or implementation\\\midrule\endhead
+01 & Open amplitudes, tag/flavor contracts & \code{common/s01_inputs.json}; channel \code{s01_result/reference/}\\
+02 & Spin and photon bases, normalization & \code{common/s02_result/s02_result.wl}\\
+03 & Born and auxiliary Born tensors & Channel \code{s03_result/}; \code{common/s03_auxiliary_born_spin.wls}\\
+04 & Gram geometry and angular moments & \code{common/s04_result/s04_result.wl}\\
+05 & Unintegrated real spin tensor & Channel \code{s05_result/}; accepted producer in channel README\\
+06 & Matched scalar library & \code{common/s06_reuse_scalar_integrals.wls}\\
+07 & One-loop/Born spin integrand & Core channel \code{s07_result/}\\
+08 & Real cut targets and reduction & Channel mapping/reduction records; Hgg local mapping sequence\\
+09 & Ordinary virtual reduction & Core channel virtual mapping/reduction records\\
+10 & Physical and dimensional spin kernels & \code{common/s10_result/}; dimensional transfer results\\
+11 & PDF/FF route convolutions & Channel subtraction records; completed gluon variants described above\\
+12 & Integrated real distributions & Channel \code{s12_result/}; Hgg \code{s11_local_real_result/}\\
+13 & Integrated renormalized virtual term & Core channel \code{s13_result/}\\
+14 & Finite assembled BMHV response & Channel \code{s14_result/}; Hgg \code{s14_local_finite_result/}\\
+15 & Final scheme-complete hats & Every channel's \code{s15_result/}\\\bottomrule
+\end{longtable}
+Every final result has a matching execution receipt and check record. The new human READMEs describe the accepted paths and their consumers; preserved \code{README_code.md} files retain the detailed technical convention ledgers. Exact source appendices include the code and configuration bytes with hashes, so reconstruction does not depend on guessing implementation details from prose. Immutable imported reference READMEs retain their original names because their paths and hashes are part of the input contract.
+
+\section{Notation and interpretation reminders}
+\begin{longtable}{p{0.20\linewidth}p{0.71\linewidth}}
+\toprule Symbol or label & Meaning\\\midrule\endhead
+$P,S$ & Proton momentum and spin specification; no numerical PDF or target-polarization choice has been inserted.\\
+$p,q,k_1$ & Incoming parton, exchanged virtual photon, tagged outgoing parton.\\
+$k_2,k_3$ & Unobserved real partons; their species follow the channel inventory.\\
+$Q^2,s,t,s_{23}$ & Hard virtuality, partonic energy invariant, repository momentum-transfer invariant, recoil invariant mass squared.\\
+$\xi,\zeta$ & Hadronic PDF and fragmentation fractions; $\eta,\zeta$ are also used locally for subtraction rescaling and are defined at that step.\\
+$D,\eps$ & Dimension and regulator, $D=4-2\eps$. Do not confuse $D$ here with a fragmentation function.\\
+$U,X,Y,H$ & Identity, two coherent transverse/Stokes insertions, and helicity. Rows are outgoing; columns incoming.\\
+$E$ & Evanescent dimensional complement, never an extra physical spin.\\
+$A$ & Photon basis label among the nine Hermitian components.\\
+$B,\mathcal L_n$ & Upper endpoint of the plus convention and the corresponding recoil distributions.\\
+$\sigma,\omega$ & Analytic branch label and positive $|s+t|$ representation; key zero is the separately established boundary.\\
+$\mu,\mu_2$ & Scale symbols inherited by intermediate phase conventions; read the saved normalization before identifying scales in numerics. The source token \code{mu2} is not to be reinterpreted by its spelling alone.\\
+$\widehat F_1,\widehat F_2$ & Legacy photon projections, now four-by-four spin-response matrices; not a complete polarized structure-function decomposition.\\
+\bottomrule
+\end{longtable}
+
+\begin{thebibliography}{9}
+\bibitem{wang} B. Wang, J. O. Gonzalez-Hernandez, T. C. Rogers and N. Sato,
+\emph{Large Transverse Momentum in Semi-Inclusive Deeply Inelastic Scattering Beyond Lowest Order},
+Phys. Rev. D 99, 094029 (2019), \href{https://arxiv.org/abs/1903.01529}{arXiv:1903.01529}.
+The local authoritative PDF supplies the unpolarized measurement and tensor/projector definitions.
+\bibitem{github} \emph{SIDIS\_dsigma\_till\_NLO},
+\url{https://github.com/NonHermitianMatrix/SIDIS_dsigma_till_NLO},
+pinned commit \code{5062dcb2407594dafcc2f9f72800e96ff9e6d957}.
+The imported source and outputs, rather than an unpinned current checkout, define the comparison.
+\bibitem{standalone} User-supplied \emph{standalone\_nlo\_qcd\_reference/standalone\_nlo\_qcd-main}.
+The exact reused rational-reduction and factorization definitions are preserved under the common reference inputs and bound by their manifests.
+\bibitem{helicity} M. Anselmino et al., \emph{General Helicity Formalism for Polarized Semi-Inclusive Deep Inelastic Scattering},
+\href{https://arxiv.org/abs/1101.1011}{arXiv:1101.1011}.
+Context for density matrices, helicity interference and polarized SIDIS; not an independent validation of the present finite NLO library.
+\bibitem{stratmann} M. Stratmann and W. Vogelsang,
+\emph{Next-to-Leading Order Evolution of Polarized and Unpolarized Fragmentation Functions},
+Nucl. Phys. B 496, 41--65 (1997),
+\href{https://arxiv.org/abs/hep-ph/9612250}{arXiv:hep-ph/9612250},
+equations (16), (46), (47) and the stated time-like counterterm, as bound in the S15 input contract.
+\bibitem{dimensional} A. Signer and D. St\"ockinger,
+\emph{Using Dimensional Reduction for Hadronic Collisions},
+\href{https://arxiv.org/abs/0807.4424}{arXiv:0807.4424}.
+Equation (39) is cited by the accepted native dimensional-operator completion; the actual operators are derived and checked in the repository.
+\bibitem{collinspp} User-supplied hadron-in-jet reference,
+\href{https://arxiv.org/abs/1707.00913}{arXiv:1707.00913}.
+Its polarized proton--proton measurement is distinct from the large-transverse-momentum SIDIS measurement retained here.
+\end{thebibliography}
+\end{document}

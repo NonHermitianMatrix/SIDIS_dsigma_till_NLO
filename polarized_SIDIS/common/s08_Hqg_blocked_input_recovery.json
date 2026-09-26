@@ -1,0 +1,27 @@
+{
+  "channel": "Hqg",
+  "files": {
+    "diagnostic": {
+      "file": "Hqg/s08_input_evaluation_result/s08_result.json",
+      "sha256": "360f3052abe11aebaf6ed2f8f946d80d8080e4d4bc8ee6accbee7c25dbaeed5f"
+    },
+    "diagnostic_receipt": {
+      "file": "Hqg/s08_input_evaluation_result/s08_execution.json",
+      "sha256": "cb6c0c7ba4b0b24d98f6620e8da6e96ef11ca485c29ae3b10db738e28085498b"
+    },
+    "execution": {
+      "file": "Hqg/s08_blocked_input_result/reference/s08_execution_14834907.json",
+      "sha256": "b0ea629ad227f252a04a88f939b04353e5b80216550425089eb0cce79ff10e12"
+    },
+    "input": {
+      "file": "Hqg/s08_blocked_input_result/reference/s08_input_14834907.wl",
+      "sha256": "1e7a9d8cdc03ae2cca1cc179fa3b3753bcfad123e5c556bad42a12a7e59d3d05"
+    },
+    "producer": {
+      "file": "common/s08_result/reference/s08_read_Hqg_blocked_input_before_recovery.wls",
+      "sha256": "c2de29e0bcdb63d094aaa51a3e867a862d82e128e1bbbffc26f8c7013bd12aae"
+    }
+  },
+  "prior_job": "14834907",
+  "schema": "polarized-sidis-blocked-input-recovery-v1"
+}

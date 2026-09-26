@@ -1,0 +1,28 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s08_Hqg_grouped_packets_four_core_resume_job.json",
+  "config_sha256": "604b5672b3e9f2e702c96fe26acf4d4fc460f07a24dc7f9aa33a345e1c9636b9",
+  "event": "SUBMITTED",
+  "job_id": "14828747",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqg_grouped_packets_four_core_resume_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqg_grouped_packets_four_core_resume",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqg_grouped_packets_four_core_resume_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s08_Hqg_grouped_packets_four_core_resume"
+}

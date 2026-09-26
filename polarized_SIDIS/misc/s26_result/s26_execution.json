@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "Get[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s26_inspect_Hgg_regulator.wls\"]"
+  ],
+  "completed_utc": "2026-09-26T08:46:53.204575+00:00",
+  "execution_backend": "local",
+  "exit_code": 0,
+  "input_sha256": {
+    "common/s12_result/reference/s12_standalone_rational_series.wls": "0685ea2e148fa2691b61c9cd0bebec67d7befb76eb681bd429bd1d9fbba298cd",
+    "misc/s10_result/s10_execution.json": "f099722f8dacc57d202158d92e91a64ea845f680a49ffd71ccbee615ad677533",
+    "misc/s10_result/s10_result.wl": "464a7b28544131645b126afc7115c549c9df3bf07fd91eed0ebab0f8194968bb",
+    "misc/s11_result/s11.log": "38cabe2648ebc7fd8e066450fb6596f5f65251c72e1b0a47fd48569ee279642c"
+  },
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 1686634496,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "misc/s26_result/s26_checks.json": "3eefe9d90da3cb450254b625bef99879d5aa47b4400b007db22a025390f08238",
+    "misc/s26_result/s26_equations.wl": "9ee5e3766981b49cb50f8d23dc4930dbac9c4df6cab9863ee1b73cb6094795ad",
+    "misc/s26_result/s26_result.wl": "09ad0e822847e2c2f89d7406d6b1b9227bee01dfa48a86a3fb332984c5d7c273"
+  },
+  "schema": "polarized-sidis-local-execution-v1",
+  "source_sha256": "e5e87f60b340b5e655a56151f4c6870624de7d9b8517269854a46590e9c15b89",
+  "wall_seconds": 60.08312215299884
+}

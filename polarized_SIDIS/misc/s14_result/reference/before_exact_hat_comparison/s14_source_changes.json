@@ -1,0 +1,24 @@
+{
+  "parent": "misc/s14_result/reference/before_scoped_polynomial_gate/s14_assemble_Hgg_finite.wls",
+  "parent_sha256": "1cf026a44aaabe16caa8312d2affc729cedfe6cf67770614e9f2138f028ddc82",
+  "source_sha256": "d79c5f9ae1e9b2e94dde7cefd6fe2eefb24f9e52ba9a244859f51a6df0798018",
+  "changes": [
+    {
+      "before": "localFiniteReused=<||>;",
+      "after": "\nlocalFiniteGateProofPath=FileNameJoin[{root,\"misc\",\"s36_result\",\"s36_result.json\"}];\nlocalFiniteGateReceipt=Import[FileNameJoin[{root,\"misc\",\"s36_result\",\"s36_execution.json\"}],\"RawJSON\"];\nlocalFiniteGateProof=Import[localFiniteGateProofPath,\"RawJSON\"];\ngate[\"accepted exact scoped Laurent predicate\",TrueQ[localFiniteGateReceipt[\"passed\"]]&&\n localFiniteGateReceipt[\"result_sha256\"][\"misc/s36_result/s36_result.json\"]===\n IntegerString[FileHash[localFiniteGateProofPath,\"SHA256\"],16,64]&&\n And@@Values[localFiniteGateProof[\"checks\"]]&&localFiniteGateProof[\"source_sha256\"]===\n IntegerString[FileHash[FileNameJoin[{root,\"common\",\"s14_assemble_finite_spin.wls\"}],\"SHA256\"],16,64]];\nlocalFiniteParentSource=FileNameJoin[{root,\"misc\",\"s14_result\",\"reference\",\"before_scoped_polynomial_gate\",\"s14_assemble_Hgg_finite.wls\"}];\nlocalFiniteParentConfig=FileNameJoin[{root,\"misc\",\"s14_result\",\"reference\",\"before_scoped_polynomial_gate\",\"s14_inputs.json\"}];\ngate[\"bound accepted predicate parent generation\",\n IntegerString[FileHash[localFiniteParentSource,\"SHA256\"],16,64]===localFiniteGateReceipt[\"source_sha256\"]&&\n IntegerString[FileHash[localFiniteParentConfig,\"SHA256\"],16,64]===\n localFiniteGateReceipt[\"input_sha256\"][\"misc/s14_inputs.json\"]];\nlocalFiniteParentInputs=inputHashes;\nAssociateTo[localFiniteParentInputs,{\n \"misc/s14_assemble_Hgg_finite.wls\"->FileHash[localFiniteParentSource,\"SHA256\"],\n \"misc/s14_inputs.json\"->FileHash[localFiniteParentConfig,\"SHA256\"]}];\nlocalFiniteParentInputHash=Hash[{sourceHash,localFiniteParentInputs,$Version,FeynCalc`$FeynCalcVersion},\"SHA256\"];\nlocalFiniteAcceptedInputHashes={localFiniteProof[\"InputHash\"],localFiniteParentInputHash};\n\nlocalFiniteReused=<||>;"
+    },
+    {
+      "before": "saved[\"InputHash\"]===localFiniteProof[\"InputHash\"]",
+      "after": "MemberQ[localFiniteAcceptedInputHashes,saved[\"InputHash\"]]"
+    },
+    {
+      "before": "localFinitePoleCandidate=localFiniteChange[localFinitePoleDefinition,{localFinitePoleOld->localFinitePoleNew}];",
+      "after": "localFinitePoleEdits={localFinitePoleOld->localFinitePoleNew,localFiniteGateProof[\"old\"]->localFiniteGateProof[\"new\"]};\nlocalFinitePoleCandidate=localFiniteChange[localFinitePoleDefinition,localFinitePoleEdits];"
+    },
+    {
+      "before": "localFinitePoleNew->localFinitePoleOld]===localFinitePoleDefinition];",
+      "after": "Reverse/@localFinitePoleEdits]===localFinitePoleDefinition];"
+    }
+  ],
+  "resume_manifest_sha256": "87e6120dffcac425cad33cab2e260ddac8dfacf703ffb3d7eb8b8cab5b8b248a"
+}

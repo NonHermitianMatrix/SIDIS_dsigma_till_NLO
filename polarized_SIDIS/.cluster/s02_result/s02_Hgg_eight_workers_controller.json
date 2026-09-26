@@ -1,0 +1,23 @@
+{
+  "event": "DETACHED_CONTROLLER_STARTED",
+  "pid": 25486,
+  "node": "login2",
+  "log": "cache/s08_to_s15_Hgg_eight_workers_20260924_controller.jsonl",
+  "code_sha256": "655172d6a1846bc24a659fb7e541897a5e112170cc53183d6c527cf5677871fa",
+  "adopted_job_id": "14889562",
+  "previous_controller": {
+    "node": "login2",
+    "pid": 26222
+  },
+  "payload_sha256": "5335c9a00c66e24a6093adf578640eb11afc455ad0881470f1e5b8fb8b53a1c2",
+  "next_mapper": "common/s08_map_Hgg_external_factors.wls",
+  "next_mapper_slots": 8,
+  "next_mapper_memory_gib_per_slot": 10,
+  "extension_entry": "common/s08_extend_Hgg_ready_reduction.wls",
+  "ready_subset_job": "14890063",
+  "extension_slots": 2,
+  "control_job": "14889637",
+  "native_subtraction_job": "14889816",
+  "finite_entry": "common/s14_Hgg_native_subtraction.wls",
+  "final_entry": "common/s15_finalize_Hgg_coefficients.wls"
+}

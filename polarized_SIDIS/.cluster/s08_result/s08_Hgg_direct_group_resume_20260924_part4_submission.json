@@ -1,0 +1,28 @@
+{
+  "event": "SUBMITTED",
+  "channel": "Hgg",
+  "tag": "s08_Hgg_direct_group_resume_20260924_part4",
+  "job_id": "14885961",
+  "config": ".cluster/s08_Hgg_direct_group_resume_20260924_part4_job.json",
+  "config_sha256": "f9793c6834970c1d31946aa02dd37c6e29e00448e430a5a3cc7fc061c7276921",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_direct_group_resume_20260924_part4",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_direct_group_resume_20260924_part4_scheduler.log"
+  ],
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_direct_group_resume_20260924_part4_job.json\n",
+  "resumes_job_id": "14884508",
+  "replaces_preflight_failure": "14885940",
+  "source_sha256": "ab0b6ea4da3b9563d48ee9f59cf4742ff77317fa68a260a6c9009f641efa0e7a"
+}

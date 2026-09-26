@@ -1,0 +1,87 @@
+{
+  "child_maxrss_bytes": 7508475904,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s08_check_certified_denominator_mapping.wls"
+  ],
+  "completed_utc": "2026-09-18T21:48:28.571587+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 15032385536
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      17179869184,
+      17179869184
+    ]
+  },
+  "job_configuration_sha256": "be6d605c6affaefbca4864047f60c1b1db9d3a31aa096742dfc3c210b56e4d34",
+  "job_id": "14802243",
+  "node": "n6046",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 7328002048,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgq/s08_certified_denominator_result/s08_checks.json": "dc310a7f00eb14ea42eb0f713a9137435a7196305eafddf57ffeabe7367b7e4a",
+    "Hgq/s08_certified_denominator_result/s08_result.wl": "04c9d378a4c3ae74e16177a399435a687a476df6182cea953c6dfa47fe6c0feb"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgq/s05_result/s05_payload_0001.txt": "99040d92da0d324ca4f2d3f2fa3032ffd1e197cd005a8b45709132429a2b1760",
+    "Hgq/s05_result/s05_payload_0002.txt": "4713fd3de0c2fdac401d964769faaf948acb8cb9624d84d3112eed5ee46e1378",
+    "Hgq/s05_result/s05_payload_0003.txt": "0de392723a759e7dc81752a54b929e7025412a83841c5dd8836bf3dd139ec158",
+    "Hgq/s05_result/s05_payload_0004.txt": "138af36b3fbd63471dc11077fa2b69ba39cf8258438b4226a7affbd3aaa6c5e1",
+    "Hgq/s05_result/s05_payload_0005.txt": "073fc670f09231253fcd87c2c71e58ace56f5968b2a1cb61964c8b8917cb8399",
+    "Hgq/s05_result/s05_payload_manifest.json": "8da2d519fd8cf29f1fe5e7e7fb38242d4f6549661a5e087f86d9d2fe29fce8a0",
+    "Hgq/s05_result/s05_result.wl": "c93632c558a2710cda98691e8f52929e88d224c9a71bce456a9935231ccff7ec",
+    "Hqqbar/s08_group_certificate_result/s08_result.wl": "b0f6a49846b8b7f770f30ea48bc8d9aa6b4733234eed70d2ac08ed489264be5a",
+    "Hqqbar/s08_grouped_result/s08_result.wl": "fc69dbab36b65068fde2e89a25ae05a4ac4f166a84bdf03dfde712a93aa66ed0",
+    "Hqqbar/s08_pair_merge_result/s08_result.wl": "f676c6065b84fb77b0f80c23bfd22ea2063b32506e99517eb6c356831b992a7e",
+    "Hqqprime/s05_result/s05_result.wl": "07679643127071c38d0522479236858ff7fd1f4e770d22d65572072f56e03d9f",
+    "cache/s08_coefficient_check/5f814c41b2ea52650d1f94ce8379c9b37f7b551f6b6020ca41c440a024093df4/s08_raw_map.wl": "ad5dd5dd3a9043496f796825961e3cc585c9a67044210c0d64a7ae1c5f19143a",
+    "cache/s08_targets/Hgq/cec738c7433934a0fc49ee1312a461b1cd7238449f85a0dadb5a79b076089fcc/component_0001.wl": "2b853a3a70525a52957676353853dbcdcedfd7e3dd58674b2dbc825bd2ba51a3",
+    "cache/s08_targets/Hgq/cec738c7433934a0fc49ee1312a461b1cd7238449f85a0dadb5a79b076089fcc/component_0002.wl": "539b6fc81f797ebb23f23c22bc04e6099d6c96332d2dbaaf0b9335a35c0ace9b",
+    "cache/s08_targets/Hgq/cec738c7433934a0fc49ee1312a461b1cd7238449f85a0dadb5a79b076089fcc/component_0003.wl": "6152bf020ed96473d1679ee9bea2a8b5a09f1be3a2fa2086959f3478463fdd56",
+    "cache/s08_targets/Hgq/cec738c7433934a0fc49ee1312a461b1cd7238449f85a0dadb5a79b076089fcc/component_0004.wl": "41a79cf5a6d5148c430441f514b306badaad063e9d89606f9095d71994145ef4",
+    "cache/s08_targets/Hgq/cec738c7433934a0fc49ee1312a461b1cd7238449f85a0dadb5a79b076089fcc/component_0005.wl": "954130e08b34ff39398024d331dee8d87e9574a51cae6f7913bcb647159d5539",
+    "cache/s08_targets/Hgq/cec738c7433934a0fc49ee1312a461b1cd7238449f85a0dadb5a79b076089fcc/component_0006.wl": "155b9ab998411feb5b0e7188a0d6b9cfa6f37e95cc1ce432f85b6a41b5d2e66f",
+    "common/s05_result/reference/s05_real_spin_response_before_parallel_spin_checks.wls": "46c45f60a0f97c18d430cd8a3ee05182bc5e10f5deb424e8b69487d76e75e500",
+    "common/s06_result/reference/s02_result.wl": "c1e5f21d97b10b831b16ccafe2a9b3ed3fac463d5c6e204b4ecbafb471bf740d",
+    "common/s06_result/reference/s04_result.wl": "77754c4eb11f5626cc9ab473aa6c8f7a4722ab94d979cdd175da8e4a79192110",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s08_certified_denominator_inputs.json": "6f1af64503698c68affe68610038e9d091f78cc62b58ba2851af54ca498bf593",
+    "common/s08_check_certified_denominator_mapping.wls": "92b48ef6d8503188c58059cf9d7eb1ade32250ec5632d1ccdda3b695245d603e",
+    "common/s08_check_group_reconstruction.wls": "e30c5c7ee3e756605af6e3594e44ae9afe67b32e652ef7359fee504efeafb412",
+    "common/s08_check_pair_merge_linearity.wls": "531822a5be4cf830202ca16a9cfaae1d8d7fd9b53c429cc901867da421c58f72",
+    "common/s08_check_quark_pair_mapping.wls": "890b96aead1f5c9de58b6cc6b8f1bac8d28eabcb5442b79de38da13bf8a9261a",
+    "common/s08_grouped_mapping_check.wls": "4d4f1e8f169dc521809dd37d1f7a704e21759a27ddd478befe1caa171d15bce6",
+    "common/s08_inputs.json": "e452387d27ffa4dab87e716d2061b5ad6d171f8589e9099d5b02c5bb3933af6d",
+    "common/s08_map_real_targets.wls": "8700fb675c4a0196d1a6f7aa7d1710e25a9210b0de85bd902990e2e7589772a9",
+    "common/s08_map_targets_by_denominator.wls": "1fada889bf4ae21bda196a865b72432bc8328758fc1c46c7a3e4c80c47c472c8",
+    "common/s08_rational_sum_check.wls": "7057bd25031c8032c05ba486395032e46c5e5dd10db004c4ce1c96f32779603f",
+    "common/s08_rational_sum_inputs.json": "985d9b844cb495e61ba268159ddfaea78f9fcc3a559feb83c3bdce0d5cfdaaeb",
+    "common/s08_result/reference/s03_real_families.wl": "af23fd0f16f04dde4897cf92b77a9f6826bfee3442a29f26b9450663c78c0675",
+    "common/s08_result/reference/s08_coefficient_check_before_rational_sum.wls": "46e5b7ae4c248c82cffe2e5e8d9dd5d789224fbb05365cc71dbc369eae2aa84d",
+    "common/s08_result/reference/s08_inputs_before_reference_coefficients.json": "87a9e16db43dc2624c3dcabb18d06ed4b09de6082296cb0b1360314548df01b8",
+    "common/s08_result/reference/s08_map_real_spin_before_known_denominator.wls": "e23a79589bfce183535a6f1166eda799a9f119168feb9cff1b13feb669c8b21f",
+    "common/s08_result/reference/s08_map_real_spin_before_reference_coefficients.wls": "77c7352ffeacaab4a888450e1f3811509a5ba0f9df2a412409504f986279ed52",
+    "common/s08_result/reference/s08_map_real_targets_before_channel_resume.wls": "eaebc31004da122daa275f4d817ba45e84c8ed5db8e5c0bf40a008289791a1ce",
+    "common/s08_result/reference/s08_standalone_rational_reducer.wls": "a2d379159eb49df3fdd8ad49db4b437dd18dbccd87f3a2667f91896e167aae30",
+    "common/s08_result/reference/s11_real_master_coefficients.wl": "c453a12bebd4ce2b8dc8aa7ecf14931602aea619889c581f7850db11fc62a03a"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 4746.850130878389
+}

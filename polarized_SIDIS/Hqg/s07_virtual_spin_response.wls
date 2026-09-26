@@ -1,0 +1,1 @@
+../common/s07_virtual_spin_response.wls

@@ -1,0 +1,33 @@
+{
+  "channels": [
+    "Hqq",
+    "Hqg",
+    "Hgq",
+    "Hgg",
+    "Hqqbar",
+    "Hqqprime"
+  ],
+  "commit": "5062dcb2407594dafcc2f9f72800e96ff9e6d957",
+  "completed_utc": "2026-09-17T06:36:22.123341+00:00",
+  "configuration_sha256": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+  "file_count": 48,
+  "finite_fhats_computed": false,
+  "imported_bytes": 2691370,
+  "input_identity_checks_passed": true,
+  "job_id": "14773300",
+  "limitation": "Input provenance is verified; polarized contractions and finite assembly are separate stages.",
+  "node": "n7041",
+  "physics_executed": false,
+  "repository": "https://github.com/NonHermitianMatrix/SIDIS_dsigma_till_NLO",
+  "schema": "polarized-sidis-input-receipt-v1",
+  "scope": {
+    "jet_matching": "deferred",
+    "measurement": "reference-large-transverse-momentum-SIDIS",
+    "numerics": "deferred",
+    "order": "through alpha_s^2, reference nonzero-transverse-momentum counting",
+    "spin": "all-incoming-and-tagged-outgoing-components",
+    "working_gamma5_prescription": "BMHV; finite scheme conversions require separate checks"
+  },
+  "source_sha256": "5eb03c10b39c1002006e732698c748bfd2084c5feef365f9ed4e808db822ebee",
+  "tree": "428a4eb2327589d067372a090d5ca33427108f45"
+}

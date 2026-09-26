@@ -1,0 +1,28 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s08_certified_targets_Hgg_remaining_hgg_compact_groups_20260923_job.json",
+  "config_sha256": "8ca675311e84dbc0ca2c27640985532cc9aa714c367e56b5b28b3b66bdb4a43e",
+  "event": "SUBMITTED",
+  "job_id": "14879913",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_certified_targets_Hgg_remaining_hgg_compact_groups_20260923_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_certified_targets_Hgg_remaining_hgg_compact_groups_20260923",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_certified_targets_Hgg_remaining_hgg_compact_groups_20260923_scheduler.log",
+    "-pe",
+    "shared",
+    "8"
+  ],
+  "tag": "s08_certified_targets_Hgg_remaining_hgg_compact_groups_20260923"
+}

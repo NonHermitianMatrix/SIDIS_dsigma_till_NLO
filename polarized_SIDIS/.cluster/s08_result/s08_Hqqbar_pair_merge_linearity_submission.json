@@ -1,0 +1,28 @@
+{
+  "channel": "Hqqbar",
+  "config": ".cluster/s08_Hqqbar_pair_merge_linearity_job.json",
+  "config_sha256": "5f0d3f5f88869755d9e5d336afe37b47202d35441cbca78d68ff1f05f0f51439",
+  "event": "SUBMITTED",
+  "job_id": "14801738",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqqbar_pair_merge_linearity_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqqbar_pair_merge_linearity",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=6G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqqbar_pair_merge_linearity_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s08_Hqqbar_pair_merge_linearity"
+}

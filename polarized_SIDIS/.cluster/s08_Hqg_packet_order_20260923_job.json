@@ -1,0 +1,51 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s08_resume_Hqg_ordered_packets.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s08_Hqg_packet_order_20260923",
+    "POLARIZED_SIDIS_CHANNEL": "Hqg",
+    "POLARIZED_SIDIS_PACKET_ORDER_ONLY": "1",
+    "POLARIZED_SIDIS_TARGET_MEMORY_GIB": "4",
+    "POLARIZED_SIDIS_TARGET_SECONDS": "10800",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s08_Hqg_packet_order_20260923"
+  },
+  "execution_result": "Hqg/s08_packet_order_result/s08_execution.json",
+  "expected_results": [
+    "Hqg/s08_packet_order_result/s08_result.wl",
+    "Hqg/s08_packet_order_result/s08_checks.json"
+  ],
+  "heartbeat": "cache/s08_Hqg_packet_order_20260923_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 660,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 3221225472,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 1680
+  },
+  "log": "cache/s08_Hqg_packet_order_20260923.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqg/s08_grouped_comparison_result/s08_execution.json": "fbf1066d08715f13cac7c909c7117002a49723dc5f60677fc0a55b28531ccaef",
+    "Hqg/s08_grouped_comparison_result/s08_result.wl": "082a4e59961aca18189d6566ec27b47a717d32cf25ecc2edbb88a023a85b2c08",
+    "Hqg/s08_packet_record_result/s08_execution.json": "edb9f626f70cbdf192b00127991f09c3a61bec27bfd13d0350e9a9a9aee7f20b",
+    "Hqg/s08_packet_record_result/s08_result.wl": "68cf3dd3210b6fc47b3b276bdfa0bebd4598b83b8d761ab90de83e2f0b0da604",
+    "cache/s08_target_packets/Hqg/27f8b96029e9c36e9db39a18a6a84384f97c1d28fe54f2a126f3176c0169b6fa/component_0004.wl": "8bb2c14a675be8ba0ec476016f51c3a4b47896716f09c4a9dab1a88d7434c00a",
+    "cache/s08_target_packets/Hqg/afe4c76b18177c9a5540c9a27dbbb7ffe161b7c5b9270793a8467c042881268c/component_0004.wl": "e64e1c4ff836f7f9d9a1c0e3d071d97777697f85cb1cca749bd545da32243681",
+    "common/s06_result/reference/s04_result.wl": "77754c4eb11f5626cc9ab473aa6c8f7a4722ab94d979cdd175da8e4a79192110",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s08_map_Hqg_target_packets.wls": "2be9cfe584e8b1714827d89db0e75c542a31a96bf8e1b413bb767324a61551a4",
+    "common/s08_resume_Hqg_factored_groups.wls": "49d523467d59f0b275002f86125ed7cbbc79e344953262ea6cd78564e01f41b3",
+    "common/s08_resume_Hqg_ordered_packets.wls": "3257bf9b22ee906fa9a08543eb807860096598015bc721c4d10e7bae83ea6653",
+    "common/s08_resume_Hqg_polynomial_maps.wls": "1c146bef316cc9dc3b02aff9a19bc500b599443674ac30246a43625108ac4ba9"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s08_Hqg_ordered_packet_control"
+}

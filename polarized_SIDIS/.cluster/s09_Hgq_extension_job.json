@@ -1,0 +1,47 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s09_extend_virtual_reduction.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s09_Hgq_extension",
+    "POLARIZED_SIDIS_CHANNEL": "Hgq",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s09_Hgq_extension"
+  },
+  "execution_result": "Hgq/s09_reduction_result/s09_execution.json",
+  "expected_results": [
+    "Hgq/s09_reduction_result/s09_result.wl",
+    "Hgq/s09_reduction_result/s09_reduction.wl",
+    "Hgq/s09_reduction_result/s09_checks.json"
+  ],
+  "heartbeat": "cache/s09_Hgq_extension_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 6442450944,
+    "wall_seconds": 6900
+  },
+  "log": "cache/s09_Hgq_extension.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hgq/s09_result/s09_result.wl": "0bb4747ce698189ad4bc7e4b19155e8e61888b75a2f1609beae612f06846a29c",
+    "common/s06_result/reference/s02_result.wl": "c1e5f21d97b10b831b16ccafe2a9b3ed3fac463d5c6e204b4ecbafb471bf740d",
+    "common/s06_result/reference/s09_result.wl": "0c23971167f6b6cab97accd1fe5ddc05c99a7844be2a1aa560d4e4ebcc50090f",
+    "common/s06_result/reference/s12_result.wl": "07e1f4b08b86df75ee9fc9e489d929f22789e4d58017a5cdee40f12abc4c124e",
+    "common/s06_result/reference/s13_result.wl": "5193fc3cbbf055e34dfc6d718fe33fd72e2c676d2a5b5f4a7a6b8175a7a12513",
+    "common/s06_result/reference/sources/s09_reduce_virtual.wl": "5e9ddee07997d6584ae3e9f7762a8d2f82986c7cdb124257cc51b09f3257ba26",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s09_extend_virtual_reduction.wls": "1e60cbbacb7919ca6a57a130cac2fee3ea6aeee2a7ddba14a634c8df9598fd71",
+    "common/s09_extension_inputs.json": "1504fc060f647faa8206cde24c8a8b3284ada1111dabbeda7bb7768bd816d095",
+    "common/s09_map_virtual_spin.wls": "4d5ef7c92f3a71f9410d8c1fe2c83e26431f23b84b3a0ea83131bb4bd9f072a5"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s09_extend_virtual_reduction"
+}

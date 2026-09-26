@@ -1,0 +1,50 @@
+{
+  "child_maxrss_bytes": 422457344,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "$HistoryLength=0;root=Directory[];checks=<||>;\ngate[name_,test_]:=If[TrueQ[test],AssociateTo[checks,name->True];Print[\"PASS: \",name],Print[\"FAIL: \",name];Quit[1]];\ngate[\"compute allocation\",StringQ[Environment[\"JOB_ID\"]]&&!StringStartsQ[$MachineName,\"login\"]];\nPrependTo[$Path,\"/u/home/r/rushil/.Mathematica/Applications\"];$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\nrows=ImportString[\"[{\\\"source\\\":\\\"cache/s05_pending_scalar/Hqg/a26ff6bda85fa1c70a7376a396436ddf9604decb38c24c812c356d7ac9ee8f45/4910bcdf373d6b87e9287aebb768490804815ee148b48b7e6722b0de3948a0f9_50199.wl\\\",\\\"retained\\\":\\\"cache/s05_retained_scalar_inputs/Hqg/14813349/4910bcdf373d6b87e9287aebb768490804815ee148b48b7e6722b0de3948a0f9_50199.wl\\\",\\\"bytes\\\":18689,\\\"sha256\\\":\\\"058a31743ea87e18a344732def0a7d35a06a0fd819a2e1e31f8ef64c86c64ef3\\\"},{\\\"source\\\":\\\"cache/s05_pending_scalar/Hqg/a26ff6bda85fa1c70a7376a396436ddf9604decb38c24c812c356d7ac9ee8f45/90019a5b7b789436d04aeb3ea3eb52dfb59ab1f0da21041a414634161ede8608_50201.wl\\\",\\\"retained\\\":\\\"cache/s05_retained_scalar_inputs/Hqg/14813349/90019a5b7b789436d04aeb3ea3eb52dfb59ab1f0da21041a414634161ede8608_50201.wl\\\",\\\"bytes\\\":121365,\\\"sha256\\\":\\\"5fdddb65179a340670f87a397b7d4d23917e08b33c80469ddfb0d9cd478e5c08\\\"}]\",\"RawJSON\"];\nout=FileNameJoin[{root,\"Hqg\",\"s05_scalar_input_result\"}];If[!DirectoryQ[out],CreateDirectory[out,CreateIntermediateDirectories->True]];\nreports=MapIndexed[Function[{row,index},Module[{p,record,value,file,serial,reloaded},\np=FileNameJoin[{root,row[\"retained\"]}];gate[\"input hash \"<>ToString[index],IntegerString[FileHash[p,\"SHA256\"],16,64]===row[\"sha256\"]];\nrecord=Get[p];gate[\"native recorded scalar schema \"<>ToString[index],record[\"Schema\"]===\"polarized-sidis-pending-scalar-input-v1\"&&record[\"Channel\"]===\"Hqg\"&&record[\"JobID\"]===\"14813349\"&&record[\"NativeVersions\"]==={$Version,$FeynCalcVersion}];\ngate[\"recording source identity \"<>ToString[index],IntegerString[record[\"SourceHash\"],16,64]===\"cd58ba4164c4d71ec5163031f5f173668436ab9f94d1ad6982932712596848d3\"];\nvalue=record[\"ScalarInput\"];gate[\"exact native argument identity \"<>ToString[index],Hash[{record[\"InputHash\"],record[\"CoefficientAlgorithmHash\"],value},\"SHA256\"]===record[\"ArgumentHash\"]];\nfile=FileNameJoin[{out,\"s05_input_\"<>IntegerString[First[index],10,2]<>\".wl\"}];serial=ToString[value,InputForm,PageWidth->100]<>\"\\n\";\ngate[\"equation file bound \"<>ToString[index],StringLength[serial]<128*1024^2];Export[file,serial,\"Text\"];reloaded=Get[file];gate[\"entire equation exact reload \"<>ToString[index],reloaded===value];\n<|\"source\"->row[\"retained\"],\"source_sha256\"->row[\"sha256\"],\"argument_sha256\"->IntegerString[record[\"ArgumentHash\"],16,64],\"input_hash\"->IntegerString[record[\"InputHash\"],16],\"algorithm_hash\"->IntegerString[record[\"CoefficientAlgorithmHash\"],16],\"kernel_id\"->record[\"KernelID\"],\"input_bytes\"->ByteCount[value],\"equation\"->StringDrop[file,StringLength[root]+1],\"equation_bytes\"->FileByteCount[file],\"equation_sha256\"->IntegerString[FileHash[file,\"SHA256\"],16,64],\"transverse_constraint\"->ToString[record[\"TransverseConstraint\"],InputForm]|>]],rows];\nreport=<|\"schema\"->\"polarized-sidis-recorded-scalar-equations-v1\",\"checks\"->checks,\"inputs\"->reports,\"job_id\"->Environment[\"JOB_ID\"],\"finite_nlo_fhats_computed\"->False|>;\nExport[FileNameJoin[{out,\"s05_checks.json\"}],report,\"RawJSON\"];\ngate[\"inspection report round trip\",Import[FileNameJoin[{out,\"s05_checks.json\"}],\"RawJSON\"]===report];\nPrint[\"PASS: s05_recorded_scalar_equations\"];Quit[0];"
+  ],
+  "completed_utc": "2026-09-19T12:07:57.110281+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 2684354560
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      3221225472,
+      3221225472
+    ]
+  },
+  "job_configuration_sha256": "b78a044e8aef08cdb88247f8bd07bd6f76cc171f14568a7bf8b172a8d80e7f50",
+  "job_id": "14813403",
+  "node": "n6129",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 1363968,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqg/s05_scalar_input_result/s05_checks.json": "2fb77b71346116cb98baed45d7564c3697487272c04039125681241bb363d666",
+    "Hqg/s05_scalar_input_result/s05_input_01.wl": "47a2a635a3b6257633c06005b8331b17f526a929110feff1f453c5e763cd53d6",
+    "Hqg/s05_scalar_input_result/s05_input_02.wl": "59d112f42574975e0521aa448e2af982d96eaf7ba1ca509117e7420e336533fb"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "cache/s05_retained_scalar_inputs/Hqg/14813349/4910bcdf373d6b87e9287aebb768490804815ee148b48b7e6722b0de3948a0f9_50199.wl": "058a31743ea87e18a344732def0a7d35a06a0fd819a2e1e31f8ef64c86c64ef3",
+    "cache/s05_retained_scalar_inputs/Hqg/14813349/90019a5b7b789436d04aeb3ea3eb52dfb59ab1f0da21041a414634161ede8608_50201.wl": "5fdddb65179a340670f87a397b7d4d23917e08b33c80469ddfb0d9cd478e5c08",
+    "common/s05_real_spin_response_recorded_scalar.wls": "cd58ba4164c4d71ec5163031f5f173668436ab9f94d1ad6982932712596848d3"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 28.315010508988053
+}

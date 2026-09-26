@@ -1,0 +1,28 @@
+{
+  "channel": "Hqqprime",
+  "config": ".cluster/s08_Hqqprime_reference_coefficients_job.json",
+  "config_sha256": "dc68958655e64026be80a34cdae6f4ee662ed6821b90cd41fc8e0ebb587ccd88",
+  "dependency_job": "14777388",
+  "dependency_sha256": "07679643127071c38d0522479236858ff7fd1f4e770d22d65572072f56e03d9f",
+  "event": "SUBMITTED",
+  "job_id": "14777557",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqqprime_reference_coefficients_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqqprime_reference_coefficients",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqqprime_reference_coefficients_scheduler.log"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "tag": "s08_Hqqprime_reference_coefficients"
+}

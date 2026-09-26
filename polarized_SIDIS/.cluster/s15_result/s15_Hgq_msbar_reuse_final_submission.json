@@ -1,0 +1,28 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s15_Hgq_msbar_reuse_final_job.json",
+  "config_sha256": "ac8fe352eb43fb9496990ca495b6a668a216d53e839b5c63b154b27f9406e5cf",
+  "event": "SUBMITTED",
+  "job_id": "14817104",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s15_Hgq_msbar_reuse_final_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s15_Hgq_msbar_reuse_final",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s15_Hgq_msbar_reuse_final_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s15_Hgq_msbar_reuse_final"
+}

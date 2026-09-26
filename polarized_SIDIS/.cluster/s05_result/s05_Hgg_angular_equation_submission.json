@@ -1,0 +1,25 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s05_Hgg_angular_equation_job.json",
+  "config_sha256": "43f384de425033d305304a3b271956eb4cff0f5fad1e8417663adeafbbafa0f3",
+  "event": "SUBMITTED",
+  "job_id": "14816264",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hgg_angular_equation_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hgg_angular_equation",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:10:00,h_data=3G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hgg_angular_equation_scheduler.log"
+  ],
+  "tag": "s05_Hgg_angular_equation"
+}

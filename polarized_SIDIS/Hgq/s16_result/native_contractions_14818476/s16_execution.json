@@ -1,0 +1,61 @@
+{
+  "child_maxrss_bytes": 345235456,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s16_check_Hgq_reference_sign.wls"
+  ],
+  "completed_utc": "2026-09-20T10:17:18.407046+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      -1,
+      -1
+    ]
+  },
+  "job_configuration_sha256": "a9b7584a3b08b276fbaf4c3c82667ca63603504433982ca76af4387687baf0b7",
+  "job_id": "14818476",
+  "node": "n6124",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 333385728,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgq/s16_result/s16_checks.json": "57ab0d340926bbdf4ca00954131d52497c61a7a8fdac68f0edf5b81325c74b44",
+    "Hgq/s16_result/s16_result.wl": "ff6681d1d06cbdabd5935107c0a5e5d2a0c38d39a605c3d7194e64cf259333a2"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgq/s16_result/reference/Ppp_01_01.wl": "f079353e5e5107b9361a0ba29fd4b13d165141c5f74632c5d3e766a343ff6e5b",
+    "Hgq/s16_result/reference/inputs/s01_generate_amplitudes.wl": "bd03ca4e615f35e19a470fcb3d317b6484f46fed71e1729cd393cecbd3655c6b",
+    "Hgq/s16_result/reference/inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hgq/s16_result/reference/inputs/s02_born_and_projectors.wl": "4cdd00d8d5049eb190fb6b3e11a856b507083f9e7ab51713b912df3723f272e1",
+    "Hgq/s16_result/reference/inputs/s02_result.wl": "81da52572b7ee1ae58a9002f54335ae22425859c69d090a284d0b3c7233973da",
+    "Hgq/s16_result/reference/inputs/s03_contract_real.wl": "32aa8407bc8d87c63231bc295f09431ee9f168c428f08bc6c52683ddef097225",
+    "Hgq/s16_result/reference/inputs/s03_result.wl": "286b9586de2bec744667421d4b16d1081a0df6e18fda0e328918c46b1dbd0649",
+    "Hgq/s16_result/reference/s01_result.json": "68f43c3cc11934cfdbd21751386b0e28c8a5cd8e61361db094f590dc8546e15e",
+    "Hgq/s16_result/reference/s03_result.json": "dafe7f763249e3a0658773bdbd859eb93de6e604d9872d6585637078f166c2c9",
+    "Hgq/s16_result/reference/s03_sample_madgraph.py": "d47225318d9fedccf268ecec7915b17ba80ecb0888def662f277419f52d2f738",
+    "Hgq/s16_result/reference/s04_evaluate_local.wl": "225cf8495532f3280baf7101a61d59a4e989cfa40cbd6ba4124ef8cc291f143c",
+    "Hgq/s16_result/reference/s04_result.json": "a9430ee7247649f81d22c9a2b5f48d5587f60b9865fef57358fbfefdd245cbbc",
+    "Hgq/s16_result/reference/s06_validate_real_projection.wl": "122a252339275ec54ba9fd23a3e029cca24b457f0c0566c9f1adaa0673aed207",
+    "common/s16_Hgq_reference_sign_inputs.json": "6020f9126ede290c429f53110ec174d99cdfb751e19783e33b75ac2fc6714e75",
+    "common/s16_check_Hgq_reference_sign.wls": "51971d9df574899cfcd354f5e1b9ebcb4a66613f85e59f01af93bf88c856ead5"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 266.4360132559668
+}

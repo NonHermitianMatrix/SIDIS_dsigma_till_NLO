@@ -1,0 +1,51 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s12_check_regulator_series.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s12_Hqqprime_regulator_comparison",
+    "POLARIZED_SIDIS_CHANNEL": "Hqqprime",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s12_Hqqprime_regulator_comparison"
+  },
+  "execution_result": "Hqqprime/s12_regulator_result/s12_execution.json",
+  "expected_results": [
+    "Hqqprime/s12_regulator_result/s12_result.wl",
+    "Hqqprime/s12_regulator_result/s12_checks.json"
+  ],
+  "heartbeat": "cache/s12_Hqqprime_regulator_comparison_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 3500
+  },
+  "log": "cache/s12_Hqqprime_regulator_comparison.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqqprime/s08_result/s08_result.wl": "e262ce55f59c1a4a1e8ddd3acfbb487536106af566b373922bd09f8e6e73d3ec",
+    "cache/s12/Hqqprime/e23e56b849458b517e33428249f4a4b3c00ec300f439d4f1551ff8af0c71dc2e/component_0001.wl": "e6b2864c89248fbe15ddd486524f0cd80ff4fe84b9063a5db615b2ebf1ae0cca",
+    "cache/s12/Hqqprime/e23e56b849458b517e33428249f4a4b3c00ec300f439d4f1551ff8af0c71dc2e/component_0002.wl": "e8ed0f6b4eb6bfa487f0d087c458d85deb894f386226d00f6894efd58588b0bd",
+    "cache/s12/Hqqprime/e23e56b849458b517e33428249f4a4b3c00ec300f439d4f1551ff8af0c71dc2e/component_0003.wl": "a8ec45e091aa7f3e6a0f635d441f67efbc03c3582ba2523390cc957894db0113",
+    "cache/s12/Hqqprime/e23e56b849458b517e33428249f4a4b3c00ec300f439d4f1551ff8af0c71dc2e/component_0004.wl": "7d667b4b5f3f268a9a87dfc74ef9aa1d8c23c93bfdefe7cec7cb2817ebeab3a6",
+    "cache/s12/Hqqprime/e23e56b849458b517e33428249f4a4b3c00ec300f439d4f1551ff8af0c71dc2e/component_0005.wl": "48893779d3e923f1adc0b1cb29892a0e87e6003da63834fd5f1bf5849f0f4475",
+    "cache/s12/Hqqprime/e23e56b849458b517e33428249f4a4b3c00ec300f439d4f1551ff8af0c71dc2e/component_0006.wl": "9c4e279e30cde3e5ab036bb63afbba4bf910219b818b38623c324ab9766d51d2",
+    "common/s06_result/reference/s08_result.wl": "76b97660cedd87b8c9dbcf5cb3b46ae8a95835e30ba0bcab7b67c3c78ffcf755",
+    "common/s06_result/reference/s10_result.wl": "dba9edd52b6cc80846a08f65ec2b98b908a4d7a429edff359dd3a460c597a253",
+    "common/s06_result/reference/s15_result.wl": "82cb3ca0de4501b3c045d025e6b93f4228426c344023b2a727fc93d69615ef0b",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s12_assemble_real_spin.wls": "ca3777035d3d220b3fb8fcddb8131348f0d7c97f8fd9b8d54703337c93daa243",
+    "common/s12_check_regulator_series.wls": "65872969e0cb1617ec0a8c75e30b17e6eae94957f7eac668555741214c2f0a4a",
+    "common/s12_inputs.json": "037b7d316a22447129102d94fad18f3979ea44b78751790854bb737e520e5253",
+    "common/s12_result/reference/s17_assemble_real.wl": "1df84e6817fdcf4b0db8c588d1083a9be499530c63ba10b6cb9991083d1f77e5"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s12_check_regulator_series"
+}

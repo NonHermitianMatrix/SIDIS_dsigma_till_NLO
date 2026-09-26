@@ -1,0 +1,25 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s08_Hqq_pair_sum_equation_job.json",
+  "config_sha256": "8797ec5e603918b497f9b4b40cd79b351cad84f3318d7b063cbc75c180d0e9d2",
+  "event": "SUBMITTED",
+  "job_id": "14816714",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqq_pair_sum_equation_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqq_pair_sum_equation",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:30:00,h_data=12G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqq_pair_sum_equation_scheduler.log"
+  ],
+  "tag": "s08_Hqq_pair_sum_equation"
+}

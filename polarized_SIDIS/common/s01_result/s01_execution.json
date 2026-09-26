@@ -1,0 +1,33 @@
+{
+  "child_maxrss_bytes": 12525568,
+  "command": [
+    "python3",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s01_prepare_inputs.py",
+    "--root",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z"
+  ],
+  "completed_utc": "2026-09-17T06:36:23.476381+00:00",
+  "exit_code": 0,
+  "job_configuration_sha256": "d40c4b8c3c9df4bbc31c59629cbb8c7c0ac57b66025a58ae71fb3ed1e544fc26",
+  "job_id": "14773300",
+  "node": "n7041",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 0,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s01_result/s01_result.json": "89cea4ebb0af5affd3b07a86e3bc3ad6309f23e4ad653961316e4af002bfb9f4",
+    "Hgq/s01_result/s01_result.json": "84981e62016e8cc966ca8efe2d27d0eee7392cb94cbc494d9cf2afc02d0e046c",
+    "Hqg/s01_result/s01_result.json": "5635d649449519501b9ec492ce6bed55fb016a3c5ff197475f7e567a59ed9b88",
+    "Hqq/s01_result/s01_result.json": "15a62575d8439e4704bae6592b22401ff94ed515daeab0972a6ac0d93feb6568",
+    "Hqqbar/s01_result/s01_result.json": "b64abdb947dec42b063af02819fd0d68c91029a749c4edbc80557a8a1564bb30",
+    "Hqqprime/s01_result/s01_result.json": "fc8bd85cf9578298d2b4509ad6eb7d53b80b48e2ae9b6e886bb3f90b4180c4cd",
+    "common/s01_result/s01_result.json": "6dfbc69810f96dfbc94c174a2c7d7201738c809428e37d9cf246665e809d8dfb"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "3709d2a251a80419db7be89e9edcfce26f8c5f58d8688a48d37a3ee75ea58786",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s01_prepare_inputs.py": "5eb03c10b39c1002006e732698c748bfd2084c5feef365f9ed4e808db822ebee"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 2.124940477311611
+}

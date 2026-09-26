@@ -1,0 +1,28 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s05_Hqg_zero_angular_provenance_continue_job.json",
+  "config_sha256": "b3cacd2384e733e769a1594066de7982c5b04969d53151210b06333871b27835",
+  "event": "SUBMITTED",
+  "job_id": "14814205",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hqg_zero_angular_provenance_continue_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hqg_zero_angular_provenance_continue",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=10G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hqg_zero_angular_provenance_continue_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s05_Hqg_zero_angular_provenance_continue"
+}

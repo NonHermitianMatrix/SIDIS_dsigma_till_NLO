@@ -1,0 +1,25 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s08_Hgg_factored_atoms_20260923_job.json",
+  "config_sha256": "7b1e7c5f050b7d674b1060df428292bad1253772127d99c9487ab75ef63fdc17",
+  "event": "SUBMITTED",
+  "job_id": "14874603",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_factored_atoms_20260923_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_factored_atoms_20260923",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=12G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_factored_atoms_20260923_scheduler.log"
+  ],
+  "tag": "s08_Hgg_factored_atoms_20260923"
+}

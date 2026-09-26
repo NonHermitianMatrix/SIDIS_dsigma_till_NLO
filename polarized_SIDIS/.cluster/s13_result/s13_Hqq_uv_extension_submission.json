@@ -1,0 +1,27 @@
+{
+  "config": ".cluster/s13_Hqq_uv_extension_job.json",
+  "config_sha256": "e62e2eae38a75cb4f98e706d5b516580499f77f2d82e1ff90d8af262ed471e07",
+  "event": "SUBMITTED",
+  "job_id": "14779887",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s13_Hqq_uv_extension_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s13_Hqq_uv_extension",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=4G",
+    "-pe",
+    "shared",
+    "2",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s13_Hqq_uv_extension_scheduler.log"
+  ],
+  "tag": "s13_Hqq_uv_extension"
+}

@@ -1,0 +1,33 @@
+{
+  "channel": "Hqqprime",
+  "job_configuration_sha256": "c77ef8f19f6d5e07b2512dcb87676e5d9b643cca49e4cec01ffe0dc62b14102e",
+  "job_id": "14775312",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s03_Hqqprime_qg_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s03_Hqqprime_qg",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s03_Hqqprime_qg_scheduler.log"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl": "f7591175167ae19dd8527de7dfd004ba017a94f298e67be2944982e5ca3748f1",
+    "Hqqprime/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_auxiliary_born_spin.wls": "d7f17d27e9f268c687bb41590ef793ddef0752aa7686dd3b651591c9d1718f6e",
+    "common/s03_auxiliary_inputs.json": "d564b985ba59959a1aed6bd204cd59de53f1182e5113a415fa32c5bf8566d61f",
+    "common/s03_born_spin_response.wls": "62a1dcc5e4b63c15a216644ea8be63dfb5385e0ed039748108c382255c2de3e0"
+  },
+  "tag": "s03_Hqqprime_qg"
+}

@@ -1,0 +1,25 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s05_Hgg_project_Photon_7_termwise_spin_job.json",
+  "config_sha256": "13495a3e636ca6be0af4ddc2ce5718705921703939f1b9fa3453da5e701ecd65",
+  "event": "SUBMITTED",
+  "job_id": "14822446",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hgg_project_Photon_7_termwise_spin_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hgg_project_Photon_7_termwise_spin",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=24G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hgg_project_Photon_7_termwise_spin_scheduler.log"
+  ],
+  "tag": "s05_Hgg_project_Photon_7_termwise_spin"
+}

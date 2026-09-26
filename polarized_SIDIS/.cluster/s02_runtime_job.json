@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/.cluster/s02_probe_runtime.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_userbase",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_userbase"
+  },
+  "execution_result": ".cluster/s02_result/s02_runtime_execution.json",
+  "expected_results": [
+    ".cluster/s02_result/s02_runtime.wl"
+  ],
+  "heartbeat": "cache/s02_runtime_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 240,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 8589934592,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 900
+  },
+  "log": "cache/s02_runtime.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "9f6e9c692595574ba72f599ef9ee40ab6971b267e2748772767c04bb9502862f",
+    ".cluster/s02_probe_runtime.wls": "22993dc137499eb11a435858c8a1dcbc0ac6978b4b0bc130637b1920a291def4"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s02_probe_runtime"
+}

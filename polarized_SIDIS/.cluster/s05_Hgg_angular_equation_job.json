@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s05_export_native_equation.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s05_Hgg_angular_equation",
+    "POLARIZED_SIDIS_CHANNEL": "Hgg",
+    "POLARIZED_SIDIS_EQUATION_FILE": "cache/s05_spin_components/Hgg/430c1735f22eb7d8c345f075c3abebc07a23fd75fb3faa8575413c7938381bff/9989ed8cdefd0c45cf0dd9fcdfaf93207b135035ea65bf0a76dc22da887a8ae3/scalar/5e373a4b3270ee6c8c972337f5100a8de7909391914b2f7b8fe09b42d6f2e39f.wl",
+    "POLARIZED_SIDIS_EQUATION_SHA256": "8086c30a2493fb747151544609731622a8c028839e0b29d3dadc2913c4767a7e",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s05_Hgg_angular_equation"
+  },
+  "execution_result": "Hgg/s05_angular_equation_result/s05_execution.json",
+  "expected_results": [
+    "Hgg/s05_angular_equation_result/s05_result.wl"
+  ],
+  "heartbeat": "cache/s05_Hgg_angular_equation_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 300,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 2147483648,
+    "poll_seconds": 15,
+    "scratch_bytes": 4294967296,
+    "tree_rss_bytes": 2147483648,
+    "wall_seconds": 540
+  },
+  "log": "cache/s05_Hgg_angular_equation.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "cache/s05_spin_components/Hgg/430c1735f22eb7d8c345f075c3abebc07a23fd75fb3faa8575413c7938381bff/9989ed8cdefd0c45cf0dd9fcdfaf93207b135035ea65bf0a76dc22da887a8ae3/scalar/5e373a4b3270ee6c8c972337f5100a8de7909391914b2f7b8fe09b42d6f2e39f.wl": "8086c30a2493fb747151544609731622a8c028839e0b29d3dadc2913c4767a7e",
+    "common/s05_export_native_equation.wls": "96a5db3f959bacde469fcb71afef0d5ed19f030f72f237693fab2325badeadbb"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s05_export_native_equation"
+}

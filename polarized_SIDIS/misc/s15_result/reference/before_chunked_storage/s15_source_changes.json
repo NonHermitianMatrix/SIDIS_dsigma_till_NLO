@@ -1,0 +1,45 @@
+{
+  "base": "common/s15_finalize_Hgg_coefficients.wls",
+  "base_sha256": "9acd04c11d691198b46a6c4bd971fe95586d853519281a05cc43cc3651b6a29f",
+  "entry_before": "ToExpression[gluonFinalCode,InputForm];",
+  "entry_after": "ToExpression[localFinalChange[gluonFinalCode],InputForm];",
+  "code_changes": [
+    {
+      "before": "gate[\"compute allocation\", StringQ[Environment[\"JOB_ID\"]] && !StringStartsQ[$MachineName, \"login\"]];\ngate[\"isolated runtime\", StringStartsQ[$UserBaseDirectory, root <> \"/\"]];",
+      "after": "gate[\"authorized local final export\",Environment[\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\"]===\"1\"&&$VersionNumber===15.];"
+    },
+    {
+      "before": "inputPaths = {};",
+      "after": "inputPaths = {localFinalSource,localFinalConfigPath};"
+    },
+    {
+      "before": "rawPath = FileNameJoin[{root, channel, \"s14_result\", \"s14_result.wl\"}]; raw = Get[rawPath];",
+      "after": "rawPath = FileNameJoin[{root,\"misc\",\"s14_result\",\"s14_result.wl\"}]; raw=Get[rawPath];\nlocalFinalImportedVersions=raw[\"ImportedNativeVersions\"];\ngate[\"actual local finite assembly runtime\",raw[\"NativeVersions\"]==={$Version,$FeynCalcVersion}&&\n Last[localFinalImportedVersions]===$FeynCalcVersion];"
+    },
+    {
+      "before": "finalAssemblyReceipt=readInput[channel<>\"/s14_result/s14_execution.json\"];",
+      "after": "finalAssemblyReceipt=readInput[\"misc/s14_result/s14_execution.json\"];"
+    },
+    {
+      "before": "finalAssemblyReceipt[\"result_sha256\"][channel<>\"/s14_result/s14_result.wl\"]",
+      "after": "finalAssemblyReceipt[\"result_sha256\"][\"misc/s14_result/s14_result.wl\"]"
+    },
+    {
+      "before": "schemeDirectory = FileNameJoin[{root,channel,\"s15_native_scheme_result\"}];",
+      "after": "schemeDirectory = FileNameJoin[{root,\"misc\",\"s15_result\",\"scheme\"}];"
+    },
+    {
+      "before": "resultDirectory = FileNameJoin[{root, channel, \"s15_result\"}];",
+      "after": "AssociateTo[result,<|\"ExecutionBackend\"->\"local\",\"NativeVersions\"->{$Version,$FeynCalcVersion},\n \"ImportedNativeVersions\"->localFinalImportedVersions,\"LocalDispatchSourceHash\"->FileHash[localFinalSource,\"SHA256\"],\n \"LocalConfigurationHash\"->FileHash[localFinalConfigPath,\"SHA256\"]|>];\nresultDirectory = FileNameJoin[{root,\"misc\",\"s15_result\"}];"
+    }
+  ],
+  "prefix": "(* Local runtime for the unchanged Hgg helicity conversion and final F hats. *)\n$HistoryLength=0;\n$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\nlocalFinalRoot=DirectoryName[DirectoryName[ExpandFileName[$InputFileName]]];SetDirectory[localFinalRoot];\nlocalFinalSource=FileNameJoin[{localFinalRoot,\"misc\",\"s15_finalize_Hgg_hats.wls\"}];\nlocalFinalConfigPath=FileNameJoin[{localFinalRoot,\"misc\",\"s15_inputs.json\"}];\nlocalFinalConfig=Import[localFinalConfigPath,\"RawJSON\"];\nlocalFinalRequire[n_,x_]:=If[!TrueQ[x],Print[\"FAIL: \",n];Quit[1]];\nlocalFinalRequire[\"bound complete final source\",SyntaxQ[ReadString[localFinalSource]]&&\n IntegerString[FileHash[localFinalSource,\"SHA256\"],16,64]===localFinalConfig[\"source_sha256\"]];\nKeyValueMap[Function[{p,h},localFinalRequire[\"pinned final input \"<>p,\n IntegerString[FileHash[FileNameJoin[{localFinalRoot,p}],\"SHA256\"],16,64]===h]],localFinalConfig[\"input_sha256\"]];\nSetEnvironment[\"POLARIZED_SIDIS_CHANNEL\"->\"Hgg\"];\nlocalFinalChange[text_]:=Module[{edits,candidate},edits={\"gate[\\\"compute allocation\\\", StringQ[Environment[\\\"JOB_ID\\\"]] && !StringStartsQ[$MachineName, \\\"login\\\"]];\\ngate[\\\"isolated runtime\\\", StringStartsQ[$UserBaseDirectory, root <> \\\"/\\\"]];\"->\"gate[\\\"authorized local final export\\\",Environment[\\\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\\\"]===\\\"1\\\"&&$VersionNumber===15.];\",\n\"inputPaths = {};\"->\"inputPaths = {localFinalSource,localFinalConfigPath};\",\n\"rawPath = FileNameJoin[{root, channel, \\\"s14_result\\\", \\\"s14_result.wl\\\"}]; raw = Get[rawPath];\"->\"rawPath = FileNameJoin[{root,\\\"misc\\\",\\\"s14_result\\\",\\\"s14_result.wl\\\"}]; raw=Get[rawPath];\\nlocalFinalImportedVersions=raw[\\\"ImportedNativeVersions\\\"];\\ngate[\\\"actual local finite assembly runtime\\\",raw[\\\"NativeVersions\\\"]==={$Version,$FeynCalcVersion}&&\\n Last[localFinalImportedVersions]===$FeynCalcVersion];\",\n\"finalAssemblyReceipt=readInput[channel<>\\\"/s14_result/s14_execution.json\\\"];\"->\"finalAssemblyReceipt=readInput[\\\"misc/s14_result/s14_execution.json\\\"];\",\n\"finalAssemblyReceipt[\\\"result_sha256\\\"][channel<>\\\"/s14_result/s14_result.wl\\\"]\"->\"finalAssemblyReceipt[\\\"result_sha256\\\"][\\\"misc/s14_result/s14_result.wl\\\"]\",\n\"schemeDirectory = FileNameJoin[{root,channel,\\\"s15_native_scheme_result\\\"}];\"->\"schemeDirectory = FileNameJoin[{root,\\\"misc\\\",\\\"s15_result\\\",\\\"scheme\\\"}];\",\n\"resultDirectory = FileNameJoin[{root, channel, \\\"s15_result\\\"}];\"->\"AssociateTo[result,<|\\\"ExecutionBackend\\\"->\\\"local\\\",\\\"NativeVersions\\\"->{$Version,$FeynCalcVersion},\\n \\\"ImportedNativeVersions\\\"->localFinalImportedVersions,\\\"LocalDispatchSourceHash\\\"->FileHash[localFinalSource,\\\"SHA256\\\"],\\n \\\"LocalConfigurationHash\\\"->FileHash[localFinalConfigPath,\\\"SHA256\\\"]|>];\\nresultDirectory = FileNameJoin[{root,\\\"misc\\\",\\\"s15_result\\\"}];\"};\n localFinalRequire[\"unique reviewed final interfaces\",And@@(StringCount[text,First[#]]===1&/@edits)];\n candidate=StringReplace[text,edits];localFinalRequire[\"complete original final implementation preserved\",SyntaxQ[candidate]&&\n StringReplace[candidate,Reverse/@edits]===text];candidate];\n",
+  "source_sha256": "c0e03d13a8aff5c965812cccc478801bef8d98b63bf92280c5cdb3aafb30df5c",
+  "builder_changes": [
+    {
+      "before": "If[!SyntaxQ[gluonCompactPrefix],Quit[1]];ToExpression[gluonCompactPrefix,InputForm];",
+      "after": "localFinalPackageOld=\"Get[\\\"FeynCalc`\\\"]\";\nlocalFinalPackageNew=\"If[!MemberQ[$Packages,\\\"FeynCalc`\\\"],Get[\\\"FeynCalc`\\\"]]\";\nlocalFinalRequire[\"single inherited package load\",StringCount[gluonCompactPrefix,localFinalPackageOld]===1];\nlocalFinalPackagePrefix=StringReplace[gluonCompactPrefix,localFinalPackageOld->localFinalPackageNew];\nlocalFinalRequire[\"unchanged final builder after package initialization\",SyntaxQ[localFinalPackagePrefix]&&\n StringReplace[localFinalPackagePrefix,localFinalPackageNew->localFinalPackageOld]===gluonCompactPrefix];\nToExpression[localFinalPackagePrefix,InputForm];",
+      "count": 1
+    }
+  ]
+}

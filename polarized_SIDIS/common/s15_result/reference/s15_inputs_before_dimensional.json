@@ -1,0 +1,38 @@
+{
+  "definitions": {
+    "coupling_relation": "gs^2==4*Pi*alphaS",
+    "epsilon_difference": "4*colorCF*eps*(1-z)",
+    "physical_convolution_prefactor": "alphaS/(2*Pi)",
+    "qq_regular": "colorCF*(1+z^2)/(1-z)",
+    "scheme_kernel": "-4*colorCF*(1-z)"
+  },
+  "files": [
+    {
+      "bytes": 21017,
+      "destination": "common/s15_result/reference/s54_factorization_contract.wls",
+      "sha256": "21fc30cc2cfd4386457dc7ab7ce1b1d22b4456460e4c0bbdc86dfbb446c23f6c"
+    },
+    {
+      "bytes": 17534,
+      "destination": "common/s11_collinear_spin_convolutions.wls",
+      "sha256": "9c5784631fbeb46741b274186985fb21f1607d4063525025517bb0560f11de96"
+    },
+    {
+      "bytes": 16852,
+      "destination": "common/s14_result/reference/s20_final_hats.wl",
+      "sha256": "c56f0f20deca9c2100218304eadbfdecb139826c6d36dd2e06bf31b6895a36fa"
+    }
+  ],
+  "references": {
+    "equations": [
+      "16",
+      "46",
+      "47",
+      "counterterm following 47"
+    ],
+    "hard_counterterm_sign": "standalone s54 factorization contract; -Delta f_qq convolution Born",
+    "space_and_time_like": "https://arxiv.org/pdf/hep-ph/9612250"
+  },
+  "schema": "polarized-sidis-helicity-scheme-definition-v1",
+  "scheme": "conventional MSbar helicity with HVBM axial restoration"
+}

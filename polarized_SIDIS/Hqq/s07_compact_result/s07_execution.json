@@ -1,0 +1,55 @@
+{
+  "child_maxrss_bytes": 754610176,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s07_virtual_spin_response.wls"
+  ],
+  "completed_utc": "2026-09-17T11:41:01.174379+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "ab2d67cc60328c4c41389b2835ed1b4ac6995a9ccd52dda01f91599aa289c089",
+  "job_id": "14774851",
+  "node": "n6439",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 746643456,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqq/s07_compact_result/s07_result.wl": "68d2071628232e07b8057effe339aaff70ef310d9d9c09418b34531096c68782"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "0dc987fe060db67a8fa060945380760b0ceb788843882e760c0a79959852297a",
+    "Hqq/s03_result/s03_result.wl": "99dff181bf85da2d93376236b37b98e116f5965d5015cba01eb150bb19e5c9cc",
+    "Hqq/s07_result/reference/unpolarized_virtual.wl": "09fa009a4fc04d1becfe5c2cfb8915388700efa8573870c678727cc97125e1e8",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_result/s04_result.wl": "970f0bfd74d9cb5838703d01d8ce3066ff4dc28367bad67c74076bbab6b7c0b3",
+    "common/s07_inputs.json": "a545945765b5cf85018299090c78f109e06fb4a2b9c369bd685256e71e843596",
+    "common/s07_result/reference/s05_virtual_families.wl": "c3b6bd31df3fa763c714d173f8048d31aa41b02066c3f9ff6cf5853fcfe6aae2",
+    "common/s07_result/reference/s07_virtual_spin_response_before_compact_products.wls": "e233767017306d5be0f02f97bd8066b824953903252546b7da7c5cc202f9aa09",
+    "common/s07_virtual_spin_response.wls": "daca2aaa7d7253bbf0d9f0a48a88cac14bdd2b41b21f1e678b201cde6656a00b"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 1450.2432938069105
+}

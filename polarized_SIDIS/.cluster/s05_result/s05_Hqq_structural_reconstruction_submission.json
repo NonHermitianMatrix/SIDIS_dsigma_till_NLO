@@ -1,0 +1,25 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s05_Hqq_structural_reconstruction_job.json",
+  "config_sha256": "a7ac6bda9831392cb229af14336ef09f43a0e2b10f7750710084c04fe4a04348",
+  "event": "SUBMITTED",
+  "job_id": "14813544",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hqq_structural_reconstruction_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hqq_structural_reconstruction",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hqq_structural_reconstruction_scheduler.log"
+  ],
+  "tag": "s05_Hqq_structural_reconstruction"
+}

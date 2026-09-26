@@ -1,0 +1,39 @@
+{
+  "job_configuration_sha256": "0b4a2a54efe8e3b06617f47e6b7699583b34838115cd43692965a11886eca785",
+  "job_id": "14774714",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hgg_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hgg",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=4G",
+    "-pe",
+    "shared",
+    "4",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hgg_scheduler.log"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "87f8e6569853ab998c595f1a329a0d9c05390eb624cea2fd91ac2b7881703953",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/kinematics.wl": "56772f691f3263b8695e090f26c367b6062d8864bfa41b0cf44eb142f89be0b9",
+    "Hgg/s05_result/reference/unpolarized_real.wl": "8fd5a266c5a15fa3d2cbed9992e26ef005ec3e2400838a0363db1dcc407ed4e7",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_result/s04_result.wl": "970f0bfd74d9cb5838703d01d8ce3066ff4dc28367bad67c74076bbab6b7c0b3",
+    "common/s05_inputs.json": "53f304ad84bed1cb57963f53f39ce463b2065eec15a6eff32c16141cbb5a13d7",
+    "common/s05_real_spin_response.wls": "a57a34bb658c985202d47ccddd9a431c767c4d0cecf576eb8bb9817fa9972a37",
+    "common/s05_result/reference/s05_real_spin_response_before_coefficient_reduction.wls": "376fd639b0624d1b0aab627969077213468cdd9811fd6b141960e7c831fa8a3a",
+    "common/s05_result/reference/s05_real_spin_response_before_projection.wls": "899cf6d588e4a2186c8e0312a7361c6c99796bd414ff948a2d4ceee98129967d"
+  }
+}

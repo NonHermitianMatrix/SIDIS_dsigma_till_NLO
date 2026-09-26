@@ -1,0 +1,48 @@
+{
+  "child_maxrss_bytes": 15962112,
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path\nimport os,json,hashlib,tarfile,subprocess,shutil,re,xml.etree.ElementTree as ET\nr=Path.cwd()\nassert os.environ.get('JOB_ID') and r.name=='polarized_SIDIS_20260917T063521Z'\ncache=r/'cache/s05_sector_ward/Hgg/d1394d7246f4688fcd675a6f772afc08a0cb265b82e0acbda7ccf061c16831c0'\nout=r/'Hgg/s05_sector_projection_archive_continuation_result';out.mkdir(exist_ok=True)\nmanifestpath=out/'s05_cache_manifest.json'\nassert not manifestpath.exists() and not list(out.glob('s05_cache_part*.tar.gz*'))\ndef digest(p):\n h=hashlib.sha256()\n with p.open('rb') as f:\n  for b in iter(lambda:f.read(1024**2),b''):h.update(b)\n return h.hexdigest()\ndef atomic(p,v):\n tmp=p.with_name(p.name+'.tmp');tmp.write_text(json.dumps(v,indent=2,sort_keys=True)+chr(10));assert json.loads(tmp.read_text())==v;tmp.replace(p)\ndef strings(v):\n if isinstance(v,str):yield v\n elif isinstance(v,dict):\n  for k,w in v.items():\n   yield k\n   for s in strings(w):yield s\n elif isinstance(v,list):\n  for w in v:\n   for s in strings(w):yield s\ndef protected_paths():\n protected={str((cache/'Real_1_5_P2_2.wl').relative_to(r))}\n for p in list((r/'common').glob('s05*.json'))+list((r/'.cluster').glob('*_job.json')):\n  for s in strings(json.loads(p.read_text())):\n   if s.startswith('cache/s05_sector_ward/Hgg/'):protected.add(s)\n return protected\nprotected=protected_paths()\npairs=sorted(p for p in cache.glob('Real*.wl') if re.fullmatch(r'Real[^_]*_[0-9]+_[0-9]+[.]wl',p.name))\nassert pairs\npairhashes={str(p.relative_to(r)):digest(p) for p in pairs}\nfiles=[];parents={}\nfor pair in pairs:\n for p in sorted(cache.glob(pair.stem+'_*.wl')):\n  relative=str(p.relative_to(r))\n  if relative not in protected:files.append(p);parents[relative]=str(pair.relative_to(r))\nassert files and len(files)==len(set(files))\nassert all(not p.is_symlink() and r in p.resolve().parents for p in files)\ninventory={str(p.relative_to(r)):{'bytes':p.stat().st_size,'sha256':digest(p),'completed_pair':parents[str(p.relative_to(r))]} for p in files}\ngroups=[];group=[];n=0\nfor p in files:\n size=inventory[str(p.relative_to(r))]['bytes'];assert size<80*1024**2\n if group and n+size>80*1024**2:groups.append(group);group=[];n=0\n group.append(p);n+=size\nif group:groups.append(group)\nmanifest={'schema':'polarized-sidis-completed-pair-projection-archive-v1','channel':'Hgg','stage':'s05','archive_job_id':os.environ['JOB_ID'],'completed_pair_sha256':pairhashes,'protected_paths':sorted(protected),'files':inventory,'archives':[],'logical_bytes':sum(v['bytes'] for v in inventory.values()),'restore_base':str(r),'complete':False}\natomic(manifestpath,manifest)\nfor index,group in enumerate(groups,1):\n assert shutil.disk_usage(str(r)).free>2*1024**3+80*1024**2\n final=out/('s05_cache_part'+str(index).zfill(2)+'.tar.gz');temp=final.with_name(final.name+'.tmp')\n with tarfile.open(str(temp),'w:gz',compresslevel=1) as t:\n  for p in group:t.add(str(p),arcname=str(p.relative_to(r)),recursive=False)\n assert temp.stat().st_size<128*1024**2\n seen=set()\n with tarfile.open(str(temp),'r:gz') as t:\n  for member in t:\n   assert member.isfile() and member.name in inventory and member.name not in seen\n   h=hashlib.sha256();size=0\n   with t.extractfile(member) as f:\n    for b in iter(lambda:f.read(1024**2),b''):h.update(b);size+=len(b)\n   assert h.hexdigest()==inventory[member.name]['sha256'] and size==inventory[member.name]['bytes']\n   seen.add(member.name)\n assert seen=={str(p.relative_to(r)) for p in group}\n currentprotected=protected_paths()\n for p in group:\n  relative=str(p.relative_to(r))\n  assert relative not in currentprotected and digest(p)==inventory[relative]['sha256']\n  pair=parents[relative];assert digest(r/pair)==pairhashes[pair]\n temp.rename(final)\n archive={'file':str(final.relative_to(r)),'bytes':final.stat().st_size,'sha256':digest(final)}\n manifest['archives'].append(archive)\n for p in group:manifest['files'][str(p.relative_to(r))]['archive']=archive['file']\n atomic(manifestpath,manifest)\n for p in group:p.unlink()\n print(json.dumps({'event':'VERIFIED_PROJECTION_ARCHIVE','archive':archive,'preserved_pairs':len(pairs),'removed_raw_bytes':sum(inventory[str(p.relative_to(r))]['bytes'] for p in group)}),flush=True)\nfor name,sha in pairhashes.items():assert digest(r/name)==sha\nassert all('archive' in v for v in inventory.values())\nmanifest['complete']=True;manifest['member_hashes_verified']=True;manifest['completed_pair_files_unchanged']=True\natomic(manifestpath,manifest)\nprint('PASS: s05_archive_completed_pair_projections',flush=True)\n"
+  ],
+  "completed_utc": "2026-09-20T05:06:07.957642+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 1073741824
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      2147483648,
+      2147483648
+    ]
+  },
+  "job_configuration_sha256": "4d254e39d4415ed1df45b6daeb306775faac7f9f49a88d19a81013fe3a17612d",
+  "job_id": "14816917",
+  "node": "n7404",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 11030528,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s05_sector_projection_archive_continuation_result/s05_cache_manifest.json": "90c192081d88500aa9e9c1523b0c94beea1899bc8845cedddeec71e014a48651"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "common/s05_pair_assembly_inputs.json": "bf93a760bfc87c388b91bcc7b1d7a333b33b06365e48e8f24aa986971a7e0853",
+    "common/s05_real_spin_response.wls": "24fe8bc812f0a7306ee73ab9346d0e772d6d0bba77839feee131da55142f5c65",
+    "common/s05_real_spin_response_cached_scalar.wls": "ee4189f1cc6b6e1aa618ffc9ff40878a8cb6bd806ed880679d16bb7c209e68ff",
+    "common/s05_real_spin_response_sector_ward.wls": "6948a70cdb9e796425db2d4fb61bf848af2824cdb1e0e493470c0d81a250dd14",
+    "common/s05_spin_map_inputs.json": "328502d14aa9b78daa2c40ad7ef0214f4a5035bb586b3cd53fcb3cc6682e0cf0"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 31.333014149218798
+}

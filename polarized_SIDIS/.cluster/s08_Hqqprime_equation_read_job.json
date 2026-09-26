@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "$HistoryLength=0;\nPrependTo[$Path,\"/u/home/r/rushil/.Mathematica/Applications\"];\n$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\ngate[name_,test_]:=If[!TrueQ[test],Print[\"FAIL: \",name];Quit[1]];\npath=FileNameJoin[{Directory[],\"cache\",\"s08\",\"Hqqprime\",\"5d88d56a2491f8b4a8f039495096c53a891ce9c90a6dab5c2b3df80ae52a4be9\",\"component_0001.wl\"}];\np=MemoryConstrained[TimeConstrained[Get[path],120,Print[\"FAIL: native read time\"];Quit[1]],2*1024^3,Print[\"FAIL: native read memory\"];Quit[1]];\ngate[\"saved component association\",AssociationQ[p]&&AssociationQ[p[\"ReducedCoefficients\"]]&&And@@Values[p[\"Checks\"]]];\nPrint[\"ACCEPTED_COMPONENT_METADATA=\",InputForm[KeyTake[p,{\"Sector\",\"Kind\",\"Index\",\"InputHash\",\"ReconstructionPassed\",\"MissingTargets\"}]]];\nPrint[\"NATIVE_COMPONENT_BYTES=\",ByteCount[p]];\nentries=Normal[p[\"ReducedCoefficients\"]];\nPrint[\"ALL_MASTER_SIZES=\",InputForm[({First[#],ByteCount[Last[#]],LeafCount[Last[#]]}&/@entries)]];\nnonzero=Select[entries,Last[#]=!=0&];gate[\"nonzero saved coefficients\",Length[nonzero]>0];\nselected=First[MinimalBy[nonzero,LeafCount[Last[#]]&]];\nPrint[\"ACTUAL_MASTER_COEFFICIENT=\",InputForm[selected]];\nPrint[\"PASS: s08_read_saved_coefficient\"];Quit[0];"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s08_Hqqprime_equation_read",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s08_Hqqprime_equation_read"
+  },
+  "execution_result": "cache/s08_Hqqprime_equation_read_execution.json",
+  "expected_results": [],
+  "heartbeat": "cache/s08_Hqqprime_equation_read_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 180,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 270
+  },
+  "log": "cache/s08_Hqqprime_equation_read.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "cache/s08/Hqqprime/5d88d56a2491f8b4a8f039495096c53a891ce9c90a6dab5c2b3df80ae52a4be9/component_0001.wl": "186abe405e7d8520771975af34013872aec99537bdbe26f90432b2062ebec191"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s08_read_saved_coefficient"
+}

@@ -1,0 +1,29 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s07_Hqg_ward_resume_job.json",
+  "config_sha256": "a309787412397e56386834a605f5ccebc9a0f53a23d321ef1af897a5e1dfc9a5",
+  "event": "SUBMITTED",
+  "job_id": "14778361",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s07_Hqg_ward_resume_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s07_Hqg_ward_resume",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s07_Hqg_ward_resume_scheduler.log",
+    "-pe",
+    "shared",
+    "8"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "tag": "s07_Hqg_ward_resume"
+}

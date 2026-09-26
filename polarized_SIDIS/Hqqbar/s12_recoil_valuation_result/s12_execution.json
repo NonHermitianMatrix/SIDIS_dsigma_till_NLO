@@ -1,0 +1,56 @@
+{
+  "child_maxrss_bytes": 908705792,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s12_capture_recoil_valuation.wls"
+  ],
+  "completed_utc": "2026-09-18T22:20:53.289849+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "371f899bfc8931fa88bf51c56973baf0f56079c998296127d51e3fa4de8e2c15",
+  "job_id": "14804419",
+  "node": "n7404",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 882360320,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqqbar/s12_recoil_valuation_result/s12_checks.json": "b3e8a9c0be748365813d0f13161301cc2e395ec94d39477809497b03b97b57a2",
+    "Hqqbar/s12_recoil_valuation_result/s12_equations.txt": "8a61c4bc1e102c09faffbafa1d7920e7d446e215a95cfb17f060054f767fc9ce",
+    "Hqqbar/s12_recoil_valuation_result/s12_result.wl": "52e449e2ae0bded08bf31d7b0ef80bdf68a53ea1b953c1a5af4d247df0c1c9be"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqqbar/s08_result/s08_result.wl": "98ec141e8b923b0856062287ec44daff6a620152edcd42ff5a0d2b9c1086eee7",
+    "common/s06_result/reference/s08_result.wl": "76b97660cedd87b8c9dbcf5cb3b46ae8a95835e30ba0bcab7b67c3c78ffcf755",
+    "common/s06_result/reference/s10_result.wl": "dba9edd52b6cc80846a08f65ec2b98b908a4d7a429edff359dd3a460c597a253",
+    "common/s06_result/reference/s15_result.wl": "82cb3ca0de4501b3c045d025e6b93f4228426c344023b2a727fc93d69615ef0b",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s12_assemble_real_spin.wls": "ca3777035d3d220b3fb8fcddb8131348f0d7c97f8fd9b8d54703337c93daa243",
+    "common/s12_capture_recoil_valuation.wls": "640b0932364422ef595b381aad7a3a959f1c0206f33641417128bf6bf7fd3c7d",
+    "common/s12_inputs.json": "037b7d316a22447129102d94fad18f3979ea44b78751790854bb737e520e5253",
+    "common/s12_result/reference/s17_assemble_real.wl": "1df84e6817fdcf4b0db8c588d1083a9be499530c63ba10b6cb9991083d1f77e5"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 630.1093185488135
+}

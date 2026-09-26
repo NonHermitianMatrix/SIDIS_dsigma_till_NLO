@@ -1,0 +1,47 @@
+{
+  "child_maxrss_bytes": 1831473152,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s12_read_recoil_equations.wls"
+  ],
+  "completed_utc": "2026-09-20T17:49:07.881166+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      0,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "f83a0a789166e96dd297d92f0c0972559673601dce056931a02bbf4e6b15ddbf",
+  "job_id": "14822854",
+  "node": "n1077",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 376832,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqq/s12_recoil_equations_result/s12_result.wl": "471687833441639ac6994f1df790ff87fd7ee499c49572806b8642284fa915a8"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqq/s08_result/s08_result.wl": "630b599ef433544214acc847d34ff22ff5f00f105571efd800033d7ccdbef1f6",
+    "common/s12_read_recoil_equations.wls": "4f3ba2fc830bdf6005b86d50317d4cdee14af66f75e24a567d123e8340e4295d"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 92.26769022643566
+}

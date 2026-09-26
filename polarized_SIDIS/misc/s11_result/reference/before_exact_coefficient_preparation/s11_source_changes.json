@@ -1,0 +1,373 @@
+{
+  "base": "common/s12_assemble_real_spin.wls",
+  "base_sha256": "ca3777035d3d220b3fb8fcddb8131348f0d7c97f8fd9b8d54703337c93daa243",
+  "driver": "common/s12_assemble_real_factored_series.wls",
+  "driver_sha256": "7bbecbad4109fd3a2cef0f1d69aeaf8e6050c488427327e941bcaa096be0b44f",
+  "base_changes": [
+    {
+      "before": "gate[\"compute allocation\",StringQ[Environment[\"JOB_ID\"]]&&!StringStartsQ[$MachineName,\"login\"]];\ngate[\"isolated runtime\",StringStartsQ[$UserBaseDirectory,root<>\"/\"]];",
+      "after": "gate[\"authorized local assembly\",Environment[\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\"]===\"1\"&&$VersionNumber===15.];",
+      "count": 1
+    },
+    {
+      "before": "mapPath=FileNameJoin[{root,channel,\"s08_result\",\"s08_result.wl\"}];",
+      "after": "mapPath=FileNameJoin[{root,\"misc\",\"s10_result\",\"s10_result.wl\"}];",
+      "count": 1
+    },
+    {
+      "before": "inputPaths=Join[{configPath,referencePath,mapPath,libraryPath},",
+      "after": "inputPaths=Join[{configPath,referencePath,mapPath,libraryPath,localAssemblySource,localAssemblyConfigPath,\n FileNameJoin[{root,\"misc\",\"s10_result\",\"s10_execution.json\"}]},",
+      "count": 1
+    },
+    {
+      "before": "cache=FileNameJoin[{root,\"cache\",\"s12\",channel,IntegerString[inputHash,16]}];",
+      "after": "cache=FileNameJoin[{root,\"misc\",\"s11_work\",\"integrated\",IntegerString[inputHash,16]}];",
+      "count": 1
+    },
+    {
+      "before": "slots=Quiet[Check[ToExpression[Environment[\"NSLOTS\"]],1]];",
+      "after": "slots=4;",
+      "count": 1
+    },
+    {
+      "before": "\"/u/local/apps/mathematica/13.1/Executables/WolframKernel\"",
+      "after": "\"/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel\"",
+      "count": 1
+    },
+    {
+      "before": "Min[4,slots]",
+      "after": "Min[4,slots]",
+      "count": 1
+    },
+    {
+      "before": "workers=Length[Kernels[]];",
+      "after": "workers=Length[Kernels[]];\ngate[\"bounded local assembly workers\",0<=workers<=4];\nIf[workers>0,gate[\"local assembly worker runtime\",And@@(#===$Version&/@ParallelEvaluate[$Version])]];",
+      "count": 1
+    },
+    {
+      "before": "resultDir=FileNameJoin[{root,channel,\"s12_result\"}];",
+      "after": "resultDir=FileNameJoin[{root,\"misc\",\"s11_result\"}];",
+      "count": 1
+    },
+    {
+      "before": "FileNameJoin[{resultDir,\"s12_result.wl\"}]",
+      "after": "FileNameJoin[{resultDir,\"s11_result.wl\"}]",
+      "count": 1
+    },
+    {
+      "before": "FileNameJoin[{resultDir,\"s12_checks.json\"}]",
+      "after": "FileNameJoin[{resultDir,\"s11_checks.json\"}]",
+      "count": 1
+    },
+    {
+      "before": "Print[\"PASS: s12_assemble_real_spin\"];Quit[0];",
+      "after": "Print[\"PASS: local Hgg real distributions\"];Quit[0];",
+      "count": 1
+    },
+    {
+      "before": "put[value_,file_] := (Put[value,file<>\".tmp\"];RenameFile[file<>\".tmp\",file,OverwriteTarget->True]);",
+      "after": "put[value_,file_] := Module[{serialized},\n serialized=\"Uncompress[\"<>ToString[bounded[Compress[value],\"native assembly compression\"],InputForm]<>\"]\\n\";\n gate[\"bounded compressed assembly file\",StringLength[serialized]<128*1024^2];\n Export[file<>\".tmp\",serialized,\"Text\"];\n gate[\"exact native assembly reload\",bounded[Get[file<>\".tmp\"]===value,\"native assembly reload\"]];\n RenameFile[file<>\".tmp\",file,OverwriteTarget->True]];",
+      "count": 1
+    }
+  ],
+  "driver_changes": [
+    {
+      "before": "referenceSeriesText = Import[referenceSeriesBase, \"Text\"];",
+      "after": "referenceSeriesText = localAssemblyBase[Import[referenceSeriesBase, \"Text\"]];",
+      "count": 1
+    },
+    {
+      "before": "ToExpression[referenceSeriesPrefix, InputForm];",
+      "after": "ToExpression[referenceSeriesPrefix, InputForm];\nlocalAssemblyImportedVersions=mapped[\"ImportedNativeVersions\"];\ngate[\"actual local master-coefficient runtime\",mapped[\"NativeVersions\"]==={$Version,$FeynCalcVersion}&&\n Last[localAssemblyImportedVersions]===$FeynCalcVersion];\nlocalAssemblyReceipt=Import[FileNameJoin[{root,\"misc\",\"s10_result\",\"s10_execution.json\"}],\"RawJSON\"];\ngate[\"accepted local master-coefficient receipt\",TrueQ[localAssemblyReceipt[\"passed\"]]&&\n localAssemblyReceipt[\"execution_backend\"]===\"local\"&&\n localAssemblyReceipt[\"result_sha256\"][\"misc/s10_result/s10_result.wl\"]===IntegerString[FileHash[mapPath,\"SHA256\"],16,64]];",
+      "count": 1
+    },
+    {
+      "before": "referenceSeriesParent[\"NativeVersions\"] === {$Version, $FeynCalcVersion}",
+      "after": "referenceSeriesParent[\"NativeVersions\"] === localAssemblyImportedVersions",
+      "count": 1
+    },
+    {
+      "before": "recoilProof[\"NativeVersions\"] === {$Version,$FeynCalcVersion}",
+      "after": "recoilProof[\"NativeVersions\"] === localAssemblyImportedVersions",
+      "count": 1
+    },
+    {
+      "before": "referenceSeriesStudyDirectory = FileNameJoin[{root, channel, \"s12_factored_series_result\"}];",
+      "after": "referenceSeriesStudyDirectory = FileNameJoin[{root, \"misc\", \"s11_result\", \"own_reference\"}];",
+      "count": 1
+    },
+    {
+      "before": "factoredControlRoot=FileNameJoin[{root,\"cache\",\"s12_factored_controls\",channel,IntegerString[factoredControlBinding,16]}];",
+      "after": "factoredControlRoot=FileNameJoin[{root,\"misc\",\"s11_work\",\"controls\",IntegerString[factoredControlBinding,16]}];",
+      "count": 1
+    },
+    {
+      "before": "referenceSeriesOutput = \"put[result,FileNameJoin[{resultDir,\\\"s12_result.wl\\\"}]];\";",
+      "after": "referenceSeriesOutput = \"put[result,FileNameJoin[{resultDir,\\\"s11_result.wl\\\"}]];\";",
+      "count": 1
+    },
+    {
+      "before": "ToExpression[referenceSeriesRunTail, InputForm];",
+      "after": "localAssemblyProvenance=\"AssociateTo[result,<|\\\"ExecutionBackend\\\"->\\\"local\\\",\\\"NativeVersions\\\"->{$Version,$FeynCalcVersion},\\\"ImportedNativeVersions\\\"->localAssemblyImportedVersions,\\\"LocalDispatchSourceHash\\\"->FileHash[localAssemblySource,\\\"SHA256\\\"],\\\"LocalConfigurationHash\\\"->FileHash[localAssemblyConfigPath,\\\"SHA256\\\"]|>];\\n\";\ngate[\"unique local assembly export\",StringCount[referenceSeriesRunTail,referenceSeriesOutput]===1];\nlocalAssemblyRunTail=StringReplace[referenceSeriesRunTail,referenceSeriesOutput->localAssemblyProvenance<>referenceSeriesOutput];\ngate[\"unchanged complete integration tail after provenance\",SyntaxQ[localAssemblyRunTail]&&\n StringReplace[localAssemblyRunTail,localAssemblyProvenance<>referenceSeriesOutput->referenceSeriesOutput]===referenceSeriesRunTail];\nToExpression[localAssemblyRunTail, InputForm];",
+      "count": 1
+    },
+    {
+      "before": "$FeynCalcStartupMessages = False; Get[\"FeynCalc`\"];",
+      "after": "Null;",
+      "count": 1
+    },
+    {
+      "before": "ToExpression[referenceSeriesPredicate, InputForm];",
+      "after": "ToExpression[referenceSeriesPredicate, InputForm];\nlocalArgumentSource=FileNameJoin[{root,\"misc\",\"s24_canonical_Hgg_arguments.wls\"}];\nlocalArgumentProofPath=FileNameJoin[{root,\"misc\",\"s24_result\",\"s24_result.wl\"}];\nlocalArgumentReceipt=Import[FileNameJoin[{root,\"misc\",\"s24_result\",\"s24_execution.json\"}],\"RawJSON\"];\ngate[\"accepted exact argument comparison receipt\",TrueQ[localArgumentReceipt[\"passed\"]]&&\n localArgumentReceipt[\"source_sha256\"]===IntegerString[FileHash[localArgumentSource,\"SHA256\"],16,64]&&\n localArgumentReceipt[\"result_sha256\"][\"misc/s24_result/s24_result.wl\"]===IntegerString[FileHash[localArgumentProofPath,\"SHA256\"],16,64]];\nlocalArgumentProof=Get[localArgumentProofPath];\nGet[localArgumentSource];\ngate[\"exact executed argument normalization installed\",TrueQ[localArgumentProof[\"Accepted\"]]&&\n And@@Values[localArgumentProof[\"Checks\"]]&&localArgumentProof[\"RetainedResidual\"]===0&&\n localArgumentProof[\"SourceHash\"]===FileHash[localArgumentSource,\"SHA256\"]&&\n DownValues[localCanonicalScalarArguments]===localArgumentProof[\"Definitions\"]];\nzeroCoefficient[value_]:=Factor[Together[localCanonicalScalarArguments[value]]]===0;",
+      "count": 1
+    },
+    {
+      "before": "  {referenceSeriesOriginalSeconds, referenceSeriesOriginalValue} = AbsoluteTiming[referenceOriginalOrdinary[referenceSeriesControl]];",
+      "after": "  referenceSeriesOriginalPath=FileNameJoin[{referenceSeriesStudyDirectory,\"s12_original_ordinary.wl\"}];\n  referenceSeriesOriginalBinding=Hash[{referenceSeriesControl,transverseRule,regions[\"OrdinaryMasters\"],\n    DownValues[epsilonSeries],$Version,$FeynCalcVersion,$Assumptions},\"SHA256\"];\n  referenceSeriesOriginalPacket=If[FileExistsQ[referenceSeriesOriginalPath],Get[referenceSeriesOriginalPath],<||>];\n  If[Lookup[referenceSeriesOriginalPacket,\"Binding\",None]===referenceSeriesOriginalBinding&&\n     KeyExistsQ[referenceSeriesOriginalPacket,\"Value\"]&&\n     Lookup[referenceSeriesOriginalPacket,\"ValueHash\",None]===Hash[referenceSeriesOriginalPacket[\"Value\"],\"SHA256\"],\n    referenceSeriesOriginalValue=referenceSeriesOriginalPacket[\"Value\"];referenceSeriesOriginalSeconds=0;\n    gate[\"exact saved original ordinary reused\",True],\n    {referenceSeriesOriginalSeconds, referenceSeriesOriginalValue} = AbsoluteTiming[referenceOriginalOrdinary[referenceSeriesControl]];\n    gate[\"original ordinary control fully evaluated\",FreeQ[referenceSeriesOriginalValue,\n     _CutIntegral|_SeriesData|_Series|_Integrate|_Missing|_Real|$Failed|$Aborted]];\n    referenceSeriesOriginalPacket=<|\"Binding\"->referenceSeriesOriginalBinding,\n     \"Value\"->referenceSeriesOriginalValue,\"ValueHash\"->Hash[referenceSeriesOriginalValue,\"SHA256\"],\n     \"Seconds\"->referenceSeriesOriginalSeconds,\"NativeVersions\"->{$Version,$FeynCalcVersion}|>;\n    put[referenceSeriesOriginalPacket,referenceSeriesOriginalPath]];",
+      "count": 1
+    },
+    {
+      "before": "    referenceSeriesOrdinary[component_,index_]:=referenceOriginalOrdinary[component];",
+      "after": "    referenceSeriesOrdinary[component_,index_]:=(\n      gate[\"original endpoint reuses exact own ordinary input\",Hash[component,\"SHA256\"]===referenceSeriesControlHash];\n      referenceSeriesStudy[\"OriginalValue\"]);",
+      "count": 1
+    },
+    {
+      "before": "recoilData,rationalSeries,checkedRationalSeries,ordinaryMasterProduct,candidateOrdinary,zeroCoefficient,referenceSeriesOrdinary",
+      "after": "recoilData,rationalSeries,checkedRationalSeries,ordinaryMasterProduct,candidateOrdinary,zeroCoefficient,localCanonicalScalarArguments,referenceSeriesOrdinary",
+      "count": 1
+    },
+    {
+      "before": "Print[\"S12_INPUT_PROJECTION \", InputForm[referenceInputFootprint]];",
+      "after": "Print[\"S12_INPUT_PROJECTION \", InputForm[referenceInputFootprint]];\n(* Reuse accepted components only across the documented memory-lifetime change. *)\nlocalMemoryManifest=Import[FileNameJoin[{root,\"misc\",\"s11_source_changes.json\"}],\"RawJSON\"];\nlocalMemoryResume=localMemoryManifest[\"memory_resume\"];\nlocalMemoryOldSource=FileNameJoin[{root,localMemoryResume[\"source\"]}];\nlocalMemoryOldConfig=FileNameJoin[{root,localMemoryResume[\"config\"]}];\nlocalMemoryReconstructed=ReadString[localMemoryOldSource];\nDo[gate[\"memory-only source edit coverage\",StringCount[localMemoryReconstructed,edit[\"before\"]]===edit[\"count\"]];\n localMemoryReconstructed=StringReplace[localMemoryReconstructed,edit[\"before\"]->edit[\"after\"]],\n {edit,localMemoryManifest[\"memory_changes\"]}];\ngate[\"complete memory-only source reconstruction\",localMemoryReconstructed===ReadString[localAssemblySource]];\nlocalMemoryOldHashes=ReplacePart[inputHashes,{\n Key[StringDrop[localAssemblySource,StringLength[root]+1]]->FileHash[localMemoryOldSource,\"SHA256\"],\n Key[StringDrop[localAssemblyConfigPath,StringLength[root]+1]]->FileHash[localMemoryOldConfig,\"SHA256\"]}];\nlocalMemoryOldHash=Hash[{sourceHash,localMemoryOldHashes,$Version},\"SHA256\"];\nlocalMemoryOldStudy=Get[FileNameJoin[{root,localMemoryResume[\"ordinary_comparison\"]}]];\ngate[\"complete previous calculation identity retained\",TrueQ[localMemoryOldStudy[\"Accepted\"]]&&\n And@@Values[localMemoryOldStudy[\"Checks\"]]&&localMemoryOldStudy[\"InputHashes\"]===localMemoryOldHashes&&\n localMemoryOldStudy[\"InputHash\"]===localMemoryOldHash];\nlocalMemoryReused=Module[{accepted={}},\n KeyValueMap[Function[{relative,expected},Module[{file,idx,saved,reused,target},\n  file=FileNameJoin[{root,relative}];\n  gate[\"pinned accepted component cache\",IntegerString[FileHash[file,\"SHA256\"],16,64]===expected&&\n   FileNameSplit[DirectoryName[file]]===FileNameSplit[FileNameJoin[{root,\"misc\",\"s11_work\",\"integrated\",IntegerString[localMemoryOldHash,16]}]]];\n  idx=FromDigits[StringDrop[FileBaseName[file],StringLength[\"component_\"]]];\n  gate[\"cached component index in actual map\",IntegerQ[idx]&&1<=idx<=Length[mapped[\"Components\"]]];\n  saved=Get[file];\n  gate[\"accepted component and unchanged actual input\",AssociationQ[saved]&&TrueQ[saved[\"Accepted\"]]&&\n   saved[\"InputHash\"]===localMemoryOldHash&&AssociationQ[saved[\"Checks\"]]&&Length[saved[\"Checks\"]]>0&&\n   And@@Values[saved[\"Checks\"]]&&KeyTake[saved,{\"Sector\",\"Kind\",\"Index\"}]===\n    KeyTake[mapped[\"Components\"][[idx]],{\"Sector\",\"Kind\",\"Index\"}]];\n  reused=Join[saved,<|\"InputHash\"->inputHash,\"ReusedFromInputHash\"->localMemoryOldHash,\n    \"ReusedFromFileHash\"->FileHash[file,\"SHA256\"]|>];\n  gate[\"entire cached payload preserved\",KeyDrop[reused,{\"InputHash\",\"ReusedFromInputHash\",\"ReusedFromFileHash\"}]===\n    KeyDrop[saved,{\"InputHash\"}]];\n  target=FileNameJoin[{cache,FileNameTake[file]}];\n  If[FileExistsQ[target],gate[\"exact existing replay retained\",Get[target]===reused],put[reused,target]];\n  AppendTo[accepted,idx]]],localMemoryResume[\"cache_file_sha256\"]];\n accepted];\nClear[localMemoryOldStudy,localMemoryReconstructed];ClearSystemCache[];\nPrint[\"ACCEPTED_COMPONENTS_REUSED \",Length[localMemoryReused],\" \",localMemoryReused];\n",
+      "count": 1
+    },
+    {
+      "before": "(* Compare the complete smallest nonzero own component before remaining integration. *)",
+      "after": "(* Component-specific recoil memos are discarded after each unchanged assembly call. *)\nlocalRecoilDefinitions=recoilProof[\"HelperDefinitions\"];\ngate[\"only general recoil definition retained\",AllTrue[localRecoilDefinitions,!FreeQ[First[#],_Pattern]&]];\nlocalMemoryAssemble[component_,index_]:=Module[\n {value,beforeDefinitions=DownValues[recoilData],beforeMemory=MemoryInUse[],memoBytes},\n value=Block[{recoilData},\n  DownValues[recoilData]=localRecoilDefinitions;\n  With[{answer=assemble[component,index]},memoBytes=ByteCount[DownValues[recoilData]];answer]];\n gate[\"component recoil definitions restored\",DownValues[recoilData]===beforeDefinitions];\n ClearSystemCache[];\n Print[\"COMPONENT_MEMORY \",index,\" temporary_memo_bytes \",memoBytes,\n  \" memory_before \",beforeMemory,\" memory_after \",MemoryInUse[]];\n value];\n\n(* Compare the complete smallest nonzero own component before remaining integration. *)",
+      "count": 1
+    },
+    {
+      "before": "Block[{cache=factoredCandidateCache},assemble[factoredTask,factoredControlIndex]]",
+      "after": "Block[{cache=factoredCandidateCache},localMemoryAssemble[factoredTask,factoredControlIndex]]",
+      "count": 1
+    },
+    {
+      "before": "recoilData,rationalSeries,checkedRationalSeries,ordinaryMasterProduct,candidateOrdinary,zeroCoefficient,localCanonicalScalarArguments,referenceSeriesOrdinary",
+      "after": "recoilData,localRecoilDefinitions,localMemoryAssemble,rationalSeries,checkedRationalSeries,ordinaryMasterProduct,candidateOrdinary,zeroCoefficient,localCanonicalScalarArguments,referenceSeriesOrdinary",
+      "count": 1
+    },
+    {
+      "before": "ToExpression[localAssemblyRunTail, InputForm];",
+      "after": "localUnscopedRunTail=localAssemblyRunTail;\ngate[\"complete worker task-call coverage\",StringCount[localUnscopedRunTail,\"assemble@@#&\"]===2];\nlocalAssemblyRunTail=StringReplace[localUnscopedRunTail,\"assemble@@#&\"->\"localMemoryAssemble@@#&\"];\ngate[\"only task memory scope changed\",SyntaxQ[localAssemblyRunTail]&&\n StringReplace[localAssemblyRunTail,\"localMemoryAssemble@@#&\"->\"assemble@@#&\"]===localUnscopedRunTail];\nToExpression[localAssemblyRunTail, InputForm];",
+      "count": 1
+    },
+    {
+      "before": "(* Reuse accepted components only across the documented memory-lifetime change. *)",
+      "after": "(* Reuse accepted components across the reviewed memory and exact regulator changes. *)",
+      "count": 1
+    },
+    {
+      "before": "memory-only source edit coverage",
+      "after": "reviewed source edit coverage",
+      "count": 1
+    },
+    {
+      "before": "{edit,localMemoryManifest[\"memory_changes\"]}];",
+      "after": "{edit,Join[localMemoryManifest[\"memory_changes\"],localMemoryManifest[\"regulator_changes\"]]}];",
+      "count": 1
+    },
+    {
+      "before": "complete memory-only source reconstruction",
+      "after": "complete reviewed source reconstruction",
+      "count": 1
+    },
+    {
+      "before": "recoilProofRelative = \"Hqqbar/s12_recoil_factorization_result/s12_result.wl\";",
+      "after": "\nlocalRegulatorSource=FileNameJoin[{root,\"misc\",\"s29_exact_Hgg_regulator_series.wls\"}];\nlocalRegulatorProofPath=FileNameJoin[{root,\"misc\",\"s29_result\",\"s29_result.wl\"}];\nlocalRegulatorReceipt=Import[FileNameJoin[{root,\"misc\",\"s29_result\",\"s29_execution.json\"}],\"RawJSON\"];\ngate[\"accepted exact regulator recurrence receipt\",TrueQ[localRegulatorReceipt[\"passed\"]]&&\n localRegulatorReceipt[\"source_sha256\"]===IntegerString[FileHash[localRegulatorSource,\"SHA256\"],16,64]&&\n localRegulatorReceipt[\"result_sha256\"][\"misc/s29_result/s29_result.wl\"]===\n  IntegerString[FileHash[localRegulatorProofPath,\"SHA256\"],16,64]];\nlocalRegulatorProof=Get[localRegulatorProofPath];\ngate[\"same complete input recurrence and master product\",TrueQ[localRegulatorProof[\"Accepted\"]]&&\n And@@Values[localRegulatorProof[\"Checks\"]]&&localRegulatorProof[\"NativeVersions\"]==={$Version,$FeynCalcVersion}&&\n localRegulatorProof[\"OriginalCheckedDefinitions\"]===DownValues[checkedRationalSeries]&&\n localRegulatorProof[\"OriginalProductDefinitions\"]===DownValues[ordinaryMasterProduct]];\nGet[localRegulatorSource];\ngate[\"exact executed polynomial recurrence helper\",DownValues[localExactRegulatorSeries]===localRegulatorProof[\"Definitions\"]];\nDownValues[checkedRationalSeries]=localRegulatorProof[\"CheckedDefinitions\"];\nDownValues[ordinaryMasterProduct]=localRegulatorProof[\"ProductDefinitions\"];\ngate[\"validated recurrence and master product installed\",\n DownValues[checkedRationalSeries]===localRegulatorProof[\"CheckedDefinitions\"]&&\n DownValues[ordinaryMasterProduct]===localRegulatorProof[\"ProductDefinitions\"]];\nrecoilProofRelative = \"Hqqbar/s12_recoil_factorization_result/s12_result.wl\";",
+      "count": 1
+    },
+    {
+      "before": "recoilData,localRecoilDefinitions,localMemoryAssemble,rationalSeries,",
+      "after": "localExactRegulatorSeries,localSeriesRoot,localSeriesSource,recoilData,localRecoilDefinitions,localMemoryAssemble,rationalSeries,",
+      "count": 1
+    },
+    {
+      "before": "Join[localMemoryManifest[\"memory_changes\"],localMemoryManifest[\"regulator_changes\"]]",
+      "after": "localMemoryManifest[\"resume_changes\"]",
+      "count": 1
+    },
+    {
+      "before": "KeyDrop[saved,{\"InputHash\"}]];",
+      "after": "KeyDrop[saved,{\"InputHash\",\"ReusedFromInputHash\",\"ReusedFromFileHash\"}]];",
+      "count": 1
+    },
+    {
+      "before": "\nreferenceSeriesControlCode = ",
+      "after": "\nlocalRecoilSource=FileNameJoin[{root,\"misc\",\"s31_exact_Hgg_recoil_sum.wls\"}];\nlocalRecoilProofPath=FileNameJoin[{root,\"misc\",\"s31_result\",\"s31_result.wl\"}];\nlocalRecoilReceipt=Import[FileNameJoin[{root,\"misc\",\"s31_result\",\"s31_execution.json\"}],\"RawJSON\"];\ngate[\"accepted exact endpoint derivative receipt\",TrueQ[localRecoilReceipt[\"passed\"]]&&\n localRecoilReceipt[\"source_sha256\"]===IntegerString[FileHash[localRecoilSource,\"SHA256\"],16,64]&&\n localRecoilReceipt[\"result_sha256\"][\"misc/s31_result/s31_result.wl\"]===\n  IntegerString[FileHash[localRecoilProofPath,\"SHA256\"],16,64]];\nlocalRecoilProof=Get[localRecoilProofPath];\ngate[\"accepted endpoint derivative comparison\",TrueQ[localRecoilProof[\"Accepted\"]]&&\n And@@Values[localRecoilProof[\"Checks\"]]&&localRecoilProof[\"NativeVersions\"]==={$Version,FeynCalc`$FeynCalcVersion}&&\n DownValues[recoilData]===recoilProof[\"HelperDefinitions\"]];\nGet[localRecoilSource];\ngate[\"exact executed endpoint helpers\",DownValues[localExactRecoilRatio]===localRecoilProof[\"Definitions\"]&&\n DownValues[localRecoilTerms]===localRecoilProof[\"TermDefinitions\"]];\nlocalRecoilReferenceText=ReadString[FileNameJoin[{root,\"common\",\"s12_check_recoil_factorization.wls\"}]];\nlocalRecoilStart=\"recoilData[coefficient_, sign_] :=\";localRecoilEnd=\"\\nsoftRows[\";\ngate[\"unique complete reference recoil definition\",StringCount[localRecoilReferenceText,localRecoilStart]===1&&\n StringCount[localRecoilReferenceText,localRecoilEnd]===1];\nlocalRecoilOriginal=localRecoilStart<>First[StringSplit[Last[StringSplit[localRecoilReferenceText,localRecoilStart]],localRecoilEnd]];\nlocalRecoilOldReduction=\"  ratio = bounded[Factor[Together[derivative]], \\\"reduce actual logarithmic derivative\\\"];\\n  gate[\\\"exact reduced logarithmic derivative\\\", bounded[Factor[Together[ratio - derivative]] === 0,\\n    \\\"logarithmic derivative reconstruction\\\"]];\";\nlocalRecoilNewReduction=\"  ratio = localExactRecoilRatio[rational];\";\ngate[\"single exact derivative reduction replacement\",StringCount[localRecoilOriginal,localRecoilOldReduction]===1];\nlocalRecoilChanged=StringReplace[localRecoilOriginal,localRecoilOldReduction->localRecoilNewReduction];\ngate[\"complete original recoil contract retained\",SyntaxQ[localRecoilChanged]&&\n StringReplace[localRecoilChanged,localRecoilNewReduction->localRecoilOldReduction]===localRecoilOriginal];\nToExpression[localRecoilChanged,InputForm];\n\nreferenceSeriesControlCode = ",
+      "count": 1
+    },
+    {
+      "before": "localRecoilDefinitions=recoilProof[\"HelperDefinitions\"];",
+      "after": "localRecoilDefinitions=Select[DownValues[recoilData],!FreeQ[First[#],_Pattern]&];",
+      "count": 1
+    },
+    {
+      "before": "localExactRegulatorSeries,localSeriesRoot,localSeriesSource,recoilData,",
+      "after": "localExactRegulatorSeries,localSeriesRoot,localSeriesSource,localRecoilTerms,localExactRecoilRatio,localRecoilRoot,localRecoilSource,recoilData,",
+      "count": 1
+    }
+  ],
+  "prefix": "(* Local runtime and bounded storage for the unchanged reference real assembly. *)\n$HistoryLength=0;\n$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\nlocalAssemblyRoot=DirectoryName[DirectoryName[ExpandFileName[$InputFileName]]];SetDirectory[localAssemblyRoot];\nlocalAssemblySource=FileNameJoin[{localAssemblyRoot,\"misc\",\"s11_assemble_Hgg_real.wls\"}];\nlocalAssemblyConfigPath=FileNameJoin[{localAssemblyRoot,\"misc\",\"s11_inputs.json\"}];\nlocalAssemblyConfig=Import[localAssemblyConfigPath,\"RawJSON\"];\nlocalAssemblyRequire[n_,x_]:=If[!TrueQ[x],Print[\"FAIL: \",n];Quit[1]];\nlocalAssemblyRequire[\"bound complete local assembly source\",SyntaxQ[ReadString[localAssemblySource]]&&\n IntegerString[FileHash[localAssemblySource,\"SHA256\"],16,64]===localAssemblyConfig[\"source_sha256\"]];\nKeyValueMap[Function[{p,h},localAssemblyRequire[\"pinned assembly input \"<>p,\n IntegerString[FileHash[FileNameJoin[{localAssemblyRoot,p}],\"SHA256\"],16,64]===h]],localAssemblyConfig[\"input_sha256\"]];\nSetEnvironment[\"POLARIZED_SIDIS_CHANNEL\"->\"Hgg\"];\nlocalAssemblyBase[text_]:=Module[{edits,changed},edits={\"gate[\\\"compute allocation\\\",StringQ[Environment[\\\"JOB_ID\\\"]]&&!StringStartsQ[$MachineName,\\\"login\\\"]];\\ngate[\\\"isolated runtime\\\",StringStartsQ[$UserBaseDirectory,root<>\\\"/\\\"]];\"->\"gate[\\\"authorized local assembly\\\",Environment[\\\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\\\"]===\\\"1\\\"&&$VersionNumber===15.];\",\n\"mapPath=FileNameJoin[{root,channel,\\\"s08_result\\\",\\\"s08_result.wl\\\"}];\"->\"mapPath=FileNameJoin[{root,\\\"misc\\\",\\\"s10_result\\\",\\\"s10_result.wl\\\"}];\",\n\"inputPaths=Join[{configPath,referencePath,mapPath,libraryPath},\"->\"inputPaths=Join[{configPath,referencePath,mapPath,libraryPath,localAssemblySource,localAssemblyConfigPath,\\n FileNameJoin[{root,\\\"misc\\\",\\\"s10_result\\\",\\\"s10_execution.json\\\"}]},\",\n\"cache=FileNameJoin[{root,\\\"cache\\\",\\\"s12\\\",channel,IntegerString[inputHash,16]}];\"->\"cache=FileNameJoin[{root,\\\"misc\\\",\\\"s11_work\\\",\\\"integrated\\\",IntegerString[inputHash,16]}];\",\n\"slots=Quiet[Check[ToExpression[Environment[\\\"NSLOTS\\\"]],1]];\"->\"slots=4;\",\n\"\\\"/u/local/apps/mathematica/13.1/Executables/WolframKernel\\\"\"->\"\\\"/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel\\\"\",\n\"Min[4,slots]\"->\"Min[4,slots]\",\n\"workers=Length[Kernels[]];\"->\"workers=Length[Kernels[]];\\ngate[\\\"bounded local assembly workers\\\",0<=workers<=4];\\nIf[workers>0,gate[\\\"local assembly worker runtime\\\",And@@(#===$Version&/@ParallelEvaluate[$Version])]];\",\n\"resultDir=FileNameJoin[{root,channel,\\\"s12_result\\\"}];\"->\"resultDir=FileNameJoin[{root,\\\"misc\\\",\\\"s11_result\\\"}];\",\n\"FileNameJoin[{resultDir,\\\"s12_result.wl\\\"}]\"->\"FileNameJoin[{resultDir,\\\"s11_result.wl\\\"}]\",\n\"FileNameJoin[{resultDir,\\\"s12_checks.json\\\"}]\"->\"FileNameJoin[{resultDir,\\\"s11_checks.json\\\"}]\",\n\"Print[\\\"PASS: s12_assemble_real_spin\\\"];Quit[0];\"->\"Print[\\\"PASS: local Hgg real distributions\\\"];Quit[0];\",\n\"put[value_,file_] := (Put[value,file<>\\\".tmp\\\"];RenameFile[file<>\\\".tmp\\\",file,OverwriteTarget->True]);\"->\"put[value_,file_] := Module[{serialized},\\n serialized=\\\"Uncompress[\\\"<>ToString[bounded[Compress[value],\\\"native assembly compression\\\"],InputForm]<>\\\"]\\\\n\\\";\\n gate[\\\"bounded compressed assembly file\\\",StringLength[serialized]<128*1024^2];\\n Export[file<>\\\".tmp\\\",serialized,\\\"Text\\\"];\\n gate[\\\"exact native assembly reload\\\",bounded[Get[file<>\\\".tmp\\\"]===value,\\\"native assembly reload\\\"]];\\n RenameFile[file<>\\\".tmp\\\",file,OverwriteTarget->True]];\"};\n localAssemblyRequire[\"unique reviewed local assembly interfaces\",And@@(StringCount[text,First[#]]===1&/@edits)];\n changed=StringReplace[text,edits];localAssemblyRequire[\"complete native local assembly syntax\",SyntaxQ[changed]];changed];\n",
+  "source_sha256": "8f8f91c8ae41d358b2ff9bec94a53d2feade842e2a497d26e91184fcf47022c9",
+  "comparison_correction_proof": "misc/s24_result/s24_result.wl",
+  "comparison_correction_proof_sha256": "1ed61045d5ccd8692e7a1263cb335618d1bd63ea75fa3f9e3087a2e1d32452ee",
+  "memory_changes": [
+    {
+      "before": "Print[\"S12_INPUT_PROJECTION \", InputForm[referenceInputFootprint]];",
+      "after": "Print[\"S12_INPUT_PROJECTION \", InputForm[referenceInputFootprint]];\n(* Reuse accepted components only across the documented memory-lifetime change. *)\nlocalMemoryManifest=Import[FileNameJoin[{root,\"misc\",\"s11_source_changes.json\"}],\"RawJSON\"];\nlocalMemoryResume=localMemoryManifest[\"memory_resume\"];\nlocalMemoryOldSource=FileNameJoin[{root,localMemoryResume[\"source\"]}];\nlocalMemoryOldConfig=FileNameJoin[{root,localMemoryResume[\"config\"]}];\nlocalMemoryReconstructed=ReadString[localMemoryOldSource];\nDo[gate[\"memory-only source edit coverage\",StringCount[localMemoryReconstructed,edit[\"before\"]]===edit[\"count\"]];\n localMemoryReconstructed=StringReplace[localMemoryReconstructed,edit[\"before\"]->edit[\"after\"]],\n {edit,localMemoryManifest[\"memory_changes\"]}];\ngate[\"complete memory-only source reconstruction\",localMemoryReconstructed===ReadString[localAssemblySource]];\nlocalMemoryOldHashes=ReplacePart[inputHashes,{\n Key[StringDrop[localAssemblySource,StringLength[root]+1]]->FileHash[localMemoryOldSource,\"SHA256\"],\n Key[StringDrop[localAssemblyConfigPath,StringLength[root]+1]]->FileHash[localMemoryOldConfig,\"SHA256\"]}];\nlocalMemoryOldHash=Hash[{sourceHash,localMemoryOldHashes,$Version},\"SHA256\"];\nlocalMemoryOldStudy=Get[FileNameJoin[{root,localMemoryResume[\"ordinary_comparison\"]}]];\ngate[\"complete previous calculation identity retained\",TrueQ[localMemoryOldStudy[\"Accepted\"]]&&\n And@@Values[localMemoryOldStudy[\"Checks\"]]&&localMemoryOldStudy[\"InputHashes\"]===localMemoryOldHashes&&\n localMemoryOldStudy[\"InputHash\"]===localMemoryOldHash];\nlocalMemoryReused=Module[{accepted={}},\n KeyValueMap[Function[{relative,expected},Module[{file,idx,saved,reused,target},\n  file=FileNameJoin[{root,relative}];\n  gate[\"pinned accepted component cache\",IntegerString[FileHash[file,\"SHA256\"],16,64]===expected&&\n   FileNameSplit[DirectoryName[file]]===FileNameSplit[FileNameJoin[{root,\"misc\",\"s11_work\",\"integrated\",IntegerString[localMemoryOldHash,16]}]]];\n  idx=FromDigits[StringDrop[FileBaseName[file],StringLength[\"component_\"]]];\n  gate[\"cached component index in actual map\",IntegerQ[idx]&&1<=idx<=Length[mapped[\"Components\"]]];\n  saved=Get[file];\n  gate[\"accepted component and unchanged actual input\",AssociationQ[saved]&&TrueQ[saved[\"Accepted\"]]&&\n   saved[\"InputHash\"]===localMemoryOldHash&&AssociationQ[saved[\"Checks\"]]&&Length[saved[\"Checks\"]]>0&&\n   And@@Values[saved[\"Checks\"]]&&KeyTake[saved,{\"Sector\",\"Kind\",\"Index\"}]===\n    KeyTake[mapped[\"Components\"][[idx]],{\"Sector\",\"Kind\",\"Index\"}]];\n  reused=Join[saved,<|\"InputHash\"->inputHash,\"ReusedFromInputHash\"->localMemoryOldHash,\n    \"ReusedFromFileHash\"->FileHash[file,\"SHA256\"]|>];\n  gate[\"entire cached payload preserved\",KeyDrop[reused,{\"InputHash\",\"ReusedFromInputHash\",\"ReusedFromFileHash\"}]===\n    KeyDrop[saved,{\"InputHash\"}]];\n  target=FileNameJoin[{cache,FileNameTake[file]}];\n  If[FileExistsQ[target],gate[\"exact existing replay retained\",Get[target]===reused],put[reused,target]];\n  AppendTo[accepted,idx]]],localMemoryResume[\"cache_file_sha256\"]];\n accepted];\nClear[localMemoryOldStudy,localMemoryReconstructed];ClearSystemCache[];\nPrint[\"ACCEPTED_COMPONENTS_REUSED \",Length[localMemoryReused],\" \",localMemoryReused];\n",
+      "count": 1
+    },
+    {
+      "before": "(* Compare the complete smallest nonzero own component before remaining integration. *)",
+      "after": "(* Component-specific recoil memos are discarded after each unchanged assembly call. *)\nlocalRecoilDefinitions=recoilProof[\"HelperDefinitions\"];\ngate[\"only general recoil definition retained\",AllTrue[localRecoilDefinitions,!FreeQ[First[#],_Pattern]&]];\nlocalMemoryAssemble[component_,index_]:=Module[\n {value,beforeDefinitions=DownValues[recoilData],beforeMemory=MemoryInUse[],memoBytes},\n value=Block[{recoilData},\n  DownValues[recoilData]=localRecoilDefinitions;\n  With[{answer=assemble[component,index]},memoBytes=ByteCount[DownValues[recoilData]];answer]];\n gate[\"component recoil definitions restored\",DownValues[recoilData]===beforeDefinitions];\n ClearSystemCache[];\n Print[\"COMPONENT_MEMORY \",index,\" temporary_memo_bytes \",memoBytes,\n  \" memory_before \",beforeMemory,\" memory_after \",MemoryInUse[]];\n value];\n\n(* Compare the complete smallest nonzero own component before remaining integration. *)",
+      "count": 1
+    },
+    {
+      "before": "Block[{cache=factoredCandidateCache},assemble[factoredTask,factoredControlIndex]]",
+      "after": "Block[{cache=factoredCandidateCache},localMemoryAssemble[factoredTask,factoredControlIndex]]",
+      "count": 1
+    },
+    {
+      "before": "recoilData,rationalSeries,checkedRationalSeries,ordinaryMasterProduct,candidateOrdinary,zeroCoefficient,localCanonicalScalarArguments,referenceSeriesOrdinary",
+      "after": "recoilData,localRecoilDefinitions,localMemoryAssemble,rationalSeries,checkedRationalSeries,ordinaryMasterProduct,candidateOrdinary,zeroCoefficient,localCanonicalScalarArguments,referenceSeriesOrdinary",
+      "count": 1
+    },
+    {
+      "before": "ToExpression[localAssemblyRunTail, InputForm];",
+      "after": "localUnscopedRunTail=localAssemblyRunTail;\ngate[\"complete worker task-call coverage\",StringCount[localUnscopedRunTail,\"assemble@@#&\"]===2];\nlocalAssemblyRunTail=StringReplace[localUnscopedRunTail,\"assemble@@#&\"->\"localMemoryAssemble@@#&\"];\ngate[\"only task memory scope changed\",SyntaxQ[localAssemblyRunTail]&&\n StringReplace[localAssemblyRunTail,\"localMemoryAssemble@@#&\"->\"assemble@@#&\"]===localUnscopedRunTail];\nToExpression[localAssemblyRunTail, InputForm];",
+      "count": 1
+    }
+  ],
+  "memory_resume": {
+    "source": "misc/s11_result/reference/before_four_workers/s11_assemble_Hgg_real.wls",
+    "config": "misc/s11_result/reference/before_four_workers/s11_inputs.json",
+    "ordinary_comparison": "misc/s11_result/reference/before_four_workers/own_reference/s12_result.wl",
+    "cache_file_sha256": {
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0016.wl": "c1b74201799628ba7c0b04663579dfe1cd046724ca044bc9fb82176c56257956",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0013.wl": "017382377181bbb26e03fd1eefd339675d06769c26083139a0ad5b822cc9f82c",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0007.wl": "3bc7bb484e9378b91dd6484f58f89b0dc168e24153b4b272c74d0bb8bd1014ef",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0002.wl": "0c0f2f42a0ba2d6982dd77a17a9bb1178c9d2997274d4e2fa087ce7f3c2d4289",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0010.wl": "da10f88b11ab08e16ba66b2088680b514d5d2b600ce35698fa8c1f0346f58c89",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0008.wl": "9c3a38714ed760a564b450048e00c67e024d67bfb4a5d0f824adc90008341229",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0017.wl": "be83f2061df7ea0e060c9fc00602547b387ac8b90f8d0d3913baf30879436ea9",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0021.wl": "59963dc1d15297c1c25ed2a6501f7c1be53554c489570da17f7e267a28f16b1d",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0028.wl": "16692e735a26e959d686b16dbe7d1d8293212be213abb941eeaa70a0869979d2",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0005.wl": "a8a7366bd7430acd3055f0d52f1be0e7c5c9c7e5bf154458b7ce7e565577e6ce",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0004.wl": "303c8ec17f503a6196b847cbca712406dba29a15d5172d56bf84751406ae6ce2",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0003.wl": "b9f6787091b2fc74a12a615038067c19e7022e720095edaeaee7eee250fd6c89",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0030.wl": "49bc1fb73e5f2413694f6113f317891f130a79d0cd7415cbf7d4e34d2ced1f80",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0031.wl": "2f0b77803bbebb692518b581ed7729b83d81aeae5454d115e24122f409fea756",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0025.wl": "1a8b7d9194ca6d88eb9e3551e01d7612e16353c261adc8b5e72e910e748e4d8d",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0032.wl": "fde9afc4844d603465f3dfa29b871def581afb3296f03180e09bfd7fdb1c86d9",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0014.wl": "6d484d8040886d8e118e535d38f9c343cd32329733d6a67a4d15cf46a6539781",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0029.wl": "f90b7be255c096784b34fae5522dacf7d8f3ac547173a3973a17be4ba0c9fca9",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0001.wl": "a093c8465032b40609c9ec5da280c66558b446cca86eb86f96750127bb5248b1",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0035.wl": "a5cd242f2c7bc622abebd05a14c53c058677c90b0d515599592b0955745b6139",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0012.wl": "271f57c35f0b0b67a369b0b6c52dd071a44fe69935b2c5fe2a7ac6bb16d7f457",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0019.wl": "c2c3d95265f7d7362dcf43b9d8d2e18289c70473612c76b60e74e6a026cc3e39",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0009.wl": "0fc1bb36885aa46390b3481d7648d91d2882c89453d99421acaa5b06615e6988",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0026.wl": "fd115e2e2135a189e5eb25f3e9cd274320da46319d9f08e4b79fb7b7930e544e",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0027.wl": "14b03a4b4eed116aea4a5050b258dce8d5cab034b1503012ee6ac29ce3e951f7",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0015.wl": "f057702b252fd8b5fd99bcf9a5bb20b8e674ba4fb6b11c4f71bfeb72ec82974c",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0024.wl": "be7ae2958fb4def785f275ecd511e680b70ba32d37830e070802b5ee88029dd3",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0006.wl": "ab97a49078fefc00306743ddc0fc02fc1aedde04174032d01458bd59dedc543c",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0081.wl": "89600a208b363c8671ed1347f15d3772d0aec3aff86a7ca178dacafbb02eda09",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0022.wl": "f24f9299d5d1649cd894aba3b9b701d28779b8999d4d8013cb6ac84f332edb7d",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0034.wl": "7ad29736cb2b4a69a5a31509e45c2fcd2904b556a041c2a8ecc2f61030c296a1",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0037.wl": "23baabce833c876d99a286adb44a8d02875c9f9ff5389c52a0a295bb5beec58a",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0011.wl": "33189265ea3f2375b7b47585500e208169ebbb9269d3676a92a40d226f6a5835",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0020.wl": "23a9d5a20110eeb67578fc48c52ecfa5451c4e764f211f7321caa2c613914374",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0038.wl": "3d464305cb1f13b1a1386b628e1eb18a0906422ac55fa0413dc48ad8547a65d9",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0023.wl": "9549901a311f5cc97c217998d38b48728ee9700e173d36ae3c7609277a85b2e4",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0018.wl": "be2d9b0d90047e16d9abc52daa8236c81616c669edeef9bd3a95d13fec8c5011",
+      "misc/s11_work/integrated/7e41f330779fb7d01629863c20d48aed62599c90dc282514f274095f0c012fd8/component_0033.wl": "7506a19dd9f80ed606ab43ec4ee0f4b3383657671782192ae700336ff0acceb2"
+    }
+  },
+  "regulator_changes": [
+    {
+      "before": "(* Reuse accepted components only across the documented memory-lifetime change. *)",
+      "after": "(* Reuse accepted components across the reviewed memory and exact regulator changes. *)",
+      "count": 1
+    },
+    {
+      "before": "memory-only source edit coverage",
+      "after": "reviewed source edit coverage",
+      "count": 1
+    },
+    {
+      "before": "{edit,localMemoryManifest[\"memory_changes\"]}];",
+      "after": "{edit,Join[localMemoryManifest[\"memory_changes\"],localMemoryManifest[\"regulator_changes\"]]}];",
+      "count": 1
+    },
+    {
+      "before": "complete memory-only source reconstruction",
+      "after": "complete reviewed source reconstruction",
+      "count": 1
+    },
+    {
+      "before": "recoilProofRelative = \"Hqqbar/s12_recoil_factorization_result/s12_result.wl\";",
+      "after": "\nlocalRegulatorSource=FileNameJoin[{root,\"misc\",\"s29_exact_Hgg_regulator_series.wls\"}];\nlocalRegulatorProofPath=FileNameJoin[{root,\"misc\",\"s29_result\",\"s29_result.wl\"}];\nlocalRegulatorReceipt=Import[FileNameJoin[{root,\"misc\",\"s29_result\",\"s29_execution.json\"}],\"RawJSON\"];\ngate[\"accepted exact regulator recurrence receipt\",TrueQ[localRegulatorReceipt[\"passed\"]]&&\n localRegulatorReceipt[\"source_sha256\"]===IntegerString[FileHash[localRegulatorSource,\"SHA256\"],16,64]&&\n localRegulatorReceipt[\"result_sha256\"][\"misc/s29_result/s29_result.wl\"]===\n  IntegerString[FileHash[localRegulatorProofPath,\"SHA256\"],16,64]];\nlocalRegulatorProof=Get[localRegulatorProofPath];\ngate[\"same complete input recurrence and master product\",TrueQ[localRegulatorProof[\"Accepted\"]]&&\n And@@Values[localRegulatorProof[\"Checks\"]]&&localRegulatorProof[\"NativeVersions\"]==={$Version,$FeynCalcVersion}&&\n localRegulatorProof[\"OriginalCheckedDefinitions\"]===DownValues[checkedRationalSeries]&&\n localRegulatorProof[\"OriginalProductDefinitions\"]===DownValues[ordinaryMasterProduct]];\nGet[localRegulatorSource];\ngate[\"exact executed polynomial recurrence helper\",DownValues[localExactRegulatorSeries]===localRegulatorProof[\"Definitions\"]];\nDownValues[checkedRationalSeries]=localRegulatorProof[\"CheckedDefinitions\"];\nDownValues[ordinaryMasterProduct]=localRegulatorProof[\"ProductDefinitions\"];\ngate[\"validated recurrence and master product installed\",\n DownValues[checkedRationalSeries]===localRegulatorProof[\"CheckedDefinitions\"]&&\n DownValues[ordinaryMasterProduct]===localRegulatorProof[\"ProductDefinitions\"]];\nrecoilProofRelative = \"Hqqbar/s12_recoil_factorization_result/s12_result.wl\";",
+      "count": 1
+    },
+    {
+      "before": "recoilData,localRecoilDefinitions,localMemoryAssemble,rationalSeries,",
+      "after": "localExactRegulatorSeries,localSeriesRoot,localSeriesSource,recoilData,localRecoilDefinitions,localMemoryAssemble,rationalSeries,",
+      "count": 1
+    }
+  ],
+  "regulator_proof": {
+    "source": "misc/s29_exact_Hgg_regulator_series.wls",
+    "result": "misc/s29_result/s29_result.wl",
+    "receipt": "misc/s29_result/s29_execution.json"
+  },
+  "resume_changes": [
+    {
+      "before": "slots=2;",
+      "after": "slots=4;",
+      "count": 1
+    },
+    {
+      "before": "Min[2,slots]",
+      "after": "Min[4,slots]",
+      "count": 1
+    },
+    {
+      "before": "0<=workers<=2",
+      "after": "0<=workers<=4",
+      "count": 1
+    }
+  ],
+  "endpoint_proof": {
+    "misc/s31_exact_Hgg_recoil_sum.wls": "4b0b6bf2b1451af3c7ba8a2ca280b561154b09cd819835d6ad50558a1dc672d0",
+    "misc/s31_sum_recoil_polynomials.py": "958d2da4c3048340c7cf8f18a389a6835bf43ee7535ab8bbaa393427f17ac35b",
+    "misc/s31_result/s31_result.wl": "e462676a8a4a9b7ed2266ade9753a0254eaaa25e3054dc1444ff6048bf2d3aa8",
+    "misc/s31_result/s31_execution.json": "4d8769ae219c33dda2ded641a45dca25e471fd73f8d742bfcb6a62e1731533dd"
+  },
+  "runtime_changes": [
+    {
+      "before": "slots=2;",
+      "after": "slots=4;",
+      "count": 1
+    },
+    {
+      "before": "Min[2,slots]",
+      "after": "Min[4,slots]",
+      "count": 1
+    },
+    {
+      "before": "0<=workers<=2",
+      "after": "0<=workers<=4",
+      "count": 1
+    }
+  ]
+}

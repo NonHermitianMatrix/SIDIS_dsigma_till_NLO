@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "is_symlink_handles_ENOENT": true,
+    "is_symlink_handles_ESTALE": true,
+    "is_symlink_preserves_unexpected_errors": true,
+    "regular_files_counted_symlinks_excluded": true,
+    "stat_handles_ENOENT": true,
+    "stat_handles_ESTALE": true,
+    "stat_preserves_unexpected_errors": true
+  },
+  "schema": "polarized-sidis-disk-scan-validation-v1",
+  "source_sha256": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+  "temporary_test_cache_removed": true
+}

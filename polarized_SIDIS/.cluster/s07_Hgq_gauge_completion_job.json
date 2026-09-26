@@ -1,0 +1,47 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s07_reference_gauge_check.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s07_Hgq_gauge_completion",
+    "POLARIZED_SIDIS_CHANNEL": "Hgq",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s07_Hgq_gauge_completion"
+  },
+  "execution_result": "Hgq/s07_gauge_completion_result/s07_execution.json",
+  "expected_results": [
+    "Hgq/s07_gauge_completion_result/s07_result.wl"
+  ],
+  "heartbeat": "cache/s07_Hgq_gauge_completion_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 8589934592,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 6900
+  },
+  "log": "cache/s07_Hgq_gauge_completion.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hgq/s03_result/s03_result.wl": "570bde9d826e893d775f6bc458307369c6eb65316872f7268562345e527da177",
+    "Hgq/s07_result/reference/unpolarized_virtual.wl": "c85e0fabd7fb87601e7940246ef653f4ca5afcd71997dece933e7525f5094962",
+    "Hqq/s07_compact_result/s07_result.wl": "68d2071628232e07b8057effe339aaff70ef310d9d9c09418b34531096c68782",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_result/s04_result.wl": "970f0bfd74d9cb5838703d01d8ce3066ff4dc28367bad67c74076bbab6b7c0b3",
+    "common/s07_inputs.json": "a545945765b5cf85018299090c78f109e06fb4a2b9c369bd685256e71e843596",
+    "common/s07_reference_gauge_check.wls": "a8e14591501c4b4c96300a9de8aab0a588b1da4109778be4c87261ff01767848",
+    "common/s07_result/reference/s05_virtual_families.wl": "c3b6bd31df3fa763c714d173f8048d31aa41b02066c3f9ff6cf5853fcfe6aae2",
+    "common/s07_result/reference/s07_virtual_spin_response_before_compact_products.wls": "e233767017306d5be0f02f97bd8066b824953903252546b7da7c5cc202f9aa09",
+    "common/s07_result/reference/s07_virtual_spin_response_before_parallel.wls": "daca2aaa7d7253bbf0d9f0a48a88cac14bdd2b41b21f1e678b201cde6656a00b"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s07_reference_gauge_check"
+}

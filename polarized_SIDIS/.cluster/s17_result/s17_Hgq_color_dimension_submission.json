@@ -1,0 +1,25 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s17_Hgq_color_dimension_job.json",
+  "config_sha256": "69e0b9922de83eaa522c79173c64d385aa4f88448d58348a0805c2fef726e9ed",
+  "event": "SUBMITTED",
+  "job_id": "14818632",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s17_Hgq_color_dimension_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s17_Hgq_color_dimension",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s17_Hgq_color_dimension_scheduler.log"
+  ],
+  "tag": "s17_Hgq_color_dimension"
+}

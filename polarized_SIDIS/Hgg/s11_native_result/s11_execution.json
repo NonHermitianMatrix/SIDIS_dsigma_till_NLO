@@ -1,0 +1,93 @@
+{
+  "child_maxrss_bytes": 406745088,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s11_Hgg_native_routes.wls"
+  ],
+  "completed_utc": "2026-09-24T15:04:37.736028+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 3221225472
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "7e26db4a2a5e9f01ea0804b7ace373de298bb2f225ce27096a4311837efbb2c5",
+  "job_id": "14889816",
+  "node": "n1161",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 215425024,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s11_native_result/s11_checks.json": "7a7e7257e77656fd5f0384e50e599e1da87415954805420851257d3e19c2abe5",
+    "Hgg/s11_native_result/s11_result.wl": "a10efe2fbb104be6696c66a336be9f38f9d71ddb55d9274d2e9f42ade4a37a3e"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "87f8e6569853ab998c595f1a329a0d9c05390eb624cea2fd91ac2b7881703953",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl": "1ce6e036f2b21a3336d92cd6ed53d02954cfb36eb08d854c7265e9b7e5362163",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/kinematics.wl": "56772f691f3263b8695e090f26c367b6062d8864bfa41b0cf44eb142f89be0b9",
+    "Hgg/s03_result/aqg/s03_result.wl": "42a21b96b2f6d0af7f9b0b0377830ad25c639ee84fb9bac1acf6d79d61181ed3",
+    "Hgg/s03_result/gq/s03_result.wl": "9d4fae5305d926dd243757feadfa2b86952ae4f6d4804bfc96fc588e4e1199a4",
+    "Hgg/s03_result/qg/s03_result.wl": "37a5f4efce200707c3596e69dd089414ab097325df161ed8d94754b65872da06",
+    "Hgg/s10_offdiagonal_result/s10_checks.json": "9505a2f0852654a77a4a647f234fff549a9bb2ecdc9998efce00087f5f0d0c04",
+    "Hgg/s10_offdiagonal_result/s10_execution.json": "56681b18b9dd051dd29c0c7092c20cb9dfbb327c8399003d780c4abbb8dc7c34",
+    "Hgg/s10_offdiagonal_result/s10_result.wl": "b21e330880da774f84d326ff35fb8b9a42340e4bfd7274bd6bf67236e3282ce7",
+    "Hgg/s11_result/reference/before_dimensional_completion/s11_result.wl": "e5a4aa27a7a5e22fe07b0ee22e9f9709ba0d87e5c191ee1bbdfa0115052ceebc",
+    "Hgg/s11_result/reference/github_s09_result_s09_result.wl": "29191dd490460e2da081ce0684a5765f178cd67ecd8fc1b16280adeceaaea041",
+    "Hgg/s11_result/reference/s05_factorize.wls": "389c5f18b1985345d179b55bf129ae68074b2c6cbbed5dbf87fdb797bccfc1a4",
+    "Hgg/s11_result/s11_checks.json": "e2b85ddb2df8015a5d40ed00d0e2b430ee354092a655cb4193f8ceb4cab0bcd4",
+    "Hgg/s11_result/s11_execution.json": "94f74a880543a77976714a3653491059cba9d8f0e387262e2e2a288e8227edbb",
+    "Hgg/s11_result/s11_result.wl": "6d454824faf6e2ba81e12fdecfceb8f215755ab934c0a47eafd528b2b300f4e9",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_checks.json": "6ff3378a0c4a1e285ffe34fea510778ec91d4100abe1a93919fade2ab55f8116",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_execution.json": "992effb42fe5c41c29557eec6ad5db9fac079eb2c1060bd6806b07836c641e66",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_result.wl": "dac72a358f77e3b10483b88108da433a2e265e234cf5e04bb699a22b2d917162",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "Hqqbar/s03_result/gq/s03_result.wl": "9cb6b437c7c7c316ce83e1b9eef1b1c66d8c8329d59074b3065e01718631ee69",
+    "Hqqprime/s11_dimensional_result/s11_execution.json": "263420a0b3b402d0c32a66343161c0f801cda759c626337936c074bb3cc35e64",
+    "Hqqprime/s11_dimensional_result/s11_result.wl": "3c76ab221bf3c99ba7c35223b26ca10ec527596dc2f60307d5cc7e508dbc411c",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_auxiliary_inputs.json": "d564b985ba59959a1aed6bd204cd59de53f1182e5113a415fa32c5bf8566d61f",
+    "common/s10_Hgg_offdiagonal_transfer.wls": "2a3db69ff4f16697fb6b93c603f3d5ef1d8f21266864098e76cf3c91a0e64dcf",
+    "common/s10_collinear_spin_kernels.wls": "4e2e1b0b662948805d939ea52ebd7e227d0719f2d85e03f3843b791b47c09696",
+    "common/s10_dimensional_gluon_transfer.wls": "113b9968a31eec26914c7018515e9ca214bfbc622b9fe7f5a3b539037aef957d",
+    "common/s10_dimensional_quark_gluon_transfer.wls": "16a98ccb008189f631f6da124e602e581219cd7635212f5e9272ef6be7fbf46b",
+    "common/s10_inputs.json": "8aa54936b2ed7ca5cff487586639e1e580073562ffc81663ce4bd19fa2586536",
+    "common/s10_result/reference/s08_collinear_subtraction.wl": "6b821fc64d1b8b593f6635dd49269a36b62588903c1681763a1e6b034cfe865d",
+    "common/s10_result/reference/s08_result.wl": "3febb99ebac11172d1ce55b4315cf118b0cbc158b0d25a7fe1ae943b1371e6ea",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_Hgg_native_routes.wls": "1a6f84a95188a81e60b1543d7b514f9b5c35934a3c05a1ce792bef33005abe05",
+    "common/s11_check_dimensional_convolution.wls": "fcc88fab3d9a6fc14c630d194fd6f3bf6fc8932a62b18a55c6fcbcf5ddacbef1",
+    "common/s11_result/reference/s11_small_collinear_spin_before_dimensional.wls": "44ac7b5470ce54c6d0276bfa685ab88a5fff8d78d90c3835e7548488c48ffc8a",
+    "common/s11_result/reference/s16_collinear_inputs.wl": "ee121b6a83eec08225a20f7cd3dc13faf404f990bcba89142d206f47f7acf52a",
+    "common/s11_small_collinear_spin.wls": "b47acf502782cf5da4720163519a419c81a1a7f750679441a32685da2838f1af",
+    "common/s11_small_inputs.json": "d761f5c9517ba17eee12a0093236e67ef10ae326ab2f014e4d7f63a768ef0fd1"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "storage_monitor": {
+    "error": null,
+    "measurement": null,
+    "measurement_age_seconds": 45.36816090811044,
+    "scan_elapsed_seconds": 45.34261276619509,
+    "scan_pending": true
+  },
+  "wall_seconds": 45.38426706707105
+}

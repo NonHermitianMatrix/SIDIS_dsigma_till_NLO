@@ -1,0 +1,76 @@
+{
+  "channels": {
+    "Hgg": {
+      "reference_role": "spin-averaged scalar reconstruction only",
+      "unpolarized_real_file": "Hgg/s05_result/reference/unpolarized_real.wl"
+    },
+    "Hgq": {
+      "reference_role": "spin-averaged scalar reconstruction only",
+      "unpolarized_real_file": "Hgq/s05_result/reference/unpolarized_real.wl"
+    },
+    "Hqg": {
+      "reference_role": "spin-averaged scalar reconstruction only",
+      "unpolarized_real_file": "Hqg/s05_result/reference/unpolarized_real.wl"
+    },
+    "Hqq": {
+      "reference_role": "spin-averaged scalar reconstruction only",
+      "unpolarized_real_file": "Hqq/s05_result/reference/unpolarized_real.wl"
+    },
+    "Hqqbar": {
+      "reference_role": "spin-averaged scalar reconstruction only",
+      "unpolarized_real_file": "Hqqbar/s05_result/reference/unpolarized_real.wl"
+    },
+    "Hqqprime": {
+      "reference_role": "spin-averaged scalar reconstruction only",
+      "unpolarized_real_file": "Hqqprime/s05_result/reference/unpolarized_real.wl"
+    }
+  },
+  "commit": "5062dcb2407594dafcc2f9f72800e96ff9e6d957",
+  "files": [
+    {
+      "bytes": 2539462,
+      "destination": "Hqq/s05_result/reference/unpolarized_real.wl",
+      "git_blob": "ada6601232353286acce984543fc9dbf694eef85",
+      "sha256": "80839ff33a066dd1edefbbd39a22513cc726372631b85d68e0a5a3a2653ad4e2",
+      "upstream_path": "SIDIS/Hqq/s01_result/s01_inputs/s03_result.wl"
+    },
+    {
+      "bytes": 294796,
+      "destination": "Hqg/s05_result/reference/unpolarized_real.wl",
+      "git_blob": "a0ea5ffe579c2aeb6a60d3aba6809f829da107a9",
+      "sha256": "bc1dc43674b42c271d37d559b9ef4031118bd04302bfbe201beb2696ef36d362",
+      "upstream_path": "SIDIS/Hqg/s01_result/s01_inputs/s05_result.wl"
+    },
+    {
+      "bytes": 256966,
+      "destination": "Hgq/s05_result/reference/unpolarized_real.wl",
+      "git_blob": "f76bca09dd624904469dac4a390b1789780f81af",
+      "sha256": "286b9586de2bec744667421d4b16d1081a0df6e18fda0e328918c46b1dbd0649",
+      "upstream_path": "SIDIS/Hgq/s01_result/s01_inputs/s03_result.wl"
+    },
+    {
+      "bytes": 556256,
+      "destination": "Hgg/s05_result/reference/unpolarized_real.wl",
+      "git_blob": "d7cfff8cbd4ea77c02a6a2d9e6807b08022f9867",
+      "sha256": "8fd5a266c5a15fa3d2cbed9992e26ef005ec3e2400838a0363db1dcc407ed4e7",
+      "upstream_path": "SIDIS/Hgg/s01_result/s01_inputs/s02_result/real.wl"
+    },
+    {
+      "bytes": 1194628,
+      "destination": "Hqqbar/s05_result/reference/unpolarized_real.wl",
+      "git_blob": "04ceaf57ccd4a575d19bb81288599499fa34cfb0",
+      "sha256": "a46b6ee97a4eb738416ba59efcb76eedd37dfc99cd1439047ce97012e7fbf58b",
+      "upstream_path": "SIDIS/Hqqbar/s01_result/s01_inputs/s02_result/real.wl"
+    },
+    {
+      "bytes": 264757,
+      "destination": "Hqqprime/s05_result/reference/unpolarized_real.wl",
+      "git_blob": "8372e287a713f0a0573ab5f5bbe4007ca8face2c",
+      "sha256": "eac5dbc2bfc4d6eb4789345b23d72f194b07bfdcf417427b939cbf135723be4f",
+      "upstream_path": "SIDIS/Hqqprime/s01_result/s01_inputs/s02_result/real.wl"
+    }
+  ],
+  "repository": "https://github.com/NonHermitianMatrix/SIDIS_dsigma_till_NLO",
+  "schema": "polarized-sidis-real-inputs-v1",
+  "tree": "428a4eb2327589d067372a090d5ca33427108f45"
+}

@@ -1,0 +1,57 @@
+{
+  "child_maxrss_bytes": 287387648,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s15_finalize_spin_coefficients.wls"
+  ],
+  "completed_utc": "2026-09-17T14:04:16.451565+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "64af58ac0822daaaa97a22a9c99ad668af633cef2f847909c78d71e649311107",
+  "job_id": "14775519",
+  "node": "n6126",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 223064064,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s15_scheme_result/s15_checks.json": "1eda627d39d4a7dbb41fb2a06a98f728696d8787ba3e3d4844c36bc55dbc4718",
+    "Hgg/s15_scheme_result/s15_result.wl": "70486a70c6f464e8c095610513159a8994cb1ac009b5e18791d6e5be92eeb64e"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hgg/s11_result/s11_result.wl": "e5a4aa27a7a5e22fe07b0ee22e9f9709ba0d87e5c191ee1bbdfa0115052ceebc",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_collinear_spin_convolutions.wls": "9c5784631fbeb46741b274186985fb21f1607d4063525025517bb0560f11de96",
+    "common/s11_small_collinear_spin.wls": "44ac7b5470ce54c6d0276bfa685ab88a5fff8d78d90c3835e7548488c48ffc8a",
+    "common/s14_result/reference/s20_final_hats.wl": "c56f0f20deca9c2100218304eadbfdecb139826c6d36dd2e06bf31b6895a36fa",
+    "common/s15_finalize_spin_coefficients.wls": "54838cdee6222b75e578a242a940bdb79bd1517d41e098cbd9ca18fd369463f8",
+    "common/s15_inputs.json": "029ed10114018ec59a1c55196d01a39fb993c25ebd2a4ae8e0ce35354366d85f",
+    "common/s15_result/reference/s54_factorization_contract.wls": "21fc30cc2cfd4386457dc7ab7ce1b1d22b4456460e4c0bbdc86dfbb446c23f6c"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 21.074397113872692
+}

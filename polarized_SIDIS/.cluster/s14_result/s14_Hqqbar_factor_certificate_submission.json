@@ -1,0 +1,25 @@
+{
+  "channel": "Hqqbar",
+  "config": ".cluster/s14_Hqqbar_factor_certificate_job.json",
+  "config_sha256": "b078b95dd1eb0528f3ee16871488adec4eba00ca6874649025e251c2d03927e9",
+  "event": "SUBMITTED",
+  "job_id": "14805974",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s14_Hqqbar_factor_certificate_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s14_Hqqbar_factor_certificate",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:30:00,h_data=6G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s14_Hqqbar_factor_certificate_scheduler.log"
+  ],
+  "tag": "s14_Hqqbar_factor_certificate"
+}

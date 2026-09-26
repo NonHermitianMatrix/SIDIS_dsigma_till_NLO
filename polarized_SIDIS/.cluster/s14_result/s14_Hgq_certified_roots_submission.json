@@ -1,0 +1,25 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s14_Hgq_certified_roots_job.json",
+  "config_sha256": "64e1d1715dac6e5be4e3a020816f4746c287e5b6e592d575b347adde6d224219",
+  "event": "SUBMITTED",
+  "job_id": "14815179",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s14_Hgq_certified_roots_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s14_Hgq_certified_roots",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s14_Hgq_certified_roots_scheduler.log"
+  ],
+  "tag": "s14_Hgq_certified_roots"
+}

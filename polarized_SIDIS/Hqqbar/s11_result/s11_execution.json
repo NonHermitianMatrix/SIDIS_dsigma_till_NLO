@@ -1,0 +1,65 @@
+{
+  "child_maxrss_bytes": 415625216,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s11_small_collinear_spin.wls"
+  ],
+  "completed_utc": "2026-09-18T17:26:18.522710+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "54677456d31e5904928d4a0e8e3a28f6ec63cfb95a42ad6d0d5d2933a4e65ecd",
+  "job_id": "14798561",
+  "node": "n6136",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 406847488,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqqbar/s11_result/s11_checks.json": "3a923d48c9612b6d54c978565f6d042f7b5ebadf05910d84a9e68e7f7866e228",
+    "Hqqbar/s11_result/s11_result.wl": "0e45b5224df19ee88700b50fc163fdfb5fdceea192ffb42ccfae340bcb86c43e"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "393e8503576b3fdd557c40f0fe6cfab9dd31d956100f8091dd615d904ab70c8a",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl": "1ce6e036f2b21a3336d92cd6ed53d02954cfb36eb08d854c7265e9b7e5362163",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/kinematics.wl": "56772f691f3263b8695e090f26c367b6062d8864bfa41b0cf44eb142f89be0b9",
+    "Hqqbar/s03_result/gq/s03_result.wl": "9cb6b437c7c7c316ce83e1b9eef1b1c66d8c8329d59074b3065e01718631ee69",
+    "Hqqbar/s03_result/qg/s03_result.wl": "7ddf294ee5969ff4177017020fab1f8b516bbc8d208c0fa38f81d919e46f97c7",
+    "Hqqbar/s11_result/reference/before_dimensional_completion/s11_result.wl": "f0e94377e39f080cda5b6652093b956b4164dd8fcd9ec25b58b2a803d1cf04d4",
+    "Hqqbar/s11_result/reference/github_s09_result_s09_result.wl": "5845217f51ea3f27760cbe031363942504e368984ac93d7c339b63da0ed6427b",
+    "Hqqbar/s11_result/reference/s05_factorize.wls": "eeffd4cce10cad261260c7fab83c2f628e0782f7fc276087d446a19aa6c8d945",
+    "Hqqprime/s11_dimensional_result/s11_execution.json": "263420a0b3b402d0c32a66343161c0f801cda759c626337936c074bb3cc35e64",
+    "Hqqprime/s11_dimensional_result/s11_result.wl": "3c76ab221bf3c99ba7c35223b26ca10ec527596dc2f60307d5cc7e508dbc411c",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_auxiliary_inputs.json": "d564b985ba59959a1aed6bd204cd59de53f1182e5113a415fa32c5bf8566d61f",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_check_dimensional_convolution.wls": "fcc88fab3d9a6fc14c630d194fd6f3bf6fc8932a62b18a55c6fcbcf5ddacbef1",
+    "common/s11_result/reference/s11_small_collinear_spin_before_dimensional.wls": "44ac7b5470ce54c6d0276bfa685ab88a5fff8d78d90c3835e7548488c48ffc8a",
+    "common/s11_result/reference/s16_collinear_inputs.wl": "ee121b6a83eec08225a20f7cd3dc13faf404f990bcba89142d206f47f7acf52a",
+    "common/s11_small_collinear_spin.wls": "b47acf502782cf5da4720163519a419c81a1a7f750679441a32685da2838f1af",
+    "common/s11_small_inputs.json": "d761f5c9517ba17eee12a0093236e67ef10ae326ab2f014e4d7f63a768ef0fd1"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 50.84769161045551
+}

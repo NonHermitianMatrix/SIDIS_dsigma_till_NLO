@@ -1,0 +1,86 @@
+{
+  "event": "DETACHED_CONTROLLER_STARTED",
+  "pid": 29177,
+  "node": "login2",
+  "log": "cache/s08_to_s15_Hgg_four_workers_20260924_controller.jsonl",
+  "code_sha256": "36cfd363799eacf8086d5cad94cb065a58e7d24be68d0f486e9f124362ebac41",
+  "adopted_job_id": "14888706",
+  "previous_controller": {
+    "node": "login2",
+    "pid": 12236
+  },
+  "payload_sha256": "ed72244af30affafc3fac152da63595d3436598a551fb0afdd057437d0758a67",
+  "next_other_allocation": {
+    "slots": 4,
+    "h_data_per_slot_GiB": 12,
+    "total_GiB": 48,
+    "runtime": "02:00:00"
+  },
+  "stages": [
+    {
+      "tag": "s08_original_terms_Hgg_remaining_hgg_disjoint_groups_20260923",
+      "config": ".cluster/s08_original_terms_Hgg_remaining_hgg_disjoint_groups_20260923_job.json",
+      "slots": 2,
+      "memory": 8,
+      "runtime": "02:00:00",
+      "template_config_sha256": "fd35a66cb071503bdd66ba654863ad88f26d3dfe5f4325e862c4aecfed44817b"
+    },
+    {
+      "tag": "s08_Hgg_other_group_components_20260923_part2_part4",
+      "config": ".cluster/s08_Hgg_other_group_components_20260923_part2_part4_job.json",
+      "slots": 4,
+      "memory": 12,
+      "runtime": "02:00:00",
+      "template_config_sha256": "2bc9b929eaf73b10fc3fa29378f70159bc5c04316e1c18ee4cb33e5e7b9f0ce1",
+      "adopt_job_id": "14888706"
+    },
+    {
+      "tag": "s08_certified_targets_Hgg_remaining_hgg_disjoint_groups_20260923",
+      "config": ".cluster/s08_certified_targets_Hgg_remaining_hgg_disjoint_groups_20260923_job.json",
+      "slots": 4,
+      "memory": 16,
+      "runtime": "04:00:00",
+      "template_config_sha256": "2d9894037cc0e1a46158b017b7f3045df3bacab7d1a7bbe0bf685e1a22d05ee1"
+    },
+    {
+      "tag": "s08_reduction_Hgg_remaining_hgg_disjoint_groups_20260923",
+      "config": ".cluster/s08_reduction_Hgg_remaining_hgg_disjoint_groups_20260923_job.json",
+      "slots": 1,
+      "memory": 8,
+      "runtime": "04:00:00",
+      "template_config_sha256": "f6cf864e060b353913f2a8615886ec27fa2f0aed86007f949978043630a0e111"
+    },
+    {
+      "tag": "s08_master_coefficients_Hgg_remaining_hgg_disjoint_groups_20260923",
+      "config": ".cluster/s08_master_coefficients_Hgg_remaining_hgg_disjoint_groups_20260923_job.json",
+      "slots": 4,
+      "memory": 8,
+      "runtime": "04:00:00",
+      "template_config_sha256": "f589c486070f5a5157239902f66f7cce4d68be219c5815b73acde0a6fa51f3d4"
+    },
+    {
+      "tag": "s12_factored_series_Hgg_remaining_hgg_disjoint_groups_20260923",
+      "config": ".cluster/s12_factored_series_Hgg_remaining_hgg_disjoint_groups_20260923_job.json",
+      "slots": 4,
+      "memory": 4,
+      "runtime": "04:00:00",
+      "template_config_sha256": "a47f44edefd8ee6492afcb939799dc0319a19d056e926e38da533875ccbdf6d1"
+    },
+    {
+      "tag": "s14_Hgg_remaining_compact_hgg_disjoint_groups_20260923",
+      "config": ".cluster/s14_Hgg_remaining_compact_hgg_disjoint_groups_20260923_job.json",
+      "slots": 1,
+      "memory": 32,
+      "runtime": "04:00:00",
+      "template_config_sha256": "5313cb80d6784a8dae7222369aebcda515e3734c6e0d7de83cfb41d1b36cfb88"
+    },
+    {
+      "tag": "s15_Hgg_remaining_compact_hgg_disjoint_groups_20260923",
+      "config": ".cluster/s15_Hgg_remaining_compact_hgg_disjoint_groups_20260923_job.json",
+      "slots": 1,
+      "memory": 24,
+      "runtime": "04:00:00",
+      "template_config_sha256": "3648b328937e1505aab991915619d5ef29ef068cc0c48028b496ee254a10bcd1"
+    }
+  ]
+}

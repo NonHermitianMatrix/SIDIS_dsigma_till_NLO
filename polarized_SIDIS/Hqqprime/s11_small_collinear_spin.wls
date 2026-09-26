@@ -1,0 +1,1 @@
+../common/s11_small_collinear_spin.wls

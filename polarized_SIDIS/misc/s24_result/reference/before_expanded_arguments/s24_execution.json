@@ -1,0 +1,25 @@
+{
+  "schema": "polarized-sidis-local-execution-v1",
+  "execution_backend": "local",
+  "passed": true,
+  "execution_kind": "exact_function_argument_comparison",
+  "command": [
+    "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "If[!SyntaxQ[ReadString[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s24_canonical_Hgg_arguments.wls\"]],Print[\"FAIL: source syntax\"];Quit[1]];Get[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s24_canonical_Hgg_arguments.wls\"]"
+  ],
+  "source_sha256": "6970979493d320b9fe23a8accef519e9c0237dccb320920cede9ffc17a66151d",
+  "input_sha256": {
+    "misc/s23_result/s23_result.wl": "ce7bb4db1615ba2ddf6e9a40e5c760ddd33b2f7f125677632f42dfbb2bf719da",
+    "misc/s23_result/s23_execution.json": "5961f0c17ab5a36c728aaac940f1435fa97db24b519276b540e9ad12898ae3a2"
+  },
+  "result_sha256": {
+    "misc/s24_result/s24_result.wl": "3fe0de724d015a4bed7aaaf57822d6934d58a6f5a17e235433756d2e27209391",
+    "misc/s24_result/s24_checks.json": "a87fe25b54d44eaa00955100eed51ae0165d23216aa4737bd379ddf314efd721"
+  },
+  "exit_code": 0,
+  "wall_seconds": 7.242250846000388,
+  "completed_utc": "2026-09-26T07:02:32.506091+00:00"
+}

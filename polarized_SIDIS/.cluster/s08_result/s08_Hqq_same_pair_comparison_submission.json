@@ -1,0 +1,28 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s08_Hqq_same_pair_comparison_job.json",
+  "config_sha256": "c01971f62918c3b91c744c0b49f5f6b00d00418dd25225d69f9c6b6e0f99badf",
+  "event": "SUBMITTED",
+  "job_id": "14814800",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqq_same_pair_comparison_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqq_same_pair_comparison",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=6G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqq_same_pair_comparison_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s08_Hqq_same_pair_comparison"
+}

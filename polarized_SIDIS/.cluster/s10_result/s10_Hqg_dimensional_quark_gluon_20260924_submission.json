@@ -1,0 +1,24 @@
+{
+  "event": "SUBMITTED",
+  "job_id": "14886189",
+  "config": ".cluster/s10_Hqg_dimensional_quark_gluon_20260924_job.json",
+  "tag": "s10_Hqg_dimensional_quark_gluon_20260924",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s10_Hqg_dimensional_quark_gluon_20260924",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s10_Hqg_dimensional_quark_gluon_20260924_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s10_Hqg_dimensional_quark_gluon_20260924_job.json\n",
+  "configuration_sha256": "95f0b0b298271f4557c0358d45072ab6e2e8244cfdfec0e7683c1d74fff5b0c0"
+}

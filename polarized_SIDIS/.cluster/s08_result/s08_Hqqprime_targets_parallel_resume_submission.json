@@ -1,0 +1,28 @@
+{
+  "channel": "Hqqprime",
+  "config": ".cluster/s08_Hqqprime_targets_parallel_resume_job.json",
+  "config_sha256": "fc45e27c8d1249a59a35ab16b9f179f57491a7c8c04ba3d3c1de77af77220211",
+  "event": "SUBMITTED",
+  "job_id": "14782636",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqqprime_targets_parallel_resume_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqqprime_targets_parallel_resume",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqqprime_targets_parallel_resume_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s08_Hqqprime_targets_parallel_resume"
+}

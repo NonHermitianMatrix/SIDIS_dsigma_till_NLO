@@ -1,0 +1,23 @@
+{
+  "config_sha256": "b78c5c512c4e99735b59ffca6948681e2134d5e66513c6ff2c0c79fa51ff2058",
+  "event": "SUBMITTED",
+  "job_id": "14778459",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s13_Hgq_checkpoint_reexport_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s13_Hgq_checkpoint_reexport",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s13_Hgq_checkpoint_reexport_scheduler.log"
+  ],
+  "tag": "s13_Hgq_checkpoint_reexport"
+}

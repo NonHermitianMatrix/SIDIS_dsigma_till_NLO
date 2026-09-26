@@ -1,0 +1,96 @@
+{
+  "child_maxrss_bytes": 10648510464,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s05_spin_reconstruction_check.wls"
+  ],
+  "completed_utc": "2026-09-18T09:44:05.128447+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 17179869184
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      17179869184,
+      17179869184
+    ]
+  },
+  "job_configuration_sha256": "571c03b11b8b823e9a8aeae38990a7e2468529595283dcc16340e31af2d1723a",
+  "job_id": "14795486",
+  "node": "n6640",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 9604014080,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgq/s05_spin_reconstruction_result/s05_checks.json": "72ba6e08919339b905c9725ab8f0bd5afa43db101e03c7c062e6fdc60f353c7e",
+    "Hgq/s05_spin_reconstruction_result/s05_result.wl": "68bd1b38f42d0623d7e174dca57ff59e9aef016495155180fa103c4b565a7210"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgg/s05_pair_assembly_result/s05_result.wl": "1cd27950314f1eda6f9652fe86521677fa2ad5949ad39854c62b4060af4b57f6",
+    "Hgg/s05_spin_map_result/s05_result.wl": "3049dfee6baa6ee6f7aed473ada5237cd7bc445ceb89d5ce13d1cbf7531d9d89",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hgq/s05_result/reference/unpolarized_real.wl": "286b9586de2bec744667421d4b16d1081a0df6e18fda0e328918c46b1dbd0649",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "Hqqprime/s05_compact_result/s05_result.wl": "9e1619465a68e8f7fe242421a237d77f9d0452722237124429816b0a4986081d",
+    "Hqqprime/s05_interface_result/s05_result.wl": "eed6f9e3bd8316c5e82ffa0c30abaef524729f639e2070e478ba5503b35ae5e3",
+    "Hqqprime/s05_parallel_result/s05_result.wl": "60a05328f3ca59abb5bc5faab2565a77f34b9ced5eee9f2da060f6d512475e4f",
+    "Hqqprime/s05_spin_extraction_result/s05_result.wl": "ca3d2e5e85ad47b4cad41f6a26609a5886ef011a819223e9b25abe3975ea473b",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_1_1.wl": "6f988305809de4b2330b9c4e7a7f47256d1cf913a3309085e7b0ef956aca8653",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_1_2.wl": "75d71921d7b36fadb3eaf89d6e24644c360ec1c4e2277d1722392a36b4c564f7",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_1_3.wl": "857c2713930a6c7f68ac1e5b3b32af46efc1e10886a5a2468f719e8703226789",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_2_1.wl": "cdafc422d9ea6634fafe52b4c42d69787bd2283138b034957fd6a5e7fbedff97",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_2_2.wl": "6c2a4ada3bece96df382a51b857cfde1608f13d41190c733ad8c3e03c4a030e7",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_2_3.wl": "9a489e1e15888a47d3c9b1465c97dc7b94b2e99f88970e72a3a1578ef5bc55c3",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_3_1.wl": "9edba9ad5ee1b28ec22987ff2bc107364b8012d267a6838ea7f3ff9d1f7dce7f",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_3_2.wl": "8398c8169c1406f23a9d5ef6db1639b83aa3ea7c3b3130b9624d9daa7dafbdc7",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Photon_3_3.wl": "bb958fda99f4076cf05db0285fae6b37b04ef9baea95849534e73c339068baf8",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Scalar_GluonWard_k3.wl": "b3a56109f208a6def16d2a0a3d9bd84825d519281469c5f544ff27cfa1f9500c",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Scalar_GluonWard_p.wl": "6ae68decaa3cee2aa5976e936bf327f40851ca7ad2e67673d0f8edc2fa6fc7f6",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Scalar_PgD.wl": "2a89cbb81aa69638bf3ed577eec9fd24833f6cf280af91e8c944610d7d49a70a",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_assembled_Scalar_PhotonWard.wl": "1296f7bd29f48db601cfaa4cf007644fff97d3d311261ed8c8c592e665115a83",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_spin_reconstruction_1.wl": "bb9383602c9531625ef6888bd2cfe49a5cb3bd0983d3667524b1edb51ee421dd",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_spin_reconstruction_2.wl": "1228d6229a1de6196d3821eba43af4e6c1436defaf48b727492daf524f0690fd",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_spin_reconstruction_3.wl": "b9deb0f8215e22882994e3fba9eb6dd3fcf6d1c06f52513d3d9fe4f7ac69568f",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_spin_reconstruction_4.wl": "50a2ca1cabd71d1e3f678a497d9f4ffaaddddaa3768b2554ac2c2b535407b7df",
+    "cache/s05/Hgq/30e6c27f9a81001780d464a775c580df63a6245bbaf65b36be5de49f814a936b/Real_spin_reconstruction_5.wl": "bb544bc6509719022cae5a9fc28b103aec60add7cb23c9179fbcccc6505bd6aa",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_result/s04_result.wl": "970f0bfd74d9cb5838703d01d8ce3066ff4dc28367bad67c74076bbab6b7c0b3",
+    "common/s05_inputs.json": "53f304ad84bed1cb57963f53f39ce463b2065eec15a6eff32c16141cbb5a13d7",
+    "common/s05_pair_assembly_check.wls": "47d405b7553fd93f3f4df63a008027e0b6b7500cc3041c59f5e8b7682be57900",
+    "common/s05_pair_assembly_inputs.json": "bf93a760bfc87c388b91bcc7b1d7a333b33b06365e48e8f24aa986971a7e0853",
+    "common/s05_real_spin_response.wls": "24fe8bc812f0a7306ee73ab9346d0e772d6d0bba77839feee131da55142f5c65",
+    "common/s05_result/reference/s05_real_spin_response_before_coefficient_reduction.wls": "376fd639b0624d1b0aab627969077213468cdd9811fd6b141960e7c831fa8a3a",
+    "common/s05_result/reference/s05_real_spin_response_before_compact_products.wls": "a57a34bb658c985202d47ccddd9a431c767c4d0cecf576eb8bb9817fa9972a37",
+    "common/s05_result/reference/s05_real_spin_response_before_complete_photon_projection.wls": "d34991466b6c4677600840ae1c837fab5879e2483932e778096134f8784c4d84",
+    "common/s05_result/reference/s05_real_spin_response_before_coupling_inventory.wls": "e157ea02902f03c1109e0584afb4d50cef3d96cebcdc0a28b1cf7ce7ea8b8fac",
+    "common/s05_result/reference/s05_real_spin_response_before_factored_pairs.wls": "56e507b433c5be3cfec12a83c8614e67217a3179ac3f25dc3af14fe42138fa46",
+    "common/s05_result/reference/s05_real_spin_response_before_parallel_spin_checks.wls": "46c45f60a0f97c18d430cd8a3ee05182bc5e10f5deb424e8b69487d76e75e500",
+    "common/s05_result/reference/s05_real_spin_response_before_projection.wls": "899cf6d588e4a2186c8e0312a7361c6c99796bd414ff948a2d4ceee98129967d",
+    "common/s05_result/reference/s05_real_spin_response_before_projection_memory_resume.wls": "2f207ae75537666abcc6809fef00ff18c48e61c73efebdabdb38b66c4f1459f0",
+    "common/s05_result/reference/s05_real_spin_response_before_projection_time_resume.wls": "58f6a7959d651ec0e1d4e1738f24248c1460f817953deda33a55b4b12333183f",
+    "common/s05_result/reference/s05_real_spin_response_before_resource_resume.wls": "33cf0bacda34aff1b32df4493926bcaa151e57c9763d0261419735c07b048eaf",
+    "common/s05_result/reference/s05_real_spin_response_before_spin_extraction.wls": "f6ba07013100d854647bc3d1677f58ba2b7b0dd50fd0b0397366e16361873d33",
+    "common/s05_result/reference/s05_real_spin_response_before_sum_checkpoints.wls": "33c00fd1361a5655d5f5c0fed5a15986182e4bb2fad67fc91ed0ba93da394507",
+    "common/s05_result/reference/s05_real_spin_response_before_worker_initialization.wls": "336ac1a601cc637bc11f78c27c10d9c7c0290443568127e76154407a4e3b4b4f",
+    "common/s05_result/reference/s05_spin_reconstruction_check_before_checkpoints.wls": "ba1dbaf4529a3fb83156d028b163d98d3a2ab186f24c137ac29ea45a208abd53",
+    "common/s05_spin_reconstruction_check.wls": "4283708ea806d88f7f4e2dc6532f4f7de9f90c1673ef030f73d0ce277b6e939d",
+    "common/s05_spin_reconstruction_inputs.json": "826e1aad3d13730ce31e9d34ccba805e108f2a754701c931e404b9073884c206"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 3560.247260312026
+}

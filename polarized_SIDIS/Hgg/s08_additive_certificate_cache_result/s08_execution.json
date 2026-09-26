@@ -1,0 +1,58 @@
+{
+  "child_maxrss_bytes": 845213696,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "$HistoryLength=0;root=Directory[];checks=<||>;\ngate[name_,test_]:=If[TrueQ[test],AssociateTo[checks,name->True];Print[\"PASS: \",name],Print[\"FAIL: \",name];Quit[1]];\nrelative=\"Hgg/s08_additive_reconstruction_result/s08_result.wl\";path=FileNameJoin[{root,relative}];\nreceipt=Import[FileNameJoin[{DirectoryName[path],\"s08_execution.json\"}],\"RawJSON\"];\ngate[\"accepted complete actual reconstruction proof\",TrueQ[receipt[\"passed\"]]&&receipt[\"result_sha256\"][relative]===IntegerString[FileHash[path,\"SHA256\"],16,64]];\nproof=Get[path];\ngate[\"exact accepted reconstruction identity\",proof[\"Schema\"]===\"polarized-sidis-additive-reconstruction-v1\"&&\n proof[\"NativeVersions\"][[1]]===$Version&&proof[\"ExactDifference\"]===0&&TrueQ[proof[\"OriginalFailureReproduced\"]]&&\n TrueQ[proof[\"OwnAcceptedComparison\"]]&&And@@Values[proof[\"Checks\"]]];\nDownValues[zero]=Last[proof[\"AlgebraDefinitions\"]];original=DownValues[zero];\nDownValues[polynomialAdditivePieces]=proof[\"AlgebraDefinitions\"][[4]];\nsharedPath=FileNameJoin[{root,\"Hgg\",\"s08_shared_piece_cache_result\",\"s08_result.wl\"}];\ngate[\"same accepted own comparison\",FileHash[sharedPath,\"SHA256\"]===proof[\"SharedProofHash\"]];shared=Get[sharedPath];\nfamilies=Get[FileNameJoin[{root,\"Hgg\",\"s08_mapping_inputs_result\",\"s08_component_0008.wl\"}]][\"Families\"];familyNames=Keys[families];\nownEquation=shared[\"ActualInput\"][\"Equation\"];ownPieces=polynomialAdditivePieces[ownEquation];\ngate[\"own additive pieces unchanged\",ownPieces===shared[\"ActualInput\"][\"Pieces\"]];\n{ownOriginalSeconds,ownOriginal}=AbsoluteTiming[zero[Total[ownPieces]-ownEquation]];\nactual=proof[\"ActualInput\"];\ngate[\"actual complete additive pieces unchanged\",polynomialAdditivePieces[actual[\"Equation\"]]===actual[\"Pieces\"]];\ndifference=Total[actual[\"Pieces\"]]-actual[\"Equation\"];\nPrint[\"CACHED_IDENTITY_BYTES \",ByteCount[difference],\" literal \",FreeQ[difference,_Pattern|_Blank|_Condition]];\ngate[\"cached identity is a bounded literal expression\",ByteCount[difference]<256*1024^2&&FreeQ[difference,_Pattern|_Blank|_Condition]];\n{installSeconds,installed}=AbsoluteTiming[With[{input=difference,result=proof[\"ExactDifference\"]===0},zero[input]=result]];\ngate[\"original generic exact check preserved\",AllTrue[original,Function[entry,AnyTrue[DownValues[zero],Function[candidate,SameQ[candidate,entry]]]]]];\n{cachedSeconds,cached}=AbsoluteTiming[zero[Total[polynomialAdditivePieces[actual[\"Equation\"]]]-actual[\"Equation\"]]];\ngate[\"cached actual decision equals executed exact proof\",cached===(proof[\"ExactDifference\"]===0)];\n{ownCachedSeconds,ownCached}=AbsoluteTiming[zero[Total[polynomialAdditivePieces[ownEquation]]-ownEquation]];\ngate[\"own accepted predicate output unchanged\",ownCached===ownOriginal&&TrueQ[ownCached]];\ngate[\"measured faster reuse of exact actual identity\",cachedSeconds<proof[\"ExactSeconds\"]];\nresult=<|\"Schema\"->\"polarized-sidis-additive-certificate-cache-v1\",\"Channel\"->\"Hgg\",\n \"ProofHash\"->FileHash[path,\"SHA256\"],\"NativeVersions\"->proof[\"NativeVersions\"],\n \"OriginalZeroDefinitions\"->original,\"CandidateZeroDefinitions\"->DownValues[zero],\n \"InputHashes\"->proof[\"InputHashes\"],\"TargetInputHash\"->proof[\"TargetInputHash\"],\n \"ActualDifferenceHash\"->Hash[difference,\"SHA256\"],\"OriginalSeconds\"->proof[\"ExactSeconds\"],\n \"CachedSeconds\"->cachedSeconds,\"InstallSeconds\"->installSeconds,\"OwnOriginalSeconds\"->ownOriginalSeconds,\n \"OwnCachedSeconds\"->ownCachedSeconds,\"OwnAcceptedComparison\"->True,\"ActualAcceptedComparison\"->True,\"Checks\"->checks|>;\ndir=FileNameJoin[{root,\"Hgg\",\"s08_additive_certificate_cache_result\"}];If[!DirectoryQ[dir],CreateDirectory[dir]];\nserialized=\"Uncompress[\"<>ToString[Compress[result],InputForm]<>\"]\\n\";\nExport[FileNameJoin[{dir,\"s08_result.wl\"}],serialized,\"Text\"];\ngate[\"exact certificate cache native reload\",Get[FileNameJoin[{dir,\"s08_result.wl\"}]]===result];\nExport[FileNameJoin[{dir,\"s08_checks.json\"}],<|\"checks\"->checks,\"original_seconds\"->proof[\"ExactSeconds\"],\n \"cached_seconds\"->cachedSeconds,\"install_seconds\"->installSeconds,\"own_original_seconds\"->ownOriginalSeconds,\n \"own_cached_seconds\"->ownCachedSeconds,\"cached_expression_bytes\"->ByteCount[difference],\"peak_kernel_memory_bytes\"->MaxMemoryUsed[]|>,\"RawJSON\"];\nPrint[\"PASS: s08_Hgg_additive_certificate_reuse\"];Quit[0];"
+  ],
+  "completed_utc": "2026-09-25T03:22:47.990736+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 3221225472
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "385712651000e9213e14d1b59d4f22460a3ee658e1a147dceff333172b9bdf5d",
+  "job_id": "14909202",
+  "node": "n1170",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 303943680,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s08_additive_certificate_cache_result/s08_checks.json": "801f960bd8fe605297e6ad884ed96820ab35e0979a4aef01f0206d01f94febb1",
+    "Hgg/s08_additive_certificate_cache_result/s08_result.wl": "0f1aa99d48f5473f7ba5c992b79721dce638fc5433d7aeb2e02851658dd152b7"
+  },
+  "reviewed_sha256": {
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hgg/s08_additive_reconstruction_result/s08_execution.json": "c6cef86ad140833ea96d4ef74b8c3ee50acaf25eaa4094e8bd5743d96a55f50e",
+    "Hgg/s08_additive_reconstruction_result/s08_input_equation.wl": "4cda50d89a117b0a7607ab0bb25cc299635f13bb47505b150d0cc84c40767074",
+    "Hgg/s08_additive_reconstruction_result/s08_result.wl": "b7dde18f5f9d0532c17352e27a87df302482c27de820a2d51e1cd5af27949478",
+    "Hgg/s08_mapping_inputs_result/s08_component_0008.wl": "23bac881805e9ea0da7b96af42e16ec67e94e43c22363bfc9c9b1bf89e03e30e",
+    "Hgg/s08_shared_piece_cache_result/s08_result.wl": "c6ae4723f23712f7d73c34f5fbdc2795f24ccb74611c0c8aa7258d4e45c164c1"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "storage_monitor": {
+    "error": null,
+    "measurement": null,
+    "measurement_age_seconds": 30.169468581676483,
+    "scan_elapsed_seconds": 30.126449041068554,
+    "scan_pending": true
+  },
+  "wall_seconds": 30.179865046404302
+}

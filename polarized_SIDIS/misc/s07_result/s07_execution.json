@@ -1,0 +1,52 @@
+{
+  "command": [
+    "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "Get[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s07_merge_Hgg_coefficients.wls\"]"
+  ],
+  "completed_utc": "2026-09-26T03:27:16.361390+00:00",
+  "configuration_sha256": "1a76b711d0c23c73d52883d0022292d509466caaa3d226767d72c8931d7b45f3",
+  "execution_backend": "local",
+  "execution_kind": "metadata_path_correction",
+  "exit_code": 0,
+  "input_sha256": {
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hgg/s08_external_factor_result/s08_execution.json": "1804b9f6a05156f8a327d3cbdfe6d9e74e5552494ff41495c7953bd83391193b",
+    "Hgg/s08_external_factor_result/s08_result.wl": "52977c036e140df9d19cc6fe1565ce9ed9591f65f05f8288660a0a51dd07559c",
+    "Hgg/s08_mapping_inputs_result/s08_component_0008.wl": "23bac881805e9ea0da7b96af42e16ec67e94e43c22363bfc9c9b1bf89e03e30e",
+    "Hgg/s08_mapping_inputs_result/s08_recovery_execution.json": "236e32ff981c08d5024d09ff4cf2bf9fb65f1d1fd4e28aea58a5ac98fe8a4189",
+    "Hqqbar/s08_pair_merge_result/s08_execution.json": "ece33f7a31040bdcb8b942ce1a6d004ae239e1b75619096ff251e5305ed6f636",
+    "Hqqbar/s08_pair_merge_result/s08_result.wl": "f676c6065b84fb77b0f80c23bfd22ea2063b32506e99517eb6c356831b992a7e",
+    "common/s08_check_pair_merge_linearity.wls": "531822a5be4cf830202ca16a9cfaae1d8d7fd9b53c429cc901867da421c58f72",
+    "common/s08_result/reference/s08_map_real_spin_before_known_denominator.wls": "e23a79589bfce183535a6f1166eda799a9f119168feb9cff1b13feb669c8b21f",
+    "misc/s07_imported_groups.json": "4bb759296cf3c3c8aa731da2e7db57c7b3a02dcecf6aa5313c8ebe9b207e17ee",
+    "misc/s07_result/reference/before_path_correction/s07_execution.json": "2c35b81cf98dbb4ef8d788fa62ba3fab04be1598a814841c47214ec7a9299e2b",
+    "misc/s07_result/reference/before_path_correction/s07_inputs.json": "7200f65c7ec6c85767f022dbca277fb8b8f12a0cce09e4c57e618e97cb387fb6",
+    "misc/s07_result/reference/before_path_correction/s07_merge_Hgg_coefficients.wls": "74e2b702715928bfc281bce448ef091c45923a254e6db09d5e77c44996d6ed62",
+    "misc/s07_result/reference/before_path_correction/s07_result.wl": "9145abe0b2ef5a24fb2e9a10e219fdc32c96df7884f48b18b9f1cd6ce0022842",
+    "misc/s07_result/s07_path_review.json": "f843abc5a478dd8bf56be4b58ea9966bdb0d28d4e6ee8d58c0934771adca63d9"
+  },
+  "limits": {
+    "available_ram_bytes": 4294967296,
+    "disk_reserve_bytes": 8589934592,
+    "inactivity_seconds": 3900,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 12884901888,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 10737418240,
+    "wall_seconds": 21600
+  },
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 465530880,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "misc/s07_result/s07_checks.json": "eec20266d30d001ff2da4cced697a535d4e4d5f0fc7059765dbde854d2feed88",
+    "misc/s07_result/s07_result.wl": "856fac8e74f8ba39c8a9723b943c39180580be702d38cf8b364e500ca2d8ebb8"
+  },
+  "schema": "polarized-sidis-local-execution-v1",
+  "source_sha256": "eef36a7e8e34543a3a623acb7f9d8b5da97c7174e841ecfe8abd4484d2d8ec51",
+  "wall_seconds": 30.055567487999724
+}

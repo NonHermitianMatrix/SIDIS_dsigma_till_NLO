@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "Get[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s40_chunked_native_record.wls\"]"
+  ],
+  "completed_utc": "2026-09-26T14:51:06.657972+00:00",
+  "execution_backend": "local",
+  "exit_code": 1,
+  "input_sha256": {
+    "misc/s35_result/s35_execution.json": "b56724517205cabc99e18606703e9c0bbd99fbf8406067706a95db2b6901125c",
+    "misc/s35_result/s35_result.wl": "1dfeafc17d167152f0884def751246ab94d2e719c0575eeb790c3b11ae316565",
+    "misc/s37_result/s37_execution.json": "38dc719dcd935302ffaa17c77dd7ed966bd29736d163e8f4a54dcd346596a180",
+    "misc/s37_result/s37_result.wl": "87d720addc17c740632ac7af9ac661070c74b8b663c283736f1eb59c8b25482f",
+    "misc/s40_inputs.json": "66197a7f4e86ae2c1a2b10240de7529200e154dc663829353358aadf5f4010d3"
+  },
+  "passed": false,
+  "peak_observed_tree_rss_bytes": 3475386368,
+  "reason": "normal_exit",
+  "result_sha256": {},
+  "schema": "polarized-sidis-local-execution-v1",
+  "source_sha256": "3b4f0bce075cbedb60ff183d53b3440706720099d2981181ae7bfffdc777476f",
+  "wall_seconds": 85.13422354700015
+}

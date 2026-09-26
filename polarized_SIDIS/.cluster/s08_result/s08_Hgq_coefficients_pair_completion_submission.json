@@ -1,0 +1,28 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s08_Hgq_coefficients_pair_completion_job.json",
+  "config_sha256": "3047d24d42a2dd6c2bb34b6ef381ce408db309474a749020f977a3721f21b572",
+  "event": "SUBMITTED",
+  "job_id": "14813688",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgq_coefficients_pair_completion_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgq_coefficients_pair_completion",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgq_coefficients_pair_completion_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s08_Hgq_coefficients_pair_completion"
+}

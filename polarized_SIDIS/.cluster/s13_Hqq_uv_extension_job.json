@@ -1,0 +1,50 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s13_extend_uv_reduction.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s13_Hqq_uv_extension",
+    "POLARIZED_SIDIS_CHANNEL": "Hqq",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s13_Hqq_uv_extension"
+  },
+  "execution_result": "Hqq/s13_uv_reduction_result/s13_execution.json",
+  "expected_results": [
+    "Hqq/s13_uv_reduction_result/s13_result.wl",
+    "Hqq/s13_uv_reduction_result/s13_checks.json"
+  ],
+  "heartbeat": "cache/s13_Hqq_uv_extension_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 3660,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 6442450944,
+    "wall_seconds": 14100
+  },
+  "log": "cache/s13_Hqq_uv_extension.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqq/s13_uv_reduction_result/inputs/missing_uv_targets_1.wl": "3ee956e3366026bc06874872deab0f0d20b7a84ffc8b0d8de0611d37d99f9b0c",
+    "Hqq/s13_uv_reduction_result/inputs/missing_uv_targets_2.wl": "069a993c5c5758bb9a045b7b098c52cd6de7f635c0581cfbf4d62688bac29ca9",
+    "Hqq/s13_uv_reduction_result/s13_inputs.json": "d4fdc6e4f27a787765c30e2aa23f1b18a6e99c0073c8184281287777bfcf2d5b",
+    "common/s06_result/reference/s02_result.wl": "c1e5f21d97b10b831b16ccafe2a9b3ed3fac463d5c6e204b4ecbafb471bf740d",
+    "common/s06_result/reference/s14_result.wl": "47cc08f577206fbfafc583320aeed48d53cd57b649e1a3e2db3c46dcfacb9aa0",
+    "common/s06_result/reference/sources/s14_uv_residues.wl": "dd8482c58e0569ab71e5a206ece5d3ee75d1c5cf582dc5a8f10579060f2076ed",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s13_extend_uv_reduction.wls": "d04c5cc50a2cf597c35e2d2952a83a066d86d45700dfce33f0c02de38e53a0e2",
+    "common/s13_inputs.json": "46926333c67ebfd3bf8643b39ee693d62ca6a43cc762e617a5afbd04042c9fe8",
+    "common/s13_result/reference/Hqq_virtual.wl": "a6082281aef129a8de4cb0aacc0b8587e830408c41caf958c0b297caef104119",
+    "common/s13_result/reference/s14_master_values.wl": "06fe4a55afee9d0eb79aa44998d30d4436060579cc6b0b1c1d436f535e9c226b",
+    "common/s13_result/reference/s14_reduction.wl": "e4b97598505815608da6ffdaf64e709de2c4af6c112c010bdf509f67f79f268c",
+    "common/s13_result/reference/s19_assemble_virtual.wl": "f0e6bfb7831c6fcfc21e27e5ce21626ba33635f9cb3c955dbc270565dc35e7dc",
+    "common/s13_result/reference/s19_masters.wl": "dc15677c629da486316a53cc2c16e4ca50c64d5fe815bc6a92b08c552a32c641"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s13_extend_uv_reduction"
+}

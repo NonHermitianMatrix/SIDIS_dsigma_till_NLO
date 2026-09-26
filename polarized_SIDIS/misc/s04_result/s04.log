@@ -1,0 +1,118 @@
+"PASS: ""authorized local execution"
+"PASS: ""source binding"
+"PASS: ""source syntax"
+"PASS: ""input binding misc/s02_result/s03_regular_coefficients.wl"
+"PASS: ""input binding misc/s03_inputs.json"
+"PASS: ""input binding misc/s03_reduce_Hqg_regular.wls"
+"PASS: ""input binding misc/s03_result/s03_coefficient_01.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_02.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_03.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_04.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_05.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_06.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_07.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_08.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_09.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_10.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_11.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_12.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_13.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_14.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_15.wl"
+"PASS: ""input binding misc/s03_result/s03_coefficient_16.wl"
+"PASS: ""input binding misc/s03_result/s03_execution.json"
+"PASS: ""exact original equation reconstruction"
+"PASS: ""bound partial producer execution"
+"PASS: ""bound actual coefficient 1"
+"PASS: ""bound actual coefficient 2"
+"PASS: ""bound actual coefficient 3"
+"PASS: ""bound actual coefficient 4"
+"PASS: ""bound actual coefficient 5"
+"PASS: ""bound actual coefficient 6"
+"PASS: ""bound actual coefficient 7"
+"PASS: ""bound actual coefficient 8"
+"PASS: ""bound actual coefficient 9"
+"PASS: ""bound actual coefficient 10"
+"PASS: ""bound actual coefficient 11"
+"PASS: ""bound actual coefficient 12"
+"PASS: ""bound actual coefficient 13"
+"PASS: ""bound actual coefficient 14"
+"PASS: ""bound actual coefficient 15"
+"PASS: ""bound actual coefficient 16"
+"PASS: ""only constant coefficient remains"
+"PASS: ""exact scalar-symbol restoration"
+"PASS: ""integer Laurent powers"
+"DERIVED_SCALAR_SUPPORT ""control"" "InputForm[{{-2, 0, 2}, {0}}]
+"BEGIN "{"control", "scalar coefficient extraction"}
+"PASS: ""completed {\"control\", \"scalar coefficient extraction\"}"
+"PASS: ""resolved scalar coefficient rules"
+"BEGIN "{"control", "scalar reconstruction"}
+"PASS: ""completed {\"control\", \"scalar reconstruction\"}"
+"PASS: ""exact scalar polynomial reconstruction"
+"PASS: ""scalar coefficient independence"
+"SCALAR_FACTOR ""control"" "1" OF "3" BYTES "5871776
+"BEGIN "{"control", 1, "original Factor"}
+"PASS: ""completed {\"control\", 1, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""control"" "1" ZERO "True" SECONDS "1.366332
+"SCALAR_FACTOR ""control"" "2" OF "3" BYTES "6076464
+"BEGIN "{"control", 2, "original Factor"}
+"PASS: ""completed {\"control\", 2, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""control"" "2" ZERO "True" SECONDS "1.203744
+"SCALAR_FACTOR ""control"" "3" OF "3" BYTES "5551512
+"BEGIN "{"control", 3, "original Factor"}
+"PASS: ""completed {\"control\", 3, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""control"" "3" ZERO "True" SECONDS "1.20189
+"PASS: ""own original Factor output reproduced"
+"PASS: ""exact scalar-symbol restoration"
+"PASS: ""integer Laurent powers"
+"DERIVED_SCALAR_SUPPORT ""actual"" "InputForm[{{-2, 0, 2}, {0, 1}}]
+"BEGIN "{"actual", "scalar coefficient extraction"}
+"PASS: ""completed {\"actual\", \"scalar coefficient extraction\"}"
+"PASS: ""resolved scalar coefficient rules"
+"BEGIN "{"actual", "scalar reconstruction"}
+"PASS: ""completed {\"actual\", \"scalar reconstruction\"}"
+"PASS: ""exact scalar polynomial reconstruction"
+"PASS: ""scalar coefficient independence"
+"SCALAR_FACTOR ""actual"" "1" OF "6" BYTES "7415736
+"BEGIN "{"actual", 1, "original Factor"}
+"PASS: ""completed {\"actual\", 1, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""actual"" "1" ZERO "True" SECONDS "3.422954
+"SCALAR_FACTOR ""actual"" "2" OF "6" BYTES "8068632
+"BEGIN "{"actual", 2, "original Factor"}
+"PASS: ""completed {\"actual\", 2, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""actual"" "2" ZERO "False" SECONDS "4.783179
+"SCALAR_FACTOR ""actual"" "3" OF "6" BYTES "7850400
+"BEGIN "{"actual", 3, "original Factor"}
+"PASS: ""completed {\"actual\", 3, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""actual"" "3" ZERO "True" SECONDS "3.632669
+"SCALAR_FACTOR ""actual"" "4" OF "6" BYTES "8554872
+"BEGIN "{"actual", 4, "original Factor"}
+"PASS: ""completed {\"actual\", 4, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""actual"" "4" ZERO "False" SECONDS "4.63083
+"SCALAR_FACTOR ""actual"" "5" OF "6" BYTES "7067416
+"BEGIN "{"actual", 5, "original Factor"}
+"PASS: ""completed {\"actual\", 5, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""actual"" "5" ZERO "True" SECONDS "2.864016
+"SCALAR_FACTOR ""actual"" "6" OF "6" BYTES "7409920
+"BEGIN "{"actual", 6, "original Factor"}
+"PASS: ""completed {\"actual\", 6, \"original Factor\"}"
+"PASS: ""bounded output"
+"PASS: ""exact native reload"
+"SCALAR_RESULT ""actual"" "6" ZERO "False" SECONDS "4.0329
+"FAIL: ""actual constant coefficient vanishes"

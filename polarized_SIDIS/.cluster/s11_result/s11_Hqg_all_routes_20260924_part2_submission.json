@@ -1,0 +1,24 @@
+{
+  "event": "SUBMITTED",
+  "job_id": "14886271",
+  "tag": "s11_Hqg_all_routes_20260924_part2",
+  "config": ".cluster/s11_Hqg_all_routes_20260924_part2_job.json",
+  "configuration_sha256": "1c5162775c419b49526eca936a60c9153e2057742e84d1c2ca2e90e0a4f45205",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s11_Hqg_all_routes_20260924_part2",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s11_Hqg_all_routes_20260924_part2_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s11_Hqg_all_routes_20260924_part2_job.json\n"
+}

@@ -1,0 +1,56 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s11_collinear_spin_convolutions.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s11_Hqg_dimensional_corrected",
+    "POLARIZED_SIDIS_CHANNEL": "Hqg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s11_Hqg_dimensional_corrected"
+  },
+  "execution_result": "Hqg/s11_result/s11_execution.json",
+  "expected_results": [
+    "Hqg/s11_result/s11_result.wl",
+    "Hqg/s11_result/s11_checks.json"
+  ],
+  "heartbeat": "cache/s11_Hqg_dimensional_corrected_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 3500
+  },
+  "log": "cache/s11_Hqg_dimensional_corrected.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hgq/s03_result/s03_result.wl": "570bde9d826e893d775f6bc458307369c6eb65316872f7268562345e527da177",
+    "Hqg/s01_result/reference/s01_result/s01_inputs/s04_result.wl": "8403c287ed130c5db601069eb71ad2d6a7b2b851662dea716441c472bc10eba9",
+    "Hqg/s03_result/s03_result.wl": "f08420e83f346d36de3f890ba51c2f31692907a699c0cab5fb96e43eb71c059a",
+    "Hqg/s11_result/reference/before_dimensional_completion/s11_result.wl": "1e6725ce5ad93598bf3744502333e8fee20741c3bb1be368aa9444d6a1a4482f",
+    "Hqg/s11_result/reference/s10_collinear_subtraction.wl": "befcd8a01946c50ec05f2087eeebdaa12c97da19c28ac519221e7614a82bb932",
+    "Hqg/s11_result/reference/s10_result.wl": "c8d1732042d54b1bb576a87963987acc45098f389abdd85aba7b6d0339062477",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "0dc987fe060db67a8fa060945380760b0ceb788843882e760c0a79959852297a",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "Hqq/s03_result/s03_result.wl": "99dff181bf85da2d93376236b37b98e116f5965d5015cba01eb150bb19e5c9cc",
+    "Hqqprime/s11_dimensional_result/s11_execution.json": "263420a0b3b402d0c32a66343161c0f801cda759c626337936c074bb3cc35e64",
+    "Hqqprime/s11_dimensional_result/s11_result.wl": "3c76ab221bf3c99ba7c35223b26ca10ec527596dc2f60307d5cc7e508dbc411c",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_check_dimensional_convolution.wls": "fcc88fab3d9a6fc14c630d194fd6f3bf6fc8932a62b18a55c6fcbcf5ddacbef1",
+    "common/s11_collinear_spin_convolutions.wls": "4fa3afa28525d57a63c8aea1dee8a4825d761b504f0cd8192837360ec5b531c6",
+    "common/s11_inputs.json": "20e2f7da6abf25eeeace096a4d8df702e5048eb46f7010100fe066782e82c835",
+    "common/s11_result/reference/s11_collinear_spin_convolutions_before_dimensional.wls": "9c5784631fbeb46741b274186985fb21f1607d4063525025517bb0560f11de96",
+    "common/s11_result/reference/s11_small_collinear_spin_before_dimensional.wls": "44ac7b5470ce54c6d0276bfa685ab88a5fff8d78d90c3835e7548488c48ffc8a"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s11_collinear_spin_convolutions"
+}

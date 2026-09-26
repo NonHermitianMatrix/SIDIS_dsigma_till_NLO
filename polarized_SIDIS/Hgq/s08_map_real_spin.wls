@@ -1,0 +1,1 @@
+../common/s08_map_real_spin.wls

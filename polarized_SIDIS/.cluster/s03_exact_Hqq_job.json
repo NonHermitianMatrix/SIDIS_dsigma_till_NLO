@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s03_born_spin_response_exact.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s03_exact_Hqq",
+    "POLARIZED_SIDIS_CHANNEL": "Hqq",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s03_exact_Hqq"
+  },
+  "execution_result": "cache/s03_exact/Hqq/s03_execution.json",
+  "expected_results": [
+    "cache/s03_exact/Hqq/s03_result.wl",
+    "cache/s03_exact/Hqq/s03_checks.json"
+  ],
+  "heartbeat": "cache/s03_exact_Hqq_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 960,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 8589934592,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 2700
+  },
+  "log": "cache/s03_exact_Hqq.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "7d07c760951a3c2d0cb028cdefe5b5561628e8f33ac96c6cdc28622ce2bb4499",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "0dc987fe060db67a8fa060945380760b0ceb788843882e760c0a79959852297a",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_born_spin_response_exact.wls": "d486df111962a0cfc36620a0b2d169fd2718741fa2ec4e93be4354fe64f70b5a"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s03_born_spin_response_exact"
+}

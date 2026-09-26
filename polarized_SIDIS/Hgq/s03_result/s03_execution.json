@@ -1,0 +1,54 @@
+{
+  "child_maxrss_bytes": 316846080,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s03_born_spin_response.wls"
+  ],
+  "completed_utc": "2026-09-17T08:21:51.484380+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "f6a21d1b1722376536a870e7bf4990038bd2362a5c40ee36a73201125c1e8c9c",
+  "job_id": "14773868",
+  "node": "n6442",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 315273216,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgq/s03_result/s03_checks.json": "a3475abefdbb9ec77ab113dc14ffbfab4885433db3164a59dfe3d8b4e93de99c",
+    "Hgq/s03_result/s03_result.wl": "570bde9d826e893d775f6bc458307369c6eb65316872f7268562345e527da177"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "7d07c760951a3c2d0cb028cdefe5b5561628e8f33ac96c6cdc28622ce2bb4499",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "81da52572b7ee1ae58a9002f54335ae22425859c69d090a284d0b3c7233973da",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "cache/s03_exact/Hgq/s03_result.wl": "094c2aeee2f81eacaf18c1afa56c38b9092d826bf78e345961fe38e2cba2ebab",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_born_spin_response.wls": "62a1dcc5e4b63c15a216644ea8be63dfb5385e0ed039748108c382255c2de3e0",
+    "common/s03_born_spin_response_exact.wls": "d486df111962a0cfc36620a0b2d169fd2718741fa2ec4e93be4354fe64f70b5a"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 62.06290420982987
+}

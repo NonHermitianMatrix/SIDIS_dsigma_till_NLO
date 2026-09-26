@@ -1,0 +1,17 @@
+<|"Sector" -> "Real", "Kind" -> "ExtendedResponse", "Index" -> {6, 5, 4}, 
+ "Coefficients" -> <||>, "MissingTargets" -> {}, 
+ "InputHash" -> 1026241395334334529805859546318432745067490425078318092763497\
+1192895704901127, "ReconstructionPassed" -> True, 
+ "Checks" -> <|"selected input exact native identity" -> True, 
+   "exact nonzero numeric outer factor" -> True, 
+   "complete outer phase-term inventory" -> True, 
+   "all outer phase maps retain reconstruction" -> True, 
+   "every merged group coefficient equals its full input sum" -> True, 
+   "merge partition covers each original map term once" -> True, 
+   "every grouped coefficient list is unchanged" -> True, 
+   "native complete map linearity identity" -> True, 
+   "formal identity specializes to every original map term" -> True, 
+   "formal identity specializes to every complete integral group" -> True, 
+   "complete merged key inventory" -> True, 
+   "complete outer phase maps reconstruct" -> True|>, 
+ "Seconds" -> 1603.245609, "InputBytes" -> 150165880, "OutputBytes" -> 96|>

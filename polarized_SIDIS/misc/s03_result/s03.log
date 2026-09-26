@@ -1,0 +1,108 @@
+"PASS: ""authorized bounded local execution"
+"PASS: ""source binding"
+"PASS: ""source syntax"
+"PASS: ""input binding misc/s02_result/s02_equation_F1_1_Regular.wl"
+"PASS: ""input binding misc/s02_result/s03_log_identities.wl"
+"PASS: ""input binding misc/s02_result/s03_regular_coefficients.wl"
+"LOAD_EXACT_COEFFICIENT_PACKET"
+"PASS: ""exact packet reconstruction"
+"PASS: ""same actual equation and function identities"
+"VERIFY_COEFFICIENT_RECONSTRUCTION"
+"PASS: ""own exact coefficient reconstruction"
+"RESTORE_COEFFICIENT "2" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "2" BYTES "16336624
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "2" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.004154" FACTOR_SECONDS "3.673811" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "4" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "4" BYTES "28992
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "4" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.000437" FACTOR_SECONDS "0.003807" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "5" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "5" BYTES "455152
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "5" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.002673" FACTOR_SECONDS "0.052057" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "11" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "11" BYTES "1217248
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "11" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.009597" FACTOR_SECONDS "0.110061" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "6" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "6" BYTES "1384600
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "6" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.009413" FACTOR_SECONDS "0.156255" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "8" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "8" BYTES "2085464
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "8" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.012887" FACTOR_SECONDS "0.363231" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "15" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "15" BYTES "3222928
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "15" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.013251" FACTOR_SECONDS "0.162625" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "10" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "10" BYTES "2876144
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "10" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.021506" FACTOR_SECONDS "0.601064" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "14" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "14" BYTES "5004296
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "14" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.031234" FACTOR_SECONDS "0.730028" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "1" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "1" BYTES "21768568
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "1" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.026022" FACTOR_SECONDS "3.471935" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "9" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "9" BYTES "5169592
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "9" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.03163" FACTOR_SECONDS "0.617137" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "13" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "13" BYTES "13576528
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "13" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.108548" FACTOR_SECONDS "14.154473" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "12" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "12" BYTES "13576552
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "12" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.095237" FACTOR_SECONDS "13.989344" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "7" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "7" BYTES "18331896
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "7" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.090344" FACTOR_SECONDS "17.707727" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "3" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "3" BYTES "35164536
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "3" COMPLETED "True" ZERO "True" RESTORE_SECONDS "0.085878" FACTOR_SECONDS "20.401231" RESULT_BYTES "16
+"RESTORE_COEFFICIENT "16" OF "16
+"PASS: ""coefficient restoration resolved"
+"FACTOR_COEFFICIENT "16" BYTES "40458992
+"PASS: ""bounded saved equation"
+"PASS: ""exact saved equation reload"
+"COEFFICIENT_RESULT "16" COMPLETED "False" ZERO "False" RESTORE_SECONDS "0.312146" FACTOR_SECONDS "45.011196" RESULT_BYTES "0
+"FAIL: ""all coefficient reductions completed"

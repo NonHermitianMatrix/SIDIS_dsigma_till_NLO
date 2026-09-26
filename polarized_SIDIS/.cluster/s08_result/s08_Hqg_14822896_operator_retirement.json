@@ -1,0 +1,17 @@
+{
+  "owned_processes": [
+    {
+      "pid": 36985,
+      "executable": "python3",
+      "wchan": "rpc_wait_bit_killable",
+      "state": "State:\tD (disk sleep)",
+      "sigkill_requested": true
+    }
+  ],
+  "remaining_kernel_processes": [],
+  "scheduler_delete": "rushil has registered the job 14822896 for deletion\n",
+  "job_id": "14822896",
+  "utc": "2026-09-21T00:32:03.869021+00:00",
+  "reason": "operator retirement of stalled wrapper before accepted grouped mapper handoff",
+  "native_completion_receipt_available": false
+}

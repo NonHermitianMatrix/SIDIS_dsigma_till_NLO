@@ -1,0 +1,146 @@
+{
+  "channels": {
+    "Hgg": {
+      "gq": {
+        "amplitude_file": "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/born_gq.wl",
+        "unpolarized_born_file": "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl"
+      },
+      "qg": {
+        "amplitude_file": "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl",
+        "unpolarized_born_file": "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl"
+      }
+    },
+    "Hqqbar": {
+      "gq": {
+        "amplitude_file": "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/born_gq.wl",
+        "unpolarized_born_file": "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl"
+      },
+      "qg": {
+        "amplitude_file": "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl",
+        "unpolarized_born_file": "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl"
+      }
+    },
+    "Hqqprime": {
+      "gq": {
+        "amplitude_file": "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/born_gq.wl",
+        "unpolarized_born_file": "Hqqprime/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl"
+      },
+      "qg": {
+        "amplitude_file": "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl",
+        "unpolarized_born_file": "Hqqprime/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl"
+      }
+    }
+  },
+  "commit": "5062dcb2407594dafcc2f9f72800e96ff9e6d957",
+  "files": [
+    {
+      "bytes": 6575,
+      "channel": "Hqqbar",
+      "destination": "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl",
+      "git_blob": "ea0ea8229a4d62d4154d1de57954d47a7c75563b",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "2d20b497282a7908990019cfbf6c9bf3e86537785a4fc77c3e5fb97ac75402f4",
+      "upstream_path": "SIDIS/Hqqbar/s01_result/s01_inputs/s01_result/born_qg.wl"
+    },
+    {
+      "bytes": 241,
+      "channel": "Hqqbar",
+      "destination": "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl",
+      "git_blob": "1fb804186138779192acf7738faf726a714d4dc9",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+      "upstream_path": "SIDIS/Hqqbar/s01_result/s01_inputs/s02_result/born_qg.wl"
+    },
+    {
+      "bytes": 6569,
+      "channel": "Hqqbar",
+      "destination": "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/born_gq.wl",
+      "git_blob": "44a43babe69343b05a54b4bd1f35b60d009a1a5c",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "88489352688e88e150a6d02e7586f8fded95a4549987caf22ca64a4f5b524401",
+      "upstream_path": "SIDIS/Hqqbar/s01_result/s01_inputs/s01_result/born_gq.wl"
+    },
+    {
+      "bytes": 173,
+      "channel": "Hqqbar",
+      "destination": "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl",
+      "git_blob": "32de9d6ea17bb1402e262ada44f02bfc53d38a21",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "1ce6e036f2b21a3336d92cd6ed53d02954cfb36eb08d854c7265e9b7e5362163",
+      "upstream_path": "SIDIS/Hqqbar/s01_result/s01_inputs/s02_result/born_gq.wl"
+    },
+    {
+      "bytes": 6612,
+      "channel": "Hqqprime",
+      "destination": "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl",
+      "git_blob": "868eca133831e2effe9e694defb7b83bbaaf4cd0",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "f7591175167ae19dd8527de7dfd004ba017a94f298e67be2944982e5ca3748f1",
+      "upstream_path": "SIDIS/Hqqprime/s01_result/s01_inputs/s01_result/born_qg.wl"
+    },
+    {
+      "bytes": 241,
+      "channel": "Hqqprime",
+      "destination": "Hqqprime/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl",
+      "git_blob": "1fb804186138779192acf7738faf726a714d4dc9",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+      "upstream_path": "SIDIS/Hqqprime/s01_result/s01_inputs/s02_result/born_qg.wl"
+    },
+    {
+      "bytes": 6606,
+      "channel": "Hqqprime",
+      "destination": "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/born_gq.wl",
+      "git_blob": "4389e88f8f80902ecae1e2dff5035c66106c185b",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "eb8b10858f6c9475b062d0868d88da97dca094053769f1acac65977a7295f649",
+      "upstream_path": "SIDIS/Hqqprime/s01_result/s01_inputs/s01_result/born_gq.wl"
+    },
+    {
+      "bytes": 175,
+      "channel": "Hqqprime",
+      "destination": "Hqqprime/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl",
+      "git_blob": "f8a494fe8b26a4773e5832e3c174e87616ce502e",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "0222d93a266e46bc60f87ab73353d484e8340f53662c1c97e8ed44f7444fc873",
+      "upstream_path": "SIDIS/Hqqprime/s01_result/s01_inputs/s02_result/born_gq.wl"
+    },
+    {
+      "bytes": 6477,
+      "channel": "Hgg",
+      "destination": "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl",
+      "git_blob": "45cb6151d1bf4a12893bea3fcbf5a64bda788b09",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "cab41953490c5a450eb3dbb9227d36eea8dc4e595276a7e6eb6973be550f99fd",
+      "upstream_path": "SIDIS/Hgg/s01_result/s01_inputs/s01_result/born_qg.wl"
+    },
+    {
+      "bytes": 241,
+      "channel": "Hgg",
+      "destination": "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl",
+      "git_blob": "1fb804186138779192acf7738faf726a714d4dc9",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+      "upstream_path": "SIDIS/Hgg/s01_result/s01_inputs/s02_result/born_qg.wl"
+    },
+    {
+      "bytes": 6481,
+      "channel": "Hgg",
+      "destination": "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/born_gq.wl",
+      "git_blob": "a1750a94de0d0000d23e234345d1d181e8b332fb",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "1554eefb686a09f682d3500990114a0ace8ce0e4e3d9225f9aad2e61ea9a7d59",
+      "upstream_path": "SIDIS/Hgg/s01_result/s01_inputs/s01_result/born_gq.wl"
+    },
+    {
+      "bytes": 173,
+      "channel": "Hgg",
+      "destination": "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_gq.wl",
+      "git_blob": "32de9d6ea17bb1402e262ada44f02bfc53d38a21",
+      "role": "pinned reference; stage-specific physics validation required",
+      "sha256": "1ce6e036f2b21a3336d92cd6ed53d02954cfb36eb08d854c7265e9b7e5362163",
+      "upstream_path": "SIDIS/Hgg/s01_result/s01_inputs/s02_result/born_gq.wl"
+    }
+  ],
+  "schema": "polarized-sidis-auxiliary-born-inputs-v1"
+}

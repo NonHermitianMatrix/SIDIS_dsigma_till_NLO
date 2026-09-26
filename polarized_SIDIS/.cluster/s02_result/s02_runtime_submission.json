@@ -1,0 +1,25 @@
+{
+  "job_id": "14773392",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s02_runtime_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_runtime",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:05:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s02_runtime_scheduler.log"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "9f6e9c692595574ba72f599ef9ee40ab6971b267e2748772767c04bb9502862f",
+    ".cluster/s02_probe_runtime.wls": "22993dc137499eb11a435858c8a1dcbc0ac6978b4b0bc130637b1920a291def4"
+  }
+}

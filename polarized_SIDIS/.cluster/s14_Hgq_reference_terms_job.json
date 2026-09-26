@@ -1,0 +1,45 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s14_check_Hgq_reference_terms.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s14_Hgq_reference_terms",
+    "POLARIZED_SIDIS_CHANNEL": "Hgq",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s14_Hgq_reference_terms"
+  },
+  "execution_result": "Hgq/s14_reference_terms_result/s14_execution.json",
+  "expected_results": [
+    "Hgq/s14_reference_terms_result/s14_result.wl",
+    "Hgq/s14_reference_terms_result/s14_checks.json"
+  ],
+  "heartbeat": "cache/s14_Hgq_reference_terms_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 15,
+    "scratch_bytes": 4294967296,
+    "tree_rss_bytes": 4294967296,
+    "wall_seconds": 3300
+  },
+  "log": "cache/s14_Hgq_reference_terms.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgq/s11_result/reference/before_dimensional_completion/s11_result.wl": "1fbc01498047f39d73573dc5e97ebac79ace566ba0d8e8e494aebf5043c929fd",
+    "Hgq/s11_result/s11_result.wl": "fd14b9701bce2f78f8b18ba7b381e4fa2c6f1b80bd4e2ae4113adcbd92eb9bae",
+    "Hgq/s14_reference_residual_result/s14_checks.json": "fbeed9ea334380591d78cd7d13a353e68100048dbc34f5ad0f8385e5926e50d7",
+    "Hgq/s14_reference_residual_result/s14_execution.json": "4416c2ed13e9c9c42bdf30b2517ff2510110b6a86e98a43fb9cb632d88a6fc37",
+    "Hgq/s14_reference_residual_result/s14_result.wl": "83294aea308c05dc35fb09ee9871dcfe8e0ec1f7f8299355a65360fe865a1920",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s14_assemble_finite_spin.wls": "9f511361187996d8fef88f8897ba2b40018032d9d4e789ec2cd17d445939a94a",
+    "common/s14_check_Hgq_reference_terms.wls": "5661cd5b280f685973cff320a52ec81847a85386da4aeb068497f76ada2c6424",
+    "common/s14_inspect_Hgq_reference_residual.wls": "74550c5f904b2d8b5a410565dd1fc17520d7edaecdd8868f3ecc539ec7c5f758"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s14_check_Hgq_reference_terms"
+}

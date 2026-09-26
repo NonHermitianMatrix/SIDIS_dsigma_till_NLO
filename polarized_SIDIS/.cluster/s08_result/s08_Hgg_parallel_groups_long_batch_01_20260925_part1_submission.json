@@ -1,0 +1,25 @@
+{
+  "job_id": "14917665",
+  "config": ".cluster/s08_Hgg_parallel_groups_long_batch_01_20260925_part1_job.json",
+  "configuration_sha256": "0a3679eab6c5e5d436efd585d67e7117a5b12dedd5c49a9828b91264852a7565",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_parallel_groups_long_batch_01_20260925_part1",
+    "-S",
+    "/bin/bash",
+    "-pe",
+    "shared",
+    "4",
+    "-l",
+    "h_rt=03:00:00,h_data=10G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_parallel_groups_long_batch_01_20260925_part1_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexport LC_ALL=C LANG=C\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_parallel_groups_long_batch_01_20260925_part1_job.json\n"
+}

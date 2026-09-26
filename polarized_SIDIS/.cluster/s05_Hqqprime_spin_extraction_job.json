@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s05_spin_extraction_check.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s05_spin_extraction",
+    "POLARIZED_SIDIS_CHANNEL": "Hqqprime",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s05_spin_extraction"
+  },
+  "execution_result": "Hqqprime/s05_spin_extraction_result/s05_execution.json",
+  "expected_results": [
+    "Hqqprime/s05_spin_extraction_result/s05_result.wl",
+    "Hqqprime/s05_spin_extraction_result/s05_checks.json"
+  ],
+  "heartbeat": "cache/s05_Hqqprime_spin_extraction_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 6900
+  },
+  "log": "cache/s05_Hqqprime_spin_extraction.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s05_real_spin_response.wls": "f6ba07013100d854647bc3d1677f58ba2b7b0dd50fd0b0397366e16361873d33",
+    "common/s05_spin_extraction_check.wls": "652f72449a28c3fdfb99540cc9aeb4d4a34da6eac9d707fd075850868b05fd38"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s05_spin_extraction_check"
+}

@@ -1,0 +1,24 @@
+{
+  "job_id": "14889816",
+  "tag": "s11_native_Hgg_20260924",
+  "config": ".cluster/s11_native_Hgg_20260924_job.json",
+  "configuration_sha256": "7e26db4a2a5e9f01ea0804b7ace373de298bb2f225ce27096a4311837efbb2c5",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s11_native_Hgg_20260924",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:30:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s11_native_Hgg_20260924_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s11_native_Hgg_20260924_job.json\n",
+  "utc": "2026-09-24T15:02:55.307664+00:00"
+}

@@ -1,0 +1,53 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s15_finalize_spin_coefficients_compact.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s15_Hgg_remaining_compact_hgg_direct_groups_20260923",
+    "POLARIZED_SIDIS_CHANNEL": "Hgg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s15_Hgg_remaining_compact_hgg_direct_groups_20260923"
+  },
+  "execution_result": "Hgg/s15_result/s15_execution.json",
+  "expected_results": [
+    "Hgg/s15_result/s15_result.wl",
+    "Hgg/s15_result/s15_F1_hat.wl",
+    "Hgg/s15_result/s15_F2_hat.wl",
+    "Hgg/s15_result/s15_checks.json",
+    "Hgg/s15_scheme_result/s15_result.wl"
+  ],
+  "heartbeat": "cache/s15_Hgg_remaining_compact_hgg_direct_groups_20260923_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 23622320128,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 23622320128,
+    "wall_seconds": 14100
+  },
+  "log": "cache/s15_Hgg_remaining_compact_hgg_direct_groups_20260923.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "87f8e6569853ab998c595f1a329a0d9c05390eb624cea2fd91ac2b7881703953",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_collinear_spin_convolutions.wls": "4fa3afa28525d57a63c8aea1dee8a4825d761b504f0cd8192837360ec5b531c6",
+    "common/s11_small_collinear_spin.wls": "b47acf502782cf5da4720163519a419c81a1a7f750679441a32685da2838f1af",
+    "common/s14_assemble_finite_compact_inputs.wls": "0e87dc4d088369ad3cd9754e31c5aedd4e6a80db2f18b3d318abb345cd68a613",
+    "common/s14_assemble_finite_phase_series.wls": "313f46987aa90ae14205aabec53154b72a96d1cceb5be5dcbca3d7ce770afcf2",
+    "common/s14_result/reference/s20_final_hats.wl": "c56f0f20deca9c2100218304eadbfdecb139826c6d36dd2e06bf31b6895a36fa",
+    "common/s15_finalize_spin_coefficients.wls": "54838cdee6222b75e578a242a940bdb79bd1517d41e098cbd9ca18fd369463f8",
+    "common/s15_finalize_spin_coefficients_compact.wls": "8f2bb37f8b38701c669a08b9270d290aeb7292ab162f0b66820dea7b8eb3ddc9",
+    "common/s15_inputs.json": "c53657f2372259705f4c12b9a3ce9e9cdfa148f1c2d315e0a7aeb678fdd6a34c",
+    "common/s15_result/reference/s54_factorization_contract.wls": "21fc30cc2cfd4386457dc7ab7ce1b1d22b4456460e4c0bbdc86dfbb446c23f6c"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s15_finalize_spin_coefficients"
+}

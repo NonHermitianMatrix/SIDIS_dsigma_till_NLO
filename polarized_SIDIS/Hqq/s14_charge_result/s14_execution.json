@@ -1,0 +1,51 @@
+{
+  "child_maxrss_bytes": 1656512512,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s14_check_charge_reconstruction.wls"
+  ],
+  "completed_utc": "2026-09-20T22:45:03.186843+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "7229200b9457e0e59f9d56331303b229a3905502fdc2e2b8d1dc28c1ff09ee88",
+  "job_id": "14824976",
+  "node": "n6131",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 1550499840,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqq/s14_charge_result/s14_checks.json": "fa7436a8a292daf5b5eaf37300449c7b847190157ab8a8d707ad5e15ab240e06",
+    "Hqq/s14_charge_result/s14_result.wl": "42cf25c26bc9c535b6497c0fbbca218a561cd32060b8c9cbdcebba0a61192e8b"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqq/s12_result/s12_checks.json": "e35aad551bc3c8eda0cebc2c8ce304b9218fe6836156886a6514d5977605bec6",
+    "Hqq/s12_result/s12_execution.json": "a1e04f9ab3d0be3b3bdbd33a649e153284a7c5710facf02a59edf306e5d1925e",
+    "Hqq/s12_result/s12_result.wl": "cde36c13c61541063c25bd0c6342375d233f5fa9923dae1b18f07c24662161a2",
+    "common/s14_assemble_finite_spin.wls": "9f511361187996d8fef88f8897ba2b40018032d9d4e789ec2cd17d445939a94a",
+    "common/s14_check_charge_reconstruction.wls": "4b6c8f63b493bbf31fe1da194114cc7086195f1207f72da943e37e382144ca44"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 191.49072608095594
+}

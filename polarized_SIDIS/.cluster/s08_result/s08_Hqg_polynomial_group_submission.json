@@ -1,0 +1,25 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s08_Hqg_polynomial_group_job.json",
+  "config_sha256": "ddd510d4914282c3846c44c69ccf9f57e11560e428001339dd55421549269322",
+  "event": "SUBMITTED",
+  "job_id": "14836267",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqg_polynomial_group_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqg_polynomial_group",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqg_polynomial_group_scheduler.log"
+  ],
+  "tag": "s08_Hqg_polynomial_group"
+}

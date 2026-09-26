@@ -1,0 +1,591 @@
+{
+	"checks":{
+		"compute allocation":true,
+		"isolated runtime":true,
+		"complete source syntax":true,
+		"integer real operation time limit":true,
+		"bounded real operation time limit":true,
+		"integer real operation memory limit":true,
+		"bounded real operation memory limit":true,
+		"known channel":true,
+		"pinned input Hgg\/s01_result\/reference\/s01_result\/s01_inputs\/s01_result\/real.wl":true,
+		"pinned input Hgg\/s05_result\/reference\/unpolarized_real.wl":true,
+		"accepted spin basis":true,
+		"accepted angular moments":true,
+		"real longitudinal frame linear":true,
+		"real longitudinal frame nonsingular":true,
+		"real longitudinal frame reconstructs":true,
+		"real energy linear":true,
+		"real energy nonsingular":true,
+		"real energy reconstructs":true,
+		"real transverse coordinate linear":true,
+		"real transverse coordinate nonsingular":true,
+		"real transverse coordinate reconstructs":true,
+		"real frame invariants":true,
+		"positive measured transverse momentum":true,
+		"unconditional exact algebra":true,
+		"transverse rational function":true,
+		"rationalized transverse denominator":true,
+		"polynomial division reconstruction":true,
+		"complete rational reconstruction on shell":true,
+		"measured spin axes":true,
+		"denominator Bezout reconstruction":true,
+		"invertible transverse denominator":true,
+		"unresolved physical projections":true,
+		"evanescent on-shell norm linear":true,
+		"evanescent on-shell norm nonsingular":true,
+		"evanescent on-shell norm reconstructs":true,
+		"inherited cut radius":true,
+		"one remaining physical normal coordinate":true,
+		"positive-energy support independent of normal angle":true,
+		"compact real dimensional scalar identities":true,
+		"incoming photon-basis projection":true,
+		"accepted compact calculation source":true,
+		"single reviewed real photon interface change":true,
+		"unchanged complete scalar and frame routines":true,
+		"single accepted pair-completion interface":true,
+		"unchanged complete pair contractions":true,
+		"pinned input Hgg\/s01_result\/reference\/s01_result\/s01_inputs\/s02_result\/kinematics.wl":true,
+		"pinned input Hqq\/s01_result\/reference\/s01_result\/s01_inputs\/s02_result.wl":true,
+		"reviewed previous source s05_real_spin_response_before_compact_products.wls":true,
+		"reviewed previous source s05_real_spin_response_before_coupling_inventory.wls":true,
+		"reviewed previous source s05_real_spin_response_before_worker_initialization.wls":true,
+		"reviewed previous source s05_real_spin_response_before_coefficient_reduction.wls":true,
+		"reviewed previous source s05_real_spin_response_before_projection.wls":true,
+		"compact real comparison exists":true,
+		"compact real comparison accepted":true,
+		"pinned pre-interface real source":true,
+		"accepted real coordinate and photon interfaces":true,
+		"real interface comparison shares physical inputs":true,
+		"executed coordinate conversion code":true,
+		"unique reference coordinate conversion":true,
+		"all reference scalar products reconstruct":true,
+		"accepted spin extraction and linear sum comparison":true,
+		"spin extraction comparison source binding":true,
+		"spin extraction comparison shares physical inputs":true,
+		"executed compact extraction definition":true,
+		"executed linear assembly definition":true,
+		"pinned accepted reconstruction dispatch source":true,
+		"unchanged exact spin reconstruction and checkpoint contract":true,
+		"accepted complete spin dispatch comparison":true,
+		"pinned complete spin polynomial comparison":true,
+		"accepted complete spin polynomial comparison":true,
+		"spin polynomial comparison shares physical conventions":true,
+		"spin polynomial comparison starts from original exact predicate":true,
+		"exact accepted spin polynomial definition installed":true,
+		"accepted complete scalar-restoration comparison":true,
+		"scalar-restoration comparison shares physical conventions":true,
+		"unchanged scalar-restoration starting definitions":true,
+		"exact accepted scalar-restoration definitions installed":true,
+		"pinned complete pair-assembly proof":true,
+		"pinned pair-assembly baseline":true,
+		"accepted complete pair-assembly comparison":true,
+		"pair-assembly comparison shares physical conventions":true,
+		"exact accepted pair-assembly definitions installed":true,
+		"pinned accepted scalar coefficient checkpoints":true,
+		"complete scalar checkpoint comparison accepted":true,
+		"same executed scalar equations":true,
+		"scalar checkpoint physical convention common\/s02_result\/s02_result.wl":true,
+		"scalar checkpoint physical convention common\/s04_result\/s04_result.wl":true,
+		"exact executed coefficient key definition":true,
+		"exact executed scalar checkpoint definition installed":true,
+		"own Hgg comparison interfaces":true,
+		"pinned executed angular-zero proof and receipt":true,
+		"accepted parent angular-zero comparison":true,
+		"parent physical convention common\/s02_result\/s02_result.wl":true,
+		"parent physical convention common\/s04_result\/s04_result.wl":true,
+		"identical scalar and angular equations":true,
+		"original restoration before unchanged scalar reduction":true,
+		"single real comparison sector":true,
+		"unchanged own pair initialization syntax":true,
+		"Real generated process fields":true,
+		"Real generated momentum-field correspondence":true,
+		"Real unique coupling degree":true,
+		"Real tree coupling reconstruction":true,
+		"Real uniform native spinor dimension":true,
+		"all compact scalar products restored":true,
+		"fully scalar real contraction":true,
+		"denominators independent of normal angle":true,
+		"polynomial angular numerator":true,
+		"angular numerator reconstruction":true,
+		"evaluated angular moment":true,
+		"native physical photon projection interface":true,
+		"own first pair diagonal":true,
+		"pinned own complete diagonal pair":true,
+		"complete own accepted control binding":true,
+		"isolated angular comparison cache empty":true,
+		"real spin closures":true,
+		"distinct spin polynomial variables":true,
+		"polynomial photon spin dependence":true,
+		"own complete raw spin reconstruction {1, 1}":true,
+		"own complete accepted spin reconstruction {1, 1}":true,
+		"normal coordinate independent of on-shell constraint":true,
+		"polynomial normal coordinate":true,
+		"normal coordinate absent from every denominator":true,
+		"selective expansion exact input reconstruction":true,
+		"integral nonnegative normal powers":true,
+		"every angular term exactly reconstructed":true,
+		"all used moments reproduce original angular operator":true,
+		"own accepted angular-zero coefficient {{1, 1}, 3}":true,
+		"actual guarded coefficient matches angular zero":true,
+		"own accepted angular-zero coefficient {{1, 1}, 4}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 8}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 9}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 11}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 12}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 14}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 15}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 16}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 17}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 18}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 20}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 23}":true,
+		"own accepted angular-zero coefficient {{1, 1}, 24}":true,
+		"entire own photon projection unchanged {1, 1}":true,
+		"own complete raw spin reconstruction {1, 2}":true,
+		"own complete accepted spin reconstruction {1, 2}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 3}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 4}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 8}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 9}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 11}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 12}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 15}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 16}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 17}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 20}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 23}":true,
+		"own accepted angular-zero coefficient {{1, 2}, 24}":true,
+		"entire own photon projection unchanged {1, 2}":true,
+		"own nontrivial angular-zero shortcut exercised":true,
+		"own nonzero reduction retained":true,
+		"angular zero never saved before angular averaging":true,
+		"all original scalar and angular equations unchanged":true,
+		"bounded own angular proof output":true,
+		"exact own angular proof reload":true
+	},
+	"comparisons":[
+		{
+			"PhotonIndices":[
+				1,
+				1
+			],
+			"TraceSeconds":4.0689506e1,
+			"Components":[
+				{
+					"Component":1,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":90670064018870493268589131109444299589493151620690777955995796308830611629999,
+					"InputBytes":749256,
+					"Seconds":0.134803
+				},
+				{
+					"Component":2,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":11310354265193618196290647706911323436973721406140740894961401182071241298711,
+					"InputBytes":719744,
+					"Seconds":0.137064
+				},
+				{
+					"Component":3,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":26637593374864519278545831145221152698602725109592435647382860578923433987304,
+					"InputBytes":258568,
+					"Seconds":4.7511e-2
+				},
+				{
+					"Component":4,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":6.2e-5
+				},
+				{
+					"Component":5,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":27553332176782385273670512952938530203601682729824647577159615168430623205839,
+					"InputBytes":139720,
+					"Seconds":0.108768
+				},
+				{
+					"Component":6,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":76527869796973375680638241723855570073442532872700616744319017977298274284513,
+					"InputBytes":727104,
+					"Seconds":0.139667
+				},
+				{
+					"Component":7,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":3680509014661208874849222367695948622291151634569201566744051653685069872398,
+					"InputBytes":697656,
+					"Seconds":0.137448
+				},
+				{
+					"Component":8,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":45262386201988307461497422259036459790063268278301232366944306988172800846025,
+					"InputBytes":258568,
+					"Seconds":4.8096e-2
+				},
+				{
+					"Component":9,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":6.7e-5
+				},
+				{
+					"Component":10,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":27553332176782385273670512952938530203601682729824647577159615168430623205839,
+					"InputBytes":139720,
+					"Seconds":0.107218
+				},
+				{
+					"Component":11,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":98230979508064574057417629996591432875024686902808168460448876045934357139275,
+					"InputBytes":265632,
+					"Seconds":4.3443e-2
+				},
+				{
+					"Component":12,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":77361871463255218596923935911853458158707740045344906476310862242062571176952,
+					"InputBytes":265632,
+					"Seconds":4.4293e-2
+				},
+				{
+					"Component":13,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":11691554930024024904663633170796316618645171744225099217409976114430236244294,
+					"InputBytes":352768,
+					"Seconds":6.9253e-2
+				},
+				{
+					"Component":14,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":6.6e-5
+				},
+				{
+					"Component":15,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":5.9e-5
+				},
+				{
+					"Component":16,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":5.8e-5
+				},
+				{
+					"Component":17,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":6.6e-5
+				},
+				{
+					"Component":18,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":5.8e-5
+				},
+				{
+					"Component":19,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":47085021389192286134591523953159691600335782075884025764823868761161163113537,
+					"InputBytes":380272,
+					"Seconds":7.3755e-2
+				},
+				{
+					"Component":20,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":7.5e-5
+				},
+				{
+					"Component":21,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":61778243282193301815166219454986855185289520368799534534871667175082543285120,
+					"InputBytes":117712,
+					"Seconds":8.9429e-2
+				},
+				{
+					"Component":22,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":61778243282193301815166219454986855185289520368799534534871667175082543285120,
+					"InputBytes":117712,
+					"Seconds":8.9051e-2
+				},
+				{
+					"Component":23,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":6.4e-5
+				},
+				{
+					"Component":24,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":5.9e-5
+				},
+				{
+					"Component":25,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":17326182381018512210046309875214666876416477772772890794773038944137006377535,
+					"InputBytes":90328,
+					"Seconds":5.39e-4
+				}
+			],
+			"CompleteProjectionComparison":true
+		},
+		{
+			"PhotonIndices":[
+				1,
+				2
+			],
+			"TraceSeconds":2.6501555e1,
+			"Components":[
+				{
+					"Component":1,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":75952598372493195488495245864964745334561401677261619253285444944940127507506,
+					"InputBytes":702168,
+					"Seconds":0.120408
+				},
+				{
+					"Component":2,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":34682816047595390915964699510092621201842877486163586578685106607809639859631,
+					"InputBytes":673904,
+					"Seconds":0.117207
+				},
+				{
+					"Component":3,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":61224598648264165232965892815802679925772338357279921246492286627070180549625,
+					"InputBytes":217080,
+					"Seconds":3.6053e-2
+				},
+				{
+					"Component":4,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":54878645190553171923005706409016738149960994390087763345751530675206575608911,
+					"InputBytes":222600,
+					"Seconds":3.7074e-2
+				},
+				{
+					"Component":5,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":83163727252947303132530611085591173961476448181831947803559366801907625354418,
+					"InputBytes":131728,
+					"Seconds":8.6311e-2
+				},
+				{
+					"Component":6,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":107864792370657093136193343595286876365420244355235484719804805661164921588361,
+					"InputBytes":667936,
+					"Seconds":0.115739
+				},
+				{
+					"Component":7,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":87022545072075454577223207668902282208432597375894478110046524257022403633424,
+					"InputBytes":639672,
+					"Seconds":0.11214
+				},
+				{
+					"Component":8,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":103701580927436453424591534243510878422889376009330083483786607930421234646351,
+					"InputBytes":217080,
+					"Seconds":3.6078e-2
+				},
+				{
+					"Component":9,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":66080736572311323520021801098398546102479531678296195339149169760258821764378,
+					"InputBytes":222600,
+					"Seconds":3.7045e-2
+				},
+				{
+					"Component":10,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":83163727252947303132530611085591173961476448181831947803559366801907625354418,
+					"InputBytes":131728,
+					"Seconds":8.5049e-2
+				},
+				{
+					"Component":11,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":8581599533292725980392594194479878604969965987889042630845496530204425040712,
+					"InputBytes":205024,
+					"Seconds":3.3839e-2
+				},
+				{
+					"Component":12,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":58642998859666909319549835832208463590630111324845720592130727990525694167945,
+					"InputBytes":205024,
+					"Seconds":3.3647e-2
+				},
+				{
+					"Component":13,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":97464297300884618788265227051913153523195803835946777284077044762902667651985,
+					"InputBytes":342152,
+					"Seconds":6.0087e-2
+				},
+				{
+					"Component":14,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":11486439377556485935106510172329847304989670492416052525834875539065859824078,
+					"InputBytes":298984,
+					"Seconds":1.485e-3
+				},
+				{
+					"Component":15,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":6.4e-5
+				},
+				{
+					"Component":16,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":62654967856871205412688474481033752969313021723507663621035686518151657068016,
+					"InputBytes":200120,
+					"Seconds":3.4549e-2
+				},
+				{
+					"Component":17,
+					"Shortcut":true,
+					"NontrivialShortcut":true,
+					"InputHash":102957312262324876449565350931541961475378049893073558974847983439834625725167,
+					"InputBytes":189384,
+					"Seconds":3.3208e-2
+				},
+				{
+					"Component":18,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":6851003541104470455258786716848565210111757865121662384569069176240899575995,
+					"InputBytes":298984,
+					"Seconds":1.487e-3
+				},
+				{
+					"Component":19,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":24094399890425410308814959606827516370074092710805322988519999048854448967116,
+					"InputBytes":373680,
+					"Seconds":6.4655e-2
+				},
+				{
+					"Component":20,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":6.7e-5
+				},
+				{
+					"Component":21,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":911563369612403713563834275735407391601701053151194049739749923627173579165,
+					"InputBytes":119488,
+					"Seconds":7.622e-2
+				},
+				{
+					"Component":22,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":911563369612403713563834275735407391601701053151194049739749923627173579165,
+					"InputBytes":119488,
+					"Seconds":7.6672e-2
+				},
+				{
+					"Component":23,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":7.0e-5
+				},
+				{
+					"Component":24,
+					"Shortcut":true,
+					"NontrivialShortcut":false,
+					"InputHash":27658830558030413542493292053419905772267145058542437434135608348105667684271,
+					"InputBytes":16,
+					"Seconds":5.7e-5
+				},
+				{
+					"Component":25,
+					"Shortcut":false,
+					"NontrivialShortcut":false,
+					"InputHash":33774558514705244867475774732854781628128279000105802616540264587050726908478,
+					"InputBytes":152408,
+					"Seconds":8.43e-4
+				}
+			],
+			"CompleteProjectionComparison":true
+		}
+	],
+	"job_id":"14813597",
+	"finite_nlo_fhats_computed":false
+}

@@ -1,0 +1,24 @@
+{
+  "job_id": "14889343",
+  "tag": "s08_Hgg_external_factor_20260924",
+  "config": ".cluster/s08_Hgg_external_factor_20260924_job.json",
+  "configuration_sha256": "9063b39e2b31de0ebcdbfcdc4ef2e4819bb5fa417c915a5a49cdc6f673d881df",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_external_factor_20260924",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_external_factor_20260924_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_external_factor_20260924_job.json\n",
+  "utc": "2026-09-24T13:57:38.257893+00:00"
+}

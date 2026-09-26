@@ -1,0 +1,56 @@
+{
+  "channels": {
+    "Hgq": {
+      "result": "Hgq/s11_result/reference/s08_result.wl",
+      "source": "Hgq/s11_result/reference/s08_collinear_subtraction.wl"
+    },
+    "Hqg": {
+      "result": "Hqg/s11_result/reference/s10_result.wl",
+      "source": "Hqg/s11_result/reference/s10_collinear_subtraction.wl"
+    },
+    "Hqq": {
+      "result": "Hqq/s11_result/reference/s08_result.wl",
+      "source": "Hqq/s11_result/reference/s08_collinear_subtraction.wl"
+    }
+  },
+  "commit": "5062dcb2407594dafcc2f9f72800e96ff9e6d957",
+  "files": [
+    {
+      "bytes": 11585,
+      "destination": "Hqq/s11_result/reference/s08_collinear_subtraction.wl",
+      "sha256": "6b821fc64d1b8b593f6635dd49269a36b62588903c1681763a1e6b034cfe865d",
+      "upstream_path": "SIDIS/Hqq/s01_result/s01_inputs/s08_collinear_subtraction.wl"
+    },
+    {
+      "bytes": 15399,
+      "destination": "Hqq/s11_result/reference/s08_result.wl",
+      "sha256": "3febb99ebac11172d1ce55b4315cf118b0cbc158b0d25a7fe1ae943b1371e6ea",
+      "upstream_path": "SIDIS/Hqq/s01_result/s01_inputs/s08_result.wl"
+    },
+    {
+      "bytes": 11220,
+      "destination": "Hgq/s11_result/reference/s08_collinear_subtraction.wl",
+      "sha256": "17fedfd567c9dc835f81675115f8ba7fde925e1b4722fa4ee3de071454a54011",
+      "upstream_path": "SIDIS/Hgq/s01_result/s01_inputs/s08_collinear_subtraction.wl"
+    },
+    {
+      "bytes": 15968,
+      "destination": "Hgq/s11_result/reference/s08_result.wl",
+      "sha256": "54064717ee201b62d798e078f00670e3bb459389a6cf4a82d86c613be7d32fbf",
+      "upstream_path": "SIDIS/Hgq/s01_result/s01_inputs/s08_result.wl"
+    },
+    {
+      "bytes": 8167,
+      "destination": "Hqg/s11_result/reference/s10_collinear_subtraction.wl",
+      "sha256": "befcd8a01946c50ec05f2087eeebdaa12c97da19c28ac519221e7614a82bb932",
+      "upstream_path": "SIDIS/Hqg/s01_result/s01_inputs/s10_collinear_subtraction.wl"
+    },
+    {
+      "bytes": 16877,
+      "destination": "Hqg/s11_result/reference/s10_result.wl",
+      "sha256": "c8d1732042d54b1bb576a87963987acc45098f389abdd85aba7b6d0339062477",
+      "upstream_path": "SIDIS/Hqg/s01_result/s01_inputs/s10_result.wl"
+    }
+  ],
+  "schema": "polarized-sidis-collinear-convolution-inputs-v1"
+}

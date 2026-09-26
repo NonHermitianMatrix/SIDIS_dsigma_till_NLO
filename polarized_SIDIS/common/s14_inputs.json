@@ -1,0 +1,221 @@
+{
+  "channels": {
+    "Hgg": {
+      "phase": "Hgg/s14_result/reference/phase_input.json",
+      "projectors": "Hgg/s11_result/reference/github_s09_result_s09_result.wl",
+      "unpolarized_hats": {
+        "F1": "Hgg/s14_result/reference/unpolarized_F1_hat.wl",
+        "F2": "Hgg/s14_result/reference/unpolarized_F2_hat.wl"
+      }
+    },
+    "Hgq": {
+      "bookkeeping": "Hgq/s14_result/reference/unpolarized_definitions.wl",
+      "phase": "Hgq/s14_result/reference/phase_input.json",
+      "projectors": "Hgq/s01_result/reference/s01_result/s01_inputs/s02_result.wl",
+      "unpolarized_hats": {
+        "F1": "Hgq/s14_result/reference/unpolarized_F1_hat.wl",
+        "F2": "Hgq/s14_result/reference/unpolarized_F2_hat.wl"
+      }
+    },
+    "Hqg": {
+      "bookkeeping": "Hqg/s14_result/reference/unpolarized_definitions.wl",
+      "phase": "Hqg/s14_result/reference/phase_input.json",
+      "projectors": "Hqg/s01_result/reference/s01_result/s01_inputs/s02_result.wl",
+      "unpolarized_hats": {
+        "F1": "Hqg/s14_result/reference/unpolarized_F1_hat.wl",
+        "F2": "Hqg/s14_result/reference/unpolarized_F2_hat.wl"
+      }
+    },
+    "Hqq": {
+      "bookkeeping": "Hqq/s14_result/reference/unpolarized_definitions.wl",
+      "phase": "Hqq/s14_result/reference/phase_input.json",
+      "projectors": "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl",
+      "unpolarized_hats": {
+        "F1": "Hqq/s14_result/reference/unpolarized_F1_hat.wl",
+        "F2": "Hqq/s14_result/reference/unpolarized_F2_hat.wl"
+      }
+    },
+    "Hqqbar": {
+      "phase": "Hqqbar/s14_result/reference/phase_input.json",
+      "projectors": "Hqqbar/s11_result/reference/github_s09_result_s09_result.wl",
+      "unpolarized_hats": {
+        "F1": "Hqqbar/s14_result/reference/unpolarized_F1_hat.wl",
+        "F2": "Hqqbar/s14_result/reference/unpolarized_F2_hat.wl"
+      }
+    },
+    "Hqqprime": {
+      "phase": "Hqqprime/s14_result/reference/phase_input.json",
+      "projectors": "Hqqprime/s11_result/reference/github_s09_result_s09_result.wl",
+      "unpolarized_hats": {
+        "F1": "Hqqprime/s14_result/reference/unpolarized_F1_hat.wl",
+        "F2": "Hqqprime/s14_result/reference/unpolarized_F2_hat.wl"
+      }
+    }
+  },
+  "commit": "5062dcb2407594dafcc2f9f72800e96ff9e6d957",
+  "files": [
+    {
+      "bytes": 422,
+      "destination": "Hqq/s14_result/reference/phase_input.json",
+      "sha256": "18e32243de0e1fd3e4d29c3c0244344c5bc9a2e2dc29076346967483f07eb4e3",
+      "upstream_path": "Hqq/s17_result/s17_phase_input.json"
+    },
+    {
+      "bytes": 2885388,
+      "destination": "Hqq/s14_result/reference/unpolarized_definitions.wl",
+      "sha256": "35e04ec63d69c7eef4f0f74fa1d52e9a6adf3851bd4898931f17a4cc20c61caf",
+      "upstream_path": "Hqq/s02_result/s02_result.wl"
+    },
+    {
+      "bytes": 422,
+      "destination": "Hqg/s14_result/reference/phase_input.json",
+      "sha256": "f9030d4c58987272dd240d84fbb70a51008df7bc534bf4466a4d60da33d0af86",
+      "upstream_path": "Hqg/s17_result/s17_phase_input.json"
+    },
+    {
+      "bytes": 334665,
+      "destination": "Hqg/s14_result/reference/unpolarized_definitions.wl",
+      "sha256": "d2d067bdd153cc5b5bef879e7d4c66dc77d3b0bdc00a3cfee61795cfdde12312",
+      "upstream_path": "Hqg/s02_result/s02_result.wl"
+    },
+    {
+      "bytes": 422,
+      "destination": "Hgq/s14_result/reference/phase_input.json",
+      "sha256": "fabb5da1872e15882553086879d1842ce999d26801dc3faea74bddcc64e7833f",
+      "upstream_path": "Hgq/s17_result/s17_phase_input.json"
+    },
+    {
+      "bytes": 315207,
+      "destination": "Hgq/s14_result/reference/unpolarized_definitions.wl",
+      "sha256": "a703dafb2ec37967761bccddfc42daf3d50d0e79cccb369f96515410be170217",
+      "upstream_path": "Hgq/s02_result/s02_result.wl"
+    },
+    {
+      "bytes": 431,
+      "destination": "Hqqbar/s14_result/reference/phase_input.json",
+      "sha256": "231d722165c7b6b0d037011f5f9c0bade7dc20c86eb098bdd92267a249fa5ea3",
+      "upstream_path": "Hqqbar/s11_result/s11_phase_input.json"
+    },
+    {
+      "bytes": 433,
+      "destination": "Hqqprime/s14_result/reference/phase_input.json",
+      "sha256": "d26d50a85907de47019613e89dcf203e388c019d18eef5030b66fc6afb1c5c8d",
+      "upstream_path": "Hqqprime/s11_result/s11_phase_input.json"
+    },
+    {
+      "bytes": 413,
+      "destination": "Hgg/s14_result/reference/phase_input.json",
+      "sha256": "5f8712ac7d8ad2aa615c345a5359a125929b913e0355c464d980279dfa45b8bf",
+      "upstream_path": "Hgg/s11_result/s11_phase_input.json"
+    },
+    {
+      "bytes": 16852,
+      "destination": "common/s14_result/reference/s20_final_hats.wl",
+      "sha256": "c56f0f20deca9c2100218304eadbfdecb139826c6d36dd2e06bf31b6895a36fa",
+      "upstream_path": "common/previous_runs/layout_sources/s20_final_hats.wl"
+    },
+    {
+      "bytes": 9221,
+      "destination": "Hgg/s11_result/reference/github_s09_result_s09_result.wl",
+      "sha256": "29191dd490460e2da081ce0684a5765f178cd67ecd8fc1b16280adeceaaea041"
+    },
+    {
+      "bytes": 2561,
+      "destination": "Hgq/s01_result/reference/s01_result/s01_inputs/s02_result.wl",
+      "sha256": "81da52572b7ee1ae58a9002f54335ae22425859c69d090a284d0b3c7233973da"
+    },
+    {
+      "bytes": 1009,
+      "destination": "Hqg/s01_result/reference/s01_result/s01_inputs/s02_result.wl",
+      "sha256": "e76d3cc57bd11a3a14170a81456f050d054c88b948d682e39c69d83eccb486fb"
+    },
+    {
+      "bytes": 3283,
+      "destination": "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl",
+      "sha256": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de"
+    },
+    {
+      "bytes": 10483,
+      "destination": "Hqqbar/s11_result/reference/github_s09_result_s09_result.wl",
+      "sha256": "5845217f51ea3f27760cbe031363942504e368984ac93d7c339b63da0ed6427b"
+    },
+    {
+      "bytes": 14392,
+      "destination": "Hqqprime/s11_result/reference/github_s09_result_s09_result.wl",
+      "sha256": "314213c4fdef3d4aa26fe24d81018dc2d4aeee46f2d9a5931dcd75548fd60691"
+    },
+    {
+      "bytes": 69111,
+      "destination": "Hgg/s14_result/reference/unpolarized_F1_hat.wl",
+      "sha256": "15c0daf94c5046ed06b896f1e2f3ed6c2749a61dead77614f05c109e256ccefa",
+      "upstream_path": "Hgg/s11_result/s11_F1_hat.wl"
+    },
+    {
+      "bytes": 68485,
+      "destination": "Hgg/s14_result/reference/unpolarized_F2_hat.wl",
+      "sha256": "ceac9773b0a6deda6cc44aa4e5a432b97b40ca44156bc0d93b668d53b426e946",
+      "upstream_path": "Hgg/s11_result/s11_F2_hat.wl"
+    },
+    {
+      "bytes": 584893,
+      "destination": "Hgq/s14_result/reference/unpolarized_F1_hat.wl",
+      "sha256": "da7e19dcaeab506c5391e2c43148012007db8b4a586355c33113f57f5f2c0c26",
+      "upstream_path": "Hgq/s17_result/s17_F1_hat.wl"
+    },
+    {
+      "bytes": 593988,
+      "destination": "Hgq/s14_result/reference/unpolarized_F2_hat.wl",
+      "sha256": "44be3d774c565cf56ddc7ba85cc2d0fa210357323c86499f762635350f7d8dee",
+      "upstream_path": "Hgq/s17_result/s17_F2_hat.wl"
+    },
+    {
+      "bytes": 588972,
+      "destination": "Hqg/s14_result/reference/unpolarized_F1_hat.wl",
+      "sha256": "fc161bd3e9f0a69af14e91ad951aed7e8f7356543920f9dcc48e9f5ff2c32b6e",
+      "upstream_path": "Hqg/s17_result/s17_F1_hat.wl"
+    },
+    {
+      "bytes": 594349,
+      "destination": "Hqg/s14_result/reference/unpolarized_F2_hat.wl",
+      "sha256": "4ba318fe07287aee14f0a2b9520cbf06043bb07ce609af83af8038430df09f85",
+      "upstream_path": "Hqg/s17_result/s17_F2_hat.wl"
+    },
+    {
+      "bytes": 969373,
+      "destination": "Hqq/s14_result/reference/unpolarized_F1_hat.wl",
+      "sha256": "af7d8af8ee110490aaef4bac603a62a348fe071c04ac2fe9906f5536cbbc848d",
+      "upstream_path": "Hqq/s17_result/s17_F1_hat.wl"
+    },
+    {
+      "bytes": 983245,
+      "destination": "Hqq/s14_result/reference/unpolarized_F2_hat.wl",
+      "sha256": "52ec359f7c4f33cfe3b9b72ba9474b7152436c0666d5bac909703b2d04efc4b4",
+      "upstream_path": "Hqq/s17_result/s17_F2_hat.wl"
+    },
+    {
+      "bytes": 60643,
+      "destination": "Hqqbar/s14_result/reference/unpolarized_F1_hat.wl",
+      "sha256": "f0a51ede90dd70f9e15af133df360b02f1a52c11da906f3929ba113663c5fc9b",
+      "upstream_path": "Hqqbar/s11_result/s11_F1_hat.wl"
+    },
+    {
+      "bytes": 60305,
+      "destination": "Hqqbar/s14_result/reference/unpolarized_F2_hat.wl",
+      "sha256": "cf700cca7290a8a99a567565a1af1ce8173430a78997dbe076c4e5d492be6b6d",
+      "upstream_path": "Hqqbar/s11_result/s11_F2_hat.wl"
+    },
+    {
+      "bytes": 69376,
+      "destination": "Hqqprime/s14_result/reference/unpolarized_F1_hat.wl",
+      "sha256": "f2ddd545e69793e030cc3ce9298c973e343595ff071fa1331670be7b9d1d57bc",
+      "upstream_path": "Hqqprime/s11_result/s11_F1_hat.wl"
+    },
+    {
+      "bytes": 68984,
+      "destination": "Hqqprime/s14_result/reference/unpolarized_F2_hat.wl",
+      "sha256": "8371f2e522f212d8252797842a3ff8af4d7bcc89e821bbc7e6f80230e430dbc4",
+      "upstream_path": "Hqqprime/s11_result/s11_F2_hat.wl"
+    }
+  ],
+  "schema": "polarized-sidis-final-assembly-inputs-v1"
+}

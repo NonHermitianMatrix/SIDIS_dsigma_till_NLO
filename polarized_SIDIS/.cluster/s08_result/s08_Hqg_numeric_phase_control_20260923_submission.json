@@ -1,0 +1,25 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s08_Hqg_numeric_phase_control_20260923_job.json",
+  "config_sha256": "273ae930ae7c3315a89c7b33c774134fbbc91a9ba4222112fa3f2725ae8fa47a",
+  "event": "SUBMITTED",
+  "job_id": "14874243",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqg_numeric_phase_control_20260923_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqg_numeric_phase_control_20260923",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqg_numeric_phase_control_20260923_scheduler.log"
+  ],
+  "tag": "s08_Hqg_numeric_phase_control_20260923"
+}

@@ -1,0 +1,19 @@
+{
+  "changes": [
+    {
+      "after": "\nlocalNativeWriterPath=FileNameJoin[{localFinalRoot,\"misc\",\"s40_chunked_native_record.wls\"}];\nlocalNativeWriterReceipt=Import[FileNameJoin[{localFinalRoot,\"misc\",\"s40_result\",\"s40_execution.json\"}],\"RawJSON\"];\nlocalNativeWriterChecksPath=FileNameJoin[{localFinalRoot,\"misc\",\"s40_result\",\"s40_checks.json\"}];\nlocalNativeWriterChecks=Import[localNativeWriterChecksPath,\"RawJSON\"];\nlocalFinalRequire[\"accepted complete native storage interface\",\n TrueQ[localNativeWriterReceipt[\"passed\"]]&&\n localNativeWriterReceipt[\"source_sha256\"]===IntegerString[FileHash[localNativeWriterPath,\"SHA256\"],16,64]&&\n localNativeWriterReceipt[\"result_sha256\"][\"misc/s40_checks.json\"]===\n IntegerString[FileHash[localNativeWriterChecksPath,\"SHA256\"],16,64]&&\n And@@Values[localNativeWriterChecks[\"checks\"]]&&\n localNativeWriterChecks[\"native_versions\"]==={$Version,FeynCalc`$FeynCalcVersion}];\nGet[localNativeWriterPath];\n\nlocalFinalChange[text_]:=",
+      "before": "localFinalChange[text_]:="
+    },
+    {
+      "after": "edits={localFinalWriterOld->\"put[value_, path_] := localChunkWrite[value,path];\",\"gate[",
+      "before": "edits={\"gate["
+    },
+    {
+      "after": "ToExpression[localFinalPackagePrefix,InputForm];\nlocalFinalWriterOld=Last[SelectFirst[compactFinalReplacements,StringStartsQ[First[#],\"put[value_, path_]\"]&]];",
+      "before": "ToExpression[localFinalPackagePrefix,InputForm];"
+    }
+  ],
+  "parent": "misc/s15_result/reference/before_chunked_storage/s15_finalize_Hgg_hats.wls",
+  "parent_sha256": "c0e03d13a8aff5c965812cccc478801bef8d98b63bf92280c5cdb3aafb30df5c",
+  "source_sha256": "451a6d5a9edf93e9a40b8dc11f37450d2e529398bdf0fac201e9be9158a8b705"
+}

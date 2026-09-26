@@ -1,0 +1,25 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s13_Hqg_uv_residual_inspection_job.json",
+  "config_sha256": "52aa421711798a2cffc72a7b89a078a245f8a18bde2b34628bdc2bcca39d7793",
+  "event": "SUBMITTED",
+  "job_id": "14796553",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s13_Hqg_uv_residual_inspection_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s13_Hqg_uv_residual_inspection",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s13_Hqg_uv_residual_inspection_scheduler.log"
+  ],
+  "tag": "s13_Hqg_uv_residual_inspection"
+}

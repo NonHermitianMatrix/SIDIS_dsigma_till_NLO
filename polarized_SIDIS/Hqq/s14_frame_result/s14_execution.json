@@ -1,0 +1,54 @@
+{
+  "child_maxrss_bytes": 3318575104,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s14_project_real_frame.wls"
+  ],
+  "completed_utc": "2026-09-20T22:31:41.117729+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 8589934592
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      -1,
+      -1
+    ]
+  },
+  "job_configuration_sha256": "aca1c0baa9ee9830a145d8ec1879f75b179cc2057d35c322ac6349b182ee7146",
+  "job_id": "14824417",
+  "node": "n1154",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 2981416960,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqq/s14_frame_result/s14_checks.json": "e106ebd66afc2568a41c5beb4145dc5805b55a2977ee3d652912af62141a69ff",
+    "Hqq/s14_frame_result/s14_result.wl": "ae013e58fcd90e3dfda4a4d75f0e394fd821700832b4f6362250b7034f01c295"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqq/s05_result/s05_checks.json": "e1ad071db2beb72cd0f9d906bc03055c2275c2c8a322d75e86a54dc4e87f2b1e",
+    "Hqq/s05_result/s05_execution.json": "0e2c4adb2398adb8262852fd2ae128145e86b421b858148af8ba1c53bb937f4b",
+    "Hqq/s05_result/s05_payload_0001.txt": "96c427a5fc892a44058f24ccc299ef994fa5fd9a8645cea10faf5c9179a17a2b",
+    "Hqq/s05_result/s05_payload_0002.txt": "7e093224bcc3563d701d48e78d766a7937642d197dd26a9ba1d03c57e71b5ac5",
+    "Hqq/s05_result/s05_payload_0003.txt": "fb8668da4e332e3acd8ca59cbb2df47f9da706e4d586f2dec5bd69d1f37cbd8e",
+    "Hqq/s05_result/s05_payload_manifest.json": "665c04ba01c2d1791b09f3951c942192eefa45644a23585c395f89ffdcf270ed",
+    "Hqq/s05_result/s05_result.wl": "e46d13e0db202860004cb323c655ce803d68df2f2392436c388afd342dd56076",
+    "common/s14_project_real_frame.wls": "503ef2168287d2e0309c42704de529c395af605a9c8a99111fb59f31deea5cb5"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 130.5894810333848
+}

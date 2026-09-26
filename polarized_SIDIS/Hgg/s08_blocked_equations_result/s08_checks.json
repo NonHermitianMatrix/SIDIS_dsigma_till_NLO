@@ -1,0 +1,60 @@
+{
+	"checks":{
+		"compute allocation":true,
+		"complete source syntax":true,
+		"accepted input Hgg\/s08_mapping_inputs_result\/s08_component_0008.wl":true,
+		"accepted coordinate conventions":true,
+		"unchanged scientific input common\/s08_inputs.json":true,
+		"unchanged scientific input common\/s08_result\/reference\/s03_real_families.wl":true,
+		"unchanged scientific input common\/s08_result\/reference\/s11_real_master_coefficients.wl":true,
+		"unchanged scientific input Hgg\/s05_result\/s05_result.wl":true,
+		"unchanged scientific input common\/s06_result\/s06_result.wl":true,
+		"unchanged scientific input common\/s06_result\/reference\/s02_result.wl":true,
+		"unchanged scientific input common\/s06_result\/reference\/s04_result.wl":true,
+		"accepted input Hgg\/s08_response_read_result\/s08_result.wl":true,
+		"accepted identical response reader":true,
+		"reader definitions retained exactly":true,
+		"accepted input Hgg\/s05_result\/s05_metadata.wl":true,
+		"accepted task metadata":true,
+		"explicit component selection":true,
+		"distinct existing input indices":true,
+		"exact accepted input payload 12":true,
+		"response input native identity":true,
+		"complete native response contract 12":true,
+		"bounded readable equation 12":true,
+		"entire saved input unchanged 12":true,
+		"exact accepted input payload 13":true,
+		"complete native response contract 13":true,
+		"bounded readable equation 13":true,
+		"entire saved input unchanged 13":true
+	},
+	"files":{
+		"Hgg\/s08_blocked_equations_result\/s08_component_0012_equation.wl":"c002804b2bad63a81b66fff3a33c666a8c20f0d8de1eed2d4adc97f88c1312e6",
+		"Hgg\/s08_blocked_equations_result\/s08_component_0013_equation.wl":"b1dee2138a0402dc023c924447303252888e3027a1e112a16fdcd7b03008564a"
+	},
+	"measurements":[
+		{
+			"Component":12,
+			"Task":"<|\"Sector\" -> \"Real\", \"Kind\" -> \"ExtendedResponse\", \"Index\" -> {2, 1, 1}|>",
+			"Payload":"Hgg\/s05_projected_components_result\/Photon_2\/s05_result.wl",
+			"PayloadSHA256":"d37fb0bf54fcda505cb861fd206f53dfd2fc8b5d169fa81c32984638d2646ec7",
+			"ExpressionBytes":549895136,
+			"FileBytes":38008048,
+			"CoordinateReadSeconds":7.665476
+		},
+		{
+			"Component":13,
+			"Task":"<|\"Sector\" -> \"Real\", \"Kind\" -> \"ExtendedResponse\", \"Index\" -> {2, 1, 2}|>",
+			"Payload":"Hgg\/s05_projected_components_result\/Photon_2\/s05_result.wl",
+			"PayloadSHA256":"d37fb0bf54fcda505cb861fd206f53dfd2fc8b5d169fa81c32984638d2646ec7",
+			"ExpressionBytes":540653952,
+			"FileBytes":37330960,
+			"CoordinateReadSeconds":8.001888
+		}
+	],
+	"source_sha256":"bbfb708b088e1c36934afe5ede6303140160760a2e910a61aa4babe9bf7b1a77",
+	"coordinate_input_sha256":"23bac881805e9ea0da7b96af42e16ec67e94e43c22363bfc9c9b1bf89e03e30e",
+	"peak_kernel_memory_bytes":4037861224,
+	"job_id":"14879888",
+	"finite_nlo_fhats_computed":false
+}

@@ -1,0 +1,37 @@
+{
+  "channel": "Hgg",
+  "files": {
+    "execution": {
+      "bytes": 27170,
+      "file": "Hgg/s05_export_resume_result/reference/s05_execution.json",
+      "sha256": "75a56cec5687f4016a5a08f4682c58b230fd3bdc2dba67031e3d1c769e246507"
+    },
+    "log": {
+      "bytes": 23253,
+      "file": "Hgg/s05_export_resume_result/reference/s05_export.log",
+      "sha256": "1e1af894a3d5d2e61ff372eb0f30bb37decf1896e3f4d8db1be5ff49a0a121dc"
+    },
+    "metadata": {
+      "bytes": 230317,
+      "file": "Hgg/s05_export_resume_result/reference/s05_metadata.wl",
+      "sha256": "f858b207d449632d03f284a4706a9998c0cb1ee5b2a2b7064ca027a0e41c20d7"
+    },
+    "reader": {
+      "bytes": 1180,
+      "file": "Hgg/s05_export_resume_result/reference/s05_reader.wl",
+      "sha256": "e393caa6fa12e05403700794e3c74b929839c70e979fd29ef23d3af4edf5e452"
+    }
+  },
+  "original_source": "common/s05_export_Hgg_weighted_components.wls",
+  "original_source_sha256": "b3797702851a15dc188cb86f5076ee9685a409c36ac2e2440b23cb0a94f70a91",
+  "previous_reader_components": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "prior_job": "14828705",
+  "schema": "polarized-sidis-export-checkpoint-resume-inputs-v1"
+}

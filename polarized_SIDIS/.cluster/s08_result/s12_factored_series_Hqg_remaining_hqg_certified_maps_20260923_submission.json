@@ -1,0 +1,28 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s12_factored_series_Hqg_remaining_hqg_certified_maps_20260923_job.json",
+  "config_sha256": "3af96688e4c6baa7257f4b73c1446d87d78f45b2f12ab77f2b96769084357944",
+  "event": "SUBMITTED",
+  "job_id": "14879893",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s12_factored_series_Hqg_remaining_hqg_certified_maps_20260923_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s12_factored_series_Hqg_remaining_hqg_certified_maps_20260923",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s12_factored_series_Hqg_remaining_hqg_certified_maps_20260923_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s12_factored_series_Hqg_remaining_hqg_certified_maps_20260923"
+}

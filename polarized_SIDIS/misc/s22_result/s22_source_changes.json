@@ -1,0 +1,10 @@
+{
+  "schema": "polarized-sidis-scope-correction-v1",
+  "production_source": "misc/s10_reduce_Hgg_coefficients.wls",
+  "production_source_sha256": "8a4a355f817a66301ef6106535353db070d6d32c0215aef25e97c9808432a8e7",
+  "before": "localReducedComponent[index_]:=Module[{full,answer},full=mapComponent[index];\n If[!AssociationQ[full],Return[full]];\n gate[\"complete reduced output accepted before storage projection\",TrueQ[full[\"ReconstructionPassed\"]]&&\n  And@@Values[full[\"Checks\"]]&&Keys[full[\"Coefficients\"]]===rawTargetComponents[[index]][\"RawTargets\"]];\n answer=Join[KeyDrop[full,\"Coefficients\"],KeyTake[rawTargetComponents[[index]],\n  {\"RawTargets\",\"RawCoefficientFile\",\"RawCoefficientSHA256\"}]];\n gate[\"exact downstream coefficient interface\",KeyTake[answer,{\"Sector\",\"Kind\",\"Index\",\"ReducedCoefficients\"}]===\n  KeyTake[full,{\"Sector\",\"Kind\",\"Index\",\"ReducedCoefficients\"}]];answer];",
+  "after": "localReducedComponent[index_]:=Block[{checks=<||>},Module[{full,answer},full=mapComponent[index];\n If[!AssociationQ[full],Return[full]];\n gate[\"complete reduced output accepted before storage projection\",TrueQ[full[\"ReconstructionPassed\"]]&&\n  And@@Values[full[\"Checks\"]]&&Keys[full[\"Coefficients\"]]===rawTargetComponents[[index]][\"RawTargets\"]];\n answer=Join[KeyDrop[full,\"Coefficients\"],KeyTake[rawTargetComponents[[index]],\n  {\"RawTargets\",\"RawCoefficientFile\",\"RawCoefficientSHA256\"}]];\n gate[\"exact downstream coefficient interface\",KeyTake[answer,{\"Sector\",\"Kind\",\"Index\",\"ReducedCoefficients\"}]===\n  KeyTake[full,{\"Sector\",\"Kind\",\"Index\",\"ReducedCoefficients\"}]];answer]];",
+  "cached_component": "misc/s10_work/f9d4f2094d51c4e41618f63037610cbfeb7605d24be617f73a23273b9f75d936/component_0001.wl",
+  "cached_component_sha256": "1cfce8253699ee8dd0bd93e8a1f066aa2551d3b23b730ffdb583cee8694ea0af",
+  "changes_only": "local check association scope; no coefficient or output expression changes"
+}

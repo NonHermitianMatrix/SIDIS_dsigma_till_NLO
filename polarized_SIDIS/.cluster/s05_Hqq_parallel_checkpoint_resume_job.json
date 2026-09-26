@@ -1,0 +1,68 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s05_real_spin_response.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s05_Hqq_parallel_checkpoint_resume",
+    "POLARIZED_SIDIS_CHANNEL": "Hqq",
+    "POLARIZED_SIDIS_FACTORED_PAIR": "1",
+    "POLARIZED_SIDIS_REAL_SECONDS": "7200",
+    "POLARIZED_SIDIS_SCALAR_RESTORE": "1",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s05_Hqq_parallel_checkpoint_resume"
+  },
+  "execution_result": "Hqq/s05_result/s05_execution.json",
+  "expected_results": [
+    "Hqq/s05_result/s05_result.wl",
+    "Hqq/s05_result/s05_checks.json"
+  ],
+  "heartbeat": "cache/s05_Hqq_parallel_checkpoint_resume_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 7260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 12884901888,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 16106127360,
+    "wall_seconds": 14100
+  },
+  "log": "cache/s05_Hqq_parallel_checkpoint_resume.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgg/s05_pair_assembly_result/s05_result.wl": "1cd27950314f1eda6f9652fe86521677fa2ad5949ad39854c62b4060af4b57f6",
+    "Hgg/s05_spin_map_result/s05_result.wl": "3049dfee6baa6ee6f7aed473ada5237cd7bc445ceb89d5ce13d1cbf7531d9d89",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "0dc987fe060db67a8fa060945380760b0ceb788843882e760c0a79959852297a",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "Hqq/s05_result/reference/unpolarized_real.wl": "80839ff33a066dd1edefbbd39a22513cc726372631b85d68e0a5a3a2653ad4e2",
+    "Hqqprime/s05_compact_result/s05_result.wl": "9e1619465a68e8f7fe242421a237d77f9d0452722237124429816b0a4986081d",
+    "Hqqprime/s05_interface_result/s05_result.wl": "eed6f9e3bd8316c5e82ffa0c30abaef524729f639e2070e478ba5503b35ae5e3",
+    "Hqqprime/s05_parallel_result/s05_result.wl": "60a05328f3ca59abb5bc5faab2565a77f34b9ced5eee9f2da060f6d512475e4f",
+    "Hqqprime/s05_spin_extraction_result/s05_result.wl": "ca3d2e5e85ad47b4cad41f6a26609a5886ef011a819223e9b25abe3975ea473b",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_result/s04_result.wl": "970f0bfd74d9cb5838703d01d8ce3066ff4dc28367bad67c74076bbab6b7c0b3",
+    "common/s05_inputs.json": "53f304ad84bed1cb57963f53f39ce463b2065eec15a6eff32c16141cbb5a13d7",
+    "common/s05_pair_assembly_check.wls": "47d405b7553fd93f3f4df63a008027e0b6b7500cc3041c59f5e8b7682be57900",
+    "common/s05_pair_assembly_inputs.json": "bf93a760bfc87c388b91bcc7b1d7a333b33b06365e48e8f24aa986971a7e0853",
+    "common/s05_real_spin_response.wls": "24fe8bc812f0a7306ee73ab9346d0e772d6d0bba77839feee131da55142f5c65",
+    "common/s05_result/reference/s05_real_spin_response_before_coefficient_reduction.wls": "376fd639b0624d1b0aab627969077213468cdd9811fd6b141960e7c831fa8a3a",
+    "common/s05_result/reference/s05_real_spin_response_before_compact_products.wls": "a57a34bb658c985202d47ccddd9a431c767c4d0cecf576eb8bb9817fa9972a37",
+    "common/s05_result/reference/s05_real_spin_response_before_complete_photon_projection.wls": "d34991466b6c4677600840ae1c837fab5879e2483932e778096134f8784c4d84",
+    "common/s05_result/reference/s05_real_spin_response_before_coupling_inventory.wls": "e157ea02902f03c1109e0584afb4d50cef3d96cebcdc0a28b1cf7ce7ea8b8fac",
+    "common/s05_result/reference/s05_real_spin_response_before_factored_pairs.wls": "56e507b433c5be3cfec12a83c8614e67217a3179ac3f25dc3af14fe42138fa46",
+    "common/s05_result/reference/s05_real_spin_response_before_parallel_spin_checks.wls": "46c45f60a0f97c18d430cd8a3ee05182bc5e10f5deb424e8b69487d76e75e500",
+    "common/s05_result/reference/s05_real_spin_response_before_projection.wls": "899cf6d588e4a2186c8e0312a7361c6c99796bd414ff948a2d4ceee98129967d",
+    "common/s05_result/reference/s05_real_spin_response_before_projection_memory_resume.wls": "2f207ae75537666abcc6809fef00ff18c48e61c73efebdabdb38b66c4f1459f0",
+    "common/s05_result/reference/s05_real_spin_response_before_projection_time_resume.wls": "58f6a7959d651ec0e1d4e1738f24248c1460f817953deda33a55b4b12333183f",
+    "common/s05_result/reference/s05_real_spin_response_before_resource_resume.wls": "33cf0bacda34aff1b32df4493926bcaa151e57c9763d0261419735c07b048eaf",
+    "common/s05_result/reference/s05_real_spin_response_before_spin_extraction.wls": "f6ba07013100d854647bc3d1677f58ba2b7b0dd50fd0b0397366e16361873d33",
+    "common/s05_result/reference/s05_real_spin_response_before_sum_checkpoints.wls": "33c00fd1361a5655d5f5c0fed5a15986182e4bb2fad67fc91ed0ba93da394507",
+    "common/s05_result/reference/s05_real_spin_response_before_worker_initialization.wls": "336ac1a601cc637bc11f78c27c10d9c7c0290443568127e76154407a4e3b4b4f"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s05_real_spin_response"
+}

@@ -1,0 +1,39 @@
+{
+  "config_sha256": "7f09965bda0e7eff39107d064bdcc9b2162550749deef3fce989f66a9a1644a8",
+  "event": "SUBMITTED",
+  "job_id": "14778222",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqqprime_coefficient_check_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqqprime_coefficient_check",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqqprime_coefficient_check_scheduler.log"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqqprime/s05_result/s05_result.wl": "07679643127071c38d0522479236858ff7fd1f4e770d22d65572072f56e03d9f",
+    "common/s05_result/reference/s05_real_spin_response_before_parallel_spin_checks.wls": "46c45f60a0f97c18d430cd8a3ee05182bc5e10f5deb424e8b69487d76e75e500",
+    "common/s06_result/reference/s02_result.wl": "c1e5f21d97b10b831b16ccafe2a9b3ed3fac463d5c6e204b4ecbafb471bf740d",
+    "common/s06_result/reference/s04_result.wl": "77754c4eb11f5626cc9ab473aa6c8f7a4722ab94d979cdd175da8e4a79192110",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s08_coefficient_check.wls": "46e5b7ae4c248c82cffe2e5e8d9dd5d789224fbb05365cc71dbc369eae2aa84d",
+    "common/s08_inputs.json": "e452387d27ffa4dab87e716d2061b5ad6d171f8589e9099d5b02c5bb3933af6d",
+    "common/s08_map_real_spin.wls": "e23a79589bfce183535a6f1166eda799a9f119168feb9cff1b13feb669c8b21f",
+    "common/s08_result/reference/s03_real_families.wl": "af23fd0f16f04dde4897cf92b77a9f6826bfee3442a29f26b9450663c78c0675",
+    "common/s08_result/reference/s08_inputs_before_reference_coefficients.json": "87a9e16db43dc2624c3dcabb18d06ed4b09de6082296cb0b1360314548df01b8",
+    "common/s08_result/reference/s08_map_real_spin_before_reference_coefficients.wls": "77c7352ffeacaab4a888450e1f3811509a5ba0f9df2a412409504f986279ed52",
+    "common/s08_result/reference/s11_real_master_coefficients.wl": "c453a12bebd4ce2b8dc8aa7ecf14931602aea619889c581f7850db11fc62a03a"
+  },
+  "tag": "s08_Hqqprime_coefficient_check"
+}

@@ -1,0 +1,43 @@
+{
+  "configurations": [
+    {
+      "old_sha256": "2c93de07aa219aa8f4c0642ed213ef7b4e9d43d9ee657dcb2278b7dffbfaccb2",
+      "path": ".cluster/s14_Hqg_reference_terms_20260923_job.json",
+      "sha256": "7aafa8bc9181290e85327e25f9a0fd8fd60061b9295d9bb7dcf339af6e00eeaf"
+    },
+    {
+      "old_sha256": "c0377cbcb721dd1028286ce9db7ddc763de487aad861f9b6aef0b78ae3c44a85",
+      "path": ".cluster/s11_Hqg_msbar_20260923_job.json",
+      "sha256": "c46e96edb957123fda9d0954d21656bb93fb6570d54f48be505498c01185ef00"
+    },
+    {
+      "old_sha256": "937464e3a2387bf53a9bcd06cc0341ee7ef6e2b73b2050ed882e24e6dfb9e5f4",
+      "path": ".cluster/s14_Hqg_msbar_update_20260923_job.json",
+      "sha256": "5e5dc67161519948bafc52c67c83ecc4b4ef582f00ef33c05011316de7bb8d00"
+    },
+    {
+      "old_sha256": "7afd5c93b55cfeb724f93c2a8bc4f63cec119e99a0a33c053f4404488a82c414",
+      "path": ".cluster/s15_Hqg_msbar_update_20260923_job.json",
+      "sha256": "af41701156653de3c70ea1e190edb20b966378fff290d6d46f1db3fc68c4704e"
+    }
+  ],
+  "controller": {
+    "code_sha256": "5d0374aba220c68a5619bfb5b246dff28aca8a3684cb5739b8fa2998f348cc64",
+    "event": "DETACHED_CONTROLLER_STARTED",
+    "executor_sha256": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "log": "cache/s14_to_s15_Hqg_async_executor_20260924_controller.jsonl",
+    "name": "bundle_async",
+    "node": "login1",
+    "pid": 22663
+  },
+  "native_controller_sha256": "0afa9aac488ccda38fbfc03a8709f75743edb654993a729cb24ca67d1ccb9cbf",
+  "original_controller": {
+    "code_sha256": "476caf613c3c0bb2fa6dd6cc8159e0f2e7f21ef1d3c8af8b0b91e19b1d16992e",
+    "event": "DETACHED_CONTROLLER_STARTED",
+    "log": "cache/s14_to_s15_Hqg_resubmitted_14884507_controller.jsonl",
+    "name": "bundle",
+    "node": "login1",
+    "pid": 3675
+  },
+  "schema": "polarized-sidis-executor-binding-v1"
+}

@@ -1,0 +1,52 @@
+{
+  "channel": "Hqg",
+  "comparisons": [
+    {
+      "accepted_file": "cache/s05/Hqg/a26ff6bda85fa1c70a7376a396436ddf9604decb38c24c812c356d7ac9ee8f45/Real_1_7_P1_1.wl",
+      "accepted_sha256": "c4c98d5497aec74e33c428d87e1e5e6d4fe061915b99cf963faba872cc59f5eb",
+      "name": "control",
+      "pair": [
+        1,
+        7
+      ],
+      "photon_indices": [
+        1,
+        1
+      ],
+      "trace_file": "cache/s05_coordinate_check/Hqg/e13f4011d9933453fe52fd771b64e068b43f7a7cf3c0246335496e9c8d2820aa/5428fb9cd2c9a1b3a685160b189d0187cc459bf96b4e86ae314513fb1fab4f05_trace.wl",
+      "trace_sha256": "aa809f26ca5617b912fe94e4b17489ad442e45efd39b8c9c26dad5fe988613d0"
+    },
+    {
+      "accepted_file": "cache/s05/Hqg/a26ff6bda85fa1c70a7376a396436ddf9604decb38c24c812c356d7ac9ee8f45/Real_1_7_P1_2.wl",
+      "accepted_sha256": "5a864f2face55cc42a9f10ec07d83c8a99358ace5ffb215907a7952ac7f83bcd",
+      "name": "off_diagonal",
+      "pair": [
+        1,
+        7
+      ],
+      "photon_indices": [
+        1,
+        2
+      ],
+      "trace_file": "cache/s05_coordinate_check/Hqg/e13f4011d9933453fe52fd771b64e068b43f7a7cf3c0246335496e9c8d2820aa/cbe5427635e2042856fd4bbb1ff68a5f9a1c4b7cad2b288d14e8a2565989f49c_trace.wl",
+      "trace_sha256": "9a8e0761d914a4482275748bfba5a8a1d587c92f46d07e1b284627a7689feeb9"
+    }
+  ],
+  "minimum_input_bytes": 131072,
+  "production_source_sha256": "24fe8bc812f0a7306ee73ab9346d0e772d6d0bba77839feee131da55142f5c65",
+  "recorded_inputs": [
+    {
+      "bytes": 18689,
+      "retained": "cache/s05_retained_scalar_inputs/Hqg/14813349/4910bcdf373d6b87e9287aebb768490804815ee148b48b7e6722b0de3948a0f9_50199.wl",
+      "sha256": "058a31743ea87e18a344732def0a7d35a06a0fd819a2e1e31f8ef64c86c64ef3",
+      "source": "cache/s05_pending_scalar/Hqg/a26ff6bda85fa1c70a7376a396436ddf9604decb38c24c812c356d7ac9ee8f45/4910bcdf373d6b87e9287aebb768490804815ee148b48b7e6722b0de3948a0f9_50199.wl"
+    },
+    {
+      "bytes": 121365,
+      "retained": "cache/s05_retained_scalar_inputs/Hqg/14813349/90019a5b7b789436d04aeb3ea3eb52dfb59ab1f0da21041a414634161ede8608_50201.wl",
+      "sha256": "5fdddb65179a340670f87a397b7d4d23917e08b33c80469ddfb0d9cd478e5c08",
+      "source": "cache/s05_pending_scalar/Hqg/a26ff6bda85fa1c70a7376a396436ddf9604decb38c24c812c356d7ac9ee8f45/90019a5b7b789436d04aeb3ea3eb52dfb59ab1f0da21041a414634161ede8608_50201.wl"
+    }
+  ],
+  "schema": "polarized-sidis-factored-scalar-inputs-v1"
+}

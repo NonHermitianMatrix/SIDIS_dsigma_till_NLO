@@ -1,0 +1,48 @@
+{
+  "child_maxrss_bytes": 102191104,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-code",
+    "$HistoryLength=0;root=Directory[];\nfiles={\"common/s14_assemble_finite_compact.wls\",\"common/s14_assemble_finite_phase_series.wls\",\"common/s14_assemble_finite_spin.wls\",\"common/s15_finalize_spin_coefficients_compact.wls\",\"common/s15_finalize_spin_coefficients.wls\"};\nchecks=Association@Table[file->SyntaxQ[Import[FileNameJoin[{root,file}],\"Text\"]],{file,files}];\nphaseText=Import[FileNameJoin[{root,files[[2]]}],\"Text\"];\nterminal=\"ToExpression[phaseRunTail,InputForm];\";\npositions=StringPosition[phaseText,terminal];\nAssociateTo[checks,\"one terminal phase entry\"->(Length[positions]===1&&StringEndsQ[StringTrim[phaseText],terminal])];\nIf[!And@@Values[checks],Print[\"FAIL: compact assembly source syntax\"];Quit[1]];\nprefix=StringTake[phaseText,First[First[positions]]-1];\nAssociateTo[checks,\"initialization source syntax\"->SyntaxQ[prefix]];\nIf[!And@@Values[checks],Print[\"FAIL: compact assembly initialization syntax\"];Quit[1]];\nidentities=Association@Table[file->IntegerString[FileHash[FileNameJoin[{root,file}],\"SHA256\"],16,64],{file,files}];\nout=FileNameJoin[{root,\"common\",\"s14_compact_syntax_result\"}];\nIf[!DirectoryQ[out],CreateDirectory[out,CreateIntermediateDirectories->True]];\nExport[FileNameJoin[{out,\"s14_checks.json\"}],<|\"checks\"->checks,\"source_sha256\"->identities,\"native_version\"->$Version,\"job_id\"->Environment[\"JOB_ID\"],\"physics_executed\"->False,\"finite_nlo_fhats_computed\"->False|>,\"RawJSON\"];\nPrint[\"PASS: s14_compact_syntax\"];Quit[0];"
+  ],
+  "completed_utc": "2026-09-19T08:48:05.468442+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 1610612736
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      2147483648,
+      2147483648
+    ]
+  },
+  "job_configuration_sha256": "dd00bae0fa3a3acf082053937de8cbcd29f1c609fbab1fccf161bc52c605381c",
+  "job_id": "14811629",
+  "node": "n6444",
+  "passed": false,
+  "peak_observed_tree_rss_bytes": 4096,
+  "reason": "normal_exit",
+  "result_sha256": {},
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "common/s14_assemble_finite_compact.wls": "3e570b82f4f5957c099fdd0c14fb8e6b7592ad0b94d9b9404c96d31d53c0440b",
+    "common/s14_assemble_finite_phase_series.wls": "313f46987aa90ae14205aabec53154b72a96d1cceb5be5dcbca3d7ce770afcf2",
+    "common/s14_assemble_finite_spin.wls": "9f511361187996d8fef88f8897ba2b40018032d9d4e789ec2cd17d445939a94a",
+    "common/s15_finalize_spin_coefficients.wls": "54838cdee6222b75e578a242a940bdb79bd1517d41e098cbd9ca18fd369463f8",
+    "common/s15_finalize_spin_coefficients_compact.wls": "8f2bb37f8b38701c669a08b9270d290aeb7292ab162f0b66820dea7b8eb3ddc9"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 33.36760979704559
+}

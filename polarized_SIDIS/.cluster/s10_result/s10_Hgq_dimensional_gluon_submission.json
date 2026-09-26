@@ -1,0 +1,25 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s10_Hgq_dimensional_gluon_job.json",
+  "config_sha256": "c9d96b1858f3cfc3bf099bf08d86600fe150b2b9049d415068a865c1bb269d6e",
+  "event": "SUBMITTED",
+  "job_id": "14816827",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s10_Hgq_dimensional_gluon_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s10_Hgq_dimensional_gluon",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s10_Hgq_dimensional_gluon_scheduler.log"
+  ],
+  "tag": "s10_Hgq_dimensional_gluon"
+}

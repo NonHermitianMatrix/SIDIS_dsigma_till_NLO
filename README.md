@@ -1,8 +1,8 @@
-# SIDIS through NLO: two calculation workflows
+# SIDIS through NLO: unpolarized and spin-resolved workflows
 
-This repository contains symbolic partonic structure functions `F1hat` and `F2hat` for six massless, unpolarized SIDIS channels at nonzero transverse momentum, together with their numerical convolutions and plots.
+This repository contains symbolic partonic structure functions `F1hat` and `F2hat` for six massless SIDIS channels at nonzero transverse momentum. The unpolarized workflow includes numerical convolutions and plots; the spin-resolved workflow retains incoming and tagged outgoing parton polarization through NLO.
 
-The current calculation is in **[SIDIS](SIDIS/README.md)**. It uses reverse unitarity for real-emission integration and Kira/SubTropica for the required real, virtual and self-energy master integrals. The previous published calculation is preserved in **[partial_fraction_based_workflow](partial_fraction_based_workflow/)**.
+The unpolarized calculation is in **[SIDIS](SIDIS/README.md)**. It uses reverse unitarity for real-emission integration and Kira/SubTropica for the required real, virtual and self-energy master integrals. The completed spin-resolved extension is in **[polarized_SIDIS](polarized_SIDIS/README.md)**. The earlier published calculation is preserved in **[partial_fraction_based_workflow](partial_fraction_based_workflow/)**.
 
 The first channel label denotes the incoming parton; the second denotes the observed, fragmenting parton, with momentum `k1`. LO at nonzero transverse momentum is order `alpha_s`; the NLO correction is order `alpha_s^2`.
 
@@ -22,6 +22,12 @@ The **[37-page calculation report](SIDIS/SIDIS_calculation_report.pdf)** explain
 │   ├── Hqqbar_v2/
 │   ├── Hqqprime_v2/
 │   └── numerics/
+├── polarized_SIDIS/
+│   ├── Hqq/, Hqg/, Hgq/, Hgg/, Hqqbar/, Hqqprime/
+│   ├── common/, misc/, .cluster/
+│   ├── README.md, README_code.md
+│   ├── polarized_SIDIS_report.tex
+│   └── polarized_SIDIS_report.pdf
 └── SIDIS/
     ├── Hqq/
     ├── Hqg/
@@ -40,6 +46,29 @@ The **[37-page calculation report](SIDIS/SIDIS_calculation_report.pdf)** explain
 
 The archive preserves every previously published entry at commit `87088bbc52a39b5cacbbe806418c1814c346f7e2`, including its empty `.gitattributes`. Its entire subtree is identical to that commit's root tree. Git history is retained. Empty SIDIS directories have `.gitkeep` placeholders.
 
+## Polarized SIDIS: completed partonic coefficients
+
+**[polarized_SIDIS](polarized_SIDIS/README.md)** retains all incoming and tagged outgoing physical spin components for the same large-transverse-momentum SIDIS measurement through `alpha_s^2`. The six final channels are complete. Jet matching, proton PDF/fragmentation choices, hadronic spin convolutions and polarized numerics are deferred.
+
+The **[26-page physics report](polarized_SIDIS/polarized_SIDIS_report.pdf)** and its **[LaTeX source](polarized_SIDIS/polarized_SIDIS_report.tex)** explain all common stages and every channel from beginning to end, with defined variables, equations and the general mathematical forms of the long result files. The **[code/run guide](polarized_SIDIS/README_code.md)** explains execution and result loading. Human READMEs accompany the channel and shared folders; original technical ledgers are preserved as `README_code.md`, and exact source appendices provide reproducible code/configuration listings.
+
+| Channel | Channel guide | Complete final record | F1 hat | F2 hat |
+| --- | --- | --- | --- | --- |
+| Hqq | [README](polarized_SIDIS/Hqq/README.md) | [s15_result.wl](polarized_SIDIS/Hqq/s15_result/s15_result.wl) | [F1](polarized_SIDIS/Hqq/s15_result/s15_F1_hat.wl) | [F2](polarized_SIDIS/Hqq/s15_result/s15_F2_hat.wl) |
+| Hqg | [README](polarized_SIDIS/Hqg/README.md) | [s15_result.wl](polarized_SIDIS/Hqg/s15_result/s15_result.wl) | [F1](polarized_SIDIS/Hqg/s15_result/s15_F1_hat.wl) | [F2](polarized_SIDIS/Hqg/s15_result/s15_F2_hat.wl) |
+| Hgq | [README](polarized_SIDIS/Hgq/README.md) | [s15_result.wl](polarized_SIDIS/Hgq/s15_result/s15_result.wl) | [F1](polarized_SIDIS/Hgq/s15_result/s15_F1_hat.wl) | [F2](polarized_SIDIS/Hgq/s15_result/s15_F2_hat.wl) |
+| Hgg | [README](polarized_SIDIS/Hgg/README.md) | [s15_result.wl](polarized_SIDIS/misc/s15_result/s15_result.wl) | [F1](polarized_SIDIS/misc/s15_result/s15_F1_hat.wl) | [F2](polarized_SIDIS/misc/s15_result/s15_F2_hat.wl) |
+| Hqqbar | [README](polarized_SIDIS/Hqqbar/README.md) | [s15_result.wl](polarized_SIDIS/Hqqbar/s15_result/s15_result.wl) | [F1](polarized_SIDIS/Hqqbar/s15_result/s15_F1_hat.wl) | [F2](polarized_SIDIS/Hqqbar/s15_result/s15_F2_hat.wl) |
+| Hqqprime | [README](polarized_SIDIS/Hqqprime/README.md) | [s15_result.wl](polarized_SIDIS/Hqqprime/s15_result/s15_result.wl) | [F1](polarized_SIDIS/Hqqprime/s15_result/s15_F1_hat.wl) | [F2](polarized_SIDIS/Hqqprime/s15_result/s15_F2_hat.wl) |
+
+Each F hat is a **4×4 response matrix**, with outgoing rows and incoming columns ordered `U,X,Y,H`. Quark X/Y labels describe transverse-spin coherences; gluon X/Y labels describe linear Stokes polarization. The complete result also retains **nine photon components**, giving a `9×4×4` response. These are signed hard coefficients and interference responses, not probabilities. F1/F2 remain the original two photon projections; use the full photon response for general angular observables.
+
+Final results retain LO delta and NLO delta/plus/regular distribution slots, analytic branch conventions, charge/flavor bookkeeping and scheme metadata. The spin-summed sector was reconstructed and compared with the pinned unpolarized reference. Other entries passed their recorded spin/gauge/Hermiticity, dimensional factorization, componentwise pole-cancellation and finite-export gates. This does **not** claim an independent complete polarized NLO comparison. Read the report for the scope of each check.
+
+Hgg's accepted local continuation is owned by `polarized_SIDIS/misc`; its channel folder exposes relative aliases to those results. Keep native loaders beside all companion `*_parts/` directories and preserve symbolic links. Load FeynCalc before reading the full native records. A full Git checkout with LFS objects is the supported artifact layout; GitHub's web viewer may show only a symlink target or LFS pointer for a large file.
+
+The publication includes the source, stage results, reports, receipts and cached inputs explicitly bound by the saved configurations. Unbound transient runtime/work caches, Python bytecode, compiler download caches and the locally installed documentation compiler are omitted; they are not extra final coefficients. The compiler release URL and checksum remain in `documentation/s01_latex_tool.json`. Large generated files use Git LFS, as described below. Published numerical results elsewhere in this repository belong to the unpolarized workflow.
+
 ## Previous workflow and its results
 
 | Folder | Calculation and full result |
@@ -56,7 +85,7 @@ The earlier real integration uses denominator partial fractions and the angular-
 
 Archived READMEs and execution records describe the original working layout. Relative links between archived sibling channels remain within the archive. Original absolute execution paths, and links to material outside the previous GitHub tree, remain provenance; the archive has not been rewritten as a new calculation generation.
 
-## Current SIDIS folders
+## Unpolarized SIDIS folders
 
 | Folder | Contents and channel bookkeeping |
 | --- | --- |
@@ -73,7 +102,7 @@ Archived READMEs and execution records describe the original working layout. Rel
 
 Each channel README records its conventions, inputs, normalization, accepted checkpoints and downstream consumers. Read it before rerunning a stage.
 
-## How the calculation works
+## How the unpolarized calculation works
 
 ### Generated amplitudes and contractions
 
@@ -119,7 +148,7 @@ FeynArts → FeynCalc → Kira → SubTropica
 
 The supplied SIDIS paper defines the observable and conventions. The standalone QCD reference supplies the reverse-unitarity/Kira/SubTropica approach. Accepted current master values do not come from Package-X/PaVe or the paper's evaluated angular tables. Historical excluded attempts remain identifiable under `previous_runs/`.
 
-## New final F hats
+## Unpolarized final F hats
 
 | Channel | Full result and conventions | F1 hat | F2 hat |
 | --- | --- | --- | --- |
@@ -216,15 +245,15 @@ The flag sends progress to the console. This redraws saved predictions without r
 
 All 17 accepted H1 bins passed the saved numerical gates. Theory error bars are numerical integration errors only; scale, PDF and FF uncertainties are not included. SIDIS and BigTMD predictions are bin averages; paper-curve ratios use bin-centre values. SIDIS figures retain the full BigTMD overlay; archived numerics also contains its separately published public-driver selection comparison.
 
-## Comparisons and remaining caveat
+## Comparisons and validation scope
 
 The [overall BigTMD report](SIDIS/bigTMD_comparison/s04_result.md) records **60/60 exact coefficient comparisons and 120/120 high-precision checks passing**, under its documented rational reconstruction of printed decimals, SU(3), matched scales/charges and distribution conventions. Reference coefficients are compared after production, not used to tune a result.
 
-The inherited **Hgq MadGraph real-emission sign comparison remains unresolved**. Passed coefficient and pole checks do not close that separate comparison. The channel README and numerical report preserve the limitation.
+The unpolarized SIDIS snapshot preserves its original Hgq MadGraph comparison caveat. The later **[polarized-workflow S17 check](polarized_SIDIS/Hgq/README.md#independent-sign-comparison-caveat-resolved)** resolved that comparison-reader error: a signed UFO color-representation label had been substituted for the positive color dimension. All 32 original Born/real projector comparisons then passed without changing a production F hat. This resolves that tree-level unpolarized comparison; it is not independent validation of every polarized NLO component. The original SIDIS and archived result trees are preserved unchanged.
 
 ## Git LFS and the report
 
-Two included paths use Git LFS: the large Polymake container, `SIDIS/common/software/polymake-4.4.sif`, and the vendored macOS HyperFLINT library, `SIDIS/common/software/SubTropica-1.2.10/HyperFLINT/dist/macos-arm64/libhyperflint_librarylink.dylib`. The latter retains its upstream pointer; its matching payload was supplied to this repository's LFS storage. Other SIDIS files are regular Git objects or internal symbolic links, including results, caches, archives, report and plots.
+The original SIDIS snapshot uses Git LFS for two paths: the large Polymake container, `SIDIS/common/software/polymake-4.4.sif`, and the vendored macOS HyperFLINT library, `SIDIS/common/software/SubTropica-1.2.10/HyperFLINT/dist/macos-arm64/libhyperflint_librarylink.dylib`. The latter retains its upstream pointer; its matching payload was supplied to this repository's LFS storage. Other original SIDIS files are regular Git objects or internal symbolic links, including results, caches, archives, report and plots. The new polarized snapshot additionally uses Git LFS for generated files of at least 4 MiB; exact path rules are recorded in `.gitattributes`. This keeps large native coefficients and archives intact while avoiding GitHub's ordinary-file size limit. Code files, reports, README source appendices and smaller results are ordinary Git objects.
 
 A source ZIP may contain LFS pointers. For a fresh checkout with repository access configured:
 

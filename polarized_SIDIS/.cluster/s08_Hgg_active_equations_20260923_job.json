@@ -1,0 +1,44 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s08_export_Hgg_active_equations.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s08_Hgg_active_equations_20260923",
+    "POLARIZED_SIDIS_CHANNEL": "Hgg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s08_Hgg_active_equations_20260923"
+  },
+  "execution_result": "Hgg/s08_active_equations_result/s08_execution.json",
+  "expected_results": [
+    "Hgg/s08_active_equations_result/s08_component_0001_equation.wl",
+    "Hgg/s08_active_equations_result/s08_component_0002_equation.wl",
+    "Hgg/s08_active_equations_result/s08_checks.json"
+  ],
+  "heartbeat": "cache/s08_Hgg_active_equations_20260923_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 3221225472,
+    "inactivity_seconds": 1200,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 10737418240,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 10737418240,
+    "wall_seconds": 1680
+  },
+  "log": "cache/s08_Hgg_active_equations_20260923.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgg/s05_projected_components_result/Photon_1/s05_execution.json": "b9dffda41cdd4b5b22ca340adc572f272980bc07bd37d9643cdb7535dab9d994",
+    "Hgg/s05_projected_components_result/Photon_1/s05_result.wl": "3b5319949f3b54c50ebb4c6ad2ec4deed15dc5e27826473016e26b1156f46a03",
+    "Hgg/s05_result/s05_metadata.wl": "f858b207d449632d03f284a4706a9998c0cb1ee5b2a2b7064ca027a0e41c20d7",
+    "Hgg/s05_result/s05_result.wl": "e393caa6fa12e05403700794e3c74b929839c70e979fd29ef23d3af4edf5e452",
+    "Hgg/s08_mapping_inputs_result/s08_component_0008.wl": "23bac881805e9ea0da7b96af42e16ec67e94e43c22363bfc9c9b1bf89e03e30e",
+    "Hgg/s08_mapping_inputs_result/s08_recovery_execution.json": "236e32ff981c08d5024d09ff4cf2bf9fb65f1d1fd4e28aea58a5ac98fe8a4189",
+    "common/s08_export_Hgg_active_equations.wls": "77dda1fcb3481b6df37ceb18575d5220e9645b619e85ffe34343128b6b507295"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s08_export_Hgg_active_equations"
+}

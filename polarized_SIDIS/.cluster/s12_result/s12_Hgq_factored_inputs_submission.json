@@ -1,0 +1,28 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s12_Hgq_factored_inputs_job.json",
+  "config_sha256": "7eec0669caf58dc6b2b6962968bea6f0a71c545b7d9e842bd93e0b758f7808c8",
+  "event": "SUBMITTED",
+  "job_id": "14814320",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s12_Hgq_factored_inputs_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s12_Hgq_factored_inputs",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s12_Hgq_factored_inputs_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s12_Hgq_factored_inputs"
+}

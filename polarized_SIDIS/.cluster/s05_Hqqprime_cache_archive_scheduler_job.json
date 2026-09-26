@@ -1,0 +1,39 @@
+{
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path\nimport os,json,hashlib,tarfile,subprocess,shutil,xml.etree.ElementTree as ET\nr=Path('/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z')\nc='Hqqprime';s='s05';prefix='cache/'+s+'/'+c+'/'\ndef digest(p):\n h=hashlib.sha256()\n with p.open('rb') as f:\n  for b in iter(lambda:f.read(1024**2),b''):h.update(b)\n return h.hexdigest()\ndef active():\n rows=ET.fromstring(subprocess.check_output(['/u/systems/UGE8.6.4/bin/lx-amd64/qstat','-xml','-u','rushil'])).findall('.//job_list')\n return [(a.findtext('JB_job_number'),a.findtext('JB_name')) for a in rows if a.findtext('JB_name','').startswith('pSIDIS_') and a.findtext('JB_job_number')!=os.environ.get('JOB_ID')]\nd=r/prefix;resultdir=r/c/(s+'_result');receiptpath=resultdir/(s+'_execution.json')\nv=json.loads(receiptpath.read_text());assert v['passed'] and v['job_id']=='14777388'\nfor n,h in v['result_sha256'].items():assert digest(r/n)==h,n\nlive=active();assert not any(n.startswith('pSIDIS_'+s+'_'+c+'_') for jid,n in live)\nfor jid,n in live:\n j=json.loads((r/'.cluster'/(n[len('pSIDIS_'):]+'_job.json')).read_text())\n assert not any(p.startswith(prefix) for p in j['reviewed_sha256']),(jid,prefix)\nmp=resultdir/(s+'_cache_manifest.json')\nassert not mp.exists() and not list(resultdir.glob(s+'_cache_part*.tar.gz*'))\nfiles=sorted(p for p in d.rglob('*') if p.is_file())\nassert files and all(not p.is_symlink() and r in p.resolve().parents for p in files)\ninventory={str(p.relative_to(r)):{'bytes':p.stat().st_size,'sha256':digest(p)} for p in files}\nrawbytes=sum(a['bytes'] for a in inventory.values())\nassert rawbytes<120*1024**2\nassert shutil.disk_usage(str(r)).free>2*1024**3+rawbytes\ngroups=[];group=[];total=0;part_limit=120*1024**2\nfor p in files:\n size=inventory[str(p.relative_to(r))]['bytes'];assert size<part_limit\n if group and total+size>part_limit:groups.append(group);group=[];total=0\n group.append(p);total+=size\nif group:groups.append(group)\nparts=[];seen=set()\nfor i,group in enumerate(groups,1):\n out=resultdir/(s+'_cache_part'+str(i).zfill(2)+'.tar.gz');temp=out.with_name(out.name+'.tmp')\n with tarfile.open(str(temp),'w:gz',compresslevel=1) as t:\n  for p in group:t.add(str(p),arcname=str(p.relative_to(r)),recursive=False)\n assert temp.stat().st_size<128*1024**2\n with tarfile.open(str(temp),'r:gz') as t:\n  for member in t:\n   assert member.isfile() and member.name in inventory and member.name not in seen\n   h=hashlib.sha256();n=0\n   with t.extractfile(member) as f:\n    for b in iter(lambda:f.read(1024**2),b''):h.update(b);n+=len(b)\n   assert n==inventory[member.name]['bytes'] and h.hexdigest()==inventory[member.name]['sha256']\n   seen.add(member.name);inventory[member.name]['archive']=str(out.relative_to(r))\n temp.rename(out)\n parts.append({'file':str(out.relative_to(r)),'bytes':out.stat().st_size,'sha256':digest(out)})\nassert seen==set(inventory)\nfor p in files:assert digest(p)==inventory[str(p.relative_to(r))]['sha256']\nassert not any(n.startswith('pSIDIS_'+s+'_'+c+'_') for jid,n in active())\nmanifest={'schema':'polarized-sidis-lossless-cache-archive-parts-v1','channel':c,'stage':s,'accepted_job_id':v['job_id'],'accepted_execution_sha256':digest(receiptpath),'accepted_result_sha256':v['result_sha256'],'archives':parts,'logical_bytes':rawbytes,'files':inventory,'member_hashes_verified':True,'restore_base':str(r)}\nmp.write_text(json.dumps(manifest,indent=2,sort_keys=True)+chr(10))\nfor p in files:p.unlink()\nfor p in sorted([p for p in d.rglob('*') if p.is_dir()],key=lambda p:len(p.parts),reverse=True):\n try:p.rmdir()\n except OSError:pass\noutputs={a['file']:a['sha256'] for a in parts};outputs[str(mp.relative_to(r))]=digest(mp)\nprint(json.dumps({'event':'ARCHIVED_COMPLETED_STAGE_CACHE','channel':c,'stage':s,'accepted_job_id':v['job_id'],'logical_bytes':rawbytes,'archives':parts,'files':outputs,'manifest':str(mp.relative_to(r))}),flush=True)\n"
+  ],
+  "environment": {
+    "SGE_CELL": "hoffman2",
+    "SGE_CLUSTER_NAME": "h2",
+    "SGE_EXECD_PORT": "6445",
+    "SGE_QMASTER_PORT": "6444",
+    "SGE_ROOT": "/u/systems/UGE8.6.4"
+  },
+  "execution_result": "Hqqprime/s05_result/s05_cache_execution.json",
+  "expected_results": [
+    "Hqqprime/s05_result/s05_cache_part01.tar.gz",
+    "Hqqprime/s05_result/s05_cache_manifest.json"
+  ],
+  "heartbeat": "cache/s05_Hqqprime_cache_archive_scheduler_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 300,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 1073741824,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 536870912,
+    "wall_seconds": 780
+  },
+  "log": "cache/s05_Hqqprime_cache_archive_scheduler.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqqprime/s05_result/s05_checks.json": "dc687b234398264e36be9fc02e2e20245cd1a32ac69c28087d89e9e0819bdbf3",
+    "Hqqprime/s05_result/s05_execution.json": "022ada160da4412fcb49d33208e0422384a1124f0c3e14a0b91217b4a1086503",
+    "Hqqprime/s05_result/s05_result.wl": "07679643127071c38d0522479236858ff7fd1f4e770d22d65572072f56e03d9f"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "ARCHIVED_COMPLETED_STAGE_CACHE"
+}

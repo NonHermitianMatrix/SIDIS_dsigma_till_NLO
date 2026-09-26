@@ -1,0 +1,28 @@
+{
+  "channel": "Hqqprime",
+  "config": ".cluster/s08_Hqqprime_targets_four_workers_job.json",
+  "config_sha256": "747906d611223f4ca1586c07d3519b144dba60ab968cf5939cac5cfc6c577dbb",
+  "event": "SUBMITTED",
+  "job_id": "14784642",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hqqprime_targets_four_workers_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hqqprime_targets_four_workers",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hqqprime_targets_four_workers_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s08_Hqqprime_targets_four_workers"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "polarized-sidis-local-hqg-comparison-inputs-v1",
+  "source_sha256": "25189bb520af738dc5d4276d30611d1d500eea2c80c45b2f7abdef33ea58da8a",
+  "input_sha256": {
+    "misc/s01_result/reference/s14_result.wl": "c53412709fe78c5b2cf0b02e7deed7246a5220deac0238a8d37336710e9e80d0",
+    "misc/s01_result/reference/s14_checks.json": "613c5f8b8bd81a7950ed0cb33fabc84e95d4f686b835c2604c1089f17b87ce42",
+    "misc/s01_result/reference/s14_residual_F1.wl": "72dfcbe4ff840125c0e76690a1e153bcd32cc07759c25b5239de5d956628678b",
+    "misc/s01_result/reference/s14_residual_F2.wl": "914e7a0310bc58fb8b2de3a3817c7de90cc8d6378eda33bb81a49dd0b9e97cc5",
+    "Hqg/s11_result/s11_result.wl": "12fa352ba9ae7edde73e3cfda989e4f4ed2c81864c0808503500a995bcc0486f",
+    "Hqg/s11_result/reference/before_dimensional_completion/s11_result.wl": "1e6725ce5ad93598bf3744502333e8fee20741c3bb1be368aa9444d6a1a4482f",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "Hgq/s10_dimensional_gluon_result/s10_result.wl": "8673c70ab8dca6be2775e70e339c1100829472e27f74a9f8eb1d2e3f13948006",
+    "common/s14_assemble_finite_spin.wls": "9f511361187996d8fef88f8897ba2b40018032d9d4e789ec2cd17d445939a94a",
+    "common/s14_check_Hqg_reference_terms.wls": "750786ee2c9d59b8f6d0e9457af2fce42cdf03071095032f1a007b76362c1c21",
+    "common/s11_collinear_spin_convolutions.wls": "4fa3afa28525d57a63c8aea1dee8a4825d761b504f0cd8192837360ec5b531c6",
+    "common/s11_check_dimensional_convolution.wls": "fcc88fab3d9a6fc14c630d194fd6f3bf6fc8932a62b18a55c6fcbcf5ddacbef1"
+  },
+  "limits": {
+    "wall_seconds": 600,
+    "address_space_bytes": 8589934592,
+    "rss_bytes": 3221225472,
+    "minimum_available_ram_bytes": 6442450944,
+    "minimum_free_disk_bytes": 3221225472,
+    "output_bytes": 16777216
+  },
+  "kernel": "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel"
+}

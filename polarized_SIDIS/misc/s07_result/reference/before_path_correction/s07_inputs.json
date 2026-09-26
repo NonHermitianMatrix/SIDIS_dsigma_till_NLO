@@ -1,0 +1,27 @@
+{
+  "schema": "polarized-sidis-local-Hgg-merge-inputs-v1",
+  "source_sha256": "74e2b702715928bfc281bce448ef091c45923a254e6db09d5e77c44996d6ed62",
+  "input_sha256": {
+    "misc/s07_imported_groups.json": "4bb759296cf3c3c8aa731da2e7db57c7b3a02dcecf6aa5313c8ebe9b207e17ee",
+    "common/s08_check_pair_merge_linearity.wls": "531822a5be4cf830202ca16a9cfaae1d8d7fd9b53c429cc901867da421c58f72",
+    "common/s08_result/reference/s08_map_real_spin_before_known_denominator.wls": "e23a79589bfce183535a6f1166eda799a9f119168feb9cff1b13feb669c8b21f",
+    "Hgg/s08_mapping_inputs_result/s08_component_0008.wl": "23bac881805e9ea0da7b96af42e16ec67e94e43c22363bfc9c9b1bf89e03e30e",
+    "Hgg/s08_mapping_inputs_result/s08_recovery_execution.json": "236e32ff981c08d5024d09ff4cf2bf9fb65f1d1fd4e28aea58a5ac98fe8a4189",
+    "Hgg/s08_external_factor_result/s08_result.wl": "52977c036e140df9d19cc6fe1565ce9ed9591f65f05f8288660a0a51dd07559c",
+    "Hgg/s08_external_factor_result/s08_execution.json": "1804b9f6a05156f8a327d3cbdfe6d9e74e5552494ff41495c7953bd83391193b",
+    "Hqqbar/s08_pair_merge_result/s08_result.wl": "f676c6065b84fb77b0f80c23bfd22ea2063b32506e99517eb6c356831b992a7e",
+    "Hqqbar/s08_pair_merge_result/s08_execution.json": "ece33f7a31040bdcb8b942ce1a6d004ae239e1b75619096ff251e5305ed6f636",
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb"
+  },
+  "limits": {
+    "tree_rss_bytes": 10737418240,
+    "per_process_address_bytes": 12884901888,
+    "available_ram_bytes": 4294967296,
+    "disk_reserve_bytes": 8589934592,
+    "scratch_bytes": 2147483648,
+    "per_file_bytes": 134217728,
+    "wall_seconds": 21600,
+    "inactivity_seconds": 3900,
+    "poll_seconds": 5
+  }
+}

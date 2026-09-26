@@ -1,0 +1,1 @@
+../common/s05_spin_map_check.wls

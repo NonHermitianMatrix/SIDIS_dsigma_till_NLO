@@ -1,0 +1,22 @@
+{
+	"checks":{
+		"compute allocation":true,
+		"isolated runtime":true,
+		"complete storage sources syntax":true,
+		"pinned actual accepted tensor":true,
+		"accepted full real tensor":true,
+		"valid native payload chunk bound":true,
+		"native payload is text":true,
+		"native payload part below file bound":true,
+		"native payload text round trip":true,
+		"complete native payload reader syntax":true,
+		"native payload reader below file bound":true,
+		"complete native payload exact round trip":true,
+		"native payload manifest round trip":true,
+		"actual multi-part storage exercised":true,
+		"unchanged existing Get interface":true,
+		"storage proof exact native reload":true
+	},
+	"job_id":"14795932",
+	"finite_nlo_fhats_computed":false
+}

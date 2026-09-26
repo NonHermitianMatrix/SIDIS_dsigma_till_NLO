@@ -1,0 +1,66 @@
+{
+  "child_maxrss_bytes": 382304256,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s10_Hgg_offdiagonal_transfer.wls"
+  ],
+  "completed_utc": "2026-09-24T14:58:57.747296+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 3221225472
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "755e2f120599102203b984ece92cd5777c07dd2285b3a29ab2fe7a130f68bf5f",
+  "job_id": "14889771",
+  "node": "n7131",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 228544512,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s10_offdiagonal_result/s10_checks.json": "9505a2f0852654a77a4a647f234fff549a9bb2ecdc9998efce00087f5f0d0c04",
+    "Hgg/s10_offdiagonal_result/s10_result.wl": "b21e330880da774f84d326ff35fb8b9a42340e4bfd7274bd6bf67236e3282ce7"
+  },
+  "reviewed_sha256": {
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_checks.json": "6ff3378a0c4a1e285ffe34fea510778ec91d4100abe1a93919fade2ab55f8116",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_execution.json": "992effb42fe5c41c29557eec6ad5db9fac079eb2c1060bd6806b07836c641e66",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_result.wl": "dac72a358f77e3b10483b88108da433a2e265e234cf5e04bb699a22b2d917162",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_Hgg_offdiagonal_transfer.wls": "2a3db69ff4f16697fb6b93c603f3d5ef1d8f21266864098e76cf3c91a0e64dcf",
+    "common/s10_collinear_spin_kernels.wls": "4e2e1b0b662948805d939ea52ebd7e227d0719f2d85e03f3843b791b47c09696",
+    "common/s10_dimensional_gluon_transfer.wls": "113b9968a31eec26914c7018515e9ca214bfbc622b9fe7f5a3b539037aef957d",
+    "common/s10_dimensional_quark_gluon_transfer.wls": "16a98ccb008189f631f6da124e602e581219cd7635212f5e9272ef6be7fbf46b",
+    "common/s10_inputs.json": "8aa54936b2ed7ca5cff487586639e1e580073562ffc81663ce4bd19fa2586536",
+    "common/s10_result/reference/s08_collinear_subtraction.wl": "6b821fc64d1b8b593f6635dd49269a36b62588903c1681763a1e6b034cfe865d",
+    "common/s10_result/reference/s08_result.wl": "3febb99ebac11172d1ce55b4315cf118b0cbc158b0d25a7fe1ae943b1371e6ea",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "storage_monitor": {
+    "error": null,
+    "measurement": null,
+    "measurement_age_seconds": 30.1144760097377,
+    "scan_elapsed_seconds": 30.07814796967432,
+    "scan_pending": true
+  },
+  "wall_seconds": 30.12319515598938
+}

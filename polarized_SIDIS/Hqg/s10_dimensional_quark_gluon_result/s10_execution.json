@@ -1,0 +1,65 @@
+{
+  "child_maxrss_bytes": 384266240,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s10_dimensional_quark_gluon_transfer.wls"
+  ],
+  "completed_utc": "2026-09-24T03:09:29.111006+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 3221225472
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "86a3797421095281851a6eddc8746ee2af839ecdc22dab95d558da7abc6966cb",
+  "job_id": "14886248",
+  "node": "n7127",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 384262144,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqg/s10_dimensional_quark_gluon_result/s10_checks.json": "6ff3378a0c4a1e285ffe34fea510778ec91d4100abe1a93919fade2ab55f8116",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_result.wl": "dac72a358f77e3b10483b88108da433a2e265e234cf5e04bb699a22b2d917162"
+  },
+  "reviewed_sha256": {
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_collinear_spin_kernels.wls": "4e2e1b0b662948805d939ea52ebd7e227d0719f2d85e03f3843b791b47c09696",
+    "common/s10_dimensional_gluon_transfer.wls": "113b9968a31eec26914c7018515e9ca214bfbc622b9fe7f5a3b539037aef957d",
+    "common/s10_dimensional_quark_gluon_transfer.wls": "16a98ccb008189f631f6da124e602e581219cd7635212f5e9272ef6be7fbf46b",
+    "common/s10_inputs.json": "8aa54936b2ed7ca5cff487586639e1e580073562ffc81663ce4bd19fa2586536",
+    "common/s10_result/reference/s08_collinear_subtraction.wl": "6b821fc64d1b8b593f6635dd49269a36b62588903c1681763a1e6b034cfe865d",
+    "common/s10_result/reference/s08_result.wl": "3febb99ebac11172d1ce55b4315cf118b0cbc158b0d25a7fe1ae943b1371e6ea",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "storage_monitor": {
+    "error": null,
+    "measurement": {
+      "free_bytes": 716902168985600,
+      "scratch_bytes": 10644649986
+    },
+    "measurement_age_seconds": 16.759934251196682,
+    "scan_elapsed_seconds": 60.1820975872688,
+    "scan_pending": false
+  },
+  "wall_seconds": 60.244967515580356
+}

@@ -1,0 +1,23 @@
+{
+	"expression_head":"Plus",
+	"factor_count":1,
+	"factors":[
+		{
+			"head":"Plus",
+			"number":false,
+			"bytes":130671432,
+			"small_full_form":"large"
+		}
+	],
+	"selected_numbers":"{}",
+	"rest_heads":[
+		"Plus"
+	],
+	"real_free":true,
+	"split_phase":"1",
+	"split_core_head":"Plus",
+	"definitions":"{HoldPattern[numericOuterFactor[expression_]] :> Module[{factors, numbers, rest, factor}, If[Head[expression] =!= Times, Return[{1, expression}]]; factors = List @@ expression; numbers = Select[factors, NumberQ]; rest = Select[factors,  !NumberQ[#1] & ]; If[numbers === {} || Length[rest] =!= 1 || Head[First[rest]] =!= Plus ||  !FreeQ[numbers, _Real], Return[{1, expression}]]; factor = Times @@ numbers; gate[\"exact nonzero numeric outer factor\", NumberQ[factor] && factor =!= 0 && factor*First[rest] === expression]; {factor, First[rest]}]}",
+	"checks":{
+		"actual helper syntax":true
+	}
+}

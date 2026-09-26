@@ -1,0 +1,52 @@
+{
+  "child_maxrss_bytes": 520622080,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s03_auxiliary_born_spin.wls"
+  ],
+  "completed_utc": "2026-09-17T12:04:28.253698+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "c77ef8f19f6d5e07b2512dcb87676e5d9b643cca49e4cec01ffe0dc62b14102e",
+  "job_id": "14775312",
+  "node": "n6126",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 518590464,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqqprime/s03_result/qg/s03_checks.json": "7313c348f495cdd17f45e0f712f7dc31378edcaf5bc40f0c02ecbf57f3fc9d24",
+    "Hqqprime/s03_result/qg/s03_result.wl": "f15a5df8c7584ad15aff49b720c414ce343253840bfe3b6d342d15f5634d4690"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl": "f7591175167ae19dd8527de7dfd004ba017a94f298e67be2944982e5ca3748f1",
+    "Hqqprime/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_auxiliary_born_spin.wls": "d7f17d27e9f268c687bb41590ef793ddef0752aa7686dd3b651591c9d1718f6e",
+    "common/s03_auxiliary_inputs.json": "d564b985ba59959a1aed6bd204cd59de53f1182e5113a415fa32c5bf8566d61f",
+    "common/s03_born_spin_response.wls": "62a1dcc5e4b63c15a216644ea8be63dfb5385e0ed039748108c382255c2de3e0"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 421.66465622303076
+}

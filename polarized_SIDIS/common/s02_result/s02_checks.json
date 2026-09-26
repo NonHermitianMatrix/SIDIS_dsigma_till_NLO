@@ -1,0 +1,78 @@
+{
+	"checks":{
+		"compute allocation":true,
+		"isolated Wolfram user base":true,
+		"BMHV active":true,
+		"S01 accepted":true,
+		"configuration identity":true,
+		"Hqq amplitude identity":true,
+		"Hqq amplitude association":true,
+		"Hqq open external states":true,
+		"Hqg amplitude identity":true,
+		"Hqg amplitude association":true,
+		"Hqg open external states":true,
+		"Hgq amplitude identity":true,
+		"Hgq amplitude association":true,
+		"Hgq open external states":true,
+		"Hgg amplitude identity":true,
+		"Hgg amplitude association":true,
+		"Hgg open external states":true,
+		"Hqqbar amplitude identity":true,
+		"Hqqbar amplitude association":true,
+		"Hqqbar open external states":true,
+		"Hqqprime amplitude identity":true,
+		"Hqqprime amplitude association":true,
+		"Hqqprime open external states":true,
+		"complete Pauli basis":true,
+		"density trace":true,
+		"density Hermiticity":true,
+		"pure state idempotence":true,
+		"complete incoming outgoing response":true,
+		"Clifford algebra":true,
+		"gamma5 squared":true,
+		"quark Dirac equation":true,
+		"antiquark Dirac equation":true,
+		"quark normalization":true,
+		"antiquark normalization":true,
+		"independent massless Dirac basis":true,
+		"quark projector reconstruction":true,
+		"antiquark projector reconstruction":true,
+		"gluon physical normalization":true,
+		"gluon transverse states":true,
+		"gluon completeness":true,
+		"photon matrix reconstruction":true,
+		"native spin-sum replacement interface":true
+	},
+	"spin_components_per_parton":4,
+	"photon_components":9,
+	"inventory":{
+		"Hqq":{
+			"Born":2,
+			"RealQGG":8,
+			"RealSame":8,
+			"RealDistinct":4,
+			"Virtual":15
+		},
+		"Hqg":{
+			"Born":2,
+			"Real":8,
+			"Virtual":15
+		},
+		"Hgq":{
+			"Born":2,
+			"Real":8,
+			"Virtual":15
+		},
+		"Hgg":{
+			"amplitudes":8
+		},
+		"Hqqbar":{
+			"amplitudes":8
+		},
+		"Hqqprime":{
+			"amplitudes":4
+		}
+	},
+	"finite_fhats_computed":false,
+	"job_id":"14773409"
+}

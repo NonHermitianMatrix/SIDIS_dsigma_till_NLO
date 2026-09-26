@@ -1,0 +1,37 @@
+{
+  "command": [
+    "python3",
+    "{root}/common/s01_prepare_inputs.py",
+    "--root",
+    "{root}"
+  ],
+  "execution_result": "common/s01_result/s01_execution.json",
+  "expected_results": [
+    "common/s01_result/s01_result.json",
+    "Hqq/s01_result/s01_result.json",
+    "Hqg/s01_result/s01_result.json",
+    "Hgq/s01_result/s01_result.json",
+    "Hgg/s01_result/s01_result.json",
+    "Hqqbar/s01_result/s01_result.json",
+    "Hqqprime/s01_result/s01_result.json"
+  ],
+  "heartbeat": "cache/s01_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 90,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 1073741824,
+    "poll_seconds": 2,
+    "scratch_bytes": 1073741824,
+    "tree_rss_bytes": 734003200,
+    "wall_seconds": 300
+  },
+  "log": "cache/s01_run.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "3709d2a251a80419db7be89e9edcfce26f8c5f58d8688a48d37a3ee75ea58786",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s01_prepare_inputs.py": "5eb03c10b39c1002006e732698c748bfd2084c5feef365f9ed4e808db822ebee"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s01_prepare_inputs"
+}

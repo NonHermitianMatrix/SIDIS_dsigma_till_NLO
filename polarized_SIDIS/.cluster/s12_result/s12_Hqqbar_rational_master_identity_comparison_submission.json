@@ -1,0 +1,25 @@
+{
+  "channel": "Hqqbar",
+  "config": ".cluster/s12_Hqqbar_rational_master_identity_comparison_job.json",
+  "config_sha256": "5092b8f7f4578a8f2b4d9dac7f19151c2be236b676825b49f23e1225bdfb9335",
+  "event": "SUBMITTED",
+  "job_id": "14802611",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s12_Hqqbar_rational_master_identity_comparison_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s12_Hqqbar_rational_master_identity_comparison",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s12_Hqqbar_rational_master_identity_comparison_scheduler.log"
+  ],
+  "tag": "s12_Hqqbar_rational_master_identity_comparison"
+}

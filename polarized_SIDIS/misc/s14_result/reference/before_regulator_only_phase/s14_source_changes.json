@@ -1,0 +1,41 @@
+{
+  "base": "common/s14_Hgg_native_subtraction.wls",
+  "base_sha256": "ccc131fe8384d11d3df00d923c43e80364239c54c08acea97ea81735ae9130bd",
+  "entry_changes": [
+    {
+      "before": "new=\"phaseRunPrefix=hggNativeAdapt[phaseRunPrefix];\"<>old;",
+      "after": "new=\"phaseRunPrefix=localFinitePrefix[hggNativeAdapt[phaseRunPrefix]];\"<>old;",
+      "count": 1
+    },
+    {
+      "before": "hggNativeChangedEntry=\"compactAssemblyInitialization=hggNativeInitialization[compactAssemblyInitialization];\"<>hggNativeEntry;",
+      "after": "hggNativeChangedEntry=\"compactAssemblyInitialization=localFinitePhase[hggNativeInitialization[compactAssemblyInitialization]];\"<>hggNativeEntry;",
+      "count": 1
+    },
+    {
+      "before": "ToExpression[hggNativeFinal,InputForm];",
+      "after": "localFiniteTailEdits={\n \"resultDir=FileNameJoin[{root,channel,\\\"s14_result\\\"}];\"->\"resultDir=FileNameJoin[{root,\\\"misc\\\",\\\"s14_result\\\"}];\",\n hggNativeExport->\"AssociateTo[result,<|\\\"ExecutionBackend\\\"->\\\"local\\\",\\\"NativeVersions\\\"->{$Version,$FeynCalcVersion},\\\"ImportedNativeVersions\\\"->localFiniteImportedVersions,\\\"LocalDispatchSourceHash\\\"->FileHash[localFiniteSource,\\\"SHA256\\\"],\\\"LocalConfigurationHash\\\"->FileHash[localFiniteConfigPath,\\\"SHA256\\\"]|>];\"<>hggNativeExport};\nToExpression[localFiniteChange[hggNativeFinal,localFiniteTailEdits],InputForm];",
+      "count": 1
+    }
+  ],
+  "prefix_changes": [
+    {
+      "before": "gate[\"compute allocation\",StringQ[Environment[\"JOB_ID\"]]&&!StringStartsQ[$MachineName,\"login\"]];\ngate[\"isolated runtime\",StringStartsQ[$UserBaseDirectory,root<>\"/\"]];",
+      "after": "gate[\"authorized local finite assembly\",Environment[\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\"]===\"1\"&&$VersionNumber===15.];"
+    },
+    {
+      "before": "inputPaths={configPath,basePath};",
+      "after": "inputPaths={configPath,basePath,localFiniteSource,localFiniteConfigPath,FileNameJoin[{root,\"misc\",\"s11_result\",\"s11_execution.json\"}]};"
+    },
+    {
+      "before": "real=loadResult[channel<>\"/s12_result/s12_result.wl\"];",
+      "after": "real=loadResult[\"misc/s11_result/s11_result.wl\"];\nlocalFiniteImportedVersions=real[\"ImportedNativeVersions\"];\nlocalFiniteReceipt=Import[FileNameJoin[{root,\"misc\",\"s11_result\",\"s11_execution.json\"}],\"RawJSON\"];\ngate[\"actual accepted local integrated input\",real[\"NativeVersions\"]==={$Version,$FeynCalcVersion}&&\n Last[localFiniteImportedVersions]===$FeynCalcVersion&&TrueQ[localFiniteReceipt[\"passed\"]]&&\n localFiniteReceipt[\"execution_backend\"]===\"local\"&&\n localFiniteReceipt[\"result_sha256\"][\"misc/s11_result/s11_result.wl\"]===IntegerString[FileHash[FileNameJoin[{root,\"misc\",\"s11_result\",\"s11_result.wl\"}],\"SHA256\"],16,64]];"
+    },
+    {
+      "before": "cache=FileNameJoin[{root,\"cache\",\"s14\",channel,IntegerString[inputHash,16]}];",
+      "after": "cache=FileNameJoin[{root,\"misc\",\"s14_work\",IntegerString[inputHash,16]}];"
+    }
+  ],
+  "prefix": "(* Local execution of the unchanged native Hgg finite assembly. *)\n$HistoryLength=0;\n$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\nlocalFiniteRoot=DirectoryName[DirectoryName[ExpandFileName[$InputFileName]]];SetDirectory[localFiniteRoot];\nlocalFiniteSource=FileNameJoin[{localFiniteRoot,\"misc\",\"s14_assemble_Hgg_finite.wls\"}];\nlocalFiniteConfigPath=FileNameJoin[{localFiniteRoot,\"misc\",\"s14_inputs.json\"}];\nlocalFiniteConfig=Import[localFiniteConfigPath,\"RawJSON\"];\nlocalFiniteRequire[n_,x_]:=If[!TrueQ[x],Print[\"FAIL: \",n];Quit[1]];\nlocalFiniteRequire[\"bound complete finite source\",SyntaxQ[ReadString[localFiniteSource]]&&\n IntegerString[FileHash[localFiniteSource,\"SHA256\"],16,64]===localFiniteConfig[\"source_sha256\"]];\nKeyValueMap[Function[{p,h},localFiniteRequire[\"pinned finite input \"<>p,\n IntegerString[FileHash[FileNameJoin[{localFiniteRoot,p}],\"SHA256\"],16,64]===h]],localFiniteConfig[\"input_sha256\"]];\nSetEnvironment[\"POLARIZED_SIDIS_CHANNEL\"->\"Hgg\"];\nlocalFiniteChange[text_,edits_]:=Module[{candidate},\n localFiniteRequire[\"unique reviewed finite interfaces\",And@@(StringCount[text,First[#]]===1&/@edits)];\n candidate=StringReplace[text,edits];localFiniteRequire[\"complete preserved finite implementation\",SyntaxQ[candidate]&&\n StringReplace[candidate,Reverse/@edits]===text];candidate];\nlocalFinitePrefix[text_]:=localFiniteChange[text,{\"gate[\\\"compute allocation\\\",StringQ[Environment[\\\"JOB_ID\\\"]]&&!StringStartsQ[$MachineName,\\\"login\\\"]];\\ngate[\\\"isolated runtime\\\",StringStartsQ[$UserBaseDirectory,root<>\\\"/\\\"]];\"->\"gate[\\\"authorized local finite assembly\\\",Environment[\\\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\\\"]===\\\"1\\\"&&$VersionNumber===15.];\",\n\"inputPaths={configPath,basePath};\"->\"inputPaths={configPath,basePath,localFiniteSource,localFiniteConfigPath,FileNameJoin[{root,\\\"misc\\\",\\\"s11_result\\\",\\\"s11_execution.json\\\"}]};\",\n\"real=loadResult[channel<>\\\"/s12_result/s12_result.wl\\\"];\"->\"real=loadResult[\\\"misc/s11_result/s11_result.wl\\\"];\\nlocalFiniteImportedVersions=real[\\\"ImportedNativeVersions\\\"];\\nlocalFiniteReceipt=Import[FileNameJoin[{root,\\\"misc\\\",\\\"s11_result\\\",\\\"s11_execution.json\\\"}],\\\"RawJSON\\\"];\\ngate[\\\"actual accepted local integrated input\\\",real[\\\"NativeVersions\\\"]==={$Version,$FeynCalcVersion}&&\\n Last[localFiniteImportedVersions]===$FeynCalcVersion&&TrueQ[localFiniteReceipt[\\\"passed\\\"]]&&\\n localFiniteReceipt[\\\"execution_backend\\\"]===\\\"local\\\"&&\\n localFiniteReceipt[\\\"result_sha256\\\"][\\\"misc/s11_result/s11_result.wl\\\"]===IntegerString[FileHash[FileNameJoin[{root,\\\"misc\\\",\\\"s11_result\\\",\\\"s11_result.wl\\\"}],\\\"SHA256\\\"],16,64]];\",\n\"cache=FileNameJoin[{root,\\\"cache\\\",\\\"s14\\\",channel,IntegerString[inputHash,16]}];\"->\"cache=FileNameJoin[{root,\\\"misc\\\",\\\"s14_work\\\",IntegerString[inputHash,16]}];\"}];\nlocalFinitePhase[text_]:=localFiniteChange[text,{\n \"phaseRunProof[\\\"NativeVersions\\\"]==={$Version,$FeynCalcVersion}\"->\n \"phaseRunProof[\\\"NativeVersions\\\"]===localFiniteImportedVersions\",\n \"Get[\\\"FeynCalc`\\\"]\"->\"If[!MemberQ[$Packages,\\\"FeynCalc`\\\"],Get[\\\"FeynCalc`\\\"]]\"}];\n",
+  "source_sha256": "6694ffec30ab6160f9ff752f247676b0b79cb0323e2d0c4441a6e7137858bc2c"
+}

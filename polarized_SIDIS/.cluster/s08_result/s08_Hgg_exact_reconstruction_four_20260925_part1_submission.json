@@ -1,0 +1,26 @@
+{
+  "job_id": "14909359",
+  "config": ".cluster/s08_Hgg_exact_reconstruction_four_20260925_part1_job.json",
+  "configuration_sha256": "57a16b08c0222a2ca718ebfc1896cc059cee835fa7227f60113cf713fcfbd937",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_exact_reconstruction_four_20260925_part1",
+    "-S",
+    "/bin/bash",
+    "-pe",
+    "shared",
+    "4",
+    "-l",
+    "h_rt=02:00:00,h_data=10G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_exact_reconstruction_four_20260925_part1_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexport LC_ALL=C LANG=C\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_exact_reconstruction_four_20260925_part1_job.json\n",
+  "utc": "2026-09-25T03:40:57.679516+00:00"
+}

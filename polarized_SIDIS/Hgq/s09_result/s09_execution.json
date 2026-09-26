@@ -1,0 +1,54 @@
+{
+  "child_maxrss_bytes": 1125568512,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s09_map_virtual_spin.wls"
+  ],
+  "completed_utc": "2026-09-17T15:49:31.563799+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "7be3c6a43acbb4582c2bf93d446e1dc41c2d6df6dcf046647efae0bf46ba081a",
+  "job_id": "14776353",
+  "node": "n6439",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 1110110208,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgq/s09_result/s09_checks.json": "7e318eaa01b9f2de4d561c0663405807bf9a405f72c69d9f2c230dc134b87061",
+    "Hgq/s09_result/s09_result.wl": "0bb4747ce698189ad4bc7e4b19155e8e61888b75a2f1609beae612f06846a29c"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hgq/s07_result/reference/unpolarized_virtual.wl": "c85e0fabd7fb87601e7940246ef653f4ca5afcd71997dece933e7525f5094962",
+    "Hgq/s07_result/s07_result.wl": "8fac078b7695b9769289fc2f22873a86e26d1a67c35d55240b19950db80ba0c5",
+    "common/s06_result/reference/s09_result.wl": "0c23971167f6b6cab97accd1fe5ddc05c99a7844be2a1aa560d4e4ebcc50090f",
+    "common/s06_result/reference/s12_result.wl": "07e1f4b08b86df75ee9fc9e489d929f22789e4d58017a5cdee40f12abc4c124e",
+    "common/s06_result/reference/s13_result.wl": "5193fc3cbbf055e34dfc6d718fe33fd72e2c676d2a5b5f4a7a6b8175a7a12513",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s07_inputs.json": "a545945765b5cf85018299090c78f109e06fb4a2b9c369bd685256e71e843596",
+    "common/s09_map_virtual_spin.wls": "4d5ef7c92f3a71f9410d8c1fe2c83e26431f23b84b3a0ea83131bb4bd9f072a5"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 1876.5585505850613
+}

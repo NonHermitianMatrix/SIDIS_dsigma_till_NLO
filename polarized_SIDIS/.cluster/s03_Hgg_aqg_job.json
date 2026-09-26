@@ -1,0 +1,45 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s03_auxiliary_born_spin.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s03_Hgg_aqg",
+    "POLARIZED_SIDIS_AUXILIARY": "aqg",
+    "POLARIZED_SIDIS_CHANNEL": "Hgg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s03_Hgg_aqg"
+  },
+  "execution_result": "Hgg/s03_result/aqg/s03_execution.json",
+  "expected_results": [
+    "Hgg/s03_result/aqg/s03_result.wl",
+    "Hgg/s03_result/aqg/s03_checks.json",
+    "Hgg/s03_result/aqg/s03_amplitudes.wl"
+  ],
+  "heartbeat": "cache/s03_Hgg_aqg_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 8589934592,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 6900
+  },
+  "log": "cache/s03_Hgg_aqg.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl": "cab41953490c5a450eb3dbb9227d36eea8dc4e595276a7e6eb6973be550f99fd",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+    "Hgg/s03_result/reference/s01_amplitudes.wls": "c708d0fb865e69d106aac475efab4ea97594d50626a46fec2adc3ffb03239188",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_auxiliary_born_spin.wls": "59cc64d7183740a66bb6a43bd47d93beb66fe256b29b11f7466b676a8bbf07fa",
+    "common/s03_auxiliary_inputs.json": "d564b985ba59959a1aed6bd204cd59de53f1182e5113a415fa32c5bf8566d61f",
+    "common/s03_born_spin_response.wls": "62a1dcc5e4b63c15a216644ea8be63dfb5385e0ed039748108c382255c2de3e0"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s03_auxiliary_born_spin"
+}

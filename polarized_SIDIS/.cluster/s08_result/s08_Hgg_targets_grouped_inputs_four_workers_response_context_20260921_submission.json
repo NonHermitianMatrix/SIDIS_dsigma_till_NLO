@@ -1,0 +1,28 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s08_Hgg_targets_grouped_inputs_four_workers_response_context_20260921_job.json",
+  "config_sha256": "b4f47820747e7b42bbcf603a880c15589895aea83c15e0a15fea7db35e7e94dd",
+  "event": "SUBMITTED",
+  "job_id": "14843617",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_targets_grouped_inputs_four_workers_response_context_20260921_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_targets_grouped_inputs_four_workers_response_context_20260921",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_targets_grouped_inputs_four_workers_response_context_20260921_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s08_Hgg_targets_grouped_inputs_four_workers_response_context_20260921"
+}

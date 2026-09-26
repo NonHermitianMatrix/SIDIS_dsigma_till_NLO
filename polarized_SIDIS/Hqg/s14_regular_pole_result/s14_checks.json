@@ -1,0 +1,72 @@
+{
+	"checks":{
+		"compute allocation":true,
+		"complete checker syntax":true,
+		"bound input Hqg\/s14_pole_refinement_result\/s14_execution.json":true,
+		"bound input Hqg\/s14_pole_refinement_result\/s14_result.wl":true,
+		"bound input Hqg\/s14_regular_pole_result\/reference\/s14_control_checkpoint.wl":true,
+		"bound input Hqg\/s14_regular_pole_result\/reference\/s14_failed_execution.json":true,
+		"bound input Hqg\/s14_regular_pole_result\/reference\/s14_regular_checkpoint.wl":true,
+		"bound input Hqq\/s14_pole_refinement_result\/s14_execution.json":true,
+		"bound input Hqq\/s14_pole_refinement_result\/s14_result.wl":true,
+		"bound input common\/s14_assemble_finite_spin.wls":true,
+		"bound input common\/s14_check_Hqg_pole_refinement.wls":true,
+		"bound input common\/s14_check_Hqq_pole_refinement.wls":true,
+		"accepted proof Hqq\/s14_pole_refinement_result\/s14_result.wl":true,
+		"native proof contract Hqq\/s14_pole_refinement_result\/s14_result.wl":true,
+		"accepted proof Hqg\/s14_pole_refinement_result\/s14_result.wl":true,
+		"native proof contract Hqg\/s14_pole_refinement_result\/s14_result.wl":true,
+		"unchanged existing root algorithm":true,
+		"unchanged own endpoint proof":true,
+		"exact accepted root definitions installed":true,
+		"unique original reduction interface":true,
+		"complete original reduction syntax":true,
+		"same original own zero predicate":true,
+		"original physical domains available":true,
+		"same original own endpoint domain":true,
+		"same actual own scientific input":true,
+		"complete own accepted control":true,
+		"original own control accepted -2":true,
+		"complete own control unchanged -2":true,
+		"original own control accepted -1":true,
+		"complete own control unchanged -1":true,
+		"rational root argument":true,
+		"native root factorization reconstructed":true,
+		"every root factor has a proved real nonzero sign":true,
+		"derived root monomial has integer support":true,
+		"exact own physical root identity":true,
+		"all original irrational powers represented":true,
+		"native common-root rational numerator and denominator":true,
+		"common-root denominator nonzero on original domain":true,
+		"exact full root reduction identity":true,
+		"actual saved regular pole vanishes -1":true,
+		"original input sum reproduces saved residual -1":true,
+		"original regular input-sum pole vanishes -1":true,
+		"complete own and actual pole inventory accepted":true,
+		"bounded native proof":true,
+		"exact native proof reload":true
+	},
+	"actual_rows":[
+		{
+			"Power":-1,
+			"Residual":0,
+			"InputSumResidual":0,
+			"Seconds":2.7236915e1,
+			"InputSumSeconds":1.023344e1
+		}
+	],
+	"control_rows":[
+		{
+			"Power":-2,
+			"Residual":0,
+			"Seconds":3.63e-4
+		},
+		{
+			"Power":-1,
+			"Residual":0,
+			"Seconds":1.95e-4
+		}
+	],
+	"accepted":true,
+	"job_id":"14882018"
+}

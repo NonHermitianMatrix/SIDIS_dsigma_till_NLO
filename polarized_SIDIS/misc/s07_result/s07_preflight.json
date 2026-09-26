@@ -1,0 +1,50 @@
+{
+	"source_sha256":"74e2b702715928bfc281bce448ef091c45923a254e6db09d5e77c44996d6ed62",
+	"syntax":true,
+	"input_checks":{
+		"authorized local runtime":true,
+		"complete source identity":true,
+		"pinned input misc\/s07_imported_groups.json":true,
+		"pinned input common\/s08_check_pair_merge_linearity.wls":true,
+		"pinned input common\/s08_result\/reference\/s08_map_real_spin_before_known_denominator.wls":true,
+		"pinned input Hgg\/s08_mapping_inputs_result\/s08_component_0008.wl":true,
+		"pinned input Hgg\/s08_mapping_inputs_result\/s08_recovery_execution.json":true,
+		"pinned input Hgg\/s08_external_factor_result\/s08_result.wl":true,
+		"pinned input Hgg\/s08_external_factor_result\/s08_execution.json":true,
+		"pinned input Hqqbar\/s08_pair_merge_result\/s08_result.wl":true,
+		"pinned input Hqqbar\/s08_pair_merge_result\/s08_execution.json":true,
+		"pinned input .cluster\/s02_execute.py":true,
+		"accepted receipt Hgg\/s08_mapping_inputs_result\/s08_component_0008.wl":true,
+		"accepted checks Hgg\/s08_mapping_inputs_result\/s08_component_0008.wl":true,
+		"accepted receipt Hgg\/s08_external_factor_result\/s08_result.wl":true,
+		"accepted checks Hgg\/s08_external_factor_result\/s08_result.wl":true,
+		"accepted receipt Hqqbar\/s08_pair_merge_result\/s08_result.wl":true,
+		"accepted checks Hqqbar\/s08_pair_merge_result\/s08_result.wl":true,
+		"accepted coefficient producer identity":true,
+		"same imported native conventions":true,
+		"same complete own scientific input":true,
+		"same accepted own merge definitions":true,
+		"unique complete source block common\/s08_result\/reference\/s08_map_real_spin_before_known_denominator.wls":true,
+		"source block syntax common\/s08_result\/reference\/s08_map_real_spin_before_known_denominator.wls":true,
+		"unique complete source block common\/s08_check_pair_merge_linearity.wls":true,
+		"source block syntax common\/s08_check_pair_merge_linearity.wls":true
+	},
+	"native_versions":[
+		"15.0.0 for Linux x86 (64-bit) (May 31, 2026)",
+		"10.2.1"
+	],
+	"imported_native_versions":[
+		"13.1.0 for Linux x86 (64-bit) (June 16, 2022)",
+		"10.2.1"
+	],
+	"group_keys":[
+		"Binding",
+		"Accepted",
+		"Coefficients",
+		"Checks",
+		"Seconds",
+		"InputBytes"
+	],
+	"group_accepted":true,
+	"group_checks":true
+}

@@ -1,0 +1,42 @@
+{
+	"checks":{
+		"complete packet comparison syntax":true,
+		"bound saved input cache\/s08_target_packets\/Hqg\/27f8b96029e9c36e9db39a18a6a84384f97c1d28fe54f2a126f3176c0169b6fa\/component_0004.wl":true,
+		"bound saved input cache\/s08_target_packets\/Hqg\/afe4c76b18177c9a5540c9a27dbbb7ffe161b7c5b9270793a8467c042881268c\/component_0004.wl":true,
+		"bound saved input Hqg\/s08_grouped_comparison_result\/s08_result.wl":true,
+		"bound saved input common\/s06_result\/s06_result.wl":true,
+		"accepted original grouped proof":true,
+		"unchanged reference reduction":true,
+		"both actual packet reconstructions passed":true,
+		"same complete coefficient inventory":true,
+		"exact comparison native round trip":true,
+		"unchanged scientific metadata":true,
+		"all mapped coefficients exactly equal":true
+	},
+	"details":{
+		"CandidateDiagnostics":{
+			"Seconds":4.1942292e1,
+			"InputBytes":7008296,
+			"OutputBytes":4363960
+		},
+		"OriginalDiagnostics":{
+			"Seconds":1.036785081e3,
+			"InputBytes":7008296,
+			"OutputBytes":4363960
+		},
+		"ScientificMetadataEqual":true,
+		"CoefficientInventoryEqual":true,
+		"CoefficientAssociationSameQ":false,
+		"CoefficientKeysInSameOrder":false,
+		"AllCoefficientsExactlyEqual":true,
+		"ChangedCoefficientCount":0,
+		"WholeRecordSameQWithoutTimingChecks":false,
+		"PriorPacketSameQWithoutTimingChecks":true,
+		"DifferingFields":[
+			"Checks",
+			"Coefficients",
+			"Seconds"
+		],
+		"ComparisonSeconds":5.0e-6
+	}
+}

@@ -1,0 +1,59 @@
+"PASS: ""compute allocation"
+"PASS: ""isolated runtime"
+"PASS: ""complete comparison source syntax"
+"PASS: ""pinned actual equation packet"
+"PASS: ""pinned accepted equation receipt"
+"PASS: ""equation reader accepted"
+"PASS: ""reader artifact Hqq/s05_reconstruction_equation_result/s05_checks.json"
+"PASS: ""reader artifact Hqq/s05_reconstruction_equation_result/s05_input_08.wl"
+"PASS: ""reader artifact Hqq/s05_reconstruction_equation_result/s05_input_09.wl"
+"PASS: ""reader artifact Hqq/s05_reconstruction_equation_result/s05_result.wl"
+"PASS: ""actual channel and equation schema"
+"PASS: ""equation reader source identity"
+"PASS: ""unchanged production source"
+"PASS: ""physical input common/s01_inputs.json"
+"PASS: ""physical input common/s05_inputs.json"
+"PASS: ""physical input Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl"
+"PASS: ""physical input Hqq/s05_result/reference/unpolarized_real.wl"
+"PASS: ""physical input common/s02_result/s02_result.wl"
+"PASS: ""physical input common/s04_result/s04_result.wl"
+"PASS: ""physical input Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl"
+"PASS: ""saved equation input cache/s05/Hqq/45a512ffc5e2f23ed6a8fe86d45eb6079e7e75874064fec6fe14095ec120734b/RealSame_assembled_Photon_1_3.wl"
+"PASS: ""saved equation input cache/s05/Hqq/45a512ffc5e2f23ed6a8fe86d45eb6079e7e75874064fec6fe14095ec120734b/RealSame_assembled_Photon_3_1.wl"
+"PASS: ""saved equation input cache/s05/Hqq/45a512ffc5e2f23ed6a8fe86d45eb6079e7e75874064fec6fe14095ec120734b/RealSame_assembled_Photon_2_3.wl"
+"PASS: ""saved equation input cache/s05/Hqq/45a512ffc5e2f23ed6a8fe86d45eb6079e7e75874064fec6fe14095ec120734b/RealSame_assembled_Photon_3_2.wl"
+"PASS: ""saved equation input cache/s05/Hqq/45a512ffc5e2f23ed6a8fe86d45eb6079e7e75874064fec6fe14095ec120734b/RealSame_spin_reconstruction_8.wl"
+"PASS: ""unchanged native extraction installed"
+"STRUCTURAL_RECONSTRUCTION "8
+"PASS: ""exact task binding 8"
+"PASS: ""distinct spin polynomial variables"
+"PASS: ""polynomial photon spin dependence"
+
+AssociateTo::argrx: AssociateTo called with 3 arguments; 2 arguments are expected.
+"PASS: ""8 DistinctSpinVariables"
+"PASS: ""8 SpinIndependentCoefficients"
+"PASS: ""8 ExactExpressionRestoration"
+"PASS: ""8 PolynomialSpinDependence"
+"PASS: ""complete reconstruction accepted 8"
+"PASS: ""own accepted reconstruction comparison"
+"STRUCTURAL_RECONSTRUCTION_MEASUREMENT "InputForm[<|"Accepted" -> True, "Checks" -> <|"DistinctSpinVariables" -> True, "SpinIndependentCoefficients" -> True, "ExactExpressionRestoration" -> True, "PolynomialSpinDependence" -> True|>, "InputBytes" -> 63599912, "AbstractBytes" -> 108456, "CoefficientCount" -> 237, "Seconds" -> 2.102847`6.774352668715358, "KernelMemoryBytes" -> 412197808, "PeakKernelMemoryBytes" -> 1084671784, "Component" -> 8, "Binding" -> 50434626949898592648827708354496884055118635012497564101744963153202579374755|>]
+"STRUCTURAL_RECONSTRUCTION "9
+"PASS: ""exact task binding 9"
+"PASS: ""distinct spin polynomial variables"
+"PASS: ""polynomial photon spin dependence"
+
+AssociateTo::argrx: AssociateTo called with 3 arguments; 2 arguments are expected.
+"PASS: ""9 DistinctSpinVariables"
+"PASS: ""9 SpinIndependentCoefficients"
+"PASS: ""9 ExactExpressionRestoration"
+"PASS: ""9 PolynomialSpinDependence"
+"PASS: ""complete reconstruction accepted 9"
+"STRUCTURAL_RECONSTRUCTION_MEASUREMENT "InputForm[<|"Accepted" -> True, "Checks" -> <|"DistinctSpinVariables" -> True, "SpinIndependentCoefficients" -> True, "ExactExpressionRestoration" -> True, "PolynomialSpinDependence" -> True|>, "InputBytes" -> 98648792, "AbstractBytes" -> 101128, "CoefficientCount" -> 232, "Seconds" -> 3.058019`6.93698517292725, "KernelMemoryBytes" -> 474806040, "PeakKernelMemoryBytes" -> 1536072760, "Component" -> 9, "Binding" -> 35034356094217627571701068339697383495587812313202946828298282740227642031194|>]
+"PASS: ""nonzero saved response control"
+"PASS: ""distinct spin polynomial variables"
+"PASS: ""polynomial photon spin dependence"
+
+AssociateTo::argrx: AssociateTo called with 3 arguments; 2 arguments are expected.
+
+General::stop: Further output of AssociateTo::argrx will be suppressed during this calculation.
+"FAIL: ""changed response rejected"

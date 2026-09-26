@@ -1,0 +1,25 @@
+{
+  "channel": "Hqg",
+  "config": ".cluster/s05_Hqg_native_trace_inputs_job.json",
+  "config_sha256": "a45cb8bd3daa7e0786f88de71ab82bbe56cd99c739d0e8c803a3c31bd10ea0ed",
+  "event": "SUBMITTED",
+  "job_id": "14814332",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hqg_native_trace_inputs_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s05_Hqg_native_trace_inputs",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:10:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hqg_native_trace_inputs_scheduler.log"
+  ],
+  "tag": "s05_Hqg_native_trace_inputs"
+}

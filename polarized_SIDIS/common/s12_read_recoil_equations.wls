@@ -1,0 +1,21 @@
+$HistoryLength=0;
+If[!StringQ[Environment["JOB_ID"]],Quit[1]];
+PrependTo[$Path,"/u/home/r/rushil/.Mathematica/Applications"];
+$FeynCalcStartupMessages=False;Get["FeynCalc`"];
+r=Directory[];source=FileNameJoin[{r,"common","s12_read_recoil_equations.wls"}];
+If[!SyntaxQ[Import[source,"Text"]],Quit[1]];
+p=FileNameJoin[{r,"Hqq","s08_result","s08_result.wl"}];
+If[IntegerString[FileHash[p,"SHA256"],16,64]=!="630b599ef433544214acc847d34ff22ff5f00f105571efd800033d7ccdbef1f6",Quit[1]];
+v=Get[p];a=v["Components"][[42]];tr=v["TransverseSubstitution"];Clear[v];ClearSystemCache[];
+rows=Association[KeyValueMap[Function[{k,c},k-><|
+  "Denominator"->Denominator[c],
+  "NonintegerPowers"->DeleteDuplicates[Cases[c/.tr,Power[b_,e_]/;!IntegerQ[e]:>Power[b,e],Infinity]]
+|>],Select[a["ReducedCoefficients"],#=!=0&]]];
+result=<|"InputHash"->FileHash[p,"SHA256"],"SourceHash"->FileHash[source,"SHA256"],
+ "Component"->KeyTake[a,{"Sector","Kind","Index"}],"TransverseSubstitution"->tr,"Equations"->rows|>;
+path=FileNameJoin[{r,"Hqq","s12_recoil_equations_result"}];
+If[!DirectoryQ[path],CreateDirectory[path,CreateIntermediateDirectories->True]];
+file=FileNameJoin[{path,"s12_result.wl"}];Put[result,file];
+If[Get[file]=!=result,Quit[1]];
+Print[InputForm[result]];
+Print["PASS: exact recoil input read"];Quit[0];

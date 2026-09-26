@@ -1,0 +1,37 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "$HistoryLength=0;root=Directory[];\nPrint[\"READ_ACCEPTED_PAIR_MEASUREMENTS\"];\nPrependTo[$Path,\"/u/home/r/rushil/.Mathematica/Applications\"];\n$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\nrelative=\"Hgq/s08_pair_mapping_result/s08_result.wl\";\npath=FileNameJoin[{root,relative}];proof=Get[path];\nreceipt=Import[FileNameJoin[{root,\"Hgq/s08_pair_mapping_result/s08_execution.json\"}],\"RawJSON\"];\nchecks=<|\"accepted proof receipt\"->TrueQ[receipt[\"passed\"]],\n\"same accepted result\"->(receipt[\"result_sha256\"][relative]===IntegerString[FileHash[path,\"SHA256\"],16,64]),\n\"expected proof schema\"->(proof[\"Schema\"]===\"polarized-sidis-pair-mapping-comparison-v1\"&&proof[\"Channel\"]===\"Hgq\"),\n\"accepted recorded checks\"->TrueQ[And@@Values[proof[\"Checks\"]]],\n\"same executed proof source\"->(proof[\"SourceHash\"]===FileHash[FileNameJoin[{root,\"common/s08_check_gluon_pair_mapping.wls\"}],\"SHA256\"])|>;\nIf[!And@@Values[checks],Print[\"FAIL: accepted pair measurement binding\"];Quit[1]];\nrows=Map[Function[component,Join[KeyTake[component,{\"Kind\",\"Index\",\"ComponentIndex\",\"ExtractionSeconds\",\"MergeSeconds\"}],\n<|\"PairCount\"->Length[component[\"PairEvidence\"]],\"TotalPairSeconds\"->Total[Lookup[component[\"PairEvidence\"],\"Seconds\"]],\n\"LargestPairSeconds\"->Max[Lookup[component[\"PairEvidence\"],\"Seconds\"]],\n\"LargestPairInputBytes\"->Max[Lookup[component[\"PairEvidence\"],\"InputBytes\"]],\n\"TotalPairOutputBytes\"->Total[Lookup[component[\"PairEvidence\"],\"OutputBytes\"]]|>]],proof[\"Components\"]];\nAssociateTo[checks,\"numeric recorded timings\"->And@@Flatten[Table[NumericQ[row[key]],{row,rows},{key,{\"ExtractionSeconds\",\"MergeSeconds\",\"TotalPairSeconds\",\"LargestPairSeconds\"}}]]];\nIf[!And@@Values[checks],Print[\"FAIL: recorded measurement schema\"];Quit[1]];\nreport=<|\"checks\"->checks,\"measurements\"->rows,\"original_execution\"->KeyTake[receipt,{\"job_id\",\"node\",\"wall_seconds\",\"peak_observed_tree_rss_bytes\",\"child_maxrss_bytes\"}],\n\"input_sha256\"->IntegerString[FileHash[path,\"SHA256\"],16,64],\"physics_recomputed\"->False,\"finite_nlo_fhats_computed\"->False,\"job_id\"->Environment[\"JOB_ID\"]|>;\nExport[FileNameJoin[{root,\"Hgq/s08_pair_mapping_result/s08_measurements.json\"}],report,\"RawJSON\"];\nPrint[\"PASS: s08_pair_measurements\"];Quit[0];"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s08_Hgq_pair_measurements",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s08_Hgq_pair_measurements"
+  },
+  "execution_result": "Hgq/s08_pair_mapping_result/s08_measurements_execution.json",
+  "expected_results": [
+    "Hgq/s08_pair_mapping_result/s08_measurements.json"
+  ],
+  "heartbeat": "cache/s08_Hgq_pair_measurements_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 120,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 1610612736,
+    "poll_seconds": 15,
+    "scratch_bytes": 4294967296,
+    "tree_rss_bytes": 1610612736,
+    "wall_seconds": 240
+  },
+  "log": "cache/s08_Hgq_pair_measurements.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgq/s08_pair_mapping_result/s08_execution.json": "ebc1e5404a4d14e2f5e8ceb1e93bd50dee572b04ffa461616a9ff12d30ebae37",
+    "Hgq/s08_pair_mapping_result/s08_result.wl": "3e76aa58afd796344e94f2dcb40b94765e1d0cd7a92443e92429a4dc5f4eeb55",
+    "common/s08_check_gluon_pair_mapping.wls": "33f4502f58f1c6a6143cbdcd6f99d54a7bed110cb23abbf48123a819350676b6"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s08_pair_measurements"
+}

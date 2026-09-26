@@ -1,0 +1,25 @@
+{
+  "channel": "Hqqbar",
+  "config": ".cluster/s12_Hqqbar_recoil_valuation_capture_job.json",
+  "config_sha256": "371f899bfc8931fa88bf51c56973baf0f56079c998296127d51e3fa4de8e2c15",
+  "event": "SUBMITTED",
+  "job_id": "14804419",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s12_Hqqbar_recoil_valuation_capture_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s12_Hqqbar_recoil_valuation_capture",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s12_Hqqbar_recoil_valuation_capture_scheduler.log"
+  ],
+  "tag": "s12_Hqqbar_recoil_valuation_capture"
+}

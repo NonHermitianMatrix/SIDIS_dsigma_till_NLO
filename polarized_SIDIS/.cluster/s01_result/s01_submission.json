@@ -1,0 +1,27 @@
+{
+  "job_configuration_sha256": "d40c4b8c3c9df4bbc31c59629cbb8c7c0ac57b66025a58ae71fb3ed1e544fc26",
+  "job_id": "14773300",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s01_inputs_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s01",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:10:00,h_data=1G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s01_scheduler.log"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "3709d2a251a80419db7be89e9edcfce26f8c5f58d8688a48d37a3ee75ea58786",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s01_prepare_inputs.py": "5eb03c10b39c1002006e732698c748bfd2084c5feef365f9ed4e808db822ebee"
+  }
+}

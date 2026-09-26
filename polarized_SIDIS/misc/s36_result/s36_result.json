@@ -1,0 +1,17 @@
+{
+	"source_sha256":"9f511361187996d8fef88f8897ba2b40018032d9d4e789ec2cd17d445939a94a",
+	"input_sha256":"5f8d0ddf735aa9591d2450e776e84aa4f3eae6805cf0ec20bd67ccc30cd5f4ee",
+	"accepted_review_sha256":"56bef94f8c164db568c87aeb4d633a277bd439e3de17474c142e22d6c8f74162",
+	"old":"PolynomialQ[Expand[eps^(-Min[Append[powers,0]])combined],eps]",
+	"new":"PolynomialQ[Expand[eps^(-Min[Append[powers,0]])combined,eps],eps]",
+	"seconds":5.1542e-2,
+	"input_bytes":13228672,
+	"scoped_bytes":13228480,
+	"checks":{
+		"unchanged actual full input":true,
+		"original complete actual finitePart passed":true,
+		"unique original gate and exact reversible change":true,
+		"exact whole shifted Laurent input reconstructed":true,
+		"original accepted Laurent predicate retained":true
+	}
+}

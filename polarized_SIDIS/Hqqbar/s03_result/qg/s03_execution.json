@@ -1,0 +1,52 @@
+{
+  "child_maxrss_bytes": 520523776,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s03_auxiliary_born_spin.wls"
+  ],
+  "completed_utc": "2026-09-17T12:04:06.470788+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "b4b83b48764336a88cc049da54ce29a4c216a4a654dd3d408aaf53a9247dee47",
+  "job_id": "14775310",
+  "node": "n7126",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 519135232,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqqbar/s03_result/qg/s03_checks.json": "8d563959efcc73404f792dbdf58d8506cbdd387122e4fe8198523e5817589b75",
+    "Hqqbar/s03_result/qg/s03_result.wl": "7ddf294ee5969ff4177017020fab1f8b516bbc8d208c0fa38f81d919e46f97c7"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/born_qg.wl": "2d20b497282a7908990019cfbf6c9bf3e86537785a4fc77c3e5fb97ac75402f4",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s02_result/born_qg.wl": "30f2ea23a54b0c2c79574ef469fd9ef6859c9d2f593f56ab5d3215f29d325fc4",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s03_auxiliary_born_spin.wls": "d7f17d27e9f268c687bb41590ef793ddef0752aa7686dd3b651591c9d1718f6e",
+    "common/s03_auxiliary_inputs.json": "d564b985ba59959a1aed6bd204cd59de53f1182e5113a415fa32c5bf8566d61f",
+    "common/s03_born_spin_response.wls": "62a1dcc5e4b63c15a216644ea8be63dfb5385e0ed039748108c382255c2de3e0"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 400.1056717080064
+}

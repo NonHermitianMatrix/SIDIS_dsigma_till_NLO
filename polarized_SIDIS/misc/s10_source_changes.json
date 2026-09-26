@@ -1,0 +1,167 @@
+{
+  "base": "common/s08_map_real_spin_compact_inputs.wls",
+  "base_sha256": "aea8d3ac781c29b85a00d341a994420d3af5ee7f450ff7ddc0f2074e8851475f",
+  "changes": [
+    {
+      "before": "root = Directory[];",
+      "after": "root = DirectoryName[DirectoryName[ExpandFileName[$InputFileName]]]; SetDirectory[root]; root=Directory[];",
+      "count": 1
+    },
+    {
+      "before": "channel = Environment[\"POLARIZED_SIDIS_CHANNEL\"];",
+      "after": "channel = \"Hgg\";\nlocalSource = FileNameJoin[{root,\"misc\",\"s10_reduce_Hgg_coefficients.wls\"}];\nlocalConfigPath = FileNameJoin[{root,\"misc\",\"s10_inputs.json\"}];\nlocalConfig = Import[localConfigPath,\"RawJSON\"];",
+      "count": 1
+    },
+    {
+      "before": "gate[\"compute allocation\", StringQ[Environment[\"JOB_ID\"]] && !StringStartsQ[$MachineName, \"login\"]];\ngate[\"isolated runtime\", StringStartsQ[$UserBaseDirectory, root <> \"/\"]];\nPrependTo[$Path, \"/u/home/r/rushil/.Mathematica/Applications\"];\n$FeynCalcStartupMessages = False; $LoadAddOns = {\"FeynArts\"}; Get[\"FeynCalc`\"];",
+      "after": "gate[\"authorized local coefficient execution\",Environment[\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\"]===\"1\"&&$VersionNumber===15.];\ngate[\"bound complete local source\",SyntaxQ[ReadString[localSource]]&&\n IntegerString[FileHash[localSource,\"SHA256\"],16,64]===localConfig[\"source_sha256\"]];\nKeyValueMap[Function[{relative,identity},gate[\"pinned local coefficient input \"<>relative,\n IntegerString[FileHash[FileNameJoin[{root,relative}],\"SHA256\"],16,64]===identity]],localConfig[\"input_sha256\"]];\n\nlocalMapPath=FileNameJoin[{root,\"misc\",\"s08_result\",\"s08_result.wl\"}];localMap=Get[localMapPath];\nlocalImportedVersions=localMap[\"ImportedNativeVersions\"];\ngate[\"accepted local component storage\",localMap[\"ComponentStorage\"]===\"hash-pinned-raw-component-files-v1\"&&\n localMap[\"NativeVersions\"]==={$Version,$FeynCalcVersion}&&Last[localImportedVersions]===$FeynCalcVersion];\nDo[localReceipt=Import[FileNameJoin[{root,row[[1]]}],\"RawJSON\"];\n gate[\"accepted local upstream receipt \"<>row[[1]],TrueQ[localReceipt[\"passed\"]]&&localReceipt[\"execution_backend\"]===\"local\"&&\n  localReceipt[\"result_sha256\"][row[[2]]]===IntegerString[FileHash[FileNameJoin[{root,row[[2]]}],\"SHA256\"],16,64]],\n {row,{{\"misc/s08_result/s08_execution.json\",\"misc/s08_result/s08_result.wl\"},\n       {\"misc/s09_result/s09_execution.json\",\"misc/s09_result/s09_reduction.wl\"}}}];\nSetEnvironment[\"POLARIZED_SIDIS_REAL_REDUCTION\"->\"misc/s09_result/s09_reduction.wl\"];\nlocalRawInputHash=localMap[\"InputHash\"];\nlocalReadRaw[index_]:=Module[{row,path,value},row=rawTargetComponents[[index]];path=FileNameJoin[{root,row[\"RawCoefficientFile\"]}];\n gate[\"exact saved raw file\",IntegerString[FileHash[path,\"SHA256\"],16,64]===row[\"RawCoefficientSHA256\"]];\n value=bounded[Get[path],{index,\"saved raw component\"}];\n gate[\"raw reader returns complete original record\",KeyDrop[value,\"Coefficients\"]===KeyDrop[row,\n  {\"RawTargets\",\"RawCoefficientFile\",\"RawCoefficientSHA256\"}]&&Keys[value[\"Coefficients\"]]===row[\"RawTargets\"]&&\n  value[\"InputHash\"]===localRawInputHash&&TrueQ[value[\"ReconstructionPassed\"]]&&Length[value[\"Checks\"]]>0&&And@@Values[value[\"Checks\"]]];\n value];\nlocalReducedComponent[index_]:=Module[{full,answer},full=mapComponent[index];\n If[!AssociationQ[full],Return[full]];\n gate[\"complete reduced output accepted before storage projection\",TrueQ[full[\"ReconstructionPassed\"]]&&\n  And@@Values[full[\"Checks\"]]&&Keys[full[\"Coefficients\"]]===rawTargetComponents[[index]][\"RawTargets\"]];\n answer=Join[KeyDrop[full,\"Coefficients\"],KeyTake[rawTargetComponents[[index]],\n  {\"RawTargets\",\"RawCoefficientFile\",\"RawCoefficientSHA256\"}]];\n gate[\"exact downstream coefficient interface\",KeyTake[answer,{\"Sector\",\"Kind\",\"Index\",\"ReducedCoefficients\"}]===\n  KeyTake[full,{\"Sector\",\"Kind\",\"Index\",\"ReducedCoefficients\"}]];answer];",
+      "count": 1
+    },
+    {
+      "before": "StringContainsQ[Import[sourcePath, \"Text\"], originalBlock]",
+      "after": "StringContainsQ[Import[localSource, \"Text\"], originalBlock]",
+      "count": 1
+    },
+    {
+      "before": "spin = Get[spinPath]; library = Get[libraryPath];",
+      "after": "spinMetadataPath=FileNameJoin[{root,channel,\"s05_result\",\"s05_metadata.wl\"}];\nspin = Get[spinMetadataPath]; library = Get[libraryPath];",
+      "count": 1
+    },
+    {
+      "before": "StringContainsQ[Import[sourcePath, \"Text\"], coefficientBlock]",
+      "after": "StringContainsQ[Import[localSource, \"Text\"], coefficientBlock]",
+      "count": 1
+    },
+    {
+      "before": "dispatchSourceHash = FileHash[sourcePath, \"SHA256\"];",
+      "after": "dispatchSourceHash = FileHash[localSource, \"SHA256\"];",
+      "count": 1
+    },
+    {
+      "before": "tasks = {}; bookkeeping = <||>;\nDo[\n  sector = spin[\"Sectors\"][label];\n  AssociateTo[bookkeeping, label -> KeyTake[sector, {\"TagWeight\", \"TagWeightAppliedToTensor\", \"OutgoingFields\",\n    \"IncomingSpinLabels\", \"OutgoingSpinLabels\", \"ChargeDegrees\", \"AmplitudeCouplingPowers\"}]];\n  MapIndexed[Function[{value, index}, If[value =!= 0,\n    AppendTo[tasks, <|\"Sector\" -> label, \"Kind\" -> \"ExtendedResponse\", \"Index\" -> index, \"Value\" -> value|>]]], sector[\"ExtendedResponse\"], {3}];\n  AppendTo[tasks, <|\"Sector\" -> label, \"Kind\" -> \"PhotonMetricD\", \"Index\" -> {}, \"Value\" -> sector[\"PhotonMetricD\"]|>],\n  {label, Keys[spin[\"Sectors\"]]}];",
+      "after": "tasks=spin[\"MappingTaskMetadata\"];bookkeeping=localMap[\"Bookkeeping\"];\ngate[\"same original task inventory\",tasks===(KeyTake[#,{\"Sector\",\"Kind\",\"Index\"}]&/@localMap[\"Components\"])];\ngate[\"same original bookkeeping\",bookkeeping===Association@KeyValueMap[#1->KeyTake[#2,\n {\"TagWeight\",\"TagWeightAppliedToTensor\",\"OutgoingFields\",\"IncomingSpinLabels\",\"OutgoingSpinLabels\",\"ChargeDegrees\",\"AmplitudeCouplingPowers\"}]&,spin[\"Sectors\"]]];",
+      "count": 1
+    },
+    {
+      "before": "previousMappingHash = Hash[{FileHash[previousMapperPath, \"SHA256\"], mappingInputHashes, $Version, $FeynCalcVersion}, \"SHA256\"];",
+      "after": "previousMappingHash = Hash[{FileHash[previousMapperPath, \"SHA256\"], mappingInputHashes, Sequence@@localImportedVersions}, \"SHA256\"];",
+      "count": 1
+    },
+    {
+      "before": "rawTargetPath = FileNameJoin[{root, channel, \"s08_targets_result\", \"s08_result.wl\"}];",
+      "after": "rawTargetPath = localMapPath;",
+      "count": 1
+    },
+    {
+      "before": "inputPaths = Join[inputPaths, {previousMapperPath, sumValidationPath, sumFixtureConfigPath, sumFixturePath}];",
+      "after": "inputPaths = Join[inputPaths, {previousMapperPath, sumValidationPath, sumFixtureConfigPath, sumFixturePath,\n localSource,localConfigPath,spinMetadataPath,FileNameJoin[{root,\"misc\",\"s08_result\",\"s08_execution.json\"}],\n FileNameJoin[{root,\"misc\",\"s09_result\",\"s09_execution.json\"}]}];",
+      "count": 1
+    },
+    {
+      "before": "cache = FileNameJoin[{root, \"cache\", \"s08\", channel, IntegerString[inputHash, 16]}];",
+      "after": "cache = FileNameJoin[{root, \"misc\", \"s10_work\", IntegerString[inputHash, 16]}];",
+      "count": 2
+    },
+    {
+      "before": "streamProof[\"NativeVersions\"] === {$Version, $FeynCalcVersion}",
+      "after": "streamProof[\"NativeVersions\"] === localImportedVersions",
+      "count": 1
+    },
+    {
+      "before": "raw = If[rawTargetComponents =!= {}, rawTargetComponents[[index]],",
+      "after": "raw = If[rawTargetComponents =!= {}, localReadRaw[index],",
+      "count": 1
+    },
+    {
+      "before": "slots = Quiet[Check[ToExpression[Environment[\"NSLOTS\"]], 1]];",
+      "after": "slots = 2;",
+      "count": 1
+    },
+    {
+      "before": "\"/u/local/apps/mathematica/13.1/Executables/WolframKernel\"",
+      "after": "\"/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel\"",
+      "count": 1
+    },
+    {
+      "before": "Min[8, slots]",
+      "after": "Min[2, slots]",
+      "count": 1
+    },
+    {
+      "before": "checks = <||>; PrependTo[$Path, \"/u/home/r/rushil/.Mathematica/Applications\"];",
+      "after": "checks = <||>;",
+      "count": 1
+    },
+    {
+      "before": "coefficientControl, controlTerms, controlValue, mapComponent, tasks, cache, inputHash, inputHashes, mappingInputHashes,",
+      "after": "coefficientControl, controlTerms, controlValue, mapComponent, localReadRaw, localReducedComponent, root, localRawInputHash, tasks, cache, inputHash, inputHashes, mappingInputHashes,",
+      "count": 1
+    },
+    {
+      "before": "components = If[workers > 0, ParallelMap[mapComponent, Range[Length[tasks]], Method -> \"FinestGrained\"],\n  mapComponent /@ Range[Length[tasks]]];",
+      "after": "components = If[workers > 0, ParallelMap[localReducedComponent, Range[Length[tasks]], Method -> \"FinestGrained\"],\n  localReducedComponent /@ Range[Length[tasks]]];",
+      "count": 1
+    },
+    {
+      "before": "targets = Union[Flatten[Keys[#[\"Coefficients\"]] & /@ components]];",
+      "after": "targets = Union[Flatten[Lookup[components,\"RawTargets\"]]];\ngate[\"complete unchanged raw target inventory\",targets===localMap[\"Targets\"]];",
+      "count": 1
+    },
+    {
+      "before": "\"CompactInputFootprint\" -> compactInputFootprint,",
+      "after": "\"CompactInputFootprint\" -> compactInputFootprint,\n  \"ComponentStorage\"->\"reduced-coefficients-with-raw-file-references-v1\",\n  \"NativeVersions\"->{$Version,$FeynCalcVersion},\"ImportedNativeVersions\"->localImportedVersions,\"ExecutionBackend\"->\"local\",",
+      "count": 1
+    },
+    {
+      "before": "resultDir = FileNameJoin[{root, channel, \"s08_result\"}];",
+      "after": "resultDir = FileNameJoin[{root, \"misc\", \"s10_result\"}];",
+      "count": 1
+    },
+    {
+      "before": "FileNameJoin[{resultDir, \"s08_result.wl\"}]",
+      "after": "FileNameJoin[{resultDir, \"s10_result.wl\"}]",
+      "count": 1
+    },
+    {
+      "before": "FileNameJoin[{resultDir, \"s08_checks.json\"}]",
+      "after": "FileNameJoin[{resultDir, \"s10_checks.json\"}]",
+      "count": 1
+    },
+    {
+      "before": "Print[\"PASS: s08_map_real_spin\"]; Quit[0];",
+      "after": "Print[\"PASS: local Hgg master coefficients\"]; Quit[0];",
+      "count": 1
+    },
+    {
+      "before": "\n$HistoryLength = 0;\nroot",
+      "after": "\n$HistoryLength = 0;\n$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\nroot",
+      "count": 1
+    },
+    {
+      "before": "False]], 2*1024^3,\n  gate[\"memory bound \"",
+      "after": "False]], 4*1024^3,\n  gate[\"memory bound \"",
+      "count": 1
+    },
+    {
+      "before": " FileNameJoin[{root,\"misc\",\"s09_result\",\"s09_execution.json\"}]}];",
+      "after": " FileNameJoin[{root,\"misc\",\"s09_result\",\"s09_execution.json\"}],\n FileNameJoin[{root,\"misc\",\"s20_Hgg_exact_sum.wls\"}],FileNameJoin[{root,\"misc\",\"s18_sum_exact_polynomials.py\"}],\n FileNameJoin[{root,\"misc\",\"s19_result\",\"s19_result.wl\"}],FileNameJoin[{root,\"misc\",\"s19_result\",\"s19_execution.json\"}],\n FileNameJoin[{root,\"misc\",\"s20_interface_review.json\"}],FileNameJoin[{root,\"misc\",\"s20_result\",\"s20_review_execution.json\"}],\n FileNameJoin[{root,\"misc\",\"s19_validate_Hgg_polynomial_sum.wls\"}],FileNameJoin[{root,\"misc\",\"s21_review_Hgg_exact_sum.wls\"}]}];",
+      "count": 1
+    },
+    {
+      "before": "\ncoefficientControl[] := Catch[Block[{checks = <||>}, Module[{answer},",
+      "after": "\n\nlocalPolynomialAdapterPath=FileNameJoin[{root,\"misc\",\"s20_Hgg_exact_sum.wls\"}];\nlocalPolynomialBackendPath=FileNameJoin[{root,\"misc\",\"s18_sum_exact_polynomials.py\"}];\nlocalPolynomialBackendHash=FileHash[localPolynomialBackendPath,\"SHA256\"];\nlocalPolynomialProofPath=FileNameJoin[{root,\"misc\",\"s19_result\",\"s19_result.wl\"}];\nlocalPolynomialProofHash=FileHash[localPolynomialProofPath,\"SHA256\"];\nlocalPolynomialProofReceipt=Import[FileNameJoin[{root,\"misc\",\"s19_result\",\"s19_execution.json\"}],\"RawJSON\"];\ngate[\"accepted own Hgg polynomial validation receipt\",TrueQ[localPolynomialProofReceipt[\"passed\"]]&&\n localPolynomialProofReceipt[\"result_sha256\"][\"misc/s19_result/s19_result.wl\"]===IntegerString[localPolynomialProofHash,16,64]];\nlocalPolynomialProof=Get[localPolynomialProofPath];\ngate[\"complete own Hgg polynomial validation\",localPolynomialProof[\"Schema\"]===\"polarized-sidis-own-Hgg-polynomial-sum-validation-v1\"&&\n TrueQ[localPolynomialProof[\"AcceptedOwnHggComparisonPassed\"]]&&And@@Values[localPolynomialProof[\"Checks\"]]&&\n localPolynomialProof[\"NativeVersions\"]==={$Version,$FeynCalcVersion}&&\n localPolynomialProof[\"BackendHash\"]===localPolynomialBackendHash&&localPolynomialProof[\"BackendVersion\"]===\"0.8.0\"&&\n localPolynomialProof[\"SourceHash\"]===FileHash[FileNameJoin[{root,\"misc\",\"s19_validate_Hgg_polynomial_sum.wls\"}],\"SHA256\"]&&\n Length[localPolynomialProof[\"Evidence\"]]===localPolynomialProof[\"CoefficientCount\"]&&\n AllTrue[localPolynomialProof[\"Evidence\"],TrueQ[#[\"expected_comparison_passed\"]]&&TrueQ[#[\"exact_termwise_reconstruction_passed\"]]&]];\nlocalPolynomialReviewPath=FileNameJoin[{root,\"misc\",\"s20_interface_review.json\"}];\nlocalPolynomialReviewReceipt=Import[FileNameJoin[{root,\"misc\",\"s20_result\",\"s20_review_execution.json\"}],\"RawJSON\"];\ngate[\"accepted complete polynomial interface receipt\",TrueQ[localPolynomialReviewReceipt[\"passed\"]]&&\n localPolynomialReviewReceipt[\"result_sha256\"][\"misc/s20_interface_review.json\"]===IntegerString[FileHash[localPolynomialReviewPath,\"SHA256\"],16,64]];\nlocalPolynomialReview=Import[localPolynomialReviewPath,\"RawJSON\"];\ngate[\"unchanged validated polynomial interface\",And@@Values[localPolynomialReview[\"checks\"]]&&\n localPolynomialReview[\"source_sha256\"]===IntegerString[FileHash[localPolynomialAdapterPath,\"SHA256\"],16,64]&&\n localPolynomialReview[\"backend_sha256\"]===IntegerString[localPolynomialBackendHash,16,64]&&\n localPolynomialReview[\"own_proof_sha256\"]===IntegerString[localPolynomialProofHash,16,64]];\nGet[localPolynomialAdapterPath];\nfactoredDenominatorSum[terms_List,purpose_]:=localExactPolynomialSum[terms,purpose];\n\ncoefficientControl[] := Catch[Block[{checks = <||>}, Module[{answer},",
+      "count": 1
+    },
+    {
+      "before": "    streamedDenominatorSum, cancelAvailableDenominatorFactors, streamProof, streamProofHash,",
+      "after": "    streamedDenominatorSum, cancelAvailableDenominatorFactors, streamProof, streamProofHash,\n    localPolynomialTransfer, localExactPolynomialSum, localPolynomialBackendPath, localPolynomialBackendHash, localPolynomialProofHash,",
+      "count": 1
+    },
+    {
+      "before": "  \"StreamedNumeratorValidationHash\" -> streamProofHash, \"InputHash\" -> inputHash, \"InputHashes\" -> inputHashes,",
+      "after": "  \"StreamedNumeratorValidationHash\" -> streamProofHash, \"InputHash\" -> inputHash, \"InputHashes\" -> inputHashes,\n  \"ExactPolynomialValidationHash\"->localPolynomialProofHash,\"ExactPolynomialAdapterHash\"->FileHash[localPolynomialAdapterPath,\"SHA256\"],\n  \"ExactPolynomialBackendHash\"->localPolynomialBackendHash,\"ExactPolynomialBackendVersion\"->\"0.8.0\",",
+      "count": 1
+    }
+  ],
+  "source_sha256": "0e60864de5711c16810f66e8ddb0d26adb6b2cf66077c324352d7ded6f52f60c"
+}

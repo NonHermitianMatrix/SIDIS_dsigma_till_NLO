@@ -1,0 +1,48 @@
+{
+	"schema":"polarized-sidis-recorded-scalar-equations-v1",
+	"checks":{
+		"compute allocation":true,
+		"input hash {1}":true,
+		"native recorded scalar schema {1}":true,
+		"recording source identity {1}":true,
+		"exact native argument identity {1}":true,
+		"equation file bound {1}":true,
+		"entire equation exact reload {1}":true,
+		"input hash {2}":true,
+		"native recorded scalar schema {2}":true,
+		"recording source identity {2}":true,
+		"exact native argument identity {2}":true,
+		"equation file bound {2}":true,
+		"entire equation exact reload {2}":true
+	},
+	"inputs":[
+		{
+			"source":"cache\/s05_retained_scalar_inputs\/Hqg\/14813349\/4910bcdf373d6b87e9287aebb768490804815ee148b48b7e6722b0de3948a0f9_50199.wl",
+			"source_sha256":"058a31743ea87e18a344732def0a7d35a06a0fd819a2e1e31f8ef64c86c64ef3",
+			"argument_sha256":"4910bcdf373d6b87e9287aebb768490804815ee148b48b7e6722b0de3948a0f9",
+			"input_hash":"a26ff6bda85fa1c70a7376a396436ddf9604decb38c24c812c356d7ac9ee8f45",
+			"algorithm_hash":"720f831e80c2e72c2400a3c2aea70c02bc8212ddfb48763480489f06b91b6cd9",
+			"kernel_id":1,
+			"input_bytes":2722472,
+			"equation":"Hqg\/s05_scalar_input_result\/s05_input_01.wl",
+			"equation_bytes":201759,
+			"equation_sha256":"47a2a635a3b6257633c06005b8331b17f526a929110feff1f453c5e763cd53d6",
+			"transverse_constraint":"((Q^2 + s - s23 + t)*(Q^2*s23 + s*t))\/(Q^2 + s)^2 + transverseK^2"
+		},
+		{
+			"source":"cache\/s05_retained_scalar_inputs\/Hqg\/14813349\/90019a5b7b789436d04aeb3ea3eb52dfb59ab1f0da21041a414634161ede8608_50201.wl",
+			"source_sha256":"5fdddb65179a340670f87a397b7d4d23917e08b33c80469ddfb0d9cd478e5c08",
+			"argument_sha256":"90019a5b7b789436d04aeb3ea3eb52dfb59ab1f0da21041a414634161ede8608",
+			"input_hash":"a26ff6bda85fa1c70a7376a396436ddf9604decb38c24c812c356d7ac9ee8f45",
+			"algorithm_hash":"720f831e80c2e72c2400a3c2aea70c02bc8212ddfb48763480489f06b91b6cd9",
+			"kernel_id":2,
+			"input_bytes":16328288,
+			"equation":"Hqg\/s05_scalar_input_result\/s05_input_02.wl",
+			"equation_bytes":1251316,
+			"equation_sha256":"59d112f42574975e0521aa448e2af982d96eaf7ba1ca509117e7420e336533fb",
+			"transverse_constraint":"((Q^2 + s - s23 + t)*(Q^2*s23 + s*t))\/(Q^2 + s)^2 + transverseK^2"
+		}
+	],
+	"job_id":"14813403",
+	"finite_nlo_fhats_computed":false
+}

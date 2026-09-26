@@ -1,0 +1,112 @@
+{
+	"checks":{
+		"bound entire native writer":true,
+		"pinned chunk-writer input misc\/s35_result\/s35_execution.json":true,
+		"pinned chunk-writer input misc\/s35_result\/s35_result.wl":true,
+		"pinned chunk-writer input misc\/s37_result\/s37_execution.json":true,
+		"pinned chunk-writer input misc\/s37_result\/s37_result.wl":true,
+		"pinned chunk-writer input misc\/s40_result\/reference\/actual_piece.wl":true,
+		"accepted native own and actual inputs":true,
+		"native chunk marker is unassigned":true,
+		"bounded native chunk":true,
+		"exact native chunk reload":true,
+		"entire native record exactly reconstructs":true,
+		"unique native manifest insertion":true,
+		"bounded complete native index":true,
+		"exact native index bytes":true,
+		"actual record exercises bounded pieces":true,
+		"actual failed piece retained":true,
+		"actual saved piece native field identity":true,
+		"entire actual native reader roundtrip":true,
+		"reader equality rejects changed field":true
+	},
+	"source_sha256":"6f19a926c4638c22f4e4280101cae3b09d694b5a6d9f83656696f680a18ff947",
+	"seconds":5.9025481e1,
+	"part_count":20,
+	"parts":{
+		"b840929d3c2ad8bb58a03aba2a6e9ef9053722c475bb0b0793b2b15f60077dcb":{
+			"File":"s40_roundtrip_parts\/b840929d3c2ad8bb58a03aba2a6e9ef9053722c475bb0b0793b2b15f60077dcb.wl",
+			"SHA256":"1dfeafc17d167152f0884def751246ab94d2e719c0575eeb790c3b11ae316565"
+		},
+		"4a8e706e664f77a1efd319d7ea1b9809a33b33327b3ded1e56840d84b92bddd4":{
+			"File":"s40_roundtrip_parts\/4a8e706e664f77a1efd319d7ea1b9809a33b33327b3ded1e56840d84b92bddd4.wl",
+			"SHA256":"19dca0f460cf37f67a129cd85454d59c4bdc2e93ea0bbc1f0e4e07f03b72eb57"
+		},
+		"ab7fb4254bc57d929fc80e69a510f49a3bd716218eddf3daa53b57ee6d9c07c5":{
+			"File":"s40_roundtrip_parts\/ab7fb4254bc57d929fc80e69a510f49a3bd716218eddf3daa53b57ee6d9c07c5.wl",
+			"SHA256":"e752d38e5d0245c17d3ef5c070c9840cceed4beda7e91730306b2051b0025a56"
+		},
+		"a77aca379d5727b545ad97b4009ff349d4c2fe850d0669556ccdda6404b04f72":{
+			"File":"s40_roundtrip_parts\/a77aca379d5727b545ad97b4009ff349d4c2fe850d0669556ccdda6404b04f72.wl",
+			"SHA256":"f19fda42b754999ad3c9f3a8fb079f236f6f403384e26688d04229e5ec71b38e"
+		},
+		"13e294bddd688671a0289dfdf25026ee03da3b9153f466d8f0e20c4d65da00a0":{
+			"File":"s40_roundtrip_parts\/13e294bddd688671a0289dfdf25026ee03da3b9153f466d8f0e20c4d65da00a0.wl",
+			"SHA256":"062d60ade15c7843d37339b2c2fb1e1ac1f46bbe480ac64974eaa486ed54f961"
+		},
+		"c01316784af9bc712266cbd4899023ec995dde5ac30697c5bad41ce71c5db769":{
+			"File":"s40_roundtrip_parts\/c01316784af9bc712266cbd4899023ec995dde5ac30697c5bad41ce71c5db769.wl",
+			"SHA256":"fcfca0accbf5df13b7f38c9503adcac740b545cdb23b19d97f004b62bb9a1afa"
+		},
+		"462b637d60942e58ee44a863a0bb9be1f43d06b5dd509a2f059e6751e66342ae":{
+			"File":"s40_roundtrip_parts\/462b637d60942e58ee44a863a0bb9be1f43d06b5dd509a2f059e6751e66342ae.wl",
+			"SHA256":"e57d5345d602e8e5a47ff062b91be33facf275c124bde5a257836825ff532b02"
+		},
+		"deae2d4d75857c1081f113bcfc950dca567dd5a2e14e6ac8fb8e5785ff4dd5ec":{
+			"File":"s40_roundtrip_parts\/deae2d4d75857c1081f113bcfc950dca567dd5a2e14e6ac8fb8e5785ff4dd5ec.wl",
+			"SHA256":"670dee169ecf40b7471dd310794a83d42d3434ff74bea8cec53a77fdd759f4f2"
+		},
+		"4e5a75734dac097ffc1854ad4991c9f412d532e5a9851ca8bea0142e69fc940f":{
+			"File":"s40_roundtrip_parts\/4e5a75734dac097ffc1854ad4991c9f412d532e5a9851ca8bea0142e69fc940f.wl",
+			"SHA256":"9807964ec7ad6f6dd7fe500d194ef1132ff70978faba647d61934ca41a473297"
+		},
+		"b455784ab53072773e72df494aa4b12ac467976447e250c694c11b6f1268e235":{
+			"File":"s40_roundtrip_parts\/b455784ab53072773e72df494aa4b12ac467976447e250c694c11b6f1268e235.wl",
+			"SHA256":"5d08fa77ed4be8bc6b09363080ed9a062104d0d74f44244536510ebbbb49e908"
+		},
+		"ae9f44742e5ac8c8fbf82a4d7533b00e8b7e8615fc5e390b16b30daa870a1636":{
+			"File":"s40_roundtrip_parts\/ae9f44742e5ac8c8fbf82a4d7533b00e8b7e8615fc5e390b16b30daa870a1636.wl",
+			"SHA256":"15a69c97eff1092bfbcb61a14d82f88e5005731b63fc904bb2a499f1feac6a72"
+		},
+		"afddf04d6a5436ee41e49610f197aa32eb297ad486d3917e1dbd829e0bd2fc17":{
+			"File":"s40_roundtrip_parts\/afddf04d6a5436ee41e49610f197aa32eb297ad486d3917e1dbd829e0bd2fc17.wl",
+			"SHA256":"3707aa0b4072b00b7bf46966daae9e10eadff16ca42d08d9ec1349ba8851c366"
+		},
+		"1211228e9d115f4d1d46bc1885b87632b5f8cf8fa3019527466ba826c258969d":{
+			"File":"s40_roundtrip_parts\/1211228e9d115f4d1d46bc1885b87632b5f8cf8fa3019527466ba826c258969d.wl",
+			"SHA256":"6cb4d41822a7380caf14d1b12cbf7c0335bd3164e2a879801b49bfba60966797"
+		},
+		"32e0399f4ab785c0ece448bda35a71aa766f74de618fe76e022a9ae853b0c6e5":{
+			"File":"s40_roundtrip_parts\/32e0399f4ab785c0ece448bda35a71aa766f74de618fe76e022a9ae853b0c6e5.wl",
+			"SHA256":"f545eaf43abf2db4b8b7adbef9d681091b135fedebdc42c9029fbb9e551eb809"
+		},
+		"3167120702ae02792699e81bd90b99382244dc0ebf4934f3286df48e8909f3dd":{
+			"File":"s40_roundtrip_parts\/3167120702ae02792699e81bd90b99382244dc0ebf4934f3286df48e8909f3dd.wl",
+			"SHA256":"3adb8e7e00a4176e0d3fd20376db7384211daf587923720363cace1b0be61388"
+		},
+		"0d5cec5ced3cd0ec22f1114ff90f1d99b31ed5e656aa294177aa7116898b8ff9":{
+			"File":"s40_roundtrip_parts\/0d5cec5ced3cd0ec22f1114ff90f1d99b31ed5e656aa294177aa7116898b8ff9.wl",
+			"SHA256":"6d0b81e1999f57ca0ea864b58c14cd16faf51774b62c58a64fa5bd6516997bf3"
+		},
+		"88890cb091e50f8bb6dbdbeb4563355717a7b96df78de45889451d425ab16f8d":{
+			"File":"s40_roundtrip_parts\/88890cb091e50f8bb6dbdbeb4563355717a7b96df78de45889451d425ab16f8d.wl",
+			"SHA256":"375052a92441e45f69e0c052324910ee4e8fe3eb7d92319b2ca5e1a332236b59"
+		},
+		"66469e8e936dc52f8db6f8faf2d860c0666e666cf73fb3d658965b61604591c6":{
+			"File":"s40_roundtrip_parts\/66469e8e936dc52f8db6f8faf2d860c0666e666cf73fb3d658965b61604591c6.wl",
+			"SHA256":"43f55050da62c05a0c0a7835be6eae29373d60aff216463d7d4df2d0f8ef74ed"
+		},
+		"4602fd44921aae3f2781536faf1bc5871aa47fb61823db3dea0ccea7ba58665e":{
+			"File":"s40_roundtrip_parts\/4602fd44921aae3f2781536faf1bc5871aa47fb61823db3dea0ccea7ba58665e.wl",
+			"SHA256":"8c99976cb07c568cbe0fc73a8918992e7d5be2c55447cda020e6b1af010a5c92"
+		},
+		"3cdd091831a910a6d3568e8960e6cb9530e5f5e6b11c2a0a8d8db9999c720276":{
+			"File":"s40_roundtrip_parts\/3cdd091831a910a6d3568e8960e6cb9530e5f5e6b11c2a0a8d8db9999c720276.wl",
+			"SHA256":"adf83814730fc748c0f93c57ff3e8a66b51b5205e8548a180485bb0ebaa16910"
+		}
+	},
+	"native_versions":[
+		"15.0.0 for Linux x86 (64-bit) (May 31, 2026)",
+		"10.2.1"
+	]
+}

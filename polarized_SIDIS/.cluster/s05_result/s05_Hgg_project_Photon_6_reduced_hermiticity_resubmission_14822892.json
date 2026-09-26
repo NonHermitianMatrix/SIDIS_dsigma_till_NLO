@@ -1,0 +1,33 @@
+{
+  "channel": "Hgg",
+  "component": 6,
+  "config": ".cluster/s05_Hgg_project_Photon_6_reduced_hermiticity_job.json",
+  "config_sha256": "34af68e18ceff842bb4c49fc967b2f7afbb081bbcd9a4ba8cc3046278c2f3bd9",
+  "event": "REPLACEMENT_SUBMITTED",
+  "job_id": "14822892",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s05_Hgg_project_Photon_6_reduced_hermiticity_job.json\n",
+  "memory": 24,
+  "old_config_sha256": "34af68e18ceff842bb4c49fc967b2f7afbb081bbcd9a4ba8cc3046278c2f3bd9",
+  "old_job_id": "14822883",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-h",
+    "-N",
+    "pSIDIS_s05_Hgg_project_Photon_6_reduced_hermiticity",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=24G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s05_Hgg_project_Photon_6_reduced_hermiticity_resubmission_scheduler.log"
+  ],
+  "slots": 1,
+  "stage": "s05_result",
+  "state": "hqw",
+  "tag": "s05_Hgg_project_Photon_6_reduced_hermiticity"
+}

@@ -1,0 +1,28 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s12_Hqq_reference_recoil_job.json",
+  "config_sha256": "fa1dafc0aa44cd54e94113b78cfe3c862da34b4fdd1fa0ebf1c6ec12c8442900",
+  "event": "SUBMITTED",
+  "job_id": "14822578",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s12_Hqq_reference_recoil_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s12_Hqq_reference_recoil",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s12_Hqq_reference_recoil_scheduler.log",
+    "-pe",
+    "shared",
+    "4"
+  ],
+  "tag": "s12_Hqq_reference_recoil"
+}

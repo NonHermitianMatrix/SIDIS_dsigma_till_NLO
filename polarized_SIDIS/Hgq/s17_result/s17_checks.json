@@ -1,0 +1,627 @@
+{
+	"Schema":"polarized-sidis-corrected-reference-color-comparison-v1",
+	"Channel":"Hgq",
+	"SourceSHA256":"143924c807c54680b3cb20c80dad3d43872cc91635a5e72a226567d4210910bf",
+	"InputManifestSHA256":"6020f9126ede290c429f53110ec174d99cdfb751e19783e33b75ac2fc6714e75",
+	"NativeContractionSHA256":"ff6681d1d06cbdabd5935107c0a5e5d2a0c38d39a605c3d7194e64cf259333a2",
+	"NativeVersions":[
+		"13.1.0 for Linux x86 (64-bit) (June 16, 2022)",
+		"10.2.1"
+	],
+	"SignedModelColorLabel":-3,
+	"DerivedColorDimension":3,
+	"PointCount":16,
+	"ProjectorComparisonCount":32,
+	"AllProjectorsPass":true,
+	"AllAzimuthAveragesPass":true,
+	"MaximumRelativeDifference":6.285644251393455e-13,
+	"NativeComparison":{
+		"Point":"real_01",
+		"FreshScaledPpp":3.8827647146051354e-7,
+		"CorrectedStoredPpp":3.8827647146051354e-7,
+		"MadGraphScaledPpp":3.882764714605064e-7,
+		"RelativeDifference":1.840657628718811e-14
+	},
+	"Rows":[
+		{
+			"ID":"born_01",
+			"Kind":"born",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				-2.6559120555299909e-9,
+				0.000010498998926813449
+			],
+			"CorrectedValues":[
+				-2.6559120555299909e-9,
+				0.000010498998926813449
+			],
+			"MadGraphValues":[
+				-2.655912055529997e-9,
+				1.049899892681341e-5
+			],
+			"RelativeDifferences":[
+				2.180141573518979e-15,
+				3.711164830600057e-15
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"born_02",
+			"Kind":"born",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				-7.6517930384081913e-10,
+				1.6461303727352621e-7
+			],
+			"CorrectedValues":[
+				-7.6517930384081913e-10,
+				1.6461303727352621e-7
+			],
+			"MadGraphValues":[
+				-7.651793038408276e-10,
+				1.6461303727351522e-7
+			],
+			"RelativeDifferences":[
+				1.1080541823478606e-14,
+				6.673200808786034e-14
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"born_03",
+			"Kind":"born",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				-4.3119030536131416e-8,
+				1.6989443059489211e-6
+			],
+			"CorrectedValues":[
+				-4.3119030536131416e-8,
+				1.6989443059489211e-6
+			],
+			"MadGraphValues":[
+				-4.311903053613282e-8,
+				1.6989443059483758e-6
+			],
+			"RelativeDifferences":[
+				3.253547914799096e-14,
+				3.209507562347071e-13
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"born_04",
+			"Kind":"born",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				-4.6432624271158554e-9,
+				1.6710755580437949e-8
+			],
+			"CorrectedValues":[
+				-4.6432624271158554e-9,
+				1.6710755580437949e-8
+			],
+			"MadGraphValues":[
+				-4.6432624271158315e-9,
+				1.6710755580430146e-8
+			],
+			"RelativeDifferences":[
+				5.16624639261193e-15,
+				4.668829904216507e-13
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"born_05",
+			"Kind":"born",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				-5.1195628078600364e-9,
+				3.5230466009702035e-7
+			],
+			"CorrectedValues":[
+				-5.1195628078600364e-9,
+				3.5230466009702035e-7
+			],
+			"MadGraphValues":[
+				-5.1195628078611e-9,
+				3.523046600967989e-7
+			],
+			"RelativeDifferences":[
+				2.077822477555694e-13,
+				6.285644251393455e-13
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"born_06",
+			"Kind":"born",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				-1.2447276995616518e-10,
+				1.5210161922945486e-6
+			],
+			"CorrectedValues":[
+				-1.2447276995616518e-10,
+				1.5210161922945486e-6
+			],
+			"MadGraphValues":[
+				-1.2447276995616575e-10,
+				1.5210161922945491e-6
+			],
+			"RelativeDifferences":[
+				4.568763684864367e-15,
+				4.1766465975774596e-16
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"born_07",
+			"Kind":"born",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				-4.4632081254528715e-10,
+				9.6285793826566339e-6
+			],
+			"CorrectedValues":[
+				-4.4632081254528715e-10,
+				9.6285793826566339e-6
+			],
+			"MadGraphValues":[
+				-4.463208125454025e-10,
+				9.628579382656518e-6
+			],
+			"RelativeDifferences":[
+				2.5853980412219517e-13,
+				1.2139957731629775e-14
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"born_08",
+			"Kind":"born",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				-3.0783073374049431e-9,
+				2.1206389178040419e-7
+			],
+			"CorrectedValues":[
+				-3.0783073374049431e-9,
+				2.1206389178040419e-7
+			],
+			"MadGraphValues":[
+				-3.0783073374049293e-9,
+				2.1206389178040463e-7
+			],
+			"RelativeDifferences":[
+				4.433761353611566e-15,
+				2.1219371645542305e-15
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"real_01",
+			"Kind":"real",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				2.7668945630169245e-10,
+				-3.8827647146051354e-7
+			],
+			"CorrectedValues":[
+				-2.7668945630169245e-10,
+				3.8827647146051354e-7
+			],
+			"MadGraphValues":[
+				-2.7668945630168254e-10,
+				3.882764714605064e-7
+			],
+			"RelativeDifferences":[
+				3.5874758233697163e-14,
+				1.840657628718811e-14
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"real_02",
+			"Kind":"real",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				2.2903698548316690e-9,
+				-1.1259042500285193e-6
+			],
+			"CorrectedValues":[
+				-2.2903698548316690e-9,
+				1.1259042500285193e-6
+			],
+			"MadGraphValues":[
+				-2.290369854831356e-9,
+				1.125904250028291e-6
+			],
+			"RelativeDifferences":[
+				1.3651693454026205e-13,
+				2.0293656189330477e-13
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"real_03",
+			"Kind":"real",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				5.1766637178629978e-10,
+				-3.1069328692042980e-6
+			],
+			"CorrectedValues":[
+				-5.1766637178629978e-10,
+				3.1069328692042980e-6
+			],
+			"MadGraphValues":[
+				-5.176663717863082e-10,
+				3.1069328692042827e-6
+			],
+			"RelativeDifferences":[
+				1.637850503870181e-14,
+				4.907281133010814e-15
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"real_04",
+			"Kind":"real",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				1.2816905199361715e-10,
+				-3.1946501714923496e-8
+			],
+			"CorrectedValues":[
+				-1.2816905199361715e-10,
+				3.1946501714923496e-8
+			],
+			"MadGraphValues":[
+				-1.2816905199361706e-10,
+				3.194650171492374e-8
+			],
+			"RelativeDifferences":[
+				6.050460795380484e-16,
+				7.457092439764203e-15
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"real_05",
+			"Kind":"real",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				1.1001013205573874e-10,
+				-7.5289057796595681e-8
+			],
+			"CorrectedValues":[
+				-1.1001013205573874e-10,
+				7.5289057796595681e-8
+			],
+			"MadGraphValues":[
+				-1.1001013205573811e-10,
+				7.528905779659635e-8
+			],
+			"RelativeDifferences":[
+				5.7568347992258845e-15,
+				8.789384665036121e-15
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"real_06",
+			"Kind":"real",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				9.1664493834029489e-10,
+				-1.7753158754702837e-6
+			],
+			"CorrectedValues":[
+				-9.1664493834029489e-10,
+				1.7753158754702837e-6
+			],
+			"MadGraphValues":[
+				-9.166449383402981e-10,
+				1.77531587547029e-6
+			],
+			"RelativeDifferences":[
+				3.4968009308452946e-15,
+				3.4590964641528363e-15
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"real_07",
+			"Kind":"real",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				6.0940777960646013e-10,
+				-2.4018759367170948e-6
+			],
+			"CorrectedValues":[
+				-6.0940777960646013e-10,
+				2.4018759367170948e-6
+			],
+			"MadGraphValues":[
+				-6.094077796064601e-10,
+				2.4018759367170814e-6
+			],
+			"RelativeDifferences":[
+				0.0,
+				5.6424759284580365e-15
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		},
+		{
+			"ID":"real_08",
+			"Kind":"real",
+			"OriginalColorLabel":-3,
+			"DerivedColorDimension":3,
+			"OriginalValues":[
+				1.2405972962228417e-9,
+				-1.7562946542320438e-6
+			],
+			"CorrectedValues":[
+				-1.2405972962228417e-9,
+				1.7562946542320438e-6
+			],
+			"MadGraphValues":[
+				-1.2405972962228073e-9,
+				1.7562946542323377e-6
+			],
+			"RelativeDifferences":[
+				2.7670538639304352e-14,
+				1.6723200389675293e-13
+			],
+			"ProjectorsPass":[
+				true,
+				true
+			],
+			"AzimuthAveragesPass":[
+				true,
+				true
+			]
+		}
+	],
+	"Checks":{
+		"compute allocation":true,
+		"complete source syntax":true,
+		"pinned Hgq\/s16_result\/reference\/Ppp_01_01.wl":true,
+		"pinned Hgq\/s16_result\/reference\/inputs\/s01_generate_amplitudes.wl":true,
+		"pinned Hgq\/s16_result\/reference\/inputs\/s01_result.wl":true,
+		"pinned Hgq\/s16_result\/reference\/inputs\/s02_born_and_projectors.wl":true,
+		"pinned Hgq\/s16_result\/reference\/inputs\/s02_result.wl":true,
+		"pinned Hgq\/s16_result\/reference\/inputs\/s03_contract_real.wl":true,
+		"pinned Hgq\/s16_result\/reference\/inputs\/s03_result.wl":true,
+		"pinned Hgq\/s16_result\/reference\/s01_result.json":true,
+		"pinned Hgq\/s16_result\/reference\/s03_result.json":true,
+		"pinned Hgq\/s16_result\/reference\/s03_sample_madgraph.py":true,
+		"pinned Hgq\/s16_result\/reference\/s04_evaluate_local.wl":true,
+		"pinned Hgq\/s16_result\/reference\/s04_result.json":true,
+		"pinned Hgq\/s16_result\/reference\/s06_validate_real_projection.wl":true,
+		"saved exact native contraction accepted":true,
+		"unique positive model color dimension":true,
+		"native color traces and reference dimensions agree":true,
+		"born_01 exact coordinate inputs":true,
+		"born_01 exact normalization inputs":true,
+		"born_01 entire old comparison reproduced":true,
+		"born_01 finite real projectors":true,
+		"born_01 both MadGraph projectors":true,
+		"born_01 all lepton-setting averages":true,
+		"born_02 exact coordinate inputs":true,
+		"born_02 exact normalization inputs":true,
+		"born_02 entire old comparison reproduced":true,
+		"born_02 finite real projectors":true,
+		"born_02 both MadGraph projectors":true,
+		"born_02 all lepton-setting averages":true,
+		"born_03 exact coordinate inputs":true,
+		"born_03 exact normalization inputs":true,
+		"born_03 entire old comparison reproduced":true,
+		"born_03 finite real projectors":true,
+		"born_03 both MadGraph projectors":true,
+		"born_03 all lepton-setting averages":true,
+		"born_04 exact coordinate inputs":true,
+		"born_04 exact normalization inputs":true,
+		"born_04 entire old comparison reproduced":true,
+		"born_04 finite real projectors":true,
+		"born_04 both MadGraph projectors":true,
+		"born_04 all lepton-setting averages":true,
+		"born_05 exact coordinate inputs":true,
+		"born_05 exact normalization inputs":true,
+		"born_05 entire old comparison reproduced":true,
+		"born_05 finite real projectors":true,
+		"born_05 both MadGraph projectors":true,
+		"born_05 all lepton-setting averages":true,
+		"born_06 exact coordinate inputs":true,
+		"born_06 exact normalization inputs":true,
+		"born_06 entire old comparison reproduced":true,
+		"born_06 finite real projectors":true,
+		"born_06 both MadGraph projectors":true,
+		"born_06 all lepton-setting averages":true,
+		"born_07 exact coordinate inputs":true,
+		"born_07 exact normalization inputs":true,
+		"born_07 entire old comparison reproduced":true,
+		"born_07 finite real projectors":true,
+		"born_07 both MadGraph projectors":true,
+		"born_07 all lepton-setting averages":true,
+		"born_08 exact coordinate inputs":true,
+		"born_08 exact normalization inputs":true,
+		"born_08 entire old comparison reproduced":true,
+		"born_08 finite real projectors":true,
+		"born_08 both MadGraph projectors":true,
+		"born_08 all lepton-setting averages":true,
+		"real_01 exact coordinate inputs":true,
+		"real_01 exact normalization inputs":true,
+		"real_01 entire old comparison reproduced":true,
+		"real_01 finite real projectors":true,
+		"real_01 both MadGraph projectors":true,
+		"real_01 all lepton-setting averages":true,
+		"fresh exact contraction equals corrected reference":true,
+		"fresh exact contraction equals MadGraph":true,
+		"real_02 exact coordinate inputs":true,
+		"real_02 exact normalization inputs":true,
+		"real_02 entire old comparison reproduced":true,
+		"real_02 finite real projectors":true,
+		"real_02 both MadGraph projectors":true,
+		"real_02 all lepton-setting averages":true,
+		"real_03 exact coordinate inputs":true,
+		"real_03 exact normalization inputs":true,
+		"real_03 entire old comparison reproduced":true,
+		"real_03 finite real projectors":true,
+		"real_03 both MadGraph projectors":true,
+		"real_03 all lepton-setting averages":true,
+		"real_04 exact coordinate inputs":true,
+		"real_04 exact normalization inputs":true,
+		"real_04 entire old comparison reproduced":true,
+		"real_04 finite real projectors":true,
+		"real_04 both MadGraph projectors":true,
+		"real_04 all lepton-setting averages":true,
+		"real_05 exact coordinate inputs":true,
+		"real_05 exact normalization inputs":true,
+		"real_05 entire old comparison reproduced":true,
+		"real_05 finite real projectors":true,
+		"real_05 both MadGraph projectors":true,
+		"real_05 all lepton-setting averages":true,
+		"real_06 exact coordinate inputs":true,
+		"real_06 exact normalization inputs":true,
+		"real_06 entire old comparison reproduced":true,
+		"real_06 finite real projectors":true,
+		"real_06 both MadGraph projectors":true,
+		"real_06 all lepton-setting averages":true,
+		"real_07 exact coordinate inputs":true,
+		"real_07 exact normalization inputs":true,
+		"real_07 entire old comparison reproduced":true,
+		"real_07 finite real projectors":true,
+		"real_07 both MadGraph projectors":true,
+		"real_07 all lepton-setting averages":true,
+		"real_08 exact coordinate inputs":true,
+		"real_08 exact normalization inputs":true,
+		"real_08 entire old comparison reproduced":true,
+		"real_08 finite real projectors":true,
+		"real_08 both MadGraph projectors":true,
+		"real_08 all lepton-setting averages":true,
+		"complete existing sample inventory":true
+	},
+	"ProductionCoefficientsChanged":false
+}

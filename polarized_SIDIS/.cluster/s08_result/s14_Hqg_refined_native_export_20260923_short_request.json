@@ -1,0 +1,19 @@
+{
+  "archive": ".cluster/s14_Hqg_refined_native_export_20260923_job_before_short_request.json",
+  "before": {
+    "category": "pending",
+    "name": "pSIDIS_s14_Hqg_refined_native_export_20260923",
+    "queue": "",
+    "state": "qw",
+    "submitted": "2026-09-23T09:52:30.886"
+  },
+  "configuration": ".cluster/s14_Hqg_refined_native_export_20260923_job.json",
+  "event": "QUEUED_WALL_LIMIT_SHORTENED",
+  "job_id": "14880420",
+  "native_wall_seconds": 6900,
+  "new_config_sha256": "9c66216f6c7f06cbc505632850aec58acc911b1cf6f26669498366860d130b0f",
+  "old_config_sha256": "fd9b4b596defd5d5f35bc7653233646347c1f8d0d452aaf089a8f358e507bde2",
+  "qalter_output": "modified hard resource list of job 14880420\n",
+  "scheduler_resources": "hard resource_list:         h_data=32G,h_rt=7200,h_vmem=32G",
+  "utc": "2026-09-23T17:17:55.328969+00:00"
+}

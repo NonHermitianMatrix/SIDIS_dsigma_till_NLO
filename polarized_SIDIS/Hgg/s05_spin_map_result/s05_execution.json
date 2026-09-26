@@ -1,0 +1,72 @@
+{
+  "child_maxrss_bytes": 1357971456,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s05_spin_map_check.wls"
+  ],
+  "completed_utc": "2026-09-17T19:39:06.076519+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "a2f375b4614cfb02b4add912e1bf81a7432d3f4cf797ff99555152499faeaed3",
+  "job_id": "14779545",
+  "node": "n1163",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 1258995712,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s05_spin_map_result/s05_checks.json": "8b4a061045cf7a24a1790c286815bbc4851dadd52c9e93dee30609bfde4664cd",
+    "Hgg/s05_spin_map_result/s05_result.wl": "3049dfee6baa6ee6f7aed473ada5237cd7bc445ceb89d5ce13d1cbf7531d9d89"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "87f8e6569853ab998c595f1a329a0d9c05390eb624cea2fd91ac2b7881703953",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s02_result/kinematics.wl": "56772f691f3263b8695e090f26c367b6062d8864bfa41b0cf44eb142f89be0b9",
+    "Hgg/s05_result/reference/unpolarized_real.wl": "8fd5a266c5a15fa3d2cbed9992e26ef005ec3e2400838a0363db1dcc407ed4e7",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "Hqqprime/s05_compact_result/s05_result.wl": "9e1619465a68e8f7fe242421a237d77f9d0452722237124429816b0a4986081d",
+    "Hqqprime/s05_interface_result/s05_result.wl": "eed6f9e3bd8316c5e82ffa0c30abaef524729f639e2070e478ba5503b35ae5e3",
+    "Hqqprime/s05_parallel_result/s05_result.wl": "60a05328f3ca59abb5bc5faab2565a77f34b9ced5eee9f2da060f6d512475e4f",
+    "Hqqprime/s05_spin_extraction_result/s05_result.wl": "ca3d2e5e85ad47b4cad41f6a26609a5886ef011a819223e9b25abe3975ea473b",
+    "cache/s05/Hgg/430c1735f22eb7d8c345f075c3abebc07a23fd75fb3faa8575413c7938381bff/Real_1_4_P2_2.wl": "99d4f4a66dae994f26b54e43b396e81b655741f0261764741fd8301161ca63fc",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_result/s04_result.wl": "970f0bfd74d9cb5838703d01d8ce3066ff4dc28367bad67c74076bbab6b7c0b3",
+    "common/s05_inputs.json": "53f304ad84bed1cb57963f53f39ce463b2065eec15a6eff32c16141cbb5a13d7",
+    "common/s05_real_spin_response.wls": "33cf0bacda34aff1b32df4493926bcaa151e57c9763d0261419735c07b048eaf",
+    "common/s05_result/reference/s05_real_spin_response_before_coefficient_reduction.wls": "376fd639b0624d1b0aab627969077213468cdd9811fd6b141960e7c831fa8a3a",
+    "common/s05_result/reference/s05_real_spin_response_before_compact_products.wls": "a57a34bb658c985202d47ccddd9a431c767c4d0cecf576eb8bb9817fa9972a37",
+    "common/s05_result/reference/s05_real_spin_response_before_complete_photon_projection.wls": "d34991466b6c4677600840ae1c837fab5879e2483932e778096134f8784c4d84",
+    "common/s05_result/reference/s05_real_spin_response_before_coupling_inventory.wls": "e157ea02902f03c1109e0584afb4d50cef3d96cebcdc0a28b1cf7ce7ea8b8fac",
+    "common/s05_result/reference/s05_real_spin_response_before_parallel_spin_checks.wls": "46c45f60a0f97c18d430cd8a3ee05182bc5e10f5deb424e8b69487d76e75e500",
+    "common/s05_result/reference/s05_real_spin_response_before_projection.wls": "899cf6d588e4a2186c8e0312a7361c6c99796bd414ff948a2d4ceee98129967d",
+    "common/s05_result/reference/s05_real_spin_response_before_spin_extraction.wls": "f6ba07013100d854647bc3d1677f58ba2b7b0dd50fd0b0397366e16361873d33",
+    "common/s05_result/reference/s05_real_spin_response_before_sum_checkpoints.wls": "33c00fd1361a5655d5f5c0fed5a15986182e4bb2fad67fc91ed0ba93da394507",
+    "common/s05_result/reference/s05_real_spin_response_before_worker_initialization.wls": "336ac1a601cc637bc11f78c27c10d9c7c0290443568127e76154407a4e3b4b4f",
+    "common/s05_result/reference/s05_spin_map_check_before_scalar_restore.wls": "ba3253deeebe0c17e7bbc998b6520c00c41eb67a97b35464dc2da88a965f8b8f",
+    "common/s05_spin_map_check.wls": "50da84aeb699f0d1ccf15f1bcf49a313774e82a9e3cffe2817fd391ae24e2fcf",
+    "common/s05_spin_map_inputs.json": "328502d14aa9b78daa2c40ad7ef0214f4a5035bb586b3cd53fcb3cc6682e0cf0"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 2802.875223902054
+}

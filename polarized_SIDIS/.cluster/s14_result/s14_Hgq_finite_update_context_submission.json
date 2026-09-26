@@ -1,0 +1,28 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s14_Hgq_finite_update_context_job.json",
+  "config_sha256": "8b0532d27d66624e50ed5c5fa32313a945f543b6fcab86ac468172a0a2cab3d8",
+  "event": "SUBMITTED",
+  "job_id": "14817047",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s14_Hgq_finite_update_context_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s14_Hgq_finite_update_context",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s14_Hgq_finite_update_context_scheduler.log",
+    "-pe",
+    "shared",
+    "2"
+  ],
+  "tag": "s14_Hgq_finite_update_context"
+}

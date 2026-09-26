@@ -1,0 +1,17 @@
+$HistoryLength=0;root=Directory[];
+Print["COMPACT_STORAGE_SOURCE_CHECK"];
+files={"common/s14_assemble_finite_compact.wls","common/s14_assemble_finite_phase_series.wls","common/s14_assemble_finite_spin.wls","common/s15_finalize_spin_coefficients_compact.wls","common/s15_finalize_spin_coefficients.wls","common/s14_check_compact_storage.wls"};
+checks=Association@Table[file->SyntaxQ[Import[FileNameJoin[{root,file}],"Text"]],{file,files}];
+phaseText=Import[FileNameJoin[{root,files[[2]]}],"Text"];
+terminal="ToExpression[phaseRunTail,InputForm];";
+positions=StringPosition[phaseText,terminal];
+AssociateTo[checks,"one terminal phase entry"->(Length[positions]===1&&StringEndsQ[StringTrim[phaseText],terminal])];
+If[!And@@Values[checks],Print["FAIL: compact assembly source syntax"];Quit[1]];
+prefix=StringTake[phaseText,First[First[positions]]-1];
+AssociateTo[checks,"initialization source syntax"->SyntaxQ[prefix]];
+If[!And@@Values[checks],Print["FAIL: compact assembly initialization syntax"];Quit[1]];
+identities=Association@Table[file->IntegerString[FileHash[FileNameJoin[{root,file}],"SHA256"],16,64],{file,files}];
+out=FileNameJoin[{root,"common","s14_compact_syntax_result"}];
+If[!DirectoryQ[out],CreateDirectory[out,CreateIntermediateDirectories->True]];
+Export[FileNameJoin[{out,"s14_checks.json"}],<|"checks"->checks,"source_sha256"->identities,"native_version"->$Version,"job_id"->Environment["JOB_ID"],"physics_executed"->False,"finite_nlo_fhats_computed"->False|>,"RawJSON"];
+Print["PASS: s14_compact_syntax"];Quit[0];

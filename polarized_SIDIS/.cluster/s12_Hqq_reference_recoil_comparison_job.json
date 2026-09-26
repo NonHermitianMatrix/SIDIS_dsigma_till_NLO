@@ -1,0 +1,58 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s12_assemble_real_reference_recoil.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s12_Hqq_reference_recoil_comparison",
+    "POLARIZED_SIDIS_CHANNEL": "Hqq",
+    "POLARIZED_SIDIS_RECOIL_COMPARISON_ONLY": "1",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s12_Hqq_reference_recoil_comparison"
+  },
+  "execution_result": "Hqq/s12_reference_recoil_result/s12_execution.json",
+  "expected_results": [
+    "Hqq/s12_reference_recoil_result/s12_result.wl",
+    "Hqq/s12_reference_recoil_result/s12_checks.json"
+  ],
+  "heartbeat": "cache/s12_Hqq_reference_recoil_comparison_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 3660,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 6442450944,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 6442450944,
+    "wall_seconds": 6900
+  },
+  "log": "cache/s12_Hqq_reference_recoil_comparison.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqq/s08_result/s08_result.wl": "630b599ef433544214acc847d34ff22ff5f00f105571efd800033d7ccdbef1f6",
+    "Hqq/s12_factored_series_result/s12_endpoint_comparison.wl": "fdf05fbe50cb85d8665d3eaa25a8d8bde3b1f96eda20775286ec9ac179e18746",
+    "Hqq/s12_factored_series_result/s12_result.wl": "20ada6bdd5ffe7eebc91a52c5be4720c0fe21cb908894e19114000f93c38fee3",
+    "Hqqbar/s12_rational_series_result/s12_execution.json": "406139892f2afcce55da23b0c374078dcc99e52d38166406fa06c7cdc2346874",
+    "Hqqbar/s12_rational_series_result/s12_result.wl": "0724c147d2349bd44183ecb90936a56d1c7790f7ebd6dade58459cd0c1f8373a",
+    "Hqqbar/s12_recoil_factorization_result/s12_checks.json": "22c91863a57fe65e2151221f7ba27c4dbfae2844cabdd1156faba731b2729937",
+    "Hqqbar/s12_recoil_factorization_result/s12_execution.json": "edb6f61db567f7d04cdc6475026eec2bd068843268b1809321948eb1514e36ff",
+    "Hqqbar/s12_recoil_factorization_result/s12_result.wl": "611d710798d44896a8e313afaf5ac1020bad6a4395b21d0b194dcf75b6060d2b",
+    "common/s06_result/reference/s08_result.wl": "76b97660cedd87b8c9dbcf5cb3b46ae8a95835e30ba0bcab7b67c3c78ffcf755",
+    "common/s06_result/reference/s10_result.wl": "dba9edd52b6cc80846a08f65ec2b98b908a4d7a429edff359dd3a460c597a253",
+    "common/s06_result/reference/s15_result.wl": "82cb3ca0de4501b3c045d025e6b93f4228426c344023b2a727fc93d69615ef0b",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s12_assemble_real_compact_inputs.wls": "755e42e244069df515f43066cc9c331b331e245acd68c8ec6c75e345a837d87c",
+    "common/s12_assemble_real_factored_series.wls": "7bbecbad4109fd3a2cef0f1d69aeaf8e6050c488427327e941bcaa096be0b44f",
+    "common/s12_assemble_real_reference_recoil.wls": "cde27a8c89576b6264528e83f1526c6d488f56a78eebc33dfe0c9b7384fee537",
+    "common/s12_assemble_real_spin.wls": "ca3777035d3d220b3fb8fcddb8131348f0d7c97f8fd9b8d54703337c93daa243",
+    "common/s12_check_rational_master_product.wls": "e6dabfbb04a9b68c9f5019ee1bc7c82a3f250b31f1c0d8975996c70303f31583",
+    "common/s12_check_recoil_factorization.wls": "348e2c990209688c52ab4695100303fc6da3ad11beaa1bda9135ee53c022ece7",
+    "common/s12_inputs.json": "037b7d316a22447129102d94fad18f3979ea44b78751790854bb737e520e5253",
+    "common/s12_result/reference/s12_standalone_rational_series.wls": "0685ea2e148fa2691b61c9cd0bebec67d7befb76eb681bd429bd1d9fbba298cd",
+    "common/s12_result/reference/s17_assemble_real.wl": "1df84e6817fdcf4b0db8c588d1083a9be499530c63ba10b6cb9991083d1f77e5"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s12_reference_recoil_comparison"
+}

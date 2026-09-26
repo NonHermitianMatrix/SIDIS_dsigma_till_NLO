@@ -1,0 +1,49 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s08_check_Hgg_affine_contract.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s08_Hgg_affine_geometry_report_20260925",
+    "POLARIZED_SIDIS_CHANNEL": "Hgg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s08_Hgg_affine_geometry_report_20260925"
+  },
+  "execution_result": "Hgg/s08_affine_geometry_contract_result/s08_execution.json",
+  "expected_results": [
+    "Hgg/s08_affine_geometry_contract_result/s08_result.wl"
+  ],
+  "heartbeat": "cache/s08_Hgg_affine_geometry_report_20260925_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 3221225472,
+    "inactivity_seconds": 300,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 3221225472,
+    "poll_seconds": 15,
+    "scratch_bytes": 25769803776,
+    "tree_rss_bytes": 2147483648,
+    "wall_seconds": 600
+  },
+  "log": "cache/s08_Hgg_affine_geometry_report_20260925.log",
+  "reviewed_sha256": {
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hgg/s08_affine_piece_basis_result/s08_execution.json": "7f47c6781507e713e6e64b2d6bd86ca90918c3c89c8d7064e6128f7fbfe8e9e3",
+    "Hgg/s08_affine_piece_basis_result/s08_result.wl": "291e3969c71f7536ddb3160e6961d4143a7c915b7972d4099b112454a8263716",
+    "Hgg/s08_external_factor_result/s08_execution.json": "1804b9f6a05156f8a327d3cbdfe6d9e74e5552494ff41495c7953bd83391193b",
+    "Hgg/s08_external_factor_result/s08_result.wl": "52977c036e140df9d19cc6fe1565ce9ed9591f65f05f8288660a0a51dd07559c",
+    "Hgg/s08_factored_atom_certificate_result/s08_execution.json": "d8be3b1571d656c9f289bb535bb723926501e04b3d4f51adc86d01c7f0e9d843",
+    "Hgg/s08_factored_atom_certificate_result/s08_result.wl": "1bd4be24fd6ad69011f2848162e0ecea506a6e94e2fd0e143edc2a20c1c0437b",
+    "Hgg/s08_failed_group_input_result/s08_execution.json": "ea16688688cf64d03a50c2ebcc377ea79f29014786a680f67a1bf4d5c3b2b98a",
+    "Hgg/s08_failed_group_input_result/s08_result.wl": "d683e891d6d5f0f754e76f439e3f7ea3760aae16c9acbed311fca232837cf6e4",
+    "Hgg/s08_scalar_certificate_result/s08_execution.json": "bd4f78e554ab8a710fed98690647888b30edda804cb876c3d878f07d7753d931",
+    "Hgg/s08_scalar_certificate_result/s08_result.wl": "7de02ad26398d35a76a172f9ecf397e227177ef978b489657358050e24ff31d4",
+    "common/s06_result/reference/s02_result.wl": "c1e5f21d97b10b831b16ccafe2a9b3ed3fac463d5c6e204b4ecbafb471bf740d",
+    "common/s08_check_Hgg_affine_contract.wls": "401f1849c598e789dc73a9143e3f0416306033f48e65cccbc343f877dfb49b55",
+    "common/s08_check_Hgg_affine_family_basis.wls": "8fa1b1c2569fb6cdd7053447cd1217f8d21e2e78cebd136eab6db6980b2a1d0a",
+    "common/s08_map_Hqg_polynomial_group.wls": "594c882475ad63e02cf05f48890923d68d2fb4253adea4d0134688a09591277f"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s08_check_Hgg_affine_contract"
+}

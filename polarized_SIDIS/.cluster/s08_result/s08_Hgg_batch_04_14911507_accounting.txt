@@ -1,0 +1,54 @@
+==============================================================
+qname        pod_smp.q           
+hostname     n1159               
+group        saltzber            
+owner        rushil              
+project      campus_prj          
+department   defaultdepartment   
+jobname      pSIDIS_s08_Hgg_batch_04_20260925_part1
+jobnumber    14911507            
+taskid       undefined
+pe_taskid    NONE                
+account      sge                 
+priority     0                   
+cwd          /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z
+submit_host  login2              
+submit_cmd   qsub -terse -N pSIDIS_s08_Hgg_batch_04_20260925_part1 -S /bin/bash -pe shared 4 -l h_rt=02:00:00,h_data=10G -wd /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z -j y -o /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_batch_04_20260925_part1_scheduler.log
+qsub_time    09/24/2026 23:41:25.789
+start_time   09/25/2026 01:30:05.401
+end_time     09/25/2026 01:30:44.305
+granted_pe   shared              
+slots        4                   
+failed       100 : assumedly after job
+deleted_by   NONE
+exit_status  137                 
+ru_wallclock 38.904       
+ru_utime     0.893        
+ru_stime     0.692        
+ru_maxrss    13660               
+ru_ixrss     0                   
+ru_ismrss    0                   
+ru_idrss     0                   
+ru_isrss     0                   
+ru_minflt    13563               
+ru_majflt    0                   
+ru_nswap     0                   
+ru_inblock   1261944             
+ru_oublock   16                  
+ru_msgsnd    0                   
+ru_msgrcv    0                   
+ru_nsignals  0                   
+ru_nvcsw     8631                
+ru_nivcsw    910                 
+wallclock    40.673       
+cpu          1.585        
+mem          0.139             
+io           0.602             
+iow          26.160            
+ioops        1255                
+maxvmem      96.582M
+maxrss       0.000
+maxpss       0.000
+arid         undefined
+jc_name      NONE
+bound_cores  NONE

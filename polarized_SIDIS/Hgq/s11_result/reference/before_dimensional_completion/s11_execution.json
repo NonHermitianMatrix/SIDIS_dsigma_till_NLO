@@ -1,0 +1,59 @@
+{
+  "child_maxrss_bytes": 472997888,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s11_collinear_spin_convolutions.wls"
+  ],
+  "completed_utc": "2026-09-17T11:16:14.951544+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "022802718873db5683739084149b9ab70aa325935371a27254b3cb7487720196",
+  "job_id": "14774827",
+  "node": "n6126",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 456609792,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgq/s11_result/s11_checks.json": "94c66928ec03217480423658694df3faa6b35beae187c197eceb09bd94bf74ea",
+    "Hgq/s11_result/s11_result.wl": "1fbc01498047f39d73573dc5e97ebac79ace566ba0d8e8e494aebf5043c929fd"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hgq/s03_result/s03_result.wl": "570bde9d826e893d775f6bc458307369c6eb65316872f7268562345e527da177",
+    "Hgq/s11_result/reference/s08_collinear_subtraction.wl": "17fedfd567c9dc835f81675115f8ba7fde925e1b4722fa4ee3de071454a54011",
+    "Hgq/s11_result/reference/s08_result.wl": "54064717ee201b62d798e078f00670e3bb459389a6cf4a82d86c613be7d32fbf",
+    "Hqg/s01_result/reference/s01_result/s01_inputs/s04_result.wl": "8403c287ed130c5db601069eb71ad2d6a7b2b851662dea716441c472bc10eba9",
+    "Hqg/s03_result/s03_result.wl": "f08420e83f346d36de3f890ba51c2f31692907a699c0cab5fb96e43eb71c059a",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "0dc987fe060db67a8fa060945380760b0ceb788843882e760c0a79959852297a",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "Hqq/s03_result/s03_result.wl": "99dff181bf85da2d93376236b37b98e116f5965d5015cba01eb150bb19e5c9cc",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_collinear_spin_convolutions.wls": "9c5784631fbeb46741b274186985fb21f1607d4063525025517bb0560f11de96",
+    "common/s11_inputs.json": "20e2f7da6abf25eeeace096a4d8df702e5048eb46f7010100fe066782e82c835"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 333.14546081097797
+}

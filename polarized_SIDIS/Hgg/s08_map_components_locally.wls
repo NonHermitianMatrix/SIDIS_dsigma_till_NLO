@@ -1,0 +1,1 @@
+../misc/s06_map_Hgg_local.wls

@@ -1,0 +1,109 @@
+{
+  "artifacts": [
+    {
+      "acceptance_keys": [
+        "Accepted"
+      ],
+      "destination": "common/s06_result/reference/s02_result.wl",
+      "original_result": "s02_result.wl",
+      "original_source": "s02_definitions.wl",
+      "role": "definitions",
+      "source_destination": "common/s06_result/reference/sources/s02_definitions.wl",
+      "stage": "s02"
+    },
+    {
+      "acceptance_keys": [
+        "Accepted"
+      ],
+      "destination": "common/s06_result/reference/s04_result.wl",
+      "original_result": "s04_result.wl",
+      "original_source": "s04_reduce_real.wl",
+      "role": "cut reduction rules",
+      "source_destination": "common/s06_result/reference/sources/s04_reduce_real.wl",
+      "stage": "s04"
+    },
+    {
+      "acceptance_keys": [
+        "AcceptedRepresentations"
+      ],
+      "destination": "common/s06_result/reference/s08_result.wl",
+      "original_result": "s08_result.wl",
+      "original_source": "s08_cut_master_inputs.wl",
+      "role": "cut master representations",
+      "source_destination": "common/s06_result/reference/sources/s08_cut_master_inputs.wl",
+      "stage": "s08"
+    },
+    {
+      "acceptance_keys": [
+        "Accepted"
+      ],
+      "destination": "common/s06_result/reference/s09_result.wl",
+      "original_result": "s09_result.wl",
+      "original_source": "s09_reduce_virtual.wl",
+      "role": "virtual reduction rules",
+      "source_destination": "common/s06_result/reference/sources/s09_reduce_virtual.wl",
+      "stage": "s09"
+    },
+    {
+      "acceptance_keys": [
+        "AcceptedEulerClasses",
+        "CutNormalizationAccepted"
+      ],
+      "destination": "common/s06_result/reference/s10_result.wl",
+      "original_result": "s10_result.wl",
+      "original_source": "s10_evaluate_cut_masters.wl",
+      "role": "cut Euler values and normalization",
+      "source_destination": "common/s06_result/reference/sources/s10_evaluate_cut_masters.wl",
+      "stage": "s10"
+    },
+    {
+      "acceptance_keys": [
+        "Accepted"
+      ],
+      "destination": "common/s06_result/reference/s12_result.wl",
+      "original_result": "s12_result.wl",
+      "original_source": "s12_virtual_master_inputs.wl",
+      "role": "virtual master representations",
+      "source_destination": "common/s06_result/reference/sources/s12_virtual_master_inputs.wl",
+      "stage": "s12"
+    },
+    {
+      "acceptance_keys": [
+        "AcceptedEuclideanParents"
+      ],
+      "destination": "common/s06_result/reference/s13_result.wl",
+      "original_result": "s13_result.wl",
+      "original_source": "s13_evaluate_virtual_masters.wl",
+      "role": "virtual Euclidean master values",
+      "source_destination": "common/s06_result/reference/sources/s13_evaluate_virtual_masters.wl",
+      "stage": "s13"
+    },
+    {
+      "acceptance_keys": [
+        "Accepted"
+      ],
+      "destination": "common/s06_result/reference/s14_result.wl",
+      "original_result": "s14_result.wl",
+      "original_source": "s14_uv_residues.wl",
+      "role": "UV residues",
+      "source_destination": "common/s06_result/reference/sources/s14_uv_residues.wl",
+      "stage": "s14"
+    },
+    {
+      "acceptance_keys": [
+        "AcceptedCutMasterRegions"
+      ],
+      "destination": "common/s06_result/reference/s15_result.wl",
+      "original_result": "s15_result.wl",
+      "original_source": "s15_cut_soft_regions.wl",
+      "role": "cut master regular and soft regions",
+      "source_destination": "common/s06_result/reference/sources/s15_cut_soft_regions.wl",
+      "stage": "s15"
+    }
+  ],
+  "commit": "5062dcb2407594dafcc2f9f72800e96ff9e6d957",
+  "layout_file": "common/s06_result/reference/layout.json",
+  "layout_sha256": "e2e56e15f2b45807670eb7c1acb44569d31acd13214a8182579ce96fc284c601",
+  "reference_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907",
+  "schema": "polarized-sidis-scalar-reuse-inputs-v1"
+}

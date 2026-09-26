@@ -1,0 +1,48 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s14_project_real_frame.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s14_Hqg_real_frame_20260923",
+    "POLARIZED_SIDIS_CHANNEL": "Hqg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s14_Hqg_real_frame_20260923"
+  },
+  "execution_result": "Hqg/s14_frame_result/s14_execution.json",
+  "expected_results": [
+    "Hqg/s14_frame_result/s14_result.wl",
+    "Hqg/s14_frame_result/s14_checks.json"
+  ],
+  "heartbeat": "cache/s14_Hqg_real_frame_20260923_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 2700,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 15032385536,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 15032385536,
+    "wall_seconds": 3300
+  },
+  "log": "cache/s14_Hqg_real_frame_20260923.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqg/s05_result/s05_checks.json": "3eb721f610de2b82497ddbda8be93f5faeb44f008b4e1314b8d8d0ec1942e7fe",
+    "Hqg/s05_result/s05_execution.json": "d17e1936cb1516c4268175b4f43cfc02a7243020d8b20a735869e47e1f68cb91",
+    "Hqg/s05_result/s05_payload_0001.txt": "f1a09178b8ae14e1d2b84a049946de4d3581a12ac869f4039a0685c255527490",
+    "Hqg/s05_result/s05_payload_0002.txt": "6e6fdc2099bce07c1149dceee6a62ef46a3415be9f126ee251bb1f03b67996ca",
+    "Hqg/s05_result/s05_payload_0003.txt": "d3277b81d09f4d8f06f44a0e8cf6ad87ea8605ee79953ff04718780c1d365feb",
+    "Hqg/s05_result/s05_payload_0004.txt": "6cdfcef8af614cf442f559c5098d8ca14ab1e3ea638e418fbef5b65b58a38782",
+    "Hqg/s05_result/s05_payload_0005.txt": "b104ee098d6604a8cd491b8be6f4064b4667bf9c9627618ac70c0e5bdd6dc8ea",
+    "Hqg/s05_result/s05_payload_0006.txt": "ba35c5e9261cbb28da51244ae0d0b146e1ba4874385b0d253ce5c0678ed35572",
+    "Hqg/s05_result/s05_payload_0007.txt": "bcc3cc94f809d13d77349fc1cd947c7bccd578a5d6a00749c7f286cbfc7ce65d",
+    "Hqg/s05_result/s05_payload_manifest.json": "e39440acfbf41cf39a03a648749e713aaec8355fa8b9b1cfb8d6ad9ada4ad826",
+    "Hqg/s05_result/s05_result.wl": "522ceae713f66c9748ead11403608287304ee1eb0c56ba05f307ef4ab54c5c7d",
+    "common/s14_project_real_frame.wls": "503ef2168287d2e0309c42704de529c395af605a9c8a99111fb59f31deea5cb5"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s14_project_real_frame"
+}

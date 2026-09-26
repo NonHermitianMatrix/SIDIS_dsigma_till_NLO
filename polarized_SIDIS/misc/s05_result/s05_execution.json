@@ -1,0 +1,51 @@
+{
+  "schema": "polarized-sidis-local-execution-v1",
+  "execution_backend": "local",
+  "run_id": "local_Hgg_scheme_20260924",
+  "passed": true,
+  "reason": "normal_exit",
+  "exit_code": 0,
+  "command": [
+    "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "Get[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s05_prepare_Hgg_scheme.wls\"]"
+  ],
+  "source_sha256": "cf3a14ace200d7312335e791ebac5ecc438287859717332d19132ddcdfa4d658",
+  "configuration_sha256": "cb3f7419887478da1dc62064d2d5dba6482bada3be8b1b0f867b0b253688d5b4",
+  "input_sha256": {
+    "common/s15_finalize_Hgg_coefficients.wls": "9acd04c11d691198b46a6c4bd971fe95586d853519281a05cc43cc3651b6a29f",
+    "common/s15_finalize_spin_coefficients_compact.wls": "8f2bb37f8b38701c669a08b9270d290aeb7292ab162f0b66820dea7b8eb3ddc9",
+    "common/s15_finalize_spin_coefficients.wls": "54838cdee6222b75e578a242a940bdb79bd1517d41e098cbd9ca18fd369463f8",
+    "common/s15_inputs.json": "c53657f2372259705f4c12b9a3ce9e9cdfa148f1c2d315e0a7aeb678fdd6a34c",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe",
+    "common/s11_Hgg_native_routes.wls": "1a6f84a95188a81e60b1543d7b514f9b5c35934a3c05a1ce792bef33005abe05",
+    "Hgg/s11_native_result/s11_result.wl": "a10efe2fbb104be6696c66a336be9f38f9d71ddb55d9274d2e9f42ade4a37a3e",
+    "Hgg/s11_native_result/s11_execution.json": "fd0f172b15f7c54904c4c2471e0d29186a1b26727a6eedf9f207307a20caef17",
+    "Hgg/s15_scheme_result/reference/before_dimensional_completion/s15_result.wl": "70486a70c6f464e8c095610513159a8994cb1ac009b5e18791d6e5be92eeb64e",
+    "Hgg/s15_scheme_result/reference/before_dimensional_completion/s15_execution.json": "5f54f56ca8a062a6d4d76f4ecd1febc66a2c00db2f1ee4344e2a5ac1112b0c22",
+    "common/s15_result/reference/s54_factorization_contract.wls": "21fc30cc2cfd4386457dc7ab7ce1b1d22b4456460e4c0bbdc86dfbb446c23f6c",
+    "common/s11_collinear_spin_convolutions.wls": "4fa3afa28525d57a63c8aea1dee8a4825d761b504f0cd8192837360ec5b531c6",
+    "common/s14_result/reference/s20_final_hats.wl": "c56f0f20deca9c2100218304eadbfdecb139826c6d36dd2e06bf31b6895a36fa",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de"
+  },
+  "result_sha256": {
+    "misc/s05_result/s05_result.wl": "a47e0fbc33473901b810ab7c548f140802acc92a92650dd7e88e83ec0d6b10a8",
+    "misc/s05_result/s05_checks.json": "d29611fdaa15a339ade8b24b818808b7c331b8304407a4bee5c2f44917fcad75"
+  },
+  "wall_seconds": 8.012011696933769,
+  "peak_observed_rss_bytes": 335728640,
+  "limits": {
+    "wall_seconds": 600,
+    "address_space_bytes": 12884901888,
+    "rss_bytes": 8589934592,
+    "minimum_available_ram_bytes": 4294967296,
+    "minimum_free_disk_bytes": 4294967296,
+    "output_bytes": 33554432,
+    "file_bytes": 16777216
+  },
+  "completed_utc": "2026-09-24T17:15:52.218172+00:00"
+}

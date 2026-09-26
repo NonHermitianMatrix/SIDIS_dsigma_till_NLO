@@ -1,0 +1,48 @@
+{
+  "child_maxrss_bytes": 405561344,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "$HistoryLength=0;root=Directory[];checks=<||>;gate[n_,v_]:=If[TrueQ[v],AssociateTo[checks,n->True],Print[\"FAIL: \",n];Quit[1]];\nPrependTo[$Path,\"/u/home/r/rushil/.Mathematica/Applications\"];$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\nsrc=Import[FileNameJoin[{root,\"common\",\"s08_resume_Hqg_polynomial_maps.wls\"}],\"Text\"];beg=StringPosition[src,\"\\nnumericOuterFactor[expression_]\"];end=StringPosition[src,\"\\ninstallNumericPhase[]\"];code=StringTake[src,{First[First[beg]],First[First[end]]-1}];gate[\"actual helper syntax\",SyntaxQ[code]];ToExpression[code,InputForm];\nrecord=Get[FileNameJoin[{root,\"Hqg\",\"s08_mapping_inputs_result\",\"s08_component_0028.wl\"}]];expr=record[\"Expression\"];fs=If[Head[expr]===Times,List@@expr,{expr}];ns=Select[fs,NumberQ];rs=Select[fs,!NumberQ[#]&];split=numericOuterFactor[expr];\nout=<|\"expression_head\"->ToString[Head[expr],InputForm],\"factor_count\"->Length[fs],\"factors\"->Map[<|\"head\"->ToString[Head[#],InputForm],\"number\"->NumberQ[#],\"bytes\"->ByteCount[#],\"small_full_form\"->If[ByteCount[#]<512,ToString[FullForm[#],InputForm],\"large\"]|>&,fs],\"selected_numbers\"->ToString[ns,InputForm],\"rest_heads\"->(ToString[Head[#],InputForm]&/@rs),\"real_free\"->FreeQ[ns,_Real],\"split_phase\"->ToString[First[split],InputForm],\"split_core_head\"->ToString[Head[Last[split]],InputForm],\"definitions\"->ToString[DownValues[numericOuterFactor],InputForm],\"checks\"->checks|>;\ndir=FileNameJoin[{root,\"Hqg\",\"s08_numeric_phase_interface_result\"}];If[!DirectoryQ[dir],CreateDirectory[dir]];Export[FileNameJoin[{dir,\"s08_result.json\"}],out,\"RawJSON\"];Print[InputForm[out]];Print[\"PASS: s08_numeric_phase_interface\"];Quit[0];"
+  ],
+  "completed_utc": "2026-09-23T02:45:46.750628+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      4294967296,
+      4294967296
+    ]
+  },
+  "job_configuration_sha256": "608693c31fdadad000e30d9d82115fc3a577b1ce9a96328ebc655ef4f1477fcb",
+  "job_id": "14874222",
+  "node": "n7131",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 147456,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqg/s08_numeric_phase_interface_result/s08_result.json": "e454fd83615e8955b00b2637718d285160698e0a778b47fe09410d2e4ee8f991"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqg/s08_mapping_inputs_result/s08_component_0028.wl": "505076f1442be93d3198e2611f544766cbbc13cf62f139169e03fc7113b96fd6",
+    "Hqg/s08_mapping_inputs_result/s08_pending_execution.json": "6cfd75e101db3cd85a6b85a1ddecd90baa06567cb0bef95bb69434210eb93923",
+    "common/s08_resume_Hqg_polynomial_maps.wls": "aec949241db3f31826f49931f48b825415200ea88d938fa23684e6a1fbcfe4ed"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 62.075249693123624
+}

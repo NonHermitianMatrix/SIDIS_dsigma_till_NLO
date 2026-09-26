@@ -1,0 +1,122 @@
+{
+  "base": "common/s12_assemble_real_spin.wls",
+  "base_sha256": "ca3777035d3d220b3fb8fcddb8131348f0d7c97f8fd9b8d54703337c93daa243",
+  "driver": "common/s12_assemble_real_factored_series.wls",
+  "driver_sha256": "7bbecbad4109fd3a2cef0f1d69aeaf8e6050c488427327e941bcaa096be0b44f",
+  "base_changes": [
+    {
+      "before": "gate[\"compute allocation\",StringQ[Environment[\"JOB_ID\"]]&&!StringStartsQ[$MachineName,\"login\"]];\ngate[\"isolated runtime\",StringStartsQ[$UserBaseDirectory,root<>\"/\"]];",
+      "after": "gate[\"authorized local assembly\",Environment[\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\"]===\"1\"&&$VersionNumber===15.];",
+      "count": 1
+    },
+    {
+      "before": "mapPath=FileNameJoin[{root,channel,\"s08_result\",\"s08_result.wl\"}];",
+      "after": "mapPath=FileNameJoin[{root,\"misc\",\"s10_result\",\"s10_result.wl\"}];",
+      "count": 1
+    },
+    {
+      "before": "inputPaths=Join[{configPath,referencePath,mapPath,libraryPath},",
+      "after": "inputPaths=Join[{configPath,referencePath,mapPath,libraryPath,localAssemblySource,localAssemblyConfigPath,\n FileNameJoin[{root,\"misc\",\"s10_result\",\"s10_execution.json\"}]},",
+      "count": 1
+    },
+    {
+      "before": "cache=FileNameJoin[{root,\"cache\",\"s12\",channel,IntegerString[inputHash,16]}];",
+      "after": "cache=FileNameJoin[{root,\"misc\",\"s11_work\",\"integrated\",IntegerString[inputHash,16]}];",
+      "count": 1
+    },
+    {
+      "before": "slots=Quiet[Check[ToExpression[Environment[\"NSLOTS\"]],1]];",
+      "after": "slots=2;",
+      "count": 1
+    },
+    {
+      "before": "\"/u/local/apps/mathematica/13.1/Executables/WolframKernel\"",
+      "after": "\"/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel\"",
+      "count": 1
+    },
+    {
+      "before": "Min[4,slots]",
+      "after": "Min[2,slots]",
+      "count": 1
+    },
+    {
+      "before": "workers=Length[Kernels[]];",
+      "after": "workers=Length[Kernels[]];\ngate[\"bounded local assembly workers\",0<=workers<=2];\nIf[workers>0,gate[\"local assembly worker runtime\",And@@(#===$Version&/@ParallelEvaluate[$Version])]];",
+      "count": 1
+    },
+    {
+      "before": "resultDir=FileNameJoin[{root,channel,\"s12_result\"}];",
+      "after": "resultDir=FileNameJoin[{root,\"misc\",\"s11_result\"}];",
+      "count": 1
+    },
+    {
+      "before": "FileNameJoin[{resultDir,\"s12_result.wl\"}]",
+      "after": "FileNameJoin[{resultDir,\"s11_result.wl\"}]",
+      "count": 1
+    },
+    {
+      "before": "FileNameJoin[{resultDir,\"s12_checks.json\"}]",
+      "after": "FileNameJoin[{resultDir,\"s11_checks.json\"}]",
+      "count": 1
+    },
+    {
+      "before": "Print[\"PASS: s12_assemble_real_spin\"];Quit[0];",
+      "after": "Print[\"PASS: local Hgg real distributions\"];Quit[0];",
+      "count": 1
+    },
+    {
+      "before": "put[value_,file_] := (Put[value,file<>\".tmp\"];RenameFile[file<>\".tmp\",file,OverwriteTarget->True]);",
+      "after": "put[value_,file_] := Module[{serialized},\n serialized=\"Uncompress[\"<>ToString[bounded[Compress[value],\"native assembly compression\"],InputForm]<>\"]\\n\";\n gate[\"bounded compressed assembly file\",StringLength[serialized]<128*1024^2];\n Export[file<>\".tmp\",serialized,\"Text\"];\n gate[\"exact native assembly reload\",bounded[Get[file<>\".tmp\"]===value,\"native assembly reload\"]];\n RenameFile[file<>\".tmp\",file,OverwriteTarget->True]];",
+      "count": 1
+    }
+  ],
+  "driver_changes": [
+    {
+      "before": "referenceSeriesText = Import[referenceSeriesBase, \"Text\"];",
+      "after": "referenceSeriesText = localAssemblyBase[Import[referenceSeriesBase, \"Text\"]];",
+      "count": 1
+    },
+    {
+      "before": "ToExpression[referenceSeriesPrefix, InputForm];",
+      "after": "ToExpression[referenceSeriesPrefix, InputForm];\nlocalAssemblyImportedVersions=mapped[\"ImportedNativeVersions\"];\ngate[\"actual local master-coefficient runtime\",mapped[\"NativeVersions\"]==={$Version,$FeynCalcVersion}&&\n Last[localAssemblyImportedVersions]===$FeynCalcVersion];\nlocalAssemblyReceipt=Import[FileNameJoin[{root,\"misc\",\"s10_result\",\"s10_execution.json\"}],\"RawJSON\"];\ngate[\"accepted local master-coefficient receipt\",TrueQ[localAssemblyReceipt[\"passed\"]]&&\n localAssemblyReceipt[\"execution_backend\"]===\"local\"&&\n localAssemblyReceipt[\"result_sha256\"][\"misc/s10_result/s10_result.wl\"]===IntegerString[FileHash[mapPath,\"SHA256\"],16,64]];",
+      "count": 1
+    },
+    {
+      "before": "referenceSeriesParent[\"NativeVersions\"] === {$Version, $FeynCalcVersion}",
+      "after": "referenceSeriesParent[\"NativeVersions\"] === localAssemblyImportedVersions",
+      "count": 1
+    },
+    {
+      "before": "recoilProof[\"NativeVersions\"] === {$Version,$FeynCalcVersion}",
+      "after": "recoilProof[\"NativeVersions\"] === localAssemblyImportedVersions",
+      "count": 1
+    },
+    {
+      "before": "referenceSeriesStudyDirectory = FileNameJoin[{root, channel, \"s12_factored_series_result\"}];",
+      "after": "referenceSeriesStudyDirectory = FileNameJoin[{root, \"misc\", \"s11_result\", \"own_reference\"}];",
+      "count": 1
+    },
+    {
+      "before": "factoredControlRoot=FileNameJoin[{root,\"cache\",\"s12_factored_controls\",channel,IntegerString[factoredControlBinding,16]}];",
+      "after": "factoredControlRoot=FileNameJoin[{root,\"misc\",\"s11_work\",\"controls\",IntegerString[factoredControlBinding,16]}];",
+      "count": 1
+    },
+    {
+      "before": "referenceSeriesOutput = \"put[result,FileNameJoin[{resultDir,\\\"s12_result.wl\\\"}]];\";",
+      "after": "referenceSeriesOutput = \"put[result,FileNameJoin[{resultDir,\\\"s11_result.wl\\\"}]];\";",
+      "count": 1
+    },
+    {
+      "before": "ToExpression[referenceSeriesRunTail, InputForm];",
+      "after": "localAssemblyProvenance=\"AssociateTo[result,<|\\\"ExecutionBackend\\\"->\\\"local\\\",\\\"NativeVersions\\\"->{$Version,$FeynCalcVersion},\\\"ImportedNativeVersions\\\"->localAssemblyImportedVersions,\\\"LocalDispatchSourceHash\\\"->FileHash[localAssemblySource,\\\"SHA256\\\"],\\\"LocalConfigurationHash\\\"->FileHash[localAssemblyConfigPath,\\\"SHA256\\\"]|>];\\n\";\ngate[\"unique local assembly export\",StringCount[referenceSeriesRunTail,referenceSeriesOutput]===1];\nlocalAssemblyRunTail=StringReplace[referenceSeriesRunTail,referenceSeriesOutput->localAssemblyProvenance<>referenceSeriesOutput];\ngate[\"unchanged complete integration tail after provenance\",SyntaxQ[localAssemblyRunTail]&&\n StringReplace[localAssemblyRunTail,localAssemblyProvenance<>referenceSeriesOutput->referenceSeriesOutput]===referenceSeriesRunTail];\nToExpression[localAssemblyRunTail, InputForm];",
+      "count": 1
+    },
+    {
+      "before": "$FeynCalcStartupMessages = False; Get[\"FeynCalc`\"];",
+      "after": "Null;",
+      "count": 1
+    }
+  ],
+  "prefix": "(* Local runtime and bounded storage for the unchanged reference real assembly. *)\n$HistoryLength=0;\n$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\nlocalAssemblyRoot=DirectoryName[DirectoryName[ExpandFileName[$InputFileName]]];SetDirectory[localAssemblyRoot];\nlocalAssemblySource=FileNameJoin[{localAssemblyRoot,\"misc\",\"s11_assemble_Hgg_real.wls\"}];\nlocalAssemblyConfigPath=FileNameJoin[{localAssemblyRoot,\"misc\",\"s11_inputs.json\"}];\nlocalAssemblyConfig=Import[localAssemblyConfigPath,\"RawJSON\"];\nlocalAssemblyRequire[n_,x_]:=If[!TrueQ[x],Print[\"FAIL: \",n];Quit[1]];\nlocalAssemblyRequire[\"bound complete local assembly source\",SyntaxQ[ReadString[localAssemblySource]]&&\n IntegerString[FileHash[localAssemblySource,\"SHA256\"],16,64]===localAssemblyConfig[\"source_sha256\"]];\nKeyValueMap[Function[{p,h},localAssemblyRequire[\"pinned assembly input \"<>p,\n IntegerString[FileHash[FileNameJoin[{localAssemblyRoot,p}],\"SHA256\"],16,64]===h]],localAssemblyConfig[\"input_sha256\"]];\nSetEnvironment[\"POLARIZED_SIDIS_CHANNEL\"->\"Hgg\"];\nlocalAssemblyBase[text_]:=Module[{edits,changed},edits={\"gate[\\\"compute allocation\\\",StringQ[Environment[\\\"JOB_ID\\\"]]&&!StringStartsQ[$MachineName,\\\"login\\\"]];\\ngate[\\\"isolated runtime\\\",StringStartsQ[$UserBaseDirectory,root<>\\\"/\\\"]];\"->\"gate[\\\"authorized local assembly\\\",Environment[\\\"POLARIZED_SIDIS_LOCAL_AUTHORIZED\\\"]===\\\"1\\\"&&$VersionNumber===15.];\",\n\"mapPath=FileNameJoin[{root,channel,\\\"s08_result\\\",\\\"s08_result.wl\\\"}];\"->\"mapPath=FileNameJoin[{root,\\\"misc\\\",\\\"s10_result\\\",\\\"s10_result.wl\\\"}];\",\n\"inputPaths=Join[{configPath,referencePath,mapPath,libraryPath},\"->\"inputPaths=Join[{configPath,referencePath,mapPath,libraryPath,localAssemblySource,localAssemblyConfigPath,\\n FileNameJoin[{root,\\\"misc\\\",\\\"s10_result\\\",\\\"s10_execution.json\\\"}]},\",\n\"cache=FileNameJoin[{root,\\\"cache\\\",\\\"s12\\\",channel,IntegerString[inputHash,16]}];\"->\"cache=FileNameJoin[{root,\\\"misc\\\",\\\"s11_work\\\",\\\"integrated\\\",IntegerString[inputHash,16]}];\",\n\"slots=Quiet[Check[ToExpression[Environment[\\\"NSLOTS\\\"]],1]];\"->\"slots=2;\",\n\"\\\"/u/local/apps/mathematica/13.1/Executables/WolframKernel\\\"\"->\"\\\"/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel\\\"\",\n\"Min[4,slots]\"->\"Min[2,slots]\",\n\"workers=Length[Kernels[]];\"->\"workers=Length[Kernels[]];\\ngate[\\\"bounded local assembly workers\\\",0<=workers<=2];\\nIf[workers>0,gate[\\\"local assembly worker runtime\\\",And@@(#===$Version&/@ParallelEvaluate[$Version])]];\",\n\"resultDir=FileNameJoin[{root,channel,\\\"s12_result\\\"}];\"->\"resultDir=FileNameJoin[{root,\\\"misc\\\",\\\"s11_result\\\"}];\",\n\"FileNameJoin[{resultDir,\\\"s12_result.wl\\\"}]\"->\"FileNameJoin[{resultDir,\\\"s11_result.wl\\\"}]\",\n\"FileNameJoin[{resultDir,\\\"s12_checks.json\\\"}]\"->\"FileNameJoin[{resultDir,\\\"s11_checks.json\\\"}]\",\n\"Print[\\\"PASS: s12_assemble_real_spin\\\"];Quit[0];\"->\"Print[\\\"PASS: local Hgg real distributions\\\"];Quit[0];\",\n\"put[value_,file_] := (Put[value,file<>\\\".tmp\\\"];RenameFile[file<>\\\".tmp\\\",file,OverwriteTarget->True]);\"->\"put[value_,file_] := Module[{serialized},\\n serialized=\\\"Uncompress[\\\"<>ToString[bounded[Compress[value],\\\"native assembly compression\\\"],InputForm]<>\\\"]\\\\n\\\";\\n gate[\\\"bounded compressed assembly file\\\",StringLength[serialized]<128*1024^2];\\n Export[file<>\\\".tmp\\\",serialized,\\\"Text\\\"];\\n gate[\\\"exact native assembly reload\\\",bounded[Get[file<>\\\".tmp\\\"]===value,\\\"native assembly reload\\\"]];\\n RenameFile[file<>\\\".tmp\\\",file,OverwriteTarget->True]];\"};\n localAssemblyRequire[\"unique reviewed local assembly interfaces\",And@@(StringCount[text,First[#]]===1&/@edits)];\n changed=StringReplace[text,edits];localAssemblyRequire[\"complete native local assembly syntax\",SyntaxQ[changed]];changed];\n",
+  "source_sha256": "090263590df1e9c581f5bf934a622069a8a263e35b6c7aadef648817b34a517e"
+}

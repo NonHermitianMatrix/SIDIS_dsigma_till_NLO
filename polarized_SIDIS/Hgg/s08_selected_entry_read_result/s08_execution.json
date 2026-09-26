@@ -1,0 +1,72 @@
+{
+  "child_maxrss_bytes": 15298187264,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s08_check_selected_entry_read.wls"
+  ],
+  "completed_utc": "2026-09-25T02:18:57.197971+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 21474836480
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      21474836480,
+      21474836480
+    ]
+  },
+  "job_configuration_sha256": "f3a5403286709f6d47b932bd07e4e869a37007b8223f1e13f51af6098b279ab9",
+  "job_id": "14907743",
+  "node": "n6107",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 13883125760,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hgg/s08_selected_entry_read_result/s08_checks.json": "2ba078ca0a2a07d1f6a16eef2fa1518d9d723621e3a9d719dbfdb92a6ac601fd",
+    "Hgg/s08_selected_entry_read_result/s08_result.wl": "0dc5449091ba123ec1ad00973f2cea3b9dd156bb7aa0b1013206b2881139ad85"
+  },
+  "reviewed_sha256": {
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hgg/s05_projected_components_result/Photon_4/s05_execution.json": "376c2d5ab250a46ff9f529860599b2c10627a57abec41774022efb56050fd300",
+    "Hgg/s05_projected_components_result/Photon_4/s05_payload_manifest.json": "ba7677b2cff9d416b7257e46d5f116d41cab1855647be59a4d1ddf1395f203cf",
+    "Hgg/s05_projected_components_result/Photon_4/s05_result.wl": "1b26350dc41d79bedf7e9b1fe1fd1079cdc4c209880a615c8188aa5c6e4aad9e",
+    "Hgg/s05_result/s05_metadata.wl": "f858b207d449632d03f284a4706a9998c0cb1ee5b2a2b7064ca027a0e41c20d7",
+    "Hgg/s05_result/s05_result.wl": "e393caa6fa12e05403700794e3c74b929839c70e979fd29ef23d3af4edf5e452",
+    "Hgg/s08_mapping_inputs_result/s08_component_0008.wl": "23bac881805e9ea0da7b96af42e16ec67e94e43c22363bfc9c9b1bf89e03e30e",
+    "Hgg/s08_mapping_inputs_result/s08_recovery_execution.json": "236e32ff981c08d5024d09ff4cf2bf9fb65f1d1fd4e28aea58a5ac98fe8a4189",
+    "Hgg/s08_response_read_result/s08_execution.json": "61b8d91e6216b0e5f22d4f92a1f45a929165c7375aa9c6ad5faeaa604d7a3fd7",
+    "Hgg/s08_response_read_result/s08_result.wl": "26833dd3d7306c70dde337fc1356f9a341b0da494264aa1e55ebb0cc1e318abb",
+    "Hqqprime/s05_result/s05_result.wl": "07679643127071c38d0522479236858ff7fd1f4e770d22d65572072f56e03d9f",
+    "common/s05_project_Hgg_piecewise_storage.wls": "fc9e17ee0bb7d4cfa7ae517dfcc166c1c273dac1177c8d21d153cc6bfdf1acaa",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s08_check_Hgg_response_read.wls": "e9a066e9e47ed9e82c06a95bc39479e177b1c60a66db4edf6e8d074d50b33170",
+    "common/s08_check_selected_entry_read.wls": "c05455bfbfda6dc1270da95a6278c74bc449cd84bb4219ae81221f96dbad8379",
+    "common/s08_map_Hgg_component_inputs.wls": "f33a42480fefbc830a0b99bb0d9c957d490ee7dd1a7c278bd26aac221fabf7ce",
+    "misc/s06_map_Hgg_local.wls": "5c5df1555ef2bd27cddf563f945ce9babeacfeb0b99ad7e6a6140801745fe8d7"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "storage_monitor": {
+    "error": null,
+    "measurement": {
+      "free_bytes": 715509228961792,
+      "scratch_bytes": 11516993856
+    },
+    "measurement_age_seconds": 107.29152650386095,
+    "scan_elapsed_seconds": 45.178566575050354,
+    "scan_pending": true
+  },
+  "wall_seconds": 768.4595951661468
+}

@@ -1,0 +1,29 @@
+{
+  "adopted_for_production": false,
+  "command": [
+    "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "If[TrueQ[SyntaxQ[ReadString[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s17_compare_Hgg_exact_polynomials.wls\"]]],Get[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s17_compare_Hgg_exact_polynomials.wls\"],Quit[1]]"
+  ],
+  "completed_utc": "2026-09-26T04:06:41.636215+00:00",
+  "execution_backend": "local",
+  "exit_code": 0,
+  "input_sha256": {
+    "misc/s08_result/s08_result.wl": "17ebe5990f1315ac29a5f85abf6a675e6a9a693567cc58bf4b66e8c9dbc2fc3b",
+    "misc/s09_result/s09_reduction.wl": "e526df0a852f856c01088e649e5e0dc02f214a4b2877835a9792a501aa1d62ab",
+    "misc/s10_inputs.json": "586257c4f4cb78063ad3362996039b82b925498b8519b3f860110f77f853718a",
+    "misc/s10_reduce_Hgg_coefficients.wls": "0e60864de5711c16810f66e8ddb0d26adb6b2cf66077c324352d7ded6f52f60c",
+    "misc/s16_compare_Hgg_reference_sum.wls": "8a02d9449c8f940241011ee7e2afd83e3261906504ac1cceee7882e2822c0b6a",
+    "misc/s18_sum_exact_polynomials.py": "5a8af32c6fb25426ff5fc3dcf4e4bbd65fafa2f47815d2dd705d31dfdf7a53a7"
+  },
+  "peak_tree_rss_bytes": 2167119872,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "misc/s17_result/s17_result.wl": "aaf79a1c86d209e7fb7588825baec86ef7fad7b9bb1242f7a54d18daf0afb32f"
+  },
+  "schema": "polarized-sidis-local-comparison-execution-v1",
+  "source_sha256": "80620855756a4c5439f617371dc765e470e83f3ae09598dc921d7c26d8587cb2",
+  "wall_seconds": 210.2791768449988
+}

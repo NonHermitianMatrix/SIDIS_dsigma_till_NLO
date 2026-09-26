@@ -1,0 +1,69 @@
+(* Preserve the accepted finite assembly and certify factored pole residuals. *)
+$HistoryLength=0;
+poleRunRoot=Directory[];
+poleRunSource=FileNameJoin[{poleRunRoot,"common","s14_assemble_finite_refined.wls"}];
+polePhaseSource=FileNameJoin[{poleRunRoot,"common","s14_assemble_finite_phase_series.wls"}];
+If[IntegerString[FileHash[polePhaseSource,"SHA256"],16,64]=!=
+  "313f46987aa90ae14205aabec53154b72a96d1cceb5be5dcbca3d7ce770afcf2",Quit[1]];
+polePhaseText=Import[polePhaseSource,"Text"];
+If[StringCount[polePhaseText,"\nphaseRunTail="]=!=1||
+  !SyntaxQ[Import[poleRunSource,"Text"]],Quit[1]];
+polePhasePrefix=First[StringSplit[polePhaseText,"\nphaseRunTail="]];
+If[!SyntaxQ[polePhasePrefix],Quit[1]];
+ToExpression[polePhasePrefix,InputForm];
+poleRunProofPath=FileNameJoin[{root,channel,"s14_pole_factorization_result","s14_result.wl"}];
+poleRunReceipt=Import[FileNameJoin[{root,channel,"s14_pole_factorization_result","s14_execution.json"}],"RawJSON"];
+gate["accepted own pole-refinement execution",TrueQ[poleRunReceipt["passed"]]&&
+  poleRunReceipt["result_sha256"][channel<>"/s14_pole_factorization_result/s14_result.wl"]===
+    IntegerString[FileHash[poleRunProofPath,"SHA256"],16,64]];
+poleRunProof=Get[poleRunProofPath];
+gate["accepted saved and original input-sum poles",poleRunProof["Schema"]===
+  "polarized-sidis-assembly-pole-refinement-v1"&&TrueQ[poleRunProof["Accepted"]]&&
+  And@@Values[poleRunProof["Checks"]]&&Length[poleRunProof["Rows"]]>0&&
+  AllTrue[poleRunProof["Rows"],#["Refined"]===0&&#["InputSumRefined"]===0&]&&
+  AllTrue[poleRunProof["ControlRows"],#["Refined"]===0&]];
+gate["own exact pole-refinement inputs",channel===poleRunProof["Channel"]&&
+  inputHash===poleRunProof["InputHash"]&&inputHashes===poleRunProof["InputHashes"]&&
+  sourceHash===poleRunProof["BaselineSourceHash"]&&
+  poleRunProof["NativeVersions"]==={$Version,$FeynCalcVersion}];
+gate["reviewed pole-refinement source",IntegerString[poleRunProof["SourceHash"],16,64]===
+  "adfb5f8c877b57b191a08514488580907bc221008dab61e24ebee6d196cee14f"&&
+  poleRunProof["SourceHash"]===FileHash[FileNameJoin[{root,"common","s14_check_pole_factorization.wls"}],"SHA256"]&&
+  poleRunProof["ConfigHash"]===FileHash[FileNameJoin[{root,"common","s14_pole_factorization_inputs.json"}],"SHA256"]];
+poleRunLabel=poleRunProof["FailedCheckpoint"]["Label"];
+poleRunConditions=(If[Last[poleRunLabel]==="Regular",physical,softPhysical]/.t->poleRunLabel[[2]]omega-s)&&
+  If[poleRunLabel[[2]]===0,True,omega>0]&&flavorDomain;
+gate["unchanged exact branch conditions",poleRunConditions===poleRunProof["PhysicalConditions"]];
+gate["unchanged original finite extraction and zero predicate",
+  DownValues[finitePart]===poleRunProof["OriginalFinitePartDefinitions"]&&
+  DownValues[zero]===poleRunProof["OriginalZeroDefinitions"]];
+DownValues[refineUVResidual]=poleRunProof["RefinementDefinitions"];
+DownValues[refineAssemblyPole]=poleRunProof["Definitions"];
+gate["exact executed factor-certificate definitions installed",
+  DownValues[refineUVResidual]===poleRunProof["RefinementDefinitions"]&&
+  DownValues[refineAssemblyPole]===poleRunProof["Definitions"]];
+poleFactorCertificates=<||>;
+poleOriginalFinite=DownValues[finitePart];
+gate["one original finite pole predicate",Count[poleOriginalFinite,zero,Infinity,Heads->True]===1];
+DownValues[finitePart]=poleOriginalFinite/.zero->refinedPoleZero;
+gate["exact reconstruction of original finite extraction",
+  (DownValues[finitePart]/.refinedPoleZero->zero)===poleOriginalFinite];
+refinedPoleZero[value_,conditions_] := refineAssemblyPole[value,conditions]===0;
+poleFinalPut[value_,path_] := Module[{serialized,temporary=path<>".tmp"},
+  serialized="Uncompress["<>ToString[bounded[Compress[value],"finite native compression"],InputForm]<>"]\n";
+  gate["bounded complete finite result file",StringLength[serialized]<128*1024^2];
+  Export[temporary,serialized,"Text"];
+  gate["complete finite result exact native reload",Get[temporary]===value];
+  RenameFile[temporary,path,OverwriteTarget->True]];
+polePhaseTail="phaseRunTail="<>Last[StringSplit[polePhaseText,"\nphaseRunTail="]];
+polePhaseExecute="ToExpression[phaseRunTail,InputForm];";
+gate["unique original phase assembly execution",StringCount[polePhaseTail,polePhaseExecute]===1];
+polePhaseTail=StringReplace[polePhaseTail,polePhaseExecute->"Null;"];
+gate["retained phase adapter syntax",SyntaxQ[polePhaseTail]];
+ToExpression[polePhaseTail,InputForm];
+gate["unique phase-adapted final export",StringCount[phaseRunTail,phaseRunExport]===1];
+phaseRunTail=StringReplace[phaseRunTail,phaseRunExport->
+  "AssociateTo[result,{\"PhaseDispatchSourceHash\"->FileHash[phaseRunSource,\"SHA256\"],\"DispatchSourceHash\"->FileHash[poleRunSource,\"SHA256\"],\"PoleRefinementHash\"->FileHash[poleRunProofPath,\"SHA256\"],\"PoleFactorCertificates\"->poleFactorCertificates}];poleFinalPut[result,FileNameJoin[{resultDir,\"s14_result.wl\"}]];"];
+gate["complete refined finite assembly syntax",SyntaxQ[phaseRunTail]];
+ToExpression[phaseRunTail,InputForm];
+

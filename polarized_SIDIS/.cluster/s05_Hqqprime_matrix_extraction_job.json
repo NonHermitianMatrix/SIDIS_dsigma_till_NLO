@@ -1,0 +1,68 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s05_spin_extraction_check.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s05_Hqqprime_matrix_extraction",
+    "POLARIZED_SIDIS_CHANNEL": "Hqqprime",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s05_Hqqprime_matrix_extraction"
+  },
+  "execution_result": "Hqqprime/s05_spin_extraction_result/s05_execution.json",
+  "expected_results": [
+    "Hqqprime/s05_spin_extraction_result/s05_result.wl",
+    "Hqqprime/s05_spin_extraction_result/s05_checks.json"
+  ],
+  "heartbeat": "cache/s05_Hqqprime_matrix_extraction_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 6900
+  },
+  "log": "cache/s05_Hqqprime_matrix_extraction.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "e9b2acaf5fb005d5c97791ab11ecf5ea4f0efcf4df8d41bdb3e2a4ce350a40aa",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "e34d22bd588e253ff7bd84975579bb6160cba57027dea3fe0ddeede715e8327a",
+    "Hqqprime/s01_result/reference/s01_result/s01_inputs/s02_result/kinematics.wl": "56772f691f3263b8695e090f26c367b6062d8864bfa41b0cf44eb142f89be0b9",
+    "Hqqprime/s05_compact_result/s05_result.wl": "9e1619465a68e8f7fe242421a237d77f9d0452722237124429816b0a4986081d",
+    "Hqqprime/s05_interface_result/s05_result.wl": "eed6f9e3bd8316c5e82ffa0c30abaef524729f639e2070e478ba5503b35ae5e3",
+    "Hqqprime/s05_result/reference/unpolarized_real.wl": "eac5dbc2bfc4d6eb4789345b23d72f194b07bfdcf417427b939cbf135723be4f",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_1_1.wl": "ac039a27849f1fb3edda3da5a43f86bb7d84d602681c4aa290f7bf6b72147263",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_1_2.wl": "4ad98a9eb8182a163cdd15ef0ec0ac1c77586504ae7e10f89b7940439220c3bd",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_1_3.wl": "6fc9255dd5ee6bbb6e8b0eb2e25fcb62918136a8cd6c66e58cf3e32b459f9a91",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_2_1.wl": "cf218d568cf39fd7810c807ef759ac58390eaa1bb6e68d5524ba5d251a93ef21",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_2_2.wl": "94cc4bd9ef57b6324806a341d124c47be339fc1520427e59dcd3f29e5d323c57",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_2_3.wl": "2ee536d92b16cf2ae2b59a3843bd87e1630fa183ad42fec5906e8e97084c7d3c",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_3_1.wl": "65b05cc8ae1bc975df55729376cbacdbdff4ba2a8ef913510aa984a27769a971",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_3_2.wl": "a6bce9d14609e83f007e12f19b11330074ce46c2ca1e13618e1d66e6c08b9a81",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Photon_3_3.wl": "81edd4076a30408683a2001540714c26142f1034210c53956cdaef3996cb9ac8",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Scalar_PgD.wl": "06489e68487e1594ed4858d76dd96e68031ee43e5cab852d9a6a934dbe9c048a",
+    "cache/s05/Hqqprime/18b347965f823f882898b5ab686a0df9e4da4713068f82b6694bb5c26caa9b01/Real_assembled_Scalar_PhotonWard.wl": "b04d7969d444417c2ec7f579ec80c94a9e919d4a54d7740a3ae4d3ce3df6d4d3",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s04_result/s04_result.wl": "970f0bfd74d9cb5838703d01d8ce3066ff4dc28367bad67c74076bbab6b7c0b3",
+    "common/s05_inputs.json": "53f304ad84bed1cb57963f53f39ce463b2065eec15a6eff32c16141cbb5a13d7",
+    "common/s05_result/reference/s05_real_spin_response_before_coefficient_reduction.wls": "376fd639b0624d1b0aab627969077213468cdd9811fd6b141960e7c831fa8a3a",
+    "common/s05_result/reference/s05_real_spin_response_before_compact_products.wls": "a57a34bb658c985202d47ccddd9a431c767c4d0cecf576eb8bb9817fa9972a37",
+    "common/s05_result/reference/s05_real_spin_response_before_complete_photon_projection.wls": "d34991466b6c4677600840ae1c837fab5879e2483932e778096134f8784c4d84",
+    "common/s05_result/reference/s05_real_spin_response_before_compressed_export.wls": "bc2ef4236aff147c1b1166c8ee774040746dcc915f416cf3d83ccdd3e5aabf69",
+    "common/s05_result/reference/s05_real_spin_response_before_coupling_inventory.wls": "e157ea02902f03c1109e0584afb4d50cef3d96cebcdc0a28b1cf7ce7ea8b8fac",
+    "common/s05_result/reference/s05_real_spin_response_before_projection.wls": "899cf6d588e4a2186c8e0312a7361c6c99796bd414ff948a2d4ceee98129967d",
+    "common/s05_result/reference/s05_real_spin_response_before_spin_extraction.wls": "f6ba07013100d854647bc3d1677f58ba2b7b0dd50fd0b0397366e16361873d33",
+    "common/s05_result/reference/s05_real_spin_response_before_sum_checkpoints.wls": "33c00fd1361a5655d5f5c0fed5a15986182e4bb2fad67fc91ed0ba93da394507",
+    "common/s05_result/reference/s05_real_spin_response_before_worker_initialization.wls": "336ac1a601cc637bc11f78c27c10d9c7c0290443568127e76154407a4e3b4b4f",
+    "common/s05_spin_extraction_check.wls": "7e5ec0d1d7f7061362478a9f79e2eaf9ad27fde4947e294abf7849514781e13d",
+    "common/s05_spin_extraction_inputs.json": "5ac676b3830283cb210c960dd760f3722cb754434ae9eb06e31d660a4b22666c"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s05_spin_extraction_check"
+}

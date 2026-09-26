@@ -1,0 +1,34 @@
+{
+  "job_configuration_sha256": "2adfacc937f72c59fdce75f19d4b9bf4e37be9352adcfecf457a4927888cc5f6",
+  "job_id": "14773409",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s02_basis_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s02",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:20:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s02_scheduler.log"
+  ],
+  "remote_root": "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "9f6e9c692595574ba72f599ef9ee40ab6971b267e2748772767c04bb9502862f",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "87f8e6569853ab998c595f1a329a0d9c05390eb624cea2fd91ac2b7881703953",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hqg/s01_result/reference/s01_result/s01_inputs/s04_result.wl": "8403c287ed130c5db601069eb71ad2d6a7b2b851662dea716441c472bc10eba9",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "0dc987fe060db67a8fa060945380760b0ceb788843882e760c0a79959852297a",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "393e8503576b3fdd557c40f0fe6cfab9dd31d956100f8091dd615d904ab70c8a",
+    "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "e34d22bd588e253ff7bd84975579bb6160cba57027dea3fe0ddeede715e8327a",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s01_result/s01_result.json": "6dfbc69810f96dfbc94c174a2c7d7201738c809428e37d9cf246665e809d8dfb",
+    "common/s02_define_spin_basis.wls": "5f5ba5135a3ad48a3d5f465c79e27987f3036768ead60d31a82e3f1c2bbdc74b"
+  }
+}

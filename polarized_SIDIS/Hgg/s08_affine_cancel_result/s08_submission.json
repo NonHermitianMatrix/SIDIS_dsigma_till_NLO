@@ -1,0 +1,25 @@
+{
+  "job_id": "14912644",
+  "config": ".cluster/s08_Hgg_affine_cancel_20260925_job.json",
+  "configuration_sha256": "38b603725a8113dbe934a3e9233ffaddbc388f1627bb7469274f878bf4b52da0",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_affine_cancel_20260925",
+    "-S",
+    "/bin/bash",
+    "-pe",
+    "shared",
+    "1",
+    "-l",
+    "h_rt=01:00:00,h_data=10G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_affine_cancel_20260925_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexport LC_ALL=C LANG=C\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_affine_cancel_20260925_job.json\n"
+}

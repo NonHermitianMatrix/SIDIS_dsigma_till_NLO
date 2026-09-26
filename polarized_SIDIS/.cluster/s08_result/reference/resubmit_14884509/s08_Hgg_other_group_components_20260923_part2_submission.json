@@ -1,0 +1,28 @@
+{
+  "channel": "Hgg",
+  "config": ".cluster/s08_Hgg_other_group_components_20260923_part2_job.json",
+  "config_sha256": "8aa0bc281a1831406885d279f491ccf9086c30f881f3076bd14bdd2431d24b3c",
+  "event": "SUBMITTED",
+  "job_id": "14883834",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_other_group_components_20260923_part2_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_other_group_components_20260923_part2",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=04:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_other_group_components_20260923_part2_scheduler.log",
+    "-pe",
+    "shared",
+    "8"
+  ],
+  "tag": "s08_Hgg_other_group_components_20260923_part2"
+}

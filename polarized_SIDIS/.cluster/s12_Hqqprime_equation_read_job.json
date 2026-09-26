@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "$HistoryLength=0;\nPrependTo[$Path,\"/u/home/r/rushil/.Mathematica/Applications\"];\n$FeynCalcStartupMessages=False;Get[\"FeynCalc`\"];\ngate[name_,test_]:=If[!TrueQ[test],Print[\"FAIL: \",name];Quit[1]];\nSetAttributes[bounded,HoldFirst];bounded[v_,label_]:=MemoryConstrained[TimeConstrained[v,180,Print[\"FAIL: \",label,\" time\"];Quit[1]],2*1024^3,Print[\"FAIL: \",label,\" memory\"];Quit[1]];\nmapped=bounded[Get[FileNameJoin[{Directory[],\"Hqqprime\",\"s08_result\",\"s08_result.wl\"}]],\"accepted map read\"];\ngate[\"accepted complete coefficient map\",TrueQ[mapped[\"MappingAccepted\"]]&&TrueQ[mapped[\"ReductionCoverageComplete\"]]&&And@@Values[mapped[\"Checks\"]]];\ncomponent=mapped[\"Components\"][[7]];\ncoefficients=Select[component[\"ReducedCoefficients\"],#=!=0&]/.mapped[\"TransverseSubstitution\"];\nmaster=First[Keys[coefficients]];c=coefficients[master];\nregions=Get[FileNameJoin[{Directory[],\"common\",\"s06_result\",\"reference\",\"s15_result.wl\"}]]/.mapped[\"ScalarConventionRules\"];\nvalue=regions[\"OrdinaryMasters\"][master];\nPrint[\"ACTUAL_COMPONENT=\",InputForm[KeyTake[component,{\"Sector\",\"Kind\",\"Index\"}]]];\nPrint[\"ACTUAL_MASTER=\",InputForm[master]];\nPrint[\"COEFFICIENT_BYTES=\",ByteCount[c]];\nnum=Numerator[c];den=Denominator[c];\ngate[\"numerator and denominator polynomial in D\",PolynomialQ[num,D]&&PolynomialQ[den,D]];\nPrint[\"ACTUAL_COEFFICIENT_DENOMINATOR=\",InputForm[den]];\nPrint[\"NUMERATOR_D_DEGREE=\",Exponent[num,D]];\nPrint[\"DENOMINATOR_D_DEGREE=\",Exponent[den,D]];\nPrint[\"DENOMINATOR_AT_D4=\",InputForm[den/.D->4]];\nnc=bounded[CoefficientList[num,D],\"numerator D coefficients\"];\ndc=bounded[CoefficientList[den,D],\"denominator D coefficients\"];\ngate[\"D coefficient reconstruction\",bounded[Expand[num-Sum[nc[[j]]D^(j-1),{j,Length[nc]}]]===0&&Expand[den-Sum[dc[[j]]D^(j-1),{j,Length[dc]}]]===0,\"D reconstruction\"]];\nPrint[\"NUMERATOR_D_COEFFICIENT_BYTES=\",ByteCount/@nc];\nPrint[\"DENOMINATOR_D_COEFFICIENTS=\",InputForm[dc]];\nPrint[\"MASTER_SERIES_METADATA=\",InputForm[Cases[value,q_SeriesData:>{q[[1]],q[[2]],q[[4]],q[[5]],q[[6]]},{0,Infinity}]]];\nPrint[\"ACTUAL_MASTER_VALUE=\",InputForm[value]];\nPrint[\"PASS: s12_read_integration_input\"];Quit[0];"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s12_Hqqprime_equation_read",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s12_Hqqprime_equation_read"
+  },
+  "execution_result": "cache/s12_Hqqprime_equation_read_execution.json",
+  "expected_results": [],
+  "heartbeat": "cache/s12_Hqqprime_equation_read_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 180,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 4294967296,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 270
+  },
+  "log": "cache/s12_Hqqprime_equation_read.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqqprime/s08_result/s08_result.wl": "f8149638ed8ae6c9da99119ac112537df7bb8e1593ee90340dca474e7ece5165",
+    "common/s06_result/reference/s15_result.wl": "82cb3ca0de4501b3c045d025e6b93f4228426c344023b2a727fc93d69615ef0b",
+    "common/s12_assemble_real_spin.wls": "ca3777035d3d220b3fb8fcddb8131348f0d7c97f8fd9b8d54703337c93daa243"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s12_read_integration_input"
+}

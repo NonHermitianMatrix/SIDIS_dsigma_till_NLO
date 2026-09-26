@@ -1,0 +1,48 @@
+(* Export the exact failed mapping inputs with the accepted response-only reader. *)
+$HistoryLength=0;root=Directory[];checks=<||>;
+source=FileNameJoin[{root,"common","s08_export_Hgg_blocked_equations.wls"}];
+gate[name_,test_]:=If[TrueQ[test],AssociateTo[checks,name->True];Print["PASS: ",name],Print["FAIL: ",name];Quit[1]];
+SetAttributes[readBound,HoldFirst];
+readBound[value_]:=MemoryConstrained[TimeConstrained[value,1200,gate["input export time bound",False]],16*1024^3,gate["input export memory bound",False]];
+gate["compute allocation",StringQ[Environment["JOB_ID"]]&&!StringStartsQ[$MachineName,"login"]&&StringStartsQ[$UserBaseDirectory,root<>"/"]];
+gate["complete source syntax",SyntaxQ[Import[source,"Text"]]];
+PrependTo[$Path,"/u/home/r/rushil/.Mathematica/Applications"];
+$FeynCalcStartupMessages=False;Get["FeynCalc`"];
+acceptedRead[relative_,receiptRelative_]:=Module[{path,receipt},
+ path=FileNameJoin[{root,relative}];receipt=Import[FileNameJoin[{root,receiptRelative}],"RawJSON"];
+ gate["accepted input "<>relative,TrueQ[receipt["passed"]]&&receipt["result_sha256"][relative]===IntegerString[FileHash[path,"SHA256"],16,64]];
+ readBound[Get[path]]];
+control=acceptedRead["Hgg/s08_mapping_inputs_result/s08_component_0008.wl","Hgg/s08_mapping_inputs_result/s08_recovery_execution.json"];
+gate["accepted coordinate conventions",control["Channel"]==="Hgg"&&control["Schema"]==="polarized-sidis-native-mapping-input-v1"&&control["NativeVersions"]==={$Version,FeynCalc`$FeynCalcVersion}&&And@@Values[control["Checks"]]];
+KeyValueMap[Function[{name,identity},gate["unchanged scientific input "<>name,FileHash[FileNameJoin[{root,name}],"SHA256"]===identity]],control["InputHashes"]];
+reader=acceptedRead["Hgg/s08_response_read_result/s08_result.wl","Hgg/s08_response_read_result/s08_execution.json"];
+gate["accepted identical response reader",reader["Schema"]==="polarized-sidis-response-only-native-read-v1"&&reader["Channel"]==="Hgg"&&TrueQ[reader["OwnAcceptedComparison"]]&&And@@Values[reader["Checks"]]&&reader["NativeVersions"]==={$Version,FeynCalc`$FeynCalcVersion}&&reader["SourceHash"]===FileHash[FileNameJoin[{root,"common","s08_check_Hgg_response_read.wls"}],"SHA256"]&&reader["StorageSourceHash"]===FileHash[FileNameJoin[{root,"common","s05_project_Hgg_piecewise_storage.wls"}],"SHA256"]];
+DownValues[responseOnlyRead]=reader["ReaderDefinitions"];
+gate["reader definitions retained exactly",DownValues[responseOnlyRead]===reader["ReaderDefinitions"]];
+metadata=acceptedRead["Hgg/s05_result/s05_metadata.wl","Hgg/s05_result/s05_execution.json"];
+gate["accepted task metadata",metadata["Channel"]==="Hgg"&&And@@Values[metadata["Checks"]]];
+selection=Environment["POLARIZED_SIDIS_INPUT_COMPONENTS"];
+gate["explicit component selection",StringQ[selection]&&And@@(StringMatchQ[#,DigitCharacter..]&/@StringSplit[selection,","])&&StringLength[selection]>0];
+indices=FromDigits/@StringSplit[selection,","];
+gate["distinct existing input indices",indices=!={}&&DuplicateFreeQ[indices]&&And@@(1<=#<=Length[metadata["MappingTaskMetadata"]]&/@indices)];
+directory=FileNameJoin[{root,"Hgg","s08_blocked_equations_result"}];If[!DirectoryQ[directory],CreateDirectory[directory]];
+files=<||>;measurements={};loaded=None;
+Do[Module[{row,task,relative,path,receipt,value,text,out,seconds},
+ row=metadata["MappingTaskSources"][[index]];task=metadata["MappingTaskMetadata"][[index]];
+ relative=row["Payload"]["File"];path=FileNameJoin[{root,relative}];
+ receipt=Import[FileNameJoin[{DirectoryName[path],"s05_execution.json"}],"RawJSON"];
+ gate["exact accepted input payload "<>ToString[index],row["Field"]==="Response"&&TrueQ[receipt["passed"]]&&FileHash[path,"SHA256"]===row["Payload"]["Hash"]&&receipt["result_sha256"][relative]===IntegerString[FileHash[path,"SHA256"],16,64]];
+ If[loaded=!=relative,Clear[packet];ClearSystemCache[];packet=readBound[responseOnlyRead[path,FileHash[path,"SHA256"]]];loaded=relative];
+ gate["complete native response contract "<>ToString[index],packet["Channel"]==="Hgg"&&packet["Schema"]==="polarized-sidis-complete-photon-spin-component-v1"&&packet["NativeVersions"]==={$Version,FeynCalc`$FeynCalcVersion}&&And@@Values[packet["Checks"]]&&task["Kind"]==="ExtendedResponse"&&task["Index"]===Prepend[row["Index"],packet["Component"]]];
+ {seconds,value}=AbsoluteTiming[readBound[Extract[packet["Response"],row["Index"]]/.control["CoordinateRules"]]];
+ out=FileNameJoin[{directory,"s08_component_"<>IntegerString[index,10,4]<>"_equation.wl"}];
+ text=readBound[ToString[value,InputForm,PageWidth->120]];
+ gate["bounded readable equation "<>ToString[index],StringLength[text]<128*1024^2];
+ Export[out<>".tmp",text,"Text"];Clear[text];
+ gate["entire saved input unchanged "<>ToString[index],readBound[Get[out<>".tmp"]===value]];
+ RenameFile[out<>".tmp",out,OverwriteTarget->True];
+ AssociateTo[files,StringDrop[out,StringLength[root]+1]->IntegerString[FileHash[out,"SHA256"],16,64]];
+ AppendTo[measurements,<|"Component"->index,"Task"->ToString[task,InputForm],"Payload"->relative,"PayloadSHA256"->IntegerString[FileHash[path,"SHA256"],16,64],"ExpressionBytes"->ByteCount[value],"FileBytes"->FileByteCount[out],"CoordinateReadSeconds"->seconds|>];
+ Print["EXPORTED_BLOCKED_EQUATION ",InputForm[Last[measurements]]];Clear[value];ClearSystemCache[]],{index,indices}];
+Export[FileNameJoin[{directory,"s08_checks.json"}],<|"checks"->checks,"files"->files,"measurements"->measurements,"source_sha256"->IntegerString[FileHash[source,"SHA256"],16,64],"coordinate_input_sha256"->IntegerString[FileHash[FileNameJoin[{root,"Hgg","s08_mapping_inputs_result","s08_component_0008.wl"}],"SHA256"],16,64],"peak_kernel_memory_bytes"->MaxMemoryUsed[],"job_id"->Environment["JOB_ID"],"finite_nlo_fhats_computed"->False|>,"RawJSON"];
+Print["PASS: s08_export_Hgg_blocked_equations"];Quit[0];

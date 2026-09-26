@@ -1,0 +1,25 @@
+{
+  "channel": "Hqqbar",
+  "config": ".cluster/s12_Hqqbar_recoil_factorization_native_job.json",
+  "config_sha256": "5ef9f63b621485c06d9c608f349f43f869c0a24c8193d0a7d4f886ffe755b107",
+  "event": "SUBMITTED",
+  "job_id": "14804751",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s12_Hqqbar_recoil_factorization_native_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s12_Hqqbar_recoil_factorization_native",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s12_Hqqbar_recoil_factorization_native_scheduler.log"
+  ],
+  "tag": "s12_Hqqbar_recoil_factorization_native"
+}

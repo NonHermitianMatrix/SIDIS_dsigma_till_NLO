@@ -1,0 +1,44 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s02_define_spin_basis.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_userbase",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_userbase"
+  },
+  "execution_result": "common/s02_result/s02_execution.json",
+  "expected_results": [
+    "common/s02_result/s02_result.wl",
+    "common/s02_result/s02_checks.json"
+  ],
+  "heartbeat": "cache/s02_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 240,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 8589934592,
+    "poll_seconds": 5,
+    "scratch_bytes": 2147483648,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 900
+  },
+  "log": "cache/s02_run.log",
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "9f6e9c692595574ba72f599ef9ee40ab6971b267e2748772767c04bb9502862f",
+    "Hgg/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "87f8e6569853ab998c595f1a329a0d9c05390eb624cea2fd91ac2b7881703953",
+    "Hgq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "90ea5cf71f391c94994c583fc730d56dc8796838c9fd5ae22c9363a3abcee8eb",
+    "Hqg/s01_result/reference/s01_result/s01_inputs/s04_result.wl": "8403c287ed130c5db601069eb71ad2d6a7b2b851662dea716441c472bc10eba9",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s01_result.wl": "0dc987fe060db67a8fa060945380760b0ceb788843882e760c0a79959852297a",
+    "Hqqbar/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "393e8503576b3fdd557c40f0fe6cfab9dd31d956100f8091dd615d904ab70c8a",
+    "Hqqprime/s01_result/reference/s01_result/s01_inputs/s01_result/real.wl": "e34d22bd588e253ff7bd84975579bb6160cba57027dea3fe0ddeede715e8327a",
+    "common/s01_inputs.json": "4ab2882a27fa85245affab35f28504a603425419756899b88add2467f0215889",
+    "common/s01_result/s01_result.json": "6dfbc69810f96dfbc94c174a2c7d7201738c809428e37d9cf246665e809d8dfb",
+    "common/s02_define_spin_basis.wls": "5f5ba5135a3ad48a3d5f465c79e27987f3036768ead60d31a82e3f1c2bbdc74b"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s02_define_spin_basis"
+}

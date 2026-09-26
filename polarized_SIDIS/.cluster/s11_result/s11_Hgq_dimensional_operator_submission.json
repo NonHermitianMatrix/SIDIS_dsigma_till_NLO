@@ -1,0 +1,25 @@
+{
+  "channel": "Hgq",
+  "config": ".cluster/s11_Hgq_dimensional_operator_job.json",
+  "config_sha256": "7342a82fd98af70985df4a5b33f3a39b8043c551a7edc14801381c0a6b12e6b1",
+  "event": "SUBMITTED",
+  "job_id": "14816904",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s11_Hgq_dimensional_operator_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s11_Hgq_dimensional_operator",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=01:00:00,h_data=8G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s11_Hgq_dimensional_operator_scheduler.log"
+  ],
+  "tag": "s11_Hgq_dimensional_operator"
+}

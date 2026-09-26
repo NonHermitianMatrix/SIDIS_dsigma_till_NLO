@@ -1,0 +1,1 @@
+../common/s08_map_Hgg_response_inputs.wls

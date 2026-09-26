@@ -1,0 +1,30 @@
+{
+  "event": "RESUBMITTED_AFTER_SSH_RECONNECT",
+  "job_id": "14886547",
+  "previous_job_id": "14886487",
+  "tag": "s15_Hqg_all_routes_20260924",
+  "config": ".cluster/s15_Hqg_all_routes_20260924_job.json",
+  "configuration_sha256": "61f105715a5b7162d970688967119d94b16d58fe9e32a0d4fdc6039183bc3121",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-h",
+    "-N",
+    "pSIDIS_s15_Hqg_all_routes_20260924",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=02:00:00,h_data=16G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s15_Hqg_all_routes_20260924_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s15_Hqg_all_routes_20260924_job.json\n",
+  "resources": "h_rt=02:00:00,h_data=16G",
+  "slots": 1,
+  "utc": "2026-09-24T04:30:51.429810+00:00",
+  "state_after_release": "qw"
+}

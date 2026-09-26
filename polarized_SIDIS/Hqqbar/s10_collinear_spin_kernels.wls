@@ -1,0 +1,1 @@
+../common/s10_collinear_spin_kernels.wls

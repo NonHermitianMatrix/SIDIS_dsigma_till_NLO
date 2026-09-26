@@ -1,0 +1,45 @@
+{
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "{root}/common/s10_dimensional_quark_gluon_transfer.wls"
+  ],
+  "environment": {
+    "MATHEMATICA_USERBASE": "{root}/cache/wolfram_s10_Hqg_dimensional_quark_gluon_20260924_part2",
+    "POLARIZED_SIDIS_CHANNEL": "Hqg",
+    "WOLFRAM_USERBASE": "{root}/cache/wolfram_s10_Hqg_dimensional_quark_gluon_20260924_part2"
+  },
+  "execution_result": "Hqg/s10_dimensional_quark_gluon_result/s10_execution.json",
+  "expected_results": [
+    "Hqg/s10_dimensional_quark_gluon_result/s10_result.wl",
+    "Hqg/s10_dimensional_quark_gluon_result/s10_checks.json"
+  ],
+  "heartbeat": "cache/s10_Hqg_dimensional_quark_gluon_20260924_part2_heartbeat.json",
+  "limits": {
+    "disk_reserve_bytes": 2147483648,
+    "inactivity_seconds": 1260,
+    "per_file_bytes": 134217728,
+    "per_process_address_bytes": 3221225472,
+    "poll_seconds": 15,
+    "scratch_bytes": 12884901888,
+    "tree_rss_bytes": 3221225472,
+    "wall_seconds": 3300
+  },
+  "log": "cache/s10_Hqg_dimensional_quark_gluon_20260924_part2.log",
+  "reviewed_sha256": {
+    ".cluster/s02_execute.py": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+    "Hqq/s01_result/reference/s01_result/s01_inputs/s02_result.wl": "000d506ed74e608d51b58d2dedf66d287ce7a1e66c894132e6451b7e0dcc26de",
+    "common/s02_result/s02_result.wl": "135ff5607643e3d4ab0d6475ab17cd25c8d1973c0fa536c47c402d5b22d000bd",
+    "common/s10_collinear_spin_kernels.wls": "4e2e1b0b662948805d939ea52ebd7e227d0719f2d85e03f3843b791b47c09696",
+    "common/s10_dimensional_gluon_transfer.wls": "113b9968a31eec26914c7018515e9ca214bfbc622b9fe7f5a3b539037aef957d",
+    "common/s10_dimensional_quark_gluon_transfer.wls": "16a98ccb008189f631f6da124e602e581219cd7635212f5e9272ef6be7fbf46b",
+    "common/s10_inputs.json": "8aa54936b2ed7ca5cff487586639e1e580073562ffc81663ce4bd19fa2586536",
+    "common/s10_result/reference/s08_collinear_subtraction.wl": "6b821fc64d1b8b593f6635dd49269a36b62588903c1681763a1e6b034cfe865d",
+    "common/s10_result/reference/s08_result.wl": "3febb99ebac11172d1ce55b4315cf118b0cbc158b0d25a7fe1ae943b1371e6ea",
+    "common/s10_result/s10_result.wl": "9fa4087c0e3819e25947c60a78da255122d16dbb27764af668dfb3781d5503fe"
+  },
+  "schema": "polarized-sidis-job-v1",
+  "success_marker": "PASS: s10_dimensional_quark_gluon_transfer"
+}

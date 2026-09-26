@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "blocked_scan_does_not_block_monitor": true,
+    "completed_measurement_retained_without_immediate_rescan": true,
+    "pending_daemon_scan_does_not_delay_process_exit": true,
+    "single_scan_in_flight": true,
+    "storage_error_observable": true,
+    "unchanged_exact_storage_count": true,
+    "unchanged_existing_helpers": true
+  },
+  "max_blocked_poll_seconds": 3.4939730539917946e-06,
+  "original_source_sha256": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+  "pending_scan_process_exit_seconds": 0.06327974295709282,
+  "schema": "polarized-sidis-executor-storage-unit-v1",
+  "scope": "local non-physics runtime unit checks; no production execution claimed",
+  "source_sha256": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+  "temporary_test_data_removed": true
+}

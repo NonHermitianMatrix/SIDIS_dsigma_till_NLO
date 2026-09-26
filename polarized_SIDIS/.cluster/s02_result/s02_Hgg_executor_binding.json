@@ -1,0 +1,35 @@
+{
+  "controllers": [
+    {
+      "adopted_job_id": "14884508",
+      "code_sha256": "b8f1d6286bd3b677f6587fdd52e019ef80f26d8e789d9144c4f74f896219823e",
+      "event": "DETACHED_CONTROLLER_STARTED",
+      "log": "cache/s08_Hgg_group_async_executor_20260924_controller.jsonl",
+      "name": "group_async",
+      "node": "login1",
+      "pid": 20629
+    },
+    {
+      "adopted_job_id": "14884509",
+      "code_sha256": "36cfd363799eacf8086d5cad94cb065a58e7d24be68d0f486e9f124362ebac41",
+      "event": "DETACHED_CONTROLLER_STARTED",
+      "log": "cache/s08_to_s15_Hgg_async_executor_20260924_controller.jsonl",
+      "name": "other_async",
+      "node": "login1",
+      "pid": 20669
+    }
+  ],
+  "executor_sha256": "e990f6fb14efddc603affef591c0fad7c18ba8b2b1ed152fd30f0e2ba544d6eb",
+  "preserved_active_configs": [
+    {
+      "config": ".cluster/s08_Hgg_direct_group_resume_20260923_part2_job.json",
+      "job_id": "14884508",
+      "sha256": "9110482bb4d68f42ee356d26534db24abe15e953785faafb602e459cee9af7a4"
+    },
+    {
+      "config": ".cluster/s08_Hgg_other_group_components_20260923_part2_job.json",
+      "job_id": "14884509",
+      "sha256": "73e4fecec27bf93bef0ade6f422eb1e0ca25769be0e819e30535afafdccfef64"
+    }
+  ]
+}

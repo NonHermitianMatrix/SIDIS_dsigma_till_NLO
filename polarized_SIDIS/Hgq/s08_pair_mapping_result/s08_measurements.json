@@ -1,0 +1,55 @@
+{
+	"checks":{
+		"accepted proof receipt":true,
+		"same accepted result":true,
+		"expected proof schema":true,
+		"accepted recorded checks":true,
+		"same executed proof source":true,
+		"numeric recorded timings":true
+	},
+	"measurements":[
+		{
+			"Kind":"ExtendedResponse",
+			"Index":[
+				1,
+				1,
+				1
+			],
+			"ComponentIndex":1,
+			"ExtractionSeconds":3.0313244e2,
+			"MergeSeconds":3.3893581e1,
+			"PairCount":36,
+			"TotalPairSeconds":9.98579404e2,
+			"LargestPairSeconds":2.83304287e2,
+			"LargestPairInputBytes":2997008,
+			"TotalPairOutputBytes":46552512
+		},
+		{
+			"Kind":"ExtendedResponse",
+			"Index":[
+				1,
+				1,
+				5
+			],
+			"ComponentIndex":3,
+			"ExtractionSeconds":3.2916674e2,
+			"MergeSeconds":3.7904676e1,
+			"PairCount":36,
+			"TotalPairSeconds":1.4037921709999998e3,
+			"LargestPairSeconds":6.69227192e2,
+			"LargestPairInputBytes":1119632,
+			"TotalPairOutputBytes":18773824
+		}
+	],
+	"original_execution":{
+		"job_id":"14796627",
+		"node":"n6443",
+		"wall_seconds":7.9273726758742705e3,
+		"peak_observed_tree_rss_bytes":9520463872,
+		"child_maxrss_bytes":8560185344
+	},
+	"input_sha256":"3e76aa58afd796344e94f2dcb40b94765e1d0cd7a92443e92429a4dc5f4eeb55",
+	"physics_recomputed":false,
+	"finite_nlo_fhats_computed":false,
+	"job_id":"14812264"
+}

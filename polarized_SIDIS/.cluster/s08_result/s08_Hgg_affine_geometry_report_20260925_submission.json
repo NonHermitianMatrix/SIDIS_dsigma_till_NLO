@@ -1,0 +1,25 @@
+{
+  "job_id": "14912444",
+  "config": ".cluster/s08_Hgg_affine_geometry_report_20260925_job.json",
+  "configuration_sha256": "33f01ca4bc62545b27d6c676d17536f9f96d01ae0bc130a6c78581c98b2cad00",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s08_Hgg_affine_geometry_report_20260925",
+    "-S",
+    "/bin/bash",
+    "-pe",
+    "shared",
+    "1",
+    "-l",
+    "h_rt=00:15:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s08_Hgg_affine_geometry_report_20260925_scheduler.log"
+  ],
+  "script": "#!/bin/bash\nset -eu\nexport LC_ALL=C LANG=C\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s02_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s08_Hgg_affine_geometry_report_20260925_job.json\n"
+}

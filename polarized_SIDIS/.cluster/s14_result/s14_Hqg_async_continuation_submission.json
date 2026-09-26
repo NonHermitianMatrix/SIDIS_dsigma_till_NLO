@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "config": ".cluster/s14_Hqg_reference_terms_20260923_job.json",
+      "tag": "s14_Hqg_reference_terms_20260923",
+      "template_sha256": "d003b70dbb33bf7d9e3426669245eed3a1d7778438cbcb8f2ab88beea91da745"
+    },
+    {
+      "config": ".cluster/s11_Hqg_msbar_20260923_job.json",
+      "tag": "s11_Hqg_msbar_20260923",
+      "template_sha256": "dc6e90d34b8801a7937340545df8bdb1fbdbe0e0c81c2521166e497400cb34b2"
+    },
+    {
+      "config": ".cluster/s14_Hqg_msbar_update_20260923_job.json",
+      "tag": "s14_Hqg_msbar_update_20260923",
+      "template_sha256": "5e5dc67161519948bafc52c67c83ecc4b4ef582f00ef33c05011316de7bb8d00"
+    },
+    {
+      "config": ".cluster/s15_Hqg_msbar_update_20260923_job.json",
+      "tag": "s15_Hqg_msbar_update_20260923",
+      "template_sha256": "af41701156653de3c70ea1e190edb20b966378fff290d6d46f1db3fc68c4704e"
+    }
+  ],
+  "controller": {
+    "code_sha256": "7958d61f157b236f8a7431aebf7778ccedc4c5034330b96d28072836b33702a9",
+    "event": "DETACHED_CONTROLLER_STARTED",
+    "log": "cache/s14_to_s15_Hqg_14884878_controller.jsonl",
+    "name": "bundle_recovered",
+    "node": "login1",
+    "pid": 20588,
+    "prerequisite_job_id": "14884878"
+  },
+  "native_controller_sha256": "35627b986259c99279efb69e7cb62447a184fba3fd91d25f5359896c4094e4c6"
+}

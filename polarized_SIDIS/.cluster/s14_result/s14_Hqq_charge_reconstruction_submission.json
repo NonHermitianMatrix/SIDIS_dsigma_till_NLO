@@ -1,0 +1,25 @@
+{
+  "channel": "Hqq",
+  "config": ".cluster/s14_Hqq_charge_reconstruction_job.json",
+  "config_sha256": "7229200b9457e0e59f9d56331303b229a3905502fdc2e2b8d1dc28c1ff09ee88",
+  "event": "SUBMITTED",
+  "job_id": "14824976",
+  "job_script": "#!/bin/bash\nset -eu\nexec python3 /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/.cluster/s01_execute.py --root /u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z --job .cluster/s14_Hqq_charge_reconstruction_job.json\n",
+  "qsub": [
+    "qsub",
+    "-terse",
+    "-N",
+    "pSIDIS_s14_Hqq_charge_reconstruction",
+    "-S",
+    "/bin/bash",
+    "-l",
+    "h_rt=00:15:00,h_data=4G",
+    "-wd",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z",
+    "-j",
+    "y",
+    "-o",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/cache/s14_Hqq_charge_reconstruction_scheduler.log"
+  ],
+  "tag": "s14_Hqq_charge_reconstruction"
+}

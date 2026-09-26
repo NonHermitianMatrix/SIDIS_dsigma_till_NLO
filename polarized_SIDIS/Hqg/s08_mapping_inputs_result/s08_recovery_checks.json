@@ -1,0 +1,37 @@
+{
+	"channel":"Hqg",
+	"component":4,
+	"checks":{
+		"compute allocation":true,
+		"single saved native record":true,
+		"saved equation is structurally unchanged":true,
+		"saved native mapping contract":true,
+		"exact failed exporter identity":true,
+		"unchanged originating mapping receipt":true,
+		"unchanged saved input common\/s08_inputs.json":true,
+		"unchanged saved input common\/s08_result\/reference\/s03_real_families.wl":true,
+		"unchanged saved input common\/s08_result\/reference\/s11_real_master_coefficients.wl":true,
+		"unchanged saved input Hqg\/s05_result\/s05_result.wl":true,
+		"unchanged saved input common\/s06_result\/s06_result.wl":true,
+		"unchanged saved input common\/s06_result\/reference\/s02_result.wl":true,
+		"unchanged saved input common\/s06_result\/reference\/s04_result.wl":true,
+		"recovered exact family geometry":true,
+		"bounded native equation file":true,
+		"complete saved record keys":true,
+		"exact saved equation and nongeometry fields":true,
+		"exact saved family geometry":true,
+		"bounded normalized native record":true,
+		"entire normalized record reloads exactly":true,
+		"bounded complete readable equation":true
+	},
+	"evaluation_changed_fields":[
+		"Task",
+		"InputHashes",
+		"Families",
+		"Geometry",
+		"Checks"
+	],
+	"original_file_sha256":"c99f3c42ad0b4106279c03379d230097a927ddfeb57e102f015b25e9320b0f23",
+	"job_id":"14873387",
+	"finite_nlo_fhats_computed":false
+}

@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/home/physics/wolframengine/opt/Wolfram/WolframEngine/15.0/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-run",
+    "Get[\"/home/physics/projects/AI_Assisted_SIDIS/scripts/polarized_SIDIS/misc/s27_preserve_Hgg_regulator_rational.wls\"]"
+  ],
+  "completed_utc": "2026-09-26T09:07:01.437202+00:00",
+  "execution_backend": "local",
+  "exit_code": -9,
+  "input_sha256": {
+    "Hqqbar/s12_rational_series_result/s12_execution.json": "406139892f2afcce55da23b0c374078dcc99e52d38166406fa06c7cdc2346874",
+    "Hqqbar/s12_rational_series_result/s12_result.wl": "0724c147d2349bd44183ecb90936a56d1c7790f7ebd6dade58459cd0c1f8373a",
+    "common/s06_result/reference/s15_result.wl": "82cb3ca0de4501b3c045d025e6b93f4228426c344023b2a727fc93d69615ef0b",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s12_check_rational_master_product.wls": "e6dabfbb04a9b68c9f5019ee1bc7c82a3f250b31f1c0d8975996c70303f31583",
+    "misc/s10_result/s10_result.wl": "464a7b28544131645b126afc7115c549c9df3bf07fd91eed0ebab0f8194968bb",
+    "misc/s11_assemble_Hgg_real.wls": "e225551ffb8cf25cd207a406e0efd2fccbe11e27239126df6bb6a62cb519ab98",
+    "misc/s11_inputs.json": "e7e49a69d5f9b9aa92b7a5d1e1044705a3fd42f94d9ee4caf6d02c4e0c658eeb",
+    "misc/s23_result/s23_execution.json": "5961f0c17ab5a36c728aaac940f1435fa97db24b519276b540e9ad12898ae3a2",
+    "misc/s23_result/s23_result.wl": "ce7bb4db1615ba2ddf6e9a40e5c760ddd33b2f7f125677632f42dfbb2bf719da",
+    "misc/s24_canonical_Hgg_arguments.wls": "0b04a1ec7d2898c1eb77fc2400d0c61ca45558f2e21695dad5b8141ecf33cf8a",
+    "misc/s24_result/s24_execution.json": "b79f462a7036c3d671e8fdacf5fadce1a91016ee31d3be21677f72c4ae3f2bdd",
+    "misc/s24_result/s24_result.wl": "1ed61045d5ccd8692e7a1263cb335618d1bd63ea75fa3f9e3087a2e1d32452ee",
+    "misc/s26_result/s26_execution.json": "1b8207ef3cf51003ee346ddb18bf5b866637570eeab7e8ae1f8984c31f74825a",
+    "misc/s26_result/s26_result.wl": "09ad0e822847e2c2f89d7406d6b1b9227bee01dfa48a86a3fb332984c5d7c273"
+  },
+  "passed": false,
+  "peak_observed_tree_rss_bytes": 1764196352,
+  "reason": "normal_exit",
+  "result_sha256": {},
+  "schema": "polarized-sidis-local-execution-v1",
+  "source_sha256": "8a24ad32c6fed79ebb3cf83f3833364eb8ad2c35656495c59d8e15d2ca7aee4a",
+  "wall_seconds": 715.7657390629975
+}

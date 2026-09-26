@@ -1,0 +1,59 @@
+{
+  "child_maxrss_bytes": 993636352,
+  "command": [
+    "/u/local/apps/mathematica/13.1/Executables/WolframKernel",
+    "-noinit",
+    "-noprompt",
+    "-script",
+    "/u/scratch/r/rushil/AI_Assisted_SIDIS/polarized_SIDIS_20260917T063521Z/common/s12_assemble_real_regulator.wls"
+  ],
+  "completed_utc": "2026-09-18T14:59:37.140377+00:00",
+  "effective_resource_limits": {
+    "1": 134217728,
+    "4": 0,
+    "9": 4294967296
+  },
+  "exit_code": 0,
+  "inherited_resource_limits": {
+    "1": [
+      -1,
+      -1
+    ],
+    "4": [
+      -1,
+      -1
+    ],
+    "9": [
+      -1,
+      -1
+    ]
+  },
+  "job_configuration_sha256": "7fc3cf4679d55e48a8cb4fee7b35a67da76938e74dad131c2cd0c89aa43c1fd5",
+  "job_id": "14797140",
+  "node": "n7122",
+  "passed": true,
+  "peak_observed_tree_rss_bytes": 2013560832,
+  "reason": "normal_exit",
+  "result_sha256": {
+    "Hqqprime/s12_result/s12_checks.json": "ba4e6f274102063bc85f63bc757bacbdf7e1b791e17f98f480a939a23f8691a1",
+    "Hqqprime/s12_result/s12_result.wl": "6babce49b20eca3b222339b4f8e1469e482bd8c3dc2723784bae597d5c31a325"
+  },
+  "reviewed_sha256": {
+    ".cluster/s01_execute.py": "4464f18c96db45c180651c280b8a8ed24d50976b347925e39fce6a3d55f8c3ab",
+    "Hqqprime/s08_result/s08_result.wl": "e262ce55f59c1a4a1e8ddd3acfbb487536106af566b373922bd09f8e6e73d3ec",
+    "Hqqprime/s12_regulator_result/s12_checks.json": "085f38fb6cff6ae07e0ac53d28534542013bde5df1a3b833f239540c904c0338",
+    "Hqqprime/s12_regulator_result/s12_execution.json": "d3d4d0cbe8e62f8cf653b3c2123c45075f9ea0eccf35da3631e61eaa7f52054e",
+    "Hqqprime/s12_regulator_result/s12_result.wl": "88db303407b660cedb0f960321c45babf94acab2873e71aaaad1536a33d91839",
+    "common/s06_result/reference/s08_result.wl": "76b97660cedd87b8c9dbcf5cb3b46ae8a95835e30ba0bcab7b67c3c78ffcf755",
+    "common/s06_result/reference/s10_result.wl": "dba9edd52b6cc80846a08f65ec2b98b908a4d7a429edff359dd3a460c597a253",
+    "common/s06_result/reference/s15_result.wl": "82cb3ca0de4501b3c045d025e6b93f4228426c344023b2a727fc93d69615ef0b",
+    "common/s06_result/s06_result.wl": "2408dec8ef08029c96a1d02993e73921ee969dfaba1abd5ca75ab06cda3afda1",
+    "common/s12_assemble_real_regulator.wls": "13546e04edf3441fa2a10bb9ae2b2dbfa406c67598f68a517955eabd1233ac4a",
+    "common/s12_assemble_real_spin.wls": "ca3777035d3d220b3fb8fcddb8131348f0d7c97f8fd9b8d54703337c93daa243",
+    "common/s12_check_regulator_series.wls": "65872969e0cb1617ec0a8c75e30b17e6eae94957f7eac668555741214c2f0a4a",
+    "common/s12_inputs.json": "037b7d316a22447129102d94fad18f3979ea44b78751790854bb737e520e5253",
+    "common/s12_result/reference/s17_assemble_real.wl": "1df84e6817fdcf4b0db8c588d1083a9be499530c63ba10b6cb9991083d1f77e5"
+  },
+  "schema": "polarized-sidis-execution-v1",
+  "wall_seconds": 449.0198438970838
+}
