@@ -70,6 +70,20 @@ $$\widehat{\mathbf F}_r=\mathbf F_r^{LO}\delta(s_{23})+
 
 Each bold coefficient is a 4×4 matrix, with rows outgoing and columns incoming in order `U,X,Y,H`. A matrix entry is a coefficient, not a probability. The full photon response contains nine such matrices. Plus distributions act on a smooth test function by subtracting its value at zero on `[0,B]`; they are not ordinary functions at the endpoint. The source and final metadata fix the exact arguments, normalization, branch and charge factors.
 
+## Correction of the V07 branch (S16, November 2026)
+
+The upstream continuation of the virtual masters (`SIDIS/common/s19_assemble_virtual.wl`) took the principal value of `PolyLog[2, (Q^2+s)/Q^2]` in the one-loop box V07. The argument exceeds 1 at every physical point, and the Feynman prescription puts it at `x + i0`, so the correct value is `PolyLog[2, x] + 2 Pi I Log[x]`. AMFlow and the analytic one-mass box (Ellis–Zanderighi, arXiv:0712.1851, Eq. 4.19) both give Re V07 = −0.005751229737048 at Q²=100, s=300, t=−150; the previous master gave −0.008043700484846. S19 now checks each continued function numerically at 80 digits on the physical side of every cut. That check changed only this dilogarithm.
+
+The polarized virtual stage reads the corrected masters from [common/s13_result/reference](common/s13_result/reference/). The masters from before the fix are kept beside them as `s19_masters_before_V07_branch_fix.wl`. [common/s16_correct_V07_branch.wls](common/s16_correct_V07_branch.wls) carries the correction through S13–S15 of Hqq, Hqg and Hgq:
+
+1. From the S09 reduction coefficients of V07, the S07 transverse substitution and the Hermitian projection used by S13, it computes the exact change of every S13 virtual component. It requires this change to equal the effect of the replacement rule on the accepted S13 output (to better than 10⁻²⁵ at three points).
+2. It applies the same rule, entry by entry, to `s14_result/s14_result.wl` and `s15_result/{s15_result,s15_F1_hat,s15_F2_hat}.wl`, and writes each file back in its original compressed form. The previous files are kept byte for byte in `<channel>/s16_branch_correction_result/*.before`, which are not committed because git history holds them.
+3. It checks that only Δ (virtual) entries change, that the T-even photon components LL, XX, YY and Re LX of the quark channels are unchanged, and that F1 and F2 of Hqq and Hqg are unchanged.
+4. For records too large for one 8 GB kernel, the stage runs as `S16_PHASE=check`, which writes `s16_step1.wl` with the hashes of its inputs, followed by `S16_PHASE=apply`, which accepts only an unchanged record. All three channels were run this way.
+5. It writes `<channel>/s16_branch_correction_result/s16_result.wl` with input and output SHA-256 hashes. The input hashes equal the hashes recorded in each `s15_execution.json`. For these four files, acceptance means the S15 receipt followed by the S16 receipt.
+
+In Hqq the changed entries are the absorptive (T-odd) photon components: Im LX, Im LY, Im XY, and the helicity-odd entries of Re LY and Re XY. In Hgq the same T-odd components change; in addition, entries that pair an incoming gluon linear polarization with an outgoing quark spin also change; this includes the HY entry of F1 and F2. In Hqg every occurrence in the S15 records sits inside `Re[...]`, which the correction leaves unchanged (Re Li2(x+i0) = Re Li2(x-i0)), so only the S14 record changes. The unpolarized F hats and the entries used for the Collins asymmetry (UU and the transverse-spin transfer XX, YY) do not change.
+
 ## What the acceptance checks establish
 
 The dimensional spin sum is reconstructed, including the regulator complement and incoming-gluon average, and compared with the matching original CDR contractions. Final physical `UU` F1/F2 entries are compared with the pinned spin-summed hats, including distribution slots and branches. Other spin entries are checked by basis reconstruction, Ward identities, Hermiticity, dimensional route consistency, exact reduction/integration reconstruction, UV and full pole cancellation, scheme checks and native export validation.

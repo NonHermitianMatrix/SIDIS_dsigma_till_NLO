@@ -1,0 +1,25 @@
+PASS: compute allocation
+PASS: virtual channel
+PASS: known phase
+PASS: step 1 recorded with the same inputs and source
+   memory before loading Hqq/s14_result/s14_result.wl: 0.11159368`3. GB
+   memory after loading: 2.171278968`3. GB
+   corrected entries: 228; memory 2.179942976`3. GB
+Hqq/s14_result/s14_result.wl: occurrences of Li2((Q^2+s)/Q^2) = 258; compressed: True
+   memory before loading Hqq/s15_result/s15_result.wl: 0.111736856`3. GB
+   memory after loading: 1.408806344`3. GB
+   corrected entries: 126; memory 1.414335232`3. GB
+Hqq/s15_result/s15_result.wl: occurrences of Li2((Q^2+s)/Q^2) = 156; compressed: True
+   memory before loading Hqq/s15_result/s15_F1_hat.wl: 0.111737864`3. GB
+   memory after loading: 0.353948144`3. GB
+   corrected entries: 12; memory 0.355220568`3. GB
+Hqq/s15_result/s15_F1_hat.wl: occurrences of Li2((Q^2+s)/Q^2) = 24; compressed: True
+   memory before loading Hqq/s15_result/s15_F2_hat.wl: 0.1117386`3. GB
+   memory after loading: 0.404140584`3. GB
+   corrected entries: 12; memory 0.405523848`3. GB
+Hqq/s15_result/s15_F2_hat.wl: occurrences of Li2((Q^2+s)/Q^2) = 30; compressed: True
+changed entries per photon component, branch and distribution: <|LL -> <|1 -> <|Delta -> {}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {}, L0 -> {}, L1 -> {}, Regular -> {}|>|>, XX -> <|1 -> <|Delta -> {}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {}, L0 -> {}, L1 -> {}, Regular -> {}|>|>, YY -> <|1 -> <|Delta -> {}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {}, L0 -> {}, L1 -> {}, Regular -> {}|>|>, ReLX -> <|1 -> <|Delta -> {}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {}, L0 -> {}, L1 -> {}, Regular -> {}|>|>, ReLY -> <|1 -> <|Delta -> {{1, 4}, {4, 1}}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {{1, 4}, {4, 1}}, L0 -> {}, L1 -> {}, Regular -> {}|>|>, ReXY -> <|1 -> <|Delta -> {{1, 4}, {4, 1}}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {{1, 4}, {4, 1}}, L0 -> {}, L1 -> {}, Regular -> {}|>|>, ImLX -> <|1 -> <|Delta -> {{1, 1}, {2, 2}, {3, 3}, {4, 4}}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {{1, 1}, {2, 2}, {3, 3}, {4, 4}}, L0 -> {}, L1 -> {}, Regular -> {}|>|>, ImLY -> <|1 -> <|Delta -> {{2, 3}, {3, 2}}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {{2, 3}, {3, 2}}, L0 -> {}, L1 -> {}, Regular -> {}|>|>, ImXY -> <|1 -> <|Delta -> {{2, 3}, {3, 2}}, L0 -> {}, L1 -> {}, Regular -> {}|>, -1 -> <|Delta -> {{2, 3}, {3, 2}}, L0 -> {}, L1 -> {}, Regular -> {}|>|>|>
+PASS: T-even photon components of the quark channels unchanged
+PASS: only Delta changes (virtual origin)
+PASS: quark-channel F1, F2 unchanged
+PASS: s16_correct_V07_branch Hqq

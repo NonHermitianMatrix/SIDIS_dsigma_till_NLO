@@ -1,0 +1,28 @@
+PASS: compute allocation
+PASS: virtual channel
+PASS: known phase
+PASS: S13 used this reduction map
+masters that differ: {GLI[V07, {1, 1, 1, 1}]}
+PASS: only V07 differs
+PASS: V07 change is the branch term
+
+                                                                                      Log[4]   Log[100]   Log[160000]
+N::meprec: Internal precision limit $MaxExtraPrecision = 50. reached while evaluating ------ + -------- - -----------.
+                                                                                      16 Pi     16 Pi        32 Pi
+
+                                                                                              47
+                                                                                      280 Log[--]
+                                                                                              7     280 Log[7]   140 Log[2209]
+N::meprec: Internal precision limit $MaxExtraPrecision = 50. reached while evaluating ----------- + ---------- - -------------.
+                                                                                        6627 Pi      6627 Pi        6627 Pi
+
+                                                                                             7
+                                                                                      10 Log[-]
+                                                                                             5    10 Log[50]   5 Log[4900]
+N::meprec: Internal precision limit $MaxExtraPrecision = 50. reached while evaluating --------- + ---------- - -----------.
+                                                                                       147 Pi       147 Pi       147 Pi
+
+General::stop: Further output of N::meprec will be suppressed during this calculation.
+S13 components affected: 37 of 49; max relative |direct - rule| = 0``88.74679239037748
+PASS: rule reproduces the exact V07 change of every S13 component
+PASS: step 1 recorded in /u/scratch/r/rushil/sidis_full/polarized_SIDIS/Hgq/s16_branch_correction_result/s16_step1.wl

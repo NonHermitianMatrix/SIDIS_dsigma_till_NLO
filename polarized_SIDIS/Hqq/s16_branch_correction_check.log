@@ -1,0 +1,28 @@
+PASS: compute allocation
+PASS: virtual channel
+PASS: known phase
+PASS: S13 used this reduction map
+masters that differ: {GLI[V07, {1, 1, 1, 1}]}
+PASS: only V07 differs
+PASS: V07 change is the branch term
+
+                                                                                      5 Sqrt[5] Log[4]   5 Sqrt[5] Log[100]   5 Sqrt[5] Log[160000]
+N::meprec: Internal precision limit $MaxExtraPrecision = 50. reached while evaluating ---------------- + ------------------ - ---------------------.
+                                                                                           81 Pi               81 Pi                 162 Pi
+
+                                                                                                       47
+                                                                                      1078 Sqrt[3] Log[--]
+                                                                                                       7     1078 Sqrt[3] Log[7]   539 Sqrt[3] Log[2209]
+N::meprec: Internal precision limit $MaxExtraPrecision = 50. reached while evaluating -------------------- + ------------------- - ---------------------.
+                                                                                            1175 Pi                1175 Pi                1175 Pi
+
+                                                                                                  5      7         5                 5
+                                                                                             Sqrt[-] Log[-]   Sqrt[-] Log[50]   Sqrt[-] Log[4900]
+                                                                                         1        3      5         3                 3
+N::meprec: Internal precision limit $MaxExtraPrecision = 50. reached while evaluating -(---) -------------- - --------------- + -----------------.
+                                                                                        126        Pi             126 Pi             252 Pi
+
+General::stop: Further output of N::meprec will be suppressed during this calculation.
+S13 components affected: 35 of 40; max relative |direct - rule| = 0``88.5675646821149
+PASS: rule reproduces the exact V07 change of every S13 component
+PASS: step 1 recorded in /u/scratch/r/rushil/sidis_full/polarized_SIDIS/Hqq/s16_branch_correction_result/s16_step1.wl

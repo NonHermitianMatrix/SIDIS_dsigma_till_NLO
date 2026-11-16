@@ -3026,5 +3026,5 @@
 1987|>, "SourceHash" -> 
   893018556074700519974527783452005871254159738729567122058445777397645318694\
 34, "PoleCache" -> "/u/scratch/r/rushil/AI_Assisted_SIDIS/SIDIS_20260907/Hgg/\
-s20_cache/df9eed0cf192de7f0c0bfc731b26083a2b1ad1f3d661555964af5c45e6f7d514", 
- "Accepted" -> True|>
+s11_result/s11_cache/df9eed0cf192de7f0c0bfc731b26083a2b1ad1f3d661555964af5c45\
+e6f7d514", "Accepted" -> True|>

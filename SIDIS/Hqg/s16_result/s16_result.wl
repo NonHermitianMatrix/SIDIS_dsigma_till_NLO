@@ -1089,6 +1089,7 @@
               3*Pi^2))/(s*(Q2 + s + t)) - (I*Pi^2*Log[Pi]^2)/
             (s*(Q2 + s + t)) - (I*Pi^2*Log[s]^2)/(s*(Q2 + s + t)) - 
            ((I/2)*Pi^2*Log[s/Q2]^2)/(s*(Q2 + s + t)) + 
+           (4*Pi^3*Log[(Q2 + s)/Q2])/(s*(Q2 + s + t)) + 
            (I*EulerGamma*Pi^2*Log[Q2/(Q2 + s + t)])/(s*(Q2 + s + t)) - 
            ((I/2)*Pi^2*Log[Q2/(Q2 + s + t)]^2)/(s*(Q2 + s + t)) + 
            Log[s/Q2]*(((-I)*(EulerGamma - (2*I)*Pi)*Pi^2)/(s*(Q2 + s + t)) - 
@@ -1389,10 +1390,10 @@
         2*s*Log[s/Q2] + 2*t*Log[s/Q2] + 2*EulerGamma*t*Log[s/Q2] - 
         (4*I)*Pi*t*Log[s/Q2] - 4*t*Log[mu]*Log[s/Q2] + 
         2*t*Log[Pi]*Log[s/Q2] - 4*t*Log[2*Pi]*Log[s/Q2] + 
-        2*t*Log[s]*Log[s/Q2] + t*Log[s/Q2]^2 - 2*Q2*Log[Q2/(Q2 + s + t)] - 
-        2*s*Log[Q2/(Q2 + s + t)] - 2*t*Log[Q2/(Q2 + s + t)] - 
-        2*EulerGamma*t*Log[Q2/(Q2 + s + t)] + 4*t*Log[mu]*
-         Log[Q2/(Q2 + s + t)] - 2*t*Log[Pi]*Log[Q2/(Q2 + s + t)] + 
+        2*t*Log[s]*Log[s/Q2] + t*Log[s/Q2]^2 + (8*I)*Pi*t*Log[(Q2 + s)/Q2] - 
+        2*Q2*Log[Q2/(Q2 + s + t)] - 2*s*Log[Q2/(Q2 + s + t)] - 
+        2*t*Log[Q2/(Q2 + s + t)] - 2*EulerGamma*t*Log[Q2/(Q2 + s + t)] + 
+        4*t*Log[mu]*Log[Q2/(Q2 + s + t)] - 2*t*Log[Pi]*Log[Q2/(Q2 + s + t)] + 
         4*t*Log[2*Pi]*Log[Q2/(Q2 + s + t)] - 2*t*Log[s]*
          Log[Q2/(Q2 + s + t)] + 2*t*Log[s/Q2]*Log[Q2/(Q2 + s + t)] + 
         t*Log[Q2/(Q2 + s + t)]^2 - 2*Q2*Log[s/(Q2 + s + t)] - 
@@ -1424,7 +1425,7 @@
     3247471088232991807253418175911434041180619031509182983321026253583173101\
 8400, "s18_result.wl" -> 
     3582292717216120942451448281705997154376186116923587500414714930041627171\
-0234|>, "SourceHash" -> 10896278166591304710637740572141495160565182927296217\
-0432160691405977789261788, "MasterFile" -> "/u/scratch/r/rushil/AI_Assisted_S\
-IDIS/SIDIS_20260907/common/s19_virtual/eb0e0666a6603d6e8f8c6b2ce37339b6d39ecb\
-5c6e184486b8b16fdf7f725730/s19_masters.wl", "Accepted" -> True|>
+0234|>, "SourceHash" -> 10921394111879131770724971575606023192588272899085118\
+2527298980562641258445650, "MasterFile" -> "/u/scratch/r/rushil/AI_Assisted_S\
+IDIS/SIDIS_20260907/common/s19_result/s19_virtual/78af8408ee38fb896ce53669e73\
+85e58957b7859013a8bad6a00c0b56f3efe3a/s19_masters.wl", "Accepted" -> True|>

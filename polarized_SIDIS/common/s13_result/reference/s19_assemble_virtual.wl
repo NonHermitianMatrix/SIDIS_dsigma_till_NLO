@@ -27,6 +27,27 @@ reduce[value_] := Module[{refined,functions},
   refined=Refine[value,physical];
   functions=DeleteDuplicates[Cases[refined,_Log|_PolyLog|_Re|_Im,Infinity]];
   Collect[Expand[refined],functions,Factor]];
+(* BEGIN BRANCH VERIFICATION (2026-11-14 correction)
+   A symbolic Limit of Log or PolyLog at a real boundary point on its cut can return the
+   principal value, which loses the side of the cut selected by the Feynman deformation.
+   Example: the box V07 gives PolyLog[2,(Q2+s)/Q2] with argument above 1 approached from
+   Im>0, while the principal value is the Im<0 side.  Each continued function is therefore
+   compared at three physical points with a direct 80-digit evaluation at eta=10^-40, and
+   the unique candidate value + k 2 Pi I L (k=-1,0,1; L=1 for Log, L=Log[argument] for
+   PolyLog[2,.]) that matches is kept. *)
+branchPoints={{Q2->100,s->300,t->-150},{Q2->7,s->40,t->-5},{Q2->50,s->20,t->-60}};
+branchChecked[function_,value_,shift_] := Module[{argument,unit,candidates,direct,matches},
+  argument=FullSimplify[(Last[function]/.shift)/.eta->0,physical];
+  unit=Which[Head[function]===Log,1,Head[function]===PolyLog&&First[function]===2,Log[argument],
+    True,gate["branch check covers only Log and PolyLog[2,.]",False]];
+  candidates=Table[value+k 2 Pi I unit,{k,{0,1,-1}}];
+  direct=Table[N[(function/.shift)/.eta->10^-40/.point,80],{point,branchPoints}];
+  matches=Select[candidates,Function[c,And@@MapThread[
+    Abs[N[c/.#1,80]-#2]<10^-30 (1+Abs[#2])&,{branchPoints,direct}]]];
+  gate["unique side of the cut for "<>ToString[function,InputForm],Length[matches]===1];
+  If[First[matches]=!=value,Print["BRANCH_CORRECTED ",InputForm[function]," -> ",InputForm[First[matches]]]];
+  First[matches]];
+(* END BRANCH VERIFICATION *)
 continueMaster[master_,data_] := Catch[Module[
   {file,saved,parent,series,coefficients,polynomials,polynomial,signs,sign,shift,
    imaginary,functions,limits,rules,value,rawCoefficients,continued,result},
@@ -54,6 +75,7 @@ continueMaster[master_,data_] := Catch[Module[
     value=bounded[FullSimplify[Limit[function/.shift,eta->0,Direction->"FromAbove",
       Assumptions->physical],physical],"physical logarithm or dilogarithm boundary"];
     gate["physical special-function boundary is evaluated",FreeQ[value,eta|_Limit|_ConditionalExpression|_Real|Indeterminate|ComplexInfinity]];
+    value=branchChecked[function,value,shift];
     function->value,{function,functions}];
   rawCoefficients=series[[3]];
   continued=Map[bounded[reduce[(#/.limits)/.data["PhysicalSubstitutions"]],"continued master coefficient"]&,rawCoefficients];
@@ -68,7 +90,7 @@ If[!IntegerQ[slots]||slots<1,slots=1];CloseKernels[];
 If[slots>1,LaunchKernels[KernelConfiguration["localhost","KernelCommand"->
   "/u/local/apps/mathematica/13.1/Executables/WolframKernel","KernelCount"->Min[4,slots],"TimeConstraint"->60]]];
 workers=Length[Kernels[]];
-If[workers>0,ParallelEvaluate[$HistoryLength=0];DistributeDefinitions[gate,put,bounded,
+If[workers>0,ParallelEvaluate[$HistoryLength=0];DistributeDefinitions[gate,put,bounded,branchChecked,branchPoints,
   continueMaster,reduce,parents,evaluations,manifest,inputHash,sourceHash,work,physical]];
 $DistributedContexts=None;
 tasks=KeyValueMap[List,parents["VirtualMasterParents"]];
